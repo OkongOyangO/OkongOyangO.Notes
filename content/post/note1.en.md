@@ -1,6 +1,7 @@
 +++
 date = '2026-01-08T21:54:37-05:00'
 draft = false
+math = true
 title = 'Can we distinguishing Conductors and Insulators with only Ground State information? 🤔'
 +++
 

@@ -15,7 +15,7 @@ defaultContentLanguage = 'zh' # 默认语言设为中文
   [languages.en]
     languageName = "🇺🇸 English"
     weight = 2
-    title = "OkongOyangO's Physics Station"
+    title = "OkongOyangO's PhysHub"
     [languages.en.params]
       description = "Physics and Code notes"
 
@@ -24,6 +24,7 @@ defaultContentLanguage = 'zh' # 默认语言设为中文
   defaultTheme = "auto"
   ShowShareButtons = true
   ShowCodeCopyButtons = true # 代码块显示复制按钮
+  math = true
   
   # 开启搜索按钮
   ShowSearchKey = true 
