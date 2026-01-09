@@ -92,6 +92,24 @@
                 href="http://localhost:1313/zh/post/distinguish_conductors_insulators_ground_state/"
                 />
   </url><url>
+    <loc>http://localhost:1313/zh/post/nonlinear_kubo_formalism/</loc>
+    <lastmod>2026-01-08T20:30:33-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/post/nonlinear_kubo_formalism/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="http://localhost:1313/ja/post/nonlinear_kubo_formalism/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="http://localhost:1313/zh/post/nonlinear_kubo_formalism/"
+                />
+  </url><url>
     <loc>http://localhost:1313/zh/categories/</loc>
     <xhtml:link
                 rel="alternate"

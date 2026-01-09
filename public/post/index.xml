@@ -37,5 +37,13 @@
 &lt;p&gt;&amp;ldquo;Distinguishing conductors and insulators by only looking at the ground state&amp;rdquo;—this argument seems a bit outrageous.&lt;/p&gt;
 &lt;p&gt;The Band Theory of the 1930s (to some extent) explained the difference between conductors and insulators. At the non-interacting level, conductors and insulators can be distinguished by whether the ground state energy bands are filled. If the valence band is filled and there is a band gap $E_g &gt; 0$ separating it from the conduction band, it is an insulator; otherwise, it is a conductor. Here, the band gap $E_g$ is used to distinguish them, but defining $E_g$ requires knowing the energy of excited states, thus inevitably involving excited state properties.&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>Nonlinear Kubo Formalism</title>
+      <link>http://localhost:1313/post/nonlinear_kubo_formalism/</link>
+      <pubDate>Thu, 08 Jan 2026 20:30:33 -0500</pubDate>
+      <guid>http://localhost:1313/post/nonlinear_kubo_formalism/</guid>
+      <description>&lt;h1 id=&#34;nonlinear-kubo-formalism&#34;&gt;Nonlinear Kubo Formalism&lt;/h1&gt;
+&lt;p&gt;The Kubo formula is the cornerstone of linear response theory, relating transport coefficients (such as conductivity) to equilibrium correlation functions. However, with the development of strong laser physics and topological optoelectronics, the description of &lt;strong&gt;nonlinear response&lt;/strong&gt; has become increasingly important. The nonlinear Kubo formalism generalizes the linear theory to higher-order perturbations and serves as the theoretical basis for understanding phenomena such as Second Harmonic Generation (SHG) and the Bulk Photovoltaic Effect (BPVE).&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

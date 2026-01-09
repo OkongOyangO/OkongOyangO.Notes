@@ -1,5 +1,5 @@
 +++
-date = '2026-01-09T20:30:33-05:00'
+date = '2026-01-08T20:30:33-05:00'
 draft = false
 math = true
 ShowToc = true

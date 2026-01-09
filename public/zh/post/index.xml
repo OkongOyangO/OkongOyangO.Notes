@@ -118,5 +118,34 @@ $$&lt;/p&gt;
 \end{aligned}
 $$&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>非线性 Kubo 公式</title>
+      <link>http://localhost:1313/zh/post/nonlinear_kubo_formalism/</link>
+      <pubDate>Thu, 08 Jan 2026 20:30:33 -0500</pubDate>
+      <guid>http://localhost:1313/zh/post/nonlinear_kubo_formalism/</guid>
+      <description>&lt;h1 id=&#34;非线性-kubo-公式-nonlinear-kubo-formalism&#34;&gt;非线性 Kubo 公式 (Nonlinear Kubo Formalism)&lt;/h1&gt;
+&lt;p&gt;Kubo 公式是线性响应理论的核心，它将系统的输运系数（如电导率）与平衡态的关联函数联系起来。然而，随着强激光物理和拓扑光电子学的发展，对&lt;strong&gt;非线性响应&lt;/strong&gt;（Nonlinear Response）的描述变得日益重要。非线性 Kubo 公式将线性理论推广到高阶微扰，是理解倍频产生（SHG）、体光伏效应（BPVE）等现象的理论基础。&lt;/p&gt;
+&lt;h2 id=&#34;1-密度矩阵的微扰展开&#34;&gt;1. 密度矩阵的微扰展开&lt;/h2&gt;
+&lt;p&gt;考虑一个受外场驱动的量子系统，其哈密顿量为：
+$$
+\begin{aligned}
+H(t) = H_0 + V(t)
+\end{aligned}
+$$
+其中 $H_0$ 是未受扰动的哈密顿量，$V(t)$ 是含时微扰（例如电磁场与电子的相互作用 $V(t) = e \mathbf{r} \cdot \mathbf{E}(t)$）。&lt;/p&gt;
+&lt;p&gt;系统的动力学由 Liouville-von Neumann 方程描述：
+$$
+\begin{aligned}
+i\hbar \frac{\partial \rho(t)}{\partial t} = [H(t), \rho(t)]
+\end{aligned}
+$$
+将密度矩阵 $\rho(t)$ 按微扰阶数展开：
+$$
+\begin{aligned}
+\rho(t) = \rho^{(0)} + \rho^{(1)}(t) + \rho^{(2)}(t) + \dots + \rho^{(n)}(t) + \dots
+\end{aligned}
+$$
+其中 $\rho^{(0)}$ 是平衡态密度矩阵（通常为费米-狄拉克分布）。&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
