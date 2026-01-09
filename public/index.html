@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto" data-theme="auto">
+<html lang="zh" dir="auto" data-theme="auto">
 
 <head>
 	<meta name="generator" content="Hugo 0.154.3"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
@@ -8,7 +8,7 @@
 <meta name="robots" content="noindex, nofollow">
 <title>O空O扬O の 物理小站</title>
 
-<meta name="description" content="">
+<meta name="description" content="记录物理与代码的学习历程">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.343cc480b9ffc8f04ccbe5e968ad674880cab773ec19905e93033065c1e7a804.css" integrity="sha256-NDzEgLn/yPBMy&#43;XpaK1nSIDKt3PsGZBekwMwZcHnqAQ=" rel="preload stylesheet" as="style">
@@ -20,7 +20,8 @@
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml" title="rss">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/">
+<link rel="alternate" hreflang="zh" href="http://localhost:1313/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/en/">
 <noscript>
     <style>
         #theme-toggle,
@@ -100,13 +101,63 @@
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
+                    <ul class="lang-switch"><li>|</li>
+                        <li>
+                            <a href="http://localhost:1313/en/" title="🇺🇸 English"
+                                aria-label="🇺🇸 English">En</a>
+                        </li>
+                    </ul>
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/posts" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search" title="搜索">
+                    <span>搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
 <main class="main"> 
+
+<article class="first-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">只看基态如何区分导体和绝缘体？🤔
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>本note旨在阐述多体系统导电性与基态量子几何性质的关联，并解释如何仅通过基态波函数的“局域”程度，来区分导体和绝缘体。
+Introduction “只看基态就能区分导体和绝缘体”，这个argument似乎有些离谱。
+1930年代的能带论（一定程度上）解释了导体和绝缘体的区别。在non-interacting层面上，导体与绝缘体可以根据基态能带是否填满来判断。价带若被填满，且和导带有带隙$E_g &gt; 0$，则是绝缘体；反之则为导体。此时可以用带隙$E_g$区分导体和绝缘体，而带隙$E_g$至少需要知道激发态的能量，故不可避免涉及激发态性质。
+但1949年提出的Mott Insulator（由强电子-电子关联导致）和1958年提出的Anderson Insulator（由强无序导致）指出了能带论在区分导体和绝缘体上的漏洞，即多体系统的绝缘机制不只有包括价带被填满，还可能与强关联、无序有关。同理，除了无带隙可以是导体的产生机制，一些无序的金属合金也可能是导体。例如，无序的合金体系中，虽然没有带隙，但仍可能为绝缘体，这正是Anderson Localization导致的局域态没法稳定输运电流导致的。
+更何况，多体系统可以根本没有晶格，我们急需一种更universal的判断多体系统导电性质的indicator。
+唯象而言，导体与绝缘体的区别在于直流电导率$\text{Re}\sigma(\omega\rightarrow 0)$的不同，因为一般的绝缘体通交流电也能导电。或者靠电极化现象区分，绝缘体中电子束缚，只能在原子附近运动，才有明显的电极化现象，而导体中电子趋于自由运动，外加电场会使其自由流动，因而没有良定的电极化现象。
+我们总可以通过计算线性响应理论计算电导率或者电极化率，从而区分导体和绝缘体，但这还是需要考虑激发态的性质。
+但Kohn在1964年的论文&#34;Theory of the insulating state&#34;提出，多体系统的导电性可以用基态多体波函数在many-body configuration的“局域”程度来判断。
+https://journals.aps.org/pr/abstract/10.1103/PhysRev.133.A171
+20世纪末，Resta等人注意到这种局域程度可以用多体基态波函数的second cumulant moment$\langle r_\alpha r_\beta \rangle_c$（“c&#34; for “cumulant”）更好的刻画，并揭示了其Quantum Geometry的本质。
+https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.82.370
+那么首先，我们来阐明怎么定义波函数的局域程度。
+Wannierizability &amp; Quantum Geometry 这里需要阐明，所谓“基态多体波函数在many-body configuration的‘局域’程度”，与单体波函数的局域程度不同，但在定义上有相似之处。而且从单体波函数的角度推导更加简单，所以我们先介绍单体波函数的局域程度的定义，讨论其性质，之后再推广到Kohn、Resta等人论文中的多体情形。
+以固体能带体系为例，不论是绝缘体还是导体，其单电子本征态都是延展的Bloch波函数。不过我们可以通过Fourier Transfer将这些实空间延展的Bloch本征态变成实空间局域的Wannier Function。
+Wannier函数$|\mathbf{R} n\rangle$和Bloch波函数$\left|\psi_{n \mathbf{k}}\right\rangle$之间的转换关系：
+$$ \left|\psi_{n \mathbf{k}}\right\rangle=\sum_{\mathbf{R}} e^{i \mathbf{k} \cdot \mathbf{R}}|\mathbf{R} n\rangle \Leftrightarrow |\mathbf{R} n\rangle=\frac{1}{N} \sum_{\mathbf{k}} e^{-i \mathbf{k} \cdot \mathbf{R}}\left|\psi_{n \mathbf{k}}\right\rangle $$Wannier波函数的局域程度与能带的规范选取有关。如果我们给Bloch波函数加上一个与$\mathbf{k}$有关的相位（规范），仍然是本征态。
+$$ \left|\tilde{\psi}_{n \mathbf{k}}\right\rangle=e^{i \varphi_n(\mathbf{k})}\left|\psi_{n \mathbf{k}}\right\rangle \ \Rightarrow\ \hat{H}\left|\tilde{\psi}_{n \mathbf{k}}\right\rangle = \epsilon_n(\mathbf{k}) \left|\tilde{\psi}_{n \mathbf{k}}\right\rangle$$如何通过调节gauge使得Wannier函数达到最大局域化相关内容可以参考Vanderbilt的1997年的PRB，“Maximally localized generalized Wannier functions for composite energy bands”以及2012年的RMP，“Maximally localized Wannier functions: Theory and applications”：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-01-08 21:54:37 -0500 EST'>2026年1月8日</span></footer>
+  <a class="entry-link" aria-label="post link to 只看基态如何区分导体和绝缘体？🤔" href="http://localhost:1313/post/note1/"></a>
+</article>
     </main>
     
 <footer class="footer">

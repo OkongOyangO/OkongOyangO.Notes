@@ -52,3 +52,17 @@ defaultContentLanguage = 'zh' # 默认语言设为中文
     name = "Search"
     url = "/search"
     weight = 2
+  
+# --- 终极数学公式支持配置 (复制到 hugo.toml 最底部) ---
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  # 允许 HTML 标签
+    
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['$$', '$$'], ['\\[', '\\]']]
+          inline = [['$', '$'], ['\\(', '\\)']]
