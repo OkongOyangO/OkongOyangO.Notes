@@ -6,8 +6,18 @@
     <description>Recent content in Posts on OkongOyangO&#39;s PhysHub</description>
     <generator>Hugo -- 0.154.3</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 08 Jan 2026 21:54:37 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 09 Jan 2026 19:05:46 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mean Field Approximation and Variational Method | Can Hartree, Fock, and BCS be Mixed 1:1:1?</title>
+      <link>http://localhost:1313/post/mean_field_approximation/</link>
+      <pubDate>Fri, 09 Jan 2026 19:05:46 +0000</pubDate>
+      <guid>http://localhost:1313/post/mean_field_approximation/</guid>
+      <description>&lt;p&gt;This article aims to introduce the mean field approximation while elucidating its variational nature.&lt;/p&gt;
+&lt;p&gt;Hartree, Fock, and BCS—these individual mean field approximations appear to be mutually incompatible decoupling methods. However, by leveraging the variational nature of the mean field approximation, we discover that they can indeed be mixed 1:1:1.&lt;/p&gt;
+&lt;h2 id=&#34;preface&#34;&gt;Preface&lt;/h2&gt;
+&lt;p&gt;The inspiration for this article primarily comes from discussions with classmate &lt;a href=&#34;https://www.zhihu.com/people/li-yong-kang-9-34&#34;&gt;@ykli&lt;/a&gt;. I would like to express my special thanks to &lt;a href=&#34;https://www.zhihu.com/people/li-yong-kang-9-34&#34;&gt;@ykli&lt;/a&gt; for the significant assistance provided during the derivation process.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Can we distinguishing Conductors and Insulators with only Ground State information? 🤔</title>
       <link>http://localhost:1313/post/note1/</link>
@@ -17,6 +27,15 @@
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;&amp;ldquo;Distinguishing conductors and insulators by only looking at the ground state&amp;rdquo;—this argument seems a bit outrageous.&lt;/p&gt;
 &lt;p&gt;The Band Theory of the 1930s (to some extent) explained the difference between conductors and insulators. At the non-interacting level, conductors and insulators can be distinguished by whether the ground state energy bands are filled. If the valence band is filled and there is a band gap $E_g &gt; 0$ separating it from the conduction band, it is an insulator; otherwise, it is a conductor. Here, the band gap $E_g$ is used to distinguish them, but defining $E_g$ requires knowing the energy of excited states, thus inevitably involving excited state properties.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Fractional Quantum Hall Effect (FQHE), Fractional Anomalous Quantum Hall Effect (FAQHE) and Fractional Chern Insulator (FCI)</title>
+      <link>http://localhost:1313/post/fqhe_faqhe_fci/</link>
+      <pubDate>Thu, 08 Jan 2026 21:54:37 -0500</pubDate>
+      <guid>http://localhost:1313/post/fqhe_faqhe_fci/</guid>
+      <description>&lt;p&gt;This note is approximately 10,000 words long and aims to help readers get started with Fractional Quantum Hall Effect (FQHE), Fractional Anomalous Quantum Hall Effect (FAQHE), and Fractional Chern Insulators (FCI). This article represents only my personal perspective and may contain errors; I welcome corrections from readers. Below is the main text.&lt;/p&gt;
+&lt;h2 id=&#34;introduction-to-fqhe-faqhe--fci&#34;&gt;Introduction to FQHE, FAQHE &amp;amp; FCI&lt;/h2&gt;
+&lt;p&gt;The Quantum Hall Effect requires a strong magnetic field environment to be realized. However, the emergence of the Haldane Model and Chern Insulators allowed the Quantum Hall Effect to be realized in &lt;strong&gt;lattice systems without an external magnetic field&lt;/strong&gt;. This phenomenon is called the &amp;ldquo;Quantum Anomalous Hall Effect&amp;rdquo;. In Chern Insulators, the non-trivial Berry Curvature distribution endows the lattice system with non-trivial topological properties similar to the Quantum Hall Effect, or even further, &lt;strong&gt;Berry Curvature replaces the magnetic field&lt;/strong&gt; (although Berry Curvature is defined in reciprocal space, while the magnetic field appears in real space). Discussions on Chern Insulators and other topological phases derived from this have also become hot topics in the field of condensed matter theory in recent years.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -4,7 +4,7 @@ draft = false
 math = true
 ShowToc = true
 TocOpen = false
-title = 'Can we distinguishing Conductors and Insulators with only Ground State information? 🤔'
+title = 'How to Distinguish Conductors and Insulators by Ground State Only? 🤔'
 +++
 
 This note aims to elucidate the connection between the **conductivity** of a many-body system and the **quantum geometry of its ground state**, and to explain how to distinguish between conductors and insulators solely based on the "locality" of the ground state wavefunction.
@@ -19,17 +19,17 @@ However, the Mott Insulator (caused by strong electron-electron correlation) pro
 
 Moreover, a many-body system might not have a lattice at all. We urgently need a more **universal indicator** to judge the conductive properties of many-body systems.
 
-Phenomenologically, the difference between a conductor and an insulator lies in the difference in DC conductivity $\text{Re}\sigma(\omega\rightarrow 0)$, because general insulators can also conduct electricity under AC current. Or they can be distinguished by electric polarization: in insulators, electrons are bound and can only move near atoms, resulting in obvious electric polarization phenomena; while in conductors, electrons tend to move freely, and an external electric field will cause them to flow freely, so there is no well-defined electric polarization.
+Phenomenologically, the difference between a conductor and an insulator lies in the difference in DC conductivity $\operatorname{Re}\sigma(\omega\rightarrow 0)$, because general insulators can also conduct electricity under AC current. Or they can be distinguished by electric polarization: in insulators, electrons are bound and can only move near atoms, resulting in obvious electric polarization phenomena; while in conductors, electrons tend to move freely, and an external electric field will cause them to flow freely, so there is no well-defined electric polarization.
 
 We can always calculate conductivity or polarizability through Linear Response Theory to distinguish conductors and insulators, but this still requires considering the properties of excited states.
 
 However, Kohn proposed in his 1964 paper "Theory of the insulating state" that the conductivity of a many-body system can be judged by the "locality" of the ground state many-body wavefunction in the many-body configuration space.
 
-<https://journals.aps.org/pr/abstract/10.1103/PhysRev.133.A171>
+https://journals.aps.org/pr/abstract/10.1103/PhysRev.133.A171
 
 In the late 20th century, Resta and others noticed that this degree of locality could be better characterized by the **second cumulant moment** $\langle r_\alpha r_\beta \rangle_c$ ("c" for "cumulant") of the many-body ground state wavefunction, and revealed its essence of **Quantum Geometry**.
 
-<https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.82.370>
+https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.82.370
 
 So first, let's clarify how to define the degree of locality of a wavefunction.
 
@@ -43,8 +43,7 @@ The transformation relationship between the Wannier function $|\mathbf{R} n\rang
 
 $$
 \begin{aligned}
-\left|\psi_{n \mathbf{k}}\right\rangle&=\sum_{\mathbf{R}} e^{i \mathbf{k} \cdot \mathbf{R}}|\mathbf{R} n\rangle \\
-&\Leftrightarrow |\mathbf{R} n\rangle=\frac{1}{N} \sum_{\mathbf{k}} e^{-i \mathbf{k} \cdot \mathbf{R}}\left|\psi_{n \mathbf{k}}\right\rangle
+\left|\psi_{n \mathbf{k}}\right\rangle=\sum_{\mathbf{R}} e^{i \mathbf{k} \cdot \mathbf{R}}|\mathbf{R} n\rangle \Leftrightarrow |\mathbf{R} n\rangle=\frac{1}{N} \sum_{\mathbf{k}} e^{-i \mathbf{k} \cdot \mathbf{R}}\left|\psi_{n \mathbf{k}}\right\rangle 
 \end{aligned}
 $$
 
@@ -52,23 +51,21 @@ The degree of locality of the Wannier wavefunction is related to the gauge selec
 
 $$
 \begin{aligned}
-\left|\tilde{\psi}_{n \mathbf{k}}\right\rangle&=e^{i \varphi_n(\mathbf{k})}\left|\psi_{n \mathbf{k}}\right\rangle \\
-&\Rightarrow\ \hat{H}\left|\tilde{\psi}_{n \mathbf{k}}\right\rangle = \epsilon_n(\mathbf{k}) \left|\tilde{\psi}_{n \mathbf{k}}\right\rangle
+\left|\tilde{\psi}_{n \mathbf{k}}\right\rangle=e^{i \varphi_n(\mathbf{k})}\left|\psi_{n \mathbf{k}}\right\rangle \ \Rightarrow\ \hat{H}\left|\tilde{\psi}_{n \mathbf{k}}\right\rangle = \epsilon_n(\mathbf{k}) \left|\tilde{\psi}_{n \mathbf{k}}\right\rangle
 \end{aligned}
 $$
 
 For content on how to adjust the gauge to achieve maximum localization of the Wannier function, one can refer to Vanderbilt's 1997 PRB paper, "Maximally localized generalized Wannier functions for composite energy bands" and the 2012 RMP, "Maximally localized Wannier functions: Theory and applications":
 
-<https://journals.aps.org/prb/abstract/10.1103/PhysRevB.56.12847>
+https://journals.aps.org/prb/abstract/10.1103/PhysRevB.56.12847
 
-<https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.84.1419>
+https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.84.1419
 
 Vanderbilt defined the degree of locality of the Wannier function using the standard deviation of its spatial distribution, the so-called **Spread Functional**, also known as **Quadratic Spread**:
 
 $$
 \begin{aligned}
-\Omega&=\left[\left\langle\mathbf{0} n\left|r^2\right| \mathbf{0} n\right\rangle-\langle\mathbf{0} n|\mathbf{r}| \mathbf{0} n\rangle^2\right]\\
-&=\left[\left\langle r^2\right\rangle_n-\overline{\mathbf{r}}_n^2\right] 
+\Omega=\left[\left\langle\mathbf{0} n\left|r^2\right| \mathbf{0} n\right\rangle-\langle\mathbf{0} n|\mathbf{r}| \mathbf{0} n\rangle^2\right]=\left[\left\langle r^2\right\rangle_n-\overline{\mathbf{r}}_n^2\right] 
 \end{aligned}
 $$
 
@@ -76,7 +73,7 @@ This Spread Functional relates to the gauge selection but can be divided into a 
 
 $$
 \begin{aligned}
-\Omega = \Omega_{\mathrm{I}}+\tilde{\Omega}
+\Omega=\Omega_{\mathrm{I}}+\tilde{\Omega}
 \end{aligned}
 $$
 
@@ -84,7 +81,7 @@ Among them, the gauge-invariant part $\Omega_{\mathrm{I}}$ is also called the **
 
 $$
 \begin{aligned}
-\Omega_{\mathrm{I}} =\sum_{\alpha}\left\langle 0 n\left|r_\alpha Q r_\alpha\right| 0 n\right\rangle=\sum_\alpha \text{Tr}\left[P r_\alpha Q r_\alpha\right] 
+\Omega_{\mathrm{I}}=\sum_{\alpha}\left\langle 0 n\left|r_\alpha Q r_\alpha\right| 0 n\right\rangle=\sum_\alpha \operatorname{Tr}\left[P r_\alpha Q r_\alpha\right] 
 \end{aligned}
 $$
 
@@ -122,7 +119,7 @@ $$
 
 Detailed derivation of this part can be found in my note:
 
-<https://zhuanlan.zhihu.com/p/629079639>
+https://zhuanlan.zhihu.com/p/629079639
 
 It can be seen that the gauge-invariant part of the Quadratic Spread of the Wannier function defines the lower limit of its locality and establishes a direct connection with the Quantum Geometry of the single-particle band.
 
@@ -170,7 +167,7 @@ $$
 
 This is equivalent to adding a constant magnetic vector potential, which can be understood using the magnetic flux in a 1D ring, where $\kappa \propto$ flux $\Phi$ inside the ring.
 
-![1.00](https://pic4.zhimg.com/80/v2-bf698d3fa3347511c74f9b760fb057a6.png)
+![Image](https://pic4.zhimg.com/80/v2-bf698d3fa3347511c74f9b760fb057a6.png)
 
 The most important thing for a many-body system is the ground state. We examine the mapping from the parameter space $\boldsymbol{\kappa}$ to the ground state wavefunction $|\Psi_0(\boldsymbol{\kappa})\rangle$ and use this to construct the **Quantum Geometric Tensor** of the ground state wavefunction space:
 
@@ -192,9 +189,9 @@ Similar to band geometry, the real part is a Symmetric Tensor, called the **Fubi
 
 $$
 \begin{aligned}
-g_{\alpha \beta}(\boldsymbol{\kappa}) & =\text{Re}\left\langle\partial_\alpha \Psi_0(\boldsymbol{\kappa}) \mid \partial_\beta \Psi_0(\boldsymbol{\kappa})\right\rangle \\
+g_{\alpha \beta}(\boldsymbol{\kappa}) & =\operatorname{Re}\left\langle\partial_\alpha \Psi_0(\boldsymbol{\kappa}) \mid \partial_\beta \Psi_0(\boldsymbol{\kappa})\right\rangle \\
 & -\left\langle\partial_\alpha \Psi_0(\boldsymbol{\kappa}) \mid \Psi_0(\boldsymbol{\kappa})\right\rangle\left\langle\Psi_0(\boldsymbol{\kappa}) \mid \partial_\beta \Psi_0(\boldsymbol{\kappa})\right\rangle \\
-& =\text{Re}\left\langle\partial_\alpha \Psi_0(\boldsymbol{\kappa})|\hat{Q}(\boldsymbol{\kappa})| \partial_\beta \Psi_0(\boldsymbol{\kappa})\right\rangle 
+& =\operatorname{Re}\left\langle\partial_\alpha \Psi_0(\boldsymbol{\kappa})|\hat{Q}(\boldsymbol{\kappa})| \partial_\beta \Psi_0(\boldsymbol{\kappa})\right\rangle 
 \end{aligned}
 $$
 
@@ -202,7 +199,7 @@ The imaginary part is an Anti-symmetric Tensor, which is the **Berry Curvature**
 
 $$
 \begin{aligned}
-\Omega_{\alpha \beta}(\boldsymbol{\kappa})=-2 \text{Im}\left\langle\partial_\alpha \Psi_0(\boldsymbol{\kappa})|\hat{Q}(\boldsymbol{\kappa})| \partial_\beta \Psi_0(\boldsymbol{\kappa})\right\rangle 
+\Omega_{\alpha \beta}(\boldsymbol{\kappa})=-2 \operatorname{Im}\left\langle\partial_\alpha \Psi_0(\boldsymbol{\kappa})|\hat{Q}(\boldsymbol{\kappa})| \partial_\beta \Psi_0(\boldsymbol{\kappa})\right\rangle 
 \end{aligned}
 $$
 
@@ -213,19 +210,16 @@ $$
 \left|\Psi_0(\boldsymbol{\kappa}+\Delta \boldsymbol{\kappa})\right\rangle-\left|\Psi_0(\boldsymbol{\kappa})\right\rangle \simeq \sum_{n \neq 0}^{\prime}\left|\Psi_n(\boldsymbol{\kappa})\right\rangle 
 \end{aligned}
 $$
-
 $$
 \begin{aligned}
 \times \frac{\left\langle\Psi_n(\boldsymbol{\kappa})|[H(\boldsymbol{\kappa}+\Delta \boldsymbol{\kappa})-H(\boldsymbol{\kappa})]| \Psi_0(\boldsymbol{\kappa})\right\rangle}{E_0(\boldsymbol{\kappa})-E_n(\boldsymbol{\kappa})} 
 \end{aligned}
 $$
-
 $$
 \begin{aligned}
 \left|\partial_\alpha \Psi_0(\boldsymbol{\kappa})\right\rangle=\sum_{n \neq 0}^{\prime}\left|\Psi_n(\boldsymbol{\kappa})\right\rangle \frac{\left\langle\Psi_n(\boldsymbol{\kappa})\left|\partial_\alpha H(\boldsymbol{\kappa})\right| \Psi_0(\boldsymbol{\kappa})\right\rangle}{E_0(\boldsymbol{\kappa})-E_n(\boldsymbol{\kappa})} . 
 \end{aligned}
 $$
-
 $$
 \begin{aligned}
 \eta_{\alpha \beta}(\kappa)= \sum_{n \neq 0}^{\prime} \frac{\left\langle\Psi_0(\boldsymbol{\kappa})\left|\partial_\alpha H(\boldsymbol{\kappa})\right| \Psi_n(\boldsymbol{\kappa})\right\rangle\left\langle\Psi_n(\boldsymbol{\kappa})\left|\partial_\beta H(\boldsymbol{\kappa})\right| \Psi_0(\boldsymbol{\kappa})\right\rangle}{\left[E_0(\boldsymbol{\kappa})-E_n(\boldsymbol{\kappa})\right]^2} 
@@ -285,7 +279,7 @@ $$
 \end{aligned}
 $$
 
-It is not difficult to find that, unlike the degree of localization of the single-particle Wannier wavefunction which requires integration over all momenta $k$, $\Omega_I \propto \int_{BZ}d^dk \text{tr}g(k)$, here we only need the information of the parameter space $\boldsymbol{\kappa} = 0$, that is, the ground state information of the original system.
+It is not difficult to find that, unlike the degree of localization of the single-particle Wannier wavefunction which requires integration over all momenta $k$, $\Omega_I \propto \int_{BZ}d^dk \operatorname{tr}g(k)$, here we only need the information of the parameter space $\boldsymbol{\kappa} = 0$, that is, the ground state information of the original system.
 
 $$
 \begin{aligned}
@@ -297,7 +291,7 @@ For convenience of derivation later (to better compare with the conductivity for
 
 $$
 \begin{aligned}
-\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}}= \frac{1}{N} \sum_{n \neq 0}^{\prime} \frac{\left\langle\Psi_0\left|\partial_\alpha \hat{H}(0)\right| \Psi_n\right\rangle\left\langle\Psi_n\left|\partial_\beta \hat{H}(0)\right| \Psi_0\right\rangle}{\left(E_0-E_n\right)^2}
+\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}}= \frac{1}{N} \sum_{n \neq 0}^{\prime} \frac{\left\langle\Psi_0\left|\partial_\alpha \hat{H}(0)\right| \Psi_n\right\rangle\left\langle\Psi_n\left|\partial_\beta \hat{H}(0)\right| \Psi_0\right\rangle}{\left(E_0-E_n\right)^2} 
 \end{aligned}
 $$
 
@@ -313,16 +307,14 @@ This is effectively the momentum (velocity) operator, so it can be further rewri
 
 $$
 \begin{aligned}
-\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}} =\frac{1}{N} \sum_{n \neq 0}^{\prime} \frac{\left\langle\Psi_0\left|\hat{v}_\alpha\right| \Psi_n\right\rangle\left\langle\Psi_n\left|\hat{v}_\beta\right| \Psi_0\right\rangle}{\left(E_0-E_n\right)^2/\hbar^2}
+\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}} =\frac{1}{N} \sum_{n \neq 0}^{\prime} \frac{\left\langle\Psi_0\left|\hat{v}_\alpha\right| \Psi_n\right\rangle\left\langle\Psi_n\left|\hat{v}_\beta\right| \Psi_0\right\rangle}{\left(E_0-E_n\right)^2/\hbar^2} 
 \end{aligned}
 $$
-
 $$
 \begin{aligned}
 =\frac{1}{N} \sum_{n \neq 0}^{\prime} \frac{\left\langle\Psi_0\left|\hat{v}_\alpha\right| \Psi_n\right\rangle\left\langle\Psi_n\left|\hat{v}_\beta\right| \Psi_0\right\rangle}{\omega_{0 n}^2}
 \end{aligned}
 $$
-
 $$
 \begin{aligned}
 \omega_{0 n}= \left(E_n-E_0\right) / \hbar
@@ -341,7 +333,7 @@ To summarize, we generalized the single-particle Quantum Geometry to the many-bo
 
 We can quickly get the conductivity of a many-body system using Linear Response Theory. Interested students can check my Linear Response Theory note:
 
-<https://zhuanlan.zhihu.com/p/477550302>
+https://zhuanlan.zhihu.com/p/477550302
 
 $$
 \begin{aligned}
@@ -356,13 +348,12 @@ The real part of conductivity $\sigma_{\alpha \beta}(\omega)$ can be divided int
 
 $$
 \begin{aligned}
-\text{Re} \sigma_{\alpha \beta}^{(+)}(\omega)=\frac{\pi e^2}{\hbar L^3} \sum_{n \neq 0}^{\prime} \frac{\mathcal{R}_{n, \alpha \beta}}{\omega_{0 n}} \delta\left(\omega-\omega_{0 n}\right) 
+\operatorname{Re} \sigma_{\alpha \beta}^{(+)}(\omega)=\frac{\pi e^2}{\hbar L^3} \sum_{n \neq 0}^{\prime} \frac{\mathcal{R}_{n, \alpha \beta}}{\omega_{0 n}} \delta\left(\omega-\omega_{0 n}\right) 
 \end{aligned}
 $$
-
 $$
 \begin{aligned}
-\text{Re} \sigma_{\alpha \beta}^{(-)}(\omega)=\frac{2 e^2}{\hbar L^3} \sum_{n \neq 0}^{\prime} \frac{\mathcal{I}_{n, \alpha \beta}}{\omega_{0 n}^2-\omega^2} 
+\operatorname{Re} \sigma_{\alpha \beta}^{(-)}(\omega)=\frac{2 e^2}{\hbar L^3} \sum_{n \neq 0}^{\prime} \frac{\mathcal{I}_{n, \alpha \beta}}{\omega_{0 n}^2-\omega^2} 
 \end{aligned}
 $$
 
@@ -370,13 +361,12 @@ Where,
 
 $$
 \begin{aligned}
-\mathcal{R}_{n, \alpha \beta}=\text{Re}\left\langle\Psi_0\left|\hat{v}_\alpha\right| \Psi_n\right\rangle\left\langle\Psi_n\left|\hat{v}_\beta\right| \Psi_0\right\rangle 
+\mathcal{R}_{n, \alpha \beta}=\operatorname{Re}\left\langle\Psi_0\left|\hat{v}_\alpha\right| \Psi_n\right\rangle\left\langle\Psi_n\left|\hat{v}_\beta\right| \Psi_0\right\rangle 
 \end{aligned}
 $$
-
 $$
 \begin{aligned}
-\mathcal{I}_{n, \alpha \beta}=\text{Im}\left\langle\Psi_0\left|\hat{v}_\alpha\right| \Psi_n\right\rangle\left\langle\Psi_n\left|\hat{v}_\beta\right| \Psi_0\right\rangle 
+\mathcal{I}_{n, \alpha \beta}=\operatorname{Im}\left\langle\Psi_0\left|\hat{v}_\alpha\right| \Psi_n\right\rangle\left\langle\Psi_n\left|\hat{v}_\beta\right| \Psi_0\right\rangle 
 \end{aligned}
 $$
 
@@ -400,13 +390,12 @@ It is not difficult to find,
 
 $$
 \begin{aligned}
-\text{Re}\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}}=\frac{1}{N} \sum_{n \neq 0}^{\prime} \frac{\mathcal{R}_{n, \alpha \beta}}{\omega_{0 n}^2} 
+\operatorname{Re}\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}}=\frac{1}{N} \sum_{n \neq 0}^{\prime} \frac{\mathcal{R}_{n, \alpha \beta}}{\omega_{0 n}^2} 
 \end{aligned}
 $$
-
 $$
 \begin{aligned}
-\text{Im}\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}}=\frac{1}{N} \sum_{n \neq 0}^{\prime} \frac{\mathcal{I}_{n, \alpha \beta}}{\omega_{0 n}^2} 
+\operatorname{Im}\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}}=\frac{1}{N} \sum_{n \neq 0}^{\prime} \frac{\mathcal{I}_{n, \alpha \beta}}{\omega_{0 n}^2} 
 \end{aligned}
 $$
 
@@ -414,13 +403,12 @@ Furthermore, the **SWM Formula** (I.Souza, T.Wilkens, R.M.Martin, 2000) can be p
 
 $$
 \begin{aligned}
-\text{Re}\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}} =\frac{\hbar L^3}{\pi e^2 N} \int_0^{\infty} \frac{d \omega}{\omega} \text{Re} \sigma_{\alpha \beta}^{(+)}(\omega) 
+\operatorname{Re}\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}} =\frac{\hbar L^3}{\pi e^2 N} \int_0^{\infty} \frac{d \omega}{\omega} \operatorname{Re} \sigma_{\alpha \beta}^{(+)}(\omega) 
 \end{aligned}
 $$
-
 $$
 \begin{aligned}
-\text{Im}\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}} =\frac{\hbar L^3}{2 e^2 N} \text{Re} \sigma_{\alpha \beta}^{(-)}(0) 
+\operatorname{Im}\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}} =\frac{\hbar L^3}{2 e^2 N} \operatorname{Re} \sigma_{\alpha \beta}^{(-)}(0) 
 \end{aligned}
 $$
 
@@ -432,11 +420,11 @@ We focus on the static field $\omega \rightarrow 0$ because insulators can also 
 
 We can find that the information at $\omega \rightarrow 0$ is not easily directly linked to $\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}}$, but through the SWM formula above, we can indirectly examine the information at $\omega \rightarrow 0$.
 
-Focusing on the real part of the longitudinal information of the **SWM formula** (since the index $\alpha$ is the same, $\text{Re} \sigma_{\alpha \alpha} = \text{Re} \sigma_{\alpha \alpha}^{(+)}$):
+Focusing on the real part of the longitudinal information of the **SWM formula** (since the index $\alpha$ is the same, $\operatorname{Re} \sigma_{\alpha \alpha} = \operatorname{Re} \sigma_{\alpha \alpha}^{(+)}$):
 
 $$
 \begin{aligned}
-\text{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}} =\frac{\hbar L^3}{\pi e^2 N} \int_0^{\infty} \frac{d \omega}{\omega} \text{Re} \sigma_{\alpha \alpha}(\omega) 
+\operatorname{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}} =\frac{\hbar L^3}{\pi e^2 N} \int_0^{\infty} \frac{d \omega}{\omega} \operatorname{Re} \sigma_{\alpha \alpha}(\omega) 
 \end{aligned}
 $$
 
@@ -444,13 +432,13 @@ The f-sum rule can be used to prove the convergence of the integral at $\omega \
 
 $$
 \begin{aligned}
-\int_0^{\infty} d \omega \text{Re} \sigma_{\alpha \alpha}(\omega) = \frac{\pi e^2 N}{2 m_e L^3} 
+\int_0^{\infty} d \omega \operatorname{Re} \sigma_{\alpha \alpha}(\omega) = \frac{\pi e^2 N}{2 m_e L^3} 
 \end{aligned}
 $$
 
-Then, the convergence of the integral (whether $\text{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}} $ is finite or not) depends on the information of conductivity at $\omega \rightarrow 0$.
+Then, the convergence of the integral (whether $\operatorname{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}} $ is finite or not) depends on the information of conductivity at $\omega \rightarrow 0$.
 
-And whether $\text{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}}$ is finite is directly related to the locality of the many-body system. We can define: if $\text{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}}$ is finite, the many-body ground state is **"Localized"**; if it diverges, it is **"Delocalized"**.
+And whether $\operatorname{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}}$ is finite is directly related to the locality of the many-body system. We can define: if $\operatorname{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}}$ is finite, the many-body ground state is **"Localized"**; if it diverges, it is **"Delocalized"**.
 
 Through the above derivation, we have successfully expressed the "locality" of the many-body ground state wavefunction quantitatively and linked it to the system's static longitudinal conductivity.
 
@@ -460,23 +448,22 @@ Through the above derivation, we have successfully expressed the "locality" of t
 
 Finally, we can answer the question at the beginning of this article: **How to distinguish conductors and insulators by only looking at the ground state?**
 
-For systems with a band gap, since all excitation energies $\hbar \omega_{0n} \geq E_g$, from the linear response formula of conductivity $\text{Re} \sigma_{\alpha \beta}^{(+)}(\omega) \simeq \sum \delta\left(\omega-\omega_{0 n}\right)$, it is obvious that the conductivity is 0 when $\omega \rightarrow 0$, so it is an insulator.
+For systems with a band gap, since all excitation energies $\hbar \omega_{0n} \geq E_g$, from the linear response formula of conductivity $\operatorname{Re} \sigma_{\alpha \beta}^{(+)}(\omega) \simeq \sum \delta\left(\omega-\omega_{0 n}\right)$, it is obvious that the conductivity is 0 when $\omega \rightarrow 0$, so it is an insulator.
 
-Thus, the lower limit of the integral for $\text{Re} \sigma_{\alpha \beta}^{(+)}(\omega) \simeq \sum \delta\left(\omega-\omega_{0 n}\right)$ can be changed to $E_g/\hbar > 0$:
-
-$$
-\begin{aligned}
-\text{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}} =\frac{\hbar L^3}{\pi e^2 N} \int_{E_{\mathrm{g} /} \hbar}^{\infty} \frac{d \omega}{\omega} \text{Re} \sigma_{\alpha \alpha}(\omega) 
-\end{aligned}
-$$
+Thus, the lower limit of the integral for $\operatorname{Re} \sigma_{\alpha \beta}^{(+)}(\omega) \simeq \sum \delta\left(\omega-\omega_{0 n}\right)$ can be changed to $E_g/\hbar > 0$:
 
 $$
 \begin{aligned}
-<\frac{\hbar L^3}{\pi e^2 N} \int_0^{\infty} \frac{d \omega}{E_{\mathrm{g}}/\hbar} \text{Re} \sigma_{\alpha \alpha}(\omega) =\frac{\hbar^2}{2 m_e E_{\mathrm{g}}}
+\operatorname{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}} =\frac{\hbar L^3}{\pi e^2 N} \int_{E_{\mathrm{g} /} \hbar}^{\infty} \frac{d \omega}{\omega} \operatorname{Re} \sigma_{\alpha \alpha}(\omega) 
+\end{aligned}
+$$
+$$
+\begin{aligned}
+<\frac{\hbar L^3}{\pi e^2 N} \int_0^{\infty} \frac{d \omega}{E_{\mathrm{g}}/\hbar} \operatorname{Re} \sigma_{\alpha \alpha}(\omega) =\frac{\hbar^2}{2 m_e E_{\mathrm{g}}}
 \end{aligned}
 $$
 
-This shows that $\text{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}}$ has an upper bound and is finite, which corresponds to the **localized many-body ground state** we defined earlier.
+This shows that $\operatorname{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}}$ has an upper bound and is finite, which corresponds to the **localized many-body ground state** we defined earlier.
 
 In this way, we can determine whether the system is an insulator or a conductor entirely by the locality of the many-body ground state:
 
@@ -486,15 +473,15 @@ $$
 \end{aligned}
 $$
 
-Conversely, for a conductor (metal) with static longitudinal conductivity $\lim_{\omega \rightarrow 0} \text{Re} \sigma_{\alpha \alpha}(\omega) > 0$, we find that the above integral at $\omega \rightarrow 0$:
+Conversely, for a conductor (metal) with static longitudinal conductivity $\lim_{\omega \rightarrow 0} \operatorname{Re} \sigma_{\alpha \alpha}(\omega) > 0$, we find that the above integral at $\omega \rightarrow 0$:
 
 $$
 \begin{aligned}
-\text{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}} \simeq \frac{\hbar L^3 }{\pi e^2 N} \lim_{\omega \rightarrow 0} \text{Re} \sigma_{\alpha \alpha}(\omega)\int_{0}^{\infty} \frac{d \omega}{\omega} 
+\operatorname{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}} \simeq \frac{\hbar L^3 }{\pi e^2 N} \lim_{\omega \rightarrow 0} \operatorname{Re} \sigma_{\alpha \alpha}(\omega)\int_{0}^{\infty} \frac{d \omega}{\omega} 
 \end{aligned}
 $$
 
-Obviously diverges at $\omega \rightarrow 0$, so $\text{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}} = \infty$.
+Obviously diverges at $\omega \rightarrow 0$, so $\operatorname{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}} = \infty$.
 
 Thus we have:
 
@@ -504,7 +491,7 @@ $$
 \end{aligned}
 $$
 
-Of course, there is a special case, the gapless case $E_g = 0$. At this time, whether the many-body ground state is "localized" or not still depends on the behavior of the static longitudinal conductivity $\lim_{\omega \rightarrow 0} \text{Re} \sigma_{\alpha \alpha}(\omega)$. For example, if $\lim_{\omega \rightarrow 0} \text{Re} \sigma_{\alpha \alpha}(\omega) \propto \omega^{\alpha \geq 1}$, then the many-body ground state is still localized and is an insulator; conversely, if $\lim_{\omega \rightarrow 0} \text{Re} \sigma_{\alpha \alpha}(\omega) \propto \omega^{\alpha < 1}$, then the many-body ground state is delocalized and is a conductor.
+Of course, there is a special case, the gapless case $E_g = 0$. At this time, whether the many-body ground state is "localized" or not still depends on the behavior of the static longitudinal conductivity $\lim_{\omega \rightarrow 0} \operatorname{Re} \sigma_{\alpha \alpha}(\omega)$. For example, if $\lim_{\omega \rightarrow 0} \operatorname{Re} \sigma_{\alpha \alpha}(\omega) \propto \omega^{\alpha \geq 1}$, then the many-body ground state is still localized and is an insulator; conversely, if $\lim_{\omega \rightarrow 0} \operatorname{Re} \sigma_{\alpha \alpha}(\omega) \propto \omega^{\alpha < 1}$, then the many-body ground state is delocalized and is a conductor.
 
 Among them, the strongly disordered Anderson Insulator belongs to the former, because although outside the mobility edge of the disordered system is the energy spectrum (which can make the system gapless), the electronic states outside the mobility edge undergo Anderson Localization and do not contribute to conductivity, so it is still an insulator overall; while band metals or weakly disordered, weakly correlated conductor systems belong to the latter.
 
@@ -514,30 +501,30 @@ In this way, for any many-body system (regardless of symmetry, disorder, strong 
 
 $$
 \begin{aligned}
-\text{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}} < \infty \Leftrightarrow \text{Many-body ground state "Localized"} \Leftrightarrow \text{System is Insulator}
+\operatorname{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}} < \infty \Leftrightarrow \text{Many-body ground state "Localized"} \Leftrightarrow \text{System is Insulator}
 \end{aligned}
 $$
 
 $$
 \begin{aligned}
-\text{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}} = \infty \Leftrightarrow \text{Many-body ground state "Delocalized"} \Leftrightarrow \text{System is Conductor}
+\operatorname{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}} = \infty \Leftrightarrow \text{Many-body ground state "Delocalized"} \Leftrightarrow \text{System is Conductor}
 \end{aligned}
 $$
 
 ## Reference
 
-* \[1] Kohn W. [Theory of the insulating state](https://journals.aps.org/pr/abstract/10.1103/PhysRev.133.A171). Physical review, 1964, 133(1A): A171.
+- [1] Kohn W. [Theory of the insulating state](https://journals.aps.org/pr/abstract/10.1103/PhysRev.133.A171). Physical review, 1964, 133(1A): A171.
 
-* \[2] Resta, R., & Sorella, S. (1999). [Electron localization in the insulating state](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.82.370). Physical Review Letters, 82(2), 370.
+- [2] Resta, R., & Sorella, S. (1999). [Electron localization in the insulating state](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.82.370). Physical Review Letters, 82(2), 370.
 
-* \[3] Souza, I., Wilkens, T., & Martin, R. M. (2000). [Polarization and localization in insulators: Generating function approach](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.62.1666). Physical Review B, 62(3), 1666.
+- [3] Souza, I., Wilkens, T., & Martin, R. M. (2000). [Polarization and localization in insulators: Generating function approach](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.62.1666). Physical Review B, 62(3), 1666.
 
-* \[4] Marzari, N., Mostofi, A. A., Yates, J. R., Souza, I., & Vanderbilt, D. (2012). [Maximally localized Wannier functions: Theory and applications](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.84.1419). Reviews of Modern Physics, 84(4), 1419.
+- [4] Marzari, N., Mostofi, A. A., Yates, J. R., Souza, I., & Vanderbilt, D. (2012). [Maximally localized Wannier functions: Theory and applications](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.84.1419). Reviews of Modern Physics, 84(4), 1419.
 
-* \[5] Lee, C. H., Thomale, R., & Qi, X. L. (2013). [Pseudopotential formalism for fractional Chern insulators](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.88.035101). Physical Review B, 88(3), 035101.
+- [5] Lee, C. H., Thomale, R., & Qi, X. L. (2013). [Pseudopotential formalism for fractional Chern insulators](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.88.035101). Physical Review B, 88(3), 035101.
 
-* \[6] Marzari, N., & Vanderbilt, D. (1997). [Maximally localized generalized Wannier functions for composite energy bands](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.56.12847). Physical review B, 56(20), 12847.
+- [6] Marzari, N., & Vanderbilt, D. (1997). [Maximally localized generalized Wannier functions for composite energy bands](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.56.12847). Physical review B, 56(20), 12847.
 
-* \[7] Resta, R. (2002). [Why are insulators insulating and metals conducting?](https://iopscience.iop.org/article/10.1088/0953-8984/14/20/201). Journal of Physics: Condensed Matter, 14(20), R625.
+- [7] Resta, R. (2002). [Why are insulators insulating and metals conducting?](https://iopscience.iop.org/article/10.1088/0953-8984/14/20/201). Journal of Physics: Condensed Matter, 14(20), R625.
 
-* \[8] Resta, R. (2022). Geometry and topology in electronic structure theory. Università degli Studi di Trieste.
+- [8] Resta, R. (2022). Geometry and topology in electronic structure theory. Università degli Studi di Trieste.

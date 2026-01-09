@@ -21,6 +21,7 @@
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/zh/post/index.xml" title="rss">
 <link rel="alternate" hreflang="zh" href="http://localhost:1313/zh/post/">
 <link rel="alternate" hreflang="en" href="http://localhost:1313/post/">
+<link rel="alternate" hreflang="ja" href="http://localhost:1313/ja/post/">
 <noscript>
     <style>
         #theme-toggle,
@@ -122,6 +123,10 @@
                             <a href="http://localhost:1313/" title="🇺🇸 English"
                                 aria-label="🇺🇸 English">En</a>
                         </li>
+                        <li>
+                            <a href="http://localhost:1313/ja/" title="🇯🇵 日本語"
+                                aria-label="🇯🇵 日本語">Ja</a>
+                        </li>
                     </ul>
             </div>
         </div>
@@ -135,6 +140,60 @@
     Posts
   </h1>
 </header>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">平均场近似与变分法｜Hartree, Fock, BCS能1:1:1混用吗？
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>本文旨在介绍平均场近似，同时阐述其变分法本质。
+Hartree, Fock, BCS这一个一个一个平均场近似，看似是一个一个一个互不相容的decouple方法，但利用平均场近似的变分法本质，我们发现他们事实上确实可以1:1:1混着用。
+Preface 本文灵感首先来自来自和@ykli同学的讨论，在此特别感谢@ykli在推导过程中给予的大量帮助。
+这个问题在physics stackexchange网站上也被提及（被称为“Multi-channel Mean Field Theory”），在此也放上链接供大家参考：
+https://physics.stackexchange.com/questions/742905/multi-channel-mean-field-theory
+同时，@阿兰那行学长关于“物理圈黑话”的回答也给了我相当多的灵感，有兴趣的读者可以移步：
+https://www.zhihu.com/question/410499049/answer/2442413803
+Introduction 对于相互作用体系，系统完整的哈密顿量为：
+$$ \begin{aligned} \hat{H} = \hat{H}_0 &#43; \hat{V}_{int} \end{aligned} $$
+其中，$\hat{H}_0 \sim \sum c^\dagger c$，为费米子产生湮灭算符的二次型部分，比较容易处理成independent free particle。
+而$\hat{V}_{int} \sim \sum c^\dagger c^\dagger c c$，为相互作用部分。
+由于相互作用的存在，我们比较难求系统的基态波函数或者平衡态密度矩阵，从而比较难以计算相互作用体系的各种信息。因此，我们常常用各种近似方法来处理。
+平均场近似便是一种方法，我们取一个可以严格解的平均场近似哈密顿量：
+$$ \begin{aligned} \hat{H}_{mf} = \hat{H}_0 &#43; \hat{V}_{mf} \end{aligned} $$
+使得$\hat{V}_{mf}$也为二次型，则比较好求严格解，我们便可以用这个平均场近似哈密顿量的解来近似给出系统的各种性质。
+Mean Field Theory by Decoupling 但取近似不能瞎取，也需要一定技巧。
+量子力学课本中教我们，平均场近似就是把算符的quantum fluctuation部分给忽略，即Decoupling Method：
+$$ \begin{aligned} A^\dagger A &amp; = [\langle A \rangle &#43; (A - \langle A \rangle)]^\dagger [\langle A \rangle &#43; (A - \langle A \rangle)] \\ &amp; \equiv [\langle A \rangle &#43; \delta A]^\dagger [\langle A \rangle &#43; \delta A] \\ &amp; = \underbrace{\langle A^\dagger \rangle \langle A \rangle}_{\mathcal{O}(\delta A^0)} &#43; \underbrace{\langle A^\dagger \rangle \delta A &#43; \delta A^\dagger \langle A \rangle}_{\mathcal{O}(\delta A^1)} &#43; \underbrace{\delta A^\dagger \delta A}_{\mathcal{O}(\delta A^2)} \\ &amp; = \underbrace{\langle A^\dagger \rangle A &#43; A^\dagger \langle A \rangle - \langle A^\dagger \rangle \langle A \rangle}_{\text{mean field}\ =\ \mathcal{O}(\delta A^0) &#43; \mathcal{O}(\delta A^1)} \\ &amp; &#43; \underbrace{(A - \langle A \rangle)^\dagger (A - \langle A \rangle)}_{\text{quantum fluctuation}\ =\ \mathcal{O}(\delta A^2)} \\ &amp; \approx \langle A^\dagger \rangle A &#43; A^\dagger \langle A \rangle - \langle A^\dagger \rangle \langle A \rangle \end{aligned} $$
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-01-09 19:05:46 +0000 +0000'>2026年1月9日</span></footer>
+  <a class="entry-link" aria-label="post link to 平均场近似与变分法｜Hartree, Fock, BCS能1:1:1混用吗？" href="http://localhost:1313/zh/post/mean_field_approximation/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">分数量子霍尔效应(FQHE)、分数反常量子霍尔效应(FAQHE)与分数陈绝缘体(FCI)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>本note全文约10000字，旨在帮助读者入门分数量子霍尔效应、分数反常量子霍尔效应以及分数陈绝缘体的相关内容。本文仅为一己之见，有很多疏漏，还望读者不吝赐教。下面是正文～
+Introduction to FQHE, FAQHE &amp; FCI 量子霍尔效应需要强磁场环境才能实现，而Haldane Model以及陈绝缘体的出现使得量子霍尔效应得以在无外磁场的晶格系统中便能实现。这种现象称为“量子反常霍尔效应”，在陈绝缘体中，非平庸的Berry Curvature分布使得晶格体系具有了类似量子霍尔效应的非平庸拓扑性质，或者更进一步，Berry Curvature取代了磁场（虽然Berry Curvature定义在在倒空间中，而磁场出现在实空间中）。由它引申出的对陈绝缘体及其他拓扑相的讨论也成为前些年凝聚态理论领域的热点话题。
+另一方面，当磁场强度足够大，使得电子全部简并在最低朗道能级(Lowest Landau Level, LLL)，特别是当一个电子平均占有整数（或分数）个量子磁通时，分数量子霍尔效应便出现了。与量子霍尔效应、量子反常霍尔效应或是一般的拓扑绝缘体不同，分数量子霍尔效应是LLL中简并电子强相互作用的结果，而之前的讨论基本限于non-interacting的有能隙费米系统。
+分数量子霍尔体系有着拓扑相关的基态简并度(Ground State Degeneracy, GSD)、分数激发与任意子统计，这可能应用于拓扑量子计算等领域，但需要比量子霍尔效应更强的磁场这一条件便能“劝退”很多想要应用化该效应的人。
+类似英语语法中的各种时态，我们也想用“反常”和“分数”组合出一种新的量子霍尔效应，及“分数反常量子霍尔效应”（Fractional Anomalous Quantum Hall Effect, FAQHE），简称“FAQ”（“发Q”）。
+特别地，我们希望这一现象在格点体系中便能实现。结合量子反常霍尔效应在陈绝缘体中的实现，物理学家们便把目光投向了陈绝缘体中拓扑非平庸的Chern Band，并仿照分数填布的LLL，在Chern Band中进行1/3、1/5、1/7…的电子数填布，并给系统Hamiltonian加上电子-电子关联项（例如Hubbard Model），来观测这种分数填布的陈绝缘体是否能表现出类似FQH体系的现象（之前提到的GSD、分数激发、任意子统计等）。
+在对分数填布、拓扑非平庸的Haldane Model、Kagome Lattice等体系的数值模拟中，确实观测到了热力学极限下有限大的many-body gap、非平庸的GSD、分数激发等现象，物理学家们便把这种新奇的拓扑物态命名为“分数陈绝缘体”(Fractional Chern Insulator, FCI)。
+Physics in L.L.L. 为了将（近）自由电子气系统中的分数量子霍尔效应“无缝衔接”到陈绝缘体的晶格系统中，我们首先回顾最低朗道能级(L.L.L.)中的物理。
+磁场中电子的Hamiltonian：
+$$ \begin{aligned} H=\frac{1}{2 m}\left( \hat{\mathbf{p}} &#43; e \mathbf{A}(\hat{\mathbf{r}}) \right)^2 = \frac{\boldsymbol{\pi}^2}{2m} \end{aligned} $$
+对于恒定外磁场中的自由电子气，可以不选取特定规范计算Landau能级，也可以在Landau Gauge和Symmetric Gauge下严格求解单电子波函数。
+Analysis without Gauge $$ \begin{aligned} \boldsymbol{\pi}=\mathbf{p}&#43;e \mathbf{A}=m \dot{\mathbf{x}} \end{aligned} $$
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-01-08 21:54:37 -0500 EST'>2026年1月8日</span></footer>
+  <a class="entry-link" aria-label="post link to 分数量子霍尔效应(FQHE)、分数反常量子霍尔效应(FAQHE)与分数陈绝缘体(FCI)" href="http://localhost:1313/zh/post/fqhe_faqhe_fci/"></a>
+</article>
 
 <article class="post-entry"> 
   <header class="entry-header">

@@ -3,11 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/zh/</loc>
-    <lastmod>2026-01-08T21:54:37-05:00</lastmod>
+    <lastmod>2026-01-09T19:05:46+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
                 href="http://localhost:1313/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="http://localhost:1313/ja/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -16,7 +21,7 @@
                 />
   </url><url>
     <loc>http://localhost:1313/zh/post/</loc>
-    <lastmod>2026-01-08T21:54:37-05:00</lastmod>
+    <lastmod>2026-01-09T19:05:46+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -24,8 +29,49 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="http://localhost:1313/ja/post/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="zh"
                 href="http://localhost:1313/zh/post/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/zh/post/mean_field_approximation/</loc>
+    <lastmod>2026-01-09T19:05:46+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/post/mean_field_approximation/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="http://localhost:1313/ja/post/mean_field_approximation/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="http://localhost:1313/zh/post/mean_field_approximation/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/zh/post/fqhe_faqhe_fci/</loc>
+    <lastmod>2026-01-08T21:54:37-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/post/fqhe_faqhe_fci/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="http://localhost:1313/ja/post/fqhe_faqhe_fci/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="http://localhost:1313/zh/post/fqhe_faqhe_fci/"
                 />
   </url><url>
     <loc>http://localhost:1313/zh/post/note1/</loc>
@@ -49,6 +95,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="http://localhost:1313/ja/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="zh"
                 href="http://localhost:1313/zh/categories/"
                 />
@@ -58,6 +109,11 @@
                 rel="alternate"
                 hreflang="en"
                 href="http://localhost:1313/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="http://localhost:1313/ja/tags/"
                 />
     <xhtml:link
                 rel="alternate"

@@ -134,7 +134,7 @@ https://zhuanlan.zhihu.com/p/629079639
 
 $$
 \begin{aligned}
-\hat{H}=\frac{1}{2 m_e} \sum_{i=1}^N\left|\mathbf{p}_i+\frac{e}{c} \mathbf{A}\left(\mathbf{r}_i\right)\right|^2+\hat{V}(\{\mathbf{r}_i\})
+\hat{H}=\frac{1}{2 m_e} \sum_{i=1}^N\left|\mathbf{p}_i+\frac{e}{c} \mathbf{A}\left(\mathbf{r}_i\right)\right|^2+\hat{V}(\\{\mathbf{r}_i\\})
 \end{aligned}
 $$
 
@@ -154,7 +154,7 @@ $$
 
 $$
 \begin{aligned}
-\hat{H}(\boldsymbol{\kappa})=\frac{1}{2 m_e} \sum_{i=1}^N\left|\mathbf{p}_i+\frac{e}{c} \mathbf{A}\left(\mathbf{r}_i\right)+\hbar \boldsymbol{\kappa}\right|^2+\hat{V}(\{(\mathbf{r}_i\})
+\hat{H}(\boldsymbol{\kappa})=\frac{1}{2 m_e} \sum_{i=1}^N\left|\mathbf{p}_i+\frac{e}{c} \mathbf{A}\left(\mathbf{r}_i\right)+\hbar \boldsymbol{\kappa}\right|^2+\hat{V}(\\{(\mathbf{r}_i\\})
 \end{aligned}
 $$
 
@@ -525,18 +525,18 @@ $$
 
 ## Reference
 
-[1] Kohn W. Theory of the insulating state[J]. Physical review, 1964, 133(1A): A171.
+- [1] Kohn W. [Theory of the insulating state](https://journals.aps.org/pr/abstract/10.1103/PhysRev.133.A171). Physical review, 1964, 133(1A): A171.
 
-[2] Resta, R., & Sorella, S. (1999). Electron localization in the insulating state. Physical Review Letters, 82(2), 370.
+- [2] Resta, R., & Sorella, S. (1999). [Electron localization in the insulating state](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.82.370). Physical Review Letters, 82(2), 370.
 
-[3] Souza, I., Wilkens, T., & Martin, R. M. (2000). Polarization and localization in insulators: Generating function approach. Physical Review B, 62(3), 1666.
+- [3] Souza, I., Wilkens, T., & Martin, R. M. (2000). [Polarization and localization in insulators: Generating function approach](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.62.1666). Physical Review B, 62(3), 1666.
 
-[4] Marzari, N., Mostofi, A. A., Yates, J. R., Souza, I., & Vanderbilt, D. (2012). Maximally localized Wannier functions: Theory and applications. Reviews of Modern Physics, 84(4), 1419.
+- [4] Marzari, N., Mostofi, A. A., Yates, J. R., Souza, I., & Vanderbilt, D. (2012). [Maximally localized Wannier functions: Theory and applications](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.84.1419). Reviews of Modern Physics, 84(4), 1419.
 
-[5] Lee, C. H., Thomale, R., & Qi, X. L. (2013). Pseudopotential formalism for fractional Chern insulators. Physical Review B, 88(3), 035101.
+- [5] Lee, C. H., Thomale, R., & Qi, X. L. (2013). [Pseudopotential formalism for fractional Chern insulators](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.88.035101). Physical Review B, 88(3), 035101.
 
-[6] Marzari, N., & Vanderbilt, D. (1997). Maximally localized generalized Wannier functions for composite energy bands. Physical review B, 56(20), 12847.
+- [6] Marzari, N., & Vanderbilt, D. (1997). [Maximally localized generalized Wannier functions for composite energy bands](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.56.12847). Physical review B, 56(20), 12847.
 
-[7] Resta, R. (2002). Why are insulators insulating and metals conducting?. Journal of Physics: Condensed Matter, 14(20), R625.
+- [7] Resta, R. (2002). [Why are insulators insulating and metals conducting?](https://iopscience.iop.org/article/10.1088/0953-8984/14/20/201). Journal of Physics: Condensed Matter, 14(20), R625.
 
-[8] Resta, R. (2022). Geometry and topology in electronic structure theory. Università degli Studi di Trieste.
+- [8] Resta, R. (2022). Geometry and topology in electronic structure theory. Università degli Studi di Trieste.

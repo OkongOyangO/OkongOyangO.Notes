@@ -19,6 +19,13 @@ defaultContentLanguage = 'en'
     [languages.en.params]
       description = "Physics notes"
 
+  [languages.ja]
+    languageName = "🇯🇵 日本語"
+    weight = 3
+    title = "O空O扬O の 物理ノート"
+    [languages.ja.params]
+      description = "物理ノート"
+
 [params]
   defaultTheme = "auto"
   ShowShareButtons = true

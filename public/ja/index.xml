@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>O空O扬O の 物理ノート</title>
+    <link>http://localhost:1313/ja/</link>
+    <description>Recent content on O空O扬O の 物理ノート</description>
+    <generator>Hugo -- 0.154.3</generator>
+    <language>ja</language>
+    <lastBuildDate>Fri, 09 Jan 2026 19:05:46 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/ja/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>平均場近似と変分法｜Hartree, Fock, BCSは1:1:1で混ぜて使えるか？</title>
+      <link>http://localhost:1313/ja/post/mean_field_approximation/</link>
+      <pubDate>Fri, 09 Jan 2026 19:05:46 +0000</pubDate>
+      <guid>http://localhost:1313/ja/post/mean_field_approximation/</guid>
+      <description>&lt;p&gt;本文は平均場近似を紹介すると同時に、その変分法的本質を説明することを目的としています。&lt;/p&gt;
+&lt;p&gt;Hartree, Fock, BCSといった個々の平均場近似は、一見すると互いに相容れないdecouple（分離）手法のように見えますが、平均場近似の変分法的本質を利用することで、これらは実際に1:1:1で混ぜて使用できることがわかります。&lt;/p&gt;
+&lt;h2 id=&#34;preface&#34;&gt;Preface&lt;/h2&gt;
+&lt;p&gt;本文のインスピレーションは、まずクラスメートの&lt;a href=&#34;https://www.zhihu.com/people/li-yong-kang-9-34&#34;&gt;@ykli&lt;/a&gt;との議論から得られました。導出過程で多大な助けをくれた&lt;a href=&#34;https://www.zhihu.com/people/li-yong-kang-9-34&#34;&gt;@ykli&lt;/a&gt;に感謝します。&lt;/p&gt;
+&lt;p&gt;この問題はPhysics Stack Exchangeのウェブサイトでも言及されており（&amp;ldquo;Multi-channel Mean Field Theory&amp;quot;と呼ばれています）、参考のためにリンクを貼っておきます：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://physics.stackexchange.com/questions/742905/multi-channel-mean-field-theory&#34;&gt;https://physics.stackexchange.com/questions/742905/multi-channel-mean-field-theory&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;また、&lt;a href=&#34;https://www.zhihu.com/people/deng-wwzz&#34;&gt;@阿兰那行&lt;/a&gt;先輩の「物理界隈の隠語」に関する回答からもかなりのインスピレーションを得ました。興味のある読者は以下をご覧ください：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.zhihu.com/question/410499049/answer/2442413803&#34;&gt;https://www.zhihu.com/question/410499049/answer/2442413803&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;相互作用系において、システムの完全なハミルトニアンは以下の通りです：&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+\hat{H} = \hat{H}_0 + \hat{V}_{int}
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;ここで、$\hat{H}_0 \sim \sum c^\dagger c$ はフェルミ粒子生成消滅演算子の二次形式部分であり、独立した自由粒子として比較的容易に扱えます。&lt;/p&gt;
+&lt;p&gt;一方、$\hat{V}_{int} \sim \sum c^\dagger c^\dagger c c$ は相互作用部分です。&lt;/p&gt;
+&lt;p&gt;相互作用の存在により、システムの基底状態波動関数や平衡状態密度行列を求めることは難しく、相互作用系の様々な情報を計算することも困難になります。そのため、我々はしばしば様々な近似手法を用いて処理します。&lt;/p&gt;
+&lt;p&gt;平均場近似はそのような手法の一つです。厳密に解くことができる平均場近似ハミルトニアンを取り上げます：&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+\hat{H}_{mf} = \hat{H}_0 + \hat{V}_{mf}
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;$\hat{V}_{mf}$ もまた二次形式にすることで、厳密解を求めることが容易になります。そして、この平均場近似ハミルトニアンの解を用いて、システムの様々な性質を近似的に導き出すことができます。&lt;/p&gt;
+&lt;h2 id=&#34;mean-field-theory-by-decoupling&#34;&gt;Mean Field Theory by Decoupling&lt;/h2&gt;
+&lt;p&gt;しかし、近似は適当に選べばよいわけではなく、ある程度のテクニックが必要です。&lt;/p&gt;
+&lt;p&gt;量子力学の教科書では、平均場近似とは演算子の量子揺らぎ部分を無視すること、すなわちDecoupling Method（分離法）であると教えられます：&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+A^\dagger A &amp; = [\langle A \rangle + (A - \langle A \rangle)]^\dagger [\langle A \rangle + (A - \langle A \rangle)] \\
+&amp; \equiv [\langle A \rangle + \delta A]^\dagger [\langle A \rangle + \delta A]  \\
+&amp; = \underbrace{\langle A^\dagger \rangle \langle A \rangle}_{\mathcal{O}(\delta A^0)} + \underbrace{\langle A^\dagger \rangle \delta A +  \delta A^\dagger \langle A \rangle}_{\mathcal{O}(\delta A^1)} + \underbrace{\delta A^\dagger \delta A}_{\mathcal{O}(\delta A^2)} \\
+&amp; = \underbrace{\langle A^\dagger \rangle A + A^\dagger \langle A \rangle - \langle A^\dagger \rangle \langle A \rangle}_{\text{mean field}\ =\ \mathcal{O}(\delta A^0) + \mathcal{O}(\delta A^1)} \\
+&amp; + \underbrace{(A - \langle A \rangle)^\dagger (A - \langle A \rangle)}_{\text{quantum fluctuation}\ =\ \mathcal{O}(\delta A^2)} \\
+&amp; \approx \langle A^\dagger \rangle A + A^\dagger \langle A \rangle - \langle A^\dagger \rangle \langle A \rangle
+\end{aligned}
+$$&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>基底状態だけで導体と絶縁体をどう区別するか？🤔</title>
+      <link>http://localhost:1313/ja/post/distinguish_conductors_insulators_ground_state/</link>
+      <pubDate>Thu, 08 Jan 2026 21:54:37 -0500</pubDate>
+      <guid>http://localhost:1313/ja/post/distinguish_conductors_insulators_ground_state/</guid>
+      <description>&lt;p&gt;本稿は、多体系の&lt;strong&gt;導電性&lt;/strong&gt;と**基底状態の量子幾何学（Quantum Geometry）**との関連性を明らかにし、基底状態の波動関数の「局在性（Locality）」だけで導体と絶縁体を区別する方法について解説することを目的としています。&lt;/p&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;「基底状態を見るだけで導体と絶縁体を区別できる」——この主張は少し常識外れに聞こえるかもしれません。&lt;/p&gt;
+&lt;p&gt;1930年代のバンド理論は（ある程度）導体と絶縁体の違いを説明しました。相互作用のないレベルでは、導体と絶縁体は基底状態のエネルギーバンドが満たされているかどうかで区別できます。価電子帯が満たされ、伝導帯との間にバンドギャップ$E_g &gt; 0$があれば絶縁体であり、そうでなければ導体です。ここではバンドギャップ$E_g$を使って区別しますが、$E_g$を定義するには励起状態のエネルギーを知る必要があり、必然的に励起状態の性質が関わってきます。&lt;/p&gt;
+&lt;p&gt;しかし、1949年に提案されたモット絶縁体（Mott Insulator、強い電子間相関に起因）や1958年のアンダーソン絶縁体（Anderson Insulator、強い無秩序に起因）は、導体と絶縁体を区別する上でのバンド理論の穴を指摘しました。つまり、多体系の絶縁メカニズムは価電子帯が満たされていることだけでなく、強い相関や無秩序も関係しているということです。同様に、バンドギャップがないことが導電性のメカニズムであるのと並んで、無秩序な金属合金の一部も導体になり得ます。逆に、無秩序な合金系では、バンドギャップがなくても絶縁体になる可能性があり、これこそがアンダーソン局在（Anderson Localization）であり、局在状態が電流を安定して輸送できないことに起因します。&lt;/p&gt;
+&lt;p&gt;さらに言えば、多体系には格子が全く存在しない可能性もあります。多体系の導電特性を判断するための、より**普遍的な指標（universal indicator）**が早急に求められています。&lt;/p&gt;
+&lt;p&gt;現象論的には、導体と絶縁体の違いは直流伝導率$\operatorname{Re}\sigma(\omega\rightarrow 0)$の違いにあります。なぜなら、一般的な絶縁体でも交流電流下では電気を通すことができるからです。あるいは電気分極現象によって区別することもできます。絶縁体では電子が束縛されており、原子の近くでしか動けないため、明らかな電気分極現象が生じます。一方、導体では電子は自由に動く傾向があり、外部電場によって自由に流れるため、明確に定義された電気分極はありません。&lt;/p&gt;
+&lt;p&gt;線形応答理論（Linear Response Theory）を用いて伝導率や分極率を計算することで、導体と絶縁体を区別することは常に可能ですが、これでもまだ励起状態の性質を考慮する必要があります。&lt;/p&gt;
+&lt;p&gt;しかし、Kohnは1964年の論文 &amp;ldquo;Theory of the insulating state&amp;rdquo; で、多体系の導電性は、多体配置空間（many-body configuration space）における基底状態の多体波動関数の「局在性」によって判断できると提案しました。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://journals.aps.org/pr/abstract/10.1103/PhysRev.133.A171&#34;&gt;https://journals.aps.org/pr/abstract/10.1103/PhysRev.133.A171&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;20世紀末、Restaらは、この局在性の度合いが多体基底状態波動関数の&lt;strong&gt;2次キュムラントモーメント（second cumulant moment）&lt;/strong&gt; $\langle r_\alpha r_\beta \rangle_c$（&amp;ldquo;c&amp;quot;は&amp;quot;cumulant&amp;quot;の意）によってより良く特徴付けられることに気づき、その本質が**量子幾何学（Quantum Geometry）**であることを明らかにしました。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.82.370&#34;&gt;https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.82.370&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;そこでまず、波動関数の局在性の度合いをどのように定義するかを明確にしましょう。&lt;/p&gt;
+&lt;h2 id=&#34;wannierizability--quantum-geometry&#34;&gt;Wannierizability &amp;amp; Quantum Geometry&lt;/h2&gt;
+&lt;p&gt;ここで明確にしておく必要がありますが、いわゆる「多体配置における基底状態多体波動関数の『局在性』」は、単一粒子波動関数の局在性とは異なりますが、定義上は類似点があります。さらに、単一粒子波動関数の観点から導出する方が簡単なので、まず単一粒子波動関数の局在性の定義を紹介し、その性質を議論した後、KohnやRestaらの論文にある多体系の場合へと一般化します。&lt;/p&gt;
+&lt;p&gt;固体バンド系を例にとると、絶縁体であれ導体であれ、その単一電子固有状態は広がったブロッホ波動関数です。しかし、フーリエ変換を通じて、これらの実空間で広がったブロッホ固有状態を実空間で局在した**ワニエ関数（Wannier Functions）**に変換することができます。&lt;/p&gt;
+&lt;p&gt;ワニエ関数$|\mathbf{R} n\rangle$とブロッホ波動関数$\left|\psi_{n \mathbf{k}}\right\rangle$の変換関係は以下の通りです：&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+\left|\psi_{n \mathbf{k}}\right\rangle=\sum_{\mathbf{R}} e^{i \mathbf{k} \cdot \mathbf{R}}|\mathbf{R} n\rangle \Leftrightarrow |\mathbf{R} n\rangle=\frac{1}{N} \sum_{\mathbf{k}} e^{-i \mathbf{k} \cdot \mathbf{R}}\left|\psi_{n \mathbf{k}}\right\rangle 
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;ワニエ波動関数の局在性の度合いは、エネルギーバンドのゲージ選択に関係しています。もしブロッホ波動関数に$\mathbf{k}$に関連する位相（ゲージ）を加えても、それは固有状態のままです。&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+\left|\tilde{\psi}_{n \mathbf{k}}\right\rangle=e^{i \varphi_n(\mathbf{k})}\left|\psi_{n \mathbf{k}}\right\rangle \ \Rightarrow\ \hat{H}\left|\tilde{\psi}_{n \mathbf{k}}\right\rangle = \epsilon_n(\mathbf{k}) \left|\tilde{\psi}_{n \mathbf{k}}\right\rangle
+\end{aligned}
+$$&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>分数量子ホール効果 (FQHE)、分数異常量子ホール効果 (FAQHE)、そして分数チャーン絶縁体 (FCI)</title>
+      <link>http://localhost:1313/ja/post/fqhe_faqhe_fci/</link>
+      <pubDate>Thu, 08 Jan 2026 21:54:37 -0500</pubDate>
+      <guid>http://localhost:1313/ja/post/fqhe_faqhe_fci/</guid>
+      <description>&lt;p&gt;本ノートは約10,000文字あり、読者が分数量子ホール効果、分数異常量子ホール効果、および分数チャーン絶縁体に関する内容に入門することを目的としています。本文は私見に過ぎず、多くの不備があるかと思いますので、読者の皆様からのご指摘を歓迎いたします。以下、本文です。&lt;/p&gt;
+&lt;h2 id=&#34;introduction-to-fqhe-faqhe--fci&#34;&gt;Introduction to FQHE, FAQHE &amp;amp; FCI&lt;/h2&gt;
+&lt;p&gt;量子ホール効果の実現には強磁場環境が必要ですが、Haldane模型およびチャーン絶縁体（Chern Insulator）の出現により、&lt;strong&gt;外部磁場のない格子系&lt;/strong&gt;においても量子ホール効果が実現可能となりました。この現象は「量子異常ホール効果（Quantum Anomalous Hall Effect）」と呼ばれます。チャーン絶縁体においては、自明でないベリー曲率（Berry Curvature）の分布により、格子系が量子ホール効果に類似した非自明なトポロジカルな性質を持つようになります。さらに言えば、&lt;strong&gt;ベリー曲率が磁場に取って代わった&lt;/strong&gt;と言えます（もっとも、ベリー曲率は逆空間で定義されるのに対し、磁場は実空間に現れるものですが）。これに端を発するチャーン絶縁体やその他のトポロジカル相に関する議論は、近年の凝縮系理論分野におけるホットトピックとなっています。&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Image&#34; loading=&#34;lazy&#34; src=&#34;https://pic4.zhimg.com/80/v2-2449ec0b77d9fbfb23b817aa27e8b73a.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;一方で、磁場強度が十分に大きく、電子がすべて最低ランダウ準位（Lowest Landau Level, LLL）に縮退している場合、特に電子1個が平均して整数個（または分数個）の量子磁束を占有している時に、分数量子ホール効果（FQHE）が現れます。量子ホール効果、量子異常ホール効果、あるいは一般的なトポロジカル絶縁体とは異なり、分数量子ホール効果はLLL内で縮退した&lt;strong&gt;電子間の強い相互作用&lt;/strong&gt;の結果であり、それ以前の議論は基本的に相互作用のない（non-interacting）ギャップを持つフェルミ系に限られていました。&lt;/p&gt;
+&lt;p&gt;分数量子ホール系は、トポロジカルに関連した基底状態縮退度（Ground State Degeneracy, GSD）、分数励起、およびエニオン統計（Anyon statistics）を持ち、これらはトポロジカル量子計算などの分野への応用が期待されています。しかし、量子ホール効果よりもさらに強い磁場が必要であるという条件は、この効果を応用しようとする多くの人々を「&lt;strong&gt;躊躇（または断念）&lt;/strong&gt;」させてきました。&lt;/p&gt;
+&lt;p&gt;英語の文法における様々な時制のように、「異常（Anomalous）」と「分数（Fractional）」を組み合わせて、新しい量子ホール効果、すなわち「&lt;strong&gt;分数異常量子ホール効果&lt;/strong&gt;」（Fractional Anomalous Quantum Hall Effect, FAQHE）、&lt;strong&gt;略して「FAQ」&lt;/strong&gt;（「ファッQ」）を作り出したいと考えるのは自然なことです。&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Image&#34; loading=&#34;lazy&#34; src=&#34;https://pic4.zhimg.com/80/v2-6b707548a72e327c6613a30b75d0645b.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;特に、この現象を格子系で実現したいという期待があります。チャーン絶縁体における量子異常ホール効果の実現と結びつけ、物理学者たちはチャーン絶縁体中のトポロジカルに非自明なチャーンバンド（Chern Band）に注目しました。そして、分数充填されたLLLを模倣し、チャーンバンド内で1/3、1/5、1/7&amp;hellip;といった電子数の充填を行い、システムのハミルトニアンに電子-電子相関項（ハバード模型など）を加えることで、この分数充填されたチャーン絶縁体がFQH系に類似した現象（前述のGSD、分数励起、エニオン統計など）を示すかどうかを観測しようとしました。&lt;/p&gt;
+&lt;p&gt;分数充填、トポロジカルに非自明なHaldane模型、カゴメ格子などのシステムにおける数値シミュレーションにおいて、実際に熱力学的極限での有限の多体ギャップ（many-body gap）、非自明なGSD、分数励起などの現象が観測されました。物理学者たちはこの新奇なトポロジカル物質相を「&lt;strong&gt;分数チャーン絶縁体&lt;/strong&gt;」（Fractional Chern Insulator, FCI）と名付けました。&lt;/p&gt;
+&lt;h2 id=&#34;physics-in-lll&#34;&gt;Physics in L.L.L.&lt;/h2&gt;
+&lt;p&gt;（近）自由電子ガス系における分数量子ホール効果をチャーン絶縁体の格子系に「&lt;strong&gt;シームレスに接続&lt;/strong&gt;」するために、まず最低ランダウ準位（L.L.L.）における物理を振り返ります。&lt;/p&gt;
+&lt;p&gt;磁場中の電子のハミルトニアン：&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+H=\frac{1}{2 m}\left( \hat{\mathbf{p}} + e \mathbf{A}(\hat{\mathbf{r}}) \right)^2 = \frac{\boldsymbol{\pi}^2}{2m}
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;一定の外部磁場中の自由電子ガスに対しては、特定のゲージを選ばずにランダウ準位を計算することもできますし、ランダウゲージ（Landau Gauge）や対称ゲージ（Symmetric Gauge）の下で単電子波動関数を厳密に解くこともできます。&lt;/p&gt;
+&lt;h3 id=&#34;analysis-without-gauge&#34;&gt;Analysis without Gauge&lt;/h3&gt;
+&lt;p&gt;$$
+\begin{aligned}
+\boldsymbol{\pi}=\mathbf{p}+e \mathbf{A}=m \dot{\mathbf{x}}
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+{\left[\pi_x, \pi_y\right]=-i e \hbar B}
+\end{aligned}
+$$&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

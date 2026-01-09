@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="ja" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>基底状態だけで導体と絶縁体をどう区別するか？🤔 | O空O扬O の 物理ノート</title>
+<meta name="keywords" content="">
+<meta name="description" content="本稿は、多体系の導電性と**基底状態の量子幾何学（Quantum Geometry）**との関連性を明らかにし、基底状態の波動関数の「局在性（Locality）」だけで導体と絶縁体を区別する方法について解説することを目的としています。
+Introduction
+「基底状態を見るだけで導体と絶縁体を区別できる」——この主張は少し常識外れに聞こえるかもしれません。
+1930年代のバンド理論は（ある程度）導体と絶縁体の違いを説明しました。相互作用のないレベルでは、導体と絶縁体は基底状態のエネルギーバンドが満たされているかどうかで区別できます。価電子帯が満たされ、伝導帯との間にバンドギャップ$E_g &gt; 0$があれば絶縁体であり、そうでなければ導体です。ここではバンドギャップ$E_g$を使って区別しますが、$E_g$を定義するには励起状態のエネルギーを知る必要があり、必然的に励起状態の性質が関わってきます。
+しかし、1949年に提案されたモット絶縁体（Mott Insulator、強い電子間相関に起因）や1958年のアンダーソン絶縁体（Anderson Insulator、強い無秩序に起因）は、導体と絶縁体を区別する上でのバンド理論の穴を指摘しました。つまり、多体系の絶縁メカニズムは価電子帯が満たされていることだけでなく、強い相関や無秩序も関係しているということです。同様に、バンドギャップがないことが導電性のメカニズムであるのと並んで、無秩序な金属合金の一部も導体になり得ます。逆に、無秩序な合金系では、バンドギャップがなくても絶縁体になる可能性があり、これこそがアンダーソン局在（Anderson Localization）であり、局在状態が電流を安定して輸送できないことに起因します。
+さらに言えば、多体系には格子が全く存在しない可能性もあります。多体系の導電特性を判断するための、より**普遍的な指標（universal indicator）**が早急に求められています。
+現象論的には、導体と絶縁体の違いは直流伝導率$\operatorname{Re}\sigma(\omega\rightarrow 0)$の違いにあります。なぜなら、一般的な絶縁体でも交流電流下では電気を通すことができるからです。あるいは電気分極現象によって区別することもできます。絶縁体では電子が束縛されており、原子の近くでしか動けないため、明らかな電気分極現象が生じます。一方、導体では電子は自由に動く傾向があり、外部電場によって自由に流れるため、明確に定義された電気分極はありません。
+線形応答理論（Linear Response Theory）を用いて伝導率や分極率を計算することで、導体と絶縁体を区別することは常に可能ですが、これでもまだ励起状態の性質を考慮する必要があります。
+しかし、Kohnは1964年の論文 &ldquo;Theory of the insulating state&rdquo; で、多体系の導電性は、多体配置空間（many-body configuration space）における基底状態の多体波動関数の「局在性」によって判断できると提案しました。
+https://journals.aps.org/pr/abstract/10.1103/PhysRev.133.A171
+20世紀末、Restaらは、この局在性の度合いが多体基底状態波動関数の2次キュムラントモーメント（second cumulant moment） $\langle r_\alpha r_\beta \rangle_c$（&ldquo;c&quot;は&quot;cumulant&quot;の意）によってより良く特徴付けられることに気づき、その本質が**量子幾何学（Quantum Geometry）**であることを明らかにしました。
+https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.82.370
+そこでまず、波動関数の局在性の度合いをどのように定義するかを明確にしましょう。
+Wannierizability &amp; Quantum Geometry
+ここで明確にしておく必要がありますが、いわゆる「多体配置における基底状態多体波動関数の『局在性』」は、単一粒子波動関数の局在性とは異なりますが、定義上は類似点があります。さらに、単一粒子波動関数の観点から導出する方が簡単なので、まず単一粒子波動関数の局在性の定義を紹介し、その性質を議論した後、KohnやRestaらの論文にある多体系の場合へと一般化します。
+固体バンド系を例にとると、絶縁体であれ導体であれ、その単一電子固有状態は広がったブロッホ波動関数です。しかし、フーリエ変換を通じて、これらの実空間で広がったブロッホ固有状態を実空間で局在した**ワニエ関数（Wannier Functions）**に変換することができます。
+ワニエ関数$|\mathbf{R} n\rangle$とブロッホ波動関数$\left|\psi_{n \mathbf{k}}\right\rangle$の変換関係は以下の通りです：
+$$
+\begin{aligned}
+\left|\psi_{n \mathbf{k}}\right\rangle=\sum_{\mathbf{R}} e^{i \mathbf{k} \cdot \mathbf{R}}|\mathbf{R} n\rangle \Leftrightarrow |\mathbf{R} n\rangle=\frac{1}{N} \sum_{\mathbf{k}} e^{-i \mathbf{k} \cdot \mathbf{R}}\left|\psi_{n \mathbf{k}}\right\rangle 
+\end{aligned}
+$$
+ワニエ波動関数の局在性の度合いは、エネルギーバンドのゲージ選択に関係しています。もしブロッホ波動関数に$\mathbf{k}$に関連する位相（ゲージ）を加えても、それは固有状態のままです。
+$$
+\begin{aligned}
+\left|\tilde{\psi}_{n \mathbf{k}}\right\rangle=e^{i \varphi_n(\mathbf{k})}\left|\psi_{n \mathbf{k}}\right\rangle \ \Rightarrow\ \hat{H}\left|\tilde{\psi}_{n \mathbf{k}}\right\rangle = \epsilon_n(\mathbf{k}) \left|\tilde{\psi}_{n \mathbf{k}}\right\rangle
+\end{aligned}
+$$">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/ja/post/distinguish_conductors_insulators_ground_state/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.343cc480b9ffc8f04ccbe5e968ad674880cab773ec19905e93033065c1e7a804.css" integrity="sha256-NDzEgLn/yPBMy&#43;XpaK1nSIDKt3PsGZBekwMwZcHnqAQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="http://localhost:1313/zh/post/distinguish_conductors_insulators_ground_state/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/post/distinguish_conductors_insulators_ground_state/">
+<link rel="alternate" hreflang="ja" href="http://localhost:1313/ja/post/distinguish_conductors_insulators_ground_state/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['39593', '39593'], ['\\[', '\\]']],
+      tags: 'ams',
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      ignoreHtmlClass: 'tex2jax_ignore',
+      processHtmlClass: 'tex2jax_process'
+    }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/ja/" accesskey="h" title="O空O扬O の 物理ノート (Alt + H)">O空O扬O の 物理ノート</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                    <ul class="lang-switch"><li>|</li>
+                        <li>
+                            <a href="http://localhost:1313/zh/" title="🇨🇳 中文"
+                                aria-label="🇨🇳 中文">Zh</a>
+                        </li>
+                        <li>
+                            <a href="http://localhost:1313/" title="🇺🇸 English"
+                                aria-label="🇺🇸 English">En</a>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      基底状態だけで導体と絶縁体をどう区別するか？🤔
+    </h1>
+    <div class="post-meta"><span title='2026-01-08 21:54:37 -0500 EST'>2026年1月8日</span>&nbsp;|&nbsp;<span>言語:</span>
+<ul class="i18n_list">
+    <li>
+        <a href="http://localhost:1313/zh/post/distinguish_conductors_insulators_ground_state/">Zh</a>
+    </li>
+    <li>
+        <a href="http://localhost:1313/post/distinguish_conductors_insulators_ground_state/">En</a>
+    </li>
+</ul>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">目次</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#introduction" aria-label="Introduction">Introduction</a></li>
+                <li>
+                    <a href="#wannierizability--quantum-geometry" aria-label="Wannierizability &amp; Quantum Geometry">Wannierizability &amp; Quantum Geometry</a></li>
+                <li>
+                    <a href="#many-body-quantum-geometry" aria-label="Many-Body Quantum Geometry">Many-Body Quantum Geometry</a></li>
+                <li>
+                    <a href="#quantum-geometry--localization" aria-label="Quantum Geometry &amp; Localization">Quantum Geometry &amp; Localization</a></li>
+                <li>
+                    <a href="#localization--conductivity" aria-label="Localization &amp; Conductivity">Localization &amp; Conductivity</a><ul>
+                        
+                <li>
+                    <a href="#linear-response-theory" aria-label="Linear Response Theory">Linear Response Theory</a></li>
+                <li>
+                    <a href="#swm-formula" aria-label="SWM Formula">SWM Formula</a></li></ul>
+                </li>
+                <li>
+                    <a href="#metal-or-insulator" aria-label="Metal or Insulator?">Metal or Insulator?</a></li>
+                <li>
+                    <a href="#summary" aria-label="Summary">Summary</a></li>
+                <li>
+                    <a href="#reference" aria-label="Reference">Reference</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>本稿は、多体系の<strong>導電性</strong>と**基底状態の量子幾何学（Quantum Geometry）**との関連性を明らかにし、基底状態の波動関数の「局在性（Locality）」だけで導体と絶縁体を区別する方法について解説することを目的としています。</p>
+<h2 id="introduction">Introduction<a hidden class="anchor" aria-hidden="true" href="#introduction">#</a></h2>
+<p>「基底状態を見るだけで導体と絶縁体を区別できる」——この主張は少し常識外れに聞こえるかもしれません。</p>
+<p>1930年代のバンド理論は（ある程度）導体と絶縁体の違いを説明しました。相互作用のないレベルでは、導体と絶縁体は基底状態のエネルギーバンドが満たされているかどうかで区別できます。価電子帯が満たされ、伝導帯との間にバンドギャップ$E_g > 0$があれば絶縁体であり、そうでなければ導体です。ここではバンドギャップ$E_g$を使って区別しますが、$E_g$を定義するには励起状態のエネルギーを知る必要があり、必然的に励起状態の性質が関わってきます。</p>
+<p>しかし、1949年に提案されたモット絶縁体（Mott Insulator、強い電子間相関に起因）や1958年のアンダーソン絶縁体（Anderson Insulator、強い無秩序に起因）は、導体と絶縁体を区別する上でのバンド理論の穴を指摘しました。つまり、多体系の絶縁メカニズムは価電子帯が満たされていることだけでなく、強い相関や無秩序も関係しているということです。同様に、バンドギャップがないことが導電性のメカニズムであるのと並んで、無秩序な金属合金の一部も導体になり得ます。逆に、無秩序な合金系では、バンドギャップがなくても絶縁体になる可能性があり、これこそがアンダーソン局在（Anderson Localization）であり、局在状態が電流を安定して輸送できないことに起因します。</p>
+<p>さらに言えば、多体系には格子が全く存在しない可能性もあります。多体系の導電特性を判断するための、より**普遍的な指標（universal indicator）**が早急に求められています。</p>
+<p>現象論的には、導体と絶縁体の違いは直流伝導率$\operatorname{Re}\sigma(\omega\rightarrow 0)$の違いにあります。なぜなら、一般的な絶縁体でも交流電流下では電気を通すことができるからです。あるいは電気分極現象によって区別することもできます。絶縁体では電子が束縛されており、原子の近くでしか動けないため、明らかな電気分極現象が生じます。一方、導体では電子は自由に動く傾向があり、外部電場によって自由に流れるため、明確に定義された電気分極はありません。</p>
+<p>線形応答理論（Linear Response Theory）を用いて伝導率や分極率を計算することで、導体と絶縁体を区別することは常に可能ですが、これでもまだ励起状態の性質を考慮する必要があります。</p>
+<p>しかし、Kohnは1964年の論文 &ldquo;Theory of the insulating state&rdquo; で、多体系の導電性は、多体配置空間（many-body configuration space）における基底状態の多体波動関数の「局在性」によって判断できると提案しました。</p>
+<p><a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.133.A171">https://journals.aps.org/pr/abstract/10.1103/PhysRev.133.A171</a></p>
+<p>20世紀末、Restaらは、この局在性の度合いが多体基底状態波動関数の<strong>2次キュムラントモーメント（second cumulant moment）</strong> $\langle r_\alpha r_\beta \rangle_c$（&ldquo;c&quot;は&quot;cumulant&quot;の意）によってより良く特徴付けられることに気づき、その本質が**量子幾何学（Quantum Geometry）**であることを明らかにしました。</p>
+<p><a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.82.370">https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.82.370</a></p>
+<p>そこでまず、波動関数の局在性の度合いをどのように定義するかを明確にしましょう。</p>
+<h2 id="wannierizability--quantum-geometry">Wannierizability &amp; Quantum Geometry<a hidden class="anchor" aria-hidden="true" href="#wannierizability--quantum-geometry">#</a></h2>
+<p>ここで明確にしておく必要がありますが、いわゆる「多体配置における基底状態多体波動関数の『局在性』」は、単一粒子波動関数の局在性とは異なりますが、定義上は類似点があります。さらに、単一粒子波動関数の観点から導出する方が簡単なので、まず単一粒子波動関数の局在性の定義を紹介し、その性質を議論した後、KohnやRestaらの論文にある多体系の場合へと一般化します。</p>
+<p>固体バンド系を例にとると、絶縁体であれ導体であれ、その単一電子固有状態は広がったブロッホ波動関数です。しかし、フーリエ変換を通じて、これらの実空間で広がったブロッホ固有状態を実空間で局在した**ワニエ関数（Wannier Functions）**に変換することができます。</p>
+<p>ワニエ関数$|\mathbf{R} n\rangle$とブロッホ波動関数$\left|\psi_{n \mathbf{k}}\right\rangle$の変換関係は以下の通りです：</p>
+<p>$$
+\begin{aligned}
+\left|\psi_{n \mathbf{k}}\right\rangle=\sum_{\mathbf{R}} e^{i \mathbf{k} \cdot \mathbf{R}}|\mathbf{R} n\rangle \Leftrightarrow |\mathbf{R} n\rangle=\frac{1}{N} \sum_{\mathbf{k}} e^{-i \mathbf{k} \cdot \mathbf{R}}\left|\psi_{n \mathbf{k}}\right\rangle 
+\end{aligned}
+$$</p>
+<p>ワニエ波動関数の局在性の度合いは、エネルギーバンドのゲージ選択に関係しています。もしブロッホ波動関数に$\mathbf{k}$に関連する位相（ゲージ）を加えても、それは固有状態のままです。</p>
+<p>$$
+\begin{aligned}
+\left|\tilde{\psi}_{n \mathbf{k}}\right\rangle=e^{i \varphi_n(\mathbf{k})}\left|\psi_{n \mathbf{k}}\right\rangle \ \Rightarrow\ \hat{H}\left|\tilde{\psi}_{n \mathbf{k}}\right\rangle = \epsilon_n(\mathbf{k}) \left|\tilde{\psi}_{n \mathbf{k}}\right\rangle
+\end{aligned}
+$$</p>
+<p>ワニエ関数の局在化を最大にするためにゲージをどのように調整するかについては、Vanderbiltの1997年のPRB論文 &ldquo;Maximally localized generalized Wannier functions for composite energy bands&rdquo; および2012年のRMP &ldquo;Maximally localized Wannier functions: Theory and applications&rdquo; を参照してください：</p>
+<p><a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.56.12847">https://journals.aps.org/prb/abstract/10.1103/PhysRevB.56.12847</a></p>
+<p><a href="https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.84.1419">https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.84.1419</a></p>
+<p>Vanderbiltはワニエ関数の局在性の度合いを、その空間分布の標準偏差、いわゆる<strong>Spread Functional</strong>（<strong>Quadratic Spread</strong>とも呼ばれる）を用いて定義しました：</p>
+<p>$$
+\begin{aligned}
+\Omega=\left[\left\langle\mathbf{0} n\left|r^2\right| \mathbf{0} n\right\rangle-\langle\mathbf{0} n|\mathbf{r}| \mathbf{0} n\rangle^2\right]=\left[\left\langle r^2\right\rangle_n-\overline{\mathbf{r}}_n^2\right] 
+\end{aligned}
+$$</p>
+<p>このSpread Functionalはゲージ選択に関係しますが、ゲージ不変な部分$\Omega_{\mathrm{I}}$とゲージ依存部分$\tilde{\Omega}$に分けることができます：</p>
+<p>$$
+\begin{aligned}
+\Omega=\Omega_{\mathrm{I}}+\tilde{\Omega}
+\end{aligned}
+$$</p>
+<p>その中で、ゲージ不変部分$\Omega_{\mathrm{I}}$はワニエ関数の<strong>2次キュムラントモーメント</strong>とも呼ばれます：</p>
+<p>$$
+\begin{aligned}
+\Omega_{\mathrm{I}}=\sum_{\alpha}\left\langle 0 n\left|r_\alpha Q r_\alpha\right| 0 n\right\rangle=\sum_\alpha \operatorname{Tr}\left[P r_\alpha Q r_\alpha\right] 
+\end{aligned}
+$$</p>
+<p>$P$は考察対象のバンドへの射影演算子です：</p>
+<p>$$
+\begin{aligned}
+P =\frac{1}{N} \sum_{\mathbf{k}}\left|\psi_{n \mathbf{k}}\right\rangle\langle\psi_{n \mathbf{k}}|=\sum_{\mathbf{R}}| \mathbf{R} n\rangle\langle\mathbf{R} n| 
+\end{aligned}
+$$</p>
+<p>この部分は単一粒子バンドの**量子幾何学（Quantum Geometry）**に関連しています：</p>
+<p>$$
+\begin{aligned}
+\Omega_{\mathrm{I}} & = \sum_\alpha \sum_k \langle \partial_{k_{\alpha}} u_{k}^n | \left( \mathbb{I} - |u_k^n \rangle \langle u_k^n | \right) | \partial_{k_{\alpha}} u_{k}^n \rangle
+\end{aligned}
+$$</p>
+<p>ゲージ依存部分$\tilde{\Omega}$は非負の値です：</p>
+<p>$$
+\begin{aligned}
+\tilde{\Omega}=\sum_{\mathbf{R} m \neq 0 n}|\langle\mathbf{R} m|\mathbf{r}| \mathbf{0} n\rangle|^2
+\end{aligned}
+$$</p>
+<p>したがって、常に以下が成り立ちます：</p>
+<p>$$
+\begin{aligned}
+\Omega \geq \Omega_{\mathrm{I}}
+\end{aligned}
+$$</p>
+<p>この部分の詳細な導出は、私のノートで見ることができます：</p>
+<p><a href="https://zhuanlan.zhihu.com/p/629079639">https://zhuanlan.zhihu.com/p/629079639</a></p>
+<p>ワニエ関数のQuadratic Spreadのゲージ不変部分は、その局在性の下限を定義し、単一粒子バンドの量子幾何学と直接的な関係を確立していることがわかります。</p>
+<p>言い換えれば、<strong>量子幾何学は、システム（現在は単一粒子システム）の局在性の度合いをある程度反映することができます。</strong></p>
+<p>これに触発されて、多体系の量子幾何学を定義し、そこに含まれる多体波動関数の「局在性」情報を調べ、この基底状態の性質——多体基底状態波動関数の「局在性」——がどのように多体系の導電性を決定するかを議論することができます。</p>
+<h2 id="many-body-quantum-geometry">Many-Body Quantum Geometry<a hidden class="anchor" aria-hidden="true" href="#many-body-quantum-geometry">#</a></h2>
+<p>同様に、多体系の量子幾何学を定義しましょう。まず、最も一般的な多体ハミルトニアンを書き下します：</p>
+<p>$$
+\begin{aligned}
+\hat{H}=\frac{1}{2 m_e} \sum_{i=1}^N\left|\mathbf{p}_i+\frac{e}{c} \mathbf{A}\left(\mathbf{r}_i\right)\right|^2+\hat{V}(\\{\mathbf{r}_i\\}) 
+\end{aligned}
+$$</p>
+<p>しかし、この時点ではシステムは必ずしも並進対称性を持っているわけではないため、元の単一粒子バンド理論の量子幾何学構築法をここに直接適用することはできず、単一電子の運動量をパラメータ空間として直接使用することはできません。</p>
+<p>量子幾何学を構築できるパラメータ空間を見つけるために、多体ハミルトニアンに対してゲージ変換を行います：</p>
+<p>$$
+\begin{aligned}
+\hat{H}(\boldsymbol{\kappa}) \equiv e^{-i \boldsymbol{\kappa} \cdot \hat{\mathbf{r}}} \hat{H} e^{i \boldsymbol{\kappa} \cdot \hat{\mathbf{r}}}
+\end{aligned}
+$$</p>
+<p>ここで、$\hat{\mathbf{r}} \equiv \sum_i \hat{\mathbf{r}}_i$ です。</p>
+<p>すなわち、</p>
+<p>$$
+\begin{aligned}
+\hat{H}(\boldsymbol{\kappa})=\frac{1}{2 m_e} \sum_{i=1}^N\left|\mathbf{p}_i+\frac{e}{c} \mathbf{A}\left(\mathbf{r}_i\right)+\hbar \boldsymbol{\kappa}\right|^2+\hat{V}(\\{(\mathbf{r}_i\\}) 
+\end{aligned}
+$$</p>
+<p>このとき、異なるパラメータ$\boldsymbol{\kappa}$は異なる多体エネルギースペクトルと固有波動関数に対応します：</p>
+<p>$$
+\begin{aligned}
+H(\boldsymbol{\kappa})|\Psi(\boldsymbol{\kappa})\rangle=E(\boldsymbol{\kappa})|\Psi(\boldsymbol{\kappa})\rangle 
+\end{aligned}
+$$</p>
+<p>これは定数の磁気ベクトルポテンシャルを加えることに相当し、1次元リング内の磁束を使って理解することができます。このとき $\kappa \propto$ リング内の磁束 $\Phi$ です。</p>
+<p><img alt="Image" loading="lazy" src="https://pic4.zhimg.com/80/v2-bf698d3fa3347511c74f9b760fb057a6.png"></p>
+<p>多体系にとって最も重要なのは基底状態です。パラメータ空間$\boldsymbol{\kappa}$から基底状態波動関数$|\Psi_0(\boldsymbol{\kappa})\rangle$への写像を調べ、これを使って基底状態波動関数空間の**量子幾何テンソル（Quantum Geometric Tensor）**を構築します：</p>
+<p>$$
+\begin{aligned}
+\eta_{\alpha \beta}(\boldsymbol{\kappa})=\left\langle\partial_\alpha \Psi_0(\boldsymbol{\kappa})|\hat{Q}(\boldsymbol{\kappa})| \partial_\beta \Psi_0(\boldsymbol{\kappa})\right\rangle 
+\end{aligned}
+$$</p>
+<p>ここで、$\hat{Q}(\boldsymbol{\kappa})=\hat{1}-\hat{P}(\boldsymbol{\kappa})$であり、$\hat{P}(\boldsymbol{\kappa})$は基底状態波動関数空間の射影演算子です：</p>
+<p>$$
+\begin{aligned}
+\hat{P}(\boldsymbol{\kappa})=\left|\Psi_0(\boldsymbol{\kappa})\right\rangle\left\langle\Psi_0(\boldsymbol{\kappa})\right|
+\end{aligned}
+$$</p>
+<p>バンド幾何学と同様に、実部は対称テンソルであり、<strong>Fubini-Study計量</strong>と呼ばれます：</p>
+<p>$$
+\begin{aligned}
+g_{\alpha \beta}(\boldsymbol{\kappa}) & =\operatorname{Re}\left\langle\partial_\alpha \Psi_0(\boldsymbol{\kappa}) \mid \partial_\beta \Psi_0(\boldsymbol{\kappa})\right\rangle \\
+& -\left\langle\partial_\alpha \Psi_0(\boldsymbol{\kappa}) \mid \Psi_0(\boldsymbol{\kappa})\right\rangle\left\langle\Psi_0(\boldsymbol{\kappa}) \mid \partial_\beta \Psi_0(\boldsymbol{\kappa})\right\rangle \\
+& =\operatorname{Re}\left\langle\partial_\alpha \Psi_0(\boldsymbol{\kappa})|\hat{Q}(\boldsymbol{\kappa})| \partial_\beta \Psi_0(\boldsymbol{\kappa})\right\rangle 
+\end{aligned}
+$$</p>
+<p>虚部は反対称テンソルであり、**ベリー曲率（Berry Curvature）**です：</p>
+<p>$$
+\begin{aligned}
+\Omega_{\alpha \beta}(\boldsymbol{\kappa})=-2 \operatorname{Im}\left\langle\partial_\alpha \Psi_0(\boldsymbol{\kappa})|\hat{Q}(\boldsymbol{\kappa})| \partial_\beta \Psi_0(\boldsymbol{\kappa})\right\rangle 
+\end{aligned}
+$$</p>
+<p>単一粒子の場合と同様に、一次摂動論を用いて「状態和（sum of states）」の形で書くこともできます：</p>
+<p>$$
+\begin{aligned}
+\left|\Psi_0(\boldsymbol{\kappa}+\Delta \boldsymbol{\kappa})\right\rangle-\left|\Psi_0(\boldsymbol{\kappa})\right\rangle \simeq \sum_{n \neq 0}^{\prime}\left|\Psi_n(\boldsymbol{\kappa})\right\rangle 
+\end{aligned}
+$$
+$$
+\begin{aligned}
+\times \frac{\left\langle\Psi_n(\boldsymbol{\kappa})|[H(\boldsymbol{\kappa}+\Delta \boldsymbol{\kappa})-H(\boldsymbol{\kappa})]| \Psi_0(\boldsymbol{\kappa})\right\rangle}{E_0(\boldsymbol{\kappa})-E_n(\boldsymbol{\kappa})} 
+\end{aligned}
+$$
+$$
+\begin{aligned}
+\left|\partial_\alpha \Psi_0(\boldsymbol{\kappa})\right\rangle=\sum_{n \neq 0}^{\prime}\left|\Psi_n(\boldsymbol{\kappa})\right\rangle \frac{\left\langle\Psi_n(\boldsymbol{\kappa})\left|\partial_\alpha H(\boldsymbol{\kappa})\right| \Psi_0(\boldsymbol{\kappa})\right\rangle}{E_0(\boldsymbol{\kappa})-E_n(\boldsymbol{\kappa})} . 
+\end{aligned}
+$$
+$$
+\begin{aligned}
+\eta_{\alpha \beta}(\kappa)= \sum_{n \neq 0}^{\prime} \frac{\left\langle\Psi_0(\boldsymbol{\kappa})\left|\partial_\alpha H(\boldsymbol{\kappa})\right| \Psi_n(\boldsymbol{\kappa})\right\rangle\left\langle\Psi_n(\boldsymbol{\kappa})\left|\partial_\beta H(\boldsymbol{\kappa})\right| \Psi_0(\boldsymbol{\kappa})\right\rangle}{\left[E_0(\boldsymbol{\kappa})-E_n(\boldsymbol{\kappa})\right]^2} 
+\end{aligned}
+$$</p>
+<p>この状態和の公式は、ギャップがない場合や基底状態が縮退している場合（一次摂動論が破綻する場合）には破綻することに注意が必要ですが、これは量子幾何学の定義が破綻することを意味するわけではありません。多体系も魅力的な基底状態の縮退（Ground State Degeneracy）を示し、そこでは基底状態波動関数とその量子幾何学を高次元の非可換形式（非可換ベリー接続の一般化）に拡張できます。</p>
+<p>紙面の都合上、ここでは<strong>非縮退基底状態</strong>の場合のみを議論します。興味のある読者は、分数量子ホール系などのシステムの非可換量子幾何学を一般化して計算してみてください。</p>
+<h2 id="quantum-geometry--localization">Quantum Geometry &amp; Localization<a hidden class="anchor" aria-hidden="true" href="#quantum-geometry--localization">#</a></h2>
+<p>単一粒子の局在化の度合いを記述する位置演算子の2次キュムラントモーメント、すなわちSpread Functionalのゲージ不変部分$\Omega_I$を多体系の場合に拡張し、多体波動関数の「局在性」を記述しましょう。</p>
+<p>以下に注目します：</p>
+<p>$$
+\begin{aligned}
+\hat{H}(\boldsymbol{\kappa}) \equiv e^{-i \boldsymbol{\kappa} \cdot \hat{\mathbf{r}}} \hat{H} e^{i \boldsymbol{\kappa} \cdot \hat{\mathbf{r}}}
+\end{aligned}
+$$</p>
+<p>$\left|\Psi_0\right\rangle$が$\hat{H}$の非縮退基底状態であると仮定すると、$\hat{H}(\boldsymbol{\kappa})$の基底状態を簡単に書き下すことができます（ここではひとまず開境界条件を仮定します。周期的境界条件はより複雑になります）：</p>
+<p>$$
+\begin{aligned}
+\left|\Psi_0(\boldsymbol{\kappa})\right\rangle=e^{-i \boldsymbol{\kappa} \cdot(\hat{\mathbf{r}}-\mathbf{d})}\left|\Psi_0\right\rangle 
+\end{aligned}
+$$</p>
+<p>ここで、$\mathbf{d}=\left\langle\Psi_0|\hat{\mathbf{r}}| \Psi_0\right\rangle$です。この項は定数の位相にしか寄与しないため、影響はありません。</p>
+<p>量子幾何学を求めるために微分します：</p>
+<p>$$
+\begin{aligned}
+\left|\nabla_{\boldsymbol{\kappa}} \Psi_0\right\rangle=-i(\hat{\mathbf{r}}-\mathbf{d})\left|\Psi_0\right\rangle=-i \hat{Q}(0) \hat{\mathbf{r}}\left|\Psi_0\right\rangle 
+\end{aligned}
+$$</p>
+<p>これより以下が得られます：</p>
+<p>$$
+\begin{aligned}
+\eta_{\alpha \beta}(0) &=\left\langle\Psi_0\left|\hat{r}_\alpha \hat{Q}(0) \hat{r}_\beta\right| \Psi_0\right\rangle \\
+&=\left\langle\Psi_0\left|\hat{r}_\alpha \hat{r}_\beta\right| \Psi_0\right\rangle-\left\langle\Psi_0\left|\hat{r}_\alpha\right| \Psi_0\right\rangle\left\langle\Psi_0\left|\hat{r}_\beta\right| \Psi_0\right\rangle
+\end{aligned}
+$$</p>
+<p>ここで、$\hat{\mathbf{r}} \equiv \sum_i \hat{\mathbf{r}}_i$ です。これが基底状態波動関数の座標分布の分散、すなわち<strong>2次キュムラントモーメント</strong>に相当することに気づかないわけにはいきません。これは実空間における基底状態波動関数の電子分布の「局在性」を反映しています。</p>
+<p>しかし、この量は示量性変数（体積のようなもの）であり、熱力学的極限$N\rightarrow\infty$では$N$に比例します。この「局在性」を異なるシステム間で比較するために、電子1個あたりで平均し、比較可能な示強性変数（圧力のようなもの）にします。もちろん、これは波動関数の正規化の定義を変更することによっても達成できます：</p>
+<p>$$
+\begin{aligned}
+\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}} =\eta_{\alpha \beta}(0) / N
+\end{aligned}
+$$</p>
+<p>単一粒子のワニエ波動関数の局在化の度合いがすべての運動量$k$についての積分$\Omega_I \propto \int_{BZ}d^dk \operatorname{tr}g(k)$を必要とするのとは異なり、ここではパラメータ空間$\boldsymbol{\kappa} = 0$の情報、つまり元のシステムの基底状態の情報だけが必要であることがわかります。</p>
+<p>$$
+\begin{aligned}
+\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}}= \frac{1}{N} \left(\left\langle\Psi_0\left|\hat{r}_\alpha \hat{r}_\beta\right| \Psi_0\right\rangle-\left\langle\Psi_0\left|\hat{r}_\alpha\right| \Psi_0\right\rangle\left\langle\Psi_0\left|\hat{r}_\beta\right| \Psi_0\right\rangle \right)
+\end{aligned}
+$$</p>
+<p>後の導出の便宜上（伝導率の式とより良く比較するために）、「状態和」の形で書くこともできます：</p>
+<p>$$
+\begin{aligned}
+\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}}= \frac{1}{N} \sum_{n \neq 0}^{\prime} \frac{\left\langle\Psi_0\left|\partial_\alpha \hat{H}(0)\right| \Psi_n\right\rangle\left\langle\Psi_n\left|\partial_\beta \hat{H}(0)\right| \Psi_0\right\rangle}{\left(E_0-E_n\right)^2} 
+\end{aligned}
+$$</p>
+<p>ここで、</p>
+<p>$$
+\begin{aligned}
+\nabla_\kappa \hat{H}(0) =\frac{\hbar}{m_e} \sum_{i=1}^N\left[\mathbf{p}_i+\frac{e}{c} \mathbf{A}\left(\mathbf{r}_i\right)\right] = \hbar \hat{\mathbf{v}}
+\end{aligned}
+$$</p>
+<p>これは実質的に運動量（速度）演算子であるため、さらに次のように書き換えることができます：</p>
+<p>$$
+\begin{aligned}
+\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}} =\frac{1}{N} \sum_{n \neq 0}^{\prime} \frac{\left\langle\Psi_0\left|\hat{v}_\alpha\right| \Psi_n\right\rangle\left\langle\Psi_n\left|\hat{v}_\beta\right| \Psi_0\right\rangle}{\left(E_0-E_n\right)^2/\hbar^2} 
+\end{aligned}
+$$
+$$
+\begin{aligned}
+=\frac{1}{N} \sum_{n \neq 0}^{\prime} \frac{\left\langle\Psi_0\left|\hat{v}_\alpha\right| \Psi_n\right\rangle\left\langle\Psi_n\left|\hat{v}_\beta\right| \Psi_0\right\rangle}{\omega_{0 n}^2}
+\end{aligned}
+$$
+$$
+\begin{aligned}
+\omega_{0 n}= \left(E_n-E_0\right) / \hbar
+\end{aligned}
+$$</p>
+<p>しかし、心に留めておくべきは、<strong>この2次キュムラントモーメントは純粋に基底状態波動関数の局在性の性質であり、励起状態とは無関係であるということです。</strong></p>
+<p>まとめると、単一粒子の量子幾何学を多体基底状態波動関数空間に一般化し、多体基底状態波動関数空間の量子幾何学（全電子数Nで割ったもの）が実空間における多体基底状態波動関数分布の局在性を特徴付けることができ、これが励起状態とは無関係な基底状態の性質であることを発見しました。</p>
+<p><strong>私たちの最終目標は、この純粋な基底状態の性質を用いて、一見すると区別に励起状態の性質が必要と思われる導体と絶縁体を区別することです。</strong></p>
+<h2 id="localization--conductivity">Localization &amp; Conductivity<a hidden class="anchor" aria-hidden="true" href="#localization--conductivity">#</a></h2>
+<h3 id="linear-response-theory">Linear Response Theory<a hidden class="anchor" aria-hidden="true" href="#linear-response-theory">#</a></h3>
+<p>線形応答理論を使って多体系の伝導率を素早く得ることができます。興味のある学生は、私の線形応答理論のノートをチェックしてください：</p>
+<p><a href="https://zhuanlan.zhihu.com/p/477550302">https://zhuanlan.zhihu.com/p/477550302</a></p>
+<p>$$
+\begin{aligned}
+\sigma_{\alpha \beta}(\omega)=\frac{i e^2}{\hbar L^3} \lim_{\eta \rightarrow 0+} \sum_{n \neq 0}^{\prime} \frac{1}{\omega_{0 n}}& \left(\frac{\left\langle\Psi_0\left|\hat{v}_\alpha\right| \Psi_n\right\rangle\left\langle\Psi_n\left|\hat{v}_\beta\right| \Psi_0\right\rangle}{\omega-\omega_{0 n}+i \eta}\right. \\
+& \left.+\frac{\left\langle\Psi_0\left|\hat{v}_\beta\right| \Psi_n\right\rangle\left\langle\Psi_n\left|\hat{v}_\alpha\right| \Psi_0\right\rangle}{\omega+\omega_{0 n}+i \eta}\right)
+\end{aligned}
+$$</p>
+<p>この伝導率の実部は散逸項であり、虚部は揺らぎ項です。私たちは通常、コンダクタンスの散逸的な性質を調べるので、その実部$\sigma_{\alpha \beta}(\omega)$に注目します。</p>
+<p>伝導率の実部$\sigma_{\alpha \beta}(\omega)$は対称部分と反対称部分に分けることができます（$\omega > 0$かつ$\omega_{0n} > 0$に注意）：</p>
+<p>$$
+\begin{aligned}
+\operatorname{Re} \sigma_{\alpha \beta}^{(+)}(\omega)=\frac{\pi e^2}{\hbar L^3} \sum_{n \neq 0}^{\prime} \frac{\mathcal{R}_{n, \alpha \beta}}{\omega_{0 n}} \delta\left(\omega-\omega_{0 n}\right) 
+\end{aligned}
+$$
+$$
+\begin{aligned}
+\operatorname{Re} \sigma_{\alpha \beta}^{(-)}(\omega)=\frac{2 e^2}{\hbar L^3} \sum_{n \neq 0}^{\prime} \frac{\mathcal{I}_{n, \alpha \beta}}{\omega_{0 n}^2-\omega^2} 
+\end{aligned}
+$$</p>
+<p>ここで、</p>
+<p>$$
+\begin{aligned}
+\mathcal{R}_{n, \alpha \beta}=\operatorname{Re}\left\langle\Psi_0\left|\hat{v}_\alpha\right| \Psi_n\right\rangle\left\langle\Psi_n\left|\hat{v}_\beta\right| \Psi_0\right\rangle 
+\end{aligned}
+$$
+$$
+\begin{aligned}
+\mathcal{I}_{n, \alpha \beta}=\operatorname{Im}\left\langle\Psi_0\left|\hat{v}_\alpha\right| \Psi_n\right\rangle\left\langle\Psi_n\left|\hat{v}_\beta\right| \Psi_0\right\rangle 
+\end{aligned}
+$$</p>
+<p>導出において、以下を使用しました：</p>
+<p>$$
+\begin{aligned}
+\lim_{\eta \rightarrow 0+} \frac{1}{x + i\eta} = \mathcal{P}\frac{1}{x} - i \pi \delta(x)
+\end{aligned}
+$$</p>
+<p>以前に得られた多体基底状態波動関数の局在性を記述する2次キュムラントモーメント$\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}}$の状態和形式と比較します：</p>
+<p>$$
+\begin{aligned}
+\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}} =\frac{1}{N} \sum_{n \neq 0}^{\prime} \frac{\left\langle\Psi_0\left|\hat{v}_\alpha\right| \Psi_n\right\rangle\left\langle\Psi_n\left|\hat{v}_\beta\right| \Psi_0\right\rangle}{\omega_{0 n}^2}
+\end{aligned}
+$$</p>
+<p>以下を見つけるのは難しくありません：</p>
+<p>$$
+\begin{aligned}
+\operatorname{Re}\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}}=\frac{1}{N} \sum_{n \neq 0}^{\prime} \frac{\mathcal{R}_{n, \alpha \beta}}{\omega_{0 n}^2} 
+\end{aligned}
+$$
+$$
+\begin{aligned}
+\operatorname{Im}\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}}=\frac{1}{N} \sum_{n \neq 0}^{\prime} \frac{\mathcal{I}_{n, \alpha \beta}}{\omega_{0 n}^2} 
+\end{aligned}
+$$</p>
+<p>さらに、<strong>SWM公式</strong>（I.Souza, T.Wilkens, R.M.Martin, 2000）を証明することができます：</p>
+<p>$$
+\begin{aligned}
+\operatorname{Re}\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}} =\frac{\hbar L^3}{\pi e^2 N} \int_0^{\infty} \frac{d \omega}{\omega} \operatorname{Re} \sigma_{\alpha \beta}^{(+)}(\omega) 
+\end{aligned}
+$$
+$$
+\begin{aligned}
+\operatorname{Im}\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}} =\frac{\hbar L^3}{2 e^2 N} \operatorname{Re} \sigma_{\alpha \beta}^{(-)}(0) 
+\end{aligned}
+$$</p>
+<h3 id="swm-formula">SWM Formula<a hidden class="anchor" aria-hidden="true" href="#swm-formula">#</a></h3>
+<p>現象論的に導体と絶縁体を定義する場合、<strong>静的縦伝導率（static longitudinal conductivity）</strong>、すなわち $\lim_{\omega \rightarrow 0}\sigma_{\alpha \alpha}(\omega)$ に注目します。</p>
+<p>静的場 $\omega \rightarrow 0$ に注目するのは、絶縁体でも交流電流下では電気を通すことができるからです。また、縦伝導率に注目するのは、たとえ横伝導率（例：ホール伝導率）が非ゼロであっても、縦伝導率がゼロであれば、それを絶縁体と呼ぶからです（例：量子ホール絶縁体、チャーン絶縁体）。</p>
+<p>$\omega \rightarrow 0$ での情報は $\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}}$ に直接結びつけるのは容易ではありませんが、上記のSWM公式を通じて、$\omega \rightarrow 0$ での情報を間接的に調べることができます。</p>
+<p><strong>SWM公式</strong>の縦情報の成分の実部に注目します（指標$\alpha$が同じなので、$\operatorname{Re} \sigma_{\alpha \alpha} = \operatorname{Re} \sigma_{\alpha \alpha}^{(+)}$）：</p>
+<p>$$
+\begin{aligned}
+\operatorname{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}} =\frac{\hbar L^3}{\pi e^2 N} \int_0^{\infty} \frac{d \omega}{\omega} \operatorname{Re} \sigma_{\alpha \alpha}(\omega) 
+\end{aligned}
+$$</p>
+<p>f-sum則を使って、積分が $\omega \rightarrow \infty$ で収束することを証明できます：</p>
+<p>$$
+\begin{aligned}
+\int_0^{\infty} d \omega \operatorname{Re} \sigma_{\alpha \alpha}(\omega) = \frac{\pi e^2 N}{2 m_e L^3} 
+\end{aligned}
+$$</p>
+<p>したがって、積分の収束（$\operatorname{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}} $が有限かどうか）は、$\omega \rightarrow 0$ での伝導率の情報に依存します。</p>
+<p>そして、$\operatorname{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}}$が有限であるかどうかは、多体系の局在性と直接関係しています。$\operatorname{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}}$が有限であれば、多体基底状態は**「局在化している（Localized）」<strong>と定義でき、発散すれば</strong>「非局在化している（Delocalized）」**と定義できます。</p>
+<p>上記の導出を通じて、多体基底状態波動関数の「局在性」を定量的に表現し、それをシステムの静的縦伝導率と結びつけることに成功しました。</p>
+<p><strong>注意：これは基底状態の情報にのみ関係しています！</strong></p>
+<h2 id="metal-or-insulator">Metal or Insulator?<a hidden class="anchor" aria-hidden="true" href="#metal-or-insulator">#</a></h2>
+<p>最後に、この記事の冒頭の質問に答えることができます：<strong>基底状態を見るだけで、どのようにして導体と絶縁体を区別するのか？</strong></p>
+<p>バンドギャップを持つシステムの場合、すべての励起エネルギーは $\hbar \omega_{0n} \geq E_g$ なので、伝導率の線形応答公式 $\operatorname{Re} \sigma_{\alpha \beta}^{(+)}(\omega) \simeq \sum \delta\left(\omega-\omega_{0 n}\right)$ から、$\omega \rightarrow 0$ のとき伝導率は明らかに0であり、絶縁体です。</p>
+<p>したがって、$\operatorname{Re} \sigma_{\alpha \beta}^{(+)}(\omega) \simeq \sum \delta\left(\omega-\omega_{0 n}\right)$ の積分の下限を $E_g/\hbar > 0$ に変更できます：</p>
+<p>$$
+\begin{aligned}
+\operatorname{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}} =\frac{\hbar L^3}{\pi e^2 N} \int_{E_{\mathrm{g} /} \hbar}^{\infty} \frac{d \omega}{\omega} \operatorname{Re} \sigma_{\alpha \alpha}(\omega) 
+\end{aligned}
+$$
+$$
+\begin{aligned}
+<\frac{\hbar L^3}{\pi e^2 N} \int_0^{\infty} \frac{d \omega}{E_{\mathrm{g}}/\hbar} \operatorname{Re} \sigma_{\alpha \alpha}(\omega) =\frac{\hbar^2}{2 m_e E_{\mathrm{g}}}
+\end{aligned}
+$$</p>
+<p>これは、$\operatorname{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}}$ が上限を持ち有限であることを示しており、これは先ほど定義した<strong>局在化した多体基底状態</strong>に対応します。</p>
+<p>このようにして、多体基底状態の局在性によって、システムが絶縁体か導体かを完全に判断することができます：</p>
+<p>$$
+\begin{aligned}
+\text{多体基底状態が「局在化」} \Leftrightarrow \text{システムは絶縁体}(E_g>0)
+\end{aligned}
+$$</p>
+<p>逆に、静的縦伝導率 $\lim_{\omega \rightarrow 0} \operatorname{Re} \sigma_{\alpha \alpha}(\omega) > 0$ を持つ導体（金属）の場合、上記の積分は $\omega \rightarrow 0$ において：</p>
+<p>$$
+\begin{aligned}
+\operatorname{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}} \simeq \frac{\hbar L^3 }{\pi e^2 N} \lim_{\omega \rightarrow 0} \operatorname{Re} \sigma_{\alpha \alpha}(\omega)\int_{0}^{\infty} \frac{d \omega}{\omega} 
+\end{aligned}
+$$</p>
+<p>明らかに $\omega \rightarrow 0$ で発散するため、$\operatorname{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}} = \infty$ となります。</p>
+<p>したがって、以下のようになります：</p>
+<p>$$
+\begin{aligned}
+\text{多体基底状態が「非局在化」} \Leftrightarrow \text{システムは導体}
+\end{aligned}
+$$</p>
+<p>もちろん、特殊なケースとしてギャップレスの場合 $E_g = 0$ があります。このとき、多体基底状態が「局在化」しているかどうかは、依然として静的縦伝導率 $\lim_{\omega \rightarrow 0} \operatorname{Re} \sigma_{\alpha \alpha}(\omega)$ の振る舞いに依存します。例えば、もし $\lim_{\omega \rightarrow 0} \operatorname{Re} \sigma_{\alpha \alpha}(\omega) \propto \omega^{\alpha \geq 1}$ ならば、多体基底状態は依然として局在化しており絶縁体です。逆に、もし $\lim_{\omega \rightarrow 0} \operatorname{Re} \sigma_{\alpha \alpha}(\omega) \propto \omega^{\alpha < 1}$ ならば、多体基底状態は非局在化しており導体です。</p>
+<p>その中で、強い無秩序を持つアンダーソン絶縁体は前者に属します。なぜなら、無秩序系の移動度端（mobility edge）の外側はエネルギースペクトル（システムをギャップレスにすることができる）ですが、移動度端の外側の電子状態はアンダーソン局在を起こしており、伝導に寄与しないため、全体としては依然として絶縁体だからです。一方、バンド金属や弱無秩序、弱相関の導体システムは後者に属します。</p>
+<p>このようにして、任意の多体系（対称性、無秩序、強相関などの有無にかかわらず）について、多体基底状態波動関数の電子の局在性を見るだけで、すべての絶縁体と導体を区別することができます。</p>
+<h2 id="summary">Summary<a hidden class="anchor" aria-hidden="true" href="#summary">#</a></h2>
+<p>$$
+\begin{aligned}
+\operatorname{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}} < \infty \Leftrightarrow \text{多体基底状態が「局在化」} \Leftrightarrow \text{システムは絶縁体}
+\end{aligned}
+$$</p>
+<p>$$
+\begin{aligned}
+\operatorname{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}} = \infty \Leftrightarrow \text{多体基底状態が「非局在化」} \Leftrightarrow \text{システムは導体}
+\end{aligned}
+$$</p>
+<h2 id="reference">Reference<a hidden class="anchor" aria-hidden="true" href="#reference">#</a></h2>
+<ul>
+<li>
+<p>[1] Kohn W. <a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.133.A171">Theory of the insulating state</a>. Physical review, 1964, 133(1A): A171.</p>
+</li>
+<li>
+<p>[2] Resta, R., &amp; Sorella, S. (1999). <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.82.370">Electron localization in the insulating state</a>. Physical Review Letters, 82(2), 370.</p>
+</li>
+<li>
+<p>[3] Souza, I., Wilkens, T., &amp; Martin, R. M. (2000). <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.62.1666">Polarization and localization in insulators: Generating function approach</a>. Physical Review B, 62(3), 1666.</p>
+</li>
+<li>
+<p>[4] Marzari, N., Mostofi, A. A., Yates, J. R., Souza, I., &amp; Vanderbilt, D. (2012). <a href="https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.84.1419">Maximally localized Wannier functions: Theory and applications</a>. Reviews of Modern Physics, 84(4), 1419.</p>
+</li>
+<li>
+<p>[5] Lee, C. H., Thomale, R., &amp; Qi, X. L. (2013). <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.88.035101">Pseudopotential formalism for fractional Chern insulators</a>. Physical Review B, 88(3), 035101.</p>
+</li>
+<li>
+<p>[6] Marzari, N., &amp; Vanderbilt, D. (1997). <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.56.12847">Maximally localized generalized Wannier functions for composite energy bands</a>. Physical review B, 56(20), 12847.</p>
+</li>
+<li>
+<p>[7] Resta, R. (2002). <a href="https://iopscience.iop.org/article/10.1088/0953-8984/14/20/201">Why are insulators insulating and metals conducting?</a>. Journal of Physics: Condensed Matter, 14(20), R625.</p>
+</li>
+<li>
+<p>[8] Resta, R. (2022). Geometry and topology in electronic structure theory. Università degli Studi di Trieste.</p>
+</li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+
+<ul class="share-buttons">
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 基底状態だけで導体と絶縁体をどう区別するか？🤔 on x"
+            href="https://x.com/intent/tweet/?text=%e5%9f%ba%e5%ba%95%e7%8a%b6%e6%85%8b%e3%81%a0%e3%81%91%e3%81%a7%e5%b0%8e%e4%bd%93%e3%81%a8%e7%b5%b6%e7%b8%81%e4%bd%93%e3%82%92%e3%81%a9%e3%81%86%e5%8c%ba%e5%88%a5%e3%81%99%e3%82%8b%e3%81%8b%ef%bc%9f%f0%9f%a4%94&amp;url=http%3a%2f%2flocalhost%3a1313%2fja%2fpost%2fdistinguish_conductors_insulators_ground_state%2f&amp;hashtags=">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 基底状態だけで導体と絶縁体をどう区別するか？🤔 on linkedin"
+            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2fja%2fpost%2fdistinguish_conductors_insulators_ground_state%2f&amp;title=%e5%9f%ba%e5%ba%95%e7%8a%b6%e6%85%8b%e3%81%a0%e3%81%91%e3%81%a7%e5%b0%8e%e4%bd%93%e3%81%a8%e7%b5%b6%e7%b8%81%e4%bd%93%e3%82%92%e3%81%a9%e3%81%86%e5%8c%ba%e5%88%a5%e3%81%99%e3%82%8b%e3%81%8b%ef%bc%9f%f0%9f%a4%94&amp;summary=%e5%9f%ba%e5%ba%95%e7%8a%b6%e6%85%8b%e3%81%a0%e3%81%91%e3%81%a7%e5%b0%8e%e4%bd%93%e3%81%a8%e7%b5%b6%e7%b8%81%e4%bd%93%e3%82%92%e3%81%a9%e3%81%86%e5%8c%ba%e5%88%a5%e3%81%99%e3%82%8b%e3%81%8b%ef%bc%9f%f0%9f%a4%94&amp;source=http%3a%2f%2flocalhost%3a1313%2fja%2fpost%2fdistinguish_conductors_insulators_ground_state%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 基底状態だけで導体と絶縁体をどう区別するか？🤔 on reddit"
+            href="https://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fja%2fpost%2fdistinguish_conductors_insulators_ground_state%2f&title=%e5%9f%ba%e5%ba%95%e7%8a%b6%e6%85%8b%e3%81%a0%e3%81%91%e3%81%a7%e5%b0%8e%e4%bd%93%e3%81%a8%e7%b5%b6%e7%b8%81%e4%bd%93%e3%82%92%e3%81%a9%e3%81%86%e5%8c%ba%e5%88%a5%e3%81%99%e3%82%8b%e3%81%8b%ef%bc%9f%f0%9f%a4%94">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 基底状態だけで導体と絶縁体をどう区別するか？🤔 on facebook"
+            href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fja%2fpost%2fdistinguish_conductors_insulators_ground_state%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 基底状態だけで導体と絶縁体をどう区別するか？🤔 on whatsapp"
+            href="https://api.whatsapp.com/send?text=%e5%9f%ba%e5%ba%95%e7%8a%b6%e6%85%8b%e3%81%a0%e3%81%91%e3%81%a7%e5%b0%8e%e4%bd%93%e3%81%a8%e7%b5%b6%e7%b8%81%e4%bd%93%e3%82%92%e3%81%a9%e3%81%86%e5%8c%ba%e5%88%a5%e3%81%99%e3%82%8b%e3%81%8b%ef%bc%9f%f0%9f%a4%94%20-%20http%3a%2f%2flocalhost%3a1313%2fja%2fpost%2fdistinguish_conductors_insulators_ground_state%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 基底状態だけで導体と絶縁体をどう区別するか？🤔 on telegram"
+            href="https://telegram.me/share/url?text=%e5%9f%ba%e5%ba%95%e7%8a%b6%e6%85%8b%e3%81%a0%e3%81%91%e3%81%a7%e5%b0%8e%e4%bd%93%e3%81%a8%e7%b5%b6%e7%b8%81%e4%bd%93%e3%82%92%e3%81%a9%e3%81%86%e5%8c%ba%e5%88%a5%e3%81%99%e3%82%8b%e3%81%8b%ef%bc%9f%f0%9f%a4%94&amp;url=http%3a%2f%2flocalhost%3a1313%2fja%2fpost%2fdistinguish_conductors_insulators_ground_state%2f">
+            <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 基底状態だけで導体と絶縁体をどう区別するか？🤔 on ycombinator"
+            href="https://news.ycombinator.com/submitlink?t=%e5%9f%ba%e5%ba%95%e7%8a%b6%e6%85%8b%e3%81%a0%e3%81%91%e3%81%a7%e5%b0%8e%e4%bd%93%e3%81%a8%e7%b5%b6%e7%b8%81%e4%bd%93%e3%82%92%e3%81%a9%e3%81%86%e5%8c%ba%e5%88%a5%e3%81%99%e3%82%8b%e3%81%8b%ef%bc%9f%f0%9f%a4%94&u=http%3a%2f%2flocalhost%3a1313%2fja%2fpost%2fdistinguish_conductors_insulators_ground_state%2f">
+            <svg version="1.1" xml:space="preserve" width="30px" height="30px" viewBox="0 0 512 512" fill="currentColor"
+                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+                <path
+                    d="M449.446 0C483.971 0 512 28.03 512 62.554L512 449.446C512 483.97 483.97 512 449.446 512L62.554 512C28.03 512 0 483.97 0 449.446L0 62.554C0 28.03 28.029 0 62.554 0L449.446 0ZM183.8767 87.9921H121.8427L230.6673 292.4508V424.0079H281.3328V292.4508L390.1575 87.9921H328.1233L256 238.2489z" />
+            </svg>
+        </a>
+    </li>
+</ul>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/ja/">O空O扬O の 物理ノート</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'コピー';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'コピーされました!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'コピー';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

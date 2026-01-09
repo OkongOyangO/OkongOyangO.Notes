@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Mean Field Approximation and Variational Method | Can Hartree, Fock, and BCS be Mixed 1:1:1? | OkongOyangO&#39;s PhysHub</title>
+<meta name="keywords" content="">
+<meta name="description" content="This article aims to introduce the mean field approximation while elucidating its variational nature.
+Hartree, Fock, and BCS—these individual mean field approximations appear to be mutually incompatible decoupling methods. However, by leveraging the variational nature of the mean field approximation, we discover that they can indeed be mixed 1:1:1.
+Preface
+The inspiration for this article primarily comes from discussions with classmate @ykli. I would like to express my special thanks to @ykli for the significant assistance provided during the derivation process.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/post/mean_field_approximation/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.343cc480b9ffc8f04ccbe5e968ad674880cab773ec19905e93033065c1e7a804.css" integrity="sha256-NDzEgLn/yPBMy&#43;XpaK1nSIDKt3PsGZBekwMwZcHnqAQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="http://localhost:1313/zh/post/mean_field_approximation/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/post/mean_field_approximation/">
+<link rel="alternate" hreflang="ja" href="http://localhost:1313/ja/post/mean_field_approximation/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['39593', '39593'], ['\\[', '\\]']],
+      tags: 'ams',
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      ignoreHtmlClass: 'tex2jax_ignore',
+      processHtmlClass: 'tex2jax_process'
+    }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="OkongOyangO&#39;s PhysHub (Alt + H)">OkongOyangO&#39;s PhysHub</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                    <ul class="lang-switch"><li>|</li>
+                        <li>
+                            <a href="http://localhost:1313/zh/" title="🇨🇳 中文"
+                                aria-label="🇨🇳 中文">Zh</a>
+                        </li>
+                        <li>
+                            <a href="http://localhost:1313/ja/" title="🇯🇵 日本語"
+                                aria-label="🇯🇵 日本語">Ja</a>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Mean Field Approximation and Variational Method | Can Hartree, Fock, and BCS be Mixed 1:1:1?
+    </h1>
+    <div class="post-meta"><span title='2026-01-09 19:05:46 +0000 +0000'>January 9, 2026</span>&nbsp;|&nbsp;<span>Translations:</span>
+<ul class="i18n_list">
+    <li>
+        <a href="http://localhost:1313/zh/post/mean_field_approximation/">Zh</a>
+    </li>
+    <li>
+        <a href="http://localhost:1313/ja/post/mean_field_approximation/">Ja</a>
+    </li>
+</ul>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#preface" aria-label="Preface">Preface</a></li>
+                <li>
+                    <a href="#introduction" aria-label="Introduction">Introduction</a></li>
+                <li>
+                    <a href="#mean-field-theory-by-decoupling" aria-label="Mean Field Theory by Decoupling">Mean Field Theory by Decoupling</a></li>
+                <li>
+                    <a href="#problem-of-decoupling" aria-label="Problem of Decoupling">Problem of Decoupling</a></li>
+                <li>
+                    <a href="#variational-method-for-finite-temperature" aria-label="Variational Method for Finite Temperature">Variational Method for Finite Temperature</a></li>
+                <li>
+                    <a href="#variational-method" aria-label="Variational Method">Variational Method</a></li>
+                <li>
+                    <a href="#summary" aria-label="Summary">Summary</a></li>
+                <li>
+                    <a href="#reference" aria-label="Reference">Reference</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>This article aims to introduce the mean field approximation while elucidating its variational nature.</p>
+<p>Hartree, Fock, and BCS—these individual mean field approximations appear to be mutually incompatible decoupling methods. However, by leveraging the variational nature of the mean field approximation, we discover that they can indeed be mixed 1:1:1.</p>
+<h2 id="preface">Preface<a hidden class="anchor" aria-hidden="true" href="#preface">#</a></h2>
+<p>The inspiration for this article primarily comes from discussions with classmate <a href="https://www.zhihu.com/people/li-yong-kang-9-34">@ykli</a>. I would like to express my special thanks to <a href="https://www.zhihu.com/people/li-yong-kang-9-34">@ykli</a> for the significant assistance provided during the derivation process.</p>
+<p>This question has also been raised on the Physics Stack Exchange website (referred to as &ldquo;Multi-channel Mean Field Theory&rdquo;). I have included the link here for reference:</p>
+<p><a href="https://physics.stackexchange.com/questions/742905/multi-channel-mean-field-theory">https://physics.stackexchange.com/questions/742905/multi-channel-mean-field-theory</a></p>
+<p>Additionally, Senior <a href="https://www.zhihu.com/people/deng-wwzz">@AlanNaHang</a>&rsquo;s answer regarding &ldquo;Physics Circle Slang&rdquo; (物理圈黑话) also gave me considerable inspiration. Interested readers can visit:</p>
+<p><a href="https://www.zhihu.com/question/410499049/answer/2442413803">https://www.zhihu.com/question/410499049/answer/2442413803</a></p>
+<h2 id="introduction">Introduction<a hidden class="anchor" aria-hidden="true" href="#introduction">#</a></h2>
+<p>For interacting systems, the complete Hamiltonian of the system is:</p>
+<p>$$
+\begin{aligned}
+\hat{H} = \hat{H}_0 + \hat{V}_{int}
+\end{aligned}
+$$</p>
+<p>Here, $\hat{H}_0 \sim \sum c^\dagger c$ represents the quadratic part of the fermion creation and annihilation operators, which is relatively easy to treat as independent free particles.</p>
+<p>On the other hand, $\hat{V}_{int} \sim \sum c^\dagger c^\dagger c c$ represents the interaction part.</p>
+<p>Due to the existence of interactions, it is difficult to determine the system&rsquo;s ground state wave function or equilibrium density matrix, making it challenging to calculate various information about the interacting system. Therefore, we often use various approximation methods to handle this.</p>
+<p>The mean field approximation is one such method. We take a mean field approximation Hamiltonian that can be strictly solved:</p>
+<p>$$
+\begin{aligned}
+\hat{H}_{mf} = \hat{H}_0 + \hat{V}_{mf}
+\end{aligned}
+$$</p>
+<p>By making $\hat{V}_{mf}$ also quadratic, it becomes easier to solve strictly. We can then use the solution of this mean field approximation Hamiltonian to approximate various properties of the system.</p>
+<h2 id="mean-field-theory-by-decoupling">Mean Field Theory by Decoupling<a hidden class="anchor" aria-hidden="true" href="#mean-field-theory-by-decoupling">#</a></h2>
+<p>However, approximations cannot be chosen blindly; they require certain techniques.</p>
+<p>Quantum mechanics textbooks teach us that the mean field approximation involves ignoring the quantum fluctuation part of the operators, i.e., the Decoupling Method:</p>
+<p>$$
+\begin{aligned}
+A^\dagger A & = [\langle A \rangle + (A - \langle A \rangle)]^\dagger [\langle A \rangle + (A - \langle A \rangle)] \\
+& \equiv [\langle A \rangle + \delta A]^\dagger [\langle A \rangle + \delta A]  \\
+& = \underbrace{\langle A^\dagger \rangle \langle A \rangle}_{\mathcal{O}(\delta A^0)} + \underbrace{\langle A^\dagger \rangle \delta A +  \delta A^\dagger \langle A \rangle}_{\mathcal{O}(\delta A^1)} + \underbrace{\delta A^\dagger \delta A}_{\mathcal{O}(\delta A^2)} \\
+& = \underbrace{\langle A^\dagger \rangle A + A^\dagger \langle A \rangle - \langle A^\dagger \rangle \langle A \rangle}_{\text{mean field}\ =\ \mathcal{O}(\delta A^0) + \mathcal{O}(\delta A^1)} \\
+& + \underbrace{(A - \langle A \rangle)^\dagger (A - \langle A \rangle)}_{\text{quantum fluctuation}\ =\ \mathcal{O}(\delta A^2)} \\
+& \approx \langle A^\dagger \rangle A + A^\dagger \langle A \rangle - \langle A^\dagger \rangle \langle A \rangle
+\end{aligned}
+$$</p>
+<p>The mean field part retains the zero-order and first-order parts of the operator fluctuation $\delta A$, while the quantum fluctuation includes the second-order part of the operator fluctuation $\delta A$.</p>
+<p>Thus, it is not difficult to understand that when quantum fluctuations are not large, the mean field approximation is relatively accurate.</p>
+<p>For the two-body interaction $\hat{V}_{int}$:</p>
+<p>$$
+\begin{aligned}
+\hat{V}_{int} = \frac{1}{2} \sum_{ij}V_{ij} c_i^\dagger c_j^\dagger c_j c_i
+\end{aligned}
+$$</p>
+<p>We have three methods to decompose it into the form of (a sum of) $\hat{A}^\dagger\hat{A}$:</p>
+<ul>
+<li>Density Channel (Hartree): $\hat{A}_{i}^{H} = c_i^\dagger c_i$</li>
+<li>Exchange Channel (Fock): $\hat{A}_{ij}^{F} = c_i^\dagger c_j$</li>
+<li>Cooper Channel (BCS): $\hat{A}_{ij}^{BCS} = c_i c_j$</li>
+</ul>
+<p>Taking the Density Channel as an example, the decoupling process for the Hartree mean field is:</p>
+<p>$$
+\begin{aligned}
+    & \hat{V}_{int} = \frac{1}{2} \sum_{ij}V_{ij} c_i^\dagger c_j^\dagger c_j c_i \\
+    & = \frac{1}{2} \sum_{ij}V_{ij} c_i^\dagger c_i c_j^\dagger c_j \ +\underbrace{\ const}_{\text{ignore it}} \\
+    & = \frac{1}{2} \sum_{ij}V_{ij} {\hat{A}_{i}^{H}}^\dagger \hat{A}_{j}^{H} \\
+    & = \frac{1}{2} \sum_{ij}V_{ij} \left(\langle {\hat{A}_{i}^{H}}^\dagger\rangle + \delta {\hat{A}_{i}^{H}}^\dagger \right) \left(\langle {\hat{A}_{j}^{H}}\rangle + \delta {\hat{A}_{j}^{H}} \right) \\
+    & \approx -\frac{1}{2} \sum_{ij}V_{ij} \left(\langle {\hat{A}_{i}^{H}}^\dagger\rangle  {\hat{A}_{j}^{H}} +  {\hat{A}_{i}^{H}}^\dagger \langle {\hat{A}_{j}^{H}}\rangle - \langle {\hat{A}_{i}^{H}}^\dagger\rangle \langle {\hat{A}_{j}^{H}}\rangle \right) \\
+    & \equiv \hat{V}_{H}
+\end{aligned}
+$$</p>
+<p>For Fock mean field Decoupling:</p>
+<p>$$
+\begin{aligned}
+    & \hat{V}_{int} = - \frac{1}{2} \sum_{ij}V_{ij} {\hat{A}_{ij}^{F} }^\dagger \hat{A}_{ij}^{F} \ +\underbrace{\ const}_{\text{ignore it}} \\
+    & \approx -\frac{1}{2} \sum_{ij}V_{ij} \left(\langle {\hat{A}_{ij}^{F}}^\dagger\rangle  \hat{A}_{ij}^{F} +  {\hat{A}_{ij}^{F}}^\dagger \langle \hat{A}_{ij}^{F}\rangle - \langle {\hat{A}_{ij}^{F}}^\dagger\rangle \langle {\hat{A}_{ij}^{F}}\rangle \right)\\
+    & \equiv \hat{V}_{F}
+\end{aligned}
+$$</p>
+<p>For BCS mean field Decoupling:</p>
+<p>$$
+\begin{aligned}
+    & \hat{V}_{int} = \frac{1}{2} \sum_{ij}V_{ij} {\hat{A}_{ij}^{BCS} }^\dagger \hat{A}_{ij}^{BCS} \ +\underbrace{\ const}_{\text{ignore it}} \\
+    & \approx \frac{1}{2} \sum_{ij}V_{ij} \left(\langle {\hat{A}_{ij}^{BCS}}^\dagger\rangle  \hat{A}_{ij}^{BCS} +  {\hat{A}_{ij}^{BCS}}^\dagger \langle \hat{A}_{ij}^{BCS}\rangle - \langle {\hat{A}_{ij}^{BCS}}^\dagger\rangle \langle {\hat{A}_{ij}^{BCS}}\rangle \right)\\
+    & \equiv \hat{V}_{BCS}
+\end{aligned}
+$$</p>
+<h2 id="problem-of-decoupling">Problem of Decoupling<a hidden class="anchor" aria-hidden="true" href="#problem-of-decoupling">#</a></h2>
+<p>However, it seems we can only make one type of approximation for the two-body interaction: either Hartree, or Fock, or BCS.</p>
+<p>But in fact, the &ldquo;Hartree-Fock mean field approximation&rdquo; we often hear about seems to use two approximations.</p>
+<p>$$
+\begin{aligned}
+\hat{V}_{int} \approx \hat{V}_{H} + \hat{V}_{F}
+\end{aligned}
+$$</p>
+<p>Does doing this cause a problem of double counting?</p>
+<p>Or should we split $\hat{V}_{int}$ into $\frac{\hat{V}_{int}}{2}$ and $\frac{\hat{V}_{int}}{2}$ for use?</p>
+<p>$$
+\begin{aligned}
+\hat{V}_{int} = \frac{\hat{V}_{int}}{2} + \frac{\hat{V}_{int}}{2} \approx \frac{\hat{V}_{H}}{2} + \frac{\hat{V}_{F}}{2}
+\end{aligned}
+$$</p>
+<p>Or split it into $\frac{\hat{V}_{int}}{3}$ and $\frac{2\hat{V}_{int}}{3}$?</p>
+<p>$$
+\begin{aligned}
+\hat{V}_{int} = \frac{\hat{V}_{int}}{3} + \frac{2\hat{V}_{int}}{3} \approx \frac{\hat{V}_{H}}{3} + \frac{2\hat{V}_{F}}{3}
+\end{aligned}
+$$</p>
+<p>Since there is a &ldquo;Hartree-Fock mean field approximation,&rdquo; why not have a &ldquo;Hartree-Fock-BCS mean field approximation&rdquo;? How are the aforementioned double counting problem and the so-called splitting problem resolved?</p>
+<p>In fact, $\hat{V}_{int} \approx \hat{V}_{H} + \hat{V}_{F}$ is the correct approach. However, if we understand the Hartree-Fock mean field approximation using the Decoupling Method, it always gives a feeling of double counting:</p>
+<p>$$
+\begin{aligned}
+\hat{V}_{int} + \hat{V}_{int} \approx \hat{V}_{H} + \hat{V}_{F}
+\end{aligned}
+$$</p>
+<p>This is caused by the imprecise formulation of Decoupling. Next, we will explain that the mean field approximation, as a non-perturbative method, is essentially a variational method of &ldquo;guess the solution, then optimize.&rdquo;</p>
+<p>Afterward, we will start from the variational method to prove that choosing different decoupling methods (Hartree, Fock, BCS) actually does not affect each other; it merely adds new independent parameters to the guessed solution and does not cause the so-called double counting problem.</p>
+<h2 id="variational-method-for-finite-temperature">Variational Method for Finite Temperature<a hidden class="anchor" aria-hidden="true" href="#variational-method-for-finite-temperature">#</a></h2>
+<p>We are already familiar with the variational method at zero temperature.</p>
+<p>For zero-temperature systems, we commonly use the variational method to &ldquo;guess&rdquo; the ground state wave function $|\Psi(\lambda)\rangle$ of the Hamiltonian, where $\lambda$ is a parameter adjusting the &ldquo;guessed ground state wave function.&rdquo; By adjusting the parameter and observing the ground state energy functional:</p>
+<p>$$
+\begin{aligned}
+E[\Psi(\lambda)] = \frac{\langle \Psi(\lambda) | \hat{H} | \Psi(\lambda) \rangle}{\langle \Psi(\lambda) | \Psi(\lambda) \rangle}
+\end{aligned}
+$$</p>
+<p>Making it minimal allows us to say that $|\Psi(\lambda)\rangle$ is very close to the ground state wave function. We then use this guessed solution to calculate various properties of the system&rsquo;s ground state (zero temperature).</p>
+<p>Similarly, the variational principle can be applied to finite temperature systems, simply by changing &ldquo;guessed ground state wave function&rdquo; to &ldquo;guessed equilibrium density matrix.&rdquo;</p>
+<p>Here we perform the derivation using the canonical ensemble, and for convenience, we set the unit system $k_B = 1$.</p>
+<p>For finite temperature, the equilibrium density matrix is:</p>
+<p>$$
+\begin{aligned}
+\hat{\rho}_{eq} = \frac{e^{-\beta \hat{H}}}{\operatorname{Tr} (e^{-\beta \hat{H}})}
+\end{aligned}
+$$</p>
+<p>The &ldquo;guessed equilibrium density matrix&rdquo; must have a specific form. We assume the system&rsquo;s density matrix is the equilibrium density matrix of some auxiliary Hamiltonian $\hat{H}_{mf}(\lambda)$:</p>
+<p>$$
+\begin{aligned}
+\hat{\rho}_{mf}(\lambda) \equiv \hat{\rho}_{eq} [\hat{H}_{mf}(\lambda)] \equiv \frac{e^{-\beta \hat{H}_{mf}(\lambda)}}{\operatorname{Tr} (e^{-\beta \hat{H}_{mf}(\lambda)})}
+\end{aligned}
+$$</p>
+<p>where $\lambda$ is the parameter adjusting the Hamiltonian $\hat{H}_0$ (and thus adjusting the &ldquo;guessed equilibrium density matrix&rdquo;), such as mean field strength, order parameter, etc.</p>
+<p>Here we use the &ldquo;mf&rdquo; subscript to imply that the mean field approximation involves taking the &ldquo;auxiliary Hamiltonian&rdquo; providing the &ldquo;guessed equilibrium density function&rdquo; as the &ldquo;mean field approximation Hamiltonian.&rdquo; However, for the general variational method, the &ldquo;auxiliary Hamiltonian&rdquo; can take any form, and even the density matrix can be chosen arbitrarily; it does not necessarily have to be the equilibrium density matrix of some Hamiltonian.</p>
+<p>At this point, the variational extremum condition also generalizes from &ldquo;minimizing the energy functional&rdquo; to &ldquo;minimizing the free energy functional.&rdquo;</p>
+<p>$$
+\begin{aligned}
+F[\hat{\rho}_{mf}(\lambda)] & = \langle \hat{H} \rangle_{\rho_{mf}(\lambda)} - TS \\
+& = \operatorname{Tr} ( \hat{\rho}_{mf}(\lambda) \hat{H}) + T \operatorname{Tr} (\hat{\rho}_{mf}(\lambda) \ln \hat{\rho}_{mf}(\lambda) )
+\end{aligned}
+$$</p>
+<p>Note that $\hat{H}$ here is the complete Hamiltonian of the system, not our guessed Hamiltonian $\hat{H}_{mf}(\lambda)$.</p>
+<p>In fact, in the mean field approximation, we use the equilibrium density matrix corresponding to the Hamiltonian after mean field approximation as the &ldquo;guessed equilibrium density matrix.&rdquo; For this, we need to verify that directly taking the mean field approximation and ignoring quantum fluctuations coincides with the variational extremum condition of the free energy functional. This proves that the mean field approximation is indeed a variational method.</p>
+<p>In the mean field approximation, we replace the interaction part in the complete Hamiltonian $\hat{H} = \hat{H}_0 + \hat{V}_{int}$ with a quadratic operator containing parameters, i.e.,</p>
+<p>$$
+\begin{aligned}
+\hat{H}_{mf}(\lambda) = \hat{H}_0 + \hat{V}_{mf}(\lambda)
+\end{aligned}
+$$</p>
+<p>Replacing the quartic interaction operator with a quadratic mean field operator will break some symmetries of the Hamiltonian, which is ultimately reflected in the symmetry breaking of the guessed wave function or guessed density operator.</p>
+<p>This is the case in the mean field: choosing different channels represents choosing to break different symmetries. For example, BCS theory chooses to break charge conservation (U(1) symmetry).</p>
+<p>$$
+\begin{aligned}
+\hat{V}_{mf}(\lambda) \sim \sum \lambda c^\dagger c^\dagger + h.c.
+\end{aligned}
+$$</p>
+<p>In fact, in the BCS superconducting phase transition, Spontaneous Symmetry Breaking indeed occurs, making the strict ground state wave function or strict equilibrium density operator have less symmetry compared to the complete Hamiltonian $\hat{H} = \hat{H}_0 + \hat{V}_{int}$.</p>
+<p>This indicates that although the mean field approximation is an approximation method, it indeed captures some essence of the phase transition process. Therefore, when quantum fluctuations are not large (far from the quantum critical point), we often use the mean field approximation to make some approximate predictions about quantum systems.</p>
+<h2 id="variational-method">Variational Method<a hidden class="anchor" aria-hidden="true" href="#variational-method">#</a></h2>
+<p>Let us denote:</p>
+<p>$$
+\begin{aligned}
+\hat{V}_{mf}(\lambda) = \lambda \hat{X}
+\end{aligned}
+$$</p>
+<p>$$
+\begin{aligned}
+F_{mf} & = \langle \hat{H}_{mf} \rangle_{\rho_{mf}(\lambda)} - T S_{mf}\\ 
+& = \operatorname{Tr} ( \hat{\rho}_{mf}(\lambda) \hat{H}_{mf}) + T \operatorname{Tr} (\hat{\rho}_{mf}(\lambda) \ln \hat{\rho}_{mf}(\lambda) )
+\end{aligned}
+$$</p>
+<p>It is important to note that $F[\hat{\rho}(\lambda) ] \neq F_{mf}$. The difference between the two is:</p>
+<p>$$
+\begin{aligned}
+F[\hat{\rho}_{mf}(\lambda) ] - F_{mf} = \langle \hat{V}_{int} - \hat{V}_{mf} \rangle_{\rho_{mf}(\lambda)}
+\end{aligned}
+$$</p>
+<p>It is easy to have a misunderstanding: for $F_{mf}$, the equilibrium density matrix of $\hat{H}_{mf}$ itself is the density matrix that minimizes it, so</p>
+<p>$$
+\begin{aligned}
+\frac{\partial F_{mf}}{\partial \lambda} = 0
+\end{aligned}
+$$</p>
+<p>But this is only true when the parameter $\lambda$ is fixed, i.e., when the fixed Hamiltonian $\hat{H}$ is unchanged, satisfying the extremum condition of $F_{mf}$. $\frac{\partial F_{mf}}{\partial \lambda}$ still needs to be strictly calculated:</p>
+<p>First, since $F_{mf}$ is the equilibrium free energy of $\hat{H}_{mf}$, we can conveniently obtain:</p>
+<p>$$
+\begin{aligned}
+F_{mf}(\lambda) = - T \ln \mathcal{Z}_{mf}(\lambda)
+\end{aligned}
+$$</p>
+<p>$$
+\begin{aligned}
+\mathcal{Z}_{mf}(\lambda) = \operatorname{Tr} ( e^{-\beta \hat{H}_{mf}(\lambda)} ) = \operatorname{Tr} ( e^{-\beta [ \hat{H}_0 + \lambda \hat{X} ]} )
+\end{aligned}
+$$</p>
+<p>Thus,</p>
+<p>$$
+\begin{aligned}
+\frac{\partial F_{mf}}{\partial \lambda} & = -T \frac{1}{\mathcal{Z}_{mf}}\frac{\partial \mathcal{Z}_{mf}}{\partial \lambda} \\
+& = - T \frac{\operatorname{Tr} ( -\beta \hat{X} e^{-\beta [ \hat{H}_0 + \lambda \hat{X} ]} )}{\operatorname{Tr} ( e^{-\beta [ \hat{H}_0 + \lambda \hat{X} ]} )} \\
+& = \frac{\operatorname{Tr} (  \hat{X} e^{-\beta [ \hat{H}_0 + \lambda \hat{X} ]} )}{\operatorname{Tr} ( e^{-\beta [ \hat{H}_0 + \lambda \hat{X} ]} )} \\
+& = \operatorname{Tr} ( \hat{\rho}_{mf}(\lambda) \hat{X} ) \\
+& =  \langle \hat{X} \rangle_{\rho_{mf}(\lambda)}
+\end{aligned}
+$$</p>
+<p>That is, the expectation value of the order parameter in the mean field interaction $\hat{V}_{mf}$ part. Generally speaking, the order parameter calculated by the mean field approximation is non-zero, indicating that the system (at least under the mean field approximation) has a specific order.</p>
+<p>Using the conclusion above, in order for the free energy functional $F[\hat{\rho}(\lambda) ]$ to reach an extremum, we now only need to set:</p>
+<p>$$
+\begin{aligned}
+& \frac{\partial}{\partial \lambda} (F[\hat{\rho}(\lambda) ] - F_{mf}) \\
+& = \frac{\partial}{\partial \lambda} \langle \hat{V}_{int}  \rangle_{\rho_{mf}(\lambda)} - \frac{\partial}{\partial \lambda} \langle \hat{V}_{mf} \rangle_{\rho_{mf}(\lambda)} \\
+& = -\frac{\partial}{\partial \lambda} F_{mf} = - \langle \hat{X} \rangle_{\rho_{mf}(\lambda)}
+\end{aligned}
+$$</p>
+<p>Using the form $\hat{V}_{mf} = \lambda \hat{X}$ again, we can simplify further.</p>
+<p>Note that we must take the derivative with respect to $\lambda$ in both $\hat{V}_{mf} = \lambda \hat{X}$ and $\hat{\rho}_{mf}(\lambda)$:</p>
+<p>$$
+\begin{aligned}
+& \frac{\partial}{\partial \lambda} \langle  \hat{V}_{mf} \rangle_{\rho_{mf}(\lambda)} \\
+& = \frac{\partial}{\partial \lambda} \langle \lambda \hat{X} \rangle_{\rho_{mf}(\lambda)} \\
+& = \frac{\partial}{\partial \lambda}  \operatorname{Tr} ( \lambda \hat{\rho}_{mf}(\lambda) \hat{X} ) \\
+& =  \operatorname{Tr} ( \hat{\rho}_{mf}(\lambda) \hat{X} ) +  \operatorname{Tr} ( \lambda \frac{\partial}{\partial \lambda}\{\hat{\rho}_{mf}(\lambda)\} \hat{X} ) \\
+& =  \langle  \hat{X} \rangle_{\rho_{mf}(\lambda)} + \lambda \frac{\partial}{\partial \lambda} \left\{ \operatorname{Tr} ( \hat{\rho}_{mf}(\lambda) \hat{X} ) \right\} \\
+& =  \langle  \hat{X} \rangle_{\rho_{mf}(\lambda)} + \lambda \frac{\partial }{\partial \lambda}\langle  \hat{X} \rangle_{\rho_{mf}(\lambda)}
+\end{aligned}
+$$</p>
+<p>Thus, the extremum condition for the free energy functional can be written as:</p>
+<p>$$
+\begin{aligned}
+\frac{\partial}{\partial \lambda} F[\hat{\rho}(\lambda) ] = 0\  \Leftrightarrow \ 
+\frac{\partial}{\partial \lambda} \langle \hat{V}_{int} \rangle_{\rho_{mf}(\lambda)}  = \lambda \frac{\partial }{\partial \lambda}\langle  \hat{X} \rangle_{\rho_{mf}(\lambda)}
+\end{aligned}
+$$</p>
+<p>We can also generalize this variation to the case of multiple parameters $\{\lambda_i\}$, providing higher variational degrees of freedom, thereby making the guessed solution closer to the real situation.</p>
+<p>In summary, if we take the equilibrium density matrix $\rho_{mf}(\{\lambda_i\})$ corresponding to some (usually only containing quadratic terms) mean field Hamiltonian $\hat{H}_{mf}(\{\lambda_i\}) = \hat{H}_0 + \sum_i \lambda_i \hat{X}_i$ as the guessed solution to calculate the free energy functional variation, then the values of the parameters $\{\lambda_i\}$ that minimize the free energy functional (closest to the real equilibrium state) satisfy the following condition:</p>
+<p>$$
+\begin{aligned}
+\frac{\partial}{\partial \lambda_i} \langle \hat{V}_{int} \rangle_{\rho_{mf}(\{\lambda_i\})}  = \lambda_i \frac{\partial }{\partial \lambda_i}\langle  \hat{X}_i \rangle_{\rho_{mf}(\{\lambda_i\})}
+\end{aligned}
+$$</p>
+<p>We can further use the chain rule to write the variational extremum condition as:</p>
+<p>$$
+\begin{aligned}
+\lambda_i  = \frac{\partial \langle \hat{V}_{int} \rangle_{\rho_{mf}(\{\lambda_i\})} }{\partial \langle  \hat{X}_i \rangle_{\rho_{mf}(\{\lambda_i\})}} 
+\end{aligned}
+$$</p>
+<p>In this way, we can directly obtain the parameters corresponding to the variational extremum condition (physically representing the order parameters).</p>
+<p>However, this equation is too formal. We can discover through the calculation of specific examples that this is the same thing as the mean field approximation.</p>
+<p>For a general two-body interaction:</p>
+<p>$$
+\begin{aligned}
+\hat{V}_{int} = \frac{1}{2} \sum_{ij}V_{ij} c_i^\dagger c_j^\dagger c_j c_i
+\end{aligned}
+$$</p>
+<p>And the general mean field interaction is taken as quadratic, so that it can be strictly solved as mutually independent elementary excitations. Here we take the most general form:</p>
+<p>$$
+\begin{aligned}
+\hat{V}_{mf} & = \underbrace{\sum_{i} \lambda_i^{H} c_i^\dagger c_i}_{\text{Hartree}} \\
+& + \underbrace{\sum_{i\neq j} \lambda_{ij}^{F} c_i^\dagger c_j }_{\text{Fock}} \\
+& + \underbrace{\sum_{i,j} (\lambda_{ij}^{BCS} c_i^\dagger c_j^\dagger  + \bar{\lambda}_{ij}^{BCS} c_j c_i )}_{\text{BCS}}
+\end{aligned}
+$$</p>
+<p>Here, the first, second, and third lines correspond to the Hartree, Fock, and BCS mean field parts, respectively.</p>
+<p>Here we did not directly use the so-called decoupling method mentioned earlier:</p>
+<p>$$
+\begin{aligned}
+A^\dagger A \approx \langle A^\dagger \rangle A + A^\dagger \langle A \rangle - \langle A^\dagger \rangle \langle A \rangle
+\end{aligned}
+$$</p>
+<p>Instead, we took a Hamiltonian with completely undetermined coefficients. Afterwards, we can prove that when the variational extremum is reached, this Hamiltonian is the &ldquo;mean field approximation Hamiltonian&rdquo; obtained by the decoupling method.</p>
+<p>At the same time, precisely because the coefficients are completely undetermined, we can arbitrarily add or remove terms in the first, second, and third lines, because this is just adding or reducing variational parameters.</p>
+<p>Next, we calculate $\langle \hat{V}_{int} \rangle_{\rho_{mf}(\{\lambda_i\})}$, which is the expectation value of the strict two-body interaction operator under the mean field corresponding equilibrium state.</p>
+<p>We need to use Wick&rsquo;s theorem, because the mean field Hamiltonian is quadratic, so the Generating Functional is Gaussian. Therefore, the expectation value of equilibrium Fermi operators can be strictly decomposed into contractions of pairs of Fermi operators.</p>
+<p>$$
+\begin{aligned}
+\langle \hat{V}_{int} \rangle_{\rho_{mf}(\{\lambda_i\})} & = \frac{1}{2} \sum_{ij}V_{ij} \langle c_i^\dagger c_j^\dagger c_j c_i \rangle_{\rho_{mf}(\{\lambda_i\})} \\
+& = \frac{1}{2} \sum_{ij}V_{ij} (\langle c_i^\dagger  c_i \rangle \langle c_j^\dagger  c_j \rangle \\
+& - \langle c_i^\dagger  c_j \rangle \langle c_j^\dagger  c_i \rangle + \langle c_i^\dagger  c_j^\dagger \rangle \langle c_j  c_i \rangle)
+\end{aligned}
+$$</p>
+<p>Thus, using the variational extremum condition, we have:</p>
+<p>$$
+\begin{aligned}
+    \lambda_i^H & = \frac{\partial \langle \hat{V}_{int} \rangle_{\rho_{mf}(\{\lambda_i\})} }{\partial \langle  c_i^\dagger c_i \rangle_{\rho_{mf}(\{\lambda_i\})}} \\
+    & = \frac{1}{2} \sum_j \left( V_{ij} \langle  c_j^\dagger c_j \rangle_{\rho_{mf}(\{\lambda_i\})} +  V_{ji} \langle  c_j^\dagger c_j \rangle_{\rho_{mf}(\{\lambda_i\})} \right)\\
+    & = \sum_{j} V_{ij} \langle  c_j^\dagger c_j \rangle_{\rho_{mf}(\{\lambda_i\})}
+\end{aligned}
+$$</p>
+<p>Here we used $V_{ij} = V_{ji}$. Through observation, it is not difficult to find that this is the Hartree mean field approximation term obtained by &ldquo;decoupling&rdquo; earlier, differing by at most a constant.</p>
+<p>Previously, we selected $\hat{A}_{i}^{H} = c_i^\dagger c_i$ and omitted the second-order term of its quantum fluctuation; here, we purely used the variational extremum condition to determine the guessed Hamiltonian parameter that minimizes the free energy functional.</p>
+<p>Similarly, for other undetermined parameters corresponding to Fock and BCS mean field approximations, we have:</p>
+<p>$$
+\begin{aligned}
+\lambda_{ij}^{F} & = - \frac{1}{2} ( V_{ij} \langle  c_j^\dagger c_i \rangle_{\rho_{mf}(\{\lambda_i\})} + V_{ji} \langle  c_i^\dagger c_j \rangle_{\rho_{mf}(\{\lambda_i\})} )\\
+& =  - V_{ij} \langle  c_j^\dagger c_i \rangle_{\rho_{mf}(\{\lambda_i\})}
+\end{aligned}
+$$</p>
+<p>$$
+\begin{aligned}
+\lambda_{ij}^{BCS} & = \frac{1}{2}  V_{ij} \langle  c_j c_i \rangle_{\rho_{mf}(\{\lambda_i\})} \\
+\bar{\lambda}_{ij}^{BCS}& =  \frac{1}{2} V_{ji} \langle  c_i^\dagger c_j^\dagger \rangle_{\rho_{mf}(\{\lambda_i\})}
+\end{aligned}
+$$</p>
+<p>Substituting them into $\hat{V}_{mf}(\{\lambda_i\})$, it is not difficult to discover that they also correspond to Fock and BCS mean field approximations, respectively.</p>
+<p>But from the perspective of the variational method, these undetermined coefficients and terms of the guessed Hamiltonian are independent and do not affect each other. Adding or subtracting terms to the guessed Hamiltonian merely changes the form of the guessed solution, increasing or decreasing the variational parameters. Therefore, Hartree, Fock, and BCS mean field approximations can indeed be mixed 1:1:1, or mixed in pairs, all satisfying the variational extremum condition for the given parameters.</p>
+<p>However, in specific problems, we care about specific order parameters, so we minimize the variational parameters (using only BCS or Hartree-Fock) to obtain the most concise and effective conclusions possible.</p>
+<h2 id="summary">Summary<a hidden class="anchor" aria-hidden="true" href="#summary">#</a></h2>
+<p>In summary, we have proven through the strict derivation of the variational method that Hartree, Fock, and BCS mean field theories can indeed be mixed 1:1:1.</p>
+<p>First, we utilized the decoupling method frequently appearing in quantum mechanics textbooks, obtaining the mean field Hamiltonian under a certain mean field approximation by &ldquo;brute force&rdquo; omitting the second-order fluctuation terms of the operators.</p>
+<p>$$
+\begin{aligned}
+A^\dagger A \approx \langle A^\dagger \rangle A + A^\dagger \langle A \rangle - \langle A^\dagger \rangle \langle A \rangle
+\end{aligned}
+$$</p>
+<p>However, this decoupling method can easily create the illusion of double counting when using two or more mean field approximations.</p>
+<p>Afterwards, we re-described the variational nature of the mean field approximation using the language of the variational method, considering that the equilibrium state of the system $\hat{H} = \hat{H}_0 + \hat{V}_{int}$ is very close to the equilibrium state of a certain mean field Hamiltonian $\hat{H}_{mf} = \hat{H}_0 + \hat{V}_{mf}(\{\lambda_i\})$ (guessed Hamiltonian, containing various undetermined coefficients $\{\lambda_i\}$).</p>
+<p>Selecting the undetermined coefficients $\{\lambda_i^{mf}\}$ that minimize the system&rsquo;s free energy variation, and thus using the mean field Hamiltonian $\hat{H}_{mf} = \hat{H}_0 + \hat{V}_{mf}(\{\lambda_i^{mf}\})$ under this coefficient selection to approximate the original (interacting) system Hamiltonian $\hat{H} = \hat{H}_0 + \hat{V}_{int}$ is the mean field approximation.</p>
+<p>Through the variational method and Wick&rsquo;s theorem, we proved that the optimal undetermined coefficients $\{\lambda_i^{mf}\}$ coincide exactly with the results of selecting first-order fluctuation terms in the decoupling method, meaning the optimal undetermined coefficients $\{\lambda_i^{mf}\}$ are the system&rsquo;s mean field (order parameters).</p>
+<p>Returning to the original question &ldquo;Can Hartree, Fock, and BCS mean field theories be mixed 1:1:1?&rdquo;, when using the variational method, there is no stipulation on the number of undetermined coefficients, or rather, the variational extremum conditions for each undetermined coefficient are mutually independent.</p>
+<p>Therefore, the Density, Exchange, and Cooper Channels corresponding to Hartree, Fock, and BCS mean field theories in the decoupling method are in fact independent and do not double count. Thus, we have proven:</p>
+<p><strong>Hartree, Fock, and BCS mean field theories can indeed be mixed 1:1:1.</strong></p>
+<h2 id="reference">Reference<a hidden class="anchor" aria-hidden="true" href="#reference">#</a></h2>
+<ul>
+<li>[1] Bruus, H., &amp; Flensberg, K. (2004). Many-body quantum theory in condensed matter physics: an introduction. Oxford university press.</li>
+<li>[2] Coleman, P. (2015). Introduction to many-body physics. Cambridge University Press.</li>
+<li>[3] Altland, A., &amp; Simons, B. D. (2010). Condensed matter field theory. Cambridge university press.</li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+
+<ul class="share-buttons">
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Mean Field Approximation and Variational Method | Can Hartree, Fock, and BCS be Mixed 1:1:1? on x"
+            href="https://x.com/intent/tweet/?text=Mean%20Field%20Approximation%20and%20Variational%20Method%20%7c%20Can%20Hartree%2c%20Fock%2c%20and%20BCS%20be%20Mixed%201%3a1%3a1%3f&amp;url=http%3a%2f%2flocalhost%3a1313%2fpost%2fmean_field_approximation%2f&amp;hashtags=">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Mean Field Approximation and Variational Method | Can Hartree, Fock, and BCS be Mixed 1:1:1? on linkedin"
+            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2fpost%2fmean_field_approximation%2f&amp;title=Mean%20Field%20Approximation%20and%20Variational%20Method%20%7c%20Can%20Hartree%2c%20Fock%2c%20and%20BCS%20be%20Mixed%201%3a1%3a1%3f&amp;summary=Mean%20Field%20Approximation%20and%20Variational%20Method%20%7c%20Can%20Hartree%2c%20Fock%2c%20and%20BCS%20be%20Mixed%201%3a1%3a1%3f&amp;source=http%3a%2f%2flocalhost%3a1313%2fpost%2fmean_field_approximation%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Mean Field Approximation and Variational Method | Can Hartree, Fock, and BCS be Mixed 1:1:1? on reddit"
+            href="https://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fpost%2fmean_field_approximation%2f&title=Mean%20Field%20Approximation%20and%20Variational%20Method%20%7c%20Can%20Hartree%2c%20Fock%2c%20and%20BCS%20be%20Mixed%201%3a1%3a1%3f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Mean Field Approximation and Variational Method | Can Hartree, Fock, and BCS be Mixed 1:1:1? on facebook"
+            href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fpost%2fmean_field_approximation%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Mean Field Approximation and Variational Method | Can Hartree, Fock, and BCS be Mixed 1:1:1? on whatsapp"
+            href="https://api.whatsapp.com/send?text=Mean%20Field%20Approximation%20and%20Variational%20Method%20%7c%20Can%20Hartree%2c%20Fock%2c%20and%20BCS%20be%20Mixed%201%3a1%3a1%3f%20-%20http%3a%2f%2flocalhost%3a1313%2fpost%2fmean_field_approximation%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Mean Field Approximation and Variational Method | Can Hartree, Fock, and BCS be Mixed 1:1:1? on telegram"
+            href="https://telegram.me/share/url?text=Mean%20Field%20Approximation%20and%20Variational%20Method%20%7c%20Can%20Hartree%2c%20Fock%2c%20and%20BCS%20be%20Mixed%201%3a1%3a1%3f&amp;url=http%3a%2f%2flocalhost%3a1313%2fpost%2fmean_field_approximation%2f">
+            <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Mean Field Approximation and Variational Method | Can Hartree, Fock, and BCS be Mixed 1:1:1? on ycombinator"
+            href="https://news.ycombinator.com/submitlink?t=Mean%20Field%20Approximation%20and%20Variational%20Method%20%7c%20Can%20Hartree%2c%20Fock%2c%20and%20BCS%20be%20Mixed%201%3a1%3a1%3f&u=http%3a%2f%2flocalhost%3a1313%2fpost%2fmean_field_approximation%2f">
+            <svg version="1.1" xml:space="preserve" width="30px" height="30px" viewBox="0 0 512 512" fill="currentColor"
+                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+                <path
+                    d="M449.446 0C483.971 0 512 28.03 512 62.554L512 449.446C512 483.97 483.97 512 449.446 512L62.554 512C28.03 512 0 483.97 0 449.446L0 62.554C0 28.03 28.029 0 62.554 0L449.446 0ZM183.8767 87.9921H121.8427L230.6673 292.4508V424.0079H281.3328V292.4508L390.1575 87.9921H328.1233L256 238.2489z" />
+            </svg>
+        </a>
+    </li>
+</ul>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">OkongOyangO&#39;s PhysHub</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
