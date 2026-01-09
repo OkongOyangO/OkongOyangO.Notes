@@ -56,6 +56,24 @@
                 href="http://localhost:1313/ja/post/mean_field_approximation/"
                 />
   </url><url>
+    <loc>http://localhost:1313/ja/post/distinguish_conductors_insulators_ground_state/</loc>
+    <lastmod>2026-01-08T21:54:37-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="http://localhost:1313/zh/post/distinguish_conductors_insulators_ground_state/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/post/distinguish_conductors_insulators_ground_state/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="http://localhost:1313/ja/post/distinguish_conductors_insulators_ground_state/"
+                />
+  </url><url>
     <loc>http://localhost:1313/ja/post/fqhe_faqhe_fci/</loc>
     <lastmod>2026-01-08T21:54:37-05:00</lastmod>
     <xhtml:link

@@ -85,9 +85,9 @@ $$&lt;/p&gt;</description>
     </item>
     <item>
       <title>只看基态如何区分导体和绝缘体？🤔</title>
-      <link>http://localhost:1313/zh/post/note1/</link>
+      <link>http://localhost:1313/zh/post/distinguish_conductors_insulators_ground_state/</link>
       <pubDate>Thu, 08 Jan 2026 21:54:37 -0500</pubDate>
-      <guid>http://localhost:1313/zh/post/note1/</guid>
+      <guid>http://localhost:1313/zh/post/distinguish_conductors_insulators_ground_state/</guid>
       <description>&lt;p&gt;本note旨在阐述多体系统&lt;strong&gt;导电性&lt;/strong&gt;与&lt;strong&gt;基态量子几何性质&lt;/strong&gt;的关联，并解释如何仅通过基态波函数的“局域”程度，来区分导体和绝缘体。&lt;/p&gt;
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;“只看基态就能区分导体和绝缘体”，这个argument似乎有些离谱。&lt;/p&gt;

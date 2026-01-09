@@ -173,6 +173,36 @@ $$ \begin{aligned} A^\dagger A &amp; = [\langle A \rangle &#43; (A - \langle A \
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">基底状態だけで導体と絶縁体をどう区別するか？🤔
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>本稿は、多体系の導電性と**基底状態の量子幾何学（Quantum Geometry）**との関連性を明らかにし、基底状態の波動関数の「局在性（Locality）」だけで導体と絶縁体を区別する方法について解説することを目的としています。
+Introduction 「基底状態を見るだけで導体と絶縁体を区別できる」——この主張は少し常識外れに聞こえるかもしれません。
+1930年代のバンド理論は（ある程度）導体と絶縁体の違いを説明しました。相互作用のないレベルでは、導体と絶縁体は基底状態のエネルギーバンドが満たされているかどうかで区別できます。価電子帯が満たされ、伝導帯との間にバンドギャップ$E_g &gt; 0$があれば絶縁体であり、そうでなければ導体です。ここではバンドギャップ$E_g$を使って区別しますが、$E_g$を定義するには励起状態のエネルギーを知る必要があり、必然的に励起状態の性質が関わってきます。
+しかし、1949年に提案されたモット絶縁体（Mott Insulator、強い電子間相関に起因）や1958年のアンダーソン絶縁体（Anderson Insulator、強い無秩序に起因）は、導体と絶縁体を区別する上でのバンド理論の穴を指摘しました。つまり、多体系の絶縁メカニズムは価電子帯が満たされていることだけでなく、強い相関や無秩序も関係しているということです。同様に、バンドギャップがないことが導電性のメカニズムであるのと並んで、無秩序な金属合金の一部も導体になり得ます。逆に、無秩序な合金系では、バンドギャップがなくても絶縁体になる可能性があり、これこそがアンダーソン局在（Anderson Localization）であり、局在状態が電流を安定して輸送できないことに起因します。
+さらに言えば、多体系には格子が全く存在しない可能性もあります。多体系の導電特性を判断するための、より**普遍的な指標（universal indicator）**が早急に求められています。
+現象論的には、導体と絶縁体の違いは直流伝導率$\operatorname{Re}\sigma(\omega\rightarrow 0)$の違いにあります。なぜなら、一般的な絶縁体でも交流電流下では電気を通すことができるからです。あるいは電気分極現象によって区別することもできます。絶縁体では電子が束縛されており、原子の近くでしか動けないため、明らかな電気分極現象が生じます。一方、導体では電子は自由に動く傾向があり、外部電場によって自由に流れるため、明確に定義された電気分極はありません。
+線形応答理論（Linear Response Theory）を用いて伝導率や分極率を計算することで、導体と絶縁体を区別することは常に可能ですが、これでもまだ励起状態の性質を考慮する必要があります。
+しかし、Kohnは1964年の論文 “Theory of the insulating state” で、多体系の導電性は、多体配置空間（many-body configuration space）における基底状態の多体波動関数の「局在性」によって判断できると提案しました。
+https://journals.aps.org/pr/abstract/10.1103/PhysRev.133.A171
+20世紀末、Restaらは、この局在性の度合いが多体基底状態波動関数の2次キュムラントモーメント（second cumulant moment） $\langle r_\alpha r_\beta \rangle_c$（“c&#34;は&#34;cumulant&#34;の意）によってより良く特徴付けられることに気づき、その本質が**量子幾何学（Quantum Geometry）**であることを明らかにしました。
+https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.82.370
+そこでまず、波動関数の局在性の度合いをどのように定義するかを明確にしましょう。
+Wannierizability &amp; Quantum Geometry ここで明確にしておく必要がありますが、いわゆる「多体配置における基底状態多体波動関数の『局在性』」は、単一粒子波動関数の局在性とは異なりますが、定義上は類似点があります。さらに、単一粒子波動関数の観点から導出する方が簡単なので、まず単一粒子波動関数の局在性の定義を紹介し、その性質を議論した後、KohnやRestaらの論文にある多体系の場合へと一般化します。
+固体バンド系を例にとると、絶縁体であれ導体であれ、その単一電子固有状態は広がったブロッホ波動関数です。しかし、フーリエ変換を通じて、これらの実空間で広がったブロッホ固有状態を実空間で局在した**ワニエ関数（Wannier Functions）**に変換することができます。
+ワニエ関数$|\mathbf{R} n\rangle$とブロッホ波動関数$\left|\psi_{n \mathbf{k}}\right\rangle$の変換関係は以下の通りです：
+$$ \begin{aligned} \left|\psi_{n \mathbf{k}}\right\rangle=\sum_{\mathbf{R}} e^{i \mathbf{k} \cdot \mathbf{R}}|\mathbf{R} n\rangle \Leftrightarrow |\mathbf{R} n\rangle=\frac{1}{N} \sum_{\mathbf{k}} e^{-i \mathbf{k} \cdot \mathbf{R}}\left|\psi_{n \mathbf{k}}\right\rangle \end{aligned} $$
+ワニエ波動関数の局在性の度合いは、エネルギーバンドのゲージ選択に関係しています。もしブロッホ波動関数に$\mathbf{k}$に関連する位相（ゲージ）を加えても、それは固有状態のままです。
+$$ \begin{aligned} \left|\tilde{\psi}_{n \mathbf{k}}\right\rangle=e^{i \varphi_n(\mathbf{k})}\left|\psi_{n \mathbf{k}}\right\rangle \ \Rightarrow\ \hat{H}\left|\tilde{\psi}_{n \mathbf{k}}\right\rangle = \epsilon_n(\mathbf{k}) \left|\tilde{\psi}_{n \mathbf{k}}\right\rangle \end{aligned} $$
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-01-08 21:54:37 -0500 EST'>2026年1月8日</span></footer>
+  <a class="entry-link" aria-label="post link to 基底状態だけで導体と絶縁体をどう区別するか？🤔" href="http://localhost:1313/ja/post/distinguish_conductors_insulators_ground_state/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">分数量子ホール効果 (FQHE)、分数異常量子ホール効果 (FAQHE)、そして分数チャーン絶縁体 (FCI)
     </h2>
   </header>

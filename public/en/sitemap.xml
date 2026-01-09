@@ -56,19 +56,6 @@
                 href="http://localhost:1313/post/"
                 />
   </url><url>
-    <loc>http://localhost:1313/post/note1/</loc>
-    <lastmod>2026-01-08T21:54:37-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="http://localhost:1313/zh/post/note1/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/post/note1/"
-                />
-  </url><url>
     <loc>http://localhost:1313/post/fqhe_faqhe_fci/</loc>
     <lastmod>2026-01-08T21:54:37-05:00</lastmod>
     <xhtml:link
@@ -85,6 +72,24 @@
                 rel="alternate"
                 hreflang="en"
                 href="http://localhost:1313/post/fqhe_faqhe_fci/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/post/distinguish_conductors_insulators_ground_state/</loc>
+    <lastmod>2026-01-08T21:54:37-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="http://localhost:1313/zh/post/distinguish_conductors_insulators_ground_state/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="http://localhost:1313/ja/post/distinguish_conductors_insulators_ground_state/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/post/distinguish_conductors_insulators_ground_state/"
                 />
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
