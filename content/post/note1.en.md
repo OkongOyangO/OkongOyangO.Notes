@@ -39,9 +39,7 @@ Taking a solid-state band system as an example, whether it is an insulator or a 
 
 The transformation relationship between the Wannier function $|\mathbf{R} n\rangle$ and the Bloch wavefunction $\left|\psi_{n \mathbf{k}}\right\rangle$:
 
-$$
-\left|\psi_{n \mathbf{k}}\right\rangle=\sum_{\mathbf{R}} e^{i \mathbf{k} \cdot \mathbf{R}}|\mathbf{R} n\rangle \Leftrightarrow |\mathbf{R} n\rangle=\frac{1}{N} \sum_{\mathbf{k}} e^{-i \mathbf{k} \cdot \mathbf{R}}\left|\psi_{n \mathbf{k}}\right\rangle 
-$$
+$$\left|\psi_{n \mathbf{k}}\right\rangle=\sum_{\mathbf{R}} e^{i \mathbf{k} \cdot \mathbf{R}}|\mathbf{R} n\rangle \Leftrightarrow |\mathbf{R} n\rangle=\frac{1}{N} \sum_{\mathbf{k}} e^{-i \mathbf{k} \cdot \mathbf{R}}\left|\psi_{n \mathbf{k}}\right\rangle $$
 
 The degree of locality of the Wannier wavefunction is related to the gauge selection of the energy band. If we add a phase (gauge) related to $\mathbf{k}$ to the Bloch wavefunction, it remains an eigenstate.
 
