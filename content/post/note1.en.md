@@ -1,9 +1,8 @@
 +++
 date = '2026-01-08T21:54:37-05:00'
 draft = false
-title = 'Can we distinguishing Conductors and Insulators with only Ground State information?'
+title = 'Can we distinguishing Conductors and Insulators with only Ground State information? 🤔'
 +++
-# Can we distinguishing Conductors and Insulators with only Ground State information?
 
 This note aims to elucidate the connection between the **conductivity** of a many-body system and the **quantum geometry of its ground state**, and to explain how to distinguish between conductors and insulators solely based on the "locality" of the ground state wavefunction.
 
