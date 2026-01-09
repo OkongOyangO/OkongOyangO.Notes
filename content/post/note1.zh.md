@@ -2,6 +2,8 @@
 date = '2026-01-08T21:54:37-05:00'
 draft = false
 math = true
+ShowToc = true
+TocOpen = false
 title = '只看基态如何区分导体和绝缘体？🤔'
 +++
 
@@ -40,12 +42,19 @@ https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.82.370
 Wannier函数$|\mathbf{R} n\rangle$和Bloch波函数$\left|\psi_{n \mathbf{k}}\right\rangle$之间的转换关系：
 
 $$
-\left|\psi_{n \mathbf{k}}\right\rangle=\sum_{\mathbf{R}} e^{i \mathbf{k} \cdot \mathbf{R}}|\mathbf{R} n\rangle \Leftrightarrow |\mathbf{R} n\rangle=\frac{1}{N} \sum_{\mathbf{k}} e^{-i \mathbf{k} \cdot \mathbf{R}}\left|\psi_{n \mathbf{k}}\right\rangle $$
+\begin{aligned}
+\left|\psi_{n \mathbf{k}}\right\rangle=
+\sum_{\mathbf{R}} e^{i \mathbf{k} \cdot \mathbf{R}}|\mathbf{R} n\rangle \Leftrightarrow |\mathbf{R} n\rangle=\frac{1}{N} \sum_{\mathbf{k}} e^{-i \mathbf{k} \cdot \mathbf{R}}\left|\psi_{n \mathbf{k}}\right\rangle
+\end{aligned}
+$$
 
 Wannier波函数的局域程度与能带的规范选取有关。如果我们给Bloch波函数加上一个与$\mathbf{k}$有关的相位（规范），仍然是本征态。
 
 $$
-\left|\tilde{\psi}_{n \mathbf{k}}\right\rangle=e^{i \varphi_n(\mathbf{k})}\left|\psi_{n \mathbf{k}}\right\rangle \ \Rightarrow\ \hat{H}\left|\tilde{\psi}_{n \mathbf{k}}\right\rangle = \epsilon_n(\mathbf{k}) \left|\tilde{\psi}_{n \mathbf{k}}\right\rangle$$
+\begin{aligned}
+\left|\tilde{\psi}_{n \mathbf{k}}\right\rangle=e^{i \varphi_n(\mathbf{k})}\left|\psi_{n \mathbf{k}}\right\rangle \ \Rightarrow\ \hat{H}\left|\tilde{\psi}_{n \mathbf{k}}\right\rangle = \epsilon_n(\mathbf{k}) \left|\tilde{\psi}_{n \mathbf{k}}\right\rangle
+\end{aligned}
+$$
 
 如何通过调节gauge使得Wannier函数达到最大局域化相关内容可以参考Vanderbilt的1997年的PRB，“Maximally localized generalized Wannier functions for composite energy bands”以及2012年的RMP，“Maximally localized Wannier functions: Theory and applications”：
 
@@ -56,22 +65,34 @@ https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.84.1419
 Vanderbilt用其实空间分布的标准差定义Wannier函数的局域程度，即所谓的Spread Functional，也称为Quadratic Spread：
 
 $$
-\Omega=\left[\left\langle\mathbf{0} n\left|r^2\right| \mathbf{0} n\right\rangle-\langle\mathbf{0} n|\mathbf{r}| \mathbf{0} n\rangle^2\right]=\left[\left\langle r^2\right\rangle_n-\overline{\mathbf{r}}_n^2\right] $$
+\begin{aligned}
+\Omega=\left[\left\langle\mathbf{0} n\left|r^2\right| \mathbf{0} n\right\rangle-\langle\mathbf{0} n|\mathbf{r}| \mathbf{0} n\rangle^2\right]=\left[\left\langle r^2\right\rangle_n-\overline{\mathbf{r}}_n^2\right]
+\end{aligned}
+$$
 
 这个Spread Functional和规范选取有关，但可以分为规范不变$\Omega_{\mathrm{I}}$和与规范有关$\tilde{\Omega}$的两个部分：
 
 $$
-\Omega=\Omega_{\mathrm{I}}+\tilde{\Omega}$$
+\begin{aligned}
+\Omega=\Omega_{\mathrm{I}}+\tilde{\Omega}
+\end{aligned}
+$$
 
 其中，规范不变部分$\Omega_{\mathrm{I}}$，也被称为Wannier函数的second cumulant moment：
 
 $$
-\Omega_{\mathrm{I}}=\sum_{\alpha}\left\langle 0 n\left|r_\alpha Q r_\alpha\right| 0 n\right\rangle=\sum_\alpha \text{Tr}\left[P r_\alpha Q r_\alpha\right] $$
+\begin{aligned}
+\Omega_{\mathrm{I}}=\sum_{\alpha}\left\langle 0 n\left|r_\alpha Q r_\alpha\right| 0 n\right\rangle=\sum_\alpha \text{Tr}\left[P r_\alpha Q r_\alpha\right]
+\end{aligned}
+$$
 
 $P$为投影到所考察能带的投影算符：
 
 $$
-P =\frac{1}{N} \sum_{\mathbf{k}}\left|\psi_{n \mathbf{k}}\right\rangle\langle\psi_{n \mathbf{k}}|=\sum_{\mathbf{R}}| \mathbf{R} n\rangle\langle\mathbf{R} n| $$
+\begin{aligned}
+P =\frac{1}{N} \sum_{\mathbf{k}}\left|\psi_{n \mathbf{k}}\right\rangle\langle\psi_{n \mathbf{k}}|=\sum_{\mathbf{R}}| \mathbf{R} n\rangle\langle\mathbf{R} n| 
+\end{aligned}
+$$
 
 这部分与单体能带的Quantum Geometry有关：
 
@@ -84,13 +105,17 @@ $$
 规范有关$\tilde{\Omega}$的部分是一个非负值
 
 $$
+\begin{aligned}
 \tilde{\Omega}=\sum_{\mathbf{R} m \neq 0 n}|\langle\mathbf{R} m|\mathbf{r}| \mathbf{0} n\rangle|^2
+\end{aligned}
 $$
 
 那么总有：
 
 $$
+\begin{aligned}
 \Omega \geq \Omega_{\mathrm{I}}
+\end{aligned}
 $$
 
 此部分详细推倒可以参考本人的note：
@@ -108,14 +133,19 @@ https://zhuanlan.zhihu.com/p/629079639
 类似的，我们来定义多体系统的Quantum Geometry，首先写下最general的多体Hamiltonian：
 
 $$
-\hat{H}=\frac{1}{2 m_e} \sum_{i=1}^N\left|\mathbf{p}_i+\frac{e}{c} \mathbf{A}\left(\mathbf{r}_i\right)\right|^2+\hat{V}(\{\mathbf{r}_i\}) $$
+\begin{aligned}
+\hat{H}=\frac{1}{2 m_e} \sum_{i=1}^N\left|\mathbf{p}_i+\frac{e}{c} \mathbf{A}\left(\mathbf{r}_i\right)\right|^2+\hat{V}(\{\mathbf{r}_i\})
+\end{aligned}
+$$
 
 但此时系统不一定有平移对称性，故原先单体能带论的Quantum Geometry构造方法不能直接应用到此处，不能直接把单电子的动量作为参数空间。
 
 为了找到可以构建Quantum Geometry的参数空间，我们对多体Hamiltonain作规范变换：
 
 $$
+\begin{aligned}
 \hat{H}(\boldsymbol{\kappa}) \equiv e^{-i \boldsymbol{\kappa} \cdot \hat{\mathbf{r}}} \hat{H} e^{i \boldsymbol{\kappa} \cdot \hat{\mathbf{r}}}
+\end{aligned}
 $$
 
 其中$\hat{\mathbf{r}} \equiv \sum_i \hat{\mathbf{r}}_i$
@@ -123,12 +153,18 @@ $$
 即，
 
 $$
-\hat{H}(\boldsymbol{\kappa})=\frac{1}{2 m_e} \sum_{i=1}^N\left|\mathbf{p}_i+\frac{e}{c} \mathbf{A}\left(\mathbf{r}_i\right)+\hbar \boldsymbol{\kappa}\right|^2+\hat{V}(\{(\mathbf{r}_i\}) $$
+\begin{aligned}
+\hat{H}(\boldsymbol{\kappa})=\frac{1}{2 m_e} \sum_{i=1}^N\left|\mathbf{p}_i+\frac{e}{c} \mathbf{A}\left(\mathbf{r}_i\right)+\hbar \boldsymbol{\kappa}\right|^2+\hat{V}(\{(\mathbf{r}_i\})
+\end{aligned}
+$$
 
 此时不同参数$\boldsymbol{\kappa}$对应不同的多体能谱和本征波函数
 
 $$
-H(\boldsymbol{\kappa})|\Psi(\boldsymbol{\kappa})\rangle=E(\boldsymbol{\kappa})|\Psi(\boldsymbol{\kappa})\rangle $$
+\begin{aligned}
+H(\boldsymbol{\kappa})|\Psi(\boldsymbol{\kappa})\rangle=E(\boldsymbol{\kappa})|\Psi(\boldsymbol{\kappa})\rangle
+\end{aligned}
+$$
 
 这相当于加了一个常数的磁矢势，可以用1D环内的磁通来理解，此时$\kappa \propto$环内磁通$\Phi$。
 
@@ -137,12 +173,17 @@ H(\boldsymbol{\kappa})|\Psi(\boldsymbol{\kappa})\rangle=E(\boldsymbol{\kappa})|\
 多体系统最重要的是基态，我们考察参数空间$\boldsymbol{\kappa}$到基态波函数$|\Psi_0(\boldsymbol{\kappa})\rangle$的映射，并以此来构建基态波函数空间的Quantum Geometric Tensor：
 
 $$
-\eta_{\alpha \beta}(\boldsymbol{\kappa})=\left\langle\partial_\alpha \Psi_0(\boldsymbol{\kappa})|\hat{Q}(\boldsymbol{\kappa})| \partial_\beta \Psi_0(\boldsymbol{\kappa})\right\rangle $$
+\begin{aligned}
+\eta_{\alpha \beta}(\boldsymbol{\kappa})=\left\langle\partial_\alpha \Psi_0(\boldsymbol{\kappa})|\hat{Q}(\boldsymbol{\kappa})| \partial_\beta \Psi_0(\boldsymbol{\kappa})\right\rangle
+\end{aligned}
+$$
 
 其中$\hat{Q}(\boldsymbol{\kappa})=\hat{1}-\hat{P}(\boldsymbol{\kappa})$，$\hat{P}(\boldsymbol{\kappa})$为基态波函数空间投影算符：
 
 $$
+\begin{aligned}
 \hat{P}(\boldsymbol{\kappa})=\left|\Psi_0(\boldsymbol{\kappa})\right\rangle\left\langle\Psi_0(\boldsymbol{\kappa})\right|
+\end{aligned}
 $$
 
 类似的band geometry，实部为Symmetric Tensor，称为Fubini-Study metric：
@@ -158,21 +199,36 @@ $$
 虚部为Anti-symmetric Tensor，为Berry Curvature：
 
 $$
-\Omega_{\alpha \beta}(\boldsymbol{\kappa})=-2 \text{Im}\left\langle\partial_\alpha \Psi_0(\boldsymbol{\kappa})|\hat{Q}(\boldsymbol{\kappa})| \partial_\beta \Psi_0(\boldsymbol{\kappa})\right\rangle $$
+\begin{aligned}
+\Omega_{\alpha \beta}(\boldsymbol{\kappa})=-2 \text{Im}\left\langle\partial_\alpha \Psi_0(\boldsymbol{\kappa})|\hat{Q}(\boldsymbol{\kappa})| \partial_\beta \Psi_0(\boldsymbol{\kappa})\right\rangle
+\end{aligned}
+$$
 
 类似单体，也可以写成sum of state的形式，用一阶微扰论：
 
 $$
-\left|\Psi_0(\boldsymbol{\kappa}+\Delta \boldsymbol{\kappa})\right\rangle-\left|\Psi_0(\boldsymbol{\kappa})\right\rangle \simeq \sum_{n \neq 0}^{\prime}\left|\Psi_n(\boldsymbol{\kappa})\right\rangle $$
+\begin{aligned}
+\left|\Psi_0(\boldsymbol{\kappa}+\Delta \boldsymbol{\kappa})\right\rangle-\left|\Psi_0(\boldsymbol{\kappa})\right\rangle \simeq \sum_{n \neq 0}^{\prime}\left|\Psi_n(\boldsymbol{\kappa})\right\rangle
+\end{aligned}
+$$
 
 $$
-\times \frac{\left\langle\Psi_n(\boldsymbol{\kappa})|[H(\boldsymbol{\kappa}+\Delta \boldsymbol{\kappa})-H(\boldsymbol{\kappa})]| \Psi_0(\boldsymbol{\kappa})\right\rangle}{E_0(\boldsymbol{\kappa})-E_n(\boldsymbol{\kappa})} $$
+\begin{aligned}
+\times \frac{\left\langle\Psi_n(\boldsymbol{\kappa})|[H(\boldsymbol{\kappa}+\Delta \boldsymbol{\kappa})-H(\boldsymbol{\kappa})]| \Psi_0(\boldsymbol{\kappa})\right\rangle}{E_0(\boldsymbol{\kappa})-E_n(\boldsymbol{\kappa})}
+\end{aligned}
+$$
 
 $$
-\left|\partial_\alpha \Psi_0(\boldsymbol{\kappa})\right\rangle=\sum_{n \neq 0}^{\prime}\left|\Psi_n(\boldsymbol{\kappa})\right\rangle \frac{\left\langle\Psi_n(\boldsymbol{\kappa})\left|\partial_\alpha H(\boldsymbol{\kappa})\right| \Psi_0(\boldsymbol{\kappa})\right\rangle}{E_0(\boldsymbol{\kappa})-E_n(\boldsymbol{\kappa})} . $$
+\begin{aligned}
+\left|\partial_\alpha \Psi_0(\boldsymbol{\kappa})\right\rangle=\sum_{n \neq 0}^{\prime}\left|\Psi_n(\boldsymbol{\kappa})\right\rangle \frac{\left\langle\Psi_n(\boldsymbol{\kappa})\left|\partial_\alpha H(\boldsymbol{\kappa})\right| \Psi_0(\boldsymbol{\kappa})\right\rangle}{E_0(\boldsymbol{\kappa})-E_n(\boldsymbol{\kappa})} .
+\end{aligned}
+$$
 
 $$
-\eta_{\alpha \beta}(\kappa)= \sum_{n \neq 0}^{\prime} \frac{\left\langle\Psi_0(\boldsymbol{\kappa})\left|\partial_\alpha H(\boldsymbol{\kappa})\right| \Psi_n(\boldsymbol{\kappa})\right\rangle\left\langle\Psi_n(\boldsymbol{\kappa})\left|\partial_\beta H(\boldsymbol{\kappa})\right| \Psi_0(\boldsymbol{\kappa})\right\rangle}{\left[E_0(\boldsymbol{\kappa})-E_n(\boldsymbol{\kappa})\right]^2} $$
+\begin{aligned}
+\eta_{\alpha \beta}(\kappa)= \sum_{n \neq 0}^{\prime} \frac{\left\langle\Psi_0(\boldsymbol{\kappa})\left|\partial_\alpha H(\boldsymbol{\kappa})\right| \Psi_n(\boldsymbol{\kappa})\right\rangle\left\langle\Psi_n(\boldsymbol{\kappa})\left|\partial_\beta H(\boldsymbol{\kappa})\right| \Psi_0(\boldsymbol{\kappa})\right\rangle}{\left[E_0(\boldsymbol{\kappa})-E_n(\boldsymbol{\kappa})\right]^2}
+\end{aligned}
+$$
 
 应当注意，此sum of state公式在无能隙或者基态简并时会失效（此时一阶微扰论失效），但这不意味着Quantum Geometry的定义失效。多体系统也存在fascinating的Ground State Degeneracy，此时可以将基态波函数及其Quantum Gemetry拓展到更高维的non-Abelian形式（non-Abelian Berry Connection的推广）。
 
@@ -185,20 +241,28 @@ $$
 我们注意到：
 
 $$
+\begin{aligned}
 \hat{H}(\boldsymbol{\kappa}) \equiv e^{-i \boldsymbol{\kappa} \cdot \hat{\mathbf{r}}} \hat{H} e^{i \boldsymbol{\kappa} \cdot \hat{\mathbf{r}}}
+\end{aligned}
 $$
 
 假设$\left|\Psi_0\right\rangle$为$\hat{H}$的non-degenerate基态，我们很容易写出$\hat{H}(\boldsymbol{\kappa})$的基态（暂且假设是开边界条件，考虑周期边界条件会更复杂）：
 
 $$
-\left|\Psi_0(\boldsymbol{\kappa})\right\rangle=e^{-i \boldsymbol{\kappa} \cdot(\hat{\mathbf{r}}-\mathbf{d})}\left|\Psi_0\right\rangle $$
+\begin{aligned}
+\left|\Psi_0(\boldsymbol{\kappa})\right\rangle=e^{-i \boldsymbol{\kappa} \cdot(\hat{\mathbf{r}}-\mathbf{d})}\left|\Psi_0\right\rangle
+\end{aligned}
+$$
 
 其中，$\mathbf{d}=\left\langle\Psi_0|\hat{\mathbf{r}}| \Psi_0\right\rangle$。这一项只贡献一个常数相位，故没有影响。
 
 为了求Quantum Geometry，我们作微分：
 
 $$
-\left|\nabla_{\boldsymbol{\kappa}} \Psi_0\right\rangle=-i(\hat{\mathbf{r}}-\mathbf{d})\left|\Psi_0\right\rangle=-i \hat{Q}(0) \hat{\mathbf{r}}\left|\Psi_0\right\rangle $$
+\begin{aligned}
+\left|\nabla_{\boldsymbol{\kappa}} \Psi_0\right\rangle=-i(\hat{\mathbf{r}}-\mathbf{d})\left|\Psi_0\right\rangle=-i \hat{Q}(0) \hat{\mathbf{r}}\left|\Psi_0\right\rangle
+\end{aligned}
+$$
 
 从而得到
 
@@ -215,34 +279,53 @@ $$
 时会scale with $N$。为了能在不同系统之间比较这种“局域”程度，我们将其对每个电子做平均，使其成为可以比较的强度量（类似压强），当然这也可以通过改变波函数的归一化定义实现：
 
 $$
-\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}} =\eta_{\alpha \beta}(0) / N$$
+\begin{aligned}
+\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}} =\eta_{\alpha \beta}(0) / N
+\end{aligned}
+$$
 
 不难发现，和单体Wannier波函数的局域化程度需要对所有动量$k$积分$\Omega_I \propto \int_{BZ}d^dk \text{tr}g(k)$不同，这里我们只需要参数空间$\boldsymbol{\kappa} = 0$的信息，也就是原系统的基态信息。
 
 $$
+\begin{aligned}
 \left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}}= \frac{1}{N} \left(\left\langle\Psi_0\left|\hat{r}_\alpha \hat{r}_\beta\right| \Psi_0\right\rangle-\left\langle\Psi_0\left|\hat{r}_\alpha\right| \Psi_0\right\rangle\left\langle\Psi_0\left|\hat{r}_\beta\right| \Psi_0\right\rangle \right)
+\end{aligned}
 $$
 
 为了之后推导方便（更好地和电导率公式对比），也可以写成sum of state的形式：
 
 $$
-\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}}= \frac{1}{N} \sum_{n \neq 0}^{\prime} \frac{\left\langle\Psi_0\left|\partial_\alpha \hat{H}(0)\right| \Psi_n\right\rangle\left\langle\Psi_n\left|\partial_\beta \hat{H}(0)\right| \Psi_0\right\rangle}{\left(E_0-E_n\right)^2} $$
+\begin{aligned}
+\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}}= \frac{1}{N} \sum_{n \neq 0}^{\prime} \frac{\left\langle\Psi_0\left|\partial_\alpha \hat{H}(0)\right| \Psi_n\right\rangle\left\langle\Psi_n\left|\partial_\beta \hat{H}(0)\right| \Psi_0\right\rangle}{\left(E_0-E_n\right)^2}
+\end{aligned}
+$$
 
 其中，
 
 $$
-\nabla_\kappa \hat{H}(0) =\frac{\hbar}{m_e} \sum_{i=1}^N\left[\mathbf{p}_i+\frac{e}{c} \mathbf{A}\left(\mathbf{r}_i\right)\right] = \hbar \hat{\mathbf{v}}$$
+\begin{aligned}
+\nabla_\kappa \hat{H}(0) =\frac{\hbar}{m_e} \sum_{i=1}^N\left[\mathbf{p}_i+\frac{e}{c} \mathbf{A}\left(\mathbf{r}_i\right)\right] = \hbar \hat{\mathbf{v}}
+\end{aligned}
+$$
 
 这事实上就是动量（速度）算符，从而可以进一步改写成：
 
 $$
-\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}} =\frac{1}{N} \sum_{n \neq 0}^{\prime} \frac{\left\langle\Psi_0\left|\hat{v}_\alpha\right| \Psi_n\right\rangle\left\langle\Psi_n\left|\hat{v}_\beta\right| \Psi_0\right\rangle}{\left(E_0-E_n\right)^2/\hbar^2} $$
+\begin{aligned}
+\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}} =\frac{1}{N} \sum_{n \neq 0}^{\prime} \frac{\left\langle\Psi_0\left|\hat{v}_\alpha\right| \Psi_n\right\rangle\left\langle\Psi_n\left|\hat{v}_\beta\right| \Psi_0\right\rangle}{\left(E_0-E_n\right)^2/\hbar^2}
+\end{aligned}
+$$
 
 $$
-=\frac{1}{N} \sum_{n \neq 0}^{\prime} \frac{\left\langle\Psi_0\left|\hat{v}_\alpha\right| \Psi_n\right\rangle\left\langle\Psi_n\left|\hat{v}_\beta\right| \Psi_0\right\rangle}{\omega_{0 n}^2}$$
+\begin{aligned}
+=\frac{1}{N} \sum_{n \neq 0}^{\prime} \frac{\left\langle\Psi_0\left|\hat{v}_\alpha\right| \Psi_n\right\rangle\left\langle\Psi_n\left|\hat{v}_\beta\right| \Psi_0\right\rangle}{\omega_{0 n}^2}
+\end{aligned}
+$$
 
 $$
+\begin{aligned}
 \omega_{0 n}= \left(E_n-E_0\right) / \hbar
+\end{aligned}
 $$
 
 但我们要牢记，**这里的second cumulant moment完全是基态波函数的局域性质，与激发态无关。**
@@ -271,45 +354,74 @@ $$
 电导率实部$\sigma_{\alpha \beta}(\omega)$可以分成symmetric的部分和anti-symmetric的部分（注意$\omega > 0$且$\omega_{0n} > 0$）：
 
 $$
-\text{Re} \sigma_{\alpha \beta}^{(+)}(\omega)=\frac{\pi e^2}{\hbar L^3} \sum_{n \neq 0}^{\prime} \frac{\mathcal{R}_{n, \alpha \beta}}{\omega_{0 n}} \delta\left(\omega-\omega_{0 n}\right) $$
+\begin{aligned}
+\text{Re} \sigma_{\alpha \beta}^{(+)}(\omega)=\frac{\pi e^2}{\hbar L^3} \sum_{n \neq 0}^{\prime} \frac{\mathcal{R}_{n, \alpha \beta}}{\omega_{0 n}} \delta\left(\omega-\omega_{0 n}\right)
+\end{aligned}
+$$
 
 $$
-\text{Re} \sigma_{\alpha \beta}^{(-)}(\omega)=\frac{2 e^2}{\hbar L^3} \sum_{n \neq 0}^{\prime} \frac{\mathcal{I}_{n, \alpha \beta}}{\omega_{0 n}^2-\omega^2} $$
+\begin{aligned}
+\text{Re} \sigma_{\alpha \beta}^{(-)}(\omega)=\frac{2 e^2}{\hbar L^3} \sum_{n \neq 0}^{\prime} \frac{\mathcal{I}_{n, \alpha \beta}}{\omega_{0 n}^2-\omega^2}
+\end{aligned}
+$$
 
 其中，
 
 $$
-\mathcal{R}_{n, \alpha \beta}=\text{Re}\left\langle\Psi_0\left|\hat{v}_\alpha\right| \Psi_n\right\rangle\left\langle\Psi_n\left|\hat{v}_\beta\right| \Psi_0\right\rangle $$
+\begin{aligned}
+\mathcal{R}_{n, \alpha \beta}=\text{Re}\left\langle\Psi_0\left|\hat{v}_\alpha\right| \Psi_n\right\rangle\left\langle\Psi_n\left|\hat{v}_\beta\right| \Psi_0\right\rangle
+\end{aligned}
+$$
 
 $$
-\mathcal{I}_{n, \alpha \beta}=\text{Im}\left\langle\Psi_0\left|\hat{v}_\alpha\right| \Psi_n\right\rangle\left\langle\Psi_n\left|\hat{v}_\beta\right| \Psi_0\right\rangle $$
+\begin{aligned}
+\mathcal{I}_{n, \alpha \beta}=\text{Im}\left\langle\Psi_0\left|\hat{v}_\alpha\right| \Psi_n\right\rangle\left\langle\Psi_n\left|\hat{v}_\beta\right| \Psi_0\right\rangle
+\end{aligned}
+$$
 
 推导中我们用到了，
 
 $$
+\begin{aligned}
 \lim_{\eta \rightarrow 0+} \frac{1}{x + i\eta} = \mathcal{P}\frac{1}{x} - i \pi \delta(x)
+\end{aligned}
 $$
 
 对比之前得到的描述多体基态波函数局域程度的second cumulant moment$\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}}$的sum of state形式：
 
 $$
-\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}} =\frac{1}{N} \sum_{n \neq 0}^{\prime} \frac{\left\langle\Psi_0\left|\hat{v}_\alpha\right| \Psi_n\right\rangle\left\langle\Psi_n\left|\hat{v}_\beta\right| \Psi_0\right\rangle}{\omega_{0 n}^2}$$
+\begin{aligned}
+\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}} =\frac{1}{N} \sum_{n \neq 0}^{\prime} \frac{\left\langle\Psi_0\left|\hat{v}_\alpha\right| \Psi_n\right\rangle\left\langle\Psi_n\left|\hat{v}_\beta\right| \Psi_0\right\rangle}{\omega_{0 n}^2}
+\end{aligned}
+$$
 
 不难发现，
 
 $$
-\text{Re}\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}}=\frac{1}{N} \sum_{n \neq 0}^{\prime} \frac{\mathcal{R}_{n, \alpha \beta}}{\omega_{0 n}^2} $$
+\begin{aligned}
+\text{Re}\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}}=\frac{1}{N} \sum_{n \neq 0}^{\prime} \frac{\mathcal{R}_{n, \alpha \beta}}{\omega_{0 n}^2}
+\end{aligned}
+$$
 
 $$
-\text{Im}\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}}=\frac{1}{N} \sum_{n \neq 0}^{\prime} \frac{\mathcal{I}_{n, \alpha \beta}}{\omega_{0 n}^2} $$
+\begin{aligned}
+\text{Im}\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}}=\frac{1}{N} \sum_{n \neq 0}^{\prime} \frac{\mathcal{I}_{n, \alpha \beta}}{\omega_{0 n}^2}
+\end{aligned}
+$$
 
 进一步可以证明**SWM公式**（I.Souza, T.Wilkens, R.M.Martin, 2000）：
 
 $$
-\text{Re}\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}} =\frac{\hbar L^3}{\pi e^2 N} \int_0^{\infty} \frac{d \omega}{\omega} \text{Re} \sigma_{\alpha \beta}^{(+)}(\omega) $$
+\begin{aligned}
+\text{Re}\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}} =\frac{\hbar L^3}{\pi e^2 N} \int_0^{\infty} \frac{d \omega}{\omega} \text{Re} \sigma_{\alpha \beta}^{(+)}(\omega)
+\end{aligned}
+$$
 
 $$
-\text{Im}\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}} =\frac{\hbar L^3}{2 e^2 N} \text{Re} \sigma_{\alpha \beta}^{(-)}(0) $$
+\begin{aligned}
+\text{Im}\left\langle r_\alpha r_\beta\right\rangle_{\mathrm{c}} =\frac{\hbar L^3}{2 e^2 N} \text{Re} \sigma_{\alpha \beta}^{(-)}(0)
+\end{aligned}
+$$
 
 ### SWM Formula
 
@@ -322,12 +434,18 @@ $$
 关注**SWM公式**的longitudinal信息的实部（由于指标$\alpha$相同，故$\text{Re} \sigma_{\alpha \alpha} = \text{Re} \sigma_{\alpha \alpha}^{(+)}$）：
 
 $$
-\text{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}} =\frac{\hbar L^3}{\pi e^2 N} \int_0^{\infty} \frac{d \omega}{\omega} \text{Re} \sigma_{\alpha \alpha}(\omega) $$
+\begin{aligned}
+\text{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}} =\frac{\hbar L^3}{\pi e^2 N} \int_0^{\infty} \frac{d \omega}{\omega} \text{Re} \sigma_{\alpha \alpha}(\omega)
+\end{aligned}
+$$
 
 可以用f-sum rule证明$\omega \rightarrow \infty$的积分收敛：
 
 $$
-\int_0^{\infty} d \omega \text{Re} \sigma_{\alpha \alpha}(\omega) = \frac{\pi e^2 N}{2 m_e L^3} $$
+\begin{aligned}
+\int_0^{\infty} d \omega \text{Re} \sigma_{\alpha \alpha}(\omega) = \frac{\pi e^2 N}{2 m_e L^3}
+\end{aligned}
+$$
 
 那么，积分的收敛与否（$\text{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}} $有限与否）就需要看电导率在$\omega \rightarrow 0$的信息。
 
@@ -346,10 +464,15 @@ $$
 从而$\text{Re} \sigma_{\alpha \beta}^{(+)}(\omega) \simeq \sum \delta\left(\omega-\omega_{0 n}\right)$的积分下限可以改为$E_g/\hbar > 0$
 
 $$
-\text{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}} =\frac{\hbar L^3}{\pi e^2 N} \int_{E_{\mathrm{g} /} \hbar}^{\infty} \frac{d \omega}{\omega} \text{Re} \sigma_{\alpha \alpha}(\omega) $$
+\begin{aligned}
+\text{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}} =\frac{\hbar L^3}{\pi e^2 N} \int_{E_{\mathrm{g} /} \hbar}^{\infty} \frac{d \omega}{\omega} \text{Re} \sigma_{\alpha \alpha}(\omega)
+\end{aligned}
+$$
 
 $$
+\begin{aligned}
 <\frac{\hbar L^3}{\pi e^2 N} \int_0^{\infty} \frac{d \omega}{E_{\mathrm{g}}/\hbar} \text{Re} \sigma_{\alpha \alpha}(\omega) =\frac{\hbar^2}{2 m_e E_{\mathrm{g}}}
+\end{aligned}
 $$
 
 这说明$\text{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}}$有上界，是有限的，即我们之前定义的**局域的多体基态**。
@@ -357,13 +480,17 @@ $$
 这样，我们就可以完全用多体基态的局域程度判断系统是绝缘体还是导体：
 
 $$
+\begin{aligned}
 \text{多体基态“局域”化} \Leftrightarrow \text{系统是绝缘体}(E_g>0)
+\end{aligned}
 $$
 
 反之，对于static longitudinal conductivty $\lim_{\omega \rightarrow 0} \text{Re} \sigma_{\alpha \alpha}(\omega) > 0$的导体（metal），我们发现上述积分在$\omega \rightarrow 0$处：
 
 $$
+\begin{aligned}
 \text{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}} \simeq \frac{\hbar L^3 }{\pi e^2 N} \lim_{\omega \rightarrow 0} \text{Re} \sigma_{\alpha \alpha}(\omega)\int_{0}^{\infty} \frac{d \omega}{\omega} 
+\end{aligned}
 $$
 
 显然在$\omega \rightarrow 0$处发散，从而$\text{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}} = \infty$。
@@ -371,7 +498,9 @@ $$
 这样我们便有：
 
 $$
+\begin{aligned}
 \text{多体基态“非局域”化} \Leftrightarrow \text{系统是导体}
+\end{aligned}
 $$
 
 当然，还有一类特殊情况，即无能隙的情况$E_g = 0$，此时多体基态的“局域”化与否仍然取决于static longitudinal conductivty $\lim_{\omega \rightarrow 0} \text{Re} \sigma_{\alpha \alpha}(\omega)$的行为。例如$\lim_{\omega \rightarrow 0} \text{Re} \sigma_{\alpha \alpha}(\omega) \propto \omega^{\alpha \geq 1}$，则多体基态仍是局域化的，是绝缘体；反之$\lim_{\omega \rightarrow 0} \text{Re} \sigma_{\alpha \alpha}(\omega) \propto \omega^{\alpha < 1}$，则多体基态仍是非局域化的，是导体。
@@ -383,11 +512,15 @@ $$
 ## Summary
 
 $$
+\begin{aligned}
 \text{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}} < \infty \Leftrightarrow \text{多体基态“局域”化} \Leftrightarrow \text{系统是绝缘体}
+\end{aligned}
 $$
 
 $$
+\begin{aligned}
 \text{Re}\left\langle r_\alpha r_\alpha\right\rangle_{\mathrm{c}} = \infty \Leftrightarrow \text{多体基态“非局域”化} \Leftrightarrow \text{系统是导体}
+\end{aligned}
 $$
 
 ## Reference

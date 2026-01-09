@@ -1,68 +1,39 @@
 baseURL = 'https://OkongOyangO.github.io/'
+languageCode = 'en-us'
 title = 'O空O扬O の 物理小站'
 theme = 'PaperMod'
-defaultContentLanguage = 'zh' # 默认语言设为中文
+defaultContentLanguage = 'en'
 
-# --- 1. 多语言配置 ---
 [languages]
   [languages.zh]
     languageName = "🇨🇳 中文"
-    weight = 1 # 排序权重，1 排在第一位
+    weight = 1
     title = "O空O扬O の 物理小站"
     [languages.zh.params]
-      description = "记录物理与代码的学习历程"
+      description = "物理笔记"
 
   [languages.en]
     languageName = "🇺🇸 English"
     weight = 2
     title = "OkongOyangO's PhysHub"
     [languages.en.params]
-      description = "Physics and Code notes"
+      description = "Physics notes"
 
-# --- 2. 开启搜索和数学公式 ---
 [params]
   defaultTheme = "auto"
   ShowShareButtons = true
-  ShowCodeCopyButtons = true # 代码块显示复制按钮
-  math = true
-  
-  # 开启搜索按钮
-  ShowSearchKey = true 
+  ShowCodeCopyButtons = true
+  ShowSearchKey = true
+  math = false  # <--- ❌ 关键：关闭它，避免主题逻辑崩溃
 
-# --- 3. 菜单配置 (让导航栏更好看) ---
-[menu]
-  [[languages.zh.menu.main]]
-    name = "文章"
-    url = "/posts"
-    weight = 1
-  [[languages.zh.menu.main]]
-    name = "搜索"
-    url = "/search"
-    weight = 2
-  [[languages.zh.menu.main]]
-    name = "关于"
-    url = "/about"
-    weight = 3
-
-  [[languages.en.menu.main]]
-    name = "Posts"
-    url = "/posts"
-    weight = 1
-  [[languages.en.menu.main]]
-    name = "Search"
-    url = "/search"
-    weight = 2
-  
-# --- 终极数学公式支持配置 (复制到 hugo.toml 最底部) ---
-
+# --- 核心：保护公式不被 Markdown 破坏 ---
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
-      unsafe = true  # 允许 HTML 标签
-    
+      unsafe = true
     [markup.goldmark.extensions]
       [markup.goldmark.extensions.passthrough]
         enable = true
         [markup.goldmark.extensions.passthrough.delimiters]
-          block = [['$$', '$$'], ['\\[', '\\]']]
+          block = [['39593', '39593'], ['\\[', '\\]']]
           inline = [['$', '$'], ['\\(', '\\)']]
