@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src="/OkongOyangO.Notes/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=OkongOyangO.Notes/livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>What did Fermi Golden Rule Miss? - Yiyang&#39;s Physics Notes</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="http://localhost:1313/OkongOyangO.Notes/posts/fermi_golden_rule/">
+  <meta property="og:site_name" content="Yiyang&#39;s Physics Notes">
+  <meta property="og:title" content="What did Fermi Golden Rule Miss?">
+  <meta property="og:description" content="This article aims to calculate the strict quantum transition rate and points out that the Fermi Golden Rule is the result of its “long-time average”. The strict quantum transition rate contains an additional double-frequency oscillation term with non-negligible amplitude compared to the Fermi Golden Rule. The relationship between the two is similar to “instantaneous power” and “average power” in AC circuits.
+Fermi Golden Rule The Fermi Golden Rule aims to calculate the transition rate of a quantum system from an initial state $|i\rangle$ to a final state $|f\rangle$ (both are eigenstates of $H_0$) under a time-harmonic external field perturbation. Since this is well-covered in quantum mechanics courses, we will quickly go through it in the Dirac picture (interaction picture). The Dirac picture is used to better compare with the Kubo Formula.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-01-10T02:59:13+00:00">
+    <meta property="article:modified_time" content="2026-01-10T02:59:13+00:00">
+    <meta property="article:tag" content="Quantum Mechanics">
+    <meta property="article:tag" content="Fermi Golden Rule">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="What did Fermi Golden Rule Miss?">
+  <meta name="twitter:description" content="This article aims to calculate the strict quantum transition rate and points out that the Fermi Golden Rule is the result of its “long-time average”. The strict quantum transition rate contains an additional double-frequency oscillation term with non-negligible amplitude compared to the Fermi Golden Rule. The relationship between the two is similar to “instantaneous power” and “average power” in AC circuits.
+Fermi Golden Rule The Fermi Golden Rule aims to calculate the transition rate of a quantum system from an initial state $|i\rangle$ to a final state $|f\rangle$ (both are eigenstates of $H_0$) under a time-harmonic external field perturbation. Since this is well-covered in quantum mechanics courses, we will quickly go through it in the Dirac picture (interaction picture). The Dirac picture is used to better compare with the Kubo Formula.">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/OkongOyangO.Notes/posts/fermi_golden_rule/" /><link rel="prev" href="http://localhost:1313/OkongOyangO.Notes/posts/fermi_golden_rule.ja/" /><link rel="stylesheet" href="/OkongOyangO.Notes/css/style.min.css"><link rel="preload" href="/OkongOyangO.Notes/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/OkongOyangO.Notes/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/OkongOyangO.Notes/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/OkongOyangO.Notes/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "What did Fermi Golden Rule Miss?",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/OkongOyangO.Notes\/posts\/fermi_golden_rule\/"
+        },"genre": "posts","keywords": "Quantum Mechanics, Fermi Golden Rule","wordcount":  2115 ,
+        "url": "http:\/\/localhost:1313\/OkongOyangO.Notes\/posts\/fermi_golden_rule\/","datePublished": "2026-01-10T02:59:13+00:00","dateModified": "2026-01-10T02:59:13+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "xxxx"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/OkongOyangO.Notes/" title="Yiyang&#39;s Physics Notes">Yiyang&#39;s Notes</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/OkongOyangO.Notes/posts/"><i class='fas fa-archive fa-fw'></i> Posts </a><a class="menu-item" href="/OkongOyangO.Notes/tags/"><i class='fas fa-tags fa-fw'></i> Tags </a><a class="menu-item" href="/OkongOyangO.Notes/categories/"><i class='fas fa-th-list fa-fw'></i> Categories </a><a class="menu-item" href="https://OkongOyangO.github.io" title="Go back to Academic Homepage" rel="noopener noreffer" target="_blank"><i class='fas fa-home fa-fw'></i> Main Homepage </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search notes..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/OkongOyangO.Notes/" title="Yiyang&#39;s Physics Notes">Yiyang&#39;s Notes</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search notes..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/OkongOyangO.Notes/posts/" title=""><i class='fas fa-archive fa-fw'></i>Posts</a><a class="menu-item" href="/OkongOyangO.Notes/tags/" title=""><i class='fas fa-tags fa-fw'></i>Tags</a><a class="menu-item" href="/OkongOyangO.Notes/categories/" title=""><i class='fas fa-th-list fa-fw'></i>Categories</a><a class="menu-item" href="https://OkongOyangO.github.io" title="Go back to Academic Homepage" rel="noopener noreffer" target="_blank"><i class='fas fa-home fa-fw'></i>Main Homepage</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">What did Fermi Golden Rule Miss?</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/OkongOyangO.Notes/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>xxxx</a></span>&nbsp;<span class="post-category">included in <a href="/OkongOyangO.Notes/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-01-10">2026-01-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2115 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;10 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#fermi-golden-rule">Fermi Golden Rule</a>
+      <ul>
+        <li><a href="#common-approach-in-quantum-mechanics">Common Approach in Quantum Mechanics</a></li>
+        <li><a href="#strict-derivation">Strict Derivation</a></li>
+        <li><a href="#double-frequency-term">Double Frequency Term</a></li>
+      </ul>
+    </li>
+    <li><a href="#summary">Summary</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>This article aims to calculate the strict quantum transition rate and points out that the Fermi Golden Rule is the result of its &ldquo;long-time average&rdquo;. The strict quantum transition rate contains an additional double-frequency oscillation term with non-negligible amplitude compared to the Fermi Golden Rule. The relationship between the two is similar to &ldquo;instantaneous power&rdquo; and &ldquo;average power&rdquo; in AC circuits.</p>
+<h2 id="fermi-golden-rule">Fermi Golden Rule</h2>
+<p>The Fermi Golden Rule aims to calculate the transition rate of a quantum system from an initial state $|i\rangle$ to a final state $|f\rangle$ (both are eigenstates of $H_0$) under a time-harmonic external field perturbation. Since this is well-covered in quantum mechanics courses, we will quickly go through it in the Dirac picture (interaction picture). The Dirac picture is used to better compare with the Kubo Formula.</p>
+<p>Equation of motion for states in the Dirac picture:</p>
+<p>$$
+\begin{aligned}
+i \hbar \partial_t |\psi(t) \rangle_D = \hat{V}_D(t) |\psi(t) \rangle_D
+\end{aligned}
+$$</p>
+<p>Operators in the Dirac picture:</p>
+<p>$$
+\begin{aligned}
+\hat{\mathcal{O}}_D(t) = e^{i\hat{H_0}t/\hbar} \hat{\mathcal{O}}_S(t) e^{-i\hat{H_0}t/\hbar}
+\end{aligned}
+$$</p>
+<p>The subscripts $D$ and $S$ represent the Dirac picture and Schrödinger picture, respectively.</p>
+<p>Integrating the equation of motion and iterating gives the evolution operator $\mathcal{U}(t,t&rsquo;)$ in the Dirac picture:</p>
+<p>$$
+\begin{aligned}
+\mathcal{U}(t,t&rsquo;) &amp; = \mathcal{T} e^{-i \int_{t&rsquo;}^{t}dt&rsquo;&rsquo; \hat{V}<em>D(t&rsquo;&rsquo;)/\hbar }  \
+&amp; = 1 + (-i/\hbar) \int</em>{t&rsquo;}^{t}dt_1 \hat{V}<em>D(t_1) + \frac{1}{2!} (-i/\hbar)^2 \int</em>{t&rsquo;}^{t}dt_1 \int_{t&rsquo;}^{t}dt_2 \mathcal{T} \hat{V}<em>D(t_1) \hat{V}<em>D(t_2) + \dots \
+&amp; = 1 + (-i/\hbar) \int</em>{t&rsquo;}^{t}dt_1 \hat{V}<em>D(t_1) +  (-i/\hbar)^2 \int</em>{t&rsquo;}^{t}dt_1 \int</em>{t&rsquo;}^{\mathbf{t_1}}dt_2  \hat{V}_D(t_1) \hat{V}_D(t_2) + \dots
+\end{aligned}
+$$</p>
+<p>where $\mathcal{T}$ is the time ordering operator, placing operators with smaller times on the right to act on the state vector first. The expression without time ordering is also given above, which can be obtained by integrating the equation of motion and iterating.</p>
+<p>Assume the system is in the initial state $|i\rangle$ at $t = t_0$. Taking the approximation to order $\mathcal{O}(V)$:</p>
+<p>$$
+\begin{aligned}
+| \psi (t) \rangle_D &amp; = \mathcal{U}(t,t_0) | \psi (t_0) \rangle_D \
+&amp; = |i\rangle + (-i/\hbar) \int_{t_0}^{t}dt_1 \hat{V}_D(t_1)|i\rangle
+\end{aligned}
+$$</p>
+<p>The probability amplitude of the state $|f\rangle$ at time $t$ is:</p>
+<p>$$
+\begin{aligned}
+\langle f | \psi (t) \rangle_D = 0 + (-i/\hbar) \int_{t_0}^{t}dt_1 \langle f |\hat{V}_D(t_1)|i\rangle
+\end{aligned}
+$$</p>
+<p>For a time-harmonic perturbation with frequency $\omega &gt; 0$:</p>
+<p>$$
+\begin{aligned}
+\hat{V}_S (t) = \hat{H&rsquo;} e^{-i\omega t} + \hat{H&rsquo;}^\dagger e^{i\omega t}
+\end{aligned}
+$$</p>
+<p>Then:</p>
+<p>$$
+\begin{aligned}
+\langle f | \psi (t) \rangle_D  = (-i/\hbar) &amp; \int_{t_0}^{t}dt_1 \langle f | e^{i\hat{H_0}t_1/\hbar} \hat{V}<em>S(t_1) e^{-i\hat{H_0}t_1/\hbar}|i\rangle \
+= (-i/\hbar) &amp; \int</em>{t_0}^{t}dt_1 e^{i \omega_{fi} t_1}[ \langle f | \hat{H&rsquo;}^\dagger |i\rangle e^{i \omega t_1} + \langle f | \hat{H&rsquo;} | i \rangle e^{-i \omega t_1} ] \
+= (-i/\hbar)&amp; [ \underbrace{\frac{e^{i (\omega_{fi} + \omega)t} - e^{i (\omega_{fi} + \omega)t_0} }{i(\omega_{fi} + \omega)} \langle f | \hat{H&rsquo;}^\dagger |i\rangle}<em>{(1)} \
+&amp; + \underbrace{\frac{e^{i (\omega</em>{fi} - \omega)t} - e^{i (\omega_{fi} - \omega)t_0} }{i(\omega_{fi} - \omega)} \langle f | \hat{H&rsquo;} |i\rangle}_{(2)} ]
+\end{aligned}
+$$</p>
+<p>where $\omega_{fi} = (E_f - E_i)/\hbar$ corresponds to the transition energy from the initial state $|i\rangle$ to the final state $|f\rangle$.</p>
+<h3 id="common-approach-in-quantum-mechanics">Common Approach in Quantum Mechanics</h3>
+<p>The common approach in quantum mechanics courses is to consider that when $\omega \rightarrow \pm \omega_{fi}$, (1) will be much smaller or much larger than (2), thus only considering the contribution of one term.</p>
+<p>Taking $\omega \rightarrow + \omega_{fi}$ as an example, calculate the probability of the system being in state $|f\rangle$ at time $t$:</p>
+<p>$$
+\begin{aligned}
+|\langle f | \psi (t) \rangle_D|^2 &amp; \approx |(-i/\hbar) \frac{e^{i (\omega_{fi} - \omega)t} - e^{i (\omega_{fi} - \omega)t_0} }{i(\omega_{fi} - \omega)} \langle f | \hat{H&rsquo;} |i\rangle |^2 \
+&amp; = \frac{1}{\hbar^2} | (-i e^{i(\omega_{fi} - \omega)(t - t_0)/2}) \frac{2 \sin[(\omega_{fi} - \omega)(t - t_0)/2]}{\omega_{fi} - \omega} \langle f | \hat{H&rsquo;} |i\rangle|^2 \
+&amp; = \frac{4}{\hbar^2} \frac{\sin^2[(\omega_{fi} - \omega)(t - t_0)/2]}{(\omega_{fi} - \omega)^2} |\langle f | \hat{H&rsquo;} |i\rangle|^2 \
+&amp; \xrightarrow{t - t_0 \rightarrow + \infty} \frac{2 \pi}{\hbar^2} |\langle f | \hat{H&rsquo;} |i\rangle|^2 \delta (\omega - \omega_{fi}) \times (t - t_0)
+\end{aligned}
+$$</p>
+<p>Here, a less common limit is used:</p>
+<p>$$
+\begin{aligned}
+\lim_{t \rightarrow + \infty} \frac{\sin^2(\omega t)}{\omega^2} = \pi t \delta(\omega)
+\end{aligned}
+$$</p>
+<p>Thus, the transition rate is (considering both $\omega \rightarrow \pm \omega_{fi}$):</p>
+<p>$$
+\begin{aligned}
+\mathcal{I}<em>{i\rightarrow f} = \frac{d}{dt} |\langle f | \psi (t) \rangle_D|^2 = \frac{2 \pi}{\hbar^2} [|\langle f | \hat{H&rsquo;} |i\rangle|^2 \delta (\omega - \omega</em>{fi}) + \langle i | \hat{H&rsquo;} | f \rangle|^2 \delta (\omega + \omega_{fi}) ]
+\end{aligned}
+$$</p>
+<h3 id="strict-derivation">Strict Derivation</h3>
+<p>The result given by the above method is correct, but the method of taking limits seems not rigorous enough, especially that extremely unfriendly limit $\lim_{t \rightarrow + \infty} \frac{\sin^2(\omega t)}{\omega^2} = \pi t \delta(\omega)$.</p>
+<p>In fact, we can obtain $\mathcal{I}_{i\rightarrow f}$ through a more rigorous derivation.</p>
+<p>Furthermore, we will find that the previous derivation only considered the zero-frequency term in $\mathcal{I}_{i\rightarrow f}$, while the stricter result also contains a double-frequency term.</p>
+<p>However, the double-frequency oscillation term is zero under long-time average, so a stricter definition of the transition rate should be the &ldquo;long-time average transition rate&rdquo;:</p>
+<p>$$
+\begin{aligned}
+\mathcal{I}<em>{i\rightarrow f} \equiv \lim</em>{T \rightarrow +\infty} \frac{1}{2T} \int_{-T}^T \left.\left(\frac{d}{dt} |\langle f | \psi  \rangle_D|^2\right)\right|_{t = \tau} d\tau \equiv \left\langle \frac{d}{dt} |\langle f | \psi  \rangle_D|^2 \right\rangle_t
+\end{aligned}
+$$</p>
+<p>For a more rigorous derivation, we start from before the &ldquo;$\approx$&rdquo; sign and try to use strict equal signs and familiar limit formulas:</p>
+<p>$$
+\begin{aligned}
+|\langle f | \psi (t) \rangle_D|^2 &amp; = \left|-\frac{i}{\hbar} \int_{t_0}^{t}dt_1 \langle f |\hat{V}<em>D(t_1)|i\rangle\right|^2 \
+&amp; = \left(-\frac{i}{\hbar} \int</em>{t_0}^{t}dt_1 \langle f |\hat{V}<em>D(t_1)|i\rangle\right) \times \left(\frac{i}{\hbar} \int</em>{t_0}^{t}dt_1 \langle i |\hat{V}_D(t_1)|f\rangle\right)
+\end{aligned}
+$$</p>
+<p>Thus the transition rate:</p>
+<p>$$
+\begin{aligned}
+\frac{d}{dt} |\langle f | \psi (t) \rangle_D|^2 &amp; = \frac{d}{dt} \left(-\frac{i}{\hbar} \int_{t_0}^{t}dt_1 \langle f |\hat{V}<em>D(t_1)|i\rangle\right) \times \left(\frac{i}{\hbar} \int</em>{t_0}^{t}dt_1 \langle i |\hat{V}<em>D(t_1)|f\rangle\right) \
+&amp; + \left(-\frac{i}{\hbar} \int</em>{t_0}^{t}dt_1 \langle f |\hat{V}<em>D(t_1)|i\rangle\right) \times \frac{d}{dt} \left(\frac{i}{\hbar} \int</em>{t_0}^{t}dt_1 \langle i |\hat{V}_D(t_1)|f\rangle\right) \
+&amp; =  \left(-\frac{i}{\hbar}  \langle f |\hat{V}<em>D(t)|i\rangle\right) \times \left(\frac{i}{\hbar} \int</em>{t_0}^{t}dt_1 \langle i |\hat{V}<em>D(t_1)|f\rangle\right) \
+&amp; + \left(-\frac{i}{\hbar} \int</em>{t_0}^{t}dt_1 \langle f |\hat{V}_D(t_1)|i\rangle\right) \times \left(\frac{i}{\hbar}  \langle i |\hat{V}<em>D(t)|f\rangle\right) \
+&amp; = \frac{1}{\hbar^2} \int</em>{t_0}^{t}dt_1 \left( \langle f |\hat{V}_D(t)|i\rangle\langle i |\hat{V}_D(t_1)|f\rangle + \langle f |\hat{V}_D(t_1)|i\rangle\langle i |\hat{V}_D(t)|f\rangle \right)
+\end{aligned}
+$$</p>
+<p>For a time-harmonic perturbation with frequency $\omega &gt; 0$:</p>
+<p>$$
+\begin{aligned}
+\hat{V}_S (t) = \hat{H&rsquo;} e^{-i\omega t} + \hat{H&rsquo;}^\dagger e^{i\omega t}
+\end{aligned}
+$$</p>
+<p>We have:</p>
+<p>$$
+\begin{aligned}
+\langle i |\hat{V}<em>D(t)|f\rangle = e^{-i\omega</em>{fi}t}(\langle i |\hat{H&rsquo;}^\dagger|f\rangle e^{i\omega t} + (\langle i |\hat{H&rsquo;}|f\rangle e^{-i\omega t})
+\end{aligned}
+$$</p>
+<p>For convenience, let&rsquo;s denote the matrix elements of $\hat{H&rsquo;}$ as:</p>
+<p>$$
+\begin{aligned}
+\langle f | \hat{H&rsquo;}| i \rangle \equiv H_{fi}
+\end{aligned}
+$$</p>
+<p>$$
+\begin{aligned}
+\langle i | \hat{H&rsquo;}^\dagger | f \rangle \equiv H_{fi}^*
+\end{aligned}
+$$</p>
+<p>Note specifically that here only $\hat{V}$ is a Hermitian operator, $\hat{H&rsquo;}$ is not necessarily Hermitian, so generally:</p>
+<p>$$
+\begin{aligned}
+H_{if} = (H^\dagger)<em>{fi}^* \neq H</em>{fi}^*
+\end{aligned}
+$$</p>
+<p>Thus:</p>
+<p>$$
+\begin{aligned}
+\frac{d}{dt} |\langle f | \psi (t) \rangle_D|^2 &amp; = \frac{1}{\hbar^2} \int_{t_0}^t dt&rsquo;   e^{i\omega_{fi} (t-t&rsquo;)} (H_{if}^<em>e^{i\omega t} + H_{fi} e^{-i\omega t})(H_{fi}^<em>e^{i\omega t&rsquo;} + H_{if} e^{-i\omega t&rsquo;}) \
+&amp; +\frac{1}{\hbar^2} \int_{t_0}^t dt&rsquo;e^{-i\omega_{fi} (t-t&rsquo;)} (H_{fi}^<em>e^{i\omega t} + H_{if} e^{-i\omega t})(H_{if}^<em>e^{i\omega t&rsquo;} + H_{fi} e^{-i\omega t&rsquo;}) \
+&amp; = \frac{1}{\hbar^2} \int_{t_0}^t dt&rsquo;   e^{i\omega_{fi} (t-t&rsquo;)} \left[ \underbrace{|H_{fi}|^2 e^{-i \omega (t - t&rsquo;)} }<em>{(1.1)} + \underbrace{|H</em>{if}|^2 e^{i \omega (t - t&rsquo;)} }<em>{(1.2)}  + \underbrace{H</em>{fi}^</em> H_{if}^</em> e^{i \omega (t + t&rsquo;)}}<em>{(1.3)} + \underbrace{H</em>{if} H_{fi} e^{-i \omega (t + t&rsquo;)}}<em>{(1.4)} \right] \
+&amp; +\frac{1}{\hbar^2} \int</em>{t_0}^t dt&rsquo;e^{-i\omega_{fi} (t-t&rsquo;)} \left[ \underbrace{|H_{fi}|^2 e^{i \omega (t - t&rsquo;)} }<em>{(2.1)} + \underbrace{|H</em>{if}|^2 e^{-i \omega (t - t&rsquo;)} }<em>{(2.2)}  + \underbrace{H</em>{fi}^</em> H_{if}^</em> e^{i \omega (t + t&rsquo;)}}<em>{(2.3)} + \underbrace{H</em>{if} H_{fi} e^{-i \omega (t + t&rsquo;)}}_{(2.4)} \right]
+\end{aligned}
+$$</p>
+<p>To discuss the approximation under long-time evolution, let&rsquo;s take $t_0 \rightarrow - \infty$.</p>
+<p>Focusing on terms (1.1)+(2.1), after transforming the integration variable:</p>
+<p>$$
+\begin{aligned}
+(1.1) + (2.1) &amp; = \frac{|H_{fi}|^2}{\hbar^2} \int_{- \infty}^t dt&rsquo; \left[ e^{i (\omega - \omega_{fi}) (t - t&rsquo;)} + e^{-i (\omega - \omega_{fi}) (t - t&rsquo;)}  \right] \
+&amp; = \frac{|H_{fi}|^2}{\hbar^2} \int_{0}^{+ \infty} d(t - t&rsquo;) \left[ e^{i (\omega - \omega_{fi}) (t - t&rsquo;)} + e^{-i (\omega - \omega_{fi}) (t - t&rsquo;)}  \right] \
+&amp; = \frac{|H_{fi}|^2}{\hbar^2} \int_{-\infty}^{+ \infty} d\tau e^{i (\omega - \omega_{fi}) \tau} \
+&amp; = \frac{2 \pi}{\hbar^2} |H_{fi}|^2 \delta({\omega - \omega_{fi}})
+\end{aligned}
+$$</p>
+<p>Here we obtained one term of the Fermi Golden Rule. It is not difficult to find that the other term comes from (1.2)+(2.2), thus:</p>
+<p>$$
+\begin{aligned}
+(1.1) + (2.1) + (1.2) + (2.2) = \frac{2 \pi}{\hbar^2} \left[ |H_{fi}|^2 \delta({\omega - \omega_{fi}}) + |H_{if}|^2 \delta({\omega + \omega_{fi}}) \right]
+\end{aligned}
+$$</p>
+<p>However, the specific meanings of (1.3)+(2.3) and (1.4)+(2.4) have not been discussed yet, which is also an item generally ignored in quantum mechanics courses.</p>
+<p>Further discussion reveals that it is a double-frequency oscillation term, and as $t \rightarrow \infty$, the oscillation frequency is comparable to $\delta({\omega - \omega_{fi}})$ in the Fermi Golden Rule, so it cannot be ignored in a strict discussion.</p>
+<p>In other words, the Fermi Golden Rule eliminates the contribution of this oscillation term by taking the &ldquo;long-time average approximation&rdquo;. This is like calculating the average power in an AC circuit system.</p>
+<h3 id="double-frequency-term">Double Frequency Term</h3>
+<p>Now let&rsquo;s calculate terms (1.3)+(2.3) and (1.4)+(2.4).</p>
+<p>Taking (1.3)+(2.3) as an example:</p>
+<p>$$
+\begin{aligned}
+(1.3) + (2.3) &amp; = \frac{1}{\hbar^2} H_{fi}^* H_{if}^* \int_{- \infty}^t dt&rsquo; e^{i \omega (t + t&rsquo;)}   \left[e^{i\omega_{fi} (t-t&rsquo;)} + e^{-i\omega_{fi} (t-t&rsquo;)} \right] \
+&amp; = \frac{1}{\hbar^2} H_{fi}^* H_{if}^*  \left[ e^{i (\omega + \omega_{fi})t} \int_{- \infty}^t dt&rsquo;  e^{i(\omega - \omega_{fi}) t&rsquo;} + e^{i (\omega - \omega_{fi})t} \int_{- \infty}^t dt&rsquo;  e^{i(\omega + \omega_{fi}) t&rsquo;}  \right] \
+&amp; \xrightarrow[t_0 \rightarrow - \infty]{t \rightarrow + \infty} \frac{1}{\hbar^2} H_{fi}^* H_{if}^*  \left[ e^{i (\omega + \omega_{fi})t} \int_{- \infty}^{+ \infty} dt&rsquo;  e^{i(\omega - \omega_{fi}) t&rsquo;} + e^{i (\omega - \omega_{fi})t} \int_{- \infty}^{+ \infty} dt&rsquo;  e^{i(\omega + \omega_{fi}) t&rsquo;}  \right] \
+&amp; = \frac{2\pi}{\hbar^2} H_{fi}^* H_{if}^*  \left[ e^{i (\omega + \omega_{fi})t} \delta( \omega - \omega_{fi}) + e^{i (\omega - \omega_{fi})t} \delta( \omega + \omega_{fi})  \right] \
+&amp; = \frac{2\pi}{\hbar^2} H_{fi}^* H_{if}^*  \left[ e^{2i\omega_{fi} t} \delta( \omega - \omega_{fi}) + e^{-2i \omega_{fi} t} \delta( \omega + \omega_{fi})  \right]
+\end{aligned}
+$$</p>
+<p>Similarly,</p>
+<p>$$
+\begin{aligned}
+(1.4) + (2.4) \xrightarrow[t_0 \rightarrow - \infty]{t \rightarrow + \infty} \frac{2\pi}{\hbar^2}  H_{if} H_{fi} \left[ e^{2i\omega_{fi} t} \delta( \omega + \omega_{fi}) + e^{-2i \omega_{fi} t} \delta( \omega - \omega_{fi})  \right]
+\end{aligned}
+$$</p>
+<p>It can be seen that the strict transition rate $\frac{d}{dt} |\langle f | \psi (t) \rangle_D|^2$ contains not only the constant term but also the double-frequency term, and both have comparable amplitudes and contain $\delta( \omega \pm \omega_{fi})$.</p>
+<p>Only the transition rate defined under the &ldquo;long-time average approximation&rdquo; $\left\langle\frac{d}{dt} |\langle f | \psi (t) \rangle_D|^2 \right\rangle_\tau$, i.e., retaining only the constant term, corresponds to the Fermi Golden Rule.</p>
+<p>It should also be noted that whether or not the &ldquo;long-time average approximation&rdquo; is taken, the transition rate must be discussed under the condition that the evolution time is long enough, otherwise the $\delta( \omega \pm \omega_{fi})$ in the absorption spectrum will have broadening of the order $(t - t_0)^{-1}$.</p>
+<p>However, general systems are not completely dissipation-free, and there is dissipation broadening $\sim \tau^{-1}$ corresponding to the dissipation characteristic time $\tau$. As long as $t - t_0 \gg \tau, \omega_{fi}^{-1}$, it will not have much impact on the absorption spectrum. The discussion on dissipation broadening $\sim \tau^{-1}$ is omitted here.</p>
+<h2 id="summary">Summary</h2>
+<p>Under a time-harmonic perturbation with frequency $\omega &gt; 0$ for a long time ($t_0 \rightarrow - \infty,, t \rightarrow + \infty$):</p>
+<p>$$
+\begin{aligned}
+\hat{V}_S (t) = \hat{H&rsquo;} e^{-i\omega t} + \hat{H&rsquo;}^\dagger e^{i\omega t}
+\end{aligned}
+$$</p>
+<p>$$
+\begin{aligned}
+\langle f | \hat{H&rsquo;}| i \rangle \equiv H_{fi}
+\end{aligned}
+$$</p>
+<p>$$
+\begin{aligned}
+\langle i | \hat{H&rsquo;}^\dagger | f \rangle \equiv H_{fi}^*
+\end{aligned}
+$$</p>
+<p>The strict transition rate expression from the initial state $| i \rangle$ to the final state $| f \rangle$ is:</p>
+<p>$$
+\begin{aligned}
+\frac{d}{dt} |\langle f | \psi (t) \rangle_D|^2 &amp; \xrightarrow[t_0 \rightarrow - \infty]{t \rightarrow + \infty} \frac{2 \pi}{\hbar^2} \left[ |H_{fi}|^2 \delta({\omega - \omega_{fi}}) + |H_{if}|^2 \delta({\omega + \omega_{fi}}) \right] \
+&amp; + \frac{2\pi}{\hbar^2} H_{fi}^* H_{if}^*  \left[ e^{2i\omega_{fi} t} \delta( \omega - \omega_{fi}) + e^{-2i \omega_{fi} t} \delta( \omega + \omega_{fi})  \right] \
+&amp; + \frac{2\pi}{\hbar^2}  H_{if} H_{fi} \left[ e^{2i\omega_{fi} t} \delta( \omega + \omega_{fi}) + e^{-2i \omega_{fi} t} \delta( \omega - \omega_{fi})  \right] \
+&amp; = \frac{2\pi}{\hbar^2} \left{ \left[ |H_{fi}|^2 + 2\operatorname{Re}(H_{if} H_{fi} e^{2i\omega_{fi} t}) \right]  \delta( \omega + \omega_{fi}) + \left[ |H_{if}|^2 + 2\operatorname{Re}(H_{if} H_{fi} e^{-2i\omega_{fi} t}) \right] \delta( \omega - \omega_{fi})  \right}
+\end{aligned}
+$$</p>
+<p>where the constant term is the result of the Fermi Golden Rule, and there is also a double-frequency term, with comparable amplitude.</p>
+<p>Under the &ldquo;long-time average approximation&rdquo; (observation time is much larger than the system eigen-time $\omega_{fi}^{-1}$), the double-frequency term can be omitted, and the long-time average transition rate is consistent with the Fermi Golden Rule result, which is similar to calculating the average power of an AC system.</p>
+<p>$$
+\begin{aligned}
+\mathcal{I}<em>{i\rightarrow f} &amp; \equiv \lim</em>{T \rightarrow +\infty} \frac{1}{2T} \int_{-T}^T \left.\left(\frac{d}{dt} |\langle f | \psi  \rangle_D|^2\right)\right|<em>{t = \tau} d\tau \
+&amp; = \frac{2 \pi}{\hbar^2} \left[ |H</em>{fi}|^2 \delta({\omega - \omega_{fi}}) + |H_{if}|^2 \delta({\omega + \omega_{fi}}) \right]
+\end{aligned}
+$$</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2026-01-10</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="http://localhost:1313/OkongOyangO.Notes/posts/fermi_golden_rule/" data-title="What did Fermi Golden Rule Miss?" data-hashtags="Quantum Mechanics,Fermi Golden Rule"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="http://localhost:1313/OkongOyangO.Notes/posts/fermi_golden_rule/" data-title="What did Fermi Golden Rule Miss?"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/OkongOyangO.Notes/posts/fermi_golden_rule/" data-hashtag="Quantum Mechanics"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/OkongOyangO.Notes/posts/fermi_golden_rule/" data-title="What did Fermi Golden Rule Miss?"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://localhost:1313/OkongOyangO.Notes/posts/fermi_golden_rule/" data-title="What did Fermi Golden Rule Miss?"><i data-svg-src="/OkongOyangO.Notes/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/OkongOyangO.Notes/posts/fermi_golden_rule/" data-title="What did Fermi Golden Rule Miss?"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="http://localhost:1313/OkongOyangO.Notes/posts/fermi_golden_rule/" data-title="What did Fermi Golden Rule Miss?" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2flocalhost%3a1313%2fOkongOyangO.Notes%2fposts%2ffermi_golden_rule%2f&amp;text=What%20did%20Fermi%20Golden%20Rule%20Miss%3f" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/OkongOyangO.Notes/tags/quantum-mechanics/">Quantum Mechanics</a>,&nbsp;<a href="/OkongOyangO.Notes/tags/fermi-golden-rule/">Fermi Golden Rule</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/OkongOyangO.Notes/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/OkongOyangO.Notes/posts/fermi_golden_rule.ja/" class="prev" rel="prev" title="フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.154.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/OkongOyangO.Notes/" target="_blank">xxxx</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="/OkongOyangO.Notes/lib/autocomplete/autocomplete.min.js"></script><script src="/OkongOyangO.Notes/lib/lunr/lunr.min.js"></script><script src="/OkongOyangO.Notes/lib/lazysizes/lazysizes.min.js"></script><script src="/OkongOyangO.Notes/lib/clipboard/clipboard.min.js"></script><script src="/OkongOyangO.Notes/lib/sharer/sharer.min.js"></script><script>window.config={"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/OkongOyangO.Notes/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/OkongOyangO.Notes/js/theme.min.js"></script></body>
+</html>

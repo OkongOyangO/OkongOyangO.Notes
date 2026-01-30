@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src="/OkongOyangO.Notes/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=OkongOyangO.Notes/livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？ - Yiyang&#39;s Physics Notes</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="http://localhost:1313/OkongOyangO.Notes/posts/fermi_golden_rule.ja/">
+  <meta property="og:site_name" content="Yiyang&#39;s Physics Notes">
+  <meta property="og:title" content="フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？">
+  <meta property="og:description" content="本文は厳密な量子遷移率を計算し、フェルミの黄金律がその「長時間平均」の結果であることを指摘することを目的としています。厳密な量子遷移率は、フェルミの黄金律と比較して、無視できない振幅を持つ二倍周波数振動項（double-frequency oscillation term）をさらに含んでいます。両者の関係は、交流回路における「瞬時電力」と「平均電力」の関係に似ています。
+Fermi Golden Rule フェルミの黄金律は、時間調和外場摂動下で、量子系が初期状態$|i\rangle$から終状態$|f\rangle$（いずれも$H_0$の固有状態）へ遷移する遷移率を計算することを目的としています。量子力学の講義ですでに十分に説明されているため、ここではディラック描像（相互作用描像）の下ですばやく確認します。ディラック描像を使用するのは、久保公式（Kubo Formula）との比較を容易にするためです。
+ディラック描像における状態の運動方程式：
+$$ \begin{aligned} i \hbar \partial_t |\psi(t) \rangle_D = \hat{V}_D(t) |\psi(t) \rangle_D \end{aligned} $$
+ディラック描像における演算子：
+$$ \begin{aligned} \hat{\mathcal{O}}_D(t) = e^{i\hat{H_0}t/\hbar} \hat{\mathcal{O}}_S(t) e^{-i\hat{H_0}t/\hbar} \end{aligned} $$
+添字$D,,S$はそれぞれディラック描像とシュレーディンガー描像を表します。
+運動方程式を積分して反復することで、ディラック描像における状態の時間発展演算子$\mathcal{U}(t,t’)$が得られます：
+$$ \begin{aligned} \mathcal{U}(t,t’) &amp; = \mathcal{T} e^{-i \int_{t’}^{t}dt’’ \hat{V}D(t’’)/\hbar } \ &amp; = 1 &#43; (-i/\hbar) \int{t’}^{t}dt_1 \hat{V}D(t_1) &#43; \frac{1}{2!} (-i/\hbar)^2 \int{t’}^{t}dt_1 \int_{t’}^{t}dt_2 \mathcal{T} \hat{V}D(t_1) \hat{V}D(t_2) &#43; \dots \ &amp; = 1 &#43; (-i/\hbar) \int{t’}^{t}dt_1 \hat{V}D(t_1) &#43; (-i/\hbar)^2 \int{t’}^{t}dt_1 \int{t’}^{\mathbf{t_1}}dt_2 \hat{V}_D(t_1) \hat{V}_D(t_2) &#43; \dots \end{aligned} $$">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-01-10T02:59:13+00:00">
+    <meta property="article:modified_time" content="2026-01-10T02:59:13+00:00">
+    <meta property="article:tag" content="Quantum Mechanics">
+    <meta property="article:tag" content="Fermi Golden Rule">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？">
+  <meta name="twitter:description" content="本文は厳密な量子遷移率を計算し、フェルミの黄金律がその「長時間平均」の結果であることを指摘することを目的としています。厳密な量子遷移率は、フェルミの黄金律と比較して、無視できない振幅を持つ二倍周波数振動項（double-frequency oscillation term）をさらに含んでいます。両者の関係は、交流回路における「瞬時電力」と「平均電力」の関係に似ています。
+Fermi Golden Rule フェルミの黄金律は、時間調和外場摂動下で、量子系が初期状態$|i\rangle$から終状態$|f\rangle$（いずれも$H_0$の固有状態）へ遷移する遷移率を計算することを目的としています。量子力学の講義ですでに十分に説明されているため、ここではディラック描像（相互作用描像）の下ですばやく確認します。ディラック描像を使用するのは、久保公式（Kubo Formula）との比較を容易にするためです。
+ディラック描像における状態の運動方程式：
+$$ \begin{aligned} i \hbar \partial_t |\psi(t) \rangle_D = \hat{V}_D(t) |\psi(t) \rangle_D \end{aligned} $$
+ディラック描像における演算子：
+$$ \begin{aligned} \hat{\mathcal{O}}_D(t) = e^{i\hat{H_0}t/\hbar} \hat{\mathcal{O}}_S(t) e^{-i\hat{H_0}t/\hbar} \end{aligned} $$
+添字$D,,S$はそれぞれディラック描像とシュレーディンガー描像を表します。
+運動方程式を積分して反復することで、ディラック描像における状態の時間発展演算子$\mathcal{U}(t,t’)$が得られます：
+$$ \begin{aligned} \mathcal{U}(t,t’) &amp; = \mathcal{T} e^{-i \int_{t’}^{t}dt’’ \hat{V}D(t’’)/\hbar } \ &amp; = 1 &#43; (-i/\hbar) \int{t’}^{t}dt_1 \hat{V}D(t_1) &#43; \frac{1}{2!} (-i/\hbar)^2 \int{t’}^{t}dt_1 \int_{t’}^{t}dt_2 \mathcal{T} \hat{V}D(t_1) \hat{V}D(t_2) &#43; \dots \ &amp; = 1 &#43; (-i/\hbar) \int{t’}^{t}dt_1 \hat{V}D(t_1) &#43; (-i/\hbar)^2 \int{t’}^{t}dt_1 \int{t’}^{\mathbf{t_1}}dt_2 \hat{V}_D(t_1) \hat{V}_D(t_2) &#43; \dots \end{aligned} $$">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/OkongOyangO.Notes/posts/fermi_golden_rule.ja/" /><link rel="prev" href="http://localhost:1313/OkongOyangO.Notes/posts/fermi_golden_rule.zh/" /><link rel="next" href="http://localhost:1313/OkongOyangO.Notes/posts/fermi_golden_rule/" /><link rel="stylesheet" href="/OkongOyangO.Notes/css/style.min.css"><link rel="preload" href="/OkongOyangO.Notes/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/OkongOyangO.Notes/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/OkongOyangO.Notes/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/OkongOyangO.Notes/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/OkongOyangO.Notes\/posts\/fermi_golden_rule.ja\/"
+        },"genre": "posts","keywords": "Quantum Mechanics, Fermi Golden Rule","wordcount":  1301 ,
+        "url": "http:\/\/localhost:1313\/OkongOyangO.Notes\/posts\/fermi_golden_rule.ja\/","datePublished": "2026-01-10T02:59:13+00:00","dateModified": "2026-01-10T02:59:13+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "xxxx"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/OkongOyangO.Notes/" title="Yiyang&#39;s Physics Notes">Yiyang&#39;s Notes</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/OkongOyangO.Notes/posts/"><i class='fas fa-archive fa-fw'></i> Posts </a><a class="menu-item" href="/OkongOyangO.Notes/tags/"><i class='fas fa-tags fa-fw'></i> Tags </a><a class="menu-item" href="/OkongOyangO.Notes/categories/"><i class='fas fa-th-list fa-fw'></i> Categories </a><a class="menu-item" href="https://OkongOyangO.github.io" title="Go back to Academic Homepage" rel="noopener noreffer" target="_blank"><i class='fas fa-home fa-fw'></i> Main Homepage </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search notes..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/OkongOyangO.Notes/" title="Yiyang&#39;s Physics Notes">Yiyang&#39;s Notes</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search notes..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/OkongOyangO.Notes/posts/" title=""><i class='fas fa-archive fa-fw'></i>Posts</a><a class="menu-item" href="/OkongOyangO.Notes/tags/" title=""><i class='fas fa-tags fa-fw'></i>Tags</a><a class="menu-item" href="/OkongOyangO.Notes/categories/" title=""><i class='fas fa-th-list fa-fw'></i>Categories</a><a class="menu-item" href="https://OkongOyangO.github.io" title="Go back to Academic Homepage" rel="noopener noreffer" target="_blank"><i class='fas fa-home fa-fw'></i>Main Homepage</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/OkongOyangO.Notes/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>xxxx</a></span>&nbsp;<span class="post-category">included in <a href="/OkongOyangO.Notes/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-01-10">2026-01-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1301 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;7 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#fermi-golden-rule">Fermi Golden Rule</a>
+      <ul>
+        <li><a href="#common-approach-in-quantum-mechanics">Common Approach in Quantum Mechanics</a></li>
+        <li><a href="#strict-derivation">Strict Derivation</a></li>
+        <li><a href="#double-frequency-term">Double Frequency Term</a></li>
+      </ul>
+    </li>
+    <li><a href="#summary">Summary</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>本文は厳密な量子遷移率を計算し、フェルミの黄金律がその「長時間平均」の結果であることを指摘することを目的としています。厳密な量子遷移率は、フェルミの黄金律と比較して、無視できない振幅を持つ二倍周波数振動項（double-frequency oscillation term）をさらに含んでいます。両者の関係は、交流回路における「瞬時電力」と「平均電力」の関係に似ています。</p>
+<h2 id="fermi-golden-rule">Fermi Golden Rule</h2>
+<p>フェルミの黄金律は、時間調和外場摂動下で、量子系が初期状態$|i\rangle$から終状態$|f\rangle$（いずれも$H_0$の固有状態）へ遷移する遷移率を計算することを目的としています。量子力学の講義ですでに十分に説明されているため、ここではディラック描像（相互作用描像）の下ですばやく確認します。ディラック描像を使用するのは、久保公式（Kubo Formula）との比較を容易にするためです。</p>
+<p>ディラック描像における状態の運動方程式：</p>
+<p>$$
+\begin{aligned}
+i \hbar \partial_t |\psi(t) \rangle_D = \hat{V}_D(t) |\psi(t) \rangle_D
+\end{aligned}
+$$</p>
+<p>ディラック描像における演算子：</p>
+<p>$$
+\begin{aligned}
+\hat{\mathcal{O}}_D(t) = e^{i\hat{H_0}t/\hbar} \hat{\mathcal{O}}_S(t) e^{-i\hat{H_0}t/\hbar}
+\end{aligned}
+$$</p>
+<p>添字$D,,S$はそれぞれディラック描像とシュレーディンガー描像を表します。</p>
+<p>運動方程式を積分して反復することで、ディラック描像における状態の時間発展演算子$\mathcal{U}(t,t&rsquo;)$が得られます：</p>
+<p>$$
+\begin{aligned}
+\mathcal{U}(t,t&rsquo;) &amp; = \mathcal{T} e^{-i \int_{t&rsquo;}^{t}dt&rsquo;&rsquo; \hat{V}<em>D(t&rsquo;&rsquo;)/\hbar }  \
+&amp; = 1 + (-i/\hbar) \int</em>{t&rsquo;}^{t}dt_1 \hat{V}<em>D(t_1) + \frac{1}{2!} (-i/\hbar)^2 \int</em>{t&rsquo;}^{t}dt_1 \int_{t&rsquo;}^{t}dt_2 \mathcal{T} \hat{V}<em>D(t_1) \hat{V}<em>D(t_2) + \dots \
+&amp; = 1 + (-i/\hbar) \int</em>{t&rsquo;}^{t}dt_1 \hat{V}<em>D(t_1) +  (-i/\hbar)^2 \int</em>{t&rsquo;}^{t}dt_1 \int</em>{t&rsquo;}^{\mathbf{t_1}}dt_2  \hat{V}_D(t_1) \hat{V}_D(t_2) + \dots
+\end{aligned}
+$$</p>
+<p>ここで$\mathcal{T}$は時間順序積演算子（time ordering operator）であり、時間の小さい演算子を右側に配置し、先に状態ベクトルに作用させます。上記には時間順序積を用いない式も示されており、これは運動方程式を積分し、反復することで得られます。</p>
+<p>系が$t = t_0$において初期状態$|i\rangle$にあると仮定し、$\mathcal{O}(V)$次の近似をとると：</p>
+<p>$$
+\begin{aligned}
+| \psi (t) \rangle_D &amp; = \mathcal{U}(t,t_0) | \psi (t_0) \rangle_D \
+&amp; = |i\rangle + (-i/\hbar) \int_{t_0}^{t}dt_1 \hat{V}_D(t_1)|i\rangle
+\end{aligned}
+$$</p>
+<p>時刻$t$における$|f\rangle$状態の確率振幅は以下のようになります：</p>
+<p>$$
+\begin{aligned}
+\langle f | \psi (t) \rangle_D = 0 + (-i/\hbar) \int_{t_0}^{t}dt_1 \langle f |\hat{V}_D(t_1)|i\rangle
+\end{aligned}
+$$</p>
+<p>周波数$\omega &gt; 0$の時間調和摂動に対して：</p>
+<p>$$
+\begin{aligned}
+\hat{V}_S (t) = \hat{H&rsquo;} e^{-i\omega t} + \hat{H&rsquo;}^\dagger e^{i\omega t}
+\end{aligned}
+$$</p>
+<p>したがって：</p>
+<p>$$
+\begin{aligned}
+\langle f | \psi (t) \rangle_D  = (-i/\hbar) &amp; \int_{t_0}^{t}dt_1 \langle f | e^{i\hat{H_0}t_1/\hbar} \hat{V}<em>S(t_1) e^{-i\hat{H_0}t_1/\hbar}|i\rangle \
+= (-i/\hbar) &amp; \int</em>{t_0}^{t}dt_1 e^{i \omega_{fi} t_1}[ \langle f | \hat{H&rsquo;}^\dagger |i\rangle e^{i \omega t_1} + \langle f | \hat{H&rsquo;} | i \rangle e^{-i \omega t_1} ] \
+= (-i/\hbar)&amp; [ \underbrace{\frac{e^{i (\omega_{fi} + \omega)t} - e^{i (\omega_{fi} + \omega)t_0} }{i(\omega_{fi} + \omega)} \langle f | \hat{H&rsquo;}^\dagger |i\rangle}<em>{(1)} \
+&amp; + \underbrace{\frac{e^{i (\omega</em>{fi} - \omega)t} - e^{i (\omega_{fi} - \omega)t_0} }{i(\omega_{fi} - \omega)} \langle f | \hat{H&rsquo;} |i\rangle}_{(2)} ]
+\end{aligned}
+$$</p>
+<p>ここで$\omega_{fi} = (E_f - E_i)/\hbar$は初期状態$|i\rangle$から終状態$|f\rangle$への遷移エネルギーに対応します。</p>
+<h3 id="common-approach-in-quantum-mechanics">Common Approach in Quantum Mechanics</h3>
+<p>量子力学の講義における一般的なアプローチは、$\omega \rightarrow \pm \omega_{fi}$のとき、(1)は(2)よりもはるかに小さいか、あるいははるかに大きくなるため、一方の項の寄与のみを考慮するというものです。</p>
+<p>$\omega \rightarrow + \omega_{fi}$を例にとり、時刻$t$において系が$|f\rangle$状態にある確率を計算します：</p>
+<p>$$
+\begin{aligned}
+|\langle f | \psi (t) \rangle_D|^2 &amp; \approx |(-i/\hbar) \frac{e^{i (\omega_{fi} - \omega)t} - e^{i (\omega_{fi} - \omega)t_0} }{i(\omega_{fi} - \omega)} \langle f | \hat{H&rsquo;} |i\rangle |^2 \
+&amp; = \frac{1}{\hbar^2} | (-i e^{i(\omega_{fi} - \omega)(t - t_0)/2}) \frac{2 \sin[(\omega_{fi} - \omega)(t - t_0)/2]}{\omega_{fi} - \omega} \langle f | \hat{H&rsquo;} |i\rangle|^2 \
+&amp; = \frac{4}{\hbar^2} \frac{\sin^2[(\omega_{fi} - \omega)(t - t_0)/2]}{(\omega_{fi} - \omega)^2} |\langle f | \hat{H&rsquo;} |i\rangle|^2 \
+&amp; \xrightarrow{t - t_0 \rightarrow + \infty} \frac{2 \pi}{\hbar^2} |\langle f | \hat{H&rsquo;} |i\rangle|^2 \delta (\omega - \omega_{fi}) \times (t - t_0)
+\end{aligned}
+$$</p>
+<p>ここでは、あまり一般的ではない極限を利用しています：</p>
+<p>$$
+\begin{aligned}
+\lim_{t \rightarrow + \infty} \frac{\sin^2(\omega t)}{\omega^2} = \pi t \delta(\omega)
+\end{aligned}
+$$</p>
+<p>したがって、遷移率は以下のようになります（$\omega \rightarrow \pm \omega_{fi}$の両方を考慮）：</p>
+<p>$$
+\begin{aligned}
+\mathcal{I}<em>{i\rightarrow f} = \frac{d}{dt} |\langle f | \psi (t) \rangle_D|^2 = \frac{2 \pi}{\hbar^2} [|\langle f | \hat{H&rsquo;} |i\rangle|^2 \delta (\omega - \omega</em>{fi}) + \langle i | \hat{H&rsquo;} | f \rangle|^2 \delta (\omega + \omega_{fi}) ]
+\end{aligned}
+$$</p>
+<h3 id="strict-derivation">Strict Derivation</h3>
+<p>上記の方法で得られる結果は正しいですが、上記の極限をとる方法は厳密さを欠いているように見えます。特に、あの極めて扱いにくい極限$\lim_{t \rightarrow + \infty} \frac{\sin^2(\omega t)}{\omega^2} = \pi t \delta(\omega)$がそうです。</p>
+<p>実際、より厳密な導出を通じて$\mathcal{I}_{i\rightarrow f}$を得ることができます。</p>
+<p>さらに、以前の導出では$\mathcal{I}_{i\rightarrow f}$のゼロ周波数成分のみを考慮していましたが、より厳密な結果には二倍周波数項も含まれていることがわかります。</p>
+<p>しかし、二倍周波数振動項は長時間平均の下ではゼロになるため、遷移率のより厳密な定義は「長時間平均遷移率」であるべきです：</p>
+<p>$$
+\begin{aligned}
+\mathcal{I}<em>{i\rightarrow f} \equiv \lim</em>{T \rightarrow +\infty} \frac{1}{2T} \int_{-T}^T \left.\left(\frac{d}{dt} |\langle f | \psi  \rangle_D|^2\right)\right|_{t = \tau} d\tau \equiv \left\langle \frac{d}{dt} |\langle f | \psi  \rangle_D|^2 \right\rangle_t
+\end{aligned}
+$$</p>
+<p>より厳密に導出するために、&quot;$\approx$&ldquo;記号の前に戻り、厳密な等号とよく知られた極限公式を使用して導出を試みます：</p>
+<p>$$
+\begin{aligned}
+|\langle f | \psi (t) \rangle_D|^2 &amp; = \left|-\frac{i}{\hbar} \int_{t_0}^{t}dt_1 \langle f |\hat{V}<em>D(t_1)|i\rangle\right|^2 \
+&amp; = \left(-\frac{i}{\hbar} \int</em>{t_0}^{t}dt_1 \langle f |\hat{V}<em>D(t_1)|i\rangle\right) \times \left(\frac{i}{\hbar} \int</em>{t_0}^{t}dt_1 \langle i |\hat{V}_D(t_1)|f\rangle\right)
+\end{aligned}
+$$</p>
+<p>したがって遷移率は：</p>
+<p>$$
+\begin{aligned}
+\frac{d}{dt} |\langle f | \psi (t) \rangle_D|^2 &amp; = \frac{d}{dt} \left(-\frac{i}{\hbar} \int_{t_0}^{t}dt_1 \langle f |\hat{V}<em>D(t_1)|i\rangle\right) \times \left(\frac{i}{\hbar} \int</em>{t_0}^{t}dt_1 \langle i |\hat{V}<em>D(t_1)|f\rangle\right) \
+&amp; + \left(-\frac{i}{\hbar} \int</em>{t_0}^{t}dt_1 \langle f |\hat{V}<em>D(t_1)|i\rangle\right) \times \frac{d}{dt} \left(\frac{i}{\hbar} \int</em>{t_0}^{t}dt_1 \langle i |\hat{V}_D(t_1)|f\rangle\right) \
+&amp; =  \left(-\frac{i}{\hbar}  \langle f |\hat{V}<em>D(t)|i\rangle\right) \times \left(\frac{i}{\hbar} \int</em>{t_0}^{t}dt_1 \langle i |\hat{V}<em>D(t_1)|f\rangle\right) \
+&amp; + \left(-\frac{i}{\hbar} \int</em>{t_0}^{t}dt_1 \langle f |\hat{V}_D(t_1)|i\rangle\right) \times \left(\frac{i}{\hbar}  \langle i |\hat{V}<em>D(t)|f\rangle\right) \
+&amp; = \frac{1}{\hbar^2} \int</em>{t_0}^{t}dt_1 \left( \langle f |\hat{V}_D(t)|i\rangle\langle i |\hat{V}_D(t_1)|f\rangle + \langle f |\hat{V}_D(t_1)|i\rangle\langle i |\hat{V}_D(t)|f\rangle \right)
+\end{aligned}
+$$</p>
+<p>周波数$\omega &gt; 0$の時間調和摂動に対して：</p>
+<p>$$
+\begin{aligned}
+\hat{V}_S (t) = \hat{H&rsquo;} e^{-i\omega t} + \hat{H&rsquo;}^\dagger e^{i\omega t}
+\end{aligned}
+$$</p>
+<p>ここで：</p>
+<p>$$
+\begin{aligned}
+\langle i |\hat{V}<em>D(t)|f\rangle = e^{-i\omega</em>{fi}t}(\langle i |\hat{H&rsquo;}^\dagger|f\rangle e^{i\omega t} + (\langle i |\hat{H&rsquo;}|f\rangle e^{-i\omega t})
+\end{aligned}
+$$</p>
+<p>表記を簡単にするために、$\hat{H&rsquo;}$の行列要素を以下のように記します：</p>
+<p>$$
+\begin{aligned}
+\langle f | \hat{H&rsquo;}| i \rangle \equiv H_{fi}
+\end{aligned}
+$$</p>
+<p>$$
+\begin{aligned}
+\langle i | \hat{H&rsquo;}^\dagger | f \rangle \equiv H_{fi}^*
+\end{aligned}
+$$</p>
+<p>特に注意すべき点は、ここでは$\hat{V}$のみがエルミート演算子であり、$\hat{H&rsquo;}$は必ずしもエルミート演算子ではないため、一般に以下のようになります：</p>
+<p>$$
+\begin{aligned}
+H_{if} = (H^\dagger)<em>{fi}^* \neq H</em>{fi}^*
+\end{aligned}
+$$</p>
+<p>したがって：</p>
+<p>$$
+\begin{aligned}
+\frac{d}{dt} |\langle f | \psi (t) \rangle_D|^2 &amp; = \frac{1}{\hbar^2} \int_{t_0}^t dt&rsquo;   e^{i\omega_{fi} (t-t&rsquo;)} (H_{if}^<em>e^{i\omega t} + H_{fi} e^{-i\omega t})(H_{fi}^<em>e^{i\omega t&rsquo;} + H_{if} e^{-i\omega t&rsquo;}) \
+&amp; +\frac{1}{\hbar^2} \int_{t_0}^t dt&rsquo;e^{-i\omega_{fi} (t-t&rsquo;)} (H_{fi}^<em>e^{i\omega t} + H_{if} e^{-i\omega t})(H_{if}^<em>e^{i\omega t&rsquo;} + H_{fi} e^{-i\omega t&rsquo;}) \
+&amp; = \frac{1}{\hbar^2} \int_{t_0}^t dt&rsquo;   e^{i\omega_{fi} (t-t&rsquo;)} \left[ \underbrace{|H_{fi}|^2 e^{-i \omega (t - t&rsquo;)} }<em>{(1.1)} + \underbrace{|H</em>{if}|^2 e^{i \omega (t - t&rsquo;)} }<em>{(1.2)}  + \underbrace{H</em>{fi}^</em> H_{if}^</em> e^{i \omega (t + t&rsquo;)}}<em>{(1.3)} + \underbrace{H</em>{if} H_{fi} e^{-i \omega (t + t&rsquo;)}}<em>{(1.4)} \right] \
+&amp; +\frac{1}{\hbar^2} \int</em>{t_0}^t dt&rsquo;e^{-i\omega_{fi} (t-t&rsquo;)} \left[ \underbrace{|H_{fi}|^2 e^{i \omega (t - t&rsquo;)} }<em>{(2.1)} + \underbrace{|H</em>{if}|^2 e^{-i \omega (t - t&rsquo;)} }<em>{(2.2)}  + \underbrace{H</em>{fi}^</em> H_{if}^</em> e^{i \omega (t + t&rsquo;)}}<em>{(2.3)} + \underbrace{H</em>{if} H_{fi} e^{-i \omega (t + t&rsquo;)}}_{(2.4)} \right]
+\end{aligned}
+$$</p>
+<p>長時間発展における近似を議論するために、$t_0 \rightarrow - \infty$とします。</p>
+<p>(1.1)+(2.1)項に注目し、積分変数を変換すると：</p>
+<p>$$
+\begin{aligned}
+(1.1) + (2.1) &amp; = \frac{|H_{fi}|^2}{\hbar^2} \int_{- \infty}^t dt&rsquo; \left[ e^{i (\omega - \omega_{fi}) (t - t&rsquo;)} + e^{-i (\omega - \omega_{fi}) (t - t&rsquo;)}  \right] \
+&amp; = \frac{|H_{fi}|^2}{\hbar^2} \int_{0}^{+ \infty} d(t - t&rsquo;) \left[ e^{i (\omega - \omega_{fi}) (t - t&rsquo;)} + e^{-i (\omega - \omega_{fi}) (t - t&rsquo;)}  \right] \
+&amp; = \frac{|H_{fi}|^2}{\hbar^2} \int_{-\infty}^{+ \infty} d\tau e^{i (\omega - \omega_{fi}) \tau} \
+&amp; = \frac{2 \pi}{\hbar^2} |H_{fi}|^2 \delta({\omega - \omega_{fi}})
+\end{aligned}
+$$</p>
+<p>ここでフェルミの黄金律の項の一つが得られました。もう一つの項は(1.2)+(2.2)から生じることが容易にわかり、以下のようになります：</p>
+<p>$$
+\begin{aligned}
+(1.1) + (2.1) + (1.2) + (2.2) = \frac{2 \pi}{\hbar^2} \left[ |H_{fi}|^2 \delta({\omega - \omega_{fi}}) + |H_{if}|^2 \delta({\omega + \omega_{fi}}) \right]
+\end{aligned}
+$$</p>
+<p>しかし、(1.3)+(2.3)および(1.4)+(2.4)の具体的な意味についてはまだ議論されていません。これは一般的な量子力学の講義でも無視される項目です。</p>
+<p>さらに議論を進めると、これは二倍周波数振動項であり、$t \rightarrow \infty$において、その振動周波数はフェルミの黄金律における$\delta({\omega - \omega_{fi}})$と同程度であるため、厳密な議論では無視できないことがわかります。</p>
+<p>言い換えれば、フェルミの黄金律は「長時間平均近似」をとることによって、この振動項の寄与を除去しています。これは交流回路系における平均電力を求めることに似ています。</p>
+<h3 id="double-frequency-term">Double Frequency Term</h3>
+<p>次に、(1.3)+(2.3)項および(1.4)+(2.4)項を計算します。</p>
+<p>(1.3)+(2.3)項を例にとると：</p>
+<p>$$
+\begin{aligned}
+(1.3) + (2.3) &amp; = \frac{1}{\hbar^2} H_{fi}^* H_{if}^* \int_{- \infty}^t dt&rsquo; e^{i \omega (t + t&rsquo;)}   \left[e^{i\omega_{fi} (t-t&rsquo;)} + e^{-i\omega_{fi} (t-t&rsquo;)} \right] \
+&amp; = \frac{1}{\hbar^2} H_{fi}^* H_{if}^*  \left[ e^{i (\omega + \omega_{fi})t} \int_{- \infty}^t dt&rsquo;  e^{i(\omega - \omega_{fi}) t&rsquo;} + e^{i (\omega - \omega_{fi})t} \int_{- \infty}^t dt&rsquo;  e^{i(\omega + \omega_{fi}) t&rsquo;}  \right] \
+&amp; \xrightarrow[t_0 \rightarrow - \infty]{t \rightarrow + \infty} \frac{1}{\hbar^2} H_{fi}^* H_{if}^*  \left[ e^{i (\omega + \omega_{fi})t} \int_{- \infty}^{+ \infty} dt&rsquo;  e^{i(\omega - \omega_{fi}) t&rsquo;} + e^{i (\omega - \omega_{fi})t} \int_{- \infty}^{+ \infty} dt&rsquo;  e^{i(\omega + \omega_{fi}) t&rsquo;}  \right] \
+&amp; = \frac{2\pi}{\hbar^2} H_{fi}^* H_{if}^*  \left[ e^{i (\omega + \omega_{fi})t} \delta( \omega - \omega_{fi}) + e^{i (\omega - \omega_{fi})t} \delta( \omega + \omega_{fi})  \right] \
+&amp; = \frac{2\pi}{\hbar^2} H_{fi}^* H_{if}^*  \left[ e^{2i\omega_{fi} t} \delta( \omega - \omega_{fi}) + e^{-2i \omega_{fi} t} \delta( \omega + \omega_{fi})  \right]
+\end{aligned}
+$$</p>
+<p>同様に、</p>
+<p>$$
+\begin{aligned}
+(1.4) + (2.4) \xrightarrow[t_0 \rightarrow - \infty]{t \rightarrow + \infty} \frac{2\pi}{\hbar^2}  H_{if} H_{fi} \left[ e^{2i\omega_{fi} t} \delta( \omega + \omega_{fi}) + e^{-2i \omega_{fi} t} \delta( \omega - \omega_{fi})  \right]
+\end{aligned}
+$$</p>
+<p>厳密な遷移率$\frac{d}{dt} |\langle f | \psi (t) \rangle_D|^2$には定数項だけでなく、二倍周波数項も含まれており、両者の振幅は同程度であり、共に$\delta( \omega \pm \omega_{fi})$を含んでいることがわかります。</p>
+<p>「長時間平均近似」の下で定義された遷移率$\left\langle\frac{d}{dt} |\langle f | \psi (t) \rangle_D|^2 \right\rangle_\tau$、すなわち定数項のみを保持したものだけが、フェルミの黄金律に対応します。</p>
+<p>また、「長時間平均近似」をとるかどうかにかかわらず、遷移率は発展時間が十分に長いという条件の下で議論されなければならないことに注意する必要があります。そうでなければ、吸収スペクトルにおける$\delta( \omega \pm \omega_{fi})$は$(t - t_0)^{-1}$のオーダーの広がりを持つことになります。</p>
+<p>しかし、一般的な系は完全に無散逸ではなく、散逸特徴時間$\tau$に対応する散逸広がり$\sim \tau^{-1}$が存在します。$t - t_0 \gg \tau, \omega_{fi}^{-1}$である限り、吸収スペクトルに大きな影響を与えることはありません。ここでは散逸広がり$\sim \tau^{-1}$に関する議論は省略します。</p>
+<h2 id="summary">Summary</h2>
+<p>周波数$\omega &gt; 0$の長時間（$t_0 \rightarrow - \infty,, t \rightarrow + \infty$）の時間調和摂動下において：</p>
+<p>$$
+\begin{aligned}
+\hat{V}_S (t) = \hat{H&rsquo;} e^{-i\omega t} + \hat{H&rsquo;}^\dagger e^{i\omega t}
+\end{aligned}
+$$</p>
+<p>$$
+\begin{aligned}
+\langle f | \hat{H&rsquo;}| i \rangle \equiv H_{fi}
+\end{aligned}
+$$</p>
+<p>$$
+\begin{aligned}
+\langle i | \hat{H&rsquo;}^\dagger | f \rangle \equiv H_{fi}^*
+\end{aligned}
+$$</p>
+<p>初期状態$| i \rangle$から終状態$| f \rangle$への厳密な遷移率の式は以下のようになります：</p>
+<p>$$
+\begin{aligned}
+\frac{d}{dt} |\langle f | \psi (t) \rangle_D|^2 &amp; \xrightarrow[t_0 \rightarrow - \infty]{t \rightarrow + \infty} \frac{2 \pi}{\hbar^2} \left[ |H_{fi}|^2 \delta({\omega - \omega_{fi}}) + |H_{if}|^2 \delta({\omega + \omega_{fi}}) \right] \
+&amp; + \frac{2\pi}{\hbar^2} H_{fi}^* H_{if}^*  \left[ e^{2i\omega_{fi} t} \delta( \omega - \omega_{fi}) + e^{-2i \omega_{fi} t} \delta( \omega + \omega_{fi})  \right] \
+&amp; + \frac{2\pi}{\hbar^2}  H_{if} H_{fi} \left[ e^{2i\omega_{fi} t} \delta( \omega + \omega_{fi}) + e^{-2i \omega_{fi} t} \delta( \omega - \omega_{fi})  \right] \
+&amp; = \frac{2\pi}{\hbar^2} \left{ \left[ |H_{fi}|^2 + 2\operatorname{Re}(H_{if} H_{fi} e^{2i\omega_{fi} t}) \right]  \delta( \omega + \omega_{fi}) + \left[ |H_{if}|^2 + 2\operatorname{Re}(H_{if} H_{fi} e^{-2i\omega_{fi} t}) \right] \delta( \omega - \omega_{fi})  \right}
+\end{aligned}
+$$</p>
+<p>ここで、定数項はフェルミの黄金律の結果であり、それ以外に同程度の振幅を持つ二倍周波数項が存在します。</p>
+<p>「長時間平均近似」（観測時間が系の固有時間$\omega_{fi}^{-1}$よりもはるかに長い場合）の下では、二倍周波数項は無視することができ、長時間平均の遷移率はフェルミの黄金律の結果と一致します。これは交流電気システムの平均電力を求めることに似ています。</p>
+<p>$$
+\begin{aligned}
+\mathcal{I}<em>{i\rightarrow f} &amp; \equiv \lim</em>{T \rightarrow +\infty} \frac{1}{2T} \int_{-T}^T \left.\left(\frac{d}{dt} |\langle f | \psi  \rangle_D|^2\right)\right|<em>{t = \tau} d\tau \
+&amp; = \frac{2 \pi}{\hbar^2} \left[ |H</em>{fi}|^2 \delta({\omega - \omega_{fi}}) + |H_{if}|^2 \delta({\omega + \omega_{fi}}) \right]
+\end{aligned}
+$$</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2026-01-10</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="http://localhost:1313/OkongOyangO.Notes/posts/fermi_golden_rule.ja/" data-title="フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？" data-hashtags="Quantum Mechanics,Fermi Golden Rule"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="http://localhost:1313/OkongOyangO.Notes/posts/fermi_golden_rule.ja/" data-title="フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/OkongOyangO.Notes/posts/fermi_golden_rule.ja/" data-hashtag="Quantum Mechanics"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/OkongOyangO.Notes/posts/fermi_golden_rule.ja/" data-title="フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://localhost:1313/OkongOyangO.Notes/posts/fermi_golden_rule.ja/" data-title="フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？"><i data-svg-src="/OkongOyangO.Notes/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/OkongOyangO.Notes/posts/fermi_golden_rule.ja/" data-title="フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="http://localhost:1313/OkongOyangO.Notes/posts/fermi_golden_rule.ja/" data-title="フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2flocalhost%3a1313%2fOkongOyangO.Notes%2fposts%2ffermi_golden_rule.ja%2f&amp;text=%e3%83%95%e3%82%a7%e3%83%ab%e3%83%9f%e3%81%ae%e9%bb%84%e9%87%91%e5%be%8b%ef%bc%88Fermi%20Golden%20Rule%ef%bc%89%e3%81%af%e4%bd%95%e3%82%92%e8%a6%8b%e8%90%bd%e3%81%a8%e3%81%97%e3%81%a6%e3%81%84%e3%82%8b%e3%81%ae%e3%81%8b%ef%bc%9f" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/OkongOyangO.Notes/tags/quantum-mechanics/">Quantum Mechanics</a>,&nbsp;<a href="/OkongOyangO.Notes/tags/fermi-golden-rule/">Fermi Golden Rule</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/OkongOyangO.Notes/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/OkongOyangO.Notes/posts/fermi_golden_rule.zh/" class="prev" rel="prev" title="费米黄金法则（Fermi Golden Rule）漏了什么？"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>费米黄金法则（Fermi Golden Rule）漏了什么？</a>
+            <a href="/OkongOyangO.Notes/posts/fermi_golden_rule/" class="next" rel="next" title="What did Fermi Golden Rule Miss?">What did Fermi Golden Rule Miss?<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.154.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/OkongOyangO.Notes/" target="_blank">xxxx</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="/OkongOyangO.Notes/lib/autocomplete/autocomplete.min.js"></script><script src="/OkongOyangO.Notes/lib/lunr/lunr.min.js"></script><script src="/OkongOyangO.Notes/lib/lazysizes/lazysizes.min.js"></script><script src="/OkongOyangO.Notes/lib/clipboard/clipboard.min.js"></script><script src="/OkongOyangO.Notes/lib/sharer/sharer.min.js"></script><script>window.config={"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/OkongOyangO.Notes/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/OkongOyangO.Notes/js/theme.min.js"></script></body>
+</html>

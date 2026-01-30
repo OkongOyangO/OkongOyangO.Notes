@@ -1,25 +1,38 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <sitemap>
-    <loc>http://localhost:1313/zh/sitemap.xml</loc>
-    
-      <lastmod>2026-01-09T19:05:46+00:00</lastmod>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>http://localhost:1313/en/sitemap.xml</loc>
-    
-      <lastmod>2026-01-09T19:05:46+00:00</lastmod>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>http://localhost:1313/ja/sitemap.xml</loc>
-    
-      <lastmod>2026-01-09T19:05:46+00:00</lastmod>
-    
-  </sitemap>
-  
-</sitemapindex>
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    ><url>
+            <loc>http://localhost:1313/OkongOyangO.Notes/categories/</loc><lastmod>2026-01-10T02:59:13&#43;00:00</lastmod></url><url>
+            <loc>http://localhost:1313/OkongOyangO.Notes/tags/fermi-golden-rule/</loc><lastmod>2026-01-10T02:59:13&#43;00:00</lastmod></url><url>
+            <loc>http://localhost:1313/OkongOyangO.Notes/categories/physics-notes/</loc><lastmod>2026-01-10T02:59:13&#43;00:00</lastmod></url><url>
+            <loc>http://localhost:1313/OkongOyangO.Notes/posts/</loc><lastmod>2026-01-10T02:59:13&#43;00:00</lastmod></url><url>
+            <loc>http://localhost:1313/OkongOyangO.Notes/tags/quantum-mechanics/</loc><lastmod>2026-01-10T02:59:13&#43;00:00</lastmod></url><url>
+            <loc>http://localhost:1313/OkongOyangO.Notes/tags/</loc><lastmod>2026-01-10T02:59:13&#43;00:00</lastmod></url><url>
+            <loc>http://localhost:1313/OkongOyangO.Notes/posts/fermi_golden_rule/</loc><lastmod>2026-01-10T02:59:13&#43;00:00</lastmod></url><url>
+            <loc>http://localhost:1313/OkongOyangO.Notes/</loc><lastmod>2026-01-10T02:59:13&#43;00:00</lastmod></url><url>
+            <loc>http://localhost:1313/OkongOyangO.Notes/posts/fermi_golden_rule.ja/</loc><lastmod>2026-01-10T02:59:13&#43;00:00</lastmod></url><url>
+            <loc>http://localhost:1313/OkongOyangO.Notes/posts/fermi_golden_rule.zh/</loc><lastmod>2026-01-10T02:59:13&#43;00:00</lastmod></url><url>
+            <loc>http://localhost:1313/OkongOyangO.Notes/tags/condensed-matter/</loc><lastmod>2026-01-09T19:05:46&#43;00:00</lastmod></url><url>
+            <loc>http://localhost:1313/OkongOyangO.Notes/tags/mean-field/</loc><lastmod>2026-01-09T19:05:46&#43;00:00</lastmod></url><url>
+            <loc>http://localhost:1313/OkongOyangO.Notes/posts/mean_field_approximation/</loc><lastmod>2026-01-09T19:05:46&#43;00:00</lastmod></url><url>
+            <loc>http://localhost:1313/OkongOyangO.Notes/posts/mean_field_approximation.zh/</loc><lastmod>2026-01-09T19:05:46&#43;00:00</lastmod></url><url>
+            <loc>http://localhost:1313/OkongOyangO.Notes/posts/mean_field_approximation.ja/</loc><lastmod>2026-01-09T19:05:46&#43;00:00</lastmod></url><url>
+            <loc>http://localhost:1313/OkongOyangO.Notes/tags/fci/</loc><lastmod>2026-01-08T21:54:37-05:00</lastmod></url><url>
+            <loc>http://localhost:1313/OkongOyangO.Notes/posts/joule_heat/</loc><lastmod>2026-01-08T21:54:37-05:00</lastmod></url><url>
+            <loc>http://localhost:1313/OkongOyangO.Notes/posts/fqhe_faqhe_fci/</loc><lastmod>2026-01-08T21:54:37-05:00</lastmod></url><url>
+            <loc>http://localhost:1313/OkongOyangO.Notes/posts/distinguish_conductors_insulators_ground_state/</loc><lastmod>2026-01-08T21:54:37-05:00</lastmod></url><url>
+            <loc>http://localhost:1313/OkongOyangO.Notes/tags/insulators/</loc><lastmod>2026-01-08T21:54:37-05:00</lastmod></url><url>
+            <loc>http://localhost:1313/OkongOyangO.Notes/tags/joule-heat/</loc><lastmod>2026-01-08T21:54:37-05:00</lastmod></url><url>
+            <loc>http://localhost:1313/OkongOyangO.Notes/tags/kubo-formula/</loc><lastmod>2026-01-08T21:54:37-05:00</lastmod></url><url>
+            <loc>http://localhost:1313/OkongOyangO.Notes/tags/nonlinear-response/</loc><lastmod>2026-01-08T21:54:37-05:00</lastmod></url><url>
+            <loc>http://localhost:1313/OkongOyangO.Notes/posts/nonlinear-kubo-formalism/</loc><lastmod>2026-01-08T21:54:37-05:00</lastmod></url><url>
+            <loc>http://localhost:1313/OkongOyangO.Notes/tags/quantum-hall-effect/</loc><lastmod>2026-01-08T21:54:37-05:00</lastmod></url><url>
+            <loc>http://localhost:1313/OkongOyangO.Notes/tags/topology/</loc><lastmod>2026-01-08T21:54:37-05:00</lastmod></url><url>
+            <loc>http://localhost:1313/OkongOyangO.Notes/posts/joule_heat.ja/</loc><lastmod>2026-01-08T21:54:37-05:00</lastmod></url><url>
+            <loc>http://localhost:1313/OkongOyangO.Notes/posts/nonlinear-kubo-formalism.ja/</loc><lastmod>2026-01-08T21:54:37-05:00</lastmod></url><url>
+            <loc>http://localhost:1313/OkongOyangO.Notes/posts/nonlinear-kubo-formalism.zh/</loc><lastmod>2026-01-08T21:54:37-05:00</lastmod></url><url>
+            <loc>http://localhost:1313/OkongOyangO.Notes/posts/fqhe_faqhe_fci.ja/</loc><lastmod>2026-01-08T21:54:37-05:00</lastmod></url><url>
+            <loc>http://localhost:1313/OkongOyangO.Notes/posts/fqhe_faqhe_fci.zh/</loc><lastmod>2026-01-08T21:54:37-05:00</lastmod></url><url>
+            <loc>http://localhost:1313/OkongOyangO.Notes/posts/distinguish_conductors_insulators_ground_state.zh/</loc><lastmod>2026-01-08T21:54:37-05:00</lastmod></url><url>
+            <loc>http://localhost:1313/OkongOyangO.Notes/posts/distinguish_conductors_insulators_ground_state.ja/</loc><lastmod>2026-01-08T21:54:37-05:00</lastmod></url><url>
+            <loc>http://localhost:1313/OkongOyangO.Notes/posts/joule_heat.zh/</loc><lastmod>2026-01-08T21:54:37-05:00</lastmod></url></urlset>

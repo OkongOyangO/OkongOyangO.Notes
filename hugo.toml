@@ -1,46 +1,117 @@
-baseURL = 'https://OkongOyangO.github.io/OkongOyangO.Notes/'
-languageCode = 'en-us'
-title = 'O空O扬O の 物理小站'
-theme = 'PaperMod'
-defaultContentLanguage = 'en'
+# -----------------------------------------------------------------------------
+# Core Configuration
+# -----------------------------------------------------------------------------
+baseURL = "https://OkongOyangO.github.io/OkongOyangO.Notes/"
+languageCode = "en"
+title = "Yiyang's Physics Notes"
+theme = "LoveIt"
 
-[languages]
-  [languages.zh]
-    languageName = "🇨🇳 中文"
-    weight = 1
-    title = "O空O扬O の 物理小站"
-    [languages.zh.params]
-      description = "物理笔记"
-
-  [languages.en]
-    languageName = "🇺🇸 English"
-    weight = 2
-    title = "OkongOyangO's PhysHub"
-    [languages.en.params]
-      description = "Physics notes"
-
-  [languages.ja]
-    languageName = "🇯🇵 日本語"
-    weight = 3
-    title = "O空O扬O の 物理ノート"
-    [languages.ja.params]
-      description = "物理ノート"
-
+# -----------------------------------------------------------------------------
+# LoveIt Specifics
+# -----------------------------------------------------------------------------
 [params]
+  # Theme version (Recommended 0.3.X for modern Hugo)
+  version = "0.3.X"
+  # Default theme mode ("light", "dark", "auto")
   defaultTheme = "auto"
-  ShowShareButtons = true
-  ShowCodeCopyButtons = true
-  ShowSearchKey = true
-  math = false  # <--- ❌ 关键：关闭它，避免主题逻辑崩溃
 
-# --- 核心：保护公式不被 Markdown 破坏 ---
+  # Header Configuration
+  [params.header]
+    desktopMode = "fixed"
+    mobileMode = "auto"
+    [params.header.title]
+      logo = ""
+      name = "Yiyang's Notes"
+      type = "it"
+
+  # Footer Configuration
+  [params.footer]
+    enable = true
+    copyright = true
+    author = true
+    since = 2024
+
+  # Search Configuration (Built-in Lunr.js)
+  [params.search]
+    enable = true
+    type = "lunr"
+    contentLength = 4000
+    placeholder = "Search notes..."
+
+  # Home Page Configuration
+  [params.home]
+    [params.home.profile]
+      enable = true
+      gravatarEmail = ""
+      avatarURL = "/images/profile.png"
+      title = "Physics Notes & Research Logs"
+      subtitle = "Notes on Topology, Geometry, and Nonlinear Responses"
+      type = "it"
+      social = true  # Enables social icons defined in author section
+
+# -----------------------------------------------------------------------------
+# Menu Configuration (With Icons)
+# -----------------------------------------------------------------------------
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    pre = "<i class='fas fa-archive fa-fw'></i>"
+    name = "Posts"
+    url = "/posts/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "tags"
+    pre = "<i class='fas fa-tags fa-fw'></i>"
+    name = "Tags"
+    url = "/tags/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "categories"
+    pre = "<i class='fas fa-th-list fa-fw'></i>"
+    name = "Categories"
+    url = "/categories/"
+    weight = 3
+
+  # Back to Main Site Link
+  [[menu.main]]
+    identifier = "main-site"
+    pre = "<i class='fas fa-home fa-fw'></i>"
+    name = "Main Homepage"
+    url = "https://OkongOyangO.github.io"
+    title = "Go back to Academic Homepage"
+    weight = 10
+
+# -----------------------------------------------------------------------------
+# Markup Configuration
+# -----------------------------------------------------------------------------
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
     [markup.goldmark.extensions]
-      [markup.goldmark.extensions.passthrough]
-        enable = true
-        [markup.goldmark.extensions.passthrough.delimiters]
-          block = [['39593', '39593'], ['\\[', '\\]']]
-          inline = [['$', '$'], ['\\(', '\\)']]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+  [markup.highlight]
+    codeFences = true
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 6
+
+# -----------------------------------------------------------------------------
+# Output Configuration
+# -----------------------------------------------------------------------------
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]

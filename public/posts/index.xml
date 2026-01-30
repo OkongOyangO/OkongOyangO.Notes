@@ -1,0 +1,206 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>All Posts - Yiyang&#39;s Physics Notes</title>
+        <link>http://localhost:1313/OkongOyangO.Notes/posts/</link>
+        <description>All Posts | Yiyang&#39;s Physics Notes</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 10 Jan 2026 02:59:13 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/OkongOyangO.Notes/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>What did Fermi Golden Rule Miss?</title>
+    <link>http://localhost:1313/OkongOyangO.Notes/posts/fermi_golden_rule/</link>
+    <pubDate>Sat, 10 Jan 2026 02:59:13 &#43;0000</pubDate>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/OkongOyangO.Notes/posts/fermi_golden_rule/</guid>
+    <description><![CDATA[<p>This article aims to calculate the strict quantum transition rate and points out that the Fermi Golden Rule is the result of its &ldquo;long-time average&rdquo;. The strict quantum transition rate contains an additional double-frequency oscillation term with non-negligible amplitude compared to the Fermi Golden Rule. The relationship between the two is similar to &ldquo;instantaneous power&rdquo; and &ldquo;average power&rdquo; in AC circuits.</p>
+<h2 id="fermi-golden-rule">Fermi Golden Rule</h2>
+<p>The Fermi Golden Rule aims to calculate the transition rate of a quantum system from an initial state $|i\rangle$ to a final state $|f\rangle$ (both are eigenstates of $H_0$) under a time-harmonic external field perturbation. Since this is well-covered in quantum mechanics courses, we will quickly go through it in the Dirac picture (interaction picture). The Dirac picture is used to better compare with the Kubo Formula.</p>]]></description>
+</item>
+<item>
+    <title>フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？</title>
+    <link>http://localhost:1313/OkongOyangO.Notes/posts/fermi_golden_rule.ja/</link>
+    <pubDate>Sat, 10 Jan 2026 02:59:13 &#43;0000</pubDate>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/OkongOyangO.Notes/posts/fermi_golden_rule.ja/</guid>
+    <description><![CDATA[<p>本文は厳密な量子遷移率を計算し、フェルミの黄金律がその「長時間平均」の結果であることを指摘することを目的としています。厳密な量子遷移率は、フェルミの黄金律と比較して、無視できない振幅を持つ二倍周波数振動項（double-frequency oscillation term）をさらに含んでいます。両者の関係は、交流回路における「瞬時電力」と「平均電力」の関係に似ています。</p>
+<h2 id="fermi-golden-rule">Fermi Golden Rule</h2>
+<p>フェルミの黄金律は、時間調和外場摂動下で、量子系が初期状態$|i\rangle$から終状態$|f\rangle$（いずれも$H_0$の固有状態）へ遷移する遷移率を計算することを目的としています。量子力学の講義ですでに十分に説明されているため、ここではディラック描像（相互作用描像）の下ですばやく確認します。ディラック描像を使用するのは、久保公式（Kubo Formula）との比較を容易にするためです。</p>
+<p>ディラック描像における状態の運動方程式：</p>
+<p>$$
+\begin{aligned}
+i \hbar \partial_t |\psi(t) \rangle_D = \hat{V}_D(t) |\psi(t) \rangle_D
+\end{aligned}
+$$</p>
+<p>ディラック描像における演算子：</p>
+<p>$$
+\begin{aligned}
+\hat{\mathcal{O}}_D(t) = e^{i\hat{H_0}t/\hbar} \hat{\mathcal{O}}_S(t) e^{-i\hat{H_0}t/\hbar}
+\end{aligned}
+$$</p>
+<p>添字$D,,S$はそれぞれディラック描像とシュレーディンガー描像を表します。</p>
+<p>運動方程式を積分して反復することで、ディラック描像における状態の時間発展演算子$\mathcal{U}(t,t&rsquo;)$が得られます：</p>
+<p>$$
+\begin{aligned}
+\mathcal{U}(t,t&rsquo;) &amp; = \mathcal{T} e^{-i \int_{t&rsquo;}^{t}dt&rsquo;&rsquo; \hat{V}<em>D(t&rsquo;&rsquo;)/\hbar }  \
+&amp; = 1 + (-i/\hbar) \int</em>{t&rsquo;}^{t}dt_1 \hat{V}<em>D(t_1) + \frac{1}{2!} (-i/\hbar)^2 \int</em>{t&rsquo;}^{t}dt_1 \int_{t&rsquo;}^{t}dt_2 \mathcal{T} \hat{V}<em>D(t_1) \hat{V}<em>D(t_2) + \dots \
+&amp; = 1 + (-i/\hbar) \int</em>{t&rsquo;}^{t}dt_1 \hat{V}<em>D(t_1) +  (-i/\hbar)^2 \int</em>{t&rsquo;}^{t}dt_1 \int</em>{t&rsquo;}^{\mathbf{t_1}}dt_2  \hat{V}_D(t_1) \hat{V}_D(t_2) + \dots
+\end{aligned}
+$$</p>]]></description>
+</item>
+<item>
+    <title>费米黄金法则（Fermi Golden Rule）漏了什么？</title>
+    <link>http://localhost:1313/OkongOyangO.Notes/posts/fermi_golden_rule.zh/</link>
+    <pubDate>Sat, 10 Jan 2026 02:59:13 &#43;0000</pubDate>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/OkongOyangO.Notes/posts/fermi_golden_rule.zh/</guid>
+    <description><![CDATA[<p>本文旨在计算严格的量子跃迁速率，并指出费米黄金法则是其的“长时间平均”的结果。严格的量子跃迁速率相比费米黄金法则还多一项振幅不可忽略的二倍频振荡项，前后者关系类似交流电路中的“瞬时功率”与“平均功率”。</p>
+<h2 id="fermi-golden-rule">Fermi Golden Rule</h2>
+<p>费米黄金法则旨在计算时谐外场微扰下，量子系统从初态$|i\rangle$到末态$|f\rangle$（均为$H_0$的本征态）的跃迁速率。由于量子力学课程中已经阐述的很完备，此处我们在Dirac表象（相互作用表象）下速通一遍。使用Dirac表象是为了更好与Kubo Formula进行比较</p>
+<p>Dirac表象下态的运动方程：</p>
+<p>$$
+\begin{aligned}
+i \hbar \partial_t |\psi(t) \rangle_D = \hat{V}_D(t) |\psi(t) \rangle_D
+\end{aligned}
+$$</p>
+<p>Dirac表象下的算符：</p>
+<p>$$
+\begin{aligned}
+\hat{\mathcal{O}}_D(t) = e^{i\hat{H_0}t/\hbar} \hat{\mathcal{O}}_S(t) e^{-i\hat{H_0}t/\hbar}
+\end{aligned}
+$$</p>
+<p>下标$D,,S$分别代表Dirac表象和Schrodinger表象。</p>
+<p>对运动方程积分后迭代可以得到Dirac表象下态的演化算符$\mathcal{U}(t,t&rsquo;)$：</p>
+<p>$$
+\begin{aligned}
+\mathcal{U}(t,t&rsquo;) &amp; = \mathcal{T} e^{-i \int_{t&rsquo;}^{t}dt&rsquo;&rsquo; \hat{V}<em>D(t&rsquo;&rsquo;)/\hbar }  \
+&amp; = 1 + (-i/\hbar) \int</em>{t&rsquo;}^{t}dt_1 \hat{V}<em>D(t_1) + \frac{1}{2!} (-i/\hbar)^2 \int</em>{t&rsquo;}^{t}dt_1 \int_{t&rsquo;}^{t}dt_2 \mathcal{T} \hat{V}<em>D(t_1) \hat{V}<em>D(t_2) + \dots \
+&amp; = 1 + (-i/\hbar) \int</em>{t&rsquo;}^{t}dt_1 \hat{V}<em>D(t_1) +  (-i/\hbar)^2 \int</em>{t&rsquo;}^{t}dt_1 \int</em>{t&rsquo;}^{\mathbf{t_1}}dt_2  \hat{V}_D(t_1) \hat{V}_D(t_2) + \dots
+\end{aligned}
+$$</p>]]></description>
+</item>
+<item>
+    <title>Mean Field Approximation and Variational Method | Can Hartree, Fock, and BCS be Mixed 1:1:1?</title>
+    <link>http://localhost:1313/OkongOyangO.Notes/posts/mean_field_approximation/</link>
+    <pubDate>Fri, 09 Jan 2026 19:05:46 &#43;0000</pubDate>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/OkongOyangO.Notes/posts/mean_field_approximation/</guid>
+    <description><![CDATA[<p>This article aims to introduce the mean field approximation while elucidating its variational nature.</p>
+<p>Hartree, Fock, and BCS—these individual mean field approximations appear to be mutually incompatible decoupling methods. However, by leveraging the variational nature of the mean field approximation, we discover that they can indeed be mixed 1:1:1.</p>
+<h2 id="preface">Preface</h2>
+<p>The inspiration for this article primarily comes from discussions with classmate <a href="https://www.zhihu.com/people/li-yong-kang-9-34" target="_blank" rel="noopener noreffer ">@ykli</a>. I would like to express my special thanks to <a href="https://www.zhihu.com/people/li-yong-kang-9-34" target="_blank" rel="noopener noreffer ">@ykli</a> for the significant assistance provided during the derivation process.</p>]]></description>
+</item>
+<item>
+    <title>平均场近似与变分法｜Hartree, Fock, BCS能1:1:1混用吗？</title>
+    <link>http://localhost:1313/OkongOyangO.Notes/posts/mean_field_approximation.zh/</link>
+    <pubDate>Fri, 09 Jan 2026 19:05:46 &#43;0000</pubDate>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/OkongOyangO.Notes/posts/mean_field_approximation.zh/</guid>
+    <description><![CDATA[<p>本文旨在介绍平均场近似，同时阐述其变分法本质。</p>
+<p>Hartree, Fock, BCS这一个一个一个平均场近似，看似是一个一个一个互不相容的decouple方法，但利用平均场近似的变分法本质，我们发现他们事实上确实可以1:1:1混着用。</p>
+<h2 id="preface">Preface</h2>
+<p>本文灵感首先来自来自和<a href="https://www.zhihu.com/people/li-yong-kang-9-34" target="_blank" rel="noopener noreffer ">@ykli</a>同学的讨论，在此特别感谢<a href="https://www.zhihu.com/people/li-yong-kang-9-34" target="_blank" rel="noopener noreffer ">@ykli</a>在推导过程中给予的大量帮助。</p>
+<p>这个问题在physics stackexchange网站上也被提及（被称为“Multi-channel Mean Field Theory”），在此也放上链接供大家参考：</p>
+<p><a href="https://physics.stackexchange.com/questions/742905/multi-channel-mean-field-theory" target="_blank" rel="noopener noreffer ">https://physics.stackexchange.com/questions/742905/multi-channel-mean-field-theory</a></p>
+<p>同时，<a href="https://www.zhihu.com/people/deng-wwzz" target="_blank" rel="noopener noreffer ">@阿兰那行</a>学长关于“物理圈黑话”的回答也给了我相当多的灵感，有兴趣的读者可以移步：</p>
+<p><a href="https://www.zhihu.com/question/410499049/answer/2442413803" target="_blank" rel="noopener noreffer ">https://www.zhihu.com/question/410499049/answer/2442413803</a></p>
+<h2 id="introduction">Introduction</h2>
+<p>对于相互作用体系，系统完整的哈密顿量为：</p>
+<p>$$
+\begin{aligned}
+\hat{H} = \hat{H}<em>0 + \hat{V}</em>{int}
+\end{aligned}
+$$</p>
+<p>其中，$\hat{H}_0 \sim \sum c^\dagger c$，为费米子产生湮灭算符的二次型部分，比较容易处理成independent free particle。</p>
+<p>而$\hat{V}_{int} \sim \sum c^\dagger c^\dagger c c$，为相互作用部分。</p>
+<p>由于相互作用的存在，我们比较难求系统的基态波函数或者平衡态密度矩阵，从而比较难以计算相互作用体系的各种信息。因此，我们常常用各种近似方法来处理。</p>
+<p>平均场近似便是一种方法，我们取一个可以严格解的平均场近似哈密顿量：</p>
+<p>$$
+\begin{aligned}
+\hat{H}_{mf} = \hat{H}<em>0 + \hat{V}</em>{mf}
+\end{aligned}
+$$</p>
+<p>使得$\hat{V}_{mf}$也为二次型，则比较好求严格解，我们便可以用这个平均场近似哈密顿量的解来近似给出系统的各种性质。</p>
+<h2 id="mean-field-theory-by-decoupling">Mean Field Theory by Decoupling</h2>
+<p>但取近似不能瞎取，也需要一定技巧。</p>
+<p>量子力学课本中教我们，平均场近似就是把算符的quantum fluctuation部分给忽略，即Decoupling Method：</p>]]></description>
+</item>
+<item>
+    <title>平均場近似と変分法｜Hartree, Fock, BCSは1:1:1で混ぜて使えるか？</title>
+    <link>http://localhost:1313/OkongOyangO.Notes/posts/mean_field_approximation.ja/</link>
+    <pubDate>Fri, 09 Jan 2026 19:05:46 &#43;0000</pubDate>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/OkongOyangO.Notes/posts/mean_field_approximation.ja/</guid>
+    <description><![CDATA[<p>本文は平均場近似を紹介すると同時に、その変分法的本質を説明することを目的としています。</p>
+<p>Hartree, Fock, BCSといった個々の平均場近似は、一見すると互いに相容れないdecouple（分離）手法のように見えますが、平均場近似の変分法的本質を利用することで、これらは実際に1:1:1で混ぜて使用できることがわかります。</p>
+<h2 id="preface">Preface</h2>
+<p>本文のインスピレーションは、まずクラスメートの<a href="https://www.zhihu.com/people/li-yong-kang-9-34" target="_blank" rel="noopener noreffer ">@ykli</a>との議論から得られました。導出過程で多大な助けをくれた<a href="https://www.zhihu.com/people/li-yong-kang-9-34" target="_blank" rel="noopener noreffer ">@ykli</a>に感謝します。</p>
+<p>この問題はPhysics Stack Exchangeのウェブサイトでも言及されており（&ldquo;Multi-channel Mean Field Theory&quot;と呼ばれています）、参考のためにリンクを貼っておきます：</p>
+<p><a href="https://physics.stackexchange.com/questions/742905/multi-channel-mean-field-theory" target="_blank" rel="noopener noreffer ">https://physics.stackexchange.com/questions/742905/multi-channel-mean-field-theory</a></p>
+<p>また、<a href="https://www.zhihu.com/people/deng-wwzz" target="_blank" rel="noopener noreffer ">@阿兰那行</a>先輩の「物理界隈の隠語」に関する回答からもかなりのインスピレーションを得ました。興味のある読者は以下をご覧ください：</p>
+<p><a href="https://www.zhihu.com/question/410499049/answer/2442413803" target="_blank" rel="noopener noreffer ">https://www.zhihu.com/question/410499049/answer/2442413803</a></p>
+<h2 id="introduction">Introduction</h2>
+<p>相互作用系において、システムの完全なハミルトニアンは以下の通りです：</p>
+<p>$$
+\begin{aligned}
+\hat{H} = \hat{H}<em>0 + \hat{V}</em>{int}
+\end{aligned}
+$$</p>
+<p>ここで、$\hat{H}_0 \sim \sum c^\dagger c$ はフェルミ粒子生成消滅演算子の二次形式部分であり、独立した自由粒子として比較的容易に扱えます。</p>
+<p>一方、$\hat{V}_{int} \sim \sum c^\dagger c^\dagger c c$ は相互作用部分です。</p>
+<p>相互作用の存在により、システムの基底状態波動関数や平衡状態密度行列を求めることは難しく、相互作用系の様々な情報を計算することも困難になります。そのため、我々はしばしば様々な近似手法を用いて処理します。</p>
+<p>平均場近似はそのような手法の一つです。厳密に解くことができる平均場近似ハミルトニアンを取り上げます：</p>
+<p>$$
+\begin{aligned}
+\hat{H}_{mf} = \hat{H}<em>0 + \hat{V}</em>{mf}
+\end{aligned}
+$$</p>
+<p>$\hat{V}_{mf}$ もまた二次形式にすることで、厳密解を求めることが容易になります。そして、この平均場近似ハミルトニアンの解を用いて、システムの様々な性質を近似的に導き出すことができます。</p>
+<h2 id="mean-field-theory-by-decoupling">Mean Field Theory by Decoupling</h2>
+<p>しかし、近似は適当に選べばよいわけではなく、ある程度のテクニックが必要です。</p>
+<p>量子力学の教科書では、平均場近似とは演算子の量子揺らぎ部分を無視すること、すなわちDecoupling Method（分離法）であると教えられます：</p>]]></description>
+</item>
+<item>
+    <title>Fermi Golden Rule? Just Joule Heat!</title>
+    <link>http://localhost:1313/OkongOyangO.Notes/posts/joule_heat/</link>
+    <pubDate>Thu, 08 Jan 2026 21:54:37 -0500</pubDate>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/OkongOyangO.Notes/posts/joule_heat/</guid>
+    <description><![CDATA[<p>This article aims to clarify the consistency between Fermi&rsquo;s Golden Rule and Joule Heat.</p>
+<h2 id="introduction">Introduction</h2>
+<p>Fermi&rsquo;s Golden Rule can calculate the system&rsquo;s absorption of electromagnetic fields, while the Kubo Formula can calculate the current response, and the Joule heat formula can also calculate the absorption of electromagnetic fields.</p>
+<p>The former seems to calculate entirely from the perspective of quantum transitions, while the latter seems to calculate entirely from the perspective of Joule heat. However, both are essentially applications of time-dependent perturbation theory in quantum mechanics. We touched upon this in the previous two articles, but did not elaborate on their consistency. Interested readers can visit:</p>]]></description>
+</item>
+<item>
+    <title>Fractional Quantum Hall Effect (FQHE), Fractional Anomalous Quantum Hall Effect (FAQHE) and Fractional Chern Insulator (FCI)</title>
+    <link>http://localhost:1313/OkongOyangO.Notes/posts/fqhe_faqhe_fci/</link>
+    <pubDate>Thu, 08 Jan 2026 21:54:37 -0500</pubDate>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/OkongOyangO.Notes/posts/fqhe_faqhe_fci/</guid>
+    <description><![CDATA[<p>This note is approximately 10,000 words long and aims to help readers get started with Fractional Quantum Hall Effect (FQHE), Fractional Anomalous Quantum Hall Effect (FAQHE), and Fractional Chern Insulators (FCI). This article represents only my personal perspective and may contain errors; I welcome corrections from readers. Below is the main text.</p>
+<h2 id="introduction-to-fqhe-faqhe--fci">Introduction to FQHE, FAQHE &amp; FCI</h2>
+<p>The Quantum Hall Effect requires a strong magnetic field environment to be realized. However, the emergence of the Haldane Model and Chern Insulators allowed the Quantum Hall Effect to be realized in <strong>lattice systems without an external magnetic field</strong>. This phenomenon is called the &ldquo;Quantum Anomalous Hall Effect&rdquo;. In Chern Insulators, the non-trivial Berry Curvature distribution endows the lattice system with non-trivial topological properties similar to the Quantum Hall Effect, or even further, <strong>Berry Curvature replaces the magnetic field</strong> (although Berry Curvature is defined in reciprocal space, while the magnetic field appears in real space). Discussions on Chern Insulators and other topological phases derived from this have also become hot topics in the field of condensed matter theory in recent years.</p>]]></description>
+</item>
+<item>
+    <title>How to Distinguish Conductors and Insulators by Ground State Only? 🤔</title>
+    <link>http://localhost:1313/OkongOyangO.Notes/posts/distinguish_conductors_insulators_ground_state/</link>
+    <pubDate>Thu, 08 Jan 2026 21:54:37 -0500</pubDate>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/OkongOyangO.Notes/posts/distinguish_conductors_insulators_ground_state/</guid>
+    <description><![CDATA[<p>This note aims to elucidate the connection between the <strong>conductivity</strong> of a many-body system and the <strong>quantum geometry of its ground state</strong>, and to explain how to distinguish between conductors and insulators solely based on the &ldquo;locality&rdquo; of the ground state wavefunction.</p>
+<h2 id="introduction">Introduction</h2>
+<p>&ldquo;Distinguishing conductors and insulators by only looking at the ground state&rdquo;—this argument seems a bit outrageous.</p>
+<p>The Band Theory of the 1930s (to some extent) explained the difference between conductors and insulators. At the non-interacting level, conductors and insulators can be distinguished by whether the ground state energy bands are filled. If the valence band is filled and there is a band gap $E_g &gt; 0$ separating it from the conduction band, it is an insulator; otherwise, it is a conductor. Here, the band gap $E_g$ is used to distinguish them, but defining $E_g$ requires knowing the energy of excited states, thus inevitably involving excited state properties.</p>]]></description>
+</item>
+<item>
+    <title>Nonlinear Response Theory of the Kubo Formula</title>
+    <link>http://localhost:1313/OkongOyangO.Notes/posts/nonlinear-kubo-formalism/</link>
+    <pubDate>Thu, 08 Jan 2026 21:54:37 -0500</pubDate>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/OkongOyangO.Notes/posts/nonlinear-kubo-formalism/</guid>
+    <description><![CDATA[<p>#! <a href="https://zhuanlan.zhihu.com/p/611996682" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/611996682</a></p>
+<h1 id="nonlinear-response-theory-of-the-kubo-formula">Nonlinear Response Theory of the Kubo Formula</h1>
+<p>This article aims to derive the nonlinear response theory of the Kubo Formula.</p>
+<h2 id="introduction">Introduction</h2>
+<p>Both linear and nonlinear response theories of the Kubo Formula are essentially perturbation theories in quantum mechanics.</p>
+<p>Linear response is more common; for example, experimentally measured susceptibilities such as conductivity, magnetic susceptibility, and electric polarizability are all linear response functions (Retarded Green Functions).</p>
+<p>However, nonlinear response also has its application values, such as second-order current response in semiconductors, including Second Harmonic Generation, Injection and Shift Current, etc.</p>]]></description>
+</item>
+</channel>
+</rss>

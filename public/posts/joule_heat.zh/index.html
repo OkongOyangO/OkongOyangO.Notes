@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src="/OkongOyangO.Notes/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=OkongOyangO.Notes/livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>费米黄金定则？焦耳热罢了！ - Yiyang&#39;s Physics Notes</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="http://localhost:1313/OkongOyangO.Notes/posts/joule_heat.zh/">
+  <meta property="og:site_name" content="Yiyang&#39;s Physics Notes">
+  <meta property="og:title" content="费米黄金定则？焦耳热罢了！">
+  <meta property="og:description" content="本文旨在阐述费米黄金法则和焦耳热的一致性。
+Introduction 费米黄金法则能计算系统对电磁场的吸收，而Kubo Formula能计算电流响应，用焦耳热公式也能计算电磁场的吸收。
+前者似乎完全从量子跃迁的角度计算，而后者似乎完全从焦耳热的角度计算。但两者本质上都是量子力学中的含时围绕理论的应用，这一点我们在前两篇文章中便有所涉及，只不过对两者的一致性没有详尽的阐述，有兴趣的读者可以移步浏览：
+https://zhuanlan.zhihu.com/p/611688122
+https://zhuanlan.zhihu.com/p/611996682
+可以证明，费米黄金法则对应Kubo Formula中哈密顿量$H_0$的二阶响应变化率$\frac{d }{dt}\langle H_0 \rangle^{(2)}$，而此二阶响应变化率可以表示成电流线性响应与外加电场的内积$\langle \hat{\mathbf{J}} \rangle^{(1)} \cdot \mathbf{E}$。
+Fermi Golden Rule 费米黄金法则旨在计算时谐外场微扰下，量子系统从初态$|i\rangle$到末态$|f\rangle$（均为$H_0$的本征态）的跃迁速率。在之前的费米黄金法则的文章中，我们用Dirac Picture重新推导了一遍，而使用Dirac Picture是为了更好与Kubo Formula进行比较。
+Dirac表象下态的运动方程：
+$$ \begin{aligned} i \hbar \partial_t |\psi(t) \rangle_D = \hat{V}_D(t) |\psi(t) \rangle_D \end{aligned} $$
+对运动方程积分后迭代可以得到Dirac表象下态随时间演化的微扰展开形式。假设系统在$t = t_0$时，初态为$|i\rangle$，则：
+$$ \begin{aligned} | \psi (t) \rangle_D &amp; = |i\rangle &#43; (-i/\hbar) \int_{t_0}^{t}dt_1 \hat{V}D(t_1)|i\rangle &#43; (-i/\hbar)^2 \int{t_0}^{t}dt_1 \int_{t_0}^{\mathbf{t_1}}dt_2 \hat{V}_D(t_1) \hat{V}_D(t_2)|i\rangle &#43; \dots \ &amp; = | \psi^{(0)} \rangle &#43; | \psi^{(1)}\rangle &#43; | \psi^{(2)}\rangle &#43; \dots \end{aligned} $$">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-01-08T21:54:37-05:00">
+    <meta property="article:modified_time" content="2026-01-08T21:54:37-05:00">
+    <meta property="article:tag" content="Quantum Mechanics">
+    <meta property="article:tag" content="Joule Heat">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="费米黄金定则？焦耳热罢了！">
+  <meta name="twitter:description" content="本文旨在阐述费米黄金法则和焦耳热的一致性。
+Introduction 费米黄金法则能计算系统对电磁场的吸收，而Kubo Formula能计算电流响应，用焦耳热公式也能计算电磁场的吸收。
+前者似乎完全从量子跃迁的角度计算，而后者似乎完全从焦耳热的角度计算。但两者本质上都是量子力学中的含时围绕理论的应用，这一点我们在前两篇文章中便有所涉及，只不过对两者的一致性没有详尽的阐述，有兴趣的读者可以移步浏览：
+https://zhuanlan.zhihu.com/p/611688122
+https://zhuanlan.zhihu.com/p/611996682
+可以证明，费米黄金法则对应Kubo Formula中哈密顿量$H_0$的二阶响应变化率$\frac{d }{dt}\langle H_0 \rangle^{(2)}$，而此二阶响应变化率可以表示成电流线性响应与外加电场的内积$\langle \hat{\mathbf{J}} \rangle^{(1)} \cdot \mathbf{E}$。
+Fermi Golden Rule 费米黄金法则旨在计算时谐外场微扰下，量子系统从初态$|i\rangle$到末态$|f\rangle$（均为$H_0$的本征态）的跃迁速率。在之前的费米黄金法则的文章中，我们用Dirac Picture重新推导了一遍，而使用Dirac Picture是为了更好与Kubo Formula进行比较。
+Dirac表象下态的运动方程：
+$$ \begin{aligned} i \hbar \partial_t |\psi(t) \rangle_D = \hat{V}_D(t) |\psi(t) \rangle_D \end{aligned} $$
+对运动方程积分后迭代可以得到Dirac表象下态随时间演化的微扰展开形式。假设系统在$t = t_0$时，初态为$|i\rangle$，则：
+$$ \begin{aligned} | \psi (t) \rangle_D &amp; = |i\rangle &#43; (-i/\hbar) \int_{t_0}^{t}dt_1 \hat{V}D(t_1)|i\rangle &#43; (-i/\hbar)^2 \int{t_0}^{t}dt_1 \int_{t_0}^{\mathbf{t_1}}dt_2 \hat{V}_D(t_1) \hat{V}_D(t_2)|i\rangle &#43; \dots \ &amp; = | \psi^{(0)} \rangle &#43; | \psi^{(1)}\rangle &#43; | \psi^{(2)}\rangle &#43; \dots \end{aligned} $$">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/OkongOyangO.Notes/posts/joule_heat.zh/" /><link rel="next" href="http://localhost:1313/OkongOyangO.Notes/posts/distinguish_conductors_insulators_ground_state.ja/" /><link rel="stylesheet" href="/OkongOyangO.Notes/css/style.min.css"><link rel="preload" href="/OkongOyangO.Notes/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/OkongOyangO.Notes/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/OkongOyangO.Notes/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/OkongOyangO.Notes/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "费米黄金定则？焦耳热罢了！",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/OkongOyangO.Notes\/posts\/joule_heat.zh\/"
+        },"genre": "posts","keywords": "Quantum Mechanics, Joule Heat","wordcount":  1077 ,
+        "url": "http:\/\/localhost:1313\/OkongOyangO.Notes\/posts\/joule_heat.zh\/","datePublished": "2026-01-08T21:54:37-05:00","dateModified": "2026-01-08T21:54:37-05:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "xxxx"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/OkongOyangO.Notes/" title="Yiyang&#39;s Physics Notes">Yiyang&#39;s Notes</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/OkongOyangO.Notes/posts/"><i class='fas fa-archive fa-fw'></i> Posts </a><a class="menu-item" href="/OkongOyangO.Notes/tags/"><i class='fas fa-tags fa-fw'></i> Tags </a><a class="menu-item" href="/OkongOyangO.Notes/categories/"><i class='fas fa-th-list fa-fw'></i> Categories </a><a class="menu-item" href="https://OkongOyangO.github.io" title="Go back to Academic Homepage" rel="noopener noreffer" target="_blank"><i class='fas fa-home fa-fw'></i> Main Homepage </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search notes..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/OkongOyangO.Notes/" title="Yiyang&#39;s Physics Notes">Yiyang&#39;s Notes</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search notes..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/OkongOyangO.Notes/posts/" title=""><i class='fas fa-archive fa-fw'></i>Posts</a><a class="menu-item" href="/OkongOyangO.Notes/tags/" title=""><i class='fas fa-tags fa-fw'></i>Tags</a><a class="menu-item" href="/OkongOyangO.Notes/categories/" title=""><i class='fas fa-th-list fa-fw'></i>Categories</a><a class="menu-item" href="https://OkongOyangO.github.io" title="Go back to Academic Homepage" rel="noopener noreffer" target="_blank"><i class='fas fa-home fa-fw'></i>Main Homepage</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">费米黄金定则？焦耳热罢了！</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/OkongOyangO.Notes/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>xxxx</a></span>&nbsp;<span class="post-category">included in <a href="/OkongOyangO.Notes/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-01-08">2026-01-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1077 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;6 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#fermi-golden-rule">Fermi Golden Rule</a></li>
+    <li><a href="#kubo-formula">Kubo Formula</a></li>
+    <li><a href="#absorption-rate">Absorption Rate</a></li>
+    <li><a href="#joule-heat--energy-absorption">Joule Heat = Energy Absorption</a></li>
+    <li><a href="#current-response">Current Response</a></li>
+    <li><a href="#summary">Summary</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>本文旨在阐述费米黄金法则和焦耳热的一致性。</p>
+<h2 id="introduction">Introduction</h2>
+<p>费米黄金法则能计算系统对电磁场的吸收，而Kubo Formula能计算电流响应，用焦耳热公式也能计算电磁场的吸收。</p>
+<p>前者似乎完全从量子跃迁的角度计算，而后者似乎完全从焦耳热的角度计算。但两者本质上都是量子力学中的含时围绕理论的应用，这一点我们在前两篇文章中便有所涉及，只不过对两者的一致性没有详尽的阐述，有兴趣的读者可以移步浏览：</p>
+<p><a href="https://zhuanlan.zhihu.com/p/611688122" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/611688122</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/611996682" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/611996682</a></p>
+<p>可以证明，费米黄金法则对应Kubo Formula中哈密顿量$H_0$的二阶响应变化率$\frac{d }{dt}\langle H_0 \rangle^{(2)}$，而此二阶响应变化率可以表示成电流线性响应与外加电场的内积$\langle \hat{\mathbf{J}} \rangle^{(1)} \cdot \mathbf{E}$。</p>
+<h2 id="fermi-golden-rule">Fermi Golden Rule</h2>
+<p>费米黄金法则旨在计算时谐外场微扰下，量子系统从初态$|i\rangle$到末态$|f\rangle$（均为$H_0$的本征态）的跃迁速率。在之前的费米黄金法则的文章中，我们用Dirac Picture重新推导了一遍，而使用Dirac Picture是为了更好与Kubo Formula进行比较。</p>
+<p>Dirac表象下态的运动方程：</p>
+<p>$$
+\begin{aligned}
+i \hbar \partial_t |\psi(t) \rangle_D = \hat{V}_D(t) |\psi(t) \rangle_D
+\end{aligned}
+$$</p>
+<p>对运动方程积分后迭代可以得到Dirac表象下态随时间演化的微扰展开形式。假设系统在$t = t_0$时，初态为$|i\rangle$，则：</p>
+<p>$$
+\begin{aligned}
+| \psi (t) \rangle_D &amp; = |i\rangle + (-i/\hbar) \int_{t_0}^{t}dt_1 \hat{V}<em>D(t_1)|i\rangle + (-i/\hbar)^2 \int</em>{t_0}^{t}dt_1 \int_{t_0}^{\mathbf{t_1}}dt_2  \hat{V}_D(t_1) \hat{V}_D(t_2)|i\rangle + \dots \
+&amp; = | \psi^{(0)} \rangle + | \psi^{(1)}\rangle + | \psi^{(2)}\rangle + \dots
+\end{aligned}
+$$</p>
+<p>则$t$时刻$|f\rangle$态的概率为也可以微扰展开成：</p>
+<p>$$
+\begin{aligned}
+|\langle f | \psi (t) \rangle_D|^2 &amp; = \left| \langle f| \psi^{(0)} \rangle + \langle f| \psi^{(1)} \rangle + \langle f| \psi^{(2)} \rangle + \dots \right|^2 \
+&amp; = \underbrace{\langle f| \psi^{(0)} \rangle \langle \psi^{(0)} | f\rangle }<em>{\mathcal{O}(V^0)} \
+&amp; + \underbrace{\langle f| \psi^{(1)} \rangle \langle \psi^{(0)} | f\rangle + \langle f| \psi^{(0)} \rangle \langle \psi^{(1)} | f\rangle }</em>{\mathcal{O}(V^1)} \
+&amp; + \underbrace{\langle f| \psi^{(2)} \rangle \langle \psi^{(0)} | f\rangle + \langle f| \psi^{(1)} \rangle \langle \psi^{(1)} | f\rangle + \langle f| \psi^{(0)} \rangle \langle \psi^{(2)} | f\rangle }_{\mathcal{O}(V^2)} \
+&amp; + \dots
+\end{aligned}
+$$</p>
+<h2 id="kubo-formula">Kubo Formula</h2>
+<p>Kubo Formula的推导也在相互作用（Dirac）绘景下完成，只不过计算的是系统密度矩阵的演化，而非波函数的演化。</p>
+<p>相互作用（Dirac）绘景下密度矩阵的运动方程：</p>
+<p>$$
+\begin{aligned}
+\frac{d}{dt} \hat{\rho}_D(t) = - \frac{i}{\hbar} [ \hat{\rho}_D(t) , \hat{V}_D(t) ]
+\end{aligned}
+$$</p>
+<p>积分后重复迭代，我们可以得到密度矩阵的展开式：</p>
+<p>$$
+\begin{aligned}
+\hat{\rho}<em>D(t) &amp; = \hat{\rho}<em>0 + \sum</em>{n = 1}^{\infty} (-\frac{\mathrm{i}}{\hbar})^n \int</em>{-\infty}^{t} dt_1 \int_{-\infty}^{t_1} dt_2 \dots \int_{-\infty}^{t_{n-1}} dt_n [\hat{V}_D(t_1),[\dots[\hat{V}_D(t_n),\hat{\rho}<em>0]\dots] ]\
+&amp; = \hat{\rho}^{(0)} + \sum</em>{i=1}^{\infty} \hat{\rho}^{(i)}
+\end{aligned}
+$$</p>
+<p>对于纯态的密度矩阵，初态为$| i \rangle$，不难发现，密度矩阵的微扰展开与波函数的微扰展开是一致的，因为两者均是量子力学的含时微扰理论。</p>
+<p>$$
+\begin{aligned}
+\hat{\rho}<em>D(t) &amp; = | \psi (t) \rangle_D \langle \psi(t) |<em>D \
+&amp; = (| \psi^{(0)} \rangle + | \psi^{(1)}\rangle + \dots) (\langle \psi^{(0)} | + \langle \psi^{(1)} | + \dots) \
+&amp; = \underbrace{| \psi^{(0)} \rangle \langle \psi^{(0)} | }</em>{\hat{\rho}^{(0)}} \
+&amp; + \underbrace{| \psi^{(1)} \rangle \langle \psi^{(0)} | + | \psi^{(0)} \rangle \langle \psi^{(1)} | }</em>{\hat{\rho}^{(1)}} \
+&amp; + \underbrace{| \psi^{(2)} \rangle \langle \psi^{(0)} | + | \psi^{(1)} \rangle \langle \psi^{(1)} | + | \psi^{(0)} \rangle \langle \psi^{(2)} | }_{\hat{\rho}^{(2)}} \
+&amp; + \dots
+\end{aligned}
+$$</p>
+<p>要求$|f\rangle$态的概率，用密度矩阵（Kubo Formula）的语言描述，便是把$|f\rangle$态的投影算符作为可观测量：</p>
+<p>$$
+\begin{aligned}
+\hat{\mathcal{O}} = | f \rangle \langle f |
+\end{aligned}
+$$</p>
+<p>那么$|f\rangle$态的概率为：</p>
+<p>$$
+\begin{aligned}
+|\langle f | \psi (t) \rangle_D|^2 &amp; = \langle f | \psi (t) \rangle_D {}<em>D\langle \psi(t) | f \rangle \
+&amp; = \operatorname{Tr} \left{ \hat{\rho}<em>D(t) \hat{\mathcal{O}} \right} \
+&amp; = \underbrace{\langle f| \psi^{(0)} \rangle \langle \psi^{(0)} | f\rangle }</em>{\mathcal{O}(V^0) = \operatorname{Tr} \left{ \hat{\rho}^{(0)} \hat{\mathcal{O}} \right}} \
+&amp; + \underbrace{\langle f| \psi^{(1)} \rangle \langle \psi^{(0)} | f\rangle + \langle f| \psi^{(0)} \rangle \langle \psi^{(1)} | f\rangle }</em>{\mathcal{O}(V^1) = \operatorname{Tr} \left{ \hat{\rho}^{(1)} \hat{\mathcal{O}} \right}} \
+&amp; + \underbrace{\langle f| \psi^{(2)} \rangle \langle \psi^{(0)} | f\rangle + \langle f| \psi^{(1)} \rangle \langle \psi^{(1)} | f\rangle + \langle f| \psi^{(0)} \rangle \langle \psi^{(2)} | f\rangle }_{\mathcal{O}(V^2) = \operatorname{Tr} \left{ \hat{\rho}^{(2)} \hat{\mathcal{O}} \right}} \
+&amp; + \dots
+\end{aligned}
+$$</p>
+<p>可见费米黄金法则和Kubo Formula在计算末态概率时，是一回事。密度矩阵也可以推广到混态，从而计算有概率分布的初态出发的末态概率。</p>
+<p>我们还是先关注纯态密度矩阵，注意到波函数的零阶展开项为</p>
+<p>$$
+\begin{aligned}
+| \psi^{(0)} = | i \rangle
+\end{aligned}
+$$</p>
+<p>因此，末态概率的零阶和一阶展开项均为零，从而末态概率的最低阶响应来自二阶项，所以我们说：</p>
+<p><strong>费米黄金法则和末态概率的二阶响应一致。</strong></p>
+<h2 id="absorption-rate">Absorption Rate</h2>
+<p>用费米黄金法则计算系统的能量吸收率时，我们计算的是：</p>
+<p>$$
+\begin{aligned}
+P = \frac{dE_{system}}{dt} = \sum_{f} (E_f - E_i) \frac{d}{dt} |\langle f | \psi (t) \rangle_D|^2
+\end{aligned}
+$$</p>
+<p>其中$E_{i,f}$为初态、末态$|i\rangle,,|f\rangle$的能量，不难理解，能量变化率就是跃迁速率乘以能量的改变，并对所有可能的跃迁求和。</p>
+<p>推广到Kubo Formula的语言中，能量吸收率其实是未受微扰的哈密顿量$\hat{H}_0$的期望值的变化率：</p>
+<p>$$
+\begin{aligned}
+P = \frac{dE_{system}}{dt} = \frac{d}{dt}\langle \hat{H}_0 \rangle
+\end{aligned}
+$$</p>
+<p>这看着很intuitive，也不难证明它和Fermi Golden Rule说的是一回事。</p>
+<p>$$
+\begin{aligned}
+P &amp; = (E_f - E_i) \frac{d}{dt} |\langle f | \psi (t) \rangle|^2 \
+&amp; = \frac{d}{dt} \left{ \langle \psi (t) | \left( \sum_{f}(E_f - E_i) | f \rangle \langle f |\right) | \psi (t) \rangle \right} \
+&amp; = \frac{d}{dt} \left{ \langle \psi (t) | \left( \sum_{f}E_f | f \rangle \langle f |\right) | \psi (t) \rangle \right} - E_i \frac{d}{dt} \left{ \langle \psi (t) | \left( \sum_{f} | f \rangle \langle f |\right) | \psi (t) \rangle \right} \
+&amp; = \frac{d}{dt} \left{ \langle \psi (t) | \hat{H}_0 | \psi (t) \rangle \right} - E_i \frac{d}{dt} \left{ \langle \psi (t) | \mathbb{I} | \psi (t) \rangle \right} \
+&amp; = \frac{d}{dt}\langle \hat{H}_0 \rangle - 0
+\end{aligned}
+$$</p>
+<p>这是纯态下的结果，混态不过是按概率叠加各个结果，不难想象也能成立。</p>
+<p>这样，我们便把跃迁速率、能量吸收速率等语言统一并推广到了Kubo Formula中。值得一提，与$|f\rangle$态的概率类似，$\langle \hat{H}_0 \rangle$的最低阶非零响应也从二阶开始算起。</p>
+<h2 id="joule-heat--energy-absorption">Joule Heat = Energy Absorption</h2>
+<p>下面我们来证明焦耳热和能量吸收率在Kubo Formula中的一致性。</p>
+<p>焦耳热定义为电流响应与外加电场的内积$\langle \hat{\mathbf{J}} \rangle (t) \cdot \mathbf{E}(t)$。</p>
+<p>对于电场微扰（我们先考虑空间分布均匀的时变电场），微扰哈密顿量为：</p>
+<p>$$
+\begin{aligned}
+\hat{V}_S(t) = - \hat{\mathbf{P}} \cdot \mathbf{E}(t) = -(-e) \hat{\mathbf{r}} \cdot \mathbf{E}(t)
+\end{aligned}
+$$</p>
+<p>电流响应$\langle \hat{\mathbf{J}} \rangle (t)$的n阶微扰：</p>
+<p>$$
+\begin{aligned}
+\langle \hat{\mathbf{J}} \rangle^{(n)} (t) \propto \mathcal{O}(|\mathbf{E}|^n) \propto \mathcal{O}(V^n)
+\end{aligned}
+$$</p>
+<p>对应焦耳热$\langle \hat{\mathbf{J}} \rangle (t) \cdot \mathbf{E}(t)$的n+1阶微扰：</p>
+<p>$$
+\begin{aligned}
+\langle \hat{\mathbf{J}} \rangle^{(n)} (t) \cdot \mathbf{E}(t) \propto {O}(|\mathbf{E}|^{n+1}) \propto \mathcal{O}(V^{n+1})
+\end{aligned}
+$$</p>
+<p>从而电流的线性（一阶）响应的焦耳热和能量变化率的二阶响应，微扰展开阶数的层面上是一致的。</p>
+<p>我们的目标是证明<strong>电流的线性（一阶）响应的焦耳热和能量变化率的二阶响应</strong>在表达式上严格一致。</p>
+<h2 id="current-response">Current Response</h2>
+<p>此处我们定义“电流”为电极化的变化率，即电流密度的体积分：</p>
+<p>$$
+\begin{aligned}
+\hat{\mathbf{J}} \equiv \iiint dV \hat{\mathbf{j}} \equiv \frac{d}{dt} \hat{\mathbf{P}}
+\end{aligned}
+$$</p>
+<p>在Dirac Picture下，电流算符与电极化算符的关系为：</p>
+<p>$$
+\begin{aligned}
+\hat{\mathbf{J}}_D = \frac{d}{dt} \hat{\mathbf{P}}_D = (- \frac{i}{\hbar}) [ \hat{\mathbf{P}}_D, \hat{H}_0 ]
+\end{aligned}
+$$</p>
+<p>从而微扰$\hat{V}_S(t) = - \hat{\mathbf{P}} \cdot \mathbf{E}(t)$的一阶电流响应为：</p>
+<p>$$
+\begin{aligned}
+\langle \hat{\mathbf{J}} \rangle^{(1)} (t) &amp; = (- \frac{i}{\hbar}) \int_{-\infty}^{t} dt_1 \operatorname{Tr} \left{ \hat{\rho}_0 [\hat{\mathbf{J}}_D(t) , \hat{V}<em>D(t_1)] \right} \
+&amp; = (- \frac{i}{\hbar})^2 \int</em>{-\infty}^{t} dt_1 \operatorname{Tr} \left{ \hat{\rho}_0 [ [ \hat{\mathbf{P}}_D, \hat{H}_0 ] , \hat{V}_D(t_1)] \right}
+\end{aligned}
+$$</p>
+<p>从而一阶电流响应对应的二阶焦耳热为：</p>
+<p>$$
+\begin{aligned}
+\langle \hat{\mathbf{J}} \rangle^{(1)} (t) \cdot \mathbf{E} (t) &amp; = (- \frac{i}{\hbar}) \int_{-\infty}^{t} dt_1 \operatorname{Tr} \left{ \hat{\rho}_0 [\hat{\mathbf{J}}_D(t) \cdot \mathbf{E} (t) , \hat{V}<em>D(t_1)] \right}  \
+&amp; = (- \frac{i}{\hbar})^2 \int</em>{-\infty}^{t} dt_1 \operatorname{Tr} \left{ \hat{\rho}_0 [ [ \hat{\mathbf{P}}_D \cdot \mathbf{E} (t) , \hat{H}_0 ] , \hat{V}_D(t_1)] \right}
+\end{aligned}
+$$</p>
+<p>而$\hat{\mathbf{P}}_D \cdot \mathbf{E} (t)$正好就是微扰$-\hat{V}_D(t)$的表达式，具体而言：</p>
+<p>$$
+\begin{aligned}
+\langle \hat{\mathbf{J}} \rangle^{(1)} (t) \cdot \mathbf{E} (t) &amp; = (- \frac{i}{\hbar})^2 \int_{-\infty}^{t} dt_1 \operatorname{Tr} \left{ \hat{\rho}_0 [ [ -\hat{V}_D(t) , \hat{H}_0 ] , \hat{V}<em>D(t_1)] \right} \
+&amp; = (- \frac{i}{\hbar})^2 \int</em>{-\infty}^{t} dt_1 \operatorname{Tr} \left{ \hat{\rho}_0 [ [ \hat{H}_0, \hat{V}_D(t) ] , \hat{V}_D(t_1)] \right}
+\end{aligned}
+$$</p>
+<p>看到两个$\hat{V}_D$的对易子，不难看出这基本就是$\langle \hat{H}_0 \rangle$的二阶响应的变化率，少了一个时间积分是因为对时间求了一次导，具体而言：</p>
+<p>$$
+\begin{aligned}
+\langle \hat{H}<em>0 \rangle^{(2)} (t) &amp; = (-\frac{\mathrm{i}}{\hbar})^2 \int</em>{-\infty}^t \mathrm{~d} t_1 \int_{-\infty}^{t_1} \mathrm{~d} t_2  \operatorname{Tr} \left{\rho_0\left[ \left[{\hat{H}<em>0}<em>D(t), \hat{V}</em>{D}\left(t_1\right)\right],\hat{V}</em>{D}\left(t_2\right)\right]\right} \
+&amp; = (-\frac{\mathrm{i}}{\hbar})^2 \int_{-\infty}^t \mathrm{~d} t_1 \int_{-\infty}^{t_1} \mathrm{~d} t_2  \operatorname{Tr} \left{\rho_0\left[ \left[\hat{H}<em>0, \hat{V}</em>{D}\left(t_1\right)\right],\hat{V}_{D}\left(t_2\right)\right]\right} \
+\end{aligned}
+$$</p>
+<p>此处运用了${\hat{H}_0}$在Dirac Picture下就是其本身的性质，以及${\hat{H}_0}_D(t)$不显含时间的性质（时间平移对称性）：</p>
+<p>$$
+\begin{aligned}
+{\hat{H}_0}_D(t) = e^{ \frac{i}{\hbar}\hat{H}_0 t} {\hat{H}_0} e^{- \frac{i}{\hbar}\hat{H}_0 t} = \hat{H}_0
+\end{aligned}
+$$</p>
+<p>那么此时，$\langle \hat{H}_0 \rangle$的二阶响应对时间的依赖，仅在第一个时间积分的上界，所以其变化率就少了一个时间积分（并且把积分参量$t_1$改为$t$），并且和电流一阶响应的焦耳热表达式完全一致：</p>
+<p>$$
+\begin{aligned}
+\frac{d}{dt} \langle \hat{H}<em>0 \rangle^{(2)} &amp;= (-\frac{\mathrm{i}}{\hbar})^2  \int</em>{-\infty}^{t} \mathrm{~d} t_2  \operatorname{Tr} \left{\hat{\rho}<em>0\left[ \left[\hat{H}<em>0, \hat{V}</em>{D}(t)\right],\hat{V}</em>{D}(t_2)\right]\right} \
+\langle \hat{\mathbf{J}} \rangle^{(1)} (t) \cdot \mathbf{E} (t) &amp; = (-\frac{\mathrm{i}}{\hbar})^2 \int_{-\infty}^{t} \mathrm{~d} t_1 \operatorname{Tr} \left{ \hat{\rho}_0 \left[ \left[ \hat{H}_0, \hat{V}_D(t) \right] , \hat{V}_D(t_1) \right] \right} \
+\Rightarrow P = \frac{d}{dt} \langle \hat{H}_0 \rangle^{(2)} &amp; = \langle \hat{\mathbf{J}} \rangle^{(1)} (t) \cdot \mathbf{E} (t)
+\end{aligned}
+$$</p>
+<p>不难验证，更高阶的电流响应和能量变化率也能够一一对应。</p>
+<p>由此我们证明了能量变化率和电流响应焦耳热公式的一致性。</p>
+<h2 id="summary">Summary</h2>
+<p>综上所述，我们证明了费米黄金法则和焦耳热公式计算量子系统对电磁波吸收的一致性。</p>
+<p>首先，我们证明了费米黄金法则计算的能量吸收率与能量响应变化率一致性：</p>
+<p>$$
+\begin{aligned}
+\underbrace{P = \sum_{f} (E_f - E_i) \frac{d}{dt} |\langle f | \psi (t) \rangle_D|^2}<em>{\text{Fermi Golden Rule}} \ \Leftrightarrow \ P = \frac{dE</em>{system}}{dt} = \frac{d}{dt}\langle \hat{H}_0 \rangle
+\end{aligned}
+$$</p>
+<p>之后，我们证明了用电流的响应乘以电场的焦耳热公式与能量响应变化率一致性：</p>
+<p>$$
+\begin{aligned}
+&amp; \underbrace{P = \langle \hat{\mathbf{J}} \rangle^{(1)} (t) \cdot \mathbf{E} (t) = (-\frac{\mathrm{i}}{\hbar})^2 \int_{-\infty}^{t} \mathrm{~d} t_1 \operatorname{Tr} \left{ \hat{\rho}_0 \left[ \left[ \hat{H}_0, \hat{V}_D(t) \right] , \hat{V}<em>D(t_1) \right] \right}}</em>{\text{Joule Heat}} \
+\Leftrightarrow \  &amp;P = \frac{d}{dt} \langle \hat{H}<em>0 \rangle^{(2)} = (-\frac{\mathrm{i}}{\hbar})^2  \int</em>{-\infty}^{t} \mathrm{~d} t_2  \operatorname{Tr} \left{\hat{\rho}<em>0\left[ \left[\hat{H}<em>0, \hat{V}</em>{D}(t)\right],\hat{V}</em>{D}(t_2)\right]\right}
+\end{aligned}
+$$</p>
+<p>所以，电流的响应乘以电场的焦耳热公式，与量子跃迁速率乘以能量变化的费米黄金法则，本质上都是能量响应变化率。</p>
+<p>由此，我们可以说看似宏观的“焦耳热”和看似微观的“费米黄金法则”是一回事。</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2026-01-08</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="http://localhost:1313/OkongOyangO.Notes/posts/joule_heat.zh/" data-title="费米黄金定则？焦耳热罢了！" data-hashtags="Quantum Mechanics,Joule Heat"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="http://localhost:1313/OkongOyangO.Notes/posts/joule_heat.zh/" data-title="费米黄金定则？焦耳热罢了！"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/OkongOyangO.Notes/posts/joule_heat.zh/" data-hashtag="Quantum Mechanics"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/OkongOyangO.Notes/posts/joule_heat.zh/" data-title="费米黄金定则？焦耳热罢了！"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://localhost:1313/OkongOyangO.Notes/posts/joule_heat.zh/" data-title="费米黄金定则？焦耳热罢了！"><i data-svg-src="/OkongOyangO.Notes/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/OkongOyangO.Notes/posts/joule_heat.zh/" data-title="费米黄金定则？焦耳热罢了！"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="http://localhost:1313/OkongOyangO.Notes/posts/joule_heat.zh/" data-title="费米黄金定则？焦耳热罢了！" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2flocalhost%3a1313%2fOkongOyangO.Notes%2fposts%2fjoule_heat.zh%2f&amp;text=%e8%b4%b9%e7%b1%b3%e9%bb%84%e9%87%91%e5%ae%9a%e5%88%99%ef%bc%9f%e7%84%a6%e8%80%b3%e7%83%ad%e7%bd%a2%e4%ba%86%ef%bc%81" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/OkongOyangO.Notes/tags/quantum-mechanics/">Quantum Mechanics</a>,&nbsp;<a href="/OkongOyangO.Notes/tags/joule-heat/">Joule Heat</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/OkongOyangO.Notes/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+            <a href="/OkongOyangO.Notes/posts/distinguish_conductors_insulators_ground_state.ja/" class="next" rel="next" title="基底状態だけで導体と絶縁体をどう区別するか？🤔">基底状態だけで導体と絶縁体をどう区別するか？🤔<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.154.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/OkongOyangO.Notes/" target="_blank">xxxx</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="/OkongOyangO.Notes/lib/autocomplete/autocomplete.min.js"></script><script src="/OkongOyangO.Notes/lib/lunr/lunr.min.js"></script><script src="/OkongOyangO.Notes/lib/lazysizes/lazysizes.min.js"></script><script src="/OkongOyangO.Notes/lib/clipboard/clipboard.min.js"></script><script src="/OkongOyangO.Notes/lib/sharer/sharer.min.js"></script><script>window.config={"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/OkongOyangO.Notes/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/OkongOyangO.Notes/js/theme.min.js"></script></body>
+</html>

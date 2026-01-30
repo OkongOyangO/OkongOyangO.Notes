@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src="/OkongOyangO.Notes/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=OkongOyangO.Notes/livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Nonlinear Response Theory of the Kubo Formula - Yiyang&#39;s Physics Notes</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="http://localhost:1313/OkongOyangO.Notes/posts/nonlinear-kubo-formalism/">
+  <meta property="og:site_name" content="Yiyang&#39;s Physics Notes">
+  <meta property="og:title" content="Nonlinear Response Theory of the Kubo Formula">
+  <meta property="og:description" content="#! https://zhuanlan.zhihu.com/p/611996682
+Nonlinear Response Theory of the Kubo Formula This article aims to derive the nonlinear response theory of the Kubo Formula.
+Introduction Both linear and nonlinear response theories of the Kubo Formula are essentially perturbation theories in quantum mechanics.
+Linear response is more common; for example, experimentally measured susceptibilities such as conductivity, magnetic susceptibility, and electric polarizability are all linear response functions (Retarded Green Functions).
+However, nonlinear response also has its application values, such as second-order current response in semiconductors, including Second Harmonic Generation, Injection and Shift Current, etc.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-01-08T21:54:37-05:00">
+    <meta property="article:modified_time" content="2026-01-08T21:54:37-05:00">
+    <meta property="article:tag" content="Nonlinear Response">
+    <meta property="article:tag" content="Kubo Formula">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Nonlinear Response Theory of the Kubo Formula">
+  <meta name="twitter:description" content="#! https://zhuanlan.zhihu.com/p/611996682
+Nonlinear Response Theory of the Kubo Formula This article aims to derive the nonlinear response theory of the Kubo Formula.
+Introduction Both linear and nonlinear response theories of the Kubo Formula are essentially perturbation theories in quantum mechanics.
+Linear response is more common; for example, experimentally measured susceptibilities such as conductivity, magnetic susceptibility, and electric polarizability are all linear response functions (Retarded Green Functions).
+However, nonlinear response also has its application values, such as second-order current response in semiconductors, including Second Harmonic Generation, Injection and Shift Current, etc.">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/OkongOyangO.Notes/posts/nonlinear-kubo-formalism/" /><link rel="prev" href="http://localhost:1313/OkongOyangO.Notes/posts/joule_heat.ja/" /><link rel="next" href="http://localhost:1313/OkongOyangO.Notes/posts/distinguish_conductors_insulators_ground_state/" /><link rel="stylesheet" href="/OkongOyangO.Notes/css/style.min.css"><link rel="preload" href="/OkongOyangO.Notes/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/OkongOyangO.Notes/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/OkongOyangO.Notes/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/OkongOyangO.Notes/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Nonlinear Response Theory of the Kubo Formula",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/OkongOyangO.Notes\/posts\/nonlinear-kubo-formalism\/"
+        },"genre": "posts","keywords": "Nonlinear Response, Kubo Formula","wordcount":  3410 ,
+        "url": "http:\/\/localhost:1313\/OkongOyangO.Notes\/posts\/nonlinear-kubo-formalism\/","datePublished": "2026-01-08T21:54:37-05:00","dateModified": "2026-01-08T21:54:37-05:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "xxxx"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/OkongOyangO.Notes/" title="Yiyang&#39;s Physics Notes">Yiyang&#39;s Notes</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/OkongOyangO.Notes/posts/"><i class='fas fa-archive fa-fw'></i> Posts </a><a class="menu-item" href="/OkongOyangO.Notes/tags/"><i class='fas fa-tags fa-fw'></i> Tags </a><a class="menu-item" href="/OkongOyangO.Notes/categories/"><i class='fas fa-th-list fa-fw'></i> Categories </a><a class="menu-item" href="https://OkongOyangO.github.io" title="Go back to Academic Homepage" rel="noopener noreffer" target="_blank"><i class='fas fa-home fa-fw'></i> Main Homepage </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search notes..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/OkongOyangO.Notes/" title="Yiyang&#39;s Physics Notes">Yiyang&#39;s Notes</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search notes..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/OkongOyangO.Notes/posts/" title=""><i class='fas fa-archive fa-fw'></i>Posts</a><a class="menu-item" href="/OkongOyangO.Notes/tags/" title=""><i class='fas fa-tags fa-fw'></i>Tags</a><a class="menu-item" href="/OkongOyangO.Notes/categories/" title=""><i class='fas fa-th-list fa-fw'></i>Categories</a><a class="menu-item" href="https://OkongOyangO.github.io" title="Go back to Academic Homepage" rel="noopener noreffer" target="_blank"><i class='fas fa-home fa-fw'></i>Main Homepage</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Nonlinear Response Theory of the Kubo Formula</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/OkongOyangO.Notes/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>xxxx</a></span>&nbsp;<span class="post-category">included in <a href="/OkongOyangO.Notes/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-01-08">2026-01-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;3410 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;17 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#density-matrix-in-dirac-picture">Density Matrix in Dirac Picture</a></li>
+    <li><a href="#linear-response">Linear Response</a></li>
+    <li><a href="#nonlinear-response">Nonlinear Response</a></li>
+    <li><a href="#frequency-domain">Frequency Domain</a></li>
+    <li><a href="#time-translation-symmetry">Time Translation Symmetry</a>
+      <ul>
+        <li><a href="#linear-order-susceptibility">Linear Order Susceptibility</a></li>
+        <li><a href="#nonlinear-order-susceptibility">Nonlinear Order Susceptibility</a></li>
+      </ul>
+    </li>
+    <li><a href="#kubo-formula-in-momentum-space">Kubo Formula in Momentum Space</a></li>
+    <li><a href="#second-harmonic-generation--zero-frequency-term">Second Harmonic Generation &amp; Zero Frequency Term</a></li>
+    <li><a href="#kubo-formula-for-fermi-golden-rule">Kubo Formula for Fermi Golden Rule</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>#! <a href="https://zhuanlan.zhihu.com/p/611996682" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/611996682</a></p>
+<h1 id="nonlinear-response-theory-of-the-kubo-formula">Nonlinear Response Theory of the Kubo Formula</h1>
+<p>This article aims to derive the nonlinear response theory of the Kubo Formula.</p>
+<h2 id="introduction">Introduction</h2>
+<p>Both linear and nonlinear response theories of the Kubo Formula are essentially perturbation theories in quantum mechanics.</p>
+<p>Linear response is more common; for example, experimentally measured susceptibilities such as conductivity, magnetic susceptibility, and electric polarizability are all linear response functions (Retarded Green Functions).</p>
+<p>However, nonlinear response also has its application values, such as second-order current response in semiconductors, including Second Harmonic Generation, Injection and Shift Current, etc.</p>
+<p>Second-order response can even be used to explain the two types of responses discussed in the previous section on Fermi Golden Rule: the constant transition rate and the second harmonic transition rate.</p>
+<p><a href="https://zhuanlan.zhihu.com/p/611688122" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/611688122</a></p>
+<p>It can be seen that <strong>as long as one is bold enough, nonlinear response is everywhere</strong>.</p>
+<h2 id="density-matrix-in-dirac-picture">Density Matrix in Dirac Picture</h2>
+<p>The derivation of the Kubo Formula starts from the evolution of the system&rsquo;s density matrix in the interaction (Dirac) picture.</p>
+<p>In the section on Fermi Golden Rule, we have already derived the equation of motion for the wave function in the interaction (Dirac) picture.</p>
+<p>Simply viewing the density matrix as $\hat{\rho}_D(t) \sim | \psi (t) \rangle_D \langle \psi(t) |_D$ helps us quickly recall the equation of motion for the density matrix in the interaction (Dirac) picture:</p>
+<p>$$
+\begin{aligned}
+\frac{d}{dt} \hat{\rho}_D(t) = - \frac{i}{\hbar} [ \hat{\rho}_D(t) , \hat{V}_D(t) ]
+\end{aligned}
+$$</p>
+<p>By integrating and iterating repeatedly, we can obtain the expansion of the density matrix:</p>
+<p>$$
+\begin{aligned}
+\hat{\rho}<em>D(t) = \hat{\rho}<em>0 + \sum</em>{n = 1}^{\infty} (-\frac{\mathrm{i}}{\hbar})^n \int</em>{-\infty}^{t} dt_1 \int_{-\infty}^{t_1} dt_2 \dots \int_{-\infty}^{t_{n-1}} dt_n [\hat{V}_D(t_1),[\dots[\hat{V}_D(t_n),\hat{\rho}_0]\dots] ]
+\end{aligned}
+$$</p>
+<p>Note that the upper limit of each integral is not always $t$.</p>
+<h2 id="linear-response">Linear Response</h2>
+<p>Consider only the linear response:</p>
+<p>$$
+\begin{aligned}
+\hat{\rho}<em>D(t)  \approx \hat{\rho}<em>0 + (-\frac{\mathrm{i}}{\hbar}) \int</em>{-\infty}^t \mathrm{~d} t^{\prime} \left[\hat{V}</em>{D}\left(t^{\prime}\right), \hat{\rho}_0 \right]
+\end{aligned}
+$$</p>
+<p>where $\hat{\rho}_0$ is the equilibrium density matrix:</p>
+<p>$$
+\begin{aligned}
+\hat{\rho}_0 = \frac{\exp \left(-\beta \mathcal{H}_0\right)}{\operatorname{Tr}[\exp \left(-\beta \mathcal{H}_0\right)]}
+\end{aligned}
+$$</p>
+<p>We wish to investigate the time evolution of an observable $\hat{A}$:</p>
+<p>$$
+\begin{aligned}
+\langle\hat{A}\rangle_t = \operatorname{Tr}{ \hat{\rho}_D(t) \hat{A}_D(t) }
+\end{aligned}
+$$</p>
+<p>$$
+\begin{aligned}
+\langle\hat{A}\rangle_t = \langle\hat{A}\rangle_0 +(-\frac{\mathrm{i}}{\hbar}) \int_{-\infty}^t \mathrm{~d} t^{\prime} \operatorname{Tr}\left{\left[\hat{V}_{D}\left(t^{\prime}\right), \hat{\rho}_0 \right] \hat{A}_D(t) \right}
+\end{aligned}
+$$</p>
+<p>where,</p>
+<p>$$
+\begin{aligned}
+\langle\dots\rangle_0 = \operatorname{Tr}{ \hat{\rho}_0 (\dots) }
+\end{aligned}
+$$</p>
+<p>$$
+\begin{aligned}
+\hat{A}_D(t) = \exp \left(\frac{\mathrm{i}}{\hbar} \mathcal{H}_0 t\right) \hat{A}_S(t)  \exp \left(-\frac{\mathrm{i}}{\hbar} \mathcal{H}_0 t\right)
+\end{aligned}
+$$</p>
+<p>For the following perturbation form:</p>
+<p>$$
+\begin{aligned}
+\hat{V}_S(t) = \hat{B}_S(t) F(t)
+\end{aligned}
+$$</p>
+<p>$$
+\begin{aligned}
+\langle\hat{A}\rangle_t = \langle\hat{A}\rangle_0 +(-\frac{\mathrm{i}}{\hbar}) \int_{-\infty}^t \mathrm{~d} t^{\prime} F(t^{\prime}) \operatorname{Tr}\left{\left[\hat{B}_{D}\left(t^{\prime}\right), \hat{\rho}_0 \right] \hat{A}_D(t) \right}
+\end{aligned}
+$$</p>
+<p>Using the cyclic property of the Trace, it can be proven that:</p>
+<p>$$
+\begin{aligned}
+\operatorname{Tr}\left{\left[\hat{B}_{D}\left(t^{\prime}\right), \hat{\rho}_0 \right] \hat{A}_D(t) \right} = \operatorname{Tr}\left{\rho_0\left[\hat{A}<em>D(t), \hat{B}</em>{D}\left(t^{\prime}\right)\right]\right}
+\end{aligned}
+$$</p>
+<p>Thus:</p>
+<p>$$
+\begin{aligned}
+\langle\hat{A}\rangle_t = \langle\widehat{A}\rangle_0 +(-\frac{\mathrm{i}}{\hbar}) \int_{-\infty}^t \mathrm{~d} t^{\prime} F(t^{\prime}) \operatorname{Tr}\left{\rho_0\left[\hat{A}<em>D(t), \hat{B}</em>{D}\left(t^{\prime}\right)\right]\right}
+\end{aligned}
+$$</p>
+<p>In this way, physical quantities in the expression can be written in the form of $\operatorname{Tr}\left{\rho_0(\dots)\right}$.</p>
+<p>This indicates that the near-equilibrium response can be determined by the observables of the equilibrium state.</p>
+<p>Generally, we consider the difference of the observable $\hat{A}$ under perturbation from the equilibrium state, so we can also write the linear response in the following form:</p>
+<p>$$
+\begin{aligned}
+\Delta A_t  =\langle\hat{A}\rangle_t-\langle\widehat{A}\rangle_0=-\frac{\mathrm{i}}{\hbar} \int_{-\infty}^t \mathrm{~d} t^{\prime} F(t^{\prime})\left\langle\left[\widehat{A}^{\mathrm{D}}(t), \widehat{B}^{\mathrm{D}}\left(t^{\prime}\right)\right]_{-}\right\rangle_0
+\end{aligned}
+$$</p>
+<p>Or written as:</p>
+<p>$$
+\begin{aligned}
+\Delta A_t =  \int_{-\infty}^{+ \infty} \mathrm{~d} t^{\prime} G_{A B}^{\mathrm{ret}}\left(t; t^{\prime}\right) F(t^{\prime})
+\end{aligned}
+$$</p>
+<p>This is the form of the linear response Kubo Formula in the Time Domain.</p>
+<p>It contains the retarded Green Function,</p>
+<p>$$
+\begin{aligned}
+G_{A B}^{\mathrm{ret}}\left(t; t^{\prime}\right) = -\frac{\mathrm{i}}{\hbar} \Theta\left(t-t^{\prime}\right)\left\langle\left[\hat{A}_D(t), \hat{B}_D\left(t^{\prime}\right)\right]\right\rangle_0 = -\frac{\mathrm{i}}{\hbar} \Theta\left(t-t^{\prime}\right)\left\langle\left[\hat{A}_H(t), \hat{B}_H\left(t^{\prime}\right)\right]\right\rangle_0
+\end{aligned}
+$$</p>
+<p>Here, since we are calculating the properties of the equilibrium state, the subscripts $D, H$ representing the Dirac and Heisenberg Pictures make no difference, which reflects from another aspect that the system&rsquo;s near-equilibrium response is completely determined by the system&rsquo;s equilibrium properties.</p>
+<p>The linear response formula given so far is general and does not consider properties like time translation symmetry (when $\hat{A}_S, \hat{B}<em>S$ do not explicitly contain time $t$). If the retarded Green Function $G</em>{A B}^{\mathrm{ret}}\left(t; t^{\prime}\right)$ possesses time translation symmetry:</p>
+<p>$$
+\begin{aligned}
+G_{A B}^{\mathrm{ret}}\left(t; t^{\prime}\right) = G_{A B}^{\mathrm{ret}}\left(t -  t^{\prime}\right)
+\end{aligned}
+$$</p>
+<p>we can obtain a more concise linear response theory in the Frequency Domain. We will discuss this further after deriving the general second-order response.</p>
+<h2 id="nonlinear-response">Nonlinear Response</h2>
+<p>Now we want to calculate the nonlinear (higher-order) response. We simply expand the perturbed density matrix to higher orders and repeat the derivation above.</p>
+<p>Expanding the perturbed density matrix to higher orders (taking the second-order response as an example),</p>
+<p>$$
+\begin{aligned}
+\hat{\rho}<em>D(t) &amp; \approx \hat{\rho}<em>0 + (-\frac{\mathrm{i}}{\hbar}) \int</em>{-\infty}^t \mathrm{~d} t^{\prime} \left[\hat{V}</em>{D}\left(t^{\prime}\right), \hat{\rho}<em>0 \right] \
+&amp; + (-\frac{\mathrm{i}}{\hbar})^2 \int</em>{-\infty}^t \mathrm{~d} t^{\prime} \int_{-\infty}^{t&rsquo;} \mathrm{~d} t&rsquo;&rsquo; \left[\hat{V}<em>{D}\left(t^{\prime}\right), \left[\hat{V}</em>{D}\left(t&rsquo;&rsquo;\right), \hat{\rho}_0 \right] \right] \
+&amp; + \dots
+\end{aligned}
+$$</p>
+<p>Thus the response of the observable $\hat{A}$ is:</p>
+<p>$$
+\begin{aligned}
+\langle\hat{A}\rangle_t = \langle\hat{A}\rangle_0 + \langle\hat{A}\rangle_1 + \langle\hat{A}\rangle_2 + \dots
+\end{aligned}
+$$</p>
+<p>$$
+\begin{aligned}
+\langle\hat{A}\rangle_2 &amp; = (-\frac{\mathrm{i}}{\hbar})^2 \int_{-\infty}^t \mathrm{~d} t^{\prime} \int_{-\infty}^{t&rsquo;} \mathrm{~d} t&rsquo;&rsquo; \operatorname{Tr} { \left[\hat{V}<em>{D}\left(t^{\prime}\right), \left[\hat{V}</em>{D}\left(t&rsquo;&rsquo;\right), \hat{\rho}_0 \right] \right] \hat{A}_D(t) }
+\end{aligned}
+$$</p>
+<p>Using the cyclic property of the Trace, we have:</p>
+<p>$$
+\begin{aligned}
+\operatorname{Tr} \left{ \left[\hat{V}<em>{D}\left(t^{\prime}\right), \left[\hat{V}</em>{D}\left(t&rsquo;&rsquo;\right), \hat{\rho}_0 \right] \right] \hat{A}<em>D(t) \right} = \operatorname{Tr} \left{\rho_0\left[ \left[\hat{A}<em>D(t), \hat{V}</em>{D}\left(t^{\prime}\right)\right] , \hat{V}</em>{D}\left(t&rsquo;&rsquo;\right)\right] \right}
+\end{aligned}
+$$</p>
+<p>Thus:</p>
+<p>$$
+\begin{aligned}
+\langle\hat{A}\rangle_2 &amp; = (-\frac{\mathrm{i}}{\hbar})^2 \int_{-\infty}^t \mathrm{~d} t^{\prime} \int_{-\infty}^{t&rsquo;} \mathrm{~d} t&rsquo;&rsquo; \operatorname{Tr} \left{\rho_0\left[ \left[\hat{A}<em>D(t), \hat{V}</em>{D}\left(t^{\prime}\right)\right] , \hat{V}_{D}\left(t&rsquo;&rsquo;\right)\right] \right}
+\end{aligned}
+$$</p>
+<p>In fact, there is a more general conclusion:</p>
+<p>$$
+\begin{aligned}
+\operatorname{Tr} \left{ \left[\hat{V}<em>{D}\left(t_1\right), \dots ,\left[\hat{V}</em>{D}\left(t_n\right), \hat{\rho}_0 \right] \dots \right] \hat{A}<em>D(t) \right} = \operatorname{Tr} \left{\rho_0\left[ \dots\left[\hat{A}<em>D(t), \hat{V}</em>{D}\left(t_1\right)\right], \dots , \hat{V}</em>{D}\left(t_n\right)\right]\right}
+\end{aligned}
+$$</p>
+<p>We can calculate the response of any order:</p>
+<p>$$
+\begin{aligned}
+\langle\hat{A}\rangle_n &amp; = (-\frac{\mathrm{i}}{\hbar})^2 \int_{-\infty}^t \mathrm{~d} t_1 \int_{-\infty}^{t_1} \mathrm{~d} t_2 \dots \int_{-\infty}^{t_{n-1}} \mathrm{~d} t_n \operatorname{Tr} \left{\rho_0\left[ \dots\left[\hat{A}<em>D(t), \hat{V}</em>{D}\left(t_1\right)\right], \dots , \hat{V}_{D}\left(t_n\right)\right]\right}
+\end{aligned}
+$$</p>
+<p>Repeating the previous operation, if the perturbation can be separated into an external field (not necessarily a scalar field) and an operator part:</p>
+<p>$$
+\begin{aligned}
+\hat{V}<em>S(t) = \hat{B}^\mu_S(t) F</em>\mu(t)
+\end{aligned}
+$$</p>
+<p>Then the second-order response can be written as,</p>
+<p>$$
+\begin{aligned}
+\langle\hat{A}\rangle_2 &amp; = (-\frac{\mathrm{i}}{\hbar})^2 \int_{-\infty}^t \mathrm{~d} t^{\prime} \int_{-\infty}^{t&rsquo;} \mathrm{~d} t&rsquo;&rsquo; \operatorname{Tr} \left{\rho_0\left[ \left[\hat{A}<em>D(t), \hat{B}^\mu</em>{D}\left(t^{\prime}\right)\right] , \hat{B}^\nu_{D}\left(t&rsquo;&rsquo;\right)\right] \right} F_\mu(t&rsquo;)F_\nu(t&rsquo;&rsquo;) \
+&amp; = \int_{-\infty}^{+ \infty} \mathrm{~d} t^{\prime} \int_{-\infty}^{+\infty} \mathrm{~d} t&rsquo;&rsquo; \chi_2^{\mu\nu}(t;t&rsquo;,t&rsquo;&rsquo;) F_\mu(t&rsquo;)F_\nu(t&rsquo;&rsquo;)
+\end{aligned}
+$$</p>
+<p>where $\chi_2^{\mu\nu}(t;t&rsquo;,t&rsquo;&rsquo;)$ is the second-order susceptibility, defined as:</p>
+<p>$$
+\begin{aligned}
+\chi_2^{\mu\nu}(t;t&rsquo;,t&rsquo;&rsquo;) \equiv (-\frac{\mathrm{i}}{\hbar})^2 \Theta(t - t&rsquo;) \Theta(t&rsquo; - t&rsquo;&rsquo;) \operatorname{Tr} \left{\rho_0\left[ \left[\hat{A}<em>D(t), \hat{B}^\mu</em>{D}\left(t^{\prime}\right)\right] , \hat{B}^\nu_{D}\left(t&rsquo;&rsquo;\right)\right] \right}
+\end{aligned}
+$$</p>
+<p>This can be generalized to any order of response:</p>
+<p>$$
+\begin{aligned}
+\langle\hat{A}\rangle_n &amp; = (-\frac{\mathrm{i}}{\hbar})^2 \int_{-\infty}^t \mathrm{~d} t_1 \int_{-\infty}^{t_1} \mathrm{~d} t_2 \dots \int_{-\infty}^{t_{n-1}} \mathrm{~d} t_n \operatorname{Tr} \left{\rho_0\left[ \dots\left[\hat{A}<em>D(t), \hat{B}^{\mu_1}</em>{D}\left(t_1\right)\right], \dots , \hat{B}^{\mu_n}<em>{D}\left(t_n\right)\right]\right} F</em>{\mu_1}(t_1) \dots F_{\mu_n}(t_n) \
+&amp; = \int_{-\infty}^{+ \infty} \mathrm{~d} t_1 \dots \int_{-\infty}^{+\infty} \mathrm{~d} t_n  \chi_n^{\mu_1 \dots \mu_n}(t;t_1,\dots,t_n)  F_{\mu_1}(t_1) \dots F_{\mu_n}(t_n)
+\end{aligned}
+$$</p>
+<h2 id="frequency-domain">Frequency Domain</h2>
+<p>First, without considering whether the system has time translation symmetry, we switch from Time Domain to Frequency Domain by simply performing a Fourier Transformation on all time parameters.</p>
+<p>$$
+\begin{aligned}
+\chi_n(t;t_1,\dots,t_n) \xLeftrightarrow{F.T.} \chi_n(\omega ;\omega_1,\dots,\omega_n)
+\end{aligned}
+$$</p>
+<p>The advantage of doing this is that general external fields are single-frequency, such as monochromatic electromagnetic waves. The Kubo Formula in the Frequency Domain can directly tell us the frequency and amplitude of the response. However, essentially it is still a Fourier Transformation.</p>
+<p>Specifically:</p>
+<p>$$
+\begin{aligned}
+\chi_n(\omega ;\omega_1,\dots,\omega_n) \equiv \int_{- \infty}^{+ \infty} \mathrm{~d} t e^{-i\omega t} \int_{- \infty}^{+ \infty} \mathrm{~d} t_1 e^{-i\omega_1 t_1} \dots \int_{- \infty}^{+ \infty} \mathrm{~d} t_n e^{-i\omega_n t_n} \chi_n(t;t_1,\dots,t_n)
+\end{aligned}
+$$</p>
+<p>$$
+\begin{aligned}
+\chi_n(t;t_1,\dots,t_n) = \int_{- \infty}^{+ \infty} \frac{\mathrm{~d} \omega}{2 \pi} e^{i\omega t} \int_{- \infty}^{+ \infty} \frac{\mathrm{~d} \omega_1}{2 \pi} e^{i\omega_1 t_1} \dots \int_{- \infty}^{+ \infty} \frac{\mathrm{~d} \omega_n}{2\pi} e^{i\omega_n t_n} \chi_n(\omega ;\omega_1,\dots,\omega_n)
+\end{aligned}
+$$</p>
+<p>Similarly, Fourier Transform the observable and the external field to frequency space,</p>
+<p>$$
+\begin{aligned}
+\langle\hat{A}\rangle_n(\omega) = \int_{- \infty}^{+ \infty} \frac{\mathrm{~d} \omega}{2 \pi} e^{i\omega t} \langle\hat{A}\rangle_n(t)
+\end{aligned}
+$$</p>
+<p>$$
+\begin{aligned}
+F(\omega_i) = \int_{- \infty}^{+ \infty} \frac{\mathrm{~d} \omega_i}{2 \pi} e^{i\omega_i t_i} F(t_i)
+\end{aligned}
+$$</p>
+<p>Thus, the Kubo Formula in the Frequency Domain is:</p>
+<p>$$
+\begin{aligned}
+\langle\hat{A}\rangle_n(\bar{\omega}) &amp; = \int_{- \infty}^{+ \infty} \mathrm{~d} t  e^{-i \bar{\omega} t} \langle\hat{A}\rangle_n(t) \
+&amp; = \int_{- \infty}^{+ \infty} \mathrm{~d} t  e^{-i \bar{\omega} t}  \int_{-\infty}^{+ \infty} \mathrm{~d} t_1 \dots \int_{-\infty}^{+\infty} \mathrm{~d} t_n  \
+&amp; \times \chi_n^{\mu_1 \dots \mu_n}(t;t_1,\dots,t_n)  F_{\mu_1}(t_1) \dots F_{\mu_n}(t_n)
+\end{aligned}
+$$</p>
+<p>$$
+\begin{aligned}
+&amp; = \int_{- \infty}^{+ \infty} \mathrm{~d} t  e^{-i \bar{\omega} t}  \int_{-\infty}^{+ \infty} \mathrm{~d} t_1 \dots \int_{-\infty}^{+\infty} \mathrm{~d} t_n \
+&amp; \times \int_{- \infty}^{+ \infty} \frac{\mathrm{~d} \omega}{2 \pi} e^{i\omega t} \int_{- \infty}^{+ \infty} \frac{\mathrm{~d} \omega_1}{2 \pi} e^{i\omega_1 t_1} \dots \int_{- \infty}^{+ \infty} \frac{\mathrm{~d} \omega_n}{2\pi} e^{i\omega_n t_n} \
+&amp; \times  \int_{- \infty}^{+ \infty} \frac{\mathrm{~d} \bar{\omega}_1}{2 \pi} e^{i\bar{\omega}<em>1 t_1} \dots \int</em>{- \infty}^{+ \infty} \frac{\mathrm{~d} \bar{\omega}_n}{2\pi} e^{i\bar{\omega}<em>n t_n}\
+&amp; \times \chi_n^{\mu_1 \dots \mu_n}(\omega ;\omega_1,\dots,\omega_n) F</em>{\mu_1}(\bar{\omega}<em>1) \dots F</em>{\mu_n}(\bar{\omega}_n)
+\end{aligned}
+$$</p>
+<p>$$
+\begin{aligned}
+&amp; =  \int_{- \infty}^{+ \infty} \frac{\mathrm{~d} \omega}{2 \pi} \int_{- \infty}^{+ \infty} \frac{\mathrm{~d} \omega_1}{2 \pi}  \dots \int_{- \infty}^{+ \infty} \frac{\mathrm{~d} \omega_n}{2\pi}  \
+&amp; \times  \int_{- \infty}^{+ \infty} \frac{\mathrm{~d} \bar{\omega}}{2 \pi}  \int_{- \infty}^{+ \infty} \frac{\mathrm{~d} \bar{\omega}<em>1}{2 \pi}  \dots \int</em>{- \infty}^{+ \infty} \frac{\mathrm{~d} \bar{\omega}<em>n}{2\pi} \
+&amp; \times \int</em>{- \infty}^{+ \infty} \mathrm{~d} t  e^{i (\omega - \bar{\omega}) t} \int_{-\infty}^{+ \infty} \mathrm{~d} t_1 e^{i (\omega_1 + \bar{\omega}<em>1) t_1}\dots \int</em>{-\infty}^{+\infty} \mathrm{~d} t_n e^{i (\omega_n + \bar{\omega}<em>n) t_n} \
+&amp; \times \chi_n^{\mu_1 \dots \mu_n}(\omega ;\omega_1,\dots,\omega_n) F</em>{\mu_1}(\bar{\omega}<em>1) \dots F</em>{\mu_n}(\bar{\omega}_n)
+\end{aligned}
+$$</p>
+<p>$$
+\begin{aligned}
+&amp; = \int_{- \infty}^{+ \infty} \frac{\mathrm{~d} \omega}{2 \pi} \int_{- \infty}^{+ \infty} \frac{\mathrm{~d} \omega_1}{2 \pi}  \dots \int_{- \infty}^{+ \infty} \frac{\mathrm{~d} \omega_n}{2\pi}  \
+&amp; \times  \int_{- \infty}^{+ \infty} \frac{\mathrm{~d} \bar{\omega}}{2 \pi}  \int_{- \infty}^{+ \infty} \frac{\mathrm{~d} \bar{\omega}<em>1}{2 \pi}  \dots \int</em>{- \infty}^{+ \infty} \frac{\mathrm{~d} \bar{\omega}_n}{2\pi} \
+&amp; \times 2 \pi \delta(\bar{\omega} - \omega) \times 2 \pi \delta (\omega_1 + \bar{\omega}_1) \times \dots \times 2 \pi \delta (\omega_n + \bar{\omega}<em>n) \
+&amp; \times \chi_n^{\mu_1 \dots \mu_n}(\omega ;\omega_1,\dots,\omega_n) F</em>{\mu_1}(\bar{\omega}<em>1) \dots F</em>{\mu_n}(\bar{\omega}_n)
+\end{aligned}
+$$</p>
+<p>Finally, the Kubo Formula in the Frequency Domain is:</p>
+<p>$$
+\begin{aligned}
+\langle\hat{A}\rangle_n(\bar{\omega}) &amp; =  \int_{- \infty}^{+ \infty} \frac{\mathrm{~d} \omega_1}{2 \pi}  \dots \int_{- \infty}^{+ \infty} \frac{\mathrm{~d} \omega_n}{2\pi}  \chi_n^{\mu_1 \dots \mu_n}(\bar{\omega} ;\omega_1,\dots,\omega_n) F_{\mu_1}(-\omega_1) \dots F_{\mu_n}(-\omega_n)
+\end{aligned}
+$$</p>
+<p>The negative sign here can also be removed by redefining the Fourier Transformation of the parameters ${t;t_1,\dots,t_n}$.</p>
+<p>For example, performing different Fourier Transformations on the left and right sides of &ldquo;;&rdquo;:</p>
+<p>$$
+\begin{aligned}
+\chi_n(\omega ;\omega_1,\dots,\omega_n) \equiv \int_{- \infty}^{+ \infty} \mathrm{~d} t e^{-i\omega t} \int_{- \infty}^{+ \infty} \mathrm{~d} t_1 e^{i\omega_1 t_1} \dots \int_{- \infty}^{+ \infty} \mathrm{~d} t_n e^{i\omega_n t_n} \chi_n(t;t_1,\dots,t_n)
+\end{aligned}
+$$</p>
+<p>$$
+\begin{aligned}
+\chi_n(t;t_1,\dots,t_n) = \int_{- \infty}^{+ \infty} \frac{\mathrm{~d} \omega}{2 \pi} e^{i\omega t} \int_{- \infty}^{+ \infty} \frac{\mathrm{~d} \omega_1}{2 \pi} e^{-i\omega_1 t_1} \dots \int_{- \infty}^{+ \infty} \frac{\mathrm{~d} \omega_n}{2\pi} e^{-i\omega_n t_n} \chi_n(\omega ;\omega_1,\dots,\omega_n)
+\end{aligned}
+$$</p>
+<p>Then we have:</p>
+<p>$$
+\begin{aligned}
+\langle\hat{A}\rangle_n(\bar{\omega}) &amp; =  \int_{- \infty}^{+ \infty} \frac{\mathrm{~d} \omega_1}{2 \pi}  \dots \int_{- \infty}^{+ \infty} \frac{\mathrm{~d} \omega_n}{2\pi}  \chi_n^{\mu_1 \dots \mu_n}(\bar{\omega} ;\omega_1,\dots,\omega_n) F_{\mu_1}(\omega_1) \dots F_{\mu_n}(\omega_n)
+\end{aligned}
+$$</p>
+<p>But in fact, positive and negative frequency perturbations always exist simultaneously, so the above discussion is just a matter of definition.</p>
+<p><strong>To avoid &ldquo;-&rdquo; signs in the Kubo Formula as much as possible, we will adopt the latter definition in the subsequent discussions.</strong></p>
+<p>The general case derived here places no restrictions on the relationship between ${\bar{\omega} ;\omega_1,\dots,\omega_n}$, meaning a perturbation at any frequency could potentially excite a response at another frequency.</p>
+<p>But for a time-translation invariant response function, there will be certain restrictions on the form of the response function in the Frequency Domain.</p>
+<p>Taking the most common linear response as an example, the frequency of the response must be the same as the frequency of the external field, i.e.,</p>
+<p>$$
+\begin{aligned}
+\chi_1(\omega; \omega_1) \sim \delta(\omega \pm \omega_1)
+\end{aligned}
+$$</p>
+<p>And for more general nonlinear responses, it can be proven that the frequency of the response is the sum of the external field frequencies, i.e.,</p>
+<p>$$
+\begin{aligned}
+\chi_n(\omega; \omega_1,\dots,\omega_n) \sim \delta(\omega \pm \sum_{i=1}^n \omega_i)
+\end{aligned}
+$$</p>
+<p>where the &ldquo;$\pm$&rdquo; sign depends on the definition of the response function in the Frequency Domain.</p>
+<h2 id="time-translation-symmetry">Time Translation Symmetry</h2>
+<p>When the response function possesses time translation symmetry, it can be proven that the response function has the following properties:</p>
+<p>$$
+\begin{aligned}
+\chi_1(t;t&rsquo;) \equiv G_{A B}^{\mathrm{ret}}\left(t; t^{\prime}\right) = G_{A B}^{\mathrm{ret}}\left(t -  t^{\prime}\right)
+\end{aligned}
+$$</p>
+<p>$$
+\begin{aligned}
+\chi_2(t;t&rsquo;,t&rsquo;&rsquo;) = \chi_2^{\mathcal{T}} (t-t&rsquo;,t&rsquo;-t&rsquo;&rsquo;)
+\end{aligned}
+$$</p>
+<p>$$
+\begin{aligned}
+\chi_n(t;t_1,\dots,t_n) = \chi_n^{\mathcal{T}}(t-t_1,t_1-t_2,\dots,t_{n-1} - t_n)
+\end{aligned}
+$$</p>
+<p>This is because time translation symmetry ensures that the response function remains unchanged when all times are shifted by the same amount, i.e.,</p>
+<p>$$
+\begin{aligned}
+\chi_n(t;t_1,\dots,t_n) = \chi_n(t + \tau;t_1+ \tau,\dots,t_n+ \tau)
+\end{aligned}
+$$</p>
+<p>Thus, among the parameters ${t;t_1,\dots,t_n}$, only their relative values are independent. We can define:</p>
+<p>$$
+\begin{aligned}
+&amp; \chi_n^{\mathcal{T}}(t-t_1,t_1-t_2,\dots,t_{n-1} - t_n) \
+&amp; = \chi_n(t_n + \sum_{i=1}^{n-1}(t_{i} - t_{i+1}) + (t - t_1) ;t_n + \sum_{i=1}^{n-1}(t_{i} - t_{i+1}),\dots,t_n + (t_{n-1} - t_n),t_n) \
+&amp; = \chi_n(\sum_{i=1}^{n-1}(t_{i} - t_{i+1}) + (t - t_1) ; \sum_{i=1}^{n-1}(t_{i} - t_{i+1}),\dots, (t_{n-1} - t_n),0)
+\end{aligned}
+$$</p>
+<p>Now consider the physical meaning of the response function having time translation symmetry. This actually means that the system and the observables $\hat{A}, \hat{B}$ involved in the response are all time-translation invariant, but this has different meanings in different pictures.</p>
+<p>Taking the Schrodinger Picture we are most familiar with as an example, operators not explicitly containing time is sufficient:</p>
+<p>$$
+\begin{aligned}
+\hat{A}_S(t) = \hat{A},,\hat{B}_S(t) = \hat{B}
+\end{aligned}
+$$</p>
+<p>But in the Dirac/Heisenberg Picture, it manifests as:</p>
+<p>$$
+\begin{aligned}
+\hat{A}_H(t) = \exp \left(\frac{\mathrm{i}}{\hbar} \mathcal{H}_0 t\right) \hat{A}  \exp \left(-\frac{\mathrm{i}}{\hbar} \mathcal{H}_0 t\right),,\hat{B}_H(t) = \exp \left(\frac{\mathrm{i}}{\hbar} \mathcal{H}_0 t\right) \hat{B}  \exp \left(-\frac{\mathrm{i}}{\hbar} \mathcal{H}_0 t\right)
+\end{aligned}
+$$</p>
+<p>It can be proven that &ldquo;the response function has time translation symmetry&rdquo; and &ldquo;the system and the observables $\hat{A}, \hat{B}$ involved in the response are all time-translation invariant&rdquo; refer to the same thing. Taking the first-order response function as an example:</p>
+<p>$$
+\begin{aligned}
+G_{A B}^{\mathrm{ret}}\left(t; t^{\prime}\right) &amp; = -\frac{\mathrm{i}}{\hbar} \Theta\left(t-t^{\prime}\right)  \operatorname{Tr} \left{ \hat{\rho}_0\left[\hat{A}_H(t), \hat{B}_H\left(t^{\prime}\right)\right]\right}
+\end{aligned}
+$$</p>
+<p>Using the cyclic property of the Trace:</p>
+<p>$$
+\begin{aligned}
+&amp; \operatorname{Tr} \left{ \hat{\rho}_0\left[\hat{A}_H(t), \hat{B}_H\left(t^{\prime}\right)\right]\right} \
+&amp; = \operatorname{Tr} \left{ \hat{\rho}_0\left[ \exp \left(\frac{\mathrm{i}}{\hbar} \mathcal{H}_0 t\right) \hat{A}  \exp \left(-\frac{\mathrm{i}}{\hbar} \mathcal{H}_0 t\right) ,  \exp \left(\frac{\mathrm{i}}{\hbar} \mathcal{H}_0 t&rsquo;\right) \hat{B}  \exp \left(-\frac{\mathrm{i}}{\hbar} \mathcal{H}_0 t&rsquo;\right) \right]\right} \
+&amp; = \operatorname{Tr} \left{ \hat{\rho}_0\left( \exp \left(\frac{\mathrm{i}}{\hbar} \mathcal{H}_0 t\right) \hat{A}  \exp \left(-\frac{\mathrm{i}}{\hbar} \mathcal{H}_0 (t - t&rsquo;)\right)  \hat{B}  \exp \left(-\frac{\mathrm{i}}{\hbar} \mathcal{H}_0 t&rsquo;\right) - \exp \left(\frac{\mathrm{i}}{\hbar} \mathcal{H}_0 t&rsquo;\right) \hat{B}  \exp \left(\frac{\mathrm{i}}{\hbar} \mathcal{H}_0 (t - t&rsquo;)\right)  \hat{A}  \exp \left(-\frac{\mathrm{i}}{\hbar} \mathcal{H}_0 t\right) \right) \right} \
+&amp; = \operatorname{Tr} \left{ \hat{\rho}_0\left( \exp \left(\frac{\mathrm{i}}{\hbar} \mathcal{H}_0 (t - t&rsquo;) \right) \hat{A}  \exp \left(-\frac{\mathrm{i}}{\hbar} \mathcal{H}_0 (t - t&rsquo;)\right)  \hat{B}  -  \hat{B}  \exp \left(\frac{\mathrm{i}}{\hbar} \mathcal{H}_0 (t - t&rsquo;)\right)  \hat{A}  \exp \left(-\frac{\mathrm{i}}{\hbar} \mathcal{H}_0 (t-t&rsquo;)\right) \right) \right} \
+&amp; = \operatorname{Tr} \left{ \hat{\rho}_0\left( \hat{A}_H(t-t&rsquo;)  \hat{B}  -  \hat{B} \hat{A}_H(t-t&rsquo;) \right) \right} \
+&amp; = \operatorname{Tr} \left{ \hat{\rho}_0\left[ \hat{A}_H(t-t&rsquo;) , \hat{B} \right] \right}
+\end{aligned}
+$$</p>
+<p>Thus $\chi_1(t;t&rsquo;) \equiv G_{A B}^{\mathrm{ret}}\left(t; t^{\prime}\right)$ only explicitly contains $(t-t&rsquo;)$.</p>
+<p>The derivation utilizes the property that $\hat{\rho}_0 = \frac{\exp \left(-\beta \mathcal{H}_0\right)}{\operatorname{Tr}[\exp \left(-\beta \mathcal{H}_0\right)]}$ commutes with the time evolution operator $\exp \left(\pm\frac{\mathrm{i}}{\hbar} \mathcal{H}_0 t \right)$, because both are functions of $\mathcal{H}_0$.</p>
+<p>Similarly, it can be proven that:</p>
+<p>When the system and the observables $\hat{A}, \hat{B}$ involved in the response have time translation invariance, the response function of any order possesses time translation symmetry. This is equivalent to the response function being writable in the form $\chi_n(t;t_1,\dots,t_n) = \chi_n^{\mathcal{T}}(t-t_1,t_1-t_2,\dots,t_{n-1} - t_n)$.</p>
+<h3 id="linear-order-susceptibility">Linear Order Susceptibility</h3>
+<p>Now let&rsquo;s prove that time translation invariance implies that the frequency of the response must be the same as the frequency of the external field, i.e.,</p>
+<p>$$
+\begin{aligned}
+\chi_1(\omega; \omega_1) \sim \delta(\omega - \omega_1)
+\end{aligned}
+$$</p>
+<p>Time translation symmetry requires:</p>
+<p>$$
+\begin{aligned}
+\chi_1(t;t_1) = \chi_1^{\mathcal{T}}(t - t_1)
+\end{aligned}
+$$</p>
+<p>Thus the linear response function in the Frequency Domain is:</p>
+<p>$$
+\begin{aligned}
+\chi_1(\omega ;\omega_1) &amp; \equiv \int_{- \infty}^{+ \infty} \mathrm{~d} t e^{-i\omega t} \int_{- \infty}^{+ \infty} \mathrm{~d} t_1 e^{i\omega_1 t_1}  \chi_1(t; t_1) \
+&amp; = \int_{- \infty}^{+ \infty} \mathrm{~d} t_1 e^{i(\omega_1 - \omega) t_1} \int_{- \infty}^{+ \infty} \mathrm{~d} (t - t_1) e^{-i\omega (t - t_1)}   \chi_1^{\mathcal{T}}(t - t_1) \
+&amp; = 2 \pi \delta(\omega - \omega_1) \tilde{\chi}_1^{\mathcal{T}}(\omega) \
+&amp; \sim \delta(\omega - \omega_1)
+\end{aligned}
+$$</p>
+<p>where $\tilde{\chi}_1^{\mathcal{T}}(\omega)$ is the Fourier Transformation of ${\chi}_1^{\mathcal{T}}(t - t_1)$:</p>
+<p>$$
+\begin{aligned}
+\tilde{\chi}<em>1^{\mathcal{T}}(\omega) \equiv \int</em>{- \infty}^{+ \infty} \mathrm{~d} \tau e^{-i\omega \tau}   \chi_1^{\mathcal{T}}(\tau)
+\end{aligned}
+$$</p>
+<h3 id="nonlinear-order-susceptibility">Nonlinear Order Susceptibility</h3>
+<p>For more general nonlinear responses, it can be proven that the frequency of the response is the sum of the external field frequencies, i.e.,</p>
+<p>$$
+\begin{aligned}
+\chi_n(\omega; \omega_1,\dots,\omega_n) \sim \delta(\omega - \sum_{i=1}^n \omega_i)
+\end{aligned}
+$$</p>
+<p>Time translation symmetry requires (note here everything is written as difference from $t_n$):</p>
+<p>$$
+\begin{aligned}
+\chi_n(t;t_1,\dots,t_n) = \chi_n^{\mathcal{T}}(t-t_n,t_1-t_n,\dots,t_{n-1} - t_n)
+\end{aligned}
+$$</p>
+<p>Thus the response function in Frequency Domain is:</p>
+<p>$$
+\begin{aligned}
+\chi_n(\omega ;\omega_1,\dots,\omega_n) &amp; \equiv \int_{- \infty}^{+ \infty} \mathrm{~d} t e^{-i\omega t} \int_{- \infty}^{+ \infty} \mathrm{~d} t_1 e^{i\omega_1 t_1} &hellip; \int_{- \infty}^{+ \infty} \mathrm{~d} t_n e^{i\omega_n t_n}  \chi_n(t; t_1,\dots,t_n) \
+&amp; = \int_{- \infty}^{+ \infty} \mathrm{~d} t_n e^{-i(\omega - \sum_{i=1}^n \omega_i) t_n} \int_{- \infty}^{+ \infty} \mathrm{~d} (t - t_n) e^{-i\omega (t - t_n)} \int_{- \infty}^{+ \infty} \mathrm{~d} (t_1 - t_n) e^{i\omega_1 (t_1 - t_n)} \dots \int_{- \infty}^{+ \infty} \mathrm{~d} (t_{n-1} - t_n) e^{i\omega_{n-1} (t_{n-1} - t_n)}  \chi_n^{\mathcal{T}}(t - t_n,\dots,t_{n-1} - t_n) \
+&amp; = 2 \pi \delta(\omega - \sum_{i=1}^n \omega_i) \tilde{\chi}<em>n^{\mathcal{T}}(\omega,\omega_1,\dots,\omega</em>{n-1}) \
+&amp; \sim \delta(\omega - \sum_{i=1}^n \omega_i)
+\end{aligned}
+$$</p>
+<p>where $\tilde{\chi}<em>n^{\mathcal{T}}(\omega,\omega_1,\dots,\omega</em>{n-1})$ is the Fourier Transformation of $\chi_n^{\mathcal{T}}(t - t_n,\dots,t_{n-1} - t_n)$:</p>
+<p>$$
+\begin{aligned}
+\tilde{\chi}<em>n^{\mathcal{T}}(\omega,\omega_1,\dots,\omega</em>{n-1}) \equiv \int_{- \infty}^{+ \infty} \mathrm{~d} \tau e^{-i\omega \tau} \int_{- \infty}^{+ \infty} \mathrm{~d} \tau_1 e^{i\omega_1 \tau_1} \dots \int_{- \infty}^{+ \infty} \mathrm{~d} \tau_{n-1} e^{i\omega_{n-1} \tau_{n-1}}  \chi_n^{\mathcal{T}}(\tau,\dots,\tau_{n-1})
+\end{aligned}
+$$</p>
+<p>In summary, with the general Kubo Formula for second-order response, we can easily (not really) generalize the various linear responses considered before to nonlinear responses, such as calculating nonlinear conductivity, nonlinear magnetic susceptibility, nonlinear electric polarizability, etc.</p>
+<h2 id="kubo-formula-in-momentum-space">Kubo Formula in Momentum Space</h2>
+<p>For continuous media (continuous space translation symmetry) or crystals (discrete space translation symmetry), textbooks often also give the Kubo Formula in momentum space.</p>
+<p>But this is essentially just performing a Fourier Transform on another parameter—coordinates—essentially no different from the Fourier Transform between Time Domain and Frequency Domain. Even without space translation symmetry, one can transform every coordinate parameter to obtain the most general form.</p>
+<p>One can imagine that, similar to the response function of a system with time translation symmetry, the response function of a system with space translation symmetry will also satisfy a similar (quasi-) momentum conservation form, i.e.:</p>
+<p>$$
+\begin{aligned}
+\chi_n(k; k_1,\dots,k_n) \sim \delta(k - \sum_{i=1}^n k_i)
+\end{aligned}
+$$</p>
+<h2 id="second-harmonic-generation--zero-frequency-term">Second Harmonic Generation &amp; Zero Frequency Term</h2>
+<p>Next, consider a common time-dependent perturbation, a harmonic perturbation with frequency $\omega_0 &gt; 0$:</p>
+<p>$$
+\begin{aligned}
+\hat{V}_S (t) = \hat{H&rsquo;} e^{-i\omega_0 t} + \hat{H&rsquo;}^\dagger e^{i\omega_0 t}
+\end{aligned}
+$$</p>
+<p>It can be seen that the external field contributes at frequencies $\pm \omega_0$. For a system with time translation invariance, its first-order response should also only have terms with frequencies $\pm \omega_0$.</p>
+<p>As for the second-order response:</p>
+<p>$$
+\begin{aligned}
+\langle \mathcal{O} \rangle_2(\omega) \sim \int d \omega_1 \int d \omega_2 \chi_2(\omega; \omega_1, \omega_2) F(\omega_1) F(\omega_2)
+\end{aligned}
+$$</p>
+<p>If the system has time translation symmetry:</p>
+<p>$$
+\begin{aligned}
+\langle \mathcal{O} \rangle_2(\omega) \sim \int d \omega_1 \int d \omega_2 \delta(\omega- \omega_1-\omega_2) F(\omega_1) F(\omega_2)
+\end{aligned}
+$$</p>
+<p>And the spectrum of the external field is:</p>
+<p>$$
+\begin{aligned}
+F(\omega) \sim \delta(\omega \pm \omega_0)
+\end{aligned}
+$$</p>
+<p>Thus the second-order response can have a second harmonic response, the so-called &ldquo;2nd Harmonic Generation&rdquo;:</p>
+<p>$$
+\begin{aligned}
+\langle \mathcal{O} \rangle_2(\omega) \sim \int d \omega_1 \int d \omega_2 \delta(\omega- \omega_1-\omega_2) \delta(\omega_1 \pm \omega_0) \delta(\omega_2 \pm \omega_0) \sim \delta(\omega \pm 2\omega_0)
+\end{aligned}
+$$</p>
+<p>It can also have a Zero Frequency Response, i.e.:</p>
+<p>$$
+\begin{aligned}
+\langle \mathcal{O} \rangle_2(\omega) \sim \int d \omega_1 \int d \omega_2 \delta(\omega- \omega_1-\omega_2) \delta(\omega_1 \pm \omega_0) \delta(\omega_2 \mp \omega_0) \sim \delta(\omega)
+\end{aligned}
+$$</p>
+<p>Whether it is Second Harmonic Generation or Zero Frequency Response, they are interesting topics in the nonlinear electro-optical response of semiconductors in condensed matter physics.</p>
+<h2 id="kubo-formula-for-fermi-golden-rule">Kubo Formula for Fermi Golden Rule</h2>
+<p>In fact, the transition rate (probability) of a quantum system under light excitation can also be viewed as a response of the system to external perturbations.</p>
+<p>At this time, the observable of the system is the final state projection operator, the unperturbed density matrix is the initial state projection operator, and the external field is the time-harmonic electromagnetic field of the light wave:</p>
+<p>$$
+\begin{aligned}
+\hat{\mathcal{O}} = | f \rangle \langle f |
+\end{aligned}
+$$</p>
+<p>$$
+\begin{aligned}
+\hat{\rho}_0 = |i \rangle \langle i |
+\end{aligned}
+$$</p>
+<p>The transition rate is:</p>
+<p>$$
+\begin{aligned}
+\mathcal{I}_{i \rightarrow f} = \frac{d}{dt} \langle \hat{\mathcal{O}} \rangle
+\end{aligned}
+$$</p>
+<p>We skip the derivation details for now and look directly at the second-order response of the system (it can be proven that the first-order response is 0), which will also have the second harmonic response corresponding to Second Harmonic Generation and the Zero Frequency Response.</p>
+<p>The latter corresponds to the constant transition rate calculated by the general Fermi Golden Rule, while the former is the second harmonic response omitted in the Fermi Golden Rule mentioned in our previous section. Under the long-time average approximation, it completely corresponds to the result of the Fermi Golden Rule.</p>
+<p>Therefore, the Fermi Golden Rule is essentially a second-order response, which can be calculated using the Nonlinear Order Kubo Formula.</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2026-01-08</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="http://localhost:1313/OkongOyangO.Notes/posts/nonlinear-kubo-formalism/" data-title="Nonlinear Response Theory of the Kubo Formula" data-hashtags="Nonlinear Response,Kubo Formula"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="http://localhost:1313/OkongOyangO.Notes/posts/nonlinear-kubo-formalism/" data-title="Nonlinear Response Theory of the Kubo Formula"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/OkongOyangO.Notes/posts/nonlinear-kubo-formalism/" data-hashtag="Nonlinear Response"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/OkongOyangO.Notes/posts/nonlinear-kubo-formalism/" data-title="Nonlinear Response Theory of the Kubo Formula"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://localhost:1313/OkongOyangO.Notes/posts/nonlinear-kubo-formalism/" data-title="Nonlinear Response Theory of the Kubo Formula"><i data-svg-src="/OkongOyangO.Notes/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/OkongOyangO.Notes/posts/nonlinear-kubo-formalism/" data-title="Nonlinear Response Theory of the Kubo Formula"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="http://localhost:1313/OkongOyangO.Notes/posts/nonlinear-kubo-formalism/" data-title="Nonlinear Response Theory of the Kubo Formula" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2flocalhost%3a1313%2fOkongOyangO.Notes%2fposts%2fnonlinear-kubo-formalism%2f&amp;text=Nonlinear%20Response%20Theory%20of%20the%20Kubo%20Formula" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/OkongOyangO.Notes/tags/nonlinear-response/">Nonlinear Response</a>,&nbsp;<a href="/OkongOyangO.Notes/tags/kubo-formula/">Kubo Formula</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/OkongOyangO.Notes/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/OkongOyangO.Notes/posts/joule_heat.ja/" class="prev" rel="prev" title="フェルミの黄金律？ただのジュール熱さ！"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>フェルミの黄金律？ただのジュール熱さ！</a>
+            <a href="/OkongOyangO.Notes/posts/distinguish_conductors_insulators_ground_state/" class="next" rel="next" title="How to Distinguish Conductors and Insulators by Ground State Only? 🤔">How to Distinguish Conductors and Insulators by Ground State Only? 🤔<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.154.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/OkongOyangO.Notes/" target="_blank">xxxx</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="/OkongOyangO.Notes/lib/autocomplete/autocomplete.min.js"></script><script src="/OkongOyangO.Notes/lib/lunr/lunr.min.js"></script><script src="/OkongOyangO.Notes/lib/lazysizes/lazysizes.min.js"></script><script src="/OkongOyangO.Notes/lib/clipboard/clipboard.min.js"></script><script src="/OkongOyangO.Notes/lib/sharer/sharer.min.js"></script><script>window.config={"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/OkongOyangO.Notes/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/OkongOyangO.Notes/js/theme.min.js"></script></body>
+</html>
