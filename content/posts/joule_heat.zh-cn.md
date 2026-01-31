@@ -1,6 +1,6 @@
 ---
 title: "费米黄金定则？焦耳热罢了！"
-date: 2026-01-08T21:54:37-05:00
+date: 2026-01-08T23:00:00-05:00
 draft: false
 math: true
 tags: ["Quantum Mechanics", "Joule Heat"]

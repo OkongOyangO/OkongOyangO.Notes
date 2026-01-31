@@ -1,6 +1,6 @@
 ---
 title: "基底状態だけで導体と絶縁体をどう区別するか？🤔"
-date: 2026-01-08T21:54:37-05:00
+date: 2026-01-08T22:30:00-05:00
 draft: false
 math: true
 tags: ["Condensed Matter", "Insulators"]

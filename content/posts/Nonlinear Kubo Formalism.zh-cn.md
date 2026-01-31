@@ -1,13 +1,12 @@
 ---
 title: "久保同学不放过我｜Kubo Formula的非线性响应理论"
-date: 2026-01-08T21:54:37-05:00
+date: 2026-01-08T22:00:00-05:00
 draft: false
 math: true
 tags: ["Nonlinear Response", "Kubo Formula"]
 categories: ["Physics Notes"]
 ---
 
-#! https://zhuanlan.zhihu.com/p/611996682
 # 久保同学不放过我｜Kubo Formula的非线性响应理论
 
 本文旨在推导Kubo Formula的非线性响应理论。

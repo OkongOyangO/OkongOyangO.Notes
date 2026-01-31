@@ -1,6 +1,6 @@
 ---
 title: "只看基态如何区分导体和绝缘体？🤔"
-date: 2026-01-08T21:54:37-05:00
+date: 2026-01-08T22:30:00-05:00
 draft: false
 math: true
 tags: ["Condensed Matter", "Insulators"]
