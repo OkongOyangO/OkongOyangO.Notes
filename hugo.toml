@@ -21,13 +21,13 @@ theme = "LoveIt"
         identifier = "posts"
         pre = "<i class='fas fa-archive fa-fw'></i>"
         name = "Posts"
-        url = "/posts/"
+        pageRef = "/posts"
         weight = 1
       [[languages.en.menu.main]]
         identifier = "tags"
         pre = "<i class='fas fa-tags fa-fw'></i>"
         name = "Tags"
-        url = "/tags/"
+        pageRef = "/tags"
         weight = 2
 
   [languages.zh-cn]
@@ -42,13 +42,13 @@ theme = "LoveIt"
         identifier = "posts"
         pre = "<i class='fas fa-archive fa-fw'></i>"
         name = "文章"
-        url = "/posts/"
+        pageRef = "/posts"
         weight = 1
       [[languages.zh-cn.menu.main]]
         identifier = "tags"
         pre = "<i class='fas fa-tags fa-fw'></i>"
         name = "标签"
-        url = "/tags/"
+        pageRef = "/tags"
         weight = 2
 
   [languages.ja]
@@ -63,13 +63,13 @@ theme = "LoveIt"
         identifier = "posts"
         pre = "<i class='fas fa-archive fa-fw'></i>"
         name = "記事"
-        url = "/posts/"
+        pageRef = "/posts"
         weight = 1
       [[languages.ja.menu.main]]
         identifier = "tags"
         pre = "<i class='fas fa-tags fa-fw'></i>"
         name = "タグ"
-        url = "/tags/"
+        pageRef = "/tags"
         weight = 2
 
 # -----------------------------------------------------------------------------
