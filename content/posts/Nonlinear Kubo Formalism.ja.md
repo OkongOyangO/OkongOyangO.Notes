@@ -7,8 +7,6 @@ tags: ["Nonlinear Response", "Kubo Formula"]
 categories: ["Physics Notes"]
 ---
 
-# 久保公式の非線形応答理論
-
 この記事は、久保公式の非線形応答理論を導出することを目的としています。
 
 <!--more-->

@@ -7,8 +7,6 @@ tags: ["Nonlinear Response", "Kubo Formula"]
 categories: ["Physics Notes"]
 ---
 
-# 久保同学不放过我｜Kubo Formula的非线性响应理论
-
 本文旨在推导Kubo Formula的非线性响应理论。
 
 <!--more-->

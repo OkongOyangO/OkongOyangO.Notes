@@ -7,8 +7,6 @@ tags: ["Nonlinear Response", "Kubo Formula"]
 categories: ["Physics Notes"]
 ---
 
-# Nonlinear Response Theory of the Kubo Formula
-
 This article aims to derive the nonlinear response theory of the Kubo Formula.
 
 <!--more-->
