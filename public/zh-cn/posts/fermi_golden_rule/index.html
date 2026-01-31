@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>费米黄金法则（Fermi Golden Rule）漏了什么？ - OkongOyangO的物理笔记</title><meta name="Description" content="关于拓扑、几何和非线性响应的物理笔记"><meta property="og:url" content="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/fermi_golden_rule/">
+  <meta property="og:site_name" content="OkongOyangO的物理笔记">
+  <meta property="og:title" content="费米黄金法则（Fermi Golden Rule）漏了什么？">
+  <meta property="og:description" content="本文旨在计算严格的量子跃迁速率，并指出费米黄金法则是其的“长时间平均”的结果。严格的量子跃迁速率相比费米黄金法则还多一项振幅不可忽略的二倍频振荡项，前后者关系类似交流电路中的“瞬时功率”与“平均功率”。
+Fermi Golden Rule 费米黄金法则旨在计算时谐外场微扰下，量子系统从初态$|i\rangle$到末态$|f\rangle$（均为$H_0$的本征态）的跃迁速率。由于量子力学课程中已经阐述的很完备，此处我们在Dirac表象（相互作用表象）下速通一遍。使用Dirac表象是为了更好与Kubo Formula进行比较
+Dirac表象下态的运动方程：
+$$ \begin{aligned} i \hbar \partial_t |\psi(t) \rangle_D = \hat{V}_D(t) |\psi(t) \rangle_D \end{aligned} $$
+Dirac表象下的算符：
+$$ \begin{aligned} \hat{\mathcal{O}}_D(t) = e^{i\hat{H_0}t/\hbar} \hat{\mathcal{O}}_S(t) e^{-i\hat{H_0}t/\hbar} \end{aligned} $$
+下标$D,,S$分别代表Dirac表象和Schrodinger表象。
+对运动方程积分后迭代可以得到Dirac表象下态的演化算符$\mathcal{U}(t,t’)$：
+$$ \begin{aligned} \mathcal{U}(t,t’) &amp; = \mathcal{T} e^{-i \int_{t’}^{t}dt’’ \hat{V}D(t’’)/\hbar } \ &amp; = 1 &#43; (-i/\hbar) \int{t’}^{t}dt_1 \hat{V}D(t_1) &#43; \frac{1}{2!} (-i/\hbar)^2 \int{t’}^{t}dt_1 \int_{t’}^{t}dt_2 \mathcal{T} \hat{V}D(t_1) \hat{V}D(t_2) &#43; \dots \ &amp; = 1 &#43; (-i/\hbar) \int{t’}^{t}dt_1 \hat{V}D(t_1) &#43; (-i/\hbar)^2 \int{t’}^{t}dt_1 \int{t’}^{\mathbf{t_1}}dt_2 \hat{V}_D(t_1) \hat{V}_D(t_2) &#43; \dots \end{aligned} $$">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-01-10T02:59:13+00:00">
+    <meta property="article:modified_time" content="2026-01-10T02:59:13+00:00">
+    <meta property="article:tag" content="Quantum Mechanics">
+    <meta property="article:tag" content="Fermi Golden Rule">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="费米黄金法则（Fermi Golden Rule）漏了什么？">
+  <meta name="twitter:description" content="本文旨在计算严格的量子跃迁速率，并指出费米黄金法则是其的“长时间平均”的结果。严格的量子跃迁速率相比费米黄金法则还多一项振幅不可忽略的二倍频振荡项，前后者关系类似交流电路中的“瞬时功率”与“平均功率”。
+Fermi Golden Rule 费米黄金法则旨在计算时谐外场微扰下，量子系统从初态$|i\rangle$到末态$|f\rangle$（均为$H_0$的本征态）的跃迁速率。由于量子力学课程中已经阐述的很完备，此处我们在Dirac表象（相互作用表象）下速通一遍。使用Dirac表象是为了更好与Kubo Formula进行比较
+Dirac表象下态的运动方程：
+$$ \begin{aligned} i \hbar \partial_t |\psi(t) \rangle_D = \hat{V}_D(t) |\psi(t) \rangle_D \end{aligned} $$
+Dirac表象下的算符：
+$$ \begin{aligned} \hat{\mathcal{O}}_D(t) = e^{i\hat{H_0}t/\hbar} \hat{\mathcal{O}}_S(t) e^{-i\hat{H_0}t/\hbar} \end{aligned} $$
+下标$D,,S$分别代表Dirac表象和Schrodinger表象。
+对运动方程积分后迭代可以得到Dirac表象下态的演化算符$\mathcal{U}(t,t’)$：
+$$ \begin{aligned} \mathcal{U}(t,t’) &amp; = \mathcal{T} e^{-i \int_{t’}^{t}dt’’ \hat{V}D(t’’)/\hbar } \ &amp; = 1 &#43; (-i/\hbar) \int{t’}^{t}dt_1 \hat{V}D(t_1) &#43; \frac{1}{2!} (-i/\hbar)^2 \int{t’}^{t}dt_1 \int_{t’}^{t}dt_2 \mathcal{T} \hat{V}D(t_1) \hat{V}D(t_2) &#43; \dots \ &amp; = 1 &#43; (-i/\hbar) \int{t’}^{t}dt_1 \hat{V}D(t_1) &#43; (-i/\hbar)^2 \int{t’}^{t}dt_1 \int{t’}^{\mathbf{t_1}}dt_2 \hat{V}_D(t_1) \hat{V}_D(t_2) &#43; \dots \end{aligned} $$">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/fermi_golden_rule/" /><link rel="prev" href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/mean_field_approximation/" /><link rel="stylesheet" href="/OkongOyangO.Notes/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "费米黄金法则（Fermi Golden Rule）漏了什么？",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/zh-cn\/posts\/fermi_golden_rule\/"
+        },"genre": "posts","keywords": "Quantum Mechanics, Fermi Golden Rule","wordcount":  1300 ,
+        "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/zh-cn\/posts\/fermi_golden_rule\/","datePublished": "2026-01-10T02:59:13+00:00","dateModified": "2026-01-10T02:59:13+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "OkongOyangO"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/OkongOyangO.Notes/zh-cn/" title="OkongOyangO的物理笔记">OkongOyangO&#39;s Notes</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/zh-cn/OkongOyangO.Notes/posts/"><i class='fas fa-archive fa-fw'></i> 文章 </a><a class="menu-item" href="/zh-cn/OkongOyangO.Notes/tags/"><i class='fas fa-tags fa-fw'></i> 标签 </a><a class="menu-item" href="https://OkongOyangO.github.io" rel="noopener noreffer" target="_blank"><i class='fas fa-home fa-fw'></i> 主页 (Main Site) </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a><a href="javascript:void(0);" class="menu-item language" title="选择语言">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>                      
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/fermi_golden_rule/"></option><option value="/OkongOyangO.Notes/zh-cn/posts/fermi_golden_rule/" selected></option><option value="/OkongOyangO.Notes/ja/posts/fermi_golden_rule/"></option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/OkongOyangO.Notes/zh-cn/" title="OkongOyangO的物理笔记">OkongOyangO&#39;s Notes</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/zh-cn/OkongOyangO.Notes/posts/" title=""><i class='fas fa-archive fa-fw'></i>文章</a><a class="menu-item" href="/zh-cn/OkongOyangO.Notes/tags/" title=""><i class='fas fa-tags fa-fw'></i>标签</a><a class="menu-item" href="https://OkongOyangO.github.io" title="" rel="noopener noreffer" target="_blank"><i class='fas fa-home fa-fw'></i>主页 (Main Site)</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/fermi_golden_rule/"></option><option value="/OkongOyangO.Notes/zh-cn/posts/fermi_golden_rule/" selected></option><option value="/OkongOyangO.Notes/ja/posts/fermi_golden_rule/"></option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">费米黄金法则（Fermi Golden Rule）漏了什么？</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://OkongOyangO.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">收录于 <a href="/OkongOyangO.Notes/zh-cn/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-01-10">2026-01-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1300 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 7 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#fermi-golden-rule">Fermi Golden Rule</a>
+      <ul>
+        <li><a href="#common-approach-in-quantum-mechanics">Common Approach in Quantum Mechanics</a></li>
+        <li><a href="#strict-derivation">Strict Derivation</a></li>
+        <li><a href="#double-frequency-term">Double Frequency Term</a></li>
+      </ul>
+    </li>
+    <li><a href="#summary">Summary</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>本文旨在计算严格的量子跃迁速率，并指出费米黄金法则是其的“长时间平均”的结果。严格的量子跃迁速率相比费米黄金法则还多一项振幅不可忽略的二倍频振荡项，前后者关系类似交流电路中的“瞬时功率”与“平均功率”。</p>
+<h2 id="fermi-golden-rule">Fermi Golden Rule</h2>
+<p>费米黄金法则旨在计算时谐外场微扰下，量子系统从初态$|i\rangle$到末态$|f\rangle$（均为$H_0$的本征态）的跃迁速率。由于量子力学课程中已经阐述的很完备，此处我们在Dirac表象（相互作用表象）下速通一遍。使用Dirac表象是为了更好与Kubo Formula进行比较</p>
+<p>Dirac表象下态的运动方程：</p>
+<p>$$
+\begin{aligned}
+i \hbar \partial_t |\psi(t) \rangle_D = \hat{V}_D(t) |\psi(t) \rangle_D
+\end{aligned}
+$$</p>
+<p>Dirac表象下的算符：</p>
+<p>$$
+\begin{aligned}
+\hat{\mathcal{O}}_D(t) = e^{i\hat{H_0}t/\hbar} \hat{\mathcal{O}}_S(t) e^{-i\hat{H_0}t/\hbar}
+\end{aligned}
+$$</p>
+<p>下标$D,,S$分别代表Dirac表象和Schrodinger表象。</p>
+<p>对运动方程积分后迭代可以得到Dirac表象下态的演化算符$\mathcal{U}(t,t&rsquo;)$：</p>
+<p>$$
+\begin{aligned}
+\mathcal{U}(t,t&rsquo;) &amp; = \mathcal{T} e^{-i \int_{t&rsquo;}^{t}dt&rsquo;&rsquo; \hat{V}<em>D(t&rsquo;&rsquo;)/\hbar }  \
+&amp; = 1 + (-i/\hbar) \int</em>{t&rsquo;}^{t}dt_1 \hat{V}<em>D(t_1) + \frac{1}{2!} (-i/\hbar)^2 \int</em>{t&rsquo;}^{t}dt_1 \int_{t&rsquo;}^{t}dt_2 \mathcal{T} \hat{V}<em>D(t_1) \hat{V}<em>D(t_2) + \dots \
+&amp; = 1 + (-i/\hbar) \int</em>{t&rsquo;}^{t}dt_1 \hat{V}<em>D(t_1) +  (-i/\hbar)^2 \int</em>{t&rsquo;}^{t}dt_1 \int</em>{t&rsquo;}^{\mathbf{t_1}}dt_2  \hat{V}_D(t_1) \hat{V}_D(t_2) + \dots
+\end{aligned}
+$$</p>
+<p>其中$\mathcal{T}$是time ordering operator，将时间小的算符放在右边，先和态矢作用。上面也给出了不用time ordering的表达式，可以对运动方程积分，迭代获得。</p>
+<p>假设系统在$t = t_0$时，初态为$|i\rangle$，取到$\mathcal{O}(V)$阶近似则：</p>
+<p>$$
+\begin{aligned}
+| \psi (t) \rangle_D &amp; = \mathcal{U}(t,t_0) | \psi (t_0) \rangle_D \
+&amp; = |i\rangle + (-i/\hbar) \int_{t_0}^{t}dt_1 \hat{V}_D(t_1)|i\rangle
+\end{aligned}
+$$</p>
+<p>则$t$时刻$|f\rangle$态的概率幅为：</p>
+<p>$$
+\begin{aligned}
+\langle f | \psi (t) \rangle_D = 0 + (-i/\hbar) \int_{t_0}^{t}dt_1 \langle f |\hat{V}_D(t_1)|i\rangle
+\end{aligned}
+$$</p>
+<p>对于频率为$\omega &gt; 0$的时谐微扰：</p>
+<p>$$
+\begin{aligned}
+\hat{V}_S (t) = \hat{H&rsquo;} e^{-i\omega t} + \hat{H&rsquo;}^\dagger e^{i\omega t}
+\end{aligned}
+$$</p>
+<p>则：</p>
+<p>$$
+\begin{aligned}
+\langle f | \psi (t) \rangle_D  = (-i/\hbar) &amp; \int_{t_0}^{t}dt_1 \langle f | e^{i\hat{H_0}t_1/\hbar} \hat{V}<em>S(t_1) e^{-i\hat{H_0}t_1/\hbar}|i\rangle \
+= (-i/\hbar) &amp; \int</em>{t_0}^{t}dt_1 e^{i \omega_{fi} t_1}[ \langle f | \hat{H&rsquo;}^\dagger |i\rangle e^{i \omega t_1} + \langle f | \hat{H&rsquo;} | i \rangle e^{-i \omega t_1} ] \
+= (-i/\hbar)&amp; [ \underbrace{\frac{e^{i (\omega_{fi} + \omega)t} - e^{i (\omega_{fi} + \omega)t_0} }{i(\omega_{fi} + \omega)} \langle f | \hat{H&rsquo;}^\dagger |i\rangle}<em>{(1)} \
+&amp; + \underbrace{\frac{e^{i (\omega</em>{fi} - \omega)t} - e^{i (\omega_{fi} - \omega)t_0} }{i(\omega_{fi} - \omega)} \langle f | \hat{H&rsquo;} |i\rangle}_{(2)} ]
+\end{aligned}
+$$</p>
+<p>其中$\omega_{fi} = (E_f - E_i)/\hbar$对应从初态$|i\rangle$到末态$|f\rangle$的跃迁能量。</p>
+<h3 id="common-approach-in-quantum-mechanics">Common Approach in Quantum Mechanics</h3>
+<p>量子力学课程中的常用做法是考虑$\omega \rightarrow \pm \omega_{fi}$时，(1)会远小于或远大于(2)，从而只考虑其中一项的贡献。</p>
+<p>以$\omega \rightarrow + \omega_{fi}$为例，计算$t$时刻系统处于$|f\rangle$态的概率：</p>
+<p>$$
+\begin{aligned}
+|\langle f | \psi (t) \rangle_D|^2 &amp; \approx |(-i/\hbar) \frac{e^{i (\omega_{fi} - \omega)t} - e^{i (\omega_{fi} - \omega)t_0} }{i(\omega_{fi} - \omega)} \langle f | \hat{H&rsquo;} |i\rangle |^2 \
+&amp; = \frac{1}{\hbar^2} | (-i e^{i(\omega_{fi} - \omega)(t - t_0)/2}) \frac{2 \sin[(\omega_{fi} - \omega)(t - t_0)/2]}{\omega_{fi} - \omega} \langle f | \hat{H&rsquo;} |i\rangle|^2 \
+&amp; = \frac{4}{\hbar^2} \frac{\sin^2[(\omega_{fi} - \omega)(t - t_0)/2]}{(\omega_{fi} - \omega)^2} |\langle f | \hat{H&rsquo;} |i\rangle|^2 \
+&amp; \xrightarrow{t - t_0 \rightarrow + \infty} \frac{2 \pi}{\hbar^2} |\langle f | \hat{H&rsquo;} |i\rangle|^2 \delta (\omega - \omega_{fi}) \times (t - t_0)
+\end{aligned}
+$$</p>
+<p>这里利用了一个不太常见的极限：</p>
+<p>$$
+\begin{aligned}
+\lim_{t \rightarrow + \infty} \frac{\sin^2(\omega t)}{\omega^2} = \pi t \delta(\omega)
+\end{aligned}
+$$</p>
+<p>从而跃迁速率为（同时考虑$\omega \rightarrow \pm \omega_{fi}$）：</p>
+<p>$$
+\begin{aligned}
+\mathcal{I}<em>{i\rightarrow f} = \frac{d}{dt} |\langle f | \psi (t) \rangle_D|^2 = \frac{2 \pi}{\hbar^2} [|\langle f | \hat{H&rsquo;} |i\rangle|^2 \delta (\omega - \omega</em>{fi}) + \langle i | \hat{H&rsquo;} | f \rangle|^2 \delta (\omega + \omega_{fi}) ]
+\end{aligned}
+$$</p>
+<h3 id="strict-derivation">Strict Derivation</h3>
+<p>上述方法给出的结果是正确的，但上述推导取极限的方法似乎不太严谨，特别是那个极其不友好的极限$\lim_{t \rightarrow + \infty} \frac{\sin^2(\omega t)}{\omega^2} = \pi t \delta(\omega)$。</p>
+<p>事实上，我们可以通过更严谨的推导得到$\mathcal{I}_{i\rightarrow f}$。</p>
+<p>进一步，我们会发现之前的推导只考虑了$\mathcal{I}_{i\rightarrow f}$中的零频率项，更严格的结果还含有二倍频项。</p>
+<p>但二倍频振荡项在长时间平均下为零，所以跃迁速率更严格的定义应该是&quot;长时平均跃迁速率&quot;：</p>
+<p>$$
+\begin{aligned}
+\mathcal{I}<em>{i\rightarrow f} \equiv \lim</em>{T \rightarrow +\infty} \frac{1}{2T} \int_{-T}^T \left.\left(\frac{d}{dt} |\langle f | \psi  \rangle_D|^2\right)\right|_{t = \tau} d\tau \equiv \left\langle \frac{d}{dt} |\langle f | \psi  \rangle_D|^2 \right\rangle_t
+\end{aligned}
+$$</p>
+<p>为了更严格地推导，我们从&quot;$\approx$&ldquo;号之前出发，并尽量使用严格等号和大家熟悉的极限公式推导：</p>
+<p>$$
+\begin{aligned}
+|\langle f | \psi (t) \rangle_D|^2 &amp; = \left|-\frac{i}{\hbar} \int_{t_0}^{t}dt_1 \langle f |\hat{V}<em>D(t_1)|i\rangle\right|^2 \
+&amp; = \left(-\frac{i}{\hbar} \int</em>{t_0}^{t}dt_1 \langle f |\hat{V}<em>D(t_1)|i\rangle\right) \times \left(\frac{i}{\hbar} \int</em>{t_0}^{t}dt_1 \langle i |\hat{V}_D(t_1)|f\rangle\right)
+\end{aligned}
+$$</p>
+<p>从而跃迁速率：</p>
+<p>$$
+\begin{aligned}
+\frac{d}{dt} |\langle f | \psi (t) \rangle_D|^2 &amp; = \frac{d}{dt} \left(-\frac{i}{\hbar} \int_{t_0}^{t}dt_1 \langle f |\hat{V}<em>D(t_1)|i\rangle\right) \times \left(\frac{i}{\hbar} \int</em>{t_0}^{t}dt_1 \langle i |\hat{V}<em>D(t_1)|f\rangle\right) \
+&amp; + \left(-\frac{i}{\hbar} \int</em>{t_0}^{t}dt_1 \langle f |\hat{V}<em>D(t_1)|i\rangle\right) \times \frac{d}{dt} \left(\frac{i}{\hbar} \int</em>{t_0}^{t}dt_1 \langle i |\hat{V}_D(t_1)|f\rangle\right) \
+&amp; =  \left(-\frac{i}{\hbar}  \langle f |\hat{V}<em>D(t)|i\rangle\right) \times \left(\frac{i}{\hbar} \int</em>{t_0}^{t}dt_1 \langle i |\hat{V}<em>D(t_1)|f\rangle\right) \
+&amp; + \left(-\frac{i}{\hbar} \int</em>{t_0}^{t}dt_1 \langle f |\hat{V}_D(t_1)|i\rangle\right) \times \left(\frac{i}{\hbar}  \langle i |\hat{V}<em>D(t)|f\rangle\right) \
+&amp; = \frac{1}{\hbar^2} \int</em>{t_0}^{t}dt_1 \left( \langle f |\hat{V}_D(t)|i\rangle\langle i |\hat{V}_D(t_1)|f\rangle + \langle f |\hat{V}_D(t_1)|i\rangle\langle i |\hat{V}_D(t)|f\rangle \right)
+\end{aligned}
+$$</p>
+<p>对于频率为$\omega &gt; 0$的时谐微扰：</p>
+<p>$$
+\begin{aligned}
+\hat{V}_S (t) = \hat{H&rsquo;} e^{-i\omega t} + \hat{H&rsquo;}^\dagger e^{i\omega t}
+\end{aligned}
+$$</p>
+<p>有：</p>
+<p>$$
+\begin{aligned}
+\langle i |\hat{V}<em>D(t)|f\rangle = e^{-i\omega</em>{fi}t}(\langle i |\hat{H&rsquo;}^\dagger|f\rangle e^{i\omega t} + (\langle i |\hat{H&rsquo;}|f\rangle e^{-i\omega t})
+\end{aligned}
+$$</p>
+<p>为方便标记，不妨将$\hat{H&rsquo;}$的矩阵元记为：</p>
+<p>$$
+\begin{aligned}
+\langle f | \hat{H&rsquo;}| i \rangle \equiv H_{fi}
+\end{aligned}
+$$</p>
+<p>$$
+\begin{aligned}
+\langle i | \hat{H&rsquo;}^\dagger | f \rangle \equiv H_{fi}^*
+\end{aligned}
+$$</p>
+<p>特别要注意一点，此处只有$\hat{V}$是厄米算符，$\hat{H&rsquo;}$不一定为厄米算符，所以一般有：</p>
+<p>$$
+\begin{aligned}
+H_{if} = (H^\dagger)<em>{fi}^* \neq H</em>{fi}^*
+\end{aligned}
+$$</p>
+<p>从而：</p>
+<p>$$
+\begin{aligned}
+\frac{d}{dt} |\langle f | \psi (t) \rangle_D|^2 &amp; = \frac{1}{\hbar^2} \int_{t_0}^t dt&rsquo;   e^{i\omega_{fi} (t-t&rsquo;)} (H_{if}^<em>e^{i\omega t} + H_{fi} e^{-i\omega t})(H_{fi}^<em>e^{i\omega t&rsquo;} + H_{if} e^{-i\omega t&rsquo;}) \
+&amp; +\frac{1}{\hbar^2} \int_{t_0}^t dt&rsquo;e^{-i\omega_{fi} (t-t&rsquo;)} (H_{fi}^<em>e^{i\omega t} + H_{if} e^{-i\omega t})(H_{if}^<em>e^{i\omega t&rsquo;} + H_{fi} e^{-i\omega t&rsquo;}) \
+&amp; = \frac{1}{\hbar^2} \int_{t_0}^t dt&rsquo;   e^{i\omega_{fi} (t-t&rsquo;)} \left[ \underbrace{|H_{fi}|^2 e^{-i \omega (t - t&rsquo;)} }<em>{(1.1)} + \underbrace{|H</em>{if}|^2 e^{i \omega (t - t&rsquo;)} }<em>{(1.2)}  + \underbrace{H</em>{fi}^</em> H_{if}^</em> e^{i \omega (t + t&rsquo;)}}<em>{(1.3)} + \underbrace{H</em>{if} H_{fi} e^{-i \omega (t + t&rsquo;)}}<em>{(1.4)} \right] \
+&amp; +\frac{1}{\hbar^2} \int</em>{t_0}^t dt&rsquo;e^{-i\omega_{fi} (t-t&rsquo;)} \left[ \underbrace{|H_{fi}|^2 e^{i \omega (t - t&rsquo;)} }<em>{(2.1)} + \underbrace{|H</em>{if}|^2 e^{-i \omega (t - t&rsquo;)} }<em>{(2.2)}  + \underbrace{H</em>{fi}^</em> H_{if}^</em> e^{i \omega (t + t&rsquo;)}}<em>{(2.3)} + \underbrace{H</em>{if} H_{fi} e^{-i \omega (t + t&rsquo;)}}_{(2.4)} \right]
+\end{aligned}
+$$</p>
+<p>要讨论长时间演化下的近似，我们不妨取$t_0 \rightarrow - \infty$</p>
+<p>关注(1.1)+(2.1)项，变换积分参量后为：</p>
+<p>$$
+\begin{aligned}
+(1.1) + (2.1) &amp; = \frac{|H_{fi}|^2}{\hbar^2} \int_{- \infty}^t dt&rsquo; \left[ e^{i (\omega - \omega_{fi}) (t - t&rsquo;)} + e^{-i (\omega - \omega_{fi}) (t - t&rsquo;)}  \right] \
+&amp; = \frac{|H_{fi}|^2}{\hbar^2} \int_{0}^{+ \infty} d(t - t&rsquo;) \left[ e^{i (\omega - \omega_{fi}) (t - t&rsquo;)} + e^{-i (\omega - \omega_{fi}) (t - t&rsquo;)}  \right] \
+&amp; = \frac{|H_{fi}|^2}{\hbar^2} \int_{-\infty}^{+ \infty} d\tau e^{i (\omega - \omega_{fi}) \tau} \
+&amp; = \frac{2 \pi}{\hbar^2} |H_{fi}|^2 \delta({\omega - \omega_{fi}})
+\end{aligned}
+$$</p>
+<p>这边得到了费米黄金法则中的一项，另一项不难发现来自(1.2)+(2.2)项，从而：</p>
+<p>$$
+\begin{aligned}
+(1.1) + (2.1) + (1.2) + (2.2) = \frac{2 \pi}{\hbar^2} \left[ |H_{fi}|^2 \delta({\omega - \omega_{fi}}) + |H_{if}|^2 \delta({\omega + \omega_{fi}}) \right]
+\end{aligned}
+$$</p>
+<p>但是(1.3)+(2.3)以及(1.4)+(2.4)的具体含义尚未探讨，这也是一般量子力学课程中忽略的一项。</p>
+<p>进一步讨论会发现它是一个二倍频振荡项，且在$t \rightarrow \infty$时，振荡频率和费米黄金法则中的$\delta({\omega - \omega_{fi}})$大小相当，故在严格讨论中不能忽略。</p>
+<p>或者说，费米黄金法则通过取“长时间平均近似”，将这一项振荡项的贡献消除。这好比求交流电路系统中的平均功率。</p>
+<h3 id="double-frequency-term">Double Frequency Term</h3>
+<p>下面我们来计算(1.3)+(2.3)项以及(1.4)+(2.4)。</p>
+<p>以(1.3)+(2.3)项为例：</p>
+<p>$$
+\begin{aligned}
+(1.3) + (2.3) &amp; = \frac{1}{\hbar^2} H_{fi}^* H_{if}^* \int_{- \infty}^t dt&rsquo; e^{i \omega (t + t&rsquo;)}   \left[e^{i\omega_{fi} (t-t&rsquo;)} + e^{-i\omega_{fi} (t-t&rsquo;)} \right] \
+&amp; = \frac{1}{\hbar^2} H_{fi}^* H_{if}^*  \left[ e^{i (\omega + \omega_{fi})t} \int_{- \infty}^t dt&rsquo;  e^{i(\omega - \omega_{fi}) t&rsquo;} + e^{i (\omega - \omega_{fi})t} \int_{- \infty}^t dt&rsquo;  e^{i(\omega + \omega_{fi}) t&rsquo;}  \right] \
+&amp; \xrightarrow[t_0 \rightarrow - \infty]{t \rightarrow + \infty} \frac{1}{\hbar^2} H_{fi}^* H_{if}^*  \left[ e^{i (\omega + \omega_{fi})t} \int_{- \infty}^{+ \infty} dt&rsquo;  e^{i(\omega - \omega_{fi}) t&rsquo;} + e^{i (\omega - \omega_{fi})t} \int_{- \infty}^{+ \infty} dt&rsquo;  e^{i(\omega + \omega_{fi}) t&rsquo;}  \right] \
+&amp; = \frac{2\pi}{\hbar^2} H_{fi}^* H_{if}^*  \left[ e^{i (\omega + \omega_{fi})t} \delta( \omega - \omega_{fi}) + e^{i (\omega - \omega_{fi})t} \delta( \omega + \omega_{fi})  \right] \
+&amp; = \frac{2\pi}{\hbar^2} H_{fi}^* H_{if}^*  \left[ e^{2i\omega_{fi} t} \delta( \omega - \omega_{fi}) + e^{-2i \omega_{fi} t} \delta( \omega + \omega_{fi})  \right]
+\end{aligned}
+$$</p>
+<p>类似的，</p>
+<p>$$
+\begin{aligned}
+(1.4) + (2.4) \xrightarrow[t_0 \rightarrow - \infty]{t \rightarrow + \infty} \frac{2\pi}{\hbar^2}  H_{if} H_{fi} \left[ e^{2i\omega_{fi} t} \delta( \omega + \omega_{fi}) + e^{-2i \omega_{fi} t} \delta( \omega - \omega_{fi})  \right]
+\end{aligned}
+$$</p>
+<p>可见严格的跃迁速率$\frac{d}{dt} |\langle f | \psi (t) \rangle_D|^2$不仅包含了常数项，还包含了二倍频项，且两者振幅相当，均包含$\delta( \omega \pm \omega_{fi})$。</p>
+<p>只有在“长时间平均近似”下定义的跃迁速率$\left\langle\frac{d}{dt} |\langle f | \psi (t) \rangle_D|^2 \right\rangle_\tau$，即仅保留了常数项才和费米黄金法则相对应。</p>
+<p>还要注意到，无论是否取“长时间平均近似”，跃迁速率都必须在演化时间足够长的条件下讨论，否则吸收谱中的$\delta( \omega \pm \omega_{fi})$将有$(t - t_0)^{-1}$量级的展宽。</p>
+<p>但一般的系统并非完全无耗散，还有耗散特征时间$\tau$对应的耗散展宽$\sim \tau^{-1}$。只要$t - t_0 \gg \tau, \omega_{fi}^{-1}$，就不会对吸收谱有太大影响。此处略去对于耗散展宽$\sim \tau^{-1}$的讨论。</p>
+<h2 id="summary">Summary</h2>
+<p>系统在频率为$\omega &gt; 0$的长时间（$t_0 \rightarrow - \infty,, t \rightarrow + \infty$）的时谐微扰下</p>
+<p>$$
+\begin{aligned}
+\hat{V}_S (t) = \hat{H&rsquo;} e^{-i\omega t} + \hat{H&rsquo;}^\dagger e^{i\omega t}
+\end{aligned}
+$$</p>
+<p>$$
+\begin{aligned}
+\langle f | \hat{H&rsquo;}| i \rangle \equiv H_{fi}
+\end{aligned}
+$$</p>
+<p>$$
+\begin{aligned}
+\langle i | \hat{H&rsquo;}^\dagger | f \rangle \equiv H_{fi}^*
+\end{aligned}
+$$</p>
+<p>从初态$| i \rangle$到末态$| f \rangle$严格的跃迁速率表达式为：</p>
+<p>$$
+\begin{aligned}
+\frac{d}{dt} |\langle f | \psi (t) \rangle_D|^2 &amp; \xrightarrow[t_0 \rightarrow - \infty]{t \rightarrow + \infty} \frac{2 \pi}{\hbar^2} \left[ |H_{fi}|^2 \delta({\omega - \omega_{fi}}) + |H_{if}|^2 \delta({\omega + \omega_{fi}}) \right] \
+&amp; + \frac{2\pi}{\hbar^2} H_{fi}^* H_{if}^*  \left[ e^{2i\omega_{fi} t} \delta( \omega - \omega_{fi}) + e^{-2i \omega_{fi} t} \delta( \omega + \omega_{fi})  \right] \
+&amp; + \frac{2\pi}{\hbar^2}  H_{if} H_{fi} \left[ e^{2i\omega_{fi} t} \delta( \omega + \omega_{fi}) + e^{-2i \omega_{fi} t} \delta( \omega - \omega_{fi})  \right] \
+&amp; = \frac{2\pi}{\hbar^2} \left{ \left[ |H_{fi}|^2 + 2\operatorname{Re}(H_{if} H_{fi} e^{2i\omega_{fi} t}) \right]  \delta( \omega + \omega_{fi}) + \left[ |H_{if}|^2 + 2\operatorname{Re}(H_{if} H_{fi} e^{-2i\omega_{fi} t}) \right] \delta( \omega - \omega_{fi})  \right}
+\end{aligned}
+$$</p>
+<p>其中常数项为费米黄金法则的结果，除此之外还有二倍频项，两者振幅相当。</p>
+<p>在“长时间平均近似”下（观测时间远大于系统本征时间$\omega_{fi}^{-1}$），二倍频项可以略去，长时间平均的跃迁速率与费米黄金法则结果一致，这类似求交流电系统的平均功率。</p>
+<p>$$
+\begin{aligned}
+\mathcal{I}<em>{i\rightarrow f} &amp; \equiv \lim</em>{T \rightarrow +\infty} \frac{1}{2T} \int_{-T}^T \left.\left(\frac{d}{dt} |\langle f | \psi  \rangle_D|^2\right)\right|<em>{t = \tau} d\tau \
+&amp; = \frac{2 \pi}{\hbar^2} \left[ |H</em>{fi}|^2 \delta({\omega - \omega_{fi}}) + |H_{if}|^2 \delta({\omega + \omega_{fi}}) \right]
+\end{aligned}
+$$</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2026-01-10</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 X" data-sharer="x" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/fermi_golden_rule/" data-title="费米黄金法则（Fermi Golden Rule）漏了什么？" data-hashtags="Quantum Mechanics,Fermi Golden Rule"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Threads" data-sharer="threads" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/fermi_golden_rule/" data-title="费米黄金法则（Fermi Golden Rule）漏了什么？"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/fermi_golden_rule/" data-hashtag="Quantum Mechanics"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/fermi_golden_rule/" data-title="费米黄金法则（Fermi Golden Rule）漏了什么？"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/fermi_golden_rule/" data-title="费米黄金法则（Fermi Golden Rule）漏了什么？"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/fermi_golden_rule/" data-title="费米黄金法则（Fermi Golden Rule）漏了什么？"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Diaspora" data-sharer="diaspora" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/fermi_golden_rule/" data-title="费米黄金法则（Fermi Golden Rule）漏了什么？" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fOkongOyangO.github.io%2fOkongOyangO.Notes%2fzh-cn%2fposts%2ffermi_golden_rule%2f&amp;text=%e8%b4%b9%e7%b1%b3%e9%bb%84%e9%87%91%e6%b3%95%e5%88%99%ef%bc%88Fermi%20Golden%20Rule%ef%bc%89%e6%bc%8f%e4%ba%86%e4%bb%80%e4%b9%88%ef%bc%9f" target="_blank" title="分享到 Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/OkongOyangO.Notes/zh-cn/tags/quantum-mechanics/">Quantum Mechanics</a>,&nbsp;<a href="/OkongOyangO.Notes/zh-cn/tags/fermi-golden-rule/">Fermi Golden Rule</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/OkongOyangO.Notes/zh-cn/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/OkongOyangO.Notes/zh-cn/posts/mean_field_approximation/" class="prev" rel="prev" title="平均场近似与变分法｜Hartree, Fock, BCS能1:1:1混用吗？"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>平均场近似与变分法｜Hartree, Fock, BCS能1:1:1混用吗？</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.154.3">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://OkongOyangO.github.io" target="_blank">OkongOyangO</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="/OkongOyangO.Notes/lib/lunr/lunr.stemmer.support.min.js"></script><script src="/OkongOyangO.Notes/lib/lunr/lunr.zh.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/copy-tex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/mhchem.min.js"></script><script>window.config={"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/OkongOyangO.Notes/zh-cn/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/OkongOyangO.Notes/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":30,"type":"lunr"}};</script><script src="/OkongOyangO.Notes/js/theme.min.js"></script></body>
+</html>

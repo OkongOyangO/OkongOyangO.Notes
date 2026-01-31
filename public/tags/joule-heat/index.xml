@@ -1,33 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Joule Heat on Yiyang&#39;s Physics Notes</title>
-    <link>http://localhost:1313/OkongOyangO.Notes/tags/joule-heat/</link>
-    <description>Recent content in Joule Heat on Yiyang&#39;s Physics Notes</description>
+    <title>Joule Heat on OkongOyangO&#39;s Notes</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/tags/joule-heat/</link>
+    <description>Recent content in Joule Heat on OkongOyangO&#39;s Notes</description>
     <generator>Hugo</generator>
     <language>en</language>
+    <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
+    <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
     <lastBuildDate>Thu, 08 Jan 2026 21:54:37 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/OkongOyangO.Notes/tags/joule-heat/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/tags/joule-heat/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fermi Golden Rule? Just Joule Heat!</title>
-      <link>http://localhost:1313/OkongOyangO.Notes/posts/joule_heat/</link>
-      <pubDate>Thu, 08 Jan 2026 21:54:37 -0500</pubDate>
-      <guid>http://localhost:1313/OkongOyangO.Notes/posts/joule_heat/</guid>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/joule_heat/</link>
+      <pubDate>Thu, 08 Jan 2026 21:54:37 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/joule_heat/</guid>
       <description>&lt;p&gt;This article aims to clarify the consistency between Fermi&amp;rsquo;s Golden Rule and Joule Heat.&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Fermi&amp;rsquo;s Golden Rule can calculate the system&amp;rsquo;s absorption of electromagnetic fields, while the Kubo Formula can calculate the current response, and the Joule heat formula can also calculate the absorption of electromagnetic fields.&lt;/p&gt;&#xA;&lt;p&gt;The former seems to calculate entirely from the perspective of quantum transitions, while the latter seems to calculate entirely from the perspective of Joule heat. However, both are essentially applications of time-dependent perturbation theory in quantum mechanics. We touched upon this in the previous two articles, but did not elaborate on their consistency. Interested readers can visit:&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>フェルミの黄金律？ただのジュール熱さ！</title>
-      <link>http://localhost:1313/OkongOyangO.Notes/posts/joule_heat.ja/</link>
-      <pubDate>Thu, 08 Jan 2026 21:54:37 -0500</pubDate>
-      <guid>http://localhost:1313/OkongOyangO.Notes/posts/joule_heat.ja/</guid>
-      <description>&lt;p&gt;本文はフェルミの黄金律とジュール熱の整合性を説明することを目的としています。&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;フェルミの黄金律は系の電磁場吸収を計算でき、久保公式（Kubo Formula）は電流応答を計算でき、ジュール熱公式も電磁場の吸収を計算できます。&lt;/p&gt;&#xA;&lt;p&gt;前者は完全に量子遷移の観点から計算しているように見え、後者は完全にジュール熱の観点から計算しているように見えます。しかし、両者は本質的に量子力学における時間依存摂動論の応用であり、この点については以前の2つの記事でも触れましたが、両者の整合性については詳細に説明していませんでした。興味のある読者は以下をご覧ください：&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/611688122&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;https://zhuanlan.zhihu.com/p/611688122&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/611996682&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;https://zhuanlan.zhihu.com/p/611996682&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;フェルミの黄金律は、久保公式におけるハミルトニアン $H_0$ の二次応答の変化率 $\frac{d }{dt}\langle H_0 \rangle^{(2)}$ に対応し、この二次応答の変化率は電流の線形応答と外部電場の内積 $\langle \hat{\mathbf{J}} \rangle^{(1)} \cdot \mathbf{E}$ として表せることが証明できます。&lt;/p&gt;&#xA;&lt;h2 id=&#34;fermi-golden-rule&#34;&gt;Fermi Golden Rule&lt;/h2&gt;&#xA;&lt;p&gt;フェルミの黄金律は、時間調和外場摂動下で、量子系が初期状態 $|i\rangle$ から終状態 $|f\rangle$ （いずれも $H_0$ の固有状態）へ遷移する速度を計算することを目的としています。以前のフェルミの黄金律の記事では、久保公式と比較しやすくするために、ディラック描像（Dirac Picture）を用いて再導出しました。&lt;/p&gt;&#xA;&lt;p&gt;ディラック描像における状態の運動方程式：&lt;/p&gt;&#xA;&lt;p&gt;$$&#xA;\begin{aligned}&#xA;i \hbar \partial_t |\psi(t) \rangle_D = \hat{V}_D(t) |\psi(t) \rangle_D&#xA;\end{aligned}&#xA;$$&lt;/p&gt;&#xA;&lt;p&gt;運動方程式を積分して反復することで、ディラック描像における状態の時間発展の摂動展開形式が得られます。系が $t = t_0$ において初期状態 $|i\rangle$ にあると仮定すると：&lt;/p&gt;&#xA;&lt;p&gt;$$&#xA;\begin{aligned}&#xA;| \psi (t) \rangle_D &amp;amp; = |i\rangle + (-i/\hbar) \int_{t_0}^{t}dt_1 \hat{V}&lt;em&gt;D(t_1)|i\rangle + (-i/\hbar)^2 \int&lt;/em&gt;{t_0}^{t}dt_1 \int_{t_0}^{\mathbf{t_1}}dt_2  \hat{V}_D(t_1) \hat{V}_D(t_2)|i\rangle + \dots \&#xA;&amp;amp; = | \psi^{(0)} \rangle + | \psi^{(1)}\rangle + | \psi^{(2)}\rangle + \dots&#xA;\end{aligned}&#xA;$$&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>费米黄金定则？焦耳热罢了！</title>
-      <link>http://localhost:1313/OkongOyangO.Notes/posts/joule_heat.zh/</link>
-      <pubDate>Thu, 08 Jan 2026 21:54:37 -0500</pubDate>
-      <guid>http://localhost:1313/OkongOyangO.Notes/posts/joule_heat.zh/</guid>
-      <description>&lt;p&gt;本文旨在阐述费米黄金法则和焦耳热的一致性。&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;费米黄金法则能计算系统对电磁场的吸收，而Kubo Formula能计算电流响应，用焦耳热公式也能计算电磁场的吸收。&lt;/p&gt;&#xA;&lt;p&gt;前者似乎完全从量子跃迁的角度计算，而后者似乎完全从焦耳热的角度计算。但两者本质上都是量子力学中的含时围绕理论的应用，这一点我们在前两篇文章中便有所涉及，只不过对两者的一致性没有详尽的阐述，有兴趣的读者可以移步浏览：&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/611688122&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;https://zhuanlan.zhihu.com/p/611688122&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/611996682&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;https://zhuanlan.zhihu.com/p/611996682&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;可以证明，费米黄金法则对应Kubo Formula中哈密顿量$H_0$的二阶响应变化率$\frac{d }{dt}\langle H_0 \rangle^{(2)}$，而此二阶响应变化率可以表示成电流线性响应与外加电场的内积$\langle \hat{\mathbf{J}} \rangle^{(1)} \cdot \mathbf{E}$。&lt;/p&gt;&#xA;&lt;h2 id=&#34;fermi-golden-rule&#34;&gt;Fermi Golden Rule&lt;/h2&gt;&#xA;&lt;p&gt;费米黄金法则旨在计算时谐外场微扰下，量子系统从初态$|i\rangle$到末态$|f\rangle$（均为$H_0$的本征态）的跃迁速率。在之前的费米黄金法则的文章中，我们用Dirac Picture重新推导了一遍，而使用Dirac Picture是为了更好与Kubo Formula进行比较。&lt;/p&gt;&#xA;&lt;p&gt;Dirac表象下态的运动方程：&lt;/p&gt;&#xA;&lt;p&gt;$$&#xA;\begin{aligned}&#xA;i \hbar \partial_t |\psi(t) \rangle_D = \hat{V}_D(t) |\psi(t) \rangle_D&#xA;\end{aligned}&#xA;$$&lt;/p&gt;&#xA;&lt;p&gt;对运动方程积分后迭代可以得到Dirac表象下态随时间演化的微扰展开形式。假设系统在$t = t_0$时，初态为$|i\rangle$，则：&lt;/p&gt;&#xA;&lt;p&gt;$$&#xA;\begin{aligned}&#xA;| \psi (t) \rangle_D &amp;amp; = |i\rangle + (-i/\hbar) \int_{t_0}^{t}dt_1 \hat{V}&lt;em&gt;D(t_1)|i\rangle + (-i/\hbar)^2 \int&lt;/em&gt;{t_0}^{t}dt_1 \int_{t_0}^{\mathbf{t_1}}dt_2  \hat{V}_D(t_1) \hat{V}_D(t_2)|i\rangle + \dots \&#xA;&amp;amp; = | \psi^{(0)} \rangle + | \psi^{(1)}\rangle + | \psi^{(2)}\rangle + \dots&#xA;\end{aligned}&#xA;$$&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

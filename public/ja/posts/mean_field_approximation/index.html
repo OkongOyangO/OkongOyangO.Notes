@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>平均場近似と変分法｜Hartree, Fock, BCSは1:1:1で混ぜて使えるか？ - OkongOyangOのノート</title><meta name="Description" content="トポロジー、幾何学、非線形応答に関する物理ノート"><meta property="og:url" content="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/mean_field_approximation/">
+  <meta property="og:site_name" content="OkongOyangOのノート">
+  <meta property="og:title" content="平均場近似と変分法｜Hartree, Fock, BCSは1:1:1で混ぜて使えるか？">
+  <meta property="og:description" content="本文は平均場近似を紹介すると同時に、その変分法的本質を説明することを目的としています。
+Hartree, Fock, BCSといった個々の平均場近似は、一見すると互いに相容れないdecouple（分離）手法のように見えますが、平均場近似の変分法的本質を利用することで、これらは実際に1:1:1で混ぜて使用できることがわかります。
+Preface 本文のインスピレーションは、まずクラスメートの@ykliとの議論から得られました。導出過程で多大な助けをくれた@ykliに感謝します。
+この問題はPhysics Stack Exchangeのウェブサイトでも言及されており（“Multi-channel Mean Field Theory&#34;と呼ばれています）、参考のためにリンクを貼っておきます：
+https://physics.stackexchange.com/questions/742905/multi-channel-mean-field-theory
+また、@阿兰那行先輩の「物理界隈の隠語」に関する回答からもかなりのインスピレーションを得ました。興味のある読者は以下をご覧ください：
+https://www.zhihu.com/question/410499049/answer/2442413803
+Introduction 相互作用系において、システムの完全なハミルトニアンは以下の通りです：
+$$ \begin{aligned} \hat{H} = \hat{H}0 &#43; \hat{V}{int} \end{aligned} $$
+ここで、$\hat{H}_0 \sim \sum c^\dagger c$ はフェルミ粒子生成消滅演算子の二次形式部分であり、独立した自由粒子として比較的容易に扱えます。
+一方、$\hat{V}_{int} \sim \sum c^\dagger c^\dagger c c$ は相互作用部分です。
+相互作用の存在により、システムの基底状態波動関数や平衡状態密度行列を求めることは難しく、相互作用系の様々な情報を計算することも困難になります。そのため、我々はしばしば様々な近似手法を用いて処理します。
+平均場近似はそのような手法の一つです。厳密に解くことができる平均場近似ハミルトニアンを取り上げます：
+$$ \begin{aligned} \hat{H}_{mf} = \hat{H}0 &#43; \hat{V}{mf} \end{aligned} $$
+$\hat{V}_{mf}$ もまた二次形式にすることで、厳密解を求めることが容易になります。そして、この平均場近似ハミルトニアンの解を用いて、システムの様々な性質を近似的に導き出すことができます。
+Mean Field Theory by Decoupling しかし、近似は適当に選べばよいわけではなく、ある程度のテクニックが必要です。
+量子力学の教科書では、平均場近似とは演算子の量子揺らぎ部分を無視すること、すなわちDecoupling Method（分離法）であると教えられます：">
+  <meta property="og:locale" content="ja">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-01-09T19:05:46+00:00">
+    <meta property="article:modified_time" content="2026-01-09T19:05:46+00:00">
+    <meta property="article:tag" content="Condensed Matter">
+    <meta property="article:tag" content="Mean Field">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="平均場近似と変分法｜Hartree, Fock, BCSは1:1:1で混ぜて使えるか？">
+  <meta name="twitter:description" content="本文は平均場近似を紹介すると同時に、その変分法的本質を説明することを目的としています。
+Hartree, Fock, BCSといった個々の平均場近似は、一見すると互いに相容れないdecouple（分離）手法のように見えますが、平均場近似の変分法的本質を利用することで、これらは実際に1:1:1で混ぜて使用できることがわかります。
+Preface 本文のインスピレーションは、まずクラスメートの@ykliとの議論から得られました。導出過程で多大な助けをくれた@ykliに感謝します。
+この問題はPhysics Stack Exchangeのウェブサイトでも言及されており（“Multi-channel Mean Field Theory&#34;と呼ばれています）、参考のためにリンクを貼っておきます：
+https://physics.stackexchange.com/questions/742905/multi-channel-mean-field-theory
+また、@阿兰那行先輩の「物理界隈の隠語」に関する回答からもかなりのインスピレーションを得ました。興味のある読者は以下をご覧ください：
+https://www.zhihu.com/question/410499049/answer/2442413803
+Introduction 相互作用系において、システムの完全なハミルトニアンは以下の通りです：
+$$ \begin{aligned} \hat{H} = \hat{H}0 &#43; \hat{V}{int} \end{aligned} $$
+ここで、$\hat{H}_0 \sim \sum c^\dagger c$ はフェルミ粒子生成消滅演算子の二次形式部分であり、独立した自由粒子として比較的容易に扱えます。
+一方、$\hat{V}_{int} \sim \sum c^\dagger c^\dagger c c$ は相互作用部分です。
+相互作用の存在により、システムの基底状態波動関数や平衡状態密度行列を求めることは難しく、相互作用系の様々な情報を計算することも困難になります。そのため、我々はしばしば様々な近似手法を用いて処理します。
+平均場近似はそのような手法の一つです。厳密に解くことができる平均場近似ハミルトニアンを取り上げます：
+$$ \begin{aligned} \hat{H}_{mf} = \hat{H}0 &#43; \hat{V}{mf} \end{aligned} $$
+$\hat{V}_{mf}$ もまた二次形式にすることで、厳密解を求めることが容易になります。そして、この平均場近似ハミルトニアンの解を用いて、システムの様々な性質を近似的に導き出すことができます。
+Mean Field Theory by Decoupling しかし、近似は適当に選べばよいわけではなく、ある程度のテクニックが必要です。
+量子力学の教科書では、平均場近似とは演算子の量子揺らぎ部分を無視すること、すなわちDecoupling Method（分離法）であると教えられます：">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/mean_field_approximation/" /><link rel="prev" href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/joule_heat/" /><link rel="next" href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/fermi_golden_rule/" /><link rel="stylesheet" href="/OkongOyangO.Notes/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "平均場近似と変分法｜Hartree, Fock, BCSは1:1:1で混ぜて使えるか？",
+        "inLanguage": "ja",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/ja\/posts\/mean_field_approximation\/"
+        },"genre": "posts","keywords": "Condensed Matter, Mean Field","wordcount":  1270 ,
+        "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/ja\/posts\/mean_field_approximation\/","datePublished": "2026-01-09T19:05:46+00:00","dateModified": "2026-01-09T19:05:46+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "OkongOyangO"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/OkongOyangO.Notes/ja/" title="OkongOyangOのノート">OkongOyangO&#39;s Notes</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/ja/OkongOyangO.Notes/posts/"><i class='fas fa-archive fa-fw'></i> 記事 </a><a class="menu-item" href="/ja/OkongOyangO.Notes/tags/"><i class='fas fa-tags fa-fw'></i> タグ </a><a class="menu-item" href="https://OkongOyangO.github.io" rel="noopener noreffer" target="_blank"><i class='fas fa-home fa-fw'></i> メインページ </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a><a href="javascript:void(0);" class="menu-item language" title="Select Language">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>                      
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/mean_field_approximation/"></option><option value="/OkongOyangO.Notes/zh-cn/posts/mean_field_approximation/"></option><option value="/OkongOyangO.Notes/ja/posts/mean_field_approximation/" selected></option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/OkongOyangO.Notes/ja/" title="OkongOyangOのノート">OkongOyangO&#39;s Notes</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/ja/OkongOyangO.Notes/posts/" title=""><i class='fas fa-archive fa-fw'></i>記事</a><a class="menu-item" href="/ja/OkongOyangO.Notes/tags/" title=""><i class='fas fa-tags fa-fw'></i>タグ</a><a class="menu-item" href="https://OkongOyangO.github.io" title="" rel="noopener noreffer" target="_blank"><i class='fas fa-home fa-fw'></i>メインページ</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="Select Language">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/mean_field_approximation/"></option><option value="/OkongOyangO.Notes/zh-cn/posts/mean_field_approximation/"></option><option value="/OkongOyangO.Notes/ja/posts/mean_field_approximation/" selected></option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">平均場近似と変分法｜Hartree, Fock, BCSは1:1:1で混ぜて使えるか？</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://OkongOyangO.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">included in <a href="/OkongOyangO.Notes/ja/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-01-09">2026-01-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1270 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;6 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#preface">Preface</a></li>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#mean-field-theory-by-decoupling">Mean Field Theory by Decoupling</a></li>
+    <li><a href="#problem-of-decoupling">Problem of Decoupling</a></li>
+    <li><a href="#variational-method-for-finite-temperature">Variational Method for Finite Temperature</a></li>
+    <li><a href="#variational-method">Variational Method</a></li>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#reference">Reference</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>本文は平均場近似を紹介すると同時に、その変分法的本質を説明することを目的としています。</p>
+<p>Hartree, Fock, BCSといった個々の平均場近似は、一見すると互いに相容れないdecouple（分離）手法のように見えますが、平均場近似の変分法的本質を利用することで、これらは実際に1:1:1で混ぜて使用できることがわかります。</p>
+<h2 id="preface">Preface</h2>
+<p>本文のインスピレーションは、まずクラスメートの<a href="https://www.zhihu.com/people/li-yong-kang-9-34" target="_blank" rel="noopener noreffer ">@ykli</a>との議論から得られました。導出過程で多大な助けをくれた<a href="https://www.zhihu.com/people/li-yong-kang-9-34" target="_blank" rel="noopener noreffer ">@ykli</a>に感謝します。</p>
+<p>この問題はPhysics Stack Exchangeのウェブサイトでも言及されており（&ldquo;Multi-channel Mean Field Theory&quot;と呼ばれています）、参考のためにリンクを貼っておきます：</p>
+<p><a href="https://physics.stackexchange.com/questions/742905/multi-channel-mean-field-theory" target="_blank" rel="noopener noreffer ">https://physics.stackexchange.com/questions/742905/multi-channel-mean-field-theory</a></p>
+<p>また、<a href="https://www.zhihu.com/people/deng-wwzz" target="_blank" rel="noopener noreffer ">@阿兰那行</a>先輩の「物理界隈の隠語」に関する回答からもかなりのインスピレーションを得ました。興味のある読者は以下をご覧ください：</p>
+<p><a href="https://www.zhihu.com/question/410499049/answer/2442413803" target="_blank" rel="noopener noreffer ">https://www.zhihu.com/question/410499049/answer/2442413803</a></p>
+<h2 id="introduction">Introduction</h2>
+<p>相互作用系において、システムの完全なハミルトニアンは以下の通りです：</p>
+<p>$$
+\begin{aligned}
+\hat{H} = \hat{H}<em>0 + \hat{V}</em>{int}
+\end{aligned}
+$$</p>
+<p>ここで、$\hat{H}_0 \sim \sum c^\dagger c$ はフェルミ粒子生成消滅演算子の二次形式部分であり、独立した自由粒子として比較的容易に扱えます。</p>
+<p>一方、$\hat{V}_{int} \sim \sum c^\dagger c^\dagger c c$ は相互作用部分です。</p>
+<p>相互作用の存在により、システムの基底状態波動関数や平衡状態密度行列を求めることは難しく、相互作用系の様々な情報を計算することも困難になります。そのため、我々はしばしば様々な近似手法を用いて処理します。</p>
+<p>平均場近似はそのような手法の一つです。厳密に解くことができる平均場近似ハミルトニアンを取り上げます：</p>
+<p>$$
+\begin{aligned}
+\hat{H}_{mf} = \hat{H}<em>0 + \hat{V}</em>{mf}
+\end{aligned}
+$$</p>
+<p>$\hat{V}_{mf}$ もまた二次形式にすることで、厳密解を求めることが容易になります。そして、この平均場近似ハミルトニアンの解を用いて、システムの様々な性質を近似的に導き出すことができます。</p>
+<h2 id="mean-field-theory-by-decoupling">Mean Field Theory by Decoupling</h2>
+<p>しかし、近似は適当に選べばよいわけではなく、ある程度のテクニックが必要です。</p>
+<p>量子力学の教科書では、平均場近似とは演算子の量子揺らぎ部分を無視すること、すなわちDecoupling Method（分離法）であると教えられます：</p>
+<p>$$
+\begin{aligned}
+A^\dagger A &amp; = [\langle A \rangle + (A - \langle A \rangle)]^\dagger [\langle A \rangle + (A - \langle A \rangle)] \
+&amp; \equiv [\langle A \rangle + \delta A]^\dagger [\langle A \rangle + \delta A]  \
+&amp; = \underbrace{\langle A^\dagger \rangle \langle A \rangle}<em>{\mathcal{O}(\delta A^0)} + \underbrace{\langle A^\dagger \rangle \delta A +  \delta A^\dagger \langle A \rangle}</em>{\mathcal{O}(\delta A^1)} + \underbrace{\delta A^\dagger \delta A}<em>{\mathcal{O}(\delta A^2)} \
+&amp; = \underbrace{\langle A^\dagger \rangle A + A^\dagger \langle A \rangle - \langle A^\dagger \rangle \langle A \rangle}</em>{\text{mean field}\ =\ \mathcal{O}(\delta A^0) + \mathcal{O}(\delta A^1)} \
+&amp; + \underbrace{(A - \langle A \rangle)^\dagger (A - \langle A \rangle)}_{\text{quantum fluctuation}\ =\ \mathcal{O}(\delta A^2)} \
+&amp; \approx \langle A^\dagger \rangle A + A^\dagger \langle A \rangle - \langle A^\dagger \rangle \langle A \rangle
+\end{aligned}
+$$</p>
+<p>ここで、平均場（mean field）部分は演算子揺らぎ$\delta A$の0次と1次の部分を保持し、量子揺らぎ（quantum fluctuation）は演算子揺らぎ$\delta A$の2次の部分を含んでいます。</p>
+<p>したがって、量子揺らぎが小さい場合、平均場近似は比較的正確であることは容易に理解できます。</p>
+<p>二体相互作用$\hat{V}_{int}$について：</p>
+<p>$$
+\begin{aligned}
+\hat{V}<em>{int} = \frac{1}{2} \sum</em>{ij}V_{ij} c_i^\dagger c_j^\dagger c_j c_i
+\end{aligned}
+$$</p>
+<p>これを$\hat{A}^\dagger\hat{A}$（の和）の形式に分解するには3つの方法があります：</p>
+<ul>
+<li>Density Channel (Hartree)：$\hat{A}_{i}^{H} = c_i^\dagger c_i$</li>
+<li>Exchange Channel (Fock)：$\hat{A}_{ij}^{F} = c_i^\dagger c_j$</li>
+<li>Cooper Channer (BCS)：$\hat{A}_{ij}^{BCS} = c_i c_j$</li>
+</ul>
+<p>Density Channelを例にとると、Hartree平均場のDecoupling過程は以下のようになります：</p>
+<p>$$
+\begin{aligned}
+&amp; \hat{V}<em>{int} = \frac{1}{2} \sum</em>{ij}V_{ij} c_i^\dagger c_j^\dagger c_j c_i \
+&amp; = \frac{1}{2} \sum_{ij}V_{ij} c_i^\dagger c_i c_j^\dagger c_j \ +\underbrace{\ const}<em>{\text{ignore it}} \
+&amp; = \frac{1}{2} \sum</em>{ij}V_{ij} {\hat{A}<em>{i}^{H}}^\dagger \hat{A}</em>{j}^{H} \
+&amp; = \frac{1}{2} \sum_{ij}V_{ij} \left(\langle {\hat{A}<em>{i}^{H}}^\dagger\rangle + \delta {\hat{A}</em>{i}^{H}}^\dagger \right) \left(\langle {\hat{A}<em>{j}^{H}}\rangle + \delta {\hat{A}</em>{j}^{H}} \right) \
+&amp; \approx -\frac{1}{2} \sum_{ij}V_{ij} \left(\langle {\hat{A}<em>{i}^{H}}^\dagger\rangle  {\hat{A}</em>{j}^{H}} +  {\hat{A}<em>{i}^{H}}^\dagger \langle {\hat{A}</em>{j}^{H}}\rangle - \langle {\hat{A}<em>{i}^{H}}^\dagger\rangle \langle {\hat{A}</em>{j}^{H}}\rangle \right) \
+&amp; \equiv \hat{V}_{H}
+\end{aligned}
+$$</p>
+<p>Fock平均場のDecouplingについては：</p>
+<p>$$
+\begin{aligned}
+&amp; \hat{V}<em>{int} = - \frac{1}{2} \sum</em>{ij}V_{ij} {\hat{A}<em>{ij}^{F} }^\dagger \hat{A}</em>{ij}^{F} \ +\underbrace{\ const}<em>{\text{ignore it}} \
+&amp; \approx -\frac{1}{2} \sum</em>{ij}V_{ij} \left(\langle {\hat{A}<em>{ij}^{F}}^\dagger\rangle  \hat{A}</em>{ij}^{F} +  {\hat{A}<em>{ij}^{F}}^\dagger \langle \hat{A}</em>{ij}^{F}\rangle - \langle {\hat{A}<em>{ij}^{F}}^\dagger\rangle \langle {\hat{A}</em>{ij}^{F}}\rangle \right)\
+&amp; \equiv \hat{V}_{F}
+\end{aligned}
+$$</p>
+<p>BCS平均場のDecouplingについては：</p>
+<p>$$
+\begin{aligned}
+&amp; \hat{V}<em>{int} = \frac{1}{2} \sum</em>{ij}V_{ij} {\hat{A}<em>{ij}^{BCS} }^\dagger \hat{A}</em>{ij}^{BCS} \ +\underbrace{\ const}<em>{\text{ignore it}} \
+&amp; \approx \frac{1}{2} \sum</em>{ij}V_{ij} \left(\langle {\hat{A}<em>{ij}^{BCS}}^\dagger\rangle  \hat{A}</em>{ij}^{BCS} +  {\hat{A}<em>{ij}^{BCS}}^\dagger \langle \hat{A}</em>{ij}^{BCS}\rangle - \langle {\hat{A}<em>{ij}^{BCS}}^\dagger\rangle \langle {\hat{A}</em>{ij}^{BCS}}\rangle \right)\
+&amp; \equiv \hat{V}_{BCS}
+\end{aligned}
+$$</p>
+<h2 id="problem-of-decoupling">Problem of Decoupling</h2>
+<p>しかし、これでは二体相互作用に対して、Hartree、Fock、あるいはBCSのいずれか一つの近似しか行えないように思えます。</p>
+<p>しかし実際には、よく耳にする「Hartree-Fock平均場近似」は2つの近似を使用しているようです。</p>
+<p>$$
+\begin{aligned}
+\hat{V}<em>{int} \approx \hat{V}</em>{H} + \hat{V}_{F}
+\end{aligned}
+$$</p>
+<p>では、このようにすることによって重複計算（double counting）の問題は生じないのでしょうか？</p>
+<p>それとも、$\hat{V}<em>{int}$を$\frac{\hat{V}</em>{int}}{2}$と$\frac{\hat{V}_{int}}{2}$に分割して使用するのでしょうか？</p>
+<p>$$
+\begin{aligned}
+\hat{V}<em>{int} = \frac{\hat{V}</em>{int}}{2} + \frac{\hat{V}<em>{int}}{2} \approx \frac{\hat{V}</em>{H}}{2} + \frac{\hat{V}_{F}}{2}
+\end{aligned}
+$$</p>
+<p>あるいは$\frac{\hat{V}<em>{int}}{3}$と$\frac{2\hat{V}</em>{int}}{3}$に分割するのでしょうか？</p>
+<p>$$
+\begin{aligned}
+\hat{V}<em>{int} = \frac{\hat{V}</em>{int}}{3} + \frac{2\hat{V}<em>{int}}{3} \approx \frac{\hat{V}</em>{H}}{3} + \frac{2\hat{V}_{F}}{3}
+\end{aligned}
+$$</p>
+<p>「Hartree-Fock平均場近似」があるなら、なぜ「Hartree-Fock-BCS平均場近似」はないのでしょうか？前述の重複計算の問題や、いわゆる分割の問題はどのように解決されるのでしょうか？</p>
+<p>実際には、$\hat{V}<em>{int} \approx \hat{V}</em>{H} + \hat{V}_{F}$が正しい方法なのですが、Decoupling Methodを用いてHartree-Fock平均場近似を理解しようとすると、どうしても重複計算のような感覚を与えてしまいます：</p>
+<p>$$
+\begin{aligned}
+\hat{V}<em>{int} + \hat{V}</em>{int} \approx \hat{V}<em>{H} + \hat{V}</em>{F}
+\end{aligned}
+$$</p>
+<p>これはDecouplingの表現が不正確であることに起因します。次に、平均場近似が非摂動的な方法として、本質的には「解を推測して最適化する」変分法であることを説明します。</p>
+<p>その後、変分法から出発して、異なるdecoupling方法（Hartree、Fock、BCS）の選択は実際には互いに影響せず、単に推測解に新たな独立したパラメータを追加するだけであり、いわゆる重複計算の問題は引き起こさないことを証明します。</p>
+<h2 id="variational-method-for-finite-temperature">Variational Method for Finite Temperature</h2>
+<p>私たちはすでにゼロ温度での変分法には慣れ親しんでいます。</p>
+<p>ゼロ温度系では、ハミルトニアンの基底状態波動関数$|\Psi(\lambda)\rangle$を「推測」するためによく変分法を用います。ここで$\lambda$は「推測される基底状態波動関数」を調節するパラメータです。パラメータを調節し、基底状態エネルギー汎関数：</p>
+<p>$$
+\begin{aligned}
+E[\Psi(\lambda)] = \frac{\langle \Psi(\lambda) | \hat{H} | \Psi(\lambda) \rangle}{\langle \Psi(\lambda) | \Psi(\lambda) \rangle}
+\end{aligned}
+$$</p>
+<p>を最小にすることで、$|\Psi(\lambda)\rangle$が基底状態波動関数に非常に近いと言うことができます。その後、この推測解を用いてシステムの基底状態（ゼロ温度）の様々な性質を計算します。</p>
+<p>同様に、変分原理は有限温度系にも適用できます。「推測される基底状態波動関数」を「推測される平衡状態密度行列」に変えるだけです。</p>
+<p>ここでは正準集団を用いて導出を行いますが、導出の便宜上、単位系を$k_B = 1$とします。</p>
+<p>有限温度において、平衡状態密度行列は以下の通りです：</p>
+<p>$$
+\begin{aligned}
+\hat{\rho}_{eq} = \frac{e^{-\beta \hat{H}}}{\operatorname{Tr} (e^{-\beta \hat{H}})}
+\end{aligned}
+$$</p>
+<p>「推測される平衡状態密度行列」は何らかの特定の形式を持つ必要があります。システムの密度行列が、ある補助ハミルトニアン$\hat{H}_{mf}(\lambda)$の平衡状態密度行列であると仮定します：</p>
+<p>$$
+\begin{aligned}
+\hat{\rho}<em>{mf}(\lambda) \equiv \hat{\rho}</em>{eq} [\hat{H}<em>{mf}(\lambda)] \equiv \frac{e^{-\beta \hat{H}</em>{mf}(\lambda)}}{\operatorname{Tr} (e^{-\beta \hat{H}_{mf}(\lambda)})}
+\end{aligned}
+$$</p>
+<p>ここで$\lambda$はハミルトニアン$\hat{H}_0$（ひいては「推測される平衡状態密度行列」）を調節するパラメータ（例えば、平均場の強さや秩序変数など）です。</p>
+<p>ここで&quot;mf&quot;という添字を使用していますが、これは平均場近似がここの「推測される平衡状態密度関数」を提供する「補助ハミルトニアン」を「平均場近似ハミルトニアン」とすることを示唆しています。しかし実際には、一般的な変分法において、「補助ハミルトニアン」はどのような形式でも構いませんし、密度行列も自由に選ぶことができ、必ずしも何らかのハミルトニアンの平衡状態密度行列である必要はありません。</p>
+<p>このとき、変分極値条件も「エネルギー汎関数を最小にする」ことから「自由エネルギー汎関数を最小にする」ことへと拡張されます。</p>
+<p>$$
+\begin{aligned}
+F[\hat{\rho}<em>{mf}(\lambda)] &amp; = \langle \hat{H} \rangle</em>{\rho_{mf}(\lambda)} - TS \
+&amp; = \operatorname{Tr} ( \hat{\rho}<em>{mf}(\lambda) \hat{H}) + T \operatorname{Tr} (\hat{\rho}</em>{mf}(\lambda) \ln \hat{\rho}_{mf}(\lambda) )
+\end{aligned}
+$$</p>
+<p>注意すべき点として、ここでの$\hat{H}$は我々の推測ハミルトニアン$\hat{H}_{mf}(\lambda)$ではなく、システムの完全なハミルトニアンです。</p>
+<p>実際、平均場近似では、平均場近似後のハミルトニアンに対応する平衡状態密度行列を「推測される平衡状態密度行列」として使用します。このために、平均場近似を直接行い、量子揺らぎを無視することが、ちょうど自由エネルギー汎関数の変分極値条件と一致することを検証する必要があります。これにより、平均場近似が確かに一種の変分法であることが証明されます。</p>
+<p>平均場近似では、完全なハミルトニアン$\hat{H} = \hat{H}<em>0 + \hat{V}</em>{int}$中の相互作用部分を、パラメータを含む二次形式の演算子に置き換えます。すなわち、</p>
+<p>$$
+\begin{aligned}
+\hat{H}_{mf}(\lambda) = \hat{H}<em>0 + \hat{V}</em>{mf}(\lambda)
+\end{aligned}
+$$</p>
+<p>四次形式の相互作用演算子を二次形式の平均場演算子に置き換えることは、ハミルトニアンの一部の対称性を破ることであり、これは最終的に推測される波動関数や推測される密度演算子の対称性の破れに反映されます。</p>
+<p>平均場においては、異なるチャネル（channel）を選択することは、異なる対称性を破ることを選択することを意味します。例えば、BCS理論は電荷保存（U(1)対称性）を破ることを選択します。</p>
+<p>$$
+\begin{aligned}
+\hat{V}_{mf}(\lambda) \sim \sum \lambda c^\dagger c^\dagger + h.c.
+\end{aligned}
+$$</p>
+<p>実際に、BCS超伝導相転移では対称性の自発的破れ（Spontaneous Symmetry Breaking）が確かに起こり、厳密な基底状態波動関数や厳密な平衡状態密度演算子は、完全なハミルトニアン$\hat{H} = \hat{H}<em>0 + \hat{V}</em>{int}$に比べて対称性が低くなります。</p>
+<p>これは、平均場近似が近似手法ではあるものの、相転移過程の本質（essence）を捉えていることを示しています。したがって、量子揺らぎが大きくない（量子臨界点から遠い）場合、我々はしばしば平均場近似を用いて量子系に対する近似的な予言を行います。</p>
+<h2 id="variational-method">Variational Method</h2>
+<p>ここで以下のように記すことにします：</p>
+<p>$$
+\begin{aligned}
+\hat{V}_{mf}(\lambda) = \lambda \hat{X}
+\end{aligned}
+$$</p>
+<p>$$
+\begin{aligned}
+F_{mf} &amp; = \langle \hat{H}<em>{mf} \rangle</em>{\rho_{mf}(\lambda)} - T S_{mf}\
+&amp; = \operatorname{Tr} ( \hat{\rho}<em>{mf}(\lambda) \hat{H}</em>{mf}) + T \operatorname{Tr} (\hat{\rho}<em>{mf}(\lambda) \ln \hat{\rho}</em>{mf}(\lambda) )
+\end{aligned}
+$$</p>
+<p>$F[\hat{\rho}(\lambda) ] \neq F_{mf}$であることに注意が必要です。両者の差は以下の通りです：</p>
+<p>$$
+\begin{aligned}
+F[\hat{\rho}<em>{mf}(\lambda) ] - F</em>{mf} = \langle \hat{V}<em>{int} - \hat{V}</em>{mf} \rangle_{\rho_{mf}(\lambda)}
+\end{aligned}
+$$</p>
+<p>よくある誤解として、$F_{mf}$について、$\hat{H}_{mf}$の平衡状態の密度行列自体がそれを最小にする密度行列であるため、</p>
+<p>$$
+\begin{aligned}
+\frac{\partial F_{mf}}{\partial \lambda} = 0
+\end{aligned}
+$$</p>
+<p>であると考えがちです。しかし、これはパラメータ$\lambda$が固定されている場合、すなわち固定されたハミルトニアン$\hat{H}$が変わらない場合にのみ、$F_{mf}$の極値条件を満たします。$\frac{\partial F_{mf}}{\partial \lambda}$は厳密に計算する必要があります：</p>
+<p>まず、$F_{mf}$は$\hat{H}_{mf}$の平衡状態自由エネルギーであるため、便利に以下を得ることができます：</p>
+<p>$$
+\begin{aligned}
+F_{mf}(\lambda) = - T \ln \mathcal{Z}_{mf}(\lambda)
+\end{aligned}
+$$</p>
+<p>$$
+\begin{aligned}
+\mathcal{Z}<em>{mf}(\lambda) = \operatorname{Tr} ( e^{-\beta \hat{H}</em>{mf}(\lambda)} ) = \operatorname{Tr} ( e^{-\beta [ \hat{H}_0 + \lambda \hat{X} ]} )
+\end{aligned}
+$$</p>
+<p>したがって、</p>
+<p>$$
+\begin{aligned}
+\frac{\partial F_{mf}}{\partial \lambda} &amp; = -T \frac{1}{\mathcal{Z}<em>{mf}}\frac{\partial \mathcal{Z}</em>{mf}}{\partial \lambda} \
+&amp; = - T \frac{\operatorname{Tr} ( -\beta \hat{X} e^{-\beta [ \hat{H}_0 + \lambda \hat{X} ]} )}{\operatorname{Tr} ( e^{-\beta [ \hat{H}<em>0 + \lambda \hat{X} ]} )} \
+&amp; = \frac{\operatorname{Tr} (  \hat{X} e^{-\beta [ \hat{H}<em>0 + \lambda \hat{X} ]} )}{\operatorname{Tr} ( e^{-\beta [ \hat{H}<em>0 + \lambda \hat{X} ]} )} \
+&amp; = \operatorname{Tr} ( \hat{\rho}</em>{mf}(\lambda) \hat{X} ) \
+&amp; =  \langle \hat{X} \rangle</em>{\rho</em>{mf}(\lambda)}
+\end{aligned}
+$$</p>
+<p>すなわち、平均場相互作用$\hat{V}_{mf}$部分の秩序変数の期待値です。一般的に平均場近似で計算される秩序変数はゼロではなく、これはシステムが（少なくとも平均場近似の下では）特定の秩序（order）を持っていることを示しています。</p>
+<p>上記の結論を利用して、自由エネルギー汎関数$F[\hat{\rho}(\lambda) ]$を極値にするために、以下のようにすればよいことになります：</p>
+<p>$$
+\begin{aligned}
+&amp; \frac{\partial}{\partial \lambda} (F[\hat{\rho}(\lambda) ] - F_{mf}) \
+&amp; = \frac{\partial}{\partial \lambda} \langle \hat{V}<em>{int}  \rangle</em>{\rho_{mf}(\lambda)} - \frac{\partial}{\partial \lambda} \langle \hat{V}<em>{mf} \rangle</em>{\rho_{mf}(\lambda)} \
+&amp; = -\frac{\partial}{\partial \lambda} F_{mf} = - \langle \hat{X} \rangle_{\rho_{mf}(\lambda)}
+\end{aligned}
+$$</p>
+<p>再び$\hat{V}_{mf} = \lambda \hat{X}$の形式を利用すると、さらに簡略化できます。</p>
+<p>$\hat{V}<em>{mf} = \lambda \hat{X}$と$\hat{\rho}</em>{mf}(\lambda)$の中の$\lambda$の両方に対して微分を行う必要があることに注意してください：</p>
+<p>$$
+\begin{aligned}
+&amp; \frac{\partial}{\partial \lambda} \langle  \hat{V}<em>{mf} \rangle</em>{\rho_{mf}(\lambda)} \
+&amp; = \frac{\partial}{\partial \lambda} \langle \lambda \hat{X} \rangle_{\rho_{mf}(\lambda)} \
+&amp; = \frac{\partial}{\partial \lambda}  \operatorname{Tr} ( \lambda \hat{\rho}<em>{mf}(\lambda) \hat{X} ) \
+&amp; =  \operatorname{Tr} ( \hat{\rho}</em>{mf}(\lambda) \hat{X} ) +  \operatorname{Tr} ( \lambda \frac{\partial}{\partial \lambda}{\hat{\rho}<em>{mf}(\lambda)} \hat{X} ) \
+&amp; =  \langle  \hat{X} \rangle</em>{\rho_{mf}(\lambda)} + \lambda \frac{\partial}{\partial \lambda} \left{ \operatorname{Tr} ( \hat{\rho}<em>{mf}(\lambda) \hat{X} ) \right} \
+&amp; =  \langle  \hat{X} \rangle</em>{\rho_{mf}(\lambda)} + \lambda \frac{\partial }{\partial \lambda}\langle  \hat{X} \rangle_{\rho_{mf}(\lambda)}
+\end{aligned}
+$$</p>
+<p>したがって、自由エネルギー汎関数の極値条件は以下のように書けます：</p>
+<p>$$
+\begin{aligned}
+\frac{\partial}{\partial \lambda} F[\hat{\rho}(\lambda) ] = 0\  \Leftrightarrow \
+\frac{\partial}{\partial \lambda} \langle \hat{V}<em>{int} \rangle</em>{\rho_{mf}(\lambda)}  = \lambda \frac{\partial }{\partial \lambda}\langle  \hat{X} \rangle_{\rho_{mf}(\lambda)}
+\end{aligned}
+$$</p>
+<p>さらに、この変分を複数のパラメータ${\lambda_i}$の場合に拡張することもでき、変分の自由度を高めることで、推測解をより真の状況に近づけることができます。</p>
+<p>以上より、（一般的に二次形式のみを含む）ある平均場ハミルトニアン$\hat{H}_{mf}({\lambda_i}) = \hat{H}_0 + \sum_i \lambda_i \hat{X}<em>i$に対応する平衡状態密度行列$\rho</em>{mf}({\lambda_i})$を推測解として、自由エネルギー汎関数の変分を計算する場合、自由エネルギー汎関数を最小にする（真の平衡状態に最も近い）パラメータ${\lambda_i}$の値は以下の条件を満たします：</p>
+<p>$$
+\begin{aligned}
+\frac{\partial}{\partial \lambda_i} \langle \hat{V}<em>{int} \rangle</em>{\rho_{mf}({\lambda_i})}  = \lambda_i \frac{\partial }{\partial \lambda_i}\langle  \hat{X}<em>i \rangle</em>{\rho_{mf}({\lambda_i})}
+\end{aligned}
+$$</p>
+<p>さらに連鎖律を利用して、変分極値条件を以下のように書くこともできます：</p>
+<p>$$
+\begin{aligned}
+\lambda_i  = \frac{\partial \langle \hat{V}<em>{int} \rangle</em>{\rho_{mf}({\lambda_i})} }{\partial \langle  \hat{X}<em>i \rangle</em>{\rho_{mf}({\lambda_i})}}
+\end{aligned}
+$$</p>
+<p>これにより、変分極値条件に対応するパラメータ（物理的な意味は秩序変数）を直接得ることができます。</p>
+<p>しかし、この等式は形式的すぎるため、具体的な例の計算を通じて、これが平均場近似と言っていることと同じであることを発見できます。</p>
+<p>一般的な二体相互作用に対して：</p>
+<p>$$
+\begin{aligned}
+\hat{V}<em>{int} = \frac{1}{2} \sum</em>{ij}V_{ij} c_i^\dagger c_j^\dagger c_j c_i
+\end{aligned}
+$$</p>
+<p>一般的な平均場相互作用は二次形式として取られ、これにより相互に独立した素励起として厳密に解くことができます。ここでは最も一般的な形式を取ります：</p>
+<p>$$
+\begin{aligned}
+\hat{V}<em>{mf} &amp; = \underbrace{\sum</em>{i} \lambda_i^{H} c_i^\dagger c_i}<em>{\text{Hartree}} \
+&amp; + \underbrace{\sum</em>{i\neq j} \lambda_{ij}^{F} c_i^\dagger c_j }<em>{\text{Fock}} \
+&amp; + \underbrace{\sum</em>{i,j} (\lambda_{ij}^{BCS} c_i^\dagger c_j^\dagger  + \bar{\lambda}<em>{ij}^{BCS} c_j c_i )}</em>{\text{BCS}}
+\end{aligned}
+$$</p>
+<p>ここで、1行目、2行目、3行目はそれぞれHartree、Fock、BCS平均場部分に対応します。</p>
+<p>ここでは、前述のいわゆるdecoupling methodを直接使用してはいません：</p>
+<p>$$
+\begin{aligned}
+A^\dagger A \approx \langle A^\dagger \rangle A + A^\dagger \langle A \rangle - \langle A^\dagger \rangle \langle A \rangle
+\end{aligned}
+$$</p>
+<p>その代わりに、係数が完全に未定のハミルトニアンを取りました。その後、変分極値を取るとき、このハミルトニアンがdecoupling methodで得られる「平均場近似ハミルトニアン」であることを証明できます。</p>
+<p>同時に、係数が完全に未定であるがゆえに、1行目、2行目、3行目の各項を自由に追加したり減らしたりすることができます。これは単に変分のパラメータを増減させるだけだからです。</p>
+<p>次に$\langle \hat{V}<em>{int} \rangle</em>{\rho_{mf}({\lambda_i})}$を求めます。これは平均場に対応する平衡状態下での厳密な二体相互作用演算子の期待値です。</p>
+<p>Wickの定理を使用する必要があります。なぜなら、平均場のハミルトニアンは二次形式であり、生成汎関数（Generating Functional）はガウス型であるため、平衡状態のフェルミ演算子の期待値は、2つのフェルミ演算子の縮約（contraction）に厳密に分解できるからです。</p>
+<p>$$
+\begin{aligned}
+\langle \hat{V}<em>{int} \rangle</em>{\rho_{mf}({\lambda_i})} &amp; = \frac{1}{2} \sum_{ij}V_{ij} \langle c_i^\dagger c_j^\dagger c_j c_i \rangle_{\rho_{mf}({\lambda_i})} \
+&amp; = \frac{1}{2} \sum_{ij}V_{ij} (\langle c_i^\dagger  c_i \rangle \langle c_j^\dagger  c_j \rangle \
+&amp; - \langle c_i^\dagger  c_j \rangle \langle c_j^\dagger  c_i \rangle + \langle c_i^\dagger  c_j^\dagger \rangle \langle c_j  c_i \rangle)
+\end{aligned}
+$$</p>
+<p>したがって、変分極値条件を利用すると、以下のようになります：</p>
+<p>$$
+\begin{aligned}
+\lambda_i^H &amp; = \frac{\partial \langle \hat{V}<em>{int} \rangle</em>{\rho_{mf}({\lambda_i})} }{\partial \langle  c_i^\dagger c_i \rangle_{\rho_{mf}({\lambda_i})}} \
+&amp; = \frac{1}{2} \sum_j \left( V_{ij} \langle  c_j^\dagger c_j \rangle_{\rho_{mf}({\lambda_i})} +  V_{ji} \langle  c_j^\dagger c_j \rangle_{\rho_{mf}({\lambda_i})} \right)\
+&amp; = \sum_{j} V_{ij} \langle  c_j^\dagger c_j \rangle_{\rho_{mf}({\lambda_i})}
+\end{aligned}
+$$</p>
+<p>ここで$V_{ij} = V_{ji}$を利用しました。観察すると、これが以前に「decoupling」を用いて得られたHartree平均場近似項であり、せいぜい定数差であることがわかります。</p>
+<p>以前は$\hat{A}_{i}^{H} = c_i^\dagger c_i$を選定し、その量子揺らぎの二次項を省略しました。一方ここでは、単に変分極値条件を用いて、自由エネルギー汎関数を最小にする推測ハミルトニアンのパラメータを決定しただけです。</p>
+<p>同様に、Fock、BCS平均場近似に対応する他の未定パラメータについても、以下のようになります：</p>
+<p>$$
+\begin{aligned}
+\lambda_{ij}^{F} &amp; = - \frac{1}{2} ( V_{ij} \langle  c_j^\dagger c_i \rangle_{\rho_{mf}({\lambda_i})} + V_{ji} \langle  c_i^\dagger c_j \rangle_{\rho_{mf}({\lambda_i})} )\
+&amp; =  - V_{ij} \langle  c_j^\dagger c_i \rangle_{\rho_{mf}({\lambda_i})}
+\end{aligned}
+$$</p>
+<p>$$
+\begin{aligned}
+\lambda_{ij}^{BCS} &amp; = \frac{1}{2}  V_{ij} \langle  c_j c_i \rangle_{\rho_{mf}({\lambda_i})} \
+\bar{\lambda}<em>{ij}^{BCS}&amp; =  \frac{1}{2} V</em>{ji} \langle  c_i^\dagger c_j^\dagger \rangle_{\rho_{mf}({\lambda_i})}
+\end{aligned}
+$$</p>
+<p>これらを$\hat{V}_{mf}({\lambda_i})$に代入すると、それらがそれぞれFock、BCS平均場近似に対応することも容易にわかります。</p>
+<p>しかし、変分法の観点からは、これらの未定係数と推測ハミルトニアンの項は独立しており、互いに影響しません。推測ハミルトニアンに項を加減することは、推測解の形式を変え、変分のパラメータを増減させることに過ぎません。したがって、Hartree、Fock、BCS平均場近似は確かに1:1:1で混ぜたり、ペアで混ぜて使用したりすることができ、すべて与えられたパラメータに対する変分極値条件を満たします。</p>
+<p>ただし、特定の問題においては、特定の秩序変数に関心があるため、変分パラメータを極力減らし（BCSまたはHartree-Fockのみを使用するなど）、可能な限り簡潔で有効な結論を得ようとします。</p>
+<h2 id="summary">Summary</h2>
+<p>以上より、我々は変分法の厳密な導出を通じて、Hartree、Fock、BCSといった平均場理論が確かに1:1:1で混ぜて使用できることを証明しました。</p>
+<p>まず、量子力学の教科書によく出てくるdecouple methodを利用し、演算子の二次揺らぎ項を「強引に」省略することで、ある種の平均場近似下での平均場ハミルトニアンを近似的に得ました。</p>
+<p>$$
+\begin{aligned}
+A^\dagger A \approx \langle A^\dagger \rangle A + A^\dagger \langle A \rangle - \langle A^\dagger \rangle \langle A \rangle
+\end{aligned}
+$$</p>
+<p>しかし、このdecouple methodは、2種類以上の平均場近似を使用する場合、重複計算の錯覚を生じさせやすいものでした。</p>
+<p>その後、変分法の言語を用いて、平均場近似の変分法的本質を再記述しました。すなわち、システム$\hat{H} = \hat{H}<em>0 + \hat{V}</em>{int}$の平衡状態と、ある平均場ハミルトニアン$\hat{H}_{mf} = \hat{H}<em>0 + \hat{V}</em>{mf}({\lambda_i})$（推測ハミルトニアン、様々な未定係数${\lambda_i}$を含む）の平衡状態が非常に近いと考えます。</p>
+<p>システムの自由エネルギー変分を最小にする未定係数${\lambda_i^{mf}}$を選択し、その係数選択下での平均場ハミルトニアン$\hat{H}_{mf} = \hat{H}<em>0 + \hat{V}</em>{mf}({\lambda_i^{mf}})$を用いて元の（相互作用）システムハミルトニアン$\hat{H} = \hat{H}<em>0 + \hat{V}</em>{int}$を近似することが、平均場近似です。</p>
+<p>そして変分法とWickの定理を通じて、最適な未定係数${\lambda_i^{mf}}$が、decouple methodにおける一次揺らぎ項を選択した結果と正確に一致すること、すなわち最適な未定係数${\lambda_i^{mf}}$がシステムの平均場（秩序変数）であることを証明しました。</p>
+<p>元の「Hartree、Fock、BCSといった平均場理論は1:1:1で混ぜて使えるか」という問題に戻ると、変分法を使用する場合、未定係数の数に規定はなく、あるいは各未定係数の変分極値条件は互いに独立しています。</p>
+<p>したがって、decouple methodにおけるHartree、Fock、BCS平均場理論に対応するDensity、Exchange、Cooper Channelは実際には独立しており、重複計算にはなりません。これにより、以下が証明されました：</p>
+<p><strong>Hartree、Fock、BCSといった平均場理論は確かに1:1:1で混ぜて使用できます。</strong></p>
+<h2 id="reference">Reference</h2>
+<ul>
+<li>[1] Bruus, H., &amp; Flensberg, K. (2004). Many-body quantum theory in condensed matter physics: an introduction. Oxford university press.</li>
+<li>[2] Coleman, P. (2015). Introduction to many-body physics. Cambridge University Press.</li>
+<li>[3] Altland, A., &amp; Simons, B. D. (2010). Condensed matter field theory. Cambridge university press.</li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2026-01-09</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/mean_field_approximation/" data-title="平均場近似と変分法｜Hartree, Fock, BCSは1:1:1で混ぜて使えるか？" data-hashtags="Condensed Matter,Mean Field"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/mean_field_approximation/" data-title="平均場近似と変分法｜Hartree, Fock, BCSは1:1:1で混ぜて使えるか？"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/mean_field_approximation/" data-hashtag="Condensed Matter"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/mean_field_approximation/" data-title="平均場近似と変分法｜Hartree, Fock, BCSは1:1:1で混ぜて使えるか？"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/mean_field_approximation/" data-title="平均場近似と変分法｜Hartree, Fock, BCSは1:1:1で混ぜて使えるか？"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/mean_field_approximation/" data-title="平均場近似と変分法｜Hartree, Fock, BCSは1:1:1で混ぜて使えるか？"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/mean_field_approximation/" data-title="平均場近似と変分法｜Hartree, Fock, BCSは1:1:1で混ぜて使えるか？" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fOkongOyangO.github.io%2fOkongOyangO.Notes%2fja%2fposts%2fmean_field_approximation%2f&amp;text=%e5%b9%b3%e5%9d%87%e5%a0%b4%e8%bf%91%e4%bc%bc%e3%81%a8%e5%a4%89%e5%88%86%e6%b3%95%ef%bd%9cHartree%2c%20Fock%2c%20BCS%e3%81%af1%3a1%3a1%e3%81%a7%e6%b7%b7%e3%81%9c%e3%81%a6%e4%bd%bf%e3%81%88%e3%82%8b%e3%81%8b%ef%bc%9f" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/OkongOyangO.Notes/ja/tags/condensed-matter/">Condensed Matter</a>,&nbsp;<a href="/OkongOyangO.Notes/ja/tags/mean-field/">Mean Field</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/OkongOyangO.Notes/ja/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/OkongOyangO.Notes/ja/posts/joule_heat/" class="prev" rel="prev" title="フェルミの黄金律？ただのジュール熱さ！"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>フェルミの黄金律？ただのジュール熱さ！</a>
+            <a href="/OkongOyangO.Notes/ja/posts/fermi_golden_rule/" class="next" rel="next" title="フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？">フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.154.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://OkongOyangO.github.io" target="_blank">OkongOyangO</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/copy-tex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/mhchem.min.js"></script><script>window.config={"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/OkongOyangO.Notes/ja/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/OkongOyangO.Notes/js/theme.min.js"></script></body>
+</html>

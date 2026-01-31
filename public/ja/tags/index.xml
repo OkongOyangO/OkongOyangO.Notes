@@ -1,11 +1,91 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on O空O扬O の 物理ノート</title>
-    <link>http://localhost:1313/ja/tags/</link>
-    <description>Recent content in Tags on O空O扬O の 物理ノート</description>
-    <generator>Hugo -- 0.154.3</generator>
+    <title>Tags on OkongOyangOのノート</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/</link>
+    <description>Recent content in Tags on OkongOyangOのノート</description>
+    <generator>Hugo</generator>
     <language>ja</language>
-    <atom:link href="http://localhost:1313/ja/tags/index.xml" rel="self" type="application/rss+xml" />
+    <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
+    <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
+    <lastBuildDate>Sat, 10 Jan 2026 02:59:13 +0000</lastBuildDate>
+    <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fermi Golden Rule</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/fermi-golden-rule/</link>
+      <pubDate>Sat, 10 Jan 2026 02:59:13 +0000</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/fermi-golden-rule/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Quantum Mechanics</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/quantum-mechanics/</link>
+      <pubDate>Sat, 10 Jan 2026 02:59:13 +0000</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/quantum-mechanics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Condensed Matter</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/condensed-matter/</link>
+      <pubDate>Fri, 09 Jan 2026 19:05:46 +0000</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/condensed-matter/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mean Field</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/mean-field/</link>
+      <pubDate>Fri, 09 Jan 2026 19:05:46 +0000</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/mean-field/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>FCI</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/fci/</link>
+      <pubDate>Thu, 08 Jan 2026 21:54:37 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/fci/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Insulators</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/insulators/</link>
+      <pubDate>Thu, 08 Jan 2026 21:54:37 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/insulators/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Joule Heat</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/joule-heat/</link>
+      <pubDate>Thu, 08 Jan 2026 21:54:37 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/joule-heat/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kubo Formula</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/kubo-formula/</link>
+      <pubDate>Thu, 08 Jan 2026 21:54:37 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/kubo-formula/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nonlinear Response</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/nonlinear-response/</link>
+      <pubDate>Thu, 08 Jan 2026 21:54:37 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/nonlinear-response/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Quantum Hall Effect</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/quantum-hall-effect/</link>
+      <pubDate>Thu, 08 Jan 2026 21:54:37 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/quantum-hall-effect/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Topology</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/topology/</link>
+      <pubDate>Thu, 08 Jan 2026 21:54:37 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/topology/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

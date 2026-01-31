@@ -2,18 +2,102 @@
 # Core Configuration
 # -----------------------------------------------------------------------------
 baseURL = "https://OkongOyangO.github.io/OkongOyangO.Notes/"
-languageCode = "en"
-title = "Yiyang's Physics Notes"
+defaultContentLanguage = "en"
 theme = "LoveIt"
+
+# -----------------------------------------------------------------------------
+# Multilingual Configuration (English, Chinese, Japanese)
+# -----------------------------------------------------------------------------
+[languages]
+  [languages.en]
+    weight = 1
+    title = "OkongOyangO's Notes"
+    languageCode = "en"
+    [languages.en.params]
+      description = "Notes on Topology, Geometry, and Nonlinear Responses"
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        identifier = "posts"
+        pre = "<i class='fas fa-archive fa-fw'></i>"
+        name = "Posts"
+        url = "/posts/"
+        weight = 1
+      [[languages.en.menu.main]]
+        identifier = "tags"
+        pre = "<i class='fas fa-tags fa-fw'></i>"
+        name = "Tags"
+        url = "/tags/"
+        weight = 2
+      [[languages.en.menu.main]]
+        identifier = "main-site"
+        pre = "<i class='fas fa-home fa-fw'></i>"
+        name = "Main Homepage"
+        url = "https://OkongOyangO.github.io"
+        weight = 10
+
+  [languages.zh-cn]
+    weight = 2
+    title = "OkongOyangO的物理笔记"
+    languageCode = "zh-CN"
+    [languages.zh-cn.params]
+      description = "关于拓扑、几何和非线性响应的物理笔记"
+    [languages.zh-cn.menu]
+      [[languages.zh-cn.menu.main]]
+        identifier = "posts"
+        pre = "<i class='fas fa-archive fa-fw'></i>"
+        name = "文章"
+        url = "/posts/"
+        weight = 1
+      [[languages.zh-cn.menu.main]]
+        identifier = "tags"
+        pre = "<i class='fas fa-tags fa-fw'></i>"
+        name = "标签"
+        url = "/tags/"
+        weight = 2
+      [[languages.zh-cn.menu.main]]
+        identifier = "main-site"
+        pre = "<i class='fas fa-home fa-fw'></i>"
+        name = "主页 (Main Site)"
+        url = "https://OkongOyangO.github.io"
+        weight = 10
+
+  [languages.ja]
+    weight = 3
+    title = "OkongOyangOのノート"
+    languageCode = "ja"
+    [languages.ja.params]
+      description = "トポロジー、幾何学、非線形応答に関する物理ノート"
+    [languages.ja.menu]
+      [[languages.ja.menu.main]]
+        identifier = "posts"
+        pre = "<i class='fas fa-archive fa-fw'></i>"
+        name = "記事"
+        url = "/posts/"
+        weight = 1
+      [[languages.ja.menu.main]]
+        identifier = "tags"
+        pre = "<i class='fas fa-tags fa-fw'></i>"
+        name = "タグ"
+        url = "/tags/"
+        weight = 2
+      [[languages.ja.menu.main]]
+        identifier = "main-site"
+        pre = "<i class='fas fa-home fa-fw'></i>"
+        name = "メインページ"
+        url = "https://OkongOyangO.github.io"
+        weight = 10
 
 # -----------------------------------------------------------------------------
 # LoveIt Specifics
 # -----------------------------------------------------------------------------
 [params]
-  # Theme version (Recommended 0.3.X for modern Hugo)
   version = "0.3.X"
-  # Default theme mode ("light", "dark", "auto")
   defaultTheme = "auto"
+
+  [params.author]
+    name = "OkongOyangO"
+    email = "yzj5306@psu.edu"
+    link = "https://OkongOyangO.github.io"
 
   # Header Configuration
   [params.header]
@@ -21,7 +105,7 @@ theme = "LoveIt"
     mobileMode = "auto"
     [params.header.title]
       logo = ""
-      name = "Yiyang's Notes"
+      name = "OkongOyangO's Notes"
       type = "it"
 
   # Footer Configuration
@@ -36,7 +120,7 @@ theme = "LoveIt"
     enable = true
     type = "lunr"
     contentLength = 4000
-    placeholder = "Search notes..."
+    placeholder = "Search/搜索/検索..."
 
   # Home Page Configuration
   [params.home]
@@ -47,41 +131,22 @@ theme = "LoveIt"
       title = "Physics Notes & Research Logs"
       subtitle = "Notes on Topology, Geometry, and Nonlinear Responses"
       type = "it"
-      social = true  # Enables social icons defined in author section
+      social = true
 
-# -----------------------------------------------------------------------------
-# Menu Configuration (With Icons)
-# -----------------------------------------------------------------------------
-[menu]
-  [[menu.main]]
-    identifier = "posts"
-    pre = "<i class='fas fa-archive fa-fw'></i>"
-    name = "Posts"
-    url = "/posts/"
-    weight = 1
+  # Page Configuration
+  [params.page]
+    [params.page.math]
+      enable = true
 
-  [[menu.main]]
-    identifier = "tags"
-    pre = "<i class='fas fa-tags fa-fw'></i>"
-    name = "Tags"
-    url = "/tags/"
-    weight = 2
-
-  [[menu.main]]
-    identifier = "categories"
-    pre = "<i class='fas fa-th-list fa-fw'></i>"
-    name = "Categories"
-    url = "/categories/"
-    weight = 3
-
-  # Back to Main Site Link
-  [[menu.main]]
-    identifier = "main-site"
-    pre = "<i class='fas fa-home fa-fw'></i>"
-    name = "Main Homepage"
-    url = "https://OkongOyangO.github.io"
-    title = "Go back to Academic Homepage"
-    weight = 10
+  # Math Configuration (KaTeX)
+  [params.math]
+    enable = true
+    blockLeftDelimiter = "$$"
+    blockRightDelimiter = "$$"
+    inlineLeftDelimiter = "$"
+    inlineRightDelimiter = "$"
+    copyTex = true
+    mhchem = true
 
 # -----------------------------------------------------------------------------
 # Markup Configuration

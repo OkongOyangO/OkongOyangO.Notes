@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fermi Golden Rule on OkongOyangOのノート</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/fermi-golden-rule/</link>
+    <description>Recent content in Fermi Golden Rule on OkongOyangOのノート</description>
+    <generator>Hugo</generator>
+    <language>ja</language>
+    <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
+    <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
+    <lastBuildDate>Sat, 10 Jan 2026 02:59:13 +0000</lastBuildDate>
+    <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/fermi-golden-rule/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/fermi_golden_rule/</link>
+      <pubDate>Sat, 10 Jan 2026 02:59:13 +0000</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/fermi_golden_rule/</guid>
+      <description>&lt;p&gt;本文は厳密な量子遷移率を計算し、フェルミの黄金律がその「長時間平均」の結果であることを指摘することを目的としています。厳密な量子遷移率は、フェルミの黄金律と比較して、無視できない振幅を持つ二倍周波数振動項（double-frequency oscillation term）をさらに含んでいます。両者の関係は、交流回路における「瞬時電力」と「平均電力」の関係に似ています。&lt;/p&gt;&#xA;&lt;h2 id=&#34;fermi-golden-rule&#34;&gt;Fermi Golden Rule&lt;/h2&gt;&#xA;&lt;p&gt;フェルミの黄金律は、時間調和外場摂動下で、量子系が初期状態$|i\rangle$から終状態$|f\rangle$（いずれも$H_0$の固有状態）へ遷移する遷移率を計算することを目的としています。量子力学の講義ですでに十分に説明されているため、ここではディラック描像（相互作用描像）の下ですばやく確認します。ディラック描像を使用するのは、久保公式（Kubo Formula）との比較を容易にするためです。&lt;/p&gt;&#xA;&lt;p&gt;ディラック描像における状態の運動方程式：&lt;/p&gt;&#xA;&lt;p&gt;$$&#xA;\begin{aligned}&#xA;i \hbar \partial_t |\psi(t) \rangle_D = \hat{V}_D(t) |\psi(t) \rangle_D&#xA;\end{aligned}&#xA;$$&lt;/p&gt;&#xA;&lt;p&gt;ディラック描像における演算子：&lt;/p&gt;&#xA;&lt;p&gt;$$&#xA;\begin{aligned}&#xA;\hat{\mathcal{O}}_D(t) = e^{i\hat{H_0}t/\hbar} \hat{\mathcal{O}}_S(t) e^{-i\hat{H_0}t/\hbar}&#xA;\end{aligned}&#xA;$$&lt;/p&gt;&#xA;&lt;p&gt;添字$D,,S$はそれぞれディラック描像とシュレーディンガー描像を表します。&lt;/p&gt;&#xA;&lt;p&gt;運動方程式を積分して反復することで、ディラック描像における状態の時間発展演算子$\mathcal{U}(t,t&amp;rsquo;)$が得られます：&lt;/p&gt;&#xA;&lt;p&gt;$$&#xA;\begin{aligned}&#xA;\mathcal{U}(t,t&amp;rsquo;) &amp;amp; = \mathcal{T} e^{-i \int_{t&amp;rsquo;}^{t}dt&amp;rsquo;&amp;rsquo; \hat{V}&lt;em&gt;D(t&amp;rsquo;&amp;rsquo;)/\hbar }  \&#xA;&amp;amp; = 1 + (-i/\hbar) \int&lt;/em&gt;{t&amp;rsquo;}^{t}dt_1 \hat{V}&lt;em&gt;D(t_1) + \frac{1}{2!} (-i/\hbar)^2 \int&lt;/em&gt;{t&amp;rsquo;}^{t}dt_1 \int_{t&amp;rsquo;}^{t}dt_2 \mathcal{T} \hat{V}&lt;em&gt;D(t_1) \hat{V}&lt;em&gt;D(t_2) + \dots \&#xA;&amp;amp; = 1 + (-i/\hbar) \int&lt;/em&gt;{t&amp;rsquo;}^{t}dt_1 \hat{V}&lt;em&gt;D(t_1) +  (-i/\hbar)^2 \int&lt;/em&gt;{t&amp;rsquo;}^{t}dt_1 \int&lt;/em&gt;{t&amp;rsquo;}^{\mathbf{t_1}}dt_2  \hat{V}_D(t_1) \hat{V}_D(t_2) + \dots&#xA;\end{aligned}&#xA;$$&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

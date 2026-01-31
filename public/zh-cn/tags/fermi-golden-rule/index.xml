@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fermi Golden Rule on OkongOyangO的物理笔记</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/fermi-golden-rule/</link>
+    <description>Recent content in Fermi Golden Rule on OkongOyangO的物理笔记</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
+    <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
+    <lastBuildDate>Sat, 10 Jan 2026 02:59:13 +0000</lastBuildDate>
+    <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/fermi-golden-rule/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>费米黄金法则（Fermi Golden Rule）漏了什么？</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/fermi_golden_rule/</link>
+      <pubDate>Sat, 10 Jan 2026 02:59:13 +0000</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/fermi_golden_rule/</guid>
+      <description>&lt;p&gt;本文旨在计算严格的量子跃迁速率，并指出费米黄金法则是其的“长时间平均”的结果。严格的量子跃迁速率相比费米黄金法则还多一项振幅不可忽略的二倍频振荡项，前后者关系类似交流电路中的“瞬时功率”与“平均功率”。&lt;/p&gt;&#xA;&lt;h2 id=&#34;fermi-golden-rule&#34;&gt;Fermi Golden Rule&lt;/h2&gt;&#xA;&lt;p&gt;费米黄金法则旨在计算时谐外场微扰下，量子系统从初态$|i\rangle$到末态$|f\rangle$（均为$H_0$的本征态）的跃迁速率。由于量子力学课程中已经阐述的很完备，此处我们在Dirac表象（相互作用表象）下速通一遍。使用Dirac表象是为了更好与Kubo Formula进行比较&lt;/p&gt;&#xA;&lt;p&gt;Dirac表象下态的运动方程：&lt;/p&gt;&#xA;&lt;p&gt;$$&#xA;\begin{aligned}&#xA;i \hbar \partial_t |\psi(t) \rangle_D = \hat{V}_D(t) |\psi(t) \rangle_D&#xA;\end{aligned}&#xA;$$&lt;/p&gt;&#xA;&lt;p&gt;Dirac表象下的算符：&lt;/p&gt;&#xA;&lt;p&gt;$$&#xA;\begin{aligned}&#xA;\hat{\mathcal{O}}_D(t) = e^{i\hat{H_0}t/\hbar} \hat{\mathcal{O}}_S(t) e^{-i\hat{H_0}t/\hbar}&#xA;\end{aligned}&#xA;$$&lt;/p&gt;&#xA;&lt;p&gt;下标$D,,S$分别代表Dirac表象和Schrodinger表象。&lt;/p&gt;&#xA;&lt;p&gt;对运动方程积分后迭代可以得到Dirac表象下态的演化算符$\mathcal{U}(t,t&amp;rsquo;)$：&lt;/p&gt;&#xA;&lt;p&gt;$$&#xA;\begin{aligned}&#xA;\mathcal{U}(t,t&amp;rsquo;) &amp;amp; = \mathcal{T} e^{-i \int_{t&amp;rsquo;}^{t}dt&amp;rsquo;&amp;rsquo; \hat{V}&lt;em&gt;D(t&amp;rsquo;&amp;rsquo;)/\hbar }  \&#xA;&amp;amp; = 1 + (-i/\hbar) \int&lt;/em&gt;{t&amp;rsquo;}^{t}dt_1 \hat{V}&lt;em&gt;D(t_1) + \frac{1}{2!} (-i/\hbar)^2 \int&lt;/em&gt;{t&amp;rsquo;}^{t}dt_1 \int_{t&amp;rsquo;}^{t}dt_2 \mathcal{T} \hat{V}&lt;em&gt;D(t_1) \hat{V}&lt;em&gt;D(t_2) + \dots \&#xA;&amp;amp; = 1 + (-i/\hbar) \int&lt;/em&gt;{t&amp;rsquo;}^{t}dt_1 \hat{V}&lt;em&gt;D(t_1) +  (-i/\hbar)^2 \int&lt;/em&gt;{t&amp;rsquo;}^{t}dt_1 \int&lt;/em&gt;{t&amp;rsquo;}^{\mathbf{t_1}}dt_2  \hat{V}_D(t_1) \hat{V}_D(t_2) + \dots&#xA;\end{aligned}&#xA;$$&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

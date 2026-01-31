@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kubo Formula on OkongOyangOのノート</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/kubo-formula/</link>
+    <description>Recent content in Kubo Formula on OkongOyangOのノート</description>
+    <generator>Hugo</generator>
+    <language>ja</language>
+    <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
+    <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
+    <lastBuildDate>Thu, 08 Jan 2026 21:54:37 -0500</lastBuildDate>
+    <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/kubo-formula/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>久保公式の非線形応答理論</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/nonlinear-kubo-formalism/</link>
+      <pubDate>Thu, 08 Jan 2026 21:54:37 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/nonlinear-kubo-formalism/</guid>
+      <description>&lt;p&gt;#! &lt;a href=&#34;https://zhuanlan.zhihu.com/p/611996682&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;https://zhuanlan.zhihu.com/p/611996682&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;久保公式の非線形応答理論&#34;&gt;久保公式の非線形応答理論&lt;/h1&gt;&#xA;&lt;p&gt;この記事は、久保公式の非線形応答理論を導出することを目的としています。&lt;/p&gt;&#xA;&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;&#xA;&lt;p&gt;久保公式の線形および非線形応答理論は、本質的に量子力学の摂動論です。&lt;/p&gt;&#xA;&lt;p&gt;線形応答の方が一般的で、例えば実験で測定される電気伝導率、磁化率、電気分極率などの感受率（Susceptibility）はすべて線形応答関数（遅延グリーン関数）です。&lt;/p&gt;&#xA;&lt;p&gt;しかし、非線形応答にも応用価値があります。例えば、半導体における第二次高調波発生（SHG）、注入電流（Injection Current）、シフト電流（Shift Current）などの二次電流応答です。&lt;/p&gt;&#xA;&lt;p&gt;二次応答は、前節のフェルミの黄金律（Fermi Golden Rule）で議論した、一定の遷移速度と二倍周波数の遷移速度という2種類の応答を説明するためにも使用できます。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/611688122&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;https://zhuanlan.zhihu.com/p/611688122&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;度胸さえあれば、至る所に非線形応答がある&lt;/strong&gt;ことがわかります（笑）。&lt;/p&gt;&#xA;&lt;h2 id=&#34;相互作用描像における密度行列&#34;&gt;相互作用描像における密度行列&lt;/h2&gt;&#xA;&lt;p&gt;久保公式の導出は、相互作用（ディラック）描像における系の密度行列の時間発展から始まります。&lt;/p&gt;&#xA;&lt;p&gt;フェルミの黄金律の節で、すでに相互作用（ディラック）描像における波動関数の運動方程式を導出しました。&lt;/p&gt;&#xA;&lt;p&gt;密度行列を単に $\hat{\rho}_D(t) \sim | \psi (t) \rangle_D \langle \psi(t) |_D$ と見なすと、相互作用（ディラック）描像における密度行列の運動方程式をすぐに思い出すことができます：&lt;/p&gt;&#xA;&lt;p&gt;$$&#xA;\begin{aligned}&#xA;\frac{d}{dt} \hat{\rho}_D(t) = - \frac{i}{\hbar} [ \hat{\rho}_D(t) , \hat{V}_D(t) ]&#xA;\end{aligned}&#xA;$$&lt;/p&gt;&#xA;&lt;p&gt;積分して繰り返し反復することで、密度行列の展開式が得られます：&lt;/p&gt;&#xA;&lt;p&gt;$$&#xA;\begin{aligned}&#xA;\hat{\rho}&lt;em&gt;D(t) = \hat{\rho}&lt;em&gt;0 + \sum&lt;/em&gt;{n = 1}^{\infty} (-\frac{\mathrm{i}}{\hbar})^n \int&lt;/em&gt;{-\infty}^{t} dt_1 \int_{-\infty}^{t_1} dt_2 \dots \int_{-\infty}^{t_{n-1}} dt_n [\hat{V}_D(t_1),[\dots[\hat{V}_D(t_n),\hat{\rho}_0]\dots] ]&#xA;\end{aligned}&#xA;$$&lt;/p&gt;&#xA;&lt;p&gt;各積分の積分上限が常に $t$ ではないことに注意してください。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

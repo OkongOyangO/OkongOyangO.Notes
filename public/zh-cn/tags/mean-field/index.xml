@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mean Field on OkongOyangO的物理笔记</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/mean-field/</link>
+    <description>Recent content in Mean Field on OkongOyangO的物理笔记</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
+    <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
+    <lastBuildDate>Fri, 09 Jan 2026 19:05:46 +0000</lastBuildDate>
+    <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/mean-field/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>平均场近似与变分法｜Hartree, Fock, BCS能1:1:1混用吗？</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/mean_field_approximation/</link>
+      <pubDate>Fri, 09 Jan 2026 19:05:46 +0000</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/mean_field_approximation/</guid>
+      <description>&lt;p&gt;本文旨在介绍平均场近似，同时阐述其变分法本质。&lt;/p&gt;&#xA;&lt;p&gt;Hartree, Fock, BCS这一个一个一个平均场近似，看似是一个一个一个互不相容的decouple方法，但利用平均场近似的变分法本质，我们发现他们事实上确实可以1:1:1混着用。&lt;/p&gt;&#xA;&lt;h2 id=&#34;preface&#34;&gt;Preface&lt;/h2&gt;&#xA;&lt;p&gt;本文灵感首先来自来自和&lt;a href=&#34;https://www.zhihu.com/people/li-yong-kang-9-34&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;@ykli&lt;/a&gt;同学的讨论，在此特别感谢&lt;a href=&#34;https://www.zhihu.com/people/li-yong-kang-9-34&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;@ykli&lt;/a&gt;在推导过程中给予的大量帮助。&lt;/p&gt;&#xA;&lt;p&gt;这个问题在physics stackexchange网站上也被提及（被称为“Multi-channel Mean Field Theory”），在此也放上链接供大家参考：&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://physics.stackexchange.com/questions/742905/multi-channel-mean-field-theory&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;https://physics.stackexchange.com/questions/742905/multi-channel-mean-field-theory&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;同时，&lt;a href=&#34;https://www.zhihu.com/people/deng-wwzz&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;@阿兰那行&lt;/a&gt;学长关于“物理圈黑话”的回答也给了我相当多的灵感，有兴趣的读者可以移步：&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.zhihu.com/question/410499049/answer/2442413803&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;https://www.zhihu.com/question/410499049/answer/2442413803&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;对于相互作用体系，系统完整的哈密顿量为：&lt;/p&gt;&#xA;&lt;p&gt;$$&#xA;\begin{aligned}&#xA;\hat{H} = \hat{H}&lt;em&gt;0 + \hat{V}&lt;/em&gt;{int}&#xA;\end{aligned}&#xA;$$&lt;/p&gt;&#xA;&lt;p&gt;其中，$\hat{H}_0 \sim \sum c^\dagger c$，为费米子产生湮灭算符的二次型部分，比较容易处理成independent free particle。&lt;/p&gt;&#xA;&lt;p&gt;而$\hat{V}_{int} \sim \sum c^\dagger c^\dagger c c$，为相互作用部分。&lt;/p&gt;&#xA;&lt;p&gt;由于相互作用的存在，我们比较难求系统的基态波函数或者平衡态密度矩阵，从而比较难以计算相互作用体系的各种信息。因此，我们常常用各种近似方法来处理。&lt;/p&gt;&#xA;&lt;p&gt;平均场近似便是一种方法，我们取一个可以严格解的平均场近似哈密顿量：&lt;/p&gt;&#xA;&lt;p&gt;$$&#xA;\begin{aligned}&#xA;\hat{H}_{mf} = \hat{H}&lt;em&gt;0 + \hat{V}&lt;/em&gt;{mf}&#xA;\end{aligned}&#xA;$$&lt;/p&gt;&#xA;&lt;p&gt;使得$\hat{V}_{mf}$也为二次型，则比较好求严格解，我们便可以用这个平均场近似哈密顿量的解来近似给出系统的各种性质。&lt;/p&gt;&#xA;&lt;h2 id=&#34;mean-field-theory-by-decoupling&#34;&gt;Mean Field Theory by Decoupling&lt;/h2&gt;&#xA;&lt;p&gt;但取近似不能瞎取，也需要一定技巧。&lt;/p&gt;&#xA;&lt;p&gt;量子力学课本中教我们，平均场近似就是把算符的quantum fluctuation部分给忽略，即Decoupling Method：&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

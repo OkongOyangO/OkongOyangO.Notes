@@ -1,33 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Fermi Golden Rule on Yiyang&#39;s Physics Notes</title>
-    <link>http://localhost:1313/OkongOyangO.Notes/tags/fermi-golden-rule/</link>
-    <description>Recent content in Fermi Golden Rule on Yiyang&#39;s Physics Notes</description>
+    <title>Fermi Golden Rule on OkongOyangO&#39;s Notes</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/tags/fermi-golden-rule/</link>
+    <description>Recent content in Fermi Golden Rule on OkongOyangO&#39;s Notes</description>
     <generator>Hugo</generator>
     <language>en</language>
+    <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
+    <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
     <lastBuildDate>Sat, 10 Jan 2026 02:59:13 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/OkongOyangO.Notes/tags/fermi-golden-rule/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/tags/fermi-golden-rule/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What did Fermi Golden Rule Miss?</title>
-      <link>http://localhost:1313/OkongOyangO.Notes/posts/fermi_golden_rule/</link>
-      <pubDate>Sat, 10 Jan 2026 02:59:13 +0000</pubDate>
-      <guid>http://localhost:1313/OkongOyangO.Notes/posts/fermi_golden_rule/</guid>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/fermi_golden_rule/</link>
+      <pubDate>Sat, 10 Jan 2026 02:59:13 +0000</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/fermi_golden_rule/</guid>
       <description>&lt;p&gt;This article aims to calculate the strict quantum transition rate and points out that the Fermi Golden Rule is the result of its &amp;ldquo;long-time average&amp;rdquo;. The strict quantum transition rate contains an additional double-frequency oscillation term with non-negligible amplitude compared to the Fermi Golden Rule. The relationship between the two is similar to &amp;ldquo;instantaneous power&amp;rdquo; and &amp;ldquo;average power&amp;rdquo; in AC circuits.&lt;/p&gt;&#xA;&lt;h2 id=&#34;fermi-golden-rule&#34;&gt;Fermi Golden Rule&lt;/h2&gt;&#xA;&lt;p&gt;The Fermi Golden Rule aims to calculate the transition rate of a quantum system from an initial state $|i\rangle$ to a final state $|f\rangle$ (both are eigenstates of $H_0$) under a time-harmonic external field perturbation. Since this is well-covered in quantum mechanics courses, we will quickly go through it in the Dirac picture (interaction picture). The Dirac picture is used to better compare with the Kubo Formula.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？</title>
-      <link>http://localhost:1313/OkongOyangO.Notes/posts/fermi_golden_rule.ja/</link>
-      <pubDate>Sat, 10 Jan 2026 02:59:13 +0000</pubDate>
-      <guid>http://localhost:1313/OkongOyangO.Notes/posts/fermi_golden_rule.ja/</guid>
-      <description>&lt;p&gt;本文は厳密な量子遷移率を計算し、フェルミの黄金律がその「長時間平均」の結果であることを指摘することを目的としています。厳密な量子遷移率は、フェルミの黄金律と比較して、無視できない振幅を持つ二倍周波数振動項（double-frequency oscillation term）をさらに含んでいます。両者の関係は、交流回路における「瞬時電力」と「平均電力」の関係に似ています。&lt;/p&gt;&#xA;&lt;h2 id=&#34;fermi-golden-rule&#34;&gt;Fermi Golden Rule&lt;/h2&gt;&#xA;&lt;p&gt;フェルミの黄金律は、時間調和外場摂動下で、量子系が初期状態$|i\rangle$から終状態$|f\rangle$（いずれも$H_0$の固有状態）へ遷移する遷移率を計算することを目的としています。量子力学の講義ですでに十分に説明されているため、ここではディラック描像（相互作用描像）の下ですばやく確認します。ディラック描像を使用するのは、久保公式（Kubo Formula）との比較を容易にするためです。&lt;/p&gt;&#xA;&lt;p&gt;ディラック描像における状態の運動方程式：&lt;/p&gt;&#xA;&lt;p&gt;$$&#xA;\begin{aligned}&#xA;i \hbar \partial_t |\psi(t) \rangle_D = \hat{V}_D(t) |\psi(t) \rangle_D&#xA;\end{aligned}&#xA;$$&lt;/p&gt;&#xA;&lt;p&gt;ディラック描像における演算子：&lt;/p&gt;&#xA;&lt;p&gt;$$&#xA;\begin{aligned}&#xA;\hat{\mathcal{O}}_D(t) = e^{i\hat{H_0}t/\hbar} \hat{\mathcal{O}}_S(t) e^{-i\hat{H_0}t/\hbar}&#xA;\end{aligned}&#xA;$$&lt;/p&gt;&#xA;&lt;p&gt;添字$D,,S$はそれぞれディラック描像とシュレーディンガー描像を表します。&lt;/p&gt;&#xA;&lt;p&gt;運動方程式を積分して反復することで、ディラック描像における状態の時間発展演算子$\mathcal{U}(t,t&amp;rsquo;)$が得られます：&lt;/p&gt;&#xA;&lt;p&gt;$$&#xA;\begin{aligned}&#xA;\mathcal{U}(t,t&amp;rsquo;) &amp;amp; = \mathcal{T} e^{-i \int_{t&amp;rsquo;}^{t}dt&amp;rsquo;&amp;rsquo; \hat{V}&lt;em&gt;D(t&amp;rsquo;&amp;rsquo;)/\hbar }  \&#xA;&amp;amp; = 1 + (-i/\hbar) \int&lt;/em&gt;{t&amp;rsquo;}^{t}dt_1 \hat{V}&lt;em&gt;D(t_1) + \frac{1}{2!} (-i/\hbar)^2 \int&lt;/em&gt;{t&amp;rsquo;}^{t}dt_1 \int_{t&amp;rsquo;}^{t}dt_2 \mathcal{T} \hat{V}&lt;em&gt;D(t_1) \hat{V}&lt;em&gt;D(t_2) + \dots \&#xA;&amp;amp; = 1 + (-i/\hbar) \int&lt;/em&gt;{t&amp;rsquo;}^{t}dt_1 \hat{V}&lt;em&gt;D(t_1) +  (-i/\hbar)^2 \int&lt;/em&gt;{t&amp;rsquo;}^{t}dt_1 \int&lt;/em&gt;{t&amp;rsquo;}^{\mathbf{t_1}}dt_2  \hat{V}_D(t_1) \hat{V}_D(t_2) + \dots&#xA;\end{aligned}&#xA;$$&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>费米黄金法则（Fermi Golden Rule）漏了什么？</title>
-      <link>http://localhost:1313/OkongOyangO.Notes/posts/fermi_golden_rule.zh/</link>
-      <pubDate>Sat, 10 Jan 2026 02:59:13 +0000</pubDate>
-      <guid>http://localhost:1313/OkongOyangO.Notes/posts/fermi_golden_rule.zh/</guid>
-      <description>&lt;p&gt;本文旨在计算严格的量子跃迁速率，并指出费米黄金法则是其的“长时间平均”的结果。严格的量子跃迁速率相比费米黄金法则还多一项振幅不可忽略的二倍频振荡项，前后者关系类似交流电路中的“瞬时功率”与“平均功率”。&lt;/p&gt;&#xA;&lt;h2 id=&#34;fermi-golden-rule&#34;&gt;Fermi Golden Rule&lt;/h2&gt;&#xA;&lt;p&gt;费米黄金法则旨在计算时谐外场微扰下，量子系统从初态$|i\rangle$到末态$|f\rangle$（均为$H_0$的本征态）的跃迁速率。由于量子力学课程中已经阐述的很完备，此处我们在Dirac表象（相互作用表象）下速通一遍。使用Dirac表象是为了更好与Kubo Formula进行比较&lt;/p&gt;&#xA;&lt;p&gt;Dirac表象下态的运动方程：&lt;/p&gt;&#xA;&lt;p&gt;$$&#xA;\begin{aligned}&#xA;i \hbar \partial_t |\psi(t) \rangle_D = \hat{V}_D(t) |\psi(t) \rangle_D&#xA;\end{aligned}&#xA;$$&lt;/p&gt;&#xA;&lt;p&gt;Dirac表象下的算符：&lt;/p&gt;&#xA;&lt;p&gt;$$&#xA;\begin{aligned}&#xA;\hat{\mathcal{O}}_D(t) = e^{i\hat{H_0}t/\hbar} \hat{\mathcal{O}}_S(t) e^{-i\hat{H_0}t/\hbar}&#xA;\end{aligned}&#xA;$$&lt;/p&gt;&#xA;&lt;p&gt;下标$D,,S$分别代表Dirac表象和Schrodinger表象。&lt;/p&gt;&#xA;&lt;p&gt;对运动方程积分后迭代可以得到Dirac表象下态的演化算符$\mathcal{U}(t,t&amp;rsquo;)$：&lt;/p&gt;&#xA;&lt;p&gt;$$&#xA;\begin{aligned}&#xA;\mathcal{U}(t,t&amp;rsquo;) &amp;amp; = \mathcal{T} e^{-i \int_{t&amp;rsquo;}^{t}dt&amp;rsquo;&amp;rsquo; \hat{V}&lt;em&gt;D(t&amp;rsquo;&amp;rsquo;)/\hbar }  \&#xA;&amp;amp; = 1 + (-i/\hbar) \int&lt;/em&gt;{t&amp;rsquo;}^{t}dt_1 \hat{V}&lt;em&gt;D(t_1) + \frac{1}{2!} (-i/\hbar)^2 \int&lt;/em&gt;{t&amp;rsquo;}^{t}dt_1 \int_{t&amp;rsquo;}^{t}dt_2 \mathcal{T} \hat{V}&lt;em&gt;D(t_1) \hat{V}&lt;em&gt;D(t_2) + \dots \&#xA;&amp;amp; = 1 + (-i/\hbar) \int&lt;/em&gt;{t&amp;rsquo;}^{t}dt_1 \hat{V}&lt;em&gt;D(t_1) +  (-i/\hbar)^2 \int&lt;/em&gt;{t&amp;rsquo;}^{t}dt_1 \int&lt;/em&gt;{t&amp;rsquo;}^{\mathbf{t_1}}dt_2  \hat{V}_D(t_1) \hat{V}_D(t_2) + \dots&#xA;\end{aligned}&#xA;$$&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
