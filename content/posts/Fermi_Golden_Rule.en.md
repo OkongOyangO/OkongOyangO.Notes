@@ -33,13 +33,11 @@ The subscripts $D$ and $S$ represent the Dirac picture and Schrödinger picture,
 
 Integrating the equation of motion and iterating gives the evolution operator $\mathcal{U}(t,t')$ in the Dirac picture:
 
-$$
-\begin{aligned}
+$$\begin{aligned}
 \mathcal{U}(t,t') & = \mathcal{T} e^{-i \int_{t'}^{t}dt'' \hat{V}_D(t'')/\hbar }  \\
 & = 1 + (-i/\hbar) \int_{t'}^{t}dt_1 \hat{V}_D(t_1) + \frac{1}{2!} (-i/\hbar)^2 \int_{t'}^{t}dt_1 \int_{t'}^{t}dt_2 \mathcal{T} \hat{V}_D(t_1) \hat{V}_D(t_2) + \dots \\
 & = 1 + (-i/\hbar) \int_{t'}^{t}dt_1 \hat{V}_D(t_1) +  (-i/\hbar)^2 \int_{t'}^{t}dt_1 \int_{t'}^{\mathbf{t_1}}dt_2  \hat{V}_D(t_1) \hat{V}_D(t_2) + \dots 
-\end{aligned}
-$$
+\end{aligned}$$
 
 where $\mathcal{T}$ is the time ordering operator, placing operators with smaller times on the right to act on the state vector first. The expression without time ordering is also given above, which can be obtained by integrating the equation of motion and iterating.
 
@@ -201,7 +199,6 @@ $$
 To discuss the approximation under long-time evolution, let's take $t_0 \rightarrow - \infty$.
 
 Focusing on terms (1.1)+(2.1), after transforming the integration variable:
-
 $$
 \begin{aligned}
 (1.1) + (2.1) & = \frac{|H_{fi}|^2}{\hbar^2} \int_{- \infty}^t dt' \left[ e^{i (\omega - \omega_{fi}) (t - t')} + e^{-i (\omega - \omega_{fi}) (t - t')}  \right] \\
