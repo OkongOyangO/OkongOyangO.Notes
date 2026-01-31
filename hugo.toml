@@ -163,6 +163,11 @@ theme = "LoveIt"
       table = true
       taskList = true
       typographer = true
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [["$$", "$$"], ["\\[", "\\]"]]
+          inline = [["$", "$"], ["\\(", "\\)"]]
   [markup.highlight]
     codeFences = true
     lineNos = false
