@@ -11,6 +11,8 @@ categories: ["Physics Notes"]
 
 Hartree, Fock, BCS这一个一个一个平均场近似，看似是一个一个一个互不相容的decouple方法，但利用平均场近似的变分法本质，我们发现他们事实上确实可以1:1:1混着用。
 
+<!--more-->
+
 ## Preface
 
 本文灵感首先来自来自和[@ykli](https://www.zhihu.com/people/li-yong-kang-9-34)同学的讨论，在此特别感谢[@ykli](https://www.zhihu.com/people/li-yong-kang-9-34)在推导过程中给予的大量帮助。

@@ -12,6 +12,8 @@ categories: ["Physics Notes"]
 
 This article aims to derive the nonlinear response theory of the Kubo Formula.
 
+<!--more-->
+
 ## Introduction
 
 Both linear and nonlinear response theories of the Kubo Formula are essentially perturbation theories in quantum mechanics.

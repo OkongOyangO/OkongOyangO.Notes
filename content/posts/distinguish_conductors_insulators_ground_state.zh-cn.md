@@ -7,7 +7,9 @@ tags: ["Condensed Matter", "Insulators"]
 categories: ["Physics Notes"]
 ---
 
-本note旨在阐述多体系统**导电性**与**基态量子几何性质**的关联，并解释如何仅通过基态波函数的“局域”程度，来区分导体和绝缘体。
+本note旨在阐述多体系统**导电性**与**基态量子几何性质**的关联，并解释如何仅通过基态波函数的"局域"程度，来区分导体和绝缘体。
+
+<!--more-->
 
 ## Introduction
 

@@ -16,26 +16,24 @@
 <h2 id="fermi-golden-rule">Fermi Golden Rule</h2>
 <p>フェルミの黄金律は、時間調和外場摂動下で、量子系が初期状態$|i\rangle$から終状態$|f\rangle$（いずれも$H_0$の固有状態）へ遷移する遷移率を計算することを目的としています。量子力学の講義ですでに十分に説明されているため、ここではディラック描像（相互作用描像）の下ですばやく確認します。ディラック描像を使用するのは、久保公式（Kubo Formula）との比較を容易にするためです。</p>
 <p>ディラック描像における状態の運動方程式：</p>
-<p>$$
+$$
 \begin{aligned}
 i \hbar \partial_t |\psi(t) \rangle_D = \hat{V}_D(t) |\psi(t) \rangle_D
 \end{aligned}
-$$</p>
-<p>ディラック描像における演算子：</p>
-<p>$$
+$$<p>ディラック描像における演算子：</p>
+$$
 \begin{aligned}
 \hat{\mathcal{O}}_D(t) = e^{i\hat{H_0}t/\hbar} \hat{\mathcal{O}}_S(t) e^{-i\hat{H_0}t/\hbar}
 \end{aligned}
-$$</p>
-<p>添字$D,,S$はそれぞれディラック描像とシュレーディンガー描像を表します。</p>
-<p>運動方程式を積分して反復することで、ディラック描像における状態の時間発展演算子$\mathcal{U}(t,t&rsquo;)$が得られます：</p>
-<p>$$
+$$<p>添字$D,\,S$はそれぞれディラック描像とシュレーディンガー描像を表します。</p>
+<p>運動方程式を積分して反復することで、ディラック描像における状態の時間発展演算子$\mathcal{U}(t,t')$が得られます：</p>
+$$
 \begin{aligned}
-\mathcal{U}(t,t&rsquo;) &amp; = \mathcal{T} e^{-i \int_{t&rsquo;}^{t}dt&rsquo;&rsquo; \hat{V}<em>D(t&rsquo;&rsquo;)/\hbar }  \
-&amp; = 1 + (-i/\hbar) \int</em>{t&rsquo;}^{t}dt_1 \hat{V}<em>D(t_1) + \frac{1}{2!} (-i/\hbar)^2 \int</em>{t&rsquo;}^{t}dt_1 \int_{t&rsquo;}^{t}dt_2 \mathcal{T} \hat{V}<em>D(t_1) \hat{V}<em>D(t_2) + \dots \
-&amp; = 1 + (-i/\hbar) \int</em>{t&rsquo;}^{t}dt_1 \hat{V}<em>D(t_1) +  (-i/\hbar)^2 \int</em>{t&rsquo;}^{t}dt_1 \int</em>{t&rsquo;}^{\mathbf{t_1}}dt_2  \hat{V}_D(t_1) \hat{V}_D(t_2) + \dots
+\mathcal{U}(t,t') & = \mathcal{T} e^{-i \int_{t'}^{t}dt'' \hat{V}_D(t'')/\hbar }  \\
+& = 1 + (-i/\hbar) \int_{t'}^{t}dt_1 \hat{V}_D(t_1) + \frac{1}{2!} (-i/\hbar)^2 \int_{t'}^{t}dt_1 \int_{t'}^{t}dt_2 \mathcal{T} \hat{V}_D(t_1) \hat{V}_D(t_2) + \dots \\
+& = 1 + (-i/\hbar) \int_{t'}^{t}dt_1 \hat{V}_D(t_1) +  (-i/\hbar)^2 \int_{t'}^{t}dt_1 \int_{t'}^{\mathbf{t_1}}dt_2  \hat{V}_D(t_1) \hat{V}_D(t_2) + \dots 
 \end{aligned}
-$$</p>]]></description>
+$$<p>ここで$\mathcal{T}$は時間順序積演算子（time ordering operator）であり、時間の小さい演算子を右側に配置し、先に状態ベクトルに作用させます。上記には時間順序積を用いない式も示されており、これは運動方程式を積分し、反復することで得られます。</p>]]></description>
 </item>
 <item>
     <title>平均場近似と変分法｜Hartree, Fock, BCSは1:1:1で混ぜて使えるか？</title>
@@ -53,24 +51,32 @@ $$</p>]]></description>
 <p><a href="https://www.zhihu.com/question/410499049/answer/2442413803" target="_blank" rel="noopener noreffer ">https://www.zhihu.com/question/410499049/answer/2442413803</a></p>
 <h2 id="introduction">Introduction</h2>
 <p>相互作用系において、システムの完全なハミルトニアンは以下の通りです：</p>
-<p>$$
+$$
 \begin{aligned}
-\hat{H} = \hat{H}<em>0 + \hat{V}</em>{int}
+\hat{H} = \hat{H}_0 + \hat{V}_{int}
 \end{aligned}
-$$</p>
-<p>ここで、$\hat{H}_0 \sim \sum c^\dagger c$ はフェルミ粒子生成消滅演算子の二次形式部分であり、独立した自由粒子として比較的容易に扱えます。</p>
+$$<p>ここで、$\hat{H}_0 \sim \sum c^\dagger c$ はフェルミ粒子生成消滅演算子の二次形式部分であり、独立した自由粒子として比較的容易に扱えます。</p>
 <p>一方、$\hat{V}_{int} \sim \sum c^\dagger c^\dagger c c$ は相互作用部分です。</p>
 <p>相互作用の存在により、システムの基底状態波動関数や平衡状態密度行列を求めることは難しく、相互作用系の様々な情報を計算することも困難になります。そのため、我々はしばしば様々な近似手法を用いて処理します。</p>
 <p>平均場近似はそのような手法の一つです。厳密に解くことができる平均場近似ハミルトニアンを取り上げます：</p>
-<p>$$
+$$
 \begin{aligned}
-\hat{H}_{mf} = \hat{H}<em>0 + \hat{V}</em>{mf}
+\hat{H}_{mf} = \hat{H}_0 + \hat{V}_{mf}
 \end{aligned}
-$$</p>
-<p>$\hat{V}_{mf}$ もまた二次形式にすることで、厳密解を求めることが容易になります。そして、この平均場近似ハミルトニアンの解を用いて、システムの様々な性質を近似的に導き出すことができます。</p>
+$$<p>$\hat{V}_{mf}$ もまた二次形式にすることで、厳密解を求めることが容易になります。そして、この平均場近似ハミルトニアンの解を用いて、システムの様々な性質を近似的に導き出すことができます。</p>
 <h2 id="mean-field-theory-by-decoupling">Mean Field Theory by Decoupling</h2>
 <p>しかし、近似は適当に選べばよいわけではなく、ある程度のテクニックが必要です。</p>
-<p>量子力学の教科書では、平均場近似とは演算子の量子揺らぎ部分を無視すること、すなわちDecoupling Method（分離法）であると教えられます：</p>]]></description>
+<p>量子力学の教科書では、平均場近似とは演算子の量子揺らぎ部分を無視すること、すなわちDecoupling Method（分離法）であると教えられます：</p>
+$$
+\begin{aligned}
+A^\dagger A & = [\langle A \rangle + (A - \langle A \rangle)]^\dagger [\langle A \rangle + (A - \langle A \rangle)] \\
+& \equiv [\langle A \rangle + \delta A]^\dagger [\langle A \rangle + \delta A]  \\
+& = \underbrace{\langle A^\dagger \rangle \langle A \rangle}_{\mathcal{O}(\delta A^0)} + \underbrace{\langle A^\dagger \rangle \delta A +  \delta A^\dagger \langle A \rangle}_{\mathcal{O}(\delta A^1)} + \underbrace{\delta A^\dagger \delta A}_{\mathcal{O}(\delta A^2)} \\
+& = \underbrace{\langle A^\dagger \rangle A + A^\dagger \langle A \rangle - \langle A^\dagger \rangle \langle A \rangle}_{\text{mean field}\ =\ \mathcal{O}(\delta A^0) + \mathcal{O}(\delta A^1)} \\
+& + \underbrace{(A - \langle A \rangle)^\dagger (A - \langle A \rangle)}_{\text{quantum fluctuation}\ =\ \mathcal{O}(\delta A^2)} \\
+& \approx \langle A^\dagger \rangle A + A^\dagger \langle A \rangle - \langle A^\dagger \rangle \langle A \rangle
+\end{aligned}
+$$<p>ここで、平均場（mean field）部分は演算子揺らぎ$\delta A$の0次と1次の部分を保持し、量子揺らぎ（quantum fluctuation）は演算子揺らぎ$\delta A$の2次の部分を含んでいます。</p>]]></description>
 </item>
 <item>
     <title>フェルミの黄金律？ただのジュール熱さ！</title>
@@ -88,18 +94,17 @@ $$</p>
 <h2 id="fermi-golden-rule">Fermi Golden Rule</h2>
 <p>フェルミの黄金律は、時間調和外場摂動下で、量子系が初期状態 $|i\rangle$ から終状態 $|f\rangle$ （いずれも $H_0$ の固有状態）へ遷移する速度を計算することを目的としています。以前のフェルミの黄金律の記事では、久保公式と比較しやすくするために、ディラック描像（Dirac Picture）を用いて再導出しました。</p>
 <p>ディラック描像における状態の運動方程式：</p>
-<p>$$
+$$
 \begin{aligned}
 i \hbar \partial_t |\psi(t) \rangle_D = \hat{V}_D(t) |\psi(t) \rangle_D
 \end{aligned}
-$$</p>
-<p>運動方程式を積分して反復することで、ディラック描像における状態の時間発展の摂動展開形式が得られます。系が $t = t_0$ において初期状態 $|i\rangle$ にあると仮定すると：</p>
-<p>$$
+$$<p>運動方程式を積分して反復することで、ディラック描像における状態の時間発展の摂動展開形式が得られます。系が $t = t_0$ において初期状態 $|i\rangle$ にあると仮定すると：</p>
+$$
 \begin{aligned}
-| \psi (t) \rangle_D &amp; = |i\rangle + (-i/\hbar) \int_{t_0}^{t}dt_1 \hat{V}<em>D(t_1)|i\rangle + (-i/\hbar)^2 \int</em>{t_0}^{t}dt_1 \int_{t_0}^{\mathbf{t_1}}dt_2  \hat{V}_D(t_1) \hat{V}_D(t_2)|i\rangle + \dots \
-&amp; = | \psi^{(0)} \rangle + | \psi^{(1)}\rangle + | \psi^{(2)}\rangle + \dots
+| \psi (t) \rangle_D & = |i\rangle + (-i/\hbar) \int_{t_0}^{t}dt_1 \hat{V}_D(t_1)|i\rangle + (-i/\hbar)^2 \int_{t_0}^{t}dt_1 \int_{t_0}^{\mathbf{t_1}}dt_2  \hat{V}_D(t_1) \hat{V}_D(t_2)|i\rangle + \dots \\
+& = | \psi^{(0)} \rangle + | \psi^{(1)}\rangle + | \psi^{(2)}\rangle + \dots
 \end{aligned}
-$$</p>]]></description>
+$$<p>したがって、時刻 $t$ における $|f\rangle$ 状態の確率も摂動展開できます：</p>]]></description>
 </item>
 <item>
     <title>基底状態だけで導体と絶縁体をどう区別するか？🤔</title>
@@ -110,7 +115,7 @@ $$</p>]]></description>
     <description><![CDATA[<p>本稿は、多体系の<strong>導電性</strong>と**基底状態の量子幾何学（Quantum Geometry）**との関連性を明らかにし、基底状態の波動関数の「局在性（Locality）」だけで導体と絶縁体を区別する方法について解説することを目的としています。</p>
 <h2 id="introduction">Introduction</h2>
 <p>「基底状態を見るだけで導体と絶縁体を区別できる」——この主張は少し常識外れに聞こえるかもしれません。</p>
-<p>1930年代のバンド理論は（ある程度）導体と絶縁体の違いを説明しました。相互作用のないレベルでは、導体と絶縁体は基底状態のエネルギーバンドが満たされているかどうかで区別できます。価電子帯が満たされ、伝導帯との間にバンドギャップ$E_g &gt; 0$があれば絶縁体であり、そうでなければ導体です。ここではバンドギャップ$E_g$を使って区別しますが、$E_g$を定義するには励起状態のエネルギーを知る必要があり、必然的に励起状態の性質が関わってきます。</p>
+<p>1930年代のバンド理論は（ある程度）導体と絶縁体の違いを説明しました。相互作用のないレベルでは、導体と絶縁体は基底状態のエネルギーバンドが満たされているかどうかで区別できます。価電子帯が満たされ、伝導帯との間にバンドギャップ$E_g > 0$があれば絶縁体であり、そうでなければ導体です。ここではバンドギャップ$E_g$を使って区別しますが、$E_g$を定義するには励起状態のエネルギーを知る必要があり、必然的に励起状態の性質が関わってきます。</p>
 <p>しかし、1949年に提案されたモット絶縁体（Mott Insulator、強い電子間相関に起因）や1958年のアンダーソン絶縁体（Anderson Insulator、強い無秩序に起因）は、導体と絶縁体を区別する上でのバンド理論の穴を指摘しました。つまり、多体系の絶縁メカニズムは価電子帯が満たされていることだけでなく、強い相関や無秩序も関係しているということです。同様に、バンドギャップがないことが導電性のメカニズムであるのと並んで、無秩序な金属合金の一部も導体になり得ます。逆に、無秩序な合金系では、バンドギャップがなくても絶縁体になる可能性があり、これこそがアンダーソン局在（Anderson Localization）であり、局在状態が電流を安定して輸送できないことに起因します。</p>
 <p>さらに言えば、多体系には格子が全く存在しない可能性もあります。多体系の導電特性を判断するための、より**普遍的な指標（universal indicator）**が早急に求められています。</p>
 <p>現象論的には、導体と絶縁体の違いは直流伝導率$\operatorname{Re}\sigma(\omega\rightarrow 0)$の違いにあります。なぜなら、一般的な絶縁体でも交流電流下では電気を通すことができるからです。あるいは電気分極現象によって区別することもできます。絶縁体では電子が束縛されており、原子の近くでしか動けないため、明らかな電気分極現象が生じます。一方、導体では電子は自由に動く傾向があり、外部電場によって自由に流れるため、明確に定義された電気分極はありません。</p>
@@ -124,11 +129,11 @@ $$</p>]]></description>
 <p>ここで明確にしておく必要がありますが、いわゆる「多体配置における基底状態多体波動関数の『局在性』」は、単一粒子波動関数の局在性とは異なりますが、定義上は類似点があります。さらに、単一粒子波動関数の観点から導出する方が簡単なので、まず単一粒子波動関数の局在性の定義を紹介し、その性質を議論した後、KohnやRestaらの論文にある多体系の場合へと一般化します。</p>
 <p>固体バンド系を例にとると、絶縁体であれ導体であれ、その単一電子固有状態は広がったブロッホ波動関数です。しかし、フーリエ変換を通じて、これらの実空間で広がったブロッホ固有状態を実空間で局在した**ワニエ関数（Wannier Functions）**に変換することができます。</p>
 <p>ワニエ関数$|\mathbf{R} n\rangle$とブロッホ波動関数$\left|\psi_{n \mathbf{k}}\right\rangle$の変換関係は以下の通りです：</p>
-<p>$$
+$$
 \begin{aligned}
-\left|\psi_{n \mathbf{k}}\right\rangle=\sum_{\mathbf{R}} e^{i \mathbf{k} \cdot \mathbf{R}}|\mathbf{R} n\rangle \Leftrightarrow |\mathbf{R} n\rangle=\frac{1}{N} \sum_{\mathbf{k}} e^{-i \mathbf{k} \cdot \mathbf{R}}\left|\psi_{n \mathbf{k}}\right\rangle
+\left|\psi_{n \mathbf{k}}\right\rangle=\sum_{\mathbf{R}} e^{i \mathbf{k} \cdot \mathbf{R}}|\mathbf{R} n\rangle \Leftrightarrow |\mathbf{R} n\rangle=\frac{1}{N} \sum_{\mathbf{k}} e^{-i \mathbf{k} \cdot \mathbf{R}}\left|\psi_{n \mathbf{k}}\right\rangle 
 \end{aligned}
-$$</p>]]></description>
+$$<p>ワニエ波動関数の局在性の度合いは、エネルギーバンドのゲージ選択に関係しています。もしブロッホ波動関数に$\mathbf{k}$に関連する位相（ゲージ）を加えても、それは固有状態のままです。</p>]]></description>
 </item>
 <item>
     <title>久保公式の非線形応答理論</title>
@@ -150,18 +155,18 @@ $$</p>]]></description>
 <p>久保公式の導出は、相互作用（ディラック）描像における系の密度行列の時間発展から始まります。</p>
 <p>フェルミの黄金律の節で、すでに相互作用（ディラック）描像における波動関数の運動方程式を導出しました。</p>
 <p>密度行列を単に $\hat{\rho}_D(t) \sim | \psi (t) \rangle_D \langle \psi(t) |_D$ と見なすと、相互作用（ディラック）描像における密度行列の運動方程式をすぐに思い出すことができます：</p>
-<p>$$
+$$
 \begin{aligned}
 \frac{d}{dt} \hat{\rho}_D(t) = - \frac{i}{\hbar} [ \hat{\rho}_D(t) , \hat{V}_D(t) ]
 \end{aligned}
-$$</p>
-<p>積分して繰り返し反復することで、密度行列の展開式が得られます：</p>
-<p>$$
+$$<p>積分して繰り返し反復することで、密度行列の展開式が得られます：</p>
+$$
 \begin{aligned}
-\hat{\rho}<em>D(t) = \hat{\rho}<em>0 + \sum</em>{n = 1}^{\infty} (-\frac{\mathrm{i}}{\hbar})^n \int</em>{-\infty}^{t} dt_1 \int_{-\infty}^{t_1} dt_2 \dots \int_{-\infty}^{t_{n-1}} dt_n [\hat{V}_D(t_1),[\dots[\hat{V}_D(t_n),\hat{\rho}_0]\dots] ]
+\hat{\rho}_D(t) = \hat{\rho}_0 + \sum_{n = 1}^{\infty} (-\frac{\mathrm{i}}{\hbar})^n \int_{-\infty}^{t} dt_1 \int_{-\infty}^{t_1} dt_2 \dots \int_{-\infty}^{t_{n-1}} dt_n [\hat{V}_D(t_1),[\dots[\hat{V}_D(t_n),\hat{\rho}_0]\dots] ]
 \end{aligned}
-$$</p>
-<p>各積分の積分上限が常に $t$ ではないことに注意してください。</p>]]></description>
+$$<p>各積分の積分上限が常に $t$ ではないことに注意してください。</p>
+<h2 id="線形応答">線形応答</h2>
+<p>線形応答のみを考えます：</p>]]></description>
 </item>
 <item>
     <title>分数量子ホール効果 (FQHE)、分数異常量子ホール効果 (FAQHE)、そして分数チャーン絶縁体 (FCI)</title>
@@ -182,11 +187,11 @@ $$</p>
 <h2 id="physics-in-lll">Physics in L.L.L.</h2>
 <p>（近）自由電子ガス系における分数量子ホール効果をチャーン絶縁体の格子系に「<strong>シームレスに接続</strong>」するために、まず最低ランダウ準位（L.L.L.）における物理を振り返ります。</p>
 <p>磁場中の電子のハミルトニアン：</p>
-<p>$$
+$$
 \begin{aligned}
 H=\frac{1}{2 m}\left( \hat{\mathbf{p}} + e \mathbf{A}(\hat{\mathbf{r}}) \right)^2 = \frac{\boldsymbol{\pi}^2}{2m}
 \end{aligned}
-$$</p>]]></description>
+$$<p>一定の外部磁場中の自由電子ガスに対しては、特定のゲージを選ばずにランダウ準位を計算することもできますし、ランダウゲージ（Landau Gauge）や対称ゲージ（Symmetric Gauge）の下で単電子波動関数を厳密に解くこともできます。</p>]]></description>
 </item>
 </channel>
 </rss>

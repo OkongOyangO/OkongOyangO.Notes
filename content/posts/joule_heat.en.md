@@ -9,6 +9,8 @@ categories: ["Physics Notes"]
 
 This article aims to clarify the consistency between Fermi's Golden Rule and Joule Heat.
 
+<!--more-->
+
 ## Introduction
 
 Fermi's Golden Rule can calculate the system's absorption of electromagnetic fields, while the Kubo Formula can calculate the current response, and the Joule heat formula can also calculate the absorption of electromagnetic fields.

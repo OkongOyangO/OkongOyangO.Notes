@@ -38,7 +38,7 @@ Preface The inspiration for this article primarily comes from discussions with c
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/posts\/mean_field_approximation\/"
-        },"genre": "posts","keywords": "Condensed Matter, Mean Field","wordcount":  3310 ,
+        },"genre": "posts","keywords": "Condensed Matter, Mean Field","wordcount":  3273 ,
         "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/posts\/mean_field_approximation\/","datePublished": "2026-01-09T19:05:46+00:00","dateModified": "2026-01-09T19:05:46+00:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -129,7 +129,7 @@ Preface The inspiration for this article primarily comes from discussions with c
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Mean Field Approximation and Variational Method | Can Hartree, Fock, and BCS be Mixed 1:1:1?</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://OkongOyangO.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">included in <a href="/OkongOyangO.Notes/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-01-09">2026-01-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;3310 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-01-09">2026-01-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;3273 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;16 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
@@ -158,314 +158,277 @@ Preface The inspiration for this article primarily comes from discussions with c
 <p><a href="https://www.zhihu.com/question/410499049/answer/2442413803" target="_blank" rel="noopener noreffer ">https://www.zhihu.com/question/410499049/answer/2442413803</a></p>
 <h2 id="introduction">Introduction</h2>
 <p>For interacting systems, the complete Hamiltonian of the system is:</p>
-<p>$$
+$$
 \begin{aligned}
-\hat{H} = \hat{H}<em>0 + \hat{V}</em>{int}
+\hat{H} = \hat{H}_0 + \hat{V}_{int}
 \end{aligned}
-$$</p>
-<p>Here, $\hat{H}_0 \sim \sum c^\dagger c$ represents the quadratic part of the fermion creation and annihilation operators, which is relatively easy to treat as independent free particles.</p>
+$$<p>Here, $\hat{H}_0 \sim \sum c^\dagger c$ represents the quadratic part of the fermion creation and annihilation operators, which is relatively easy to treat as independent free particles.</p>
 <p>On the other hand, $\hat{V}_{int} \sim \sum c^\dagger c^\dagger c c$ represents the interaction part.</p>
 <p>Due to the existence of interactions, it is difficult to determine the system&rsquo;s ground state wave function or equilibrium density matrix, making it challenging to calculate various information about the interacting system. Therefore, we often use various approximation methods to handle this.</p>
 <p>The mean field approximation is one such method. We take a mean field approximation Hamiltonian that can be strictly solved:</p>
-<p>$$
+$$
 \begin{aligned}
-\hat{H}_{mf} = \hat{H}<em>0 + \hat{V}</em>{mf}
+\hat{H}_{mf} = \hat{H}_0 + \hat{V}_{mf}
 \end{aligned}
-$$</p>
-<p>By making $\hat{V}_{mf}$ also quadratic, it becomes easier to solve strictly. We can then use the solution of this mean field approximation Hamiltonian to approximate various properties of the system.</p>
+$$<p>By making $\hat{V}_{mf}$ also quadratic, it becomes easier to solve strictly. We can then use the solution of this mean field approximation Hamiltonian to approximate various properties of the system.</p>
 <h2 id="mean-field-theory-by-decoupling">Mean Field Theory by Decoupling</h2>
 <p>However, approximations cannot be chosen blindly; they require certain techniques.</p>
 <p>Quantum mechanics textbooks teach us that the mean field approximation involves ignoring the quantum fluctuation part of the operators, i.e., the Decoupling Method:</p>
-<p>$$
+$$
 \begin{aligned}
-A^\dagger A &amp; = [\langle A \rangle + (A - \langle A \rangle)]^\dagger [\langle A \rangle + (A - \langle A \rangle)] \
-&amp; \equiv [\langle A \rangle + \delta A]^\dagger [\langle A \rangle + \delta A]  \
-&amp; = \underbrace{\langle A^\dagger \rangle \langle A \rangle}<em>{\mathcal{O}(\delta A^0)} + \underbrace{\langle A^\dagger \rangle \delta A +  \delta A^\dagger \langle A \rangle}</em>{\mathcal{O}(\delta A^1)} + \underbrace{\delta A^\dagger \delta A}<em>{\mathcal{O}(\delta A^2)} \
-&amp; = \underbrace{\langle A^\dagger \rangle A + A^\dagger \langle A \rangle - \langle A^\dagger \rangle \langle A \rangle}</em>{\text{mean field}\ =\ \mathcal{O}(\delta A^0) + \mathcal{O}(\delta A^1)} \
-&amp; + \underbrace{(A - \langle A \rangle)^\dagger (A - \langle A \rangle)}_{\text{quantum fluctuation}\ =\ \mathcal{O}(\delta A^2)} \
-&amp; \approx \langle A^\dagger \rangle A + A^\dagger \langle A \rangle - \langle A^\dagger \rangle \langle A \rangle
+A^\dagger A & = [\langle A \rangle + (A - \langle A \rangle)]^\dagger [\langle A \rangle + (A - \langle A \rangle)] \\
+& \equiv [\langle A \rangle + \delta A]^\dagger [\langle A \rangle + \delta A]  \\
+& = \underbrace{\langle A^\dagger \rangle \langle A \rangle}_{\mathcal{O}(\delta A^0)} + \underbrace{\langle A^\dagger \rangle \delta A +  \delta A^\dagger \langle A \rangle}_{\mathcal{O}(\delta A^1)} + \underbrace{\delta A^\dagger \delta A}_{\mathcal{O}(\delta A^2)} \\
+& = \underbrace{\langle A^\dagger \rangle A + A^\dagger \langle A \rangle - \langle A^\dagger \rangle \langle A \rangle}_{\text{mean field}\ =\ \mathcal{O}(\delta A^0) + \mathcal{O}(\delta A^1)} \\
+& + \underbrace{(A - \langle A \rangle)^\dagger (A - \langle A \rangle)}_{\text{quantum fluctuation}\ =\ \mathcal{O}(\delta A^2)} \\
+& \approx \langle A^\dagger \rangle A + A^\dagger \langle A \rangle - \langle A^\dagger \rangle \langle A \rangle
 \end{aligned}
-$$</p>
-<p>The mean field part retains the zero-order and first-order parts of the operator fluctuation $\delta A$, while the quantum fluctuation includes the second-order part of the operator fluctuation $\delta A$.</p>
+$$<p>The mean field part retains the zero-order and first-order parts of the operator fluctuation $\delta A$, while the quantum fluctuation includes the second-order part of the operator fluctuation $\delta A$.</p>
 <p>Thus, it is not difficult to understand that when quantum fluctuations are not large, the mean field approximation is relatively accurate.</p>
 <p>For the two-body interaction $\hat{V}_{int}$:</p>
-<p>$$
+$$
 \begin{aligned}
-\hat{V}<em>{int} = \frac{1}{2} \sum</em>{ij}V_{ij} c_i^\dagger c_j^\dagger c_j c_i
+\hat{V}_{int} = \frac{1}{2} \sum_{ij}V_{ij} c_i^\dagger c_j^\dagger c_j c_i
 \end{aligned}
-$$</p>
-<p>We have three methods to decompose it into the form of (a sum of) $\hat{A}^\dagger\hat{A}$:</p>
+$$<p>We have three methods to decompose it into the form of (a sum of) $\hat{A}^\dagger\hat{A}$:</p>
 <ul>
 <li>Density Channel (Hartree): $\hat{A}_{i}^{H} = c_i^\dagger c_i$</li>
 <li>Exchange Channel (Fock): $\hat{A}_{ij}^{F} = c_i^\dagger c_j$</li>
 <li>Cooper Channel (BCS): $\hat{A}_{ij}^{BCS} = c_i c_j$</li>
 </ul>
 <p>Taking the Density Channel as an example, the decoupling process for the Hartree mean field is:</p>
-<p>$$
+$$
 \begin{aligned}
-&amp; \hat{V}<em>{int} = \frac{1}{2} \sum</em>{ij}V_{ij} c_i^\dagger c_j^\dagger c_j c_i \
-&amp; = \frac{1}{2} \sum_{ij}V_{ij} c_i^\dagger c_i c_j^\dagger c_j \ +\underbrace{\ const}<em>{\text{ignore it}} \
-&amp; = \frac{1}{2} \sum</em>{ij}V_{ij} {\hat{A}<em>{i}^{H}}^\dagger \hat{A}</em>{j}^{H} \
-&amp; = \frac{1}{2} \sum_{ij}V_{ij} \left(\langle {\hat{A}<em>{i}^{H}}^\dagger\rangle + \delta {\hat{A}</em>{i}^{H}}^\dagger \right) \left(\langle {\hat{A}<em>{j}^{H}}\rangle + \delta {\hat{A}</em>{j}^{H}} \right) \
-&amp; \approx -\frac{1}{2} \sum_{ij}V_{ij} \left(\langle {\hat{A}<em>{i}^{H}}^\dagger\rangle  {\hat{A}</em>{j}^{H}} +  {\hat{A}<em>{i}^{H}}^\dagger \langle {\hat{A}</em>{j}^{H}}\rangle - \langle {\hat{A}<em>{i}^{H}}^\dagger\rangle \langle {\hat{A}</em>{j}^{H}}\rangle \right) \
-&amp; \equiv \hat{V}_{H}
+    & \hat{V}_{int} = \frac{1}{2} \sum_{ij}V_{ij} c_i^\dagger c_j^\dagger c_j c_i \\
+    & = \frac{1}{2} \sum_{ij}V_{ij} c_i^\dagger c_i c_j^\dagger c_j \ +\underbrace{\ const}_{\text{ignore it}} \\
+    & = \frac{1}{2} \sum_{ij}V_{ij} {\hat{A}_{i}^{H}}^\dagger \hat{A}_{j}^{H} \\
+    & = \frac{1}{2} \sum_{ij}V_{ij} \left(\langle {\hat{A}_{i}^{H}}^\dagger\rangle + \delta {\hat{A}_{i}^{H}}^\dagger \right) \left(\langle {\hat{A}_{j}^{H}}\rangle + \delta {\hat{A}_{j}^{H}} \right) \\
+    & \approx -\frac{1}{2} \sum_{ij}V_{ij} \left(\langle {\hat{A}_{i}^{H}}^\dagger\rangle  {\hat{A}_{j}^{H}} +  {\hat{A}_{i}^{H}}^\dagger \langle {\hat{A}_{j}^{H}}\rangle - \langle {\hat{A}_{i}^{H}}^\dagger\rangle \langle {\hat{A}_{j}^{H}}\rangle \right) \\
+    & \equiv \hat{V}_{H}
 \end{aligned}
-$$</p>
-<p>For Fock mean field Decoupling:</p>
-<p>$$
+$$<p>For Fock mean field Decoupling:</p>
+$$
 \begin{aligned}
-&amp; \hat{V}<em>{int} = - \frac{1}{2} \sum</em>{ij}V_{ij} {\hat{A}<em>{ij}^{F} }^\dagger \hat{A}</em>{ij}^{F} \ +\underbrace{\ const}<em>{\text{ignore it}} \
-&amp; \approx -\frac{1}{2} \sum</em>{ij}V_{ij} \left(\langle {\hat{A}<em>{ij}^{F}}^\dagger\rangle  \hat{A}</em>{ij}^{F} +  {\hat{A}<em>{ij}^{F}}^\dagger \langle \hat{A}</em>{ij}^{F}\rangle - \langle {\hat{A}<em>{ij}^{F}}^\dagger\rangle \langle {\hat{A}</em>{ij}^{F}}\rangle \right)\
-&amp; \equiv \hat{V}_{F}
+    & \hat{V}_{int} = - \frac{1}{2} \sum_{ij}V_{ij} {\hat{A}_{ij}^{F} }^\dagger \hat{A}_{ij}^{F} \ +\underbrace{\ const}_{\text{ignore it}} \\
+    & \approx -\frac{1}{2} \sum_{ij}V_{ij} \left(\langle {\hat{A}_{ij}^{F}}^\dagger\rangle  \hat{A}_{ij}^{F} +  {\hat{A}_{ij}^{F}}^\dagger \langle \hat{A}_{ij}^{F}\rangle - \langle {\hat{A}_{ij}^{F}}^\dagger\rangle \langle {\hat{A}_{ij}^{F}}\rangle \right)\\
+    & \equiv \hat{V}_{F}
 \end{aligned}
-$$</p>
-<p>For BCS mean field Decoupling:</p>
-<p>$$
+$$<p>For BCS mean field Decoupling:</p>
+$$
 \begin{aligned}
-&amp; \hat{V}<em>{int} = \frac{1}{2} \sum</em>{ij}V_{ij} {\hat{A}<em>{ij}^{BCS} }^\dagger \hat{A}</em>{ij}^{BCS} \ +\underbrace{\ const}<em>{\text{ignore it}} \
-&amp; \approx \frac{1}{2} \sum</em>{ij}V_{ij} \left(\langle {\hat{A}<em>{ij}^{BCS}}^\dagger\rangle  \hat{A}</em>{ij}^{BCS} +  {\hat{A}<em>{ij}^{BCS}}^\dagger \langle \hat{A}</em>{ij}^{BCS}\rangle - \langle {\hat{A}<em>{ij}^{BCS}}^\dagger\rangle \langle {\hat{A}</em>{ij}^{BCS}}\rangle \right)\
-&amp; \equiv \hat{V}_{BCS}
+    & \hat{V}_{int} = \frac{1}{2} \sum_{ij}V_{ij} {\hat{A}_{ij}^{BCS} }^\dagger \hat{A}_{ij}^{BCS} \ +\underbrace{\ const}_{\text{ignore it}} \\
+    & \approx \frac{1}{2} \sum_{ij}V_{ij} \left(\langle {\hat{A}_{ij}^{BCS}}^\dagger\rangle  \hat{A}_{ij}^{BCS} +  {\hat{A}_{ij}^{BCS}}^\dagger \langle \hat{A}_{ij}^{BCS}\rangle - \langle {\hat{A}_{ij}^{BCS}}^\dagger\rangle \langle {\hat{A}_{ij}^{BCS}}\rangle \right)\\
+    & \equiv \hat{V}_{BCS}
 \end{aligned}
-$$</p>
-<h2 id="problem-of-decoupling">Problem of Decoupling</h2>
+$$<h2 id="problem-of-decoupling">Problem of Decoupling</h2>
 <p>However, it seems we can only make one type of approximation for the two-body interaction: either Hartree, or Fock, or BCS.</p>
 <p>But in fact, the &ldquo;Hartree-Fock mean field approximation&rdquo; we often hear about seems to use two approximations.</p>
-<p>$$
+$$
 \begin{aligned}
-\hat{V}<em>{int} \approx \hat{V}</em>{H} + \hat{V}_{F}
+\hat{V}_{int} \approx \hat{V}_{H} + \hat{V}_{F}
 \end{aligned}
-$$</p>
-<p>Does doing this cause a problem of double counting?</p>
-<p>Or should we split $\hat{V}<em>{int}$ into $\frac{\hat{V}</em>{int}}{2}$ and $\frac{\hat{V}_{int}}{2}$ for use?</p>
-<p>$$
+$$<p>Does doing this cause a problem of double counting?</p>
+<p>Or should we split $\hat{V}_{int}$ into $\frac{\hat{V}_{int}}{2}$ and $\frac{\hat{V}_{int}}{2}$ for use?</p>
+$$
 \begin{aligned}
-\hat{V}<em>{int} = \frac{\hat{V}</em>{int}}{2} + \frac{\hat{V}<em>{int}}{2} \approx \frac{\hat{V}</em>{H}}{2} + \frac{\hat{V}_{F}}{2}
+\hat{V}_{int} = \frac{\hat{V}_{int}}{2} + \frac{\hat{V}_{int}}{2} \approx \frac{\hat{V}_{H}}{2} + \frac{\hat{V}_{F}}{2}
 \end{aligned}
-$$</p>
-<p>Or split it into $\frac{\hat{V}<em>{int}}{3}$ and $\frac{2\hat{V}</em>{int}}{3}$?</p>
-<p>$$
+$$<p>Or split it into $\frac{\hat{V}_{int}}{3}$ and $\frac{2\hat{V}_{int}}{3}$?</p>
+$$
 \begin{aligned}
-\hat{V}<em>{int} = \frac{\hat{V}</em>{int}}{3} + \frac{2\hat{V}<em>{int}}{3} \approx \frac{\hat{V}</em>{H}}{3} + \frac{2\hat{V}_{F}}{3}
+\hat{V}_{int} = \frac{\hat{V}_{int}}{3} + \frac{2\hat{V}_{int}}{3} \approx \frac{\hat{V}_{H}}{3} + \frac{2\hat{V}_{F}}{3}
 \end{aligned}
-$$</p>
-<p>Since there is a &ldquo;Hartree-Fock mean field approximation,&rdquo; why not have a &ldquo;Hartree-Fock-BCS mean field approximation&rdquo;? How are the aforementioned double counting problem and the so-called splitting problem resolved?</p>
-<p>In fact, $\hat{V}<em>{int} \approx \hat{V}</em>{H} + \hat{V}_{F}$ is the correct approach. However, if we understand the Hartree-Fock mean field approximation using the Decoupling Method, it always gives a feeling of double counting:</p>
-<p>$$
+$$<p>Since there is a &ldquo;Hartree-Fock mean field approximation,&rdquo; why not have a &ldquo;Hartree-Fock-BCS mean field approximation&rdquo;? How are the aforementioned double counting problem and the so-called splitting problem resolved?</p>
+<p>In fact, $\hat{V}_{int} \approx \hat{V}_{H} + \hat{V}_{F}$ is the correct approach. However, if we understand the Hartree-Fock mean field approximation using the Decoupling Method, it always gives a feeling of double counting:</p>
+$$
 \begin{aligned}
-\hat{V}<em>{int} + \hat{V}</em>{int} \approx \hat{V}<em>{H} + \hat{V}</em>{F}
+\hat{V}_{int} + \hat{V}_{int} \approx \hat{V}_{H} + \hat{V}_{F}
 \end{aligned}
-$$</p>
-<p>This is caused by the imprecise formulation of Decoupling. Next, we will explain that the mean field approximation, as a non-perturbative method, is essentially a variational method of &ldquo;guess the solution, then optimize.&rdquo;</p>
+$$<p>This is caused by the imprecise formulation of Decoupling. Next, we will explain that the mean field approximation, as a non-perturbative method, is essentially a variational method of &ldquo;guess the solution, then optimize.&rdquo;</p>
 <p>Afterward, we will start from the variational method to prove that choosing different decoupling methods (Hartree, Fock, BCS) actually does not affect each other; it merely adds new independent parameters to the guessed solution and does not cause the so-called double counting problem.</p>
 <h2 id="variational-method-for-finite-temperature">Variational Method for Finite Temperature</h2>
 <p>We are already familiar with the variational method at zero temperature.</p>
 <p>For zero-temperature systems, we commonly use the variational method to &ldquo;guess&rdquo; the ground state wave function $|\Psi(\lambda)\rangle$ of the Hamiltonian, where $\lambda$ is a parameter adjusting the &ldquo;guessed ground state wave function.&rdquo; By adjusting the parameter and observing the ground state energy functional:</p>
-<p>$$
+$$
 \begin{aligned}
 E[\Psi(\lambda)] = \frac{\langle \Psi(\lambda) | \hat{H} | \Psi(\lambda) \rangle}{\langle \Psi(\lambda) | \Psi(\lambda) \rangle}
 \end{aligned}
-$$</p>
-<p>Making it minimal allows us to say that $|\Psi(\lambda)\rangle$ is very close to the ground state wave function. We then use this guessed solution to calculate various properties of the system&rsquo;s ground state (zero temperature).</p>
+$$<p>Making it minimal allows us to say that $|\Psi(\lambda)\rangle$ is very close to the ground state wave function. We then use this guessed solution to calculate various properties of the system&rsquo;s ground state (zero temperature).</p>
 <p>Similarly, the variational principle can be applied to finite temperature systems, simply by changing &ldquo;guessed ground state wave function&rdquo; to &ldquo;guessed equilibrium density matrix.&rdquo;</p>
 <p>Here we perform the derivation using the canonical ensemble, and for convenience, we set the unit system $k_B = 1$.</p>
 <p>For finite temperature, the equilibrium density matrix is:</p>
-<p>$$
+$$
 \begin{aligned}
 \hat{\rho}_{eq} = \frac{e^{-\beta \hat{H}}}{\operatorname{Tr} (e^{-\beta \hat{H}})}
 \end{aligned}
-$$</p>
-<p>The &ldquo;guessed equilibrium density matrix&rdquo; must have a specific form. We assume the system&rsquo;s density matrix is the equilibrium density matrix of some auxiliary Hamiltonian $\hat{H}_{mf}(\lambda)$:</p>
-<p>$$
+$$<p>The &ldquo;guessed equilibrium density matrix&rdquo; must have a specific form. We assume the system&rsquo;s density matrix is the equilibrium density matrix of some auxiliary Hamiltonian $\hat{H}_{mf}(\lambda)$:</p>
+$$
 \begin{aligned}
-\hat{\rho}<em>{mf}(\lambda) \equiv \hat{\rho}</em>{eq} [\hat{H}<em>{mf}(\lambda)] \equiv \frac{e^{-\beta \hat{H}</em>{mf}(\lambda)}}{\operatorname{Tr} (e^{-\beta \hat{H}_{mf}(\lambda)})}
+\hat{\rho}_{mf}(\lambda) \equiv \hat{\rho}_{eq} [\hat{H}_{mf}(\lambda)] \equiv \frac{e^{-\beta \hat{H}_{mf}(\lambda)}}{\operatorname{Tr} (e^{-\beta \hat{H}_{mf}(\lambda)})}
 \end{aligned}
-$$</p>
-<p>where $\lambda$ is the parameter adjusting the Hamiltonian $\hat{H}_0$ (and thus adjusting the &ldquo;guessed equilibrium density matrix&rdquo;), such as mean field strength, order parameter, etc.</p>
+$$<p>where $\lambda$ is the parameter adjusting the Hamiltonian $\hat{H}_0$ (and thus adjusting the &ldquo;guessed equilibrium density matrix&rdquo;), such as mean field strength, order parameter, etc.</p>
 <p>Here we use the &ldquo;mf&rdquo; subscript to imply that the mean field approximation involves taking the &ldquo;auxiliary Hamiltonian&rdquo; providing the &ldquo;guessed equilibrium density function&rdquo; as the &ldquo;mean field approximation Hamiltonian.&rdquo; However, for the general variational method, the &ldquo;auxiliary Hamiltonian&rdquo; can take any form, and even the density matrix can be chosen arbitrarily; it does not necessarily have to be the equilibrium density matrix of some Hamiltonian.</p>
 <p>At this point, the variational extremum condition also generalizes from &ldquo;minimizing the energy functional&rdquo; to &ldquo;minimizing the free energy functional.&rdquo;</p>
-<p>$$
+$$
 \begin{aligned}
-F[\hat{\rho}<em>{mf}(\lambda)] &amp; = \langle \hat{H} \rangle</em>{\rho_{mf}(\lambda)} - TS \
-&amp; = \operatorname{Tr} ( \hat{\rho}<em>{mf}(\lambda) \hat{H}) + T \operatorname{Tr} (\hat{\rho}</em>{mf}(\lambda) \ln \hat{\rho}_{mf}(\lambda) )
+F[\hat{\rho}_{mf}(\lambda)] & = \langle \hat{H} \rangle_{\rho_{mf}(\lambda)} - TS \\
+& = \operatorname{Tr} ( \hat{\rho}_{mf}(\lambda) \hat{H}) + T \operatorname{Tr} (\hat{\rho}_{mf}(\lambda) \ln \hat{\rho}_{mf}(\lambda) )
 \end{aligned}
-$$</p>
-<p>Note that $\hat{H}$ here is the complete Hamiltonian of the system, not our guessed Hamiltonian $\hat{H}_{mf}(\lambda)$.</p>
+$$<p>Note that $\hat{H}$ here is the complete Hamiltonian of the system, not our guessed Hamiltonian $\hat{H}_{mf}(\lambda)$.</p>
 <p>In fact, in the mean field approximation, we use the equilibrium density matrix corresponding to the Hamiltonian after mean field approximation as the &ldquo;guessed equilibrium density matrix.&rdquo; For this, we need to verify that directly taking the mean field approximation and ignoring quantum fluctuations coincides with the variational extremum condition of the free energy functional. This proves that the mean field approximation is indeed a variational method.</p>
-<p>In the mean field approximation, we replace the interaction part in the complete Hamiltonian $\hat{H} = \hat{H}<em>0 + \hat{V}</em>{int}$ with a quadratic operator containing parameters, i.e.,</p>
-<p>$$
+<p>In the mean field approximation, we replace the interaction part in the complete Hamiltonian $\hat{H} = \hat{H}_0 + \hat{V}_{int}$ with a quadratic operator containing parameters, i.e.,</p>
+$$
 \begin{aligned}
-\hat{H}_{mf}(\lambda) = \hat{H}<em>0 + \hat{V}</em>{mf}(\lambda)
+\hat{H}_{mf}(\lambda) = \hat{H}_0 + \hat{V}_{mf}(\lambda)
 \end{aligned}
-$$</p>
-<p>Replacing the quartic interaction operator with a quadratic mean field operator will break some symmetries of the Hamiltonian, which is ultimately reflected in the symmetry breaking of the guessed wave function or guessed density operator.</p>
+$$<p>Replacing the quartic interaction operator with a quadratic mean field operator will break some symmetries of the Hamiltonian, which is ultimately reflected in the symmetry breaking of the guessed wave function or guessed density operator.</p>
 <p>This is the case in the mean field: choosing different channels represents choosing to break different symmetries. For example, BCS theory chooses to break charge conservation (U(1) symmetry).</p>
-<p>$$
+$$
 \begin{aligned}
 \hat{V}_{mf}(\lambda) \sim \sum \lambda c^\dagger c^\dagger + h.c.
 \end{aligned}
-$$</p>
-<p>In fact, in the BCS superconducting phase transition, Spontaneous Symmetry Breaking indeed occurs, making the strict ground state wave function or strict equilibrium density operator have less symmetry compared to the complete Hamiltonian $\hat{H} = \hat{H}<em>0 + \hat{V}</em>{int}$.</p>
+$$<p>In fact, in the BCS superconducting phase transition, Spontaneous Symmetry Breaking indeed occurs, making the strict ground state wave function or strict equilibrium density operator have less symmetry compared to the complete Hamiltonian $\hat{H} = \hat{H}_0 + \hat{V}_{int}$.</p>
 <p>This indicates that although the mean field approximation is an approximation method, it indeed captures some essence of the phase transition process. Therefore, when quantum fluctuations are not large (far from the quantum critical point), we often use the mean field approximation to make some approximate predictions about quantum systems.</p>
 <h2 id="variational-method">Variational Method</h2>
 <p>Let us denote:</p>
-<p>$$
+$$
 \begin{aligned}
 \hat{V}_{mf}(\lambda) = \lambda \hat{X}
 \end{aligned}
-$$</p>
-<p>$$
+$$$$
 \begin{aligned}
-F_{mf} &amp; = \langle \hat{H}<em>{mf} \rangle</em>{\rho_{mf}(\lambda)} - T S_{mf}\
-&amp; = \operatorname{Tr} ( \hat{\rho}<em>{mf}(\lambda) \hat{H}</em>{mf}) + T \operatorname{Tr} (\hat{\rho}<em>{mf}(\lambda) \ln \hat{\rho}</em>{mf}(\lambda) )
+F_{mf} & = \langle \hat{H}_{mf} \rangle_{\rho_{mf}(\lambda)} - T S_{mf}\\ 
+& = \operatorname{Tr} ( \hat{\rho}_{mf}(\lambda) \hat{H}_{mf}) + T \operatorname{Tr} (\hat{\rho}_{mf}(\lambda) \ln \hat{\rho}_{mf}(\lambda) )
 \end{aligned}
-$$</p>
-<p>It is important to note that $F[\hat{\rho}(\lambda) ] \neq F_{mf}$. The difference between the two is:</p>
-<p>$$
+$$<p>It is important to note that $F[\hat{\rho}(\lambda) ] \neq F_{mf}$. The difference between the two is:</p>
+$$
 \begin{aligned}
-F[\hat{\rho}<em>{mf}(\lambda) ] - F</em>{mf} = \langle \hat{V}<em>{int} - \hat{V}</em>{mf} \rangle_{\rho_{mf}(\lambda)}
+F[\hat{\rho}_{mf}(\lambda) ] - F_{mf} = \langle \hat{V}_{int} - \hat{V}_{mf} \rangle_{\rho_{mf}(\lambda)}
 \end{aligned}
-$$</p>
-<p>It is easy to have a misunderstanding: for $F_{mf}$, the equilibrium density matrix of $\hat{H}_{mf}$ itself is the density matrix that minimizes it, so</p>
-<p>$$
+$$<p>It is easy to have a misunderstanding: for $F_{mf}$, the equilibrium density matrix of $\hat{H}_{mf}$ itself is the density matrix that minimizes it, so</p>
+$$
 \begin{aligned}
 \frac{\partial F_{mf}}{\partial \lambda} = 0
 \end{aligned}
-$$</p>
-<p>But this is only true when the parameter $\lambda$ is fixed, i.e., when the fixed Hamiltonian $\hat{H}$ is unchanged, satisfying the extremum condition of $F_{mf}$. $\frac{\partial F_{mf}}{\partial \lambda}$ still needs to be strictly calculated:</p>
+$$<p>But this is only true when the parameter $\lambda$ is fixed, i.e., when the fixed Hamiltonian $\hat{H}$ is unchanged, satisfying the extremum condition of $F_{mf}$. $\frac{\partial F_{mf}}{\partial \lambda}$ still needs to be strictly calculated:</p>
 <p>First, since $F_{mf}$ is the equilibrium free energy of $\hat{H}_{mf}$, we can conveniently obtain:</p>
-<p>$$
+$$
 \begin{aligned}
 F_{mf}(\lambda) = - T \ln \mathcal{Z}_{mf}(\lambda)
 \end{aligned}
-$$</p>
-<p>$$
+$$$$
 \begin{aligned}
-\mathcal{Z}<em>{mf}(\lambda) = \operatorname{Tr} ( e^{-\beta \hat{H}</em>{mf}(\lambda)} ) = \operatorname{Tr} ( e^{-\beta [ \hat{H}_0 + \lambda \hat{X} ]} )
+\mathcal{Z}_{mf}(\lambda) = \operatorname{Tr} ( e^{-\beta \hat{H}_{mf}(\lambda)} ) = \operatorname{Tr} ( e^{-\beta [ \hat{H}_0 + \lambda \hat{X} ]} )
 \end{aligned}
-$$</p>
-<p>Thus,</p>
-<p>$$
+$$<p>Thus,</p>
+$$
 \begin{aligned}
-\frac{\partial F_{mf}}{\partial \lambda} &amp; = -T \frac{1}{\mathcal{Z}<em>{mf}}\frac{\partial \mathcal{Z}</em>{mf}}{\partial \lambda} \
-&amp; = - T \frac{\operatorname{Tr} ( -\beta \hat{X} e^{-\beta [ \hat{H}_0 + \lambda \hat{X} ]} )}{\operatorname{Tr} ( e^{-\beta [ \hat{H}<em>0 + \lambda \hat{X} ]} )} \
-&amp; = \frac{\operatorname{Tr} (  \hat{X} e^{-\beta [ \hat{H}<em>0 + \lambda \hat{X} ]} )}{\operatorname{Tr} ( e^{-\beta [ \hat{H}<em>0 + \lambda \hat{X} ]} )} \
-&amp; = \operatorname{Tr} ( \hat{\rho}</em>{mf}(\lambda) \hat{X} ) \
-&amp; =  \langle \hat{X} \rangle</em>{\rho</em>{mf}(\lambda)}
+\frac{\partial F_{mf}}{\partial \lambda} & = -T \frac{1}{\mathcal{Z}_{mf}}\frac{\partial \mathcal{Z}_{mf}}{\partial \lambda} \\
+& = - T \frac{\operatorname{Tr} ( -\beta \hat{X} e^{-\beta [ \hat{H}_0 + \lambda \hat{X} ]} )}{\operatorname{Tr} ( e^{-\beta [ \hat{H}_0 + \lambda \hat{X} ]} )} \\
+& = \frac{\operatorname{Tr} (  \hat{X} e^{-\beta [ \hat{H}_0 + \lambda \hat{X} ]} )}{\operatorname{Tr} ( e^{-\beta [ \hat{H}_0 + \lambda \hat{X} ]} )} \\
+& = \operatorname{Tr} ( \hat{\rho}_{mf}(\lambda) \hat{X} ) \\
+& =  \langle \hat{X} \rangle_{\rho_{mf}(\lambda)}
 \end{aligned}
-$$</p>
-<p>That is, the expectation value of the order parameter in the mean field interaction $\hat{V}_{mf}$ part. Generally speaking, the order parameter calculated by the mean field approximation is non-zero, indicating that the system (at least under the mean field approximation) has a specific order.</p>
+$$<p>That is, the expectation value of the order parameter in the mean field interaction $\hat{V}_{mf}$ part. Generally speaking, the order parameter calculated by the mean field approximation is non-zero, indicating that the system (at least under the mean field approximation) has a specific order.</p>
 <p>Using the conclusion above, in order for the free energy functional $F[\hat{\rho}(\lambda) ]$ to reach an extremum, we now only need to set:</p>
-<p>$$
+$$
 \begin{aligned}
-&amp; \frac{\partial}{\partial \lambda} (F[\hat{\rho}(\lambda) ] - F_{mf}) \
-&amp; = \frac{\partial}{\partial \lambda} \langle \hat{V}<em>{int}  \rangle</em>{\rho_{mf}(\lambda)} - \frac{\partial}{\partial \lambda} \langle \hat{V}<em>{mf} \rangle</em>{\rho_{mf}(\lambda)} \
-&amp; = -\frac{\partial}{\partial \lambda} F_{mf} = - \langle \hat{X} \rangle_{\rho_{mf}(\lambda)}
+& \frac{\partial}{\partial \lambda} (F[\hat{\rho}(\lambda) ] - F_{mf}) \\
+& = \frac{\partial}{\partial \lambda} \langle \hat{V}_{int}  \rangle_{\rho_{mf}(\lambda)} - \frac{\partial}{\partial \lambda} \langle \hat{V}_{mf} \rangle_{\rho_{mf}(\lambda)} \\
+& = -\frac{\partial}{\partial \lambda} F_{mf} = - \langle \hat{X} \rangle_{\rho_{mf}(\lambda)}
 \end{aligned}
-$$</p>
-<p>Using the form $\hat{V}_{mf} = \lambda \hat{X}$ again, we can simplify further.</p>
-<p>Note that we must take the derivative with respect to $\lambda$ in both $\hat{V}<em>{mf} = \lambda \hat{X}$ and $\hat{\rho}</em>{mf}(\lambda)$:</p>
-<p>$$
+$$<p>Using the form $\hat{V}_{mf} = \lambda \hat{X}$ again, we can simplify further.</p>
+<p>Note that we must take the derivative with respect to $\lambda$ in both $\hat{V}_{mf} = \lambda \hat{X}$ and $\hat{\rho}_{mf}(\lambda)$:</p>
+$$
 \begin{aligned}
-&amp; \frac{\partial}{\partial \lambda} \langle  \hat{V}<em>{mf} \rangle</em>{\rho_{mf}(\lambda)} \
-&amp; = \frac{\partial}{\partial \lambda} \langle \lambda \hat{X} \rangle_{\rho_{mf}(\lambda)} \
-&amp; = \frac{\partial}{\partial \lambda}  \operatorname{Tr} ( \lambda \hat{\rho}<em>{mf}(\lambda) \hat{X} ) \
-&amp; =  \operatorname{Tr} ( \hat{\rho}</em>{mf}(\lambda) \hat{X} ) +  \operatorname{Tr} ( \lambda \frac{\partial}{\partial \lambda}{\hat{\rho}<em>{mf}(\lambda)} \hat{X} ) \
-&amp; =  \langle  \hat{X} \rangle</em>{\rho_{mf}(\lambda)} + \lambda \frac{\partial}{\partial \lambda} \left{ \operatorname{Tr} ( \hat{\rho}<em>{mf}(\lambda) \hat{X} ) \right} \
-&amp; =  \langle  \hat{X} \rangle</em>{\rho_{mf}(\lambda)} + \lambda \frac{\partial }{\partial \lambda}\langle  \hat{X} \rangle_{\rho_{mf}(\lambda)}
+& \frac{\partial}{\partial \lambda} \langle  \hat{V}_{mf} \rangle_{\rho_{mf}(\lambda)} \\
+& = \frac{\partial}{\partial \lambda} \langle \lambda \hat{X} \rangle_{\rho_{mf}(\lambda)} \\
+& = \frac{\partial}{\partial \lambda}  \operatorname{Tr} ( \lambda \hat{\rho}_{mf}(\lambda) \hat{X} ) \\
+& =  \operatorname{Tr} ( \hat{\rho}_{mf}(\lambda) \hat{X} ) +  \operatorname{Tr} ( \lambda \frac{\partial}{\partial \lambda}\{\hat{\rho}_{mf}(\lambda)\} \hat{X} ) \\
+& =  \langle  \hat{X} \rangle_{\rho_{mf}(\lambda)} + \lambda \frac{\partial}{\partial \lambda} \left\{ \operatorname{Tr} ( \hat{\rho}_{mf}(\lambda) \hat{X} ) \right\} \\
+& =  \langle  \hat{X} \rangle_{\rho_{mf}(\lambda)} + \lambda \frac{\partial }{\partial \lambda}\langle  \hat{X} \rangle_{\rho_{mf}(\lambda)}
 \end{aligned}
-$$</p>
-<p>Thus, the extremum condition for the free energy functional can be written as:</p>
-<p>$$
+$$<p>Thus, the extremum condition for the free energy functional can be written as:</p>
+$$
 \begin{aligned}
-\frac{\partial}{\partial \lambda} F[\hat{\rho}(\lambda) ] = 0\  \Leftrightarrow \
-\frac{\partial}{\partial \lambda} \langle \hat{V}<em>{int} \rangle</em>{\rho_{mf}(\lambda)}  = \lambda \frac{\partial }{\partial \lambda}\langle  \hat{X} \rangle_{\rho_{mf}(\lambda)}
+\frac{\partial}{\partial \lambda} F[\hat{\rho}(\lambda) ] = 0\  \Leftrightarrow \ 
+\frac{\partial}{\partial \lambda} \langle \hat{V}_{int} \rangle_{\rho_{mf}(\lambda)}  = \lambda \frac{\partial }{\partial \lambda}\langle  \hat{X} \rangle_{\rho_{mf}(\lambda)}
 \end{aligned}
-$$</p>
-<p>We can also generalize this variation to the case of multiple parameters ${\lambda_i}$, providing higher variational degrees of freedom, thereby making the guessed solution closer to the real situation.</p>
-<p>In summary, if we take the equilibrium density matrix $\rho_{mf}({\lambda_i})$ corresponding to some (usually only containing quadratic terms) mean field Hamiltonian $\hat{H}_{mf}({\lambda_i}) = \hat{H}_0 + \sum_i \lambda_i \hat{X}_i$ as the guessed solution to calculate the free energy functional variation, then the values of the parameters ${\lambda_i}$ that minimize the free energy functional (closest to the real equilibrium state) satisfy the following condition:</p>
-<p>$$
+$$<p>We can also generalize this variation to the case of multiple parameters $\{\lambda_i\}$, providing higher variational degrees of freedom, thereby making the guessed solution closer to the real situation.</p>
+<p>In summary, if we take the equilibrium density matrix $\rho_{mf}(\{\lambda_i\})$ corresponding to some (usually only containing quadratic terms) mean field Hamiltonian $\hat{H}_{mf}(\{\lambda_i\}) = \hat{H}_0 + \sum_i \lambda_i \hat{X}_i$ as the guessed solution to calculate the free energy functional variation, then the values of the parameters $\{\lambda_i\}$ that minimize the free energy functional (closest to the real equilibrium state) satisfy the following condition:</p>
+$$
 \begin{aligned}
-\frac{\partial}{\partial \lambda_i} \langle \hat{V}<em>{int} \rangle</em>{\rho_{mf}({\lambda_i})}  = \lambda_i \frac{\partial }{\partial \lambda_i}\langle  \hat{X}<em>i \rangle</em>{\rho_{mf}({\lambda_i})}
+\frac{\partial}{\partial \lambda_i} \langle \hat{V}_{int} \rangle_{\rho_{mf}(\{\lambda_i\})}  = \lambda_i \frac{\partial }{\partial \lambda_i}\langle  \hat{X}_i \rangle_{\rho_{mf}(\{\lambda_i\})}
 \end{aligned}
-$$</p>
-<p>We can further use the chain rule to write the variational extremum condition as:</p>
-<p>$$
+$$<p>We can further use the chain rule to write the variational extremum condition as:</p>
+$$
 \begin{aligned}
-\lambda_i  = \frac{\partial \langle \hat{V}<em>{int} \rangle</em>{\rho_{mf}({\lambda_i})} }{\partial \langle  \hat{X}<em>i \rangle</em>{\rho_{mf}({\lambda_i})}}
+\lambda_i  = \frac{\partial \langle \hat{V}_{int} \rangle_{\rho_{mf}(\{\lambda_i\})} }{\partial \langle  \hat{X}_i \rangle_{\rho_{mf}(\{\lambda_i\})}} 
 \end{aligned}
-$$</p>
-<p>In this way, we can directly obtain the parameters corresponding to the variational extremum condition (physically representing the order parameters).</p>
+$$<p>In this way, we can directly obtain the parameters corresponding to the variational extremum condition (physically representing the order parameters).</p>
 <p>However, this equation is too formal. We can discover through the calculation of specific examples that this is the same thing as the mean field approximation.</p>
 <p>For a general two-body interaction:</p>
-<p>$$
+$$
 \begin{aligned}
-\hat{V}<em>{int} = \frac{1}{2} \sum</em>{ij}V_{ij} c_i^\dagger c_j^\dagger c_j c_i
+\hat{V}_{int} = \frac{1}{2} \sum_{ij}V_{ij} c_i^\dagger c_j^\dagger c_j c_i
 \end{aligned}
-$$</p>
-<p>And the general mean field interaction is taken as quadratic, so that it can be strictly solved as mutually independent elementary excitations. Here we take the most general form:</p>
-<p>$$
+$$<p>And the general mean field interaction is taken as quadratic, so that it can be strictly solved as mutually independent elementary excitations. Here we take the most general form:</p>
+$$
 \begin{aligned}
-\hat{V}<em>{mf} &amp; = \underbrace{\sum</em>{i} \lambda_i^{H} c_i^\dagger c_i}<em>{\text{Hartree}} \
-&amp; + \underbrace{\sum</em>{i\neq j} \lambda_{ij}^{F} c_i^\dagger c_j }<em>{\text{Fock}} \
-&amp; + \underbrace{\sum</em>{i,j} (\lambda_{ij}^{BCS} c_i^\dagger c_j^\dagger  + \bar{\lambda}<em>{ij}^{BCS} c_j c_i )}</em>{\text{BCS}}
+\hat{V}_{mf} & = \underbrace{\sum_{i} \lambda_i^{H} c_i^\dagger c_i}_{\text{Hartree}} \\
+& + \underbrace{\sum_{i\neq j} \lambda_{ij}^{F} c_i^\dagger c_j }_{\text{Fock}} \\
+& + \underbrace{\sum_{i,j} (\lambda_{ij}^{BCS} c_i^\dagger c_j^\dagger  + \bar{\lambda}_{ij}^{BCS} c_j c_i )}_{\text{BCS}}
 \end{aligned}
-$$</p>
-<p>Here, the first, second, and third lines correspond to the Hartree, Fock, and BCS mean field parts, respectively.</p>
+$$<p>Here, the first, second, and third lines correspond to the Hartree, Fock, and BCS mean field parts, respectively.</p>
 <p>Here we did not directly use the so-called decoupling method mentioned earlier:</p>
-<p>$$
+$$
 \begin{aligned}
 A^\dagger A \approx \langle A^\dagger \rangle A + A^\dagger \langle A \rangle - \langle A^\dagger \rangle \langle A \rangle
 \end{aligned}
-$$</p>
-<p>Instead, we took a Hamiltonian with completely undetermined coefficients. Afterwards, we can prove that when the variational extremum is reached, this Hamiltonian is the &ldquo;mean field approximation Hamiltonian&rdquo; obtained by the decoupling method.</p>
+$$<p>Instead, we took a Hamiltonian with completely undetermined coefficients. Afterwards, we can prove that when the variational extremum is reached, this Hamiltonian is the &ldquo;mean field approximation Hamiltonian&rdquo; obtained by the decoupling method.</p>
 <p>At the same time, precisely because the coefficients are completely undetermined, we can arbitrarily add or remove terms in the first, second, and third lines, because this is just adding or reducing variational parameters.</p>
-<p>Next, we calculate $\langle \hat{V}<em>{int} \rangle</em>{\rho_{mf}({\lambda_i})}$, which is the expectation value of the strict two-body interaction operator under the mean field corresponding equilibrium state.</p>
+<p>Next, we calculate $\langle \hat{V}_{int} \rangle_{\rho_{mf}(\{\lambda_i\})}$, which is the expectation value of the strict two-body interaction operator under the mean field corresponding equilibrium state.</p>
 <p>We need to use Wick&rsquo;s theorem, because the mean field Hamiltonian is quadratic, so the Generating Functional is Gaussian. Therefore, the expectation value of equilibrium Fermi operators can be strictly decomposed into contractions of pairs of Fermi operators.</p>
-<p>$$
+$$
 \begin{aligned}
-\langle \hat{V}<em>{int} \rangle</em>{\rho_{mf}({\lambda_i})} &amp; = \frac{1}{2} \sum_{ij}V_{ij} \langle c_i^\dagger c_j^\dagger c_j c_i \rangle_{\rho_{mf}({\lambda_i})} \
-&amp; = \frac{1}{2} \sum_{ij}V_{ij} (\langle c_i^\dagger  c_i \rangle \langle c_j^\dagger  c_j \rangle \
-&amp; - \langle c_i^\dagger  c_j \rangle \langle c_j^\dagger  c_i \rangle + \langle c_i^\dagger  c_j^\dagger \rangle \langle c_j  c_i \rangle)
+\langle \hat{V}_{int} \rangle_{\rho_{mf}(\{\lambda_i\})} & = \frac{1}{2} \sum_{ij}V_{ij} \langle c_i^\dagger c_j^\dagger c_j c_i \rangle_{\rho_{mf}(\{\lambda_i\})} \\
+& = \frac{1}{2} \sum_{ij}V_{ij} (\langle c_i^\dagger  c_i \rangle \langle c_j^\dagger  c_j \rangle \\
+& - \langle c_i^\dagger  c_j \rangle \langle c_j^\dagger  c_i \rangle + \langle c_i^\dagger  c_j^\dagger \rangle \langle c_j  c_i \rangle)
 \end{aligned}
-$$</p>
-<p>Thus, using the variational extremum condition, we have:</p>
-<p>$$
+$$<p>Thus, using the variational extremum condition, we have:</p>
+$$
 \begin{aligned}
-\lambda_i^H &amp; = \frac{\partial \langle \hat{V}<em>{int} \rangle</em>{\rho_{mf}({\lambda_i})} }{\partial \langle  c_i^\dagger c_i \rangle_{\rho_{mf}({\lambda_i})}} \
-&amp; = \frac{1}{2} \sum_j \left( V_{ij} \langle  c_j^\dagger c_j \rangle_{\rho_{mf}({\lambda_i})} +  V_{ji} \langle  c_j^\dagger c_j \rangle_{\rho_{mf}({\lambda_i})} \right)\
-&amp; = \sum_{j} V_{ij} \langle  c_j^\dagger c_j \rangle_{\rho_{mf}({\lambda_i})}
+    \lambda_i^H & = \frac{\partial \langle \hat{V}_{int} \rangle_{\rho_{mf}(\{\lambda_i\})} }{\partial \langle  c_i^\dagger c_i \rangle_{\rho_{mf}(\{\lambda_i\})}} \\
+    & = \frac{1}{2} \sum_j \left( V_{ij} \langle  c_j^\dagger c_j \rangle_{\rho_{mf}(\{\lambda_i\})} +  V_{ji} \langle  c_j^\dagger c_j \rangle_{\rho_{mf}(\{\lambda_i\})} \right)\\
+    & = \sum_{j} V_{ij} \langle  c_j^\dagger c_j \rangle_{\rho_{mf}(\{\lambda_i\})}
 \end{aligned}
-$$</p>
-<p>Here we used $V_{ij} = V_{ji}$. Through observation, it is not difficult to find that this is the Hartree mean field approximation term obtained by &ldquo;decoupling&rdquo; earlier, differing by at most a constant.</p>
+$$<p>Here we used $V_{ij} = V_{ji}$. Through observation, it is not difficult to find that this is the Hartree mean field approximation term obtained by &ldquo;decoupling&rdquo; earlier, differing by at most a constant.</p>
 <p>Previously, we selected $\hat{A}_{i}^{H} = c_i^\dagger c_i$ and omitted the second-order term of its quantum fluctuation; here, we purely used the variational extremum condition to determine the guessed Hamiltonian parameter that minimizes the free energy functional.</p>
 <p>Similarly, for other undetermined parameters corresponding to Fock and BCS mean field approximations, we have:</p>
-<p>$$
+$$
 \begin{aligned}
-\lambda_{ij}^{F} &amp; = - \frac{1}{2} ( V_{ij} \langle  c_j^\dagger c_i \rangle_{\rho_{mf}({\lambda_i})} + V_{ji} \langle  c_i^\dagger c_j \rangle_{\rho_{mf}({\lambda_i})} )\
-&amp; =  - V_{ij} \langle  c_j^\dagger c_i \rangle_{\rho_{mf}({\lambda_i})}
+\lambda_{ij}^{F} & = - \frac{1}{2} ( V_{ij} \langle  c_j^\dagger c_i \rangle_{\rho_{mf}(\{\lambda_i\})} + V_{ji} \langle  c_i^\dagger c_j \rangle_{\rho_{mf}(\{\lambda_i\})} )\\
+& =  - V_{ij} \langle  c_j^\dagger c_i \rangle_{\rho_{mf}(\{\lambda_i\})}
 \end{aligned}
-$$</p>
-<p>$$
+$$$$
 \begin{aligned}
-\lambda_{ij}^{BCS} &amp; = \frac{1}{2}  V_{ij} \langle  c_j c_i \rangle_{\rho_{mf}({\lambda_i})} \
-\bar{\lambda}<em>{ij}^{BCS}&amp; =  \frac{1}{2} V</em>{ji} \langle  c_i^\dagger c_j^\dagger \rangle_{\rho_{mf}({\lambda_i})}
+\lambda_{ij}^{BCS} & = \frac{1}{2}  V_{ij} \langle  c_j c_i \rangle_{\rho_{mf}(\{\lambda_i\})} \\
+\bar{\lambda}_{ij}^{BCS}& =  \frac{1}{2} V_{ji} \langle  c_i^\dagger c_j^\dagger \rangle_{\rho_{mf}(\{\lambda_i\})}
 \end{aligned}
-$$</p>
-<p>Substituting them into $\hat{V}_{mf}({\lambda_i})$, it is not difficult to discover that they also correspond to Fock and BCS mean field approximations, respectively.</p>
+$$<p>Substituting them into $\hat{V}_{mf}(\{\lambda_i\})$, it is not difficult to discover that they also correspond to Fock and BCS mean field approximations, respectively.</p>
 <p>But from the perspective of the variational method, these undetermined coefficients and terms of the guessed Hamiltonian are independent and do not affect each other. Adding or subtracting terms to the guessed Hamiltonian merely changes the form of the guessed solution, increasing or decreasing the variational parameters. Therefore, Hartree, Fock, and BCS mean field approximations can indeed be mixed 1:1:1, or mixed in pairs, all satisfying the variational extremum condition for the given parameters.</p>
 <p>However, in specific problems, we care about specific order parameters, so we minimize the variational parameters (using only BCS or Hartree-Fock) to obtain the most concise and effective conclusions possible.</p>
 <h2 id="summary">Summary</h2>
 <p>In summary, we have proven through the strict derivation of the variational method that Hartree, Fock, and BCS mean field theories can indeed be mixed 1:1:1.</p>
 <p>First, we utilized the decoupling method frequently appearing in quantum mechanics textbooks, obtaining the mean field Hamiltonian under a certain mean field approximation by &ldquo;brute force&rdquo; omitting the second-order fluctuation terms of the operators.</p>
-<p>$$
+$$
 \begin{aligned}
 A^\dagger A \approx \langle A^\dagger \rangle A + A^\dagger \langle A \rangle - \langle A^\dagger \rangle \langle A \rangle
 \end{aligned}
-$$</p>
-<p>However, this decoupling method can easily create the illusion of double counting when using two or more mean field approximations.</p>
-<p>Afterwards, we re-described the variational nature of the mean field approximation using the language of the variational method, considering that the equilibrium state of the system $\hat{H} = \hat{H}<em>0 + \hat{V}</em>{int}$ is very close to the equilibrium state of a certain mean field Hamiltonian $\hat{H}_{mf} = \hat{H}<em>0 + \hat{V}</em>{mf}({\lambda_i})$ (guessed Hamiltonian, containing various undetermined coefficients ${\lambda_i}$).</p>
-<p>Selecting the undetermined coefficients ${\lambda_i^{mf}}$ that minimize the system&rsquo;s free energy variation, and thus using the mean field Hamiltonian $\hat{H}_{mf} = \hat{H}<em>0 + \hat{V}</em>{mf}({\lambda_i^{mf}})$ under this coefficient selection to approximate the original (interacting) system Hamiltonian $\hat{H} = \hat{H}<em>0 + \hat{V}</em>{int}$ is the mean field approximation.</p>
-<p>Through the variational method and Wick&rsquo;s theorem, we proved that the optimal undetermined coefficients ${\lambda_i^{mf}}$ coincide exactly with the results of selecting first-order fluctuation terms in the decoupling method, meaning the optimal undetermined coefficients ${\lambda_i^{mf}}$ are the system&rsquo;s mean field (order parameters).</p>
+$$<p>However, this decoupling method can easily create the illusion of double counting when using two or more mean field approximations.</p>
+<p>Afterwards, we re-described the variational nature of the mean field approximation using the language of the variational method, considering that the equilibrium state of the system $\hat{H} = \hat{H}_0 + \hat{V}_{int}$ is very close to the equilibrium state of a certain mean field Hamiltonian $\hat{H}_{mf} = \hat{H}_0 + \hat{V}_{mf}(\{\lambda_i\})$ (guessed Hamiltonian, containing various undetermined coefficients $\{\lambda_i\}$).</p>
+<p>Selecting the undetermined coefficients $\{\lambda_i^{mf}\}$ that minimize the system&rsquo;s free energy variation, and thus using the mean field Hamiltonian $\hat{H}_{mf} = \hat{H}_0 + \hat{V}_{mf}(\{\lambda_i^{mf}\})$ under this coefficient selection to approximate the original (interacting) system Hamiltonian $\hat{H} = \hat{H}_0 + \hat{V}_{int}$ is the mean field approximation.</p>
+<p>Through the variational method and Wick&rsquo;s theorem, we proved that the optimal undetermined coefficients $\{\lambda_i^{mf}\}$ coincide exactly with the results of selecting first-order fluctuation terms in the decoupling method, meaning the optimal undetermined coefficients $\{\lambda_i^{mf}\}$ are the system&rsquo;s mean field (order parameters).</p>
 <p>Returning to the original question &ldquo;Can Hartree, Fock, and BCS mean field theories be mixed 1:1:1?&rdquo;, when using the variational method, there is no stipulation on the number of undetermined coefficients, or rather, the variational extremum conditions for each undetermined coefficient are mutually independent.</p>
 <p>Therefore, the Density, Exchange, and Cooper Channels corresponding to Hartree, Fock, and BCS mean field theories in the decoupling method are in fact independent and do not double count. Thus, we have proven:</p>
 <p><strong>Hartree, Fock, and BCS mean field theories can indeed be mixed 1:1:1.</strong></p>

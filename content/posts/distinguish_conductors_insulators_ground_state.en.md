@@ -9,6 +9,8 @@ categories: ["Physics Notes"]
 
 This note aims to elucidate the connection between the **conductivity** of a many-body system and the **quantum geometry of its ground state**, and to explain how to distinguish between conductors and insulators solely based on the "locality" of the ground state wavefunction.
 
+<!--more-->
+
 ## Introduction
 
 "Distinguishing conductors and insulators by only looking at the ground state"—this argument seems a bit outrageous.

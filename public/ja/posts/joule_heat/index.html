@@ -15,9 +15,8 @@ https://zhuanlan.zhihu.com/p/611996682
 フェルミの黄金律は、久保公式におけるハミルトニアン $H_0$ の二次応答の変化率 $\frac{d }{dt}\langle H_0 \rangle^{(2)}$ に対応し、この二次応答の変化率は電流の線形応答と外部電場の内積 $\langle \hat{\mathbf{J}} \rangle^{(1)} \cdot \mathbf{E}$ として表せることが証明できます。
 Fermi Golden Rule フェルミの黄金律は、時間調和外場摂動下で、量子系が初期状態 $|i\rangle$ から終状態 $|f\rangle$ （いずれも $H_0$ の固有状態）へ遷移する速度を計算することを目的としています。以前のフェルミの黄金律の記事では、久保公式と比較しやすくするために、ディラック描像（Dirac Picture）を用いて再導出しました。
 ディラック描像における状態の運動方程式：
-$$ \begin{aligned} i \hbar \partial_t |\psi(t) \rangle_D = \hat{V}_D(t) |\psi(t) \rangle_D \end{aligned} $$
-運動方程式を積分して反復することで、ディラック描像における状態の時間発展の摂動展開形式が得られます。系が $t = t_0$ において初期状態 $|i\rangle$ にあると仮定すると：
-$$ \begin{aligned} | \psi (t) \rangle_D &amp; = |i\rangle &#43; (-i/\hbar) \int_{t_0}^{t}dt_1 \hat{V}D(t_1)|i\rangle &#43; (-i/\hbar)^2 \int{t_0}^{t}dt_1 \int_{t_0}^{\mathbf{t_1}}dt_2 \hat{V}_D(t_1) \hat{V}_D(t_2)|i\rangle &#43; \dots \ &amp; = | \psi^{(0)} \rangle &#43; | \psi^{(1)}\rangle &#43; | \psi^{(2)}\rangle &#43; \dots \end{aligned} $$">
+$$ \begin{aligned} i \hbar \partial_t |\psi(t) \rangle_D = \hat{V}_D(t) |\psi(t) \rangle_D \end{aligned} $$運動方程式を積分して反復することで、ディラック描像における状態の時間発展の摂動展開形式が得られます。系が $t = t_0$ において初期状態 $|i\rangle$ にあると仮定すると：
+$$ \begin{aligned} | \psi (t) \rangle_D &amp; = |i\rangle &#43; (-i/\hbar) \int_{t_0}^{t}dt_1 \hat{V}_D(t_1)|i\rangle &#43; (-i/\hbar)^2 \int_{t_0}^{t}dt_1 \int_{t_0}^{\mathbf{t_1}}dt_2 \hat{V}_D(t_1) \hat{V}_D(t_2)|i\rangle &#43; \dots \\ &amp; = | \psi^{(0)} \rangle &#43; | \psi^{(1)}\rangle &#43; | \psi^{(2)}\rangle &#43; \dots \end{aligned} $$したがって、時刻 $t$ における $|f\rangle$ 状態の確率も摂動展開できます：">
   <meta property="og:locale" content="ja">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -36,9 +35,8 @@ https://zhuanlan.zhihu.com/p/611996682
 フェルミの黄金律は、久保公式におけるハミルトニアン $H_0$ の二次応答の変化率 $\frac{d }{dt}\langle H_0 \rangle^{(2)}$ に対応し、この二次応答の変化率は電流の線形応答と外部電場の内積 $\langle \hat{\mathbf{J}} \rangle^{(1)} \cdot \mathbf{E}$ として表せることが証明できます。
 Fermi Golden Rule フェルミの黄金律は、時間調和外場摂動下で、量子系が初期状態 $|i\rangle$ から終状態 $|f\rangle$ （いずれも $H_0$ の固有状態）へ遷移する速度を計算することを目的としています。以前のフェルミの黄金律の記事では、久保公式と比較しやすくするために、ディラック描像（Dirac Picture）を用いて再導出しました。
 ディラック描像における状態の運動方程式：
-$$ \begin{aligned} i \hbar \partial_t |\psi(t) \rangle_D = \hat{V}_D(t) |\psi(t) \rangle_D \end{aligned} $$
-運動方程式を積分して反復することで、ディラック描像における状態の時間発展の摂動展開形式が得られます。系が $t = t_0$ において初期状態 $|i\rangle$ にあると仮定すると：
-$$ \begin{aligned} | \psi (t) \rangle_D &amp; = |i\rangle &#43; (-i/\hbar) \int_{t_0}^{t}dt_1 \hat{V}D(t_1)|i\rangle &#43; (-i/\hbar)^2 \int{t_0}^{t}dt_1 \int_{t_0}^{\mathbf{t_1}}dt_2 \hat{V}_D(t_1) \hat{V}_D(t_2)|i\rangle &#43; \dots \ &amp; = | \psi^{(0)} \rangle &#43; | \psi^{(1)}\rangle &#43; | \psi^{(2)}\rangle &#43; \dots \end{aligned} $$">
+$$ \begin{aligned} i \hbar \partial_t |\psi(t) \rangle_D = \hat{V}_D(t) |\psi(t) \rangle_D \end{aligned} $$運動方程式を積分して反復することで、ディラック描像における状態の時間発展の摂動展開形式が得られます。系が $t = t_0$ において初期状態 $|i\rangle$ にあると仮定すると：
+$$ \begin{aligned} | \psi (t) \rangle_D &amp; = |i\rangle &#43; (-i/\hbar) \int_{t_0}^{t}dt_1 \hat{V}_D(t_1)|i\rangle &#43; (-i/\hbar)^2 \int_{t_0}^{t}dt_1 \int_{t_0}^{\mathbf{t_1}}dt_2 \hat{V}_D(t_1) \hat{V}_D(t_2)|i\rangle &#43; \dots \\ &amp; = | \psi^{(0)} \rangle &#43; | \psi^{(1)}\rangle &#43; | \psi^{(2)}\rangle &#43; \dots \end{aligned} $$したがって、時刻 $t$ における $|f\rangle$ 状態の確率も摂動展開できます：">
 <meta name="application-name" content="My cool site">
 <meta name="apple-mobile-web-app-title" content="My cool site">
 <meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
@@ -54,7 +52,7 @@ $$ \begin{aligned} | \psi (t) \rangle_D &amp; = |i\rangle &#43; (-i/\hbar) \int_
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/ja\/posts\/joule_heat\/"
-        },"genre": "posts","keywords": "Quantum Mechanics, Joule Heat","wordcount":  1123 ,
+        },"genre": "posts","keywords": "Quantum Mechanics, Joule Heat","wordcount":  1098 ,
         "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/ja\/posts\/joule_heat\/","datePublished": "2026-01-08T21:54:37-05:00","dateModified": "2026-01-08T21:54:37-05:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -145,7 +143,7 @@ $$ \begin{aligned} | \psi (t) \rangle_D &amp; = |i\rangle &#43; (-i/\hbar) \int_
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">フェルミの黄金律？ただのジュール熱さ！</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://OkongOyangO.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">included in <a href="/OkongOyangO.Notes/ja/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-01-08">2026-01-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1123 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-01-08">2026-01-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1098 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;6 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
@@ -173,202 +171,177 @@ $$ \begin{aligned} | \psi (t) \rangle_D &amp; = |i\rangle &#43; (-i/\hbar) \int_
 <h2 id="fermi-golden-rule">Fermi Golden Rule</h2>
 <p>フェルミの黄金律は、時間調和外場摂動下で、量子系が初期状態 $|i\rangle$ から終状態 $|f\rangle$ （いずれも $H_0$ の固有状態）へ遷移する速度を計算することを目的としています。以前のフェルミの黄金律の記事では、久保公式と比較しやすくするために、ディラック描像（Dirac Picture）を用いて再導出しました。</p>
 <p>ディラック描像における状態の運動方程式：</p>
-<p>$$
+$$
 \begin{aligned}
 i \hbar \partial_t |\psi(t) \rangle_D = \hat{V}_D(t) |\psi(t) \rangle_D
 \end{aligned}
-$$</p>
-<p>運動方程式を積分して反復することで、ディラック描像における状態の時間発展の摂動展開形式が得られます。系が $t = t_0$ において初期状態 $|i\rangle$ にあると仮定すると：</p>
-<p>$$
+$$<p>運動方程式を積分して反復することで、ディラック描像における状態の時間発展の摂動展開形式が得られます。系が $t = t_0$ において初期状態 $|i\rangle$ にあると仮定すると：</p>
+$$
 \begin{aligned}
-| \psi (t) \rangle_D &amp; = |i\rangle + (-i/\hbar) \int_{t_0}^{t}dt_1 \hat{V}<em>D(t_1)|i\rangle + (-i/\hbar)^2 \int</em>{t_0}^{t}dt_1 \int_{t_0}^{\mathbf{t_1}}dt_2  \hat{V}_D(t_1) \hat{V}_D(t_2)|i\rangle + \dots \
-&amp; = | \psi^{(0)} \rangle + | \psi^{(1)}\rangle + | \psi^{(2)}\rangle + \dots
+| \psi (t) \rangle_D & = |i\rangle + (-i/\hbar) \int_{t_0}^{t}dt_1 \hat{V}_D(t_1)|i\rangle + (-i/\hbar)^2 \int_{t_0}^{t}dt_1 \int_{t_0}^{\mathbf{t_1}}dt_2  \hat{V}_D(t_1) \hat{V}_D(t_2)|i\rangle + \dots \\
+& = | \psi^{(0)} \rangle + | \psi^{(1)}\rangle + | \psi^{(2)}\rangle + \dots
 \end{aligned}
-$$</p>
-<p>したがって、時刻 $t$ における $|f\rangle$ 状態の確率も摂動展開できます：</p>
-<p>$$
+$$<p>したがって、時刻 $t$ における $|f\rangle$ 状態の確率も摂動展開できます：</p>
+$$
 \begin{aligned}
-|\langle f | \psi (t) \rangle_D|^2 &amp; = \left| \langle f| \psi^{(0)} \rangle + \langle f| \psi^{(1)} \rangle + \langle f| \psi^{(2)} \rangle + \dots \right|^2 \
-&amp; = \underbrace{\langle f| \psi^{(0)} \rangle \langle \psi^{(0)} | f\rangle }<em>{\mathcal{O}(V^0)} \
-&amp; + \underbrace{\langle f| \psi^{(1)} \rangle \langle \psi^{(0)} | f\rangle + \langle f| \psi^{(0)} \rangle \langle \psi^{(1)} | f\rangle }</em>{\mathcal{O}(V^1)} \
-&amp; + \underbrace{\langle f| \psi^{(2)} \rangle \langle \psi^{(0)} | f\rangle + \langle f| \psi^{(1)} \rangle \langle \psi^{(1)} | f\rangle + \langle f| \psi^{(0)} \rangle \langle \psi^{(2)} | f\rangle }_{\mathcal{O}(V^2)} \
-&amp; + \dots
+|\langle f | \psi (t) \rangle_D|^2 & = \left| \langle f| \psi^{(0)} \rangle + \langle f| \psi^{(1)} \rangle + \langle f| \psi^{(2)} \rangle + \dots \right|^2 \\
+& = \underbrace{\langle f| \psi^{(0)} \rangle \langle \psi^{(0)} | f\rangle }_{\mathcal{O}(V^0)} \\
+& + \underbrace{\langle f| \psi^{(1)} \rangle \langle \psi^{(0)} | f\rangle + \langle f| \psi^{(0)} \rangle \langle \psi^{(1)} | f\rangle }_{\mathcal{O}(V^1)} \\
+& + \underbrace{\langle f| \psi^{(2)} \rangle \langle \psi^{(0)} | f\rangle + \langle f| \psi^{(1)} \rangle \langle \psi^{(1)} | f\rangle + \langle f| \psi^{(0)} \rangle \langle \psi^{(2)} | f\rangle }_{\mathcal{O}(V^2)} \\
+& + \dots
 \end{aligned}
-$$</p>
-<h2 id="kubo-formula">Kubo Formula</h2>
+$$<h2 id="kubo-formula">Kubo Formula</h2>
 <p>久保公式の導出も相互作用（ディラック）描像で行われますが、波動関数の発展ではなく、系の密度行列の発展を計算します。</p>
 <p>相互作用（ディラック）描像における密度行列の運動方程式：</p>
-<p>$$
+$$
 \begin{aligned}
 \frac{d}{dt} \hat{\rho}_D(t) = - \frac{i}{\hbar} [ \hat{\rho}_D(t) , \hat{V}_D(t) ]
 \end{aligned}
-$$</p>
-<p>積分後に繰り返し反復することで、密度行列の展開式が得られます：</p>
-<p>$$
+$$<p>積分後に繰り返し反復することで、密度行列の展開式が得られます：</p>
+$$
 \begin{aligned}
-\hat{\rho}<em>D(t) &amp; = \hat{\rho}<em>0 + \sum</em>{n = 1}^{\infty} (-\frac{\mathrm{i}}{\hbar})^n \int</em>{-\infty}^{t} dt_1 \int_{-\infty}^{t_1} dt_2 \dots \int_{-\infty}^{t_{n-1}} dt_n [\hat{V}_D(t_1),[\dots[\hat{V}_D(t_n),\hat{\rho}<em>0]\dots] ]\
-&amp; = \hat{\rho}^{(0)} + \sum</em>{i=1}^{\infty} \hat{\rho}^{(i)}
+\hat{\rho}_D(t) & = \hat{\rho}_0 + \sum_{n = 1}^{\infty} (-\frac{\mathrm{i}}{\hbar})^n \int_{-\infty}^{t} dt_1 \int_{-\infty}^{t_1} dt_2 \dots \int_{-\infty}^{t_{n-1}} dt_n [\hat{V}_D(t_1),[\dots[\hat{V}_D(t_n),\hat{\rho}_0]\dots] ]\\
+& = \hat{\rho}^{(0)} + \sum_{i=1}^{\infty} \hat{\rho}^{(i)}
 \end{aligned}
-$$</p>
-<p>初期状態が $| i \rangle$ である純粋状態の密度行列については、密度行列の摂動展開が波動関数の摂動展開と一致することは容易にわかります。なぜなら、両者とも量子力学の含時摂動論だからです。</p>
-<p>$$
+$$<p>初期状態が $| i \rangle$ である純粋状態の密度行列については、密度行列の摂動展開が波動関数の摂動展開と一致することは容易にわかります。なぜなら、両者とも量子力学の含時摂動論だからです。</p>
+$$
 \begin{aligned}
-\hat{\rho}<em>D(t) &amp; = | \psi (t) \rangle_D \langle \psi(t) |<em>D \
-&amp; = (| \psi^{(0)} \rangle + | \psi^{(1)}\rangle + \dots) (\langle \psi^{(0)} | + \langle \psi^{(1)} | + \dots) \
-&amp; = \underbrace{| \psi^{(0)} \rangle \langle \psi^{(0)} | }</em>{\hat{\rho}^{(0)}} \
-&amp; + \underbrace{| \psi^{(1)} \rangle \langle \psi^{(0)} | + | \psi^{(0)} \rangle \langle \psi^{(1)} | }</em>{\hat{\rho}^{(1)}} \
-&amp; + \underbrace{| \psi^{(2)} \rangle \langle \psi^{(0)} | + | \psi^{(1)} \rangle \langle \psi^{(1)} | + | \psi^{(0)} \rangle \langle \psi^{(2)} | }_{\hat{\rho}^{(2)}} \
-&amp; + \dots
+\hat{\rho}_D(t) & = | \psi (t) \rangle_D \langle \psi(t) |_D \\
+& = (| \psi^{(0)} \rangle + | \psi^{(1)}\rangle + \dots) (\langle \psi^{(0)} | + \langle \psi^{(1)} | + \dots) \\
+& = \underbrace{| \psi^{(0)} \rangle \langle \psi^{(0)} | }_{\hat{\rho}^{(0)}} \\
+& + \underbrace{| \psi^{(1)} \rangle \langle \psi^{(0)} | + | \psi^{(0)} \rangle \langle \psi^{(1)} | }_{\hat{\rho}^{(1)}} \\
+& + \underbrace{| \psi^{(2)} \rangle \langle \psi^{(0)} | + | \psi^{(1)} \rangle \langle \psi^{(1)} | + | \psi^{(0)} \rangle \langle \psi^{(2)} | }_{\hat{\rho}^{(2)}} \\
+& + \dots
 \end{aligned}
-$$</p>
-<p>$|f\rangle$ 状態の確率を求めるには、密度行列（久保公式）の言語で記述すると、$|f\rangle$ 状態の射影演算子を観測量として扱います：</p>
-<p>$$
+$$<p>$|f\rangle$ 状態の確率を求めるには、密度行列（久保公式）の言語で記述すると、$|f\rangle$ 状態の射影演算子を観測量として扱います：</p>
+$$
 \begin{aligned}
 \hat{\mathcal{O}} = | f \rangle \langle f |
 \end{aligned}
-$$</p>
-<p>すると、$|f\rangle$ 状態の確率は以下のようになります：</p>
-<p>$$
+$$<p>すると、$|f\rangle$ 状態の確率は以下のようになります：</p>
+$$
 \begin{aligned}
-|\langle f | \psi (t) \rangle_D|^2 &amp; = \langle f | \psi (t) \rangle_D {}<em>D\langle \psi(t) | f \rangle \
-&amp; = \operatorname{Tr} \left{ \hat{\rho}<em>D(t) \hat{\mathcal{O}} \right} \
-&amp; = \underbrace{\langle f| \psi^{(0)} \rangle \langle \psi^{(0)} | f\rangle }</em>{\mathcal{O}(V^0) = \operatorname{Tr} \left{ \hat{\rho}^{(0)} \hat{\mathcal{O}} \right}} \
-&amp; + \underbrace{\langle f| \psi^{(1)} \rangle \langle \psi^{(0)} | f\rangle + \langle f| \psi^{(0)} \rangle \langle \psi^{(1)} | f\rangle }</em>{\mathcal{O}(V^1) = \operatorname{Tr} \left{ \hat{\rho}^{(1)} \hat{\mathcal{O}} \right}} \
-&amp; + \underbrace{\langle f| \psi^{(2)} \rangle \langle \psi^{(0)} | f\rangle + \langle f| \psi^{(1)} \rangle \langle \psi^{(1)} | f\rangle + \langle f| \psi^{(0)} \rangle \langle \psi^{(2)} | f\rangle }_{\mathcal{O}(V^2) = \operatorname{Tr} \left{ \hat{\rho}^{(2)} \hat{\mathcal{O}} \right}} \
-&amp; + \dots
+|\langle f | \psi (t) \rangle_D|^2 & = \langle f | \psi (t) \rangle_D {}_D\langle \psi(t) | f \rangle \\
+& = \operatorname{Tr} \left\{ \hat{\rho}_D(t) \hat{\mathcal{O}} \right\} \\
+& = \underbrace{\langle f| \psi^{(0)} \rangle \langle \psi^{(0)} | f\rangle }_{\mathcal{O}(V^0) = \operatorname{Tr} \left\{ \hat{\rho}^{(0)} \hat{\mathcal{O}} \right\}} \\
+& + \underbrace{\langle f| \psi^{(1)} \rangle \langle \psi^{(0)} | f\rangle + \langle f| \psi^{(0)} \rangle \langle \psi^{(1)} | f\rangle }_{\mathcal{O}(V^1) = \operatorname{Tr} \left\{ \hat{\rho}^{(1)} \hat{\mathcal{O}} \right\}} \\
+& + \underbrace{\langle f| \psi^{(2)} \rangle \langle \psi^{(0)} | f\rangle + \langle f| \psi^{(1)} \rangle \langle \psi^{(1)} | f\rangle + \langle f| \psi^{(0)} \rangle \langle \psi^{(2)} | f\rangle }_{\mathcal{O}(V^2) = \operatorname{Tr} \left\{ \hat{\rho}^{(2)} \hat{\mathcal{O}} \right\}} \\
+& + \dots 
 \end{aligned}
-$$</p>
-<p>フェルミの黄金律と久保公式は、終状態の確率を計算する際、同じものであることがわかります。密度行列は混合状態にも拡張できるため、確率分布を持つ初期状態からの終状態の確率を計算できます。</p>
+$$<p>フェルミの黄金律と久保公式は、終状態の確率を計算する際、同じものであることがわかります。密度行列は混合状態にも拡張できるため、確率分布を持つ初期状態からの終状態の確率を計算できます。</p>
 <p>とりあえず純粋状態の密度行列に注目しましょう。波動関数のゼロ次展開項は以下の通りです：</p>
-<p>$$
+$$
 \begin{aligned}
 | \psi^{(0)} = | i \rangle
 \end{aligned}
-$$</p>
-<p>したがって、終状態確率のゼロ次および一次展開項はいずれもゼロとなり、終状態確率の最低次応答は二次項から来ることになります。ゆえに、我々はこう言えます：</p>
+$$<p>したがって、終状態確率のゼロ次および一次展開項はいずれもゼロとなり、終状態確率の最低次応答は二次項から来ることになります。ゆえに、我々はこう言えます：</p>
 <p><strong>フェルミの黄金律は、終状態確率の二次応答と一致する。</strong></p>
 <h2 id="absorption-rate">Absorption Rate</h2>
 <p>フェルミの黄金律を用いて系のエネルギー吸収率を計算する場合、計算するのは以下の量です：</p>
-<p>$$
+$$
 \begin{aligned}
-P = \frac{dE_{system}}{dt} = \sum_{f} (E_f - E_i) \frac{d}{dt} |\langle f | \psi (t) \rangle_D|^2
+P = \frac{dE_{system}}{dt} = \sum_{f} (E_f - E_i) \frac{d}{dt} |\langle f | \psi (t) \rangle_D|^2 
 \end{aligned}
-$$</p>
-<p>ここで、$E_{i,f}$ は初期状態、終状態 $|i\rangle,,|f\rangle$ のエネルギーです。エネルギー変化率は、遷移速度にエネルギー変化を掛け、可能なすべての遷移について和をとったものであることは容易に理解できます。</p>
+$$<p>ここで、$E_{i,f}$ は初期状態、終状態 $|i\rangle,\,|f\rangle$ のエネルギーです。エネルギー変化率は、遷移速度にエネルギー変化を掛け、可能なすべての遷移について和をとったものであることは容易に理解できます。</p>
 <p>久保公式の言語に拡張すると、エネルギー吸収率は実は摂動を受けていないハミルトニアン $\hat{H}_0$ の期待値の変化率です：</p>
-<p>$$
+$$
 \begin{aligned}
 P = \frac{dE_{system}}{dt} = \frac{d}{dt}\langle \hat{H}_0 \rangle
 \end{aligned}
-$$</p>
-<p>これは非常に直感的であり、フェルミの黄金律と同じことを言っていることを証明するのも難しくありません。</p>
-<p>$$
+$$<p>これは非常に直感的であり、フェルミの黄金律と同じことを言っていることを証明するのも難しくありません。</p>
+$$
 \begin{aligned}
-P &amp; = (E_f - E_i) \frac{d}{dt} |\langle f | \psi (t) \rangle|^2 \
-&amp; = \frac{d}{dt} \left{ \langle \psi (t) | \left( \sum_{f}(E_f - E_i) | f \rangle \langle f |\right) | \psi (t) \rangle \right} \
-&amp; = \frac{d}{dt} \left{ \langle \psi (t) | \left( \sum_{f}E_f | f \rangle \langle f |\right) | \psi (t) \rangle \right} - E_i \frac{d}{dt} \left{ \langle \psi (t) | \left( \sum_{f} | f \rangle \langle f |\right) | \psi (t) \rangle \right} \
-&amp; = \frac{d}{dt} \left{ \langle \psi (t) | \hat{H}_0 | \psi (t) \rangle \right} - E_i \frac{d}{dt} \left{ \langle \psi (t) | \mathbb{I} | \psi (t) \rangle \right} \
-&amp; = \frac{d}{dt}\langle \hat{H}_0 \rangle - 0
+P & = (E_f - E_i) \frac{d}{dt} |\langle f | \psi (t) \rangle|^2 \\
+& = \frac{d}{dt} \left\{ \langle \psi (t) | \left( \sum_{f}(E_f - E_i) | f \rangle \langle f |\right) | \psi (t) \rangle \right\} \\
+& = \frac{d}{dt} \left\{ \langle \psi (t) | \left( \sum_{f}E_f | f \rangle \langle f |\right) | \psi (t) \rangle \right\} - E_i \frac{d}{dt} \left\{ \langle \psi (t) | \left( \sum_{f} | f \rangle \langle f |\right) | \psi (t) \rangle \right\} \\
+& = \frac{d}{dt} \left\{ \langle \psi (t) | \hat{H}_0 | \psi (t) \rangle \right\} - E_i \frac{d}{dt} \left\{ \langle \psi (t) | \mathbb{I} | \psi (t) \rangle \right\} \\
+& = \frac{d}{dt}\langle \hat{H}_0 \rangle - 0
 \end{aligned}
-$$</p>
-<p>これは純粋状態での結果ですが、混合状態は確率に応じて各結果を重ね合わせたものに過ぎず、同様に成立することは容易に想像できます。</p>
+$$<p>これは純粋状態での結果ですが、混合状態は確率に応じて各結果を重ね合わせたものに過ぎず、同様に成立することは容易に想像できます。</p>
 <p>このようにして、遷移速度やエネルギー吸収速度などの言語を統一し、久保公式へと拡張しました。特筆すべき点として、$|f\rangle$ 状態の確率と同様に、$\langle \hat{H}_0 \rangle$ の最低次非ゼロ応答も二次から始まります。</p>
 <h2 id="joule-heat--energy-absorption">Joule Heat = Energy Absorption</h2>
 <p>次に、久保公式におけるジュール熱とエネルギー吸収率の整合性を証明します。</p>
 <p>ジュール熱は、電流応答と外部電場の内積 $\langle \hat{\mathbf{J}} \rangle (t) \cdot \mathbf{E}(t)$ として定義されます。</p>
 <p>電場摂動（ここではまず空間的に均一な時変電場を考えます）の場合、摂動ハミルトニアンは以下のようになります：</p>
-<p>$$
+$$
 \begin{aligned}
 \hat{V}_S(t) = - \hat{\mathbf{P}} \cdot \mathbf{E}(t) = -(-e) \hat{\mathbf{r}} \cdot \mathbf{E}(t)
 \end{aligned}
-$$</p>
-<p>電流応答 $\langle \hat{\mathbf{J}} \rangle (t)$ の n 次摂動：</p>
-<p>$$
+$$<p>電流応答 $\langle \hat{\mathbf{J}} \rangle (t)$ の n 次摂動：</p>
+$$
 \begin{aligned}
 \langle \hat{\mathbf{J}} \rangle^{(n)} (t) \propto \mathcal{O}(|\mathbf{E}|^n) \propto \mathcal{O}(V^n)
 \end{aligned}
-$$</p>
-<p>対応するジュール熱 $\langle \hat{\mathbf{J}} \rangle (t) \cdot \mathbf{E}(t)$ の n+1 次摂動：</p>
-<p>$$
+$$<p>対応するジュール熱 $\langle \hat{\mathbf{J}} \rangle (t) \cdot \mathbf{E}(t)$ の n+1 次摂動：</p>
+$$
 \begin{aligned}
 \langle \hat{\mathbf{J}} \rangle^{(n)} (t) \cdot \mathbf{E}(t) \propto {O}(|\mathbf{E}|^{n+1}) \propto \mathcal{O}(V^{n+1})
 \end{aligned}
-$$</p>
-<p>したがって、電流の線形（一次）応答のジュール熱とエネルギー変化率の二次応答は、摂動展開の次数のレベルで一致しています。</p>
+$$<p>したがって、電流の線形（一次）応答のジュール熱とエネルギー変化率の二次応答は、摂動展開の次数のレベルで一致しています。</p>
 <p>私たちの目標は、<strong>電流の線形（一次）応答のジュール熱とエネルギー変化率の二次応答</strong>が式の上で厳密に一致することを証明することです。</p>
 <h2 id="current-response">Current Response</h2>
 <p>ここで「電流」を電気分極の変化率、すなわち電流密度の体積積分として定義します：</p>
-<p>$$
+$$
 \begin{aligned}
 \hat{\mathbf{J}} \equiv \iiint dV \hat{\mathbf{j}} \equiv \frac{d}{dt} \hat{\mathbf{P}}
 \end{aligned}
-$$</p>
-<p>ディラック描像において、電流演算子と電気分極演算子の関係は以下のようになります：</p>
-<p>$$
+$$<p>ディラック描像において、電流演算子と電気分極演算子の関係は以下のようになります：</p>
+$$
 \begin{aligned}
 \hat{\mathbf{J}}_D = \frac{d}{dt} \hat{\mathbf{P}}_D = (- \frac{i}{\hbar}) [ \hat{\mathbf{P}}_D, \hat{H}_0 ]
 \end{aligned}
-$$</p>
-<p>したがって、摂動 $\hat{V}_S(t) = - \hat{\mathbf{P}} \cdot \mathbf{E}(t)$ の一次電流応答は：</p>
-<p>$$
+$$<p>したがって、摂動 $\hat{V}_S(t) = - \hat{\mathbf{P}} \cdot \mathbf{E}(t)$ の一次電流応答は：</p>
+$$
 \begin{aligned}
-\langle \hat{\mathbf{J}} \rangle^{(1)} (t) &amp; = (- \frac{i}{\hbar}) \int_{-\infty}^{t} dt_1 \operatorname{Tr} \left{ \hat{\rho}_0 [\hat{\mathbf{J}}_D(t) , \hat{V}<em>D(t_1)] \right} \
-&amp; = (- \frac{i}{\hbar})^2 \int</em>{-\infty}^{t} dt_1 \operatorname{Tr} \left{ \hat{\rho}_0 [ [ \hat{\mathbf{P}}_D, \hat{H}_0 ] , \hat{V}_D(t_1)] \right}
+\langle \hat{\mathbf{J}} \rangle^{(1)} (t) & = (- \frac{i}{\hbar}) \int_{-\infty}^{t} dt_1 \operatorname{Tr} \left\{ \hat{\rho}_0 [\hat{\mathbf{J}}_D(t) , \hat{V}_D(t_1)] \right\} \\
+& = (- \frac{i}{\hbar})^2 \int_{-\infty}^{t} dt_1 \operatorname{Tr} \left\{ \hat{\rho}_0 [ [ \hat{\mathbf{P}}_D, \hat{H}_0 ] , \hat{V}_D(t_1)] \right\} 
 \end{aligned}
-$$</p>
-<p>したがって、一次電流応答に対応する二次ジュール熱は：</p>
-<p>$$
+$$<p>したがって、一次電流応答に対応する二次ジュール熱は：</p>
+$$
 \begin{aligned}
-\langle \hat{\mathbf{J}} \rangle^{(1)} (t) \cdot \mathbf{E} (t) &amp; = (- \frac{i}{\hbar}) \int_{-\infty}^{t} dt_1 \operatorname{Tr} \left{ \hat{\rho}_0 [\hat{\mathbf{J}}_D(t) \cdot \mathbf{E} (t) , \hat{V}<em>D(t_1)] \right}  \
-&amp; = (- \frac{i}{\hbar})^2 \int</em>{-\infty}^{t} dt_1 \operatorname{Tr} \left{ \hat{\rho}_0 [ [ \hat{\mathbf{P}}_D \cdot \mathbf{E} (t) , \hat{H}_0 ] , \hat{V}_D(t_1)] \right}
+\langle \hat{\mathbf{J}} \rangle^{(1)} (t) \cdot \mathbf{E} (t) & = (- \frac{i}{\hbar}) \int_{-\infty}^{t} dt_1 \operatorname{Tr} \left\{ \hat{\rho}_0 [\hat{\mathbf{J}}_D(t) \cdot \mathbf{E} (t) , \hat{V}_D(t_1)] \right\}  \\
+& = (- \frac{i}{\hbar})^2 \int_{-\infty}^{t} dt_1 \operatorname{Tr} \left\{ \hat{\rho}_0 [ [ \hat{\mathbf{P}}_D \cdot \mathbf{E} (t) , \hat{H}_0 ] , \hat{V}_D(t_1)] \right\}
 \end{aligned}
-$$</p>
-<p>そして $\hat{\mathbf{P}}_D \cdot \mathbf{E} (t)$ はまさに摂動 $-\hat{V}_D(t)$ の式そのものです。具体的には：</p>
-<p>$$
+$$<p>そして $\hat{\mathbf{P}}_D \cdot \mathbf{E} (t)$ はまさに摂動 $-\hat{V}_D(t)$ の式そのものです。具体的には：</p>
+$$
 \begin{aligned}
-\langle \hat{\mathbf{J}} \rangle^{(1)} (t) \cdot \mathbf{E} (t) &amp; = (- \frac{i}{\hbar})^2 \int_{-\infty}^{t} dt_1 \operatorname{Tr} \left{ \hat{\rho}_0 [ [ -\hat{V}_D(t) , \hat{H}_0 ] , \hat{V}<em>D(t_1)] \right} \
-&amp; = (- \frac{i}{\hbar})^2 \int</em>{-\infty}^{t} dt_1 \operatorname{Tr} \left{ \hat{\rho}_0 [ [ \hat{H}_0, \hat{V}_D(t) ] , \hat{V}_D(t_1)] \right}
+\langle \hat{\mathbf{J}} \rangle^{(1)} (t) \cdot \mathbf{E} (t) & = (- \frac{i}{\hbar})^2 \int_{-\infty}^{t} dt_1 \operatorname{Tr} \left\{ \hat{\rho}_0 [ [ -\hat{V}_D(t) , \hat{H}_0 ] , \hat{V}_D(t_1)] \right\} \\
+& = (- \frac{i}{\hbar})^2 \int_{-\infty}^{t} dt_1 \operatorname{Tr} \left\{ \hat{\rho}_0 [ [ \hat{H}_0, \hat{V}_D(t) ] , \hat{V}_D(t_1)] \right\}
 \end{aligned}
-$$</p>
-<p>2つの $\hat{V}_D$ の交換子を見ると、これが基本的に $\langle \hat{H}_0 \rangle$ の二次応答の変化率であることがわかります。時間について一度微分したため、時間積分が1つ少なくなっています。具体的には：</p>
-<p>$$
+$$<p>2つの $\hat{V}_D$ の交換子を見ると、これが基本的に $\langle \hat{H}_0 \rangle$ の二次応答の変化率であることがわかります。時間について一度微分したため、時間積分が1つ少なくなっています。具体的には：</p>
+$$
 \begin{aligned}
-\langle \hat{H}<em>0 \rangle^{(2)} (t) &amp; = (-\frac{\mathrm{i}}{\hbar})^2 \int</em>{-\infty}^t \mathrm{~d} t_1 \int_{-\infty}^{t_1} \mathrm{~d} t_2  \operatorname{Tr} \left{\rho_0\left[ \left[{\hat{H}<em>0}<em>D(t), \hat{V}</em>{D}\left(t_1\right)\right],\hat{V}</em>{D}\left(t_2\right)\right]\right} \
-&amp; = (-\frac{\mathrm{i}}{\hbar})^2 \int_{-\infty}^t \mathrm{~d} t_1 \int_{-\infty}^{t_1} \mathrm{~d} t_2  \operatorname{Tr} \left{\rho_0\left[ \left[\hat{H}<em>0, \hat{V}</em>{D}\left(t_1\right)\right],\hat{V}_{D}\left(t_2\right)\right]\right} \
+\langle \hat{H}_0 \rangle^{(2)} (t) & = (-\frac{\mathrm{i}}{\hbar})^2 \int_{-\infty}^t \mathrm{~d} t_1 \int_{-\infty}^{t_1} \mathrm{~d} t_2  \operatorname{Tr} \left\{\rho_0\left[ \left[{\hat{H}_0}_D(t), \hat{V}_{D}\left(t_1\right)\right],\hat{V}_{D}\left(t_2\right)\right]\right\} \\
+& = (-\frac{\mathrm{i}}{\hbar})^2 \int_{-\infty}^t \mathrm{~d} t_1 \int_{-\infty}^{t_1} \mathrm{~d} t_2  \operatorname{Tr} \left\{\rho_0\left[ \left[\hat{H}_0, \hat{V}_{D}\left(t_1\right)\right],\hat{V}_{D}\left(t_2\right)\right]\right\} \\
 \end{aligned}
-$$</p>
-<p>ここで、${\hat{H}_0}$ がディラック描像においてそれ自身であるという性質と、${\hat{H}_0}_D(t)$ が時間を露わに含まないという性質（時間並進対称性）を用いました：</p>
-<p>$$
+$$<p>ここで、${\hat{H}_0}$ がディラック描像においてそれ自身であるという性質と、${\hat{H}_0}_D(t)$ が時間を露わに含まないという性質（時間並進対称性）を用いました：</p>
+$$
 \begin{aligned}
 {\hat{H}_0}_D(t) = e^{ \frac{i}{\hbar}\hat{H}_0 t} {\hat{H}_0} e^{- \frac{i}{\hbar}\hat{H}_0 t} = \hat{H}_0
 \end{aligned}
-$$</p>
-<p>このとき、$\langle \hat{H}_0 \rangle$ の二次応答の時間依存性は、最初の時間積分の上限にのみ存在するため、その変化率は時間積分が1つ少なくなり（そして積分変数 $t_1$ を $t$ に変更）、電流の一次応答のジュール熱の式と完全に一致します：</p>
-<p>$$
+$$<p>このとき、$\langle \hat{H}_0 \rangle$ の二次応答の時間依存性は、最初の時間積分の上限にのみ存在するため、その変化率は時間積分が1つ少なくなり（そして積分変数 $t_1$ を $t$ に変更）、電流の一次応答のジュール熱の式と完全に一致します：</p>
+$$
 \begin{aligned}
-\frac{d}{dt} \langle \hat{H}<em>0 \rangle^{(2)} &amp;= (-\frac{\mathrm{i}}{\hbar})^2  \int</em>{-\infty}^{t} \mathrm{~d} t_2  \operatorname{Tr} \left{\hat{\rho}<em>0\left[ \left[\hat{H}<em>0, \hat{V}</em>{D}(t)\right],\hat{V}</em>{D}(t_2)\right]\right} \
-\langle \hat{\mathbf{J}} \rangle^{(1)} (t) \cdot \mathbf{E} (t) &amp; = (-\frac{\mathrm{i}}{\hbar})^2 \int_{-\infty}^{t} \mathrm{~d} t_1 \operatorname{Tr} \left{ \hat{\rho}_0 \left[ \left[ \hat{H}_0, \hat{V}_D(t) \right] , \hat{V}_D(t_1) \right] \right} \
-\Rightarrow P = \frac{d}{dt} \langle \hat{H}_0 \rangle^{(2)} &amp; = \langle \hat{\mathbf{J}} \rangle^{(1)} (t) \cdot \mathbf{E} (t)
+\frac{d}{dt} \langle \hat{H}_0 \rangle^{(2)} &= (-\frac{\mathrm{i}}{\hbar})^2  \int_{-\infty}^{t} \mathrm{~d} t_2  \operatorname{Tr} \left\{\hat{\rho}_0\left[ \left[\hat{H}_0, \hat{V}_{D}(t)\right],\hat{V}_{D}(t_2)\right]\right\} \\
+\langle \hat{\mathbf{J}} \rangle^{(1)} (t) \cdot \mathbf{E} (t) & = (-\frac{\mathrm{i}}{\hbar})^2 \int_{-\infty}^{t} \mathrm{~d} t_1 \operatorname{Tr} \left\{ \hat{\rho}_0 \left[ \left[ \hat{H}_0, \hat{V}_D(t) \right] , \hat{V}_D(t_1) \right] \right\} \\
+\Rightarrow P = \frac{d}{dt} \langle \hat{H}_0 \rangle^{(2)} & = \langle \hat{\mathbf{J}} \rangle^{(1)} (t) \cdot \mathbf{E} (t)
 \end{aligned}
-$$</p>
-<p>より高次の電流応答とエネルギー変化率も一対一に対応することは容易に検証できます。</p>
+$$<p>より高次の電流応答とエネルギー変化率も一対一に対応することは容易に検証できます。</p>
 <p>これにより、エネルギー変化率と電流応答のジュール熱公式の整合性が証明されました。</p>
 <h2 id="summary">Summary</h2>
 <p>以上のことから、量子系の電磁波吸収を計算する際のフェルミの黄金律とジュール熱公式の整合性を証明しました。</p>
 <p>まず、フェルミの黄金律で計算されたエネルギー吸収率とエネルギー応答の変化率の整合性を証明しました：</p>
-<p>$$
+$$
 \begin{aligned}
-\underbrace{P = \sum_{f} (E_f - E_i) \frac{d}{dt} |\langle f | \psi (t) \rangle_D|^2}<em>{\text{Fermi Golden Rule}} \ \Leftrightarrow \ P = \frac{dE</em>{system}}{dt} = \frac{d}{dt}\langle \hat{H}_0 \rangle
+\underbrace{P = \sum_{f} (E_f - E_i) \frac{d}{dt} |\langle f | \psi (t) \rangle_D|^2}_{\text{Fermi Golden Rule}} \ \Leftrightarrow \ P = \frac{dE_{system}}{dt} = \frac{d}{dt}\langle \hat{H}_0 \rangle
 \end{aligned}
-$$</p>
-<p>その後、電流の応答に電場を掛けたジュール熱公式とエネルギー応答の変化率の整合性を証明しました：</p>
-<p>$$
+$$<p>その後、電流の応答に電場を掛けたジュール熱公式とエネルギー応答の変化率の整合性を証明しました：</p>
+$$
 \begin{aligned}
-&amp; \underbrace{P = \langle \hat{\mathbf{J}} \rangle^{(1)} (t) \cdot \mathbf{E} (t) = (-\frac{\mathrm{i}}{\hbar})^2 \int_{-\infty}^{t} \mathrm{~d} t_1 \operatorname{Tr} \left{ \hat{\rho}_0 \left[ \left[ \hat{H}_0, \hat{V}_D(t) \right] , \hat{V}<em>D(t_1) \right] \right}}</em>{\text{Joule Heat}} \
-\Leftrightarrow \  &amp;P = \frac{d}{dt} \langle \hat{H}<em>0 \rangle^{(2)} = (-\frac{\mathrm{i}}{\hbar})^2  \int</em>{-\infty}^{t} \mathrm{~d} t_2  \operatorname{Tr} \left{\hat{\rho}<em>0\left[ \left[\hat{H}<em>0, \hat{V}</em>{D}(t)\right],\hat{V}</em>{D}(t_2)\right]\right}
+& \underbrace{P = \langle \hat{\mathbf{J}} \rangle^{(1)} (t) \cdot \mathbf{E} (t) = (-\frac{\mathrm{i}}{\hbar})^2 \int_{-\infty}^{t} \mathrm{~d} t_1 \operatorname{Tr} \left\{ \hat{\rho}_0 \left[ \left[ \hat{H}_0, \hat{V}_D(t) \right] , \hat{V}_D(t_1) \right] \right\}}_{\text{Joule Heat}} \\
+\Leftrightarrow \  &P = \frac{d}{dt} \langle \hat{H}_0 \rangle^{(2)} = (-\frac{\mathrm{i}}{\hbar})^2  \int_{-\infty}^{t} \mathrm{~d} t_2  \operatorname{Tr} \left\{\hat{\rho}_0\left[ \left[\hat{H}_0, \hat{V}_{D}(t)\right],\hat{V}_{D}(t_2)\right]\right\}
 \end{aligned}
-$$</p>
-<p>つまり、電流の応答に電場を掛けたジュール熱公式と、量子遷移速度にエネルギー変化を掛けたフェルミの黄金律は、本質的にどちらもエネルギー応答の変化率なのです。</p>
+$$<p>つまり、電流の応答に電場を掛けたジュール熱公式と、量子遷移速度にエネルギー変化を掛けたフェルミの黄金律は、本質的にどちらもエネルギー応答の変化率なのです。</p>
 <p>したがって、一見巨視的な「ジュール熱」と一見微視的な「フェルミの黄金律」は同じものであると言えます。</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">

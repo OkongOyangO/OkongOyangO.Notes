@@ -9,6 +9,8 @@ categories: ["Physics Notes"]
 
 This note is approximately 10,000 words long and aims to help readers get started with Fractional Quantum Hall Effect (FQHE), Fractional Anomalous Quantum Hall Effect (FAQHE), and Fractional Chern Insulators (FCI). This article represents only my personal perspective and may contain errors; I welcome corrections from readers. Below is the main text.
 
+<!--more-->
+
 ## Introduction to FQHE, FAQHE & FCI
 
 The Quantum Hall Effect requires a strong magnetic field environment to be realized. However, the emergence of the Haldane Model and Chern Insulators allowed the Quantum Hall Effect to be realized in **lattice systems without an external magnetic field**. This phenomenon is called the "Quantum Anomalous Hall Effect". In Chern Insulators, the non-trivial Berry Curvature distribution endows the lattice system with non-trivial topological properties similar to the Quantum Hall Effect, or even further, **Berry Curvature replaces the magnetic field** (although Berry Curvature is defined in reciprocal space, while the magnetic field appears in real space). Discussions on Chern Insulators and other topological phases derived from this have also become hot topics in the field of condensed matter theory in recent years.

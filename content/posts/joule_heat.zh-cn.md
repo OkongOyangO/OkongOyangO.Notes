@@ -9,6 +9,8 @@ categories: ["Physics Notes"]
 
 本文旨在阐述费米黄金法则和焦耳热的一致性。
 
+<!--more-->
+
 ## Introduction
 
 费米黄金法则能计算系统对电磁场的吸收，而Kubo Formula能计算电流响应，用焦耳热公式也能计算电磁场的吸收。

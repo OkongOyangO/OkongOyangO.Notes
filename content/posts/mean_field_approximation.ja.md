@@ -11,6 +11,8 @@ categories: ["Physics Notes"]
 
 Hartree, Fock, BCSといった個々の平均場近似は、一見すると互いに相容れないdecouple（分離）手法のように見えますが、平均場近似の変分法的本質を利用することで、これらは実際に1:1:1で混ぜて使用できることがわかります。
 
+<!--more-->
+
 ## Preface
 
 本文のインスピレーションは、まずクラスメートの[@ykli](https://www.zhihu.com/people/li-yong-kang-9-34)との議論から得られました。導出過程で多大な助けをくれた[@ykli](https://www.zhihu.com/people/li-yong-kang-9-34)に感謝します。

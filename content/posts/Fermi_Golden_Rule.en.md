@@ -9,6 +9,8 @@ categories: ["Physics Notes"]
 
 This article aims to calculate the strict quantum transition rate and points out that the Fermi Golden Rule is the result of its "long-time average". The strict quantum transition rate contains an additional double-frequency oscillation term with non-negligible amplitude compared to the Fermi Golden Rule. The relationship between the two is similar to "instantaneous power" and "average power" in AC circuits.
 
+<!--more-->
+
 ## Fermi Golden Rule
 
 The Fermi Golden Rule aims to calculate the transition rate of a quantum system from an initial state $|i\rangle$ to a final state $|f\rangle$ (both are eigenstates of $H_0$) under a time-harmonic external field perturbation. Since this is well-covered in quantum mechanics courses, we will quickly go through it in the Dirac picture (interaction picture). The Dirac picture is used to better compare with the Kubo Formula.
@@ -42,7 +44,7 @@ $$
 $$
 
 $$
-= 1 + (-i/\hbar) \int_{t'}^{t}dt_1 \hat{V}_D(t_1) +  (-i/\hbar)^2 \int_{t'}^{t}dt_1 \int_{t'}^{\mathbf{t_1}}dt_2  \hat{V}_D(t_1) \hat{V}_D(t_2) + \dots 
+= 1 + (-i/\hbar) \int_{t'}^{t}dt_1 \hat{V}_D(t_1) +  (-i/\hbar)^2 \int_{t'}^{t}dt_1 \int_{t'}^{\mathbf{t_1}}dt_2  \hat{V}_D(t_1) \hat{V}_D(t_2) + \dots
 $$
 
 where $\mathcal{T}$ is the time ordering operator, placing operators with smaller times on the right to act on the state vector first. The expression without time ordering is also given above, which can be obtained by integrating the equation of motion and iterating.

@@ -38,7 +38,7 @@ The former seems to calculate entirely from the perspective of quantum transitio
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/posts\/joule_heat\/"
-        },"genre": "posts","keywords": "Quantum Mechanics, Joule Heat","wordcount":  2173 ,
+        },"genre": "posts","keywords": "Quantum Mechanics, Joule Heat","wordcount":  2148 ,
         "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/posts\/joule_heat\/","datePublished": "2026-01-08T21:54:37-05:00","dateModified": "2026-01-08T21:54:37-05:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -129,7 +129,7 @@ The former seems to calculate entirely from the perspective of quantum transitio
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Fermi Golden Rule? Just Joule Heat!</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://OkongOyangO.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">included in <a href="/OkongOyangO.Notes/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-01-08">2026-01-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2173 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-01-08">2026-01-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2148 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;11 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
@@ -157,202 +157,177 @@ The former seems to calculate entirely from the perspective of quantum transitio
 <h2 id="fermi-golden-rule">Fermi Golden Rule</h2>
 <p>Fermi&rsquo;s Golden Rule aims to calculate the transition rate of a quantum system from an initial state $|i\rangle$ to a final state $|f\rangle$ (both eigenstates of $H_0$) under a time-harmonic external field perturbation. In previous articles on Fermi&rsquo;s Golden Rule, we re-derived it using the Dirac Picture to better facilitate comparison with the Kubo Formula.</p>
 <p>The equation of motion for the state in the Dirac picture:</p>
-<p>$$
+$$
 \begin{aligned}
 i \hbar \partial_t |\psi(t) \rangle_D = \hat{V}_D(t) |\psi(t) \rangle_D
 \end{aligned}
-$$</p>
-<p>By integrating the equation of motion and iterating, we can obtain the perturbative expansion form of the state evolution in the Dirac picture. Assuming the system is in the initial state $|i\rangle$ at $t = t_0$:</p>
-<p>$$
+$$<p>By integrating the equation of motion and iterating, we can obtain the perturbative expansion form of the state evolution in the Dirac picture. Assuming the system is in the initial state $|i\rangle$ at $t = t_0$:</p>
+$$
 \begin{aligned}
-| \psi (t) \rangle_D &amp; = |i\rangle + (-i/\hbar) \int_{t_0}^{t}dt_1 \hat{V}<em>D(t_1)|i\rangle + (-i/\hbar)^2 \int</em>{t_0}^{t}dt_1 \int_{t_0}^{\mathbf{t_1}}dt_2  \hat{V}_D(t_1) \hat{V}_D(t_2)|i\rangle + \dots \
-&amp; = | \psi^{(0)} \rangle + | \psi^{(1)}\rangle + | \psi^{(2)}\rangle + \dots
+| \psi (t) \rangle_D & = |i\rangle + (-i/\hbar) \int_{t_0}^{t}dt_1 \hat{V}_D(t_1)|i\rangle + (-i/\hbar)^2 \int_{t_0}^{t}dt_1 \int_{t_0}^{\mathbf{t_1}}dt_2  \hat{V}_D(t_1) \hat{V}_D(t_2)|i\rangle + \dots \\
+& = | \psi^{(0)} \rangle + | \psi^{(1)}\rangle + | \psi^{(2)}\rangle + \dots
 \end{aligned}
-$$</p>
-<p>The probability of being in state $|f\rangle$ at time $t$ can also be expanded perturbatively:</p>
-<p>$$
+$$<p>The probability of being in state $|f\rangle$ at time $t$ can also be expanded perturbatively:</p>
+$$
 \begin{aligned}
-|\langle f | \psi (t) \rangle_D|^2 &amp; = \left| \langle f| \psi^{(0)} \rangle + \langle f| \psi^{(1)} \rangle + \langle f| \psi^{(2)} \rangle + \dots \right|^2 \
-&amp; = \underbrace{\langle f| \psi^{(0)} \rangle \langle \psi^{(0)} | f\rangle }<em>{\mathcal{O}(V^0)} \
-&amp; + \underbrace{\langle f| \psi^{(1)} \rangle \langle \psi^{(0)} | f\rangle + \langle f| \psi^{(0)} \rangle \langle \psi^{(1)} | f\rangle }</em>{\mathcal{O}(V^1)} \
-&amp; + \underbrace{\langle f| \psi^{(2)} \rangle \langle \psi^{(0)} | f\rangle + \langle f| \psi^{(1)} \rangle \langle \psi^{(1)} | f\rangle + \langle f| \psi^{(0)} \rangle \langle \psi^{(2)} | f\rangle }_{\mathcal{O}(V^2)} \
-&amp; + \dots
+|\langle f | \psi (t) \rangle_D|^2 & = \left| \langle f| \psi^{(0)} \rangle + \langle f| \psi^{(1)} \rangle + \langle f| \psi^{(2)} \rangle + \dots \right|^2 \\
+& = \underbrace{\langle f| \psi^{(0)} \rangle \langle \psi^{(0)} | f\rangle }_{\mathcal{O}(V^0)} \\
+& + \underbrace{\langle f| \psi^{(1)} \rangle \langle \psi^{(0)} | f\rangle + \langle f| \psi^{(0)} \rangle \langle \psi^{(1)} | f\rangle }_{\mathcal{O}(V^1)} \\
+& + \underbrace{\langle f| \psi^{(2)} \rangle \langle \psi^{(0)} | f\rangle + \langle f| \psi^{(1)} \rangle \langle \psi^{(1)} | f\rangle + \langle f| \psi^{(0)} \rangle \langle \psi^{(2)} | f\rangle }_{\mathcal{O}(V^2)} \\
+& + \dots
 \end{aligned}
-$$</p>
-<h2 id="kubo-formula">Kubo Formula</h2>
+$$<h2 id="kubo-formula">Kubo Formula</h2>
 <p>The derivation of the Kubo Formula is also completed in the interaction (Dirac) picture, but it calculates the evolution of the system&rsquo;s density matrix rather than the wave function.</p>
 <p>The equation of motion for the density matrix in the interaction (Dirac) picture:</p>
-<p>$$
+$$
 \begin{aligned}
 \frac{d}{dt} \hat{\rho}_D(t) = - \frac{i}{\hbar} [ \hat{\rho}_D(t) , \hat{V}_D(t) ]
 \end{aligned}
-$$</p>
-<p>After integration and repeated iteration, we can obtain the expansion of the density matrix:</p>
-<p>$$
+$$<p>After integration and repeated iteration, we can obtain the expansion of the density matrix:</p>
+$$
 \begin{aligned}
-\hat{\rho}<em>D(t) &amp; = \hat{\rho}<em>0 + \sum</em>{n = 1}^{\infty} (-\frac{\mathrm{i}}{\hbar})^n \int</em>{-\infty}^{t} dt_1 \int_{-\infty}^{t_1} dt_2 \dots \int_{-\infty}^{t_{n-1}} dt_n [\hat{V}_D(t_1),[\dots[\hat{V}_D(t_n),\hat{\rho}<em>0]\dots] ]\
-&amp; = \hat{\rho}^{(0)} + \sum</em>{i=1}^{\infty} \hat{\rho}^{(i)}
+\hat{\rho}_D(t) & = \hat{\rho}_0 + \sum_{n = 1}^{\infty} (-\frac{\mathrm{i}}{\hbar})^n \int_{-\infty}^{t} dt_1 \int_{-\infty}^{t_1} dt_2 \dots \int_{-\infty}^{t_{n-1}} dt_n [\hat{V}_D(t_1),[\dots[\hat{V}_D(t_n),\hat{\rho}_0]\dots] ]\\
+& = \hat{\rho}^{(0)} + \sum_{i=1}^{\infty} \hat{\rho}^{(i)}
 \end{aligned}
-$$</p>
-<p>For a pure state density matrix with initial state $| i \rangle$, it is easy to see that the perturbative expansion of the density matrix is consistent with that of the wave function, as both are time-dependent perturbation theories in quantum mechanics.</p>
-<p>$$
+$$<p>For a pure state density matrix with initial state $| i \rangle$, it is easy to see that the perturbative expansion of the density matrix is consistent with that of the wave function, as both are time-dependent perturbation theories in quantum mechanics.</p>
+$$
 \begin{aligned}
-\hat{\rho}<em>D(t) &amp; = | \psi (t) \rangle_D \langle \psi(t) |<em>D \
-&amp; = (| \psi^{(0)} \rangle + | \psi^{(1)}\rangle + \dots) (\langle \psi^{(0)} | + \langle \psi^{(1)} | + \dots) \
-&amp; = \underbrace{| \psi^{(0)} \rangle \langle \psi^{(0)} | }</em>{\hat{\rho}^{(0)}} \
-&amp; + \underbrace{| \psi^{(1)} \rangle \langle \psi^{(0)} | + | \psi^{(0)} \rangle \langle \psi^{(1)} | }</em>{\hat{\rho}^{(1)}} \
-&amp; + \underbrace{| \psi^{(2)} \rangle \langle \psi^{(0)} | + | \psi^{(1)} \rangle \langle \psi^{(1)} | + | \psi^{(0)} \rangle \langle \psi^{(2)} | }_{\hat{\rho}^{(2)}} \
-&amp; + \dots
+\hat{\rho}_D(t) & = | \psi (t) \rangle_D \langle \psi(t) |_D \\
+& = (| \psi^{(0)} \rangle + | \psi^{(1)}\rangle + \dots) (\langle \psi^{(0)} | + \langle \psi^{(1)} | + \dots) \\
+& = \underbrace{| \psi^{(0)} \rangle \langle \psi^{(0)} | }_{\hat{\rho}^{(0)}} \\
+& + \underbrace{| \psi^{(1)} \rangle \langle \psi^{(0)} | + | \psi^{(0)} \rangle \langle \psi^{(1)} | }_{\hat{\rho}^{(1)}} \\
+& + \underbrace{| \psi^{(2)} \rangle \langle \psi^{(0)} | + | \psi^{(1)} \rangle \langle \psi^{(1)} | + | \psi^{(0)} \rangle \langle \psi^{(2)} | }_{\hat{\rho}^{(2)}} \\
+& + \dots
 \end{aligned}
-$$</p>
-<p>To find the probability of the state $|f\rangle$, using the language of the density matrix (Kubo Formula), we treat the projection operator of the state $|f\rangle$ as the observable:</p>
-<p>$$
+$$<p>To find the probability of the state $|f\rangle$, using the language of the density matrix (Kubo Formula), we treat the projection operator of the state $|f\rangle$ as the observable:</p>
+$$
 \begin{aligned}
 \hat{\mathcal{O}} = | f \rangle \langle f |
 \end{aligned}
-$$</p>
-<p>Then the probability of the state $|f\rangle$ is:</p>
-<p>$$
+$$<p>Then the probability of the state $|f\rangle$ is:</p>
+$$
 \begin{aligned}
-|\langle f | \psi (t) \rangle_D|^2 &amp; = \langle f | \psi (t) \rangle_D {}<em>D\langle \psi(t) | f \rangle \
-&amp; = \operatorname{Tr} \left{ \hat{\rho}<em>D(t) \hat{\mathcal{O}} \right} \
-&amp; = \underbrace{\langle f| \psi^{(0)} \rangle \langle \psi^{(0)} | f\rangle }</em>{\mathcal{O}(V^0) = \operatorname{Tr} \left{ \hat{\rho}^{(0)} \hat{\mathcal{O}} \right}} \
-&amp; + \underbrace{\langle f| \psi^{(1)} \rangle \langle \psi^{(0)} | f\rangle + \langle f| \psi^{(0)} \rangle \langle \psi^{(1)} | f\rangle }</em>{\mathcal{O}(V^1) = \operatorname{Tr} \left{ \hat{\rho}^{(1)} \hat{\mathcal{O}} \right}} \
-&amp; + \underbrace{\langle f| \psi^{(2)} \rangle \langle \psi^{(0)} | f\rangle + \langle f| \psi^{(1)} \rangle \langle \psi^{(1)} | f\rangle + \langle f| \psi^{(0)} \rangle \langle \psi^{(2)} | f\rangle }_{\mathcal{O}(V^2) = \operatorname{Tr} \left{ \hat{\rho}^{(2)} \hat{\mathcal{O}} \right}} \
-&amp; + \dots
+|\langle f | \psi (t) \rangle_D|^2 & = \langle f | \psi (t) \rangle_D {}_D\langle \psi(t) | f \rangle \\
+& = \operatorname{Tr} \left\{ \hat{\rho}_D(t) \hat{\mathcal{O}} \right\} \\
+& = \underbrace{\langle f| \psi^{(0)} \rangle \langle \psi^{(0)} | f\rangle }_{\mathcal{O}(V^0) = \operatorname{Tr} \left\{ \hat{\rho}^{(0)} \hat{\mathcal{O}} \right\}} \\
+& + \underbrace{\langle f| \psi^{(1)} \rangle \langle \psi^{(0)} | f\rangle + \langle f| \psi^{(0)} \rangle \langle \psi^{(1)} | f\rangle }_{\mathcal{O}(V^1) = \operatorname{Tr} \left\{ \hat{\rho}^{(1)} \hat{\mathcal{O}} \right\}} \\
+& + \underbrace{\langle f| \psi^{(2)} \rangle \langle \psi^{(0)} | f\rangle + \langle f| \psi^{(1)} \rangle \langle \psi^{(1)} | f\rangle + \langle f| \psi^{(0)} \rangle \langle \psi^{(2)} | f\rangle }_{\mathcal{O}(V^2) = \operatorname{Tr} \left\{ \hat{\rho}^{(2)} \hat{\mathcal{O}} \right\}} \\
+& + \dots 
 \end{aligned}
-$$</p>
-<p>It can be seen that Fermi&rsquo;s Golden Rule and the Kubo Formula are the same thing when calculating the final state probability. The density matrix can also be generalized to mixed states, thereby calculating the final state probability starting from an initial state with a probability distribution.</p>
+$$<p>It can be seen that Fermi&rsquo;s Golden Rule and the Kubo Formula are the same thing when calculating the final state probability. The density matrix can also be generalized to mixed states, thereby calculating the final state probability starting from an initial state with a probability distribution.</p>
 <p>Let&rsquo;s focus on the pure state density matrix first. Notice that the zero-order expansion term of the wave function is:</p>
-<p>$$
+$$
 \begin{aligned}
 | \psi^{(0)} = | i \rangle
 \end{aligned}
-$$</p>
-<p>Therefore, the zero-order and first-order expansion terms of the final state probability are both zero. Thus, the lowest-order response of the final state probability comes from the second-order term, so we say:</p>
+$$<p>Therefore, the zero-order and first-order expansion terms of the final state probability are both zero. Thus, the lowest-order response of the final state probability comes from the second-order term, so we say:</p>
 <p><strong>Fermi&rsquo;s Golden Rule is consistent with the second-order response of the final state probability.</strong></p>
 <h2 id="absorption-rate">Absorption Rate</h2>
 <p>When calculating the system&rsquo;s energy absorption rate using Fermi&rsquo;s Golden Rule, we calculate:</p>
-<p>$$
+$$
 \begin{aligned}
-P = \frac{dE_{system}}{dt} = \sum_{f} (E_f - E_i) \frac{d}{dt} |\langle f | \psi (t) \rangle_D|^2
+P = \frac{dE_{system}}{dt} = \sum_{f} (E_f - E_i) \frac{d}{dt} |\langle f | \psi (t) \rangle_D|^2 
 \end{aligned}
-$$</p>
-<p>Where $E_{i,f}$ are the energies of the initial and final states $|i\rangle,,|f\rangle$. It is not hard to understand that the rate of energy change is the transition rate multiplied by the change in energy, summed over all possible transitions.</p>
+$$<p>Where $E_{i,f}$ are the energies of the initial and final states $|i\rangle,\,|f\rangle$. It is not hard to understand that the rate of energy change is the transition rate multiplied by the change in energy, summed over all possible transitions.</p>
 <p>Extending to the language of the Kubo Formula, the energy absorption rate is actually the rate of change of the expectation value of the unperturbed Hamiltonian $\hat{H}_0$:</p>
-<p>$$
+$$
 \begin{aligned}
 P = \frac{dE_{system}}{dt} = \frac{d}{dt}\langle \hat{H}_0 \rangle
 \end{aligned}
-$$</p>
-<p>This looks intuitive, and it is not hard to prove it is the same thing as Fermi Golden Rule.</p>
-<p>$$
+$$<p>This looks intuitive, and it is not hard to prove it is the same thing as Fermi Golden Rule.</p>
+$$
 \begin{aligned}
-P &amp; = (E_f - E_i) \frac{d}{dt} |\langle f | \psi (t) \rangle|^2 \
-&amp; = \frac{d}{dt} \left{ \langle \psi (t) | \left( \sum_{f}(E_f - E_i) | f \rangle \langle f |\right) | \psi (t) \rangle \right} \
-&amp; = \frac{d}{dt} \left{ \langle \psi (t) | \left( \sum_{f}E_f | f \rangle \langle f |\right) | \psi (t) \rangle \right} - E_i \frac{d}{dt} \left{ \langle \psi (t) | \left( \sum_{f} | f \rangle \langle f |\right) | \psi (t) \rangle \right} \
-&amp; = \frac{d}{dt} \left{ \langle \psi (t) | \hat{H}_0 | \psi (t) \rangle \right} - E_i \frac{d}{dt} \left{ \langle \psi (t) | \mathbb{I} | \psi (t) \rangle \right} \
-&amp; = \frac{d}{dt}\langle \hat{H}_0 \rangle - 0
+P & = (E_f - E_i) \frac{d}{dt} |\langle f | \psi (t) \rangle|^2 \\
+& = \frac{d}{dt} \left\{ \langle \psi (t) | \left( \sum_{f}(E_f - E_i) | f \rangle \langle f |\right) | \psi (t) \rangle \right\} \\
+& = \frac{d}{dt} \left\{ \langle \psi (t) | \left( \sum_{f}E_f | f \rangle \langle f |\right) | \psi (t) \rangle \right\} - E_i \frac{d}{dt} \left\{ \langle \psi (t) | \left( \sum_{f} | f \rangle \langle f |\right) | \psi (t) \rangle \right\} \\
+& = \frac{d}{dt} \left\{ \langle \psi (t) | \hat{H}_0 | \psi (t) \rangle \right\} - E_i \frac{d}{dt} \left\{ \langle \psi (t) | \mathbb{I} | \psi (t) \rangle \right\} \\
+& = \frac{d}{dt}\langle \hat{H}_0 \rangle - 0
 \end{aligned}
-$$</p>
-<p>This is the result for pure states. Mixed states are just superpositions of results according to probability, which can be imagined to hold true as well.</p>
+$$<p>This is the result for pure states. Mixed states are just superpositions of results according to probability, which can be imagined to hold true as well.</p>
 <p>In this way, we have unified and extended the language of transition rates and energy absorption rates to the Kubo Formula. It is worth mentioning that, similar to the probability of the $|f\rangle$ state, the lowest-order non-zero response of $\langle \hat{H}_0 \rangle$ also starts from the second order.</p>
 <h2 id="joule-heat--energy-absorption">Joule Heat = Energy Absorption</h2>
 <p>Next, we prove the consistency of Joule heat and energy absorption rate in the Kubo Formula.</p>
 <p>Joule heat is defined as the inner product of current response and external electric field $\langle \hat{\mathbf{J}} \rangle (t) \cdot \mathbf{E}(t)$.</p>
 <p>For electric field perturbation (we first consider a spatially uniform time-varying electric field), the perturbation Hamiltonian is:</p>
-<p>$$
+$$
 \begin{aligned}
 \hat{V}_S(t) = - \hat{\mathbf{P}} \cdot \mathbf{E}(t) = -(-e) \hat{\mathbf{r}} \cdot \mathbf{E}(t)
 \end{aligned}
-$$</p>
-<p>The $n$-th order perturbation of the current response $\langle \hat{\mathbf{J}} \rangle (t)$:</p>
-<p>$$
+$$<p>The $n$-th order perturbation of the current response $\langle \hat{\mathbf{J}} \rangle (t)$:</p>
+$$
 \begin{aligned}
 \langle \hat{\mathbf{J}} \rangle^{(n)} (t) \propto \mathcal{O}(|\mathbf{E}|^n) \propto \mathcal{O}(V^n)
 \end{aligned}
-$$</p>
-<p>The corresponding $n+1$-th order perturbation of Joule heat $\langle \hat{\mathbf{J}} \rangle (t) \cdot \mathbf{E}(t)$:</p>
-<p>$$
+$$<p>The corresponding $n+1$-th order perturbation of Joule heat $\langle \hat{\mathbf{J}} \rangle (t) \cdot \mathbf{E}(t)$:</p>
+$$
 \begin{aligned}
 \langle \hat{\mathbf{J}} \rangle^{(n)} (t) \cdot \mathbf{E}(t) \propto {O}(|\mathbf{E}|^{n+1}) \propto \mathcal{O}(V^{n+1})
 \end{aligned}
-$$</p>
-<p>Thus, the Joule heat of the linear (first-order) current response and the second-order response of the energy change rate are consistent in terms of the order of perturbation expansion.</p>
+$$<p>Thus, the Joule heat of the linear (first-order) current response and the second-order response of the energy change rate are consistent in terms of the order of perturbation expansion.</p>
 <p>Our goal is to prove that <strong>the Joule heat of the linear (first-order) current response and the second-order response of the energy change rate</strong> are strictly consistent in expression.</p>
 <h2 id="current-response">Current Response</h2>
 <p>Here we define &ldquo;current&rdquo; as the rate of change of electric polarization, i.e., the volume integral of current density:</p>
-<p>$$
+$$
 \begin{aligned}
 \hat{\mathbf{J}} \equiv \iiint dV \hat{\mathbf{j}} \equiv \frac{d}{dt} \hat{\mathbf{P}}
 \end{aligned}
-$$</p>
-<p>In the Dirac Picture, the relationship between the current operator and the electric polarization operator is:</p>
-<p>$$
+$$<p>In the Dirac Picture, the relationship between the current operator and the electric polarization operator is:</p>
+$$
 \begin{aligned}
 \hat{\mathbf{J}}_D = \frac{d}{dt} \hat{\mathbf{P}}_D = (- \frac{i}{\hbar}) [ \hat{\mathbf{P}}_D, \hat{H}_0 ]
 \end{aligned}
-$$</p>
-<p>Thus, the first-order current response of the perturbation $\hat{V}_S(t) = - \hat{\mathbf{P}} \cdot \mathbf{E}(t)$ is:</p>
-<p>$$
+$$<p>Thus, the first-order current response of the perturbation $\hat{V}_S(t) = - \hat{\mathbf{P}} \cdot \mathbf{E}(t)$ is:</p>
+$$
 \begin{aligned}
-\langle \hat{\mathbf{J}} \rangle^{(1)} (t) &amp; = (- \frac{i}{\hbar}) \int_{-\infty}^{t} dt_1 \operatorname{Tr} \left{ \hat{\rho}_0 [\hat{\mathbf{J}}_D(t) , \hat{V}<em>D(t_1)] \right} \
-&amp; = (- \frac{i}{\hbar})^2 \int</em>{-\infty}^{t} dt_1 \operatorname{Tr} \left{ \hat{\rho}_0 [ [ \hat{\mathbf{P}}_D, \hat{H}_0 ] , \hat{V}_D(t_1)] \right}
+\langle \hat{\mathbf{J}} \rangle^{(1)} (t) & = (- \frac{i}{\hbar}) \int_{-\infty}^{t} dt_1 \operatorname{Tr} \left\{ \hat{\rho}_0 [\hat{\mathbf{J}}_D(t) , \hat{V}_D(t_1)] \right\} \\
+& = (- \frac{i}{\hbar})^2 \int_{-\infty}^{t} dt_1 \operatorname{Tr} \left\{ \hat{\rho}_0 [ [ \hat{\mathbf{P}}_D, \hat{H}_0 ] , \hat{V}_D(t_1)] \right\} 
 \end{aligned}
-$$</p>
-<p>Thus, the second-order Joule heat corresponding to the first-order current response is:</p>
-<p>$$
+$$<p>Thus, the second-order Joule heat corresponding to the first-order current response is:</p>
+$$
 \begin{aligned}
-\langle \hat{\mathbf{J}} \rangle^{(1)} (t) \cdot \mathbf{E} (t) &amp; = (- \frac{i}{\hbar}) \int_{-\infty}^{t} dt_1 \operatorname{Tr} \left{ \hat{\rho}_0 [\hat{\mathbf{J}}_D(t) \cdot \mathbf{E} (t) , \hat{V}<em>D(t_1)] \right}  \
-&amp; = (- \frac{i}{\hbar})^2 \int</em>{-\infty}^{t} dt_1 \operatorname{Tr} \left{ \hat{\rho}_0 [ [ \hat{\mathbf{P}}_D \cdot \mathbf{E} (t) , \hat{H}_0 ] , \hat{V}_D(t_1)] \right}
+\langle \hat{\mathbf{J}} \rangle^{(1)} (t) \cdot \mathbf{E} (t) & = (- \frac{i}{\hbar}) \int_{-\infty}^{t} dt_1 \operatorname{Tr} \left\{ \hat{\rho}_0 [\hat{\mathbf{J}}_D(t) \cdot \mathbf{E} (t) , \hat{V}_D(t_1)] \right\}  \\
+& = (- \frac{i}{\hbar})^2 \int_{-\infty}^{t} dt_1 \operatorname{Tr} \left\{ \hat{\rho}_0 [ [ \hat{\mathbf{P}}_D \cdot \mathbf{E} (t) , \hat{H}_0 ] , \hat{V}_D(t_1)] \right\}
 \end{aligned}
-$$</p>
-<p>And $\hat{\mathbf{P}}_D \cdot \mathbf{E} (t)$ is exactly the expression for the perturbation $-\hat{V}_D(t)$. Specifically:</p>
-<p>$$
+$$<p>And $\hat{\mathbf{P}}_D \cdot \mathbf{E} (t)$ is exactly the expression for the perturbation $-\hat{V}_D(t)$. Specifically:</p>
+$$
 \begin{aligned}
-\langle \hat{\mathbf{J}} \rangle^{(1)} (t) \cdot \mathbf{E} (t) &amp; = (- \frac{i}{\hbar})^2 \int_{-\infty}^{t} dt_1 \operatorname{Tr} \left{ \hat{\rho}_0 [ [ -\hat{V}_D(t) , \hat{H}_0 ] , \hat{V}<em>D(t_1)] \right} \
-&amp; = (- \frac{i}{\hbar})^2 \int</em>{-\infty}^{t} dt_1 \operatorname{Tr} \left{ \hat{\rho}_0 [ [ \hat{H}_0, \hat{V}_D(t) ] , \hat{V}_D(t_1)] \right}
+\langle \hat{\mathbf{J}} \rangle^{(1)} (t) \cdot \mathbf{E} (t) & = (- \frac{i}{\hbar})^2 \int_{-\infty}^{t} dt_1 \operatorname{Tr} \left\{ \hat{\rho}_0 [ [ -\hat{V}_D(t) , \hat{H}_0 ] , \hat{V}_D(t_1)] \right\} \\
+& = (- \frac{i}{\hbar})^2 \int_{-\infty}^{t} dt_1 \operatorname{Tr} \left\{ \hat{\rho}_0 [ [ \hat{H}_0, \hat{V}_D(t) ] , \hat{V}_D(t_1)] \right\}
 \end{aligned}
-$$</p>
-<p>Seeing the commutator of two $\hat{V}_D$s, it is easy to see that this is basically the rate of change of the second-order response of $\langle \hat{H}_0 \rangle$. One time integral is missing because the derivative with respect to time was taken. Specifically:</p>
-<p>$$
+$$<p>Seeing the commutator of two $\hat{V}_D$s, it is easy to see that this is basically the rate of change of the second-order response of $\langle \hat{H}_0 \rangle$. One time integral is missing because the derivative with respect to time was taken. Specifically:</p>
+$$
 \begin{aligned}
-\langle \hat{H}<em>0 \rangle^{(2)} (t) &amp; = (-\frac{\mathrm{i}}{\hbar})^2 \int</em>{-\infty}^t \mathrm{~d} t_1 \int_{-\infty}^{t_1} \mathrm{~d} t_2  \operatorname{Tr} \left{\rho_0\left[ \left[{\hat{H}<em>0}<em>D(t), \hat{V}</em>{D}\left(t_1\right)\right],\hat{V}</em>{D}\left(t_2\right)\right]\right} \
-&amp; = (-\frac{\mathrm{i}}{\hbar})^2 \int_{-\infty}^t \mathrm{~d} t_1 \int_{-\infty}^{t_1} \mathrm{~d} t_2  \operatorname{Tr} \left{\rho_0\left[ \left[\hat{H}<em>0, \hat{V}</em>{D}\left(t_1\right)\right],\hat{V}_{D}\left(t_2\right)\right]\right} \
+\langle \hat{H}_0 \rangle^{(2)} (t) & = (-\frac{\mathrm{i}}{\hbar})^2 \int_{-\infty}^t \mathrm{~d} t_1 \int_{-\infty}^{t_1} \mathrm{~d} t_2  \operatorname{Tr} \left\{\rho_0\left[ \left[{\hat{H}_0}_D(t), \hat{V}_{D}\left(t_1\right)\right],\hat{V}_{D}\left(t_2\right)\right]\right\} \\
+& = (-\frac{\mathrm{i}}{\hbar})^2 \int_{-\infty}^t \mathrm{~d} t_1 \int_{-\infty}^{t_1} \mathrm{~d} t_2  \operatorname{Tr} \left\{\rho_0\left[ \left[\hat{H}_0, \hat{V}_{D}\left(t_1\right)\right],\hat{V}_{D}\left(t_2\right)\right]\right\} \\
 \end{aligned}
-$$</p>
-<p>Here we used the property that ${\hat{H}_0}$ is itself in the Dirac Picture, and the property that ${\hat{H}_0}_D(t)$ does not explicitly contain time (time translation symmetry):</p>
-<p>$$
+$$<p>Here we used the property that ${\hat{H}_0}$ is itself in the Dirac Picture, and the property that ${\hat{H}_0}_D(t)$ does not explicitly contain time (time translation symmetry):</p>
+$$
 \begin{aligned}
 {\hat{H}_0}_D(t) = e^{ \frac{i}{\hbar}\hat{H}_0 t} {\hat{H}_0} e^{- \frac{i}{\hbar}\hat{H}_0 t} = \hat{H}_0
 \end{aligned}
-$$</p>
-<p>At this point, the dependence of the second-order response of $\langle \hat{H}_0 \rangle$ on time is only in the upper limit of the first time integral. Therefore, its rate of change has one less time integral (and changes the integration variable $t_1$ to $t$), and is completely consistent with the Joule heat expression for the first-order current response:</p>
-<p>$$
+$$<p>At this point, the dependence of the second-order response of $\langle \hat{H}_0 \rangle$ on time is only in the upper limit of the first time integral. Therefore, its rate of change has one less time integral (and changes the integration variable $t_1$ to $t$), and is completely consistent with the Joule heat expression for the first-order current response:</p>
+$$
 \begin{aligned}
-\frac{d}{dt} \langle \hat{H}<em>0 \rangle^{(2)} &amp;= (-\frac{\mathrm{i}}{\hbar})^2  \int</em>{-\infty}^{t} \mathrm{~d} t_2  \operatorname{Tr} \left{\hat{\rho}<em>0\left[ \left[\hat{H}<em>0, \hat{V}</em>{D}(t)\right],\hat{V}</em>{D}(t_2)\right]\right} \
-\langle \hat{\mathbf{J}} \rangle^{(1)} (t) \cdot \mathbf{E} (t) &amp; = (-\frac{\mathrm{i}}{\hbar})^2 \int_{-\infty}^{t} \mathrm{~d} t_1 \operatorname{Tr} \left{ \hat{\rho}_0 \left[ \left[ \hat{H}_0, \hat{V}_D(t) \right] , \hat{V}_D(t_1) \right] \right} \
-\Rightarrow P = \frac{d}{dt} \langle \hat{H}_0 \rangle^{(2)} &amp; = \langle \hat{\mathbf{J}} \rangle^{(1)} (t) \cdot \mathbf{E} (t)
+\frac{d}{dt} \langle \hat{H}_0 \rangle^{(2)} &= (-\frac{\mathrm{i}}{\hbar})^2  \int_{-\infty}^{t} \mathrm{~d} t_2  \operatorname{Tr} \left\{\hat{\rho}_0\left[ \left[\hat{H}_0, \hat{V}_{D}(t)\right],\hat{V}_{D}(t_2)\right]\right\} \\
+\langle \hat{\mathbf{J}} \rangle^{(1)} (t) \cdot \mathbf{E} (t) & = (-\frac{\mathrm{i}}{\hbar})^2 \int_{-\infty}^{t} \mathrm{~d} t_1 \operatorname{Tr} \left\{ \hat{\rho}_0 \left[ \left[ \hat{H}_0, \hat{V}_D(t) \right] , \hat{V}_D(t_1) \right] \right\} \\
+\Rightarrow P = \frac{d}{dt} \langle \hat{H}_0 \rangle^{(2)} & = \langle \hat{\mathbf{J}} \rangle^{(1)} (t) \cdot \mathbf{E} (t)
 \end{aligned}
-$$</p>
-<p>It is not difficult to verify that higher-order current responses and energy change rates also correspond one-to-one.</p>
+$$<p>It is not difficult to verify that higher-order current responses and energy change rates also correspond one-to-one.</p>
 <p>Thus, we have proved the consistency of the energy change rate and the current response Joule heat formula.</p>
 <h2 id="summary">Summary</h2>
 <p>In summary, we have proved the consistency of Fermi&rsquo;s Golden Rule and the Joule heat formula in calculating the absorption of electromagnetic waves by a quantum system.</p>
 <p>First, we proved the consistency between the energy absorption rate calculated by Fermi&rsquo;s Golden Rule and the energy response change rate:</p>
-<p>$$
+$$
 \begin{aligned}
-\underbrace{P = \sum_{f} (E_f - E_i) \frac{d}{dt} |\langle f | \psi (t) \rangle_D|^2}<em>{\text{Fermi Golden Rule}} \ \Leftrightarrow \ P = \frac{dE</em>{system}}{dt} = \frac{d}{dt}\langle \hat{H}_0 \rangle
+\underbrace{P = \sum_{f} (E_f - E_i) \frac{d}{dt} |\langle f | \psi (t) \rangle_D|^2}_{\text{Fermi Golden Rule}} \ \Leftrightarrow \ P = \frac{dE_{system}}{dt} = \frac{d}{dt}\langle \hat{H}_0 \rangle
 \end{aligned}
-$$</p>
-<p>Afterwards, we proved the consistency between the Joule heat formula using current response multiplied by electric field and the energy response change rate:</p>
-<p>$$
+$$<p>Afterwards, we proved the consistency between the Joule heat formula using current response multiplied by electric field and the energy response change rate:</p>
+$$
 \begin{aligned}
-&amp; \underbrace{P = \langle \hat{\mathbf{J}} \rangle^{(1)} (t) \cdot \mathbf{E} (t) = (-\frac{\mathrm{i}}{\hbar})^2 \int_{-\infty}^{t} \mathrm{~d} t_1 \operatorname{Tr} \left{ \hat{\rho}_0 \left[ \left[ \hat{H}_0, \hat{V}_D(t) \right] , \hat{V}<em>D(t_1) \right] \right}}</em>{\text{Joule Heat}} \
-\Leftrightarrow \  &amp;P = \frac{d}{dt} \langle \hat{H}<em>0 \rangle^{(2)} = (-\frac{\mathrm{i}}{\hbar})^2  \int</em>{-\infty}^{t} \mathrm{~d} t_2  \operatorname{Tr} \left{\hat{\rho}<em>0\left[ \left[\hat{H}<em>0, \hat{V}</em>{D}(t)\right],\hat{V}</em>{D}(t_2)\right]\right}
+& \underbrace{P = \langle \hat{\mathbf{J}} \rangle^{(1)} (t) \cdot \mathbf{E} (t) = (-\frac{\mathrm{i}}{\hbar})^2 \int_{-\infty}^{t} \mathrm{~d} t_1 \operatorname{Tr} \left\{ \hat{\rho}_0 \left[ \left[ \hat{H}_0, \hat{V}_D(t) \right] , \hat{V}_D(t_1) \right] \right\}}_{\text{Joule Heat}} \\
+\Leftrightarrow \  &P = \frac{d}{dt} \langle \hat{H}_0 \rangle^{(2)} = (-\frac{\mathrm{i}}{\hbar})^2  \int_{-\infty}^{t} \mathrm{~d} t_2  \operatorname{Tr} \left\{\hat{\rho}_0\left[ \left[\hat{H}_0, \hat{V}_{D}(t)\right],\hat{V}_{D}(t_2)\right]\right\}
 \end{aligned}
-$$</p>
-<p>Therefore, the Joule heat formula of current response multiplied by electric field, and Fermi&rsquo;s Golden Rule of quantum transition rate multiplied by energy change, are essentially both energy response rates.</p>
+$$<p>Therefore, the Joule heat formula of current response multiplied by electric field, and Fermi&rsquo;s Golden Rule of quantum transition rate multiplied by energy change, are essentially both energy response rates.</p>
 <p>Thus, we can say that the seemingly macroscopic &ldquo;Joule Heat&rdquo; and the seemingly microscopic &ldquo;Fermi Golden Rule&rdquo; are the same thing.</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">

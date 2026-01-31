@@ -11,6 +11,7 @@ theme = "LoveIt"
 [languages]
   [languages.en]
     weight = 1
+    languageName = "English"
     title = "OkongOyangO's Notes"
     languageCode = "en"
     [languages.en.params]
@@ -37,6 +38,7 @@ theme = "LoveIt"
 
   [languages.zh-cn]
     weight = 2
+    languageName = "简体中文"
     title = "OkongOyangO的物理笔记"
     languageCode = "zh-CN"
     [languages.zh-cn.params]
@@ -63,6 +65,7 @@ theme = "LoveIt"
 
   [languages.ja]
     weight = 3
+    languageName = "日本語"
     title = "OkongOyangOのノート"
     languageCode = "ja"
     [languages.ja.params]

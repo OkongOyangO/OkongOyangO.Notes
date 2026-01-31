@@ -12,6 +12,8 @@ categories: ["Physics Notes"]
 
 本文旨在推导Kubo Formula的非线性响应理论。
 
+<!--more-->
+
 ## Introduction
 
 Kubo Formula的线性和非线性响应理论本质上都是量子力学的微扰论。

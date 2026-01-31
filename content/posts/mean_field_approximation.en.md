@@ -11,6 +11,8 @@ This article aims to introduce the mean field approximation while elucidating it
 
 Hartree, Fock, and BCS—these individual mean field approximations appear to be mutually incompatible decoupling methods. However, by leveraging the variational nature of the mean field approximation, we discover that they can indeed be mixed 1:1:1.
 
+<!--more-->
+
 ## Preface
 
 The inspiration for this article primarily comes from discussions with classmate [@ykli](https://www.zhihu.com/people/li-yong-kang-9-34). I would like to express my special thanks to [@ykli](https://www.zhihu.com/people/li-yong-kang-9-34) for the significant assistance provided during the derivation process.

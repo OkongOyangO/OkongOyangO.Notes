@@ -14,26 +14,24 @@
 <h2 id="fermi-golden-rule">Fermi Golden Rule</h2>
 <p>费米黄金法则旨在计算时谐外场微扰下，量子系统从初态$|i\rangle$到末态$|f\rangle$（均为$H_0$的本征态）的跃迁速率。由于量子力学课程中已经阐述的很完备，此处我们在Dirac表象（相互作用表象）下速通一遍。使用Dirac表象是为了更好与Kubo Formula进行比较</p>
 <p>Dirac表象下态的运动方程：</p>
-<p>$$
+$$
 \begin{aligned}
 i \hbar \partial_t |\psi(t) \rangle_D = \hat{V}_D(t) |\psi(t) \rangle_D
 \end{aligned}
-$$</p>
-<p>Dirac表象下的算符：</p>
-<p>$$
+$$<p>Dirac表象下的算符：</p>
+$$
 \begin{aligned}
 \hat{\mathcal{O}}_D(t) = e^{i\hat{H_0}t/\hbar} \hat{\mathcal{O}}_S(t) e^{-i\hat{H_0}t/\hbar}
 \end{aligned}
-$$</p>
-<p>下标$D,,S$分别代表Dirac表象和Schrodinger表象。</p>
-<p>对运动方程积分后迭代可以得到Dirac表象下态的演化算符$\mathcal{U}(t,t&rsquo;)$：</p>
-<p>$$
+$$<p>下标$D,\,S$分别代表Dirac表象和Schrodinger表象。</p>
+<p>对运动方程积分后迭代可以得到Dirac表象下态的演化算符$\mathcal{U}(t,t')$：</p>
+$$
 \begin{aligned}
-\mathcal{U}(t,t&rsquo;) &amp; = \mathcal{T} e^{-i \int_{t&rsquo;}^{t}dt&rsquo;&rsquo; \hat{V}<em>D(t&rsquo;&rsquo;)/\hbar }  \
-&amp; = 1 + (-i/\hbar) \int</em>{t&rsquo;}^{t}dt_1 \hat{V}<em>D(t_1) + \frac{1}{2!} (-i/\hbar)^2 \int</em>{t&rsquo;}^{t}dt_1 \int_{t&rsquo;}^{t}dt_2 \mathcal{T} \hat{V}<em>D(t_1) \hat{V}<em>D(t_2) + \dots \
-&amp; = 1 + (-i/\hbar) \int</em>{t&rsquo;}^{t}dt_1 \hat{V}<em>D(t_1) +  (-i/\hbar)^2 \int</em>{t&rsquo;}^{t}dt_1 \int</em>{t&rsquo;}^{\mathbf{t_1}}dt_2  \hat{V}_D(t_1) \hat{V}_D(t_2) + \dots
+\mathcal{U}(t,t') & = \mathcal{T} e^{-i \int_{t'}^{t}dt'' \hat{V}_D(t'')/\hbar }  \\
+& = 1 + (-i/\hbar) \int_{t'}^{t}dt_1 \hat{V}_D(t_1) + \frac{1}{2!} (-i/\hbar)^2 \int_{t'}^{t}dt_1 \int_{t'}^{t}dt_2 \mathcal{T} \hat{V}_D(t_1) \hat{V}_D(t_2) + \dots \\
+& = 1 + (-i/\hbar) \int_{t'}^{t}dt_1 \hat{V}_D(t_1) +  (-i/\hbar)^2 \int_{t'}^{t}dt_1 \int_{t'}^{\mathbf{t_1}}dt_2  \hat{V}_D(t_1) \hat{V}_D(t_2) + \dots 
 \end{aligned}
-$$</p>]]></description>
+$$<p>其中$\mathcal{T}$是time ordering operator，将时间小的算符放在右边，先和态矢作用。上面也给出了不用time ordering的表达式，可以对运动方程积分，迭代获得。</p>]]></description>
 </item>
 <item>
     <title>平均场近似与变分法｜Hartree, Fock, BCS能1:1:1混用吗？</title>
@@ -51,24 +49,32 @@ $$</p>]]></description>
 <p><a href="https://www.zhihu.com/question/410499049/answer/2442413803" target="_blank" rel="noopener noreffer ">https://www.zhihu.com/question/410499049/answer/2442413803</a></p>
 <h2 id="introduction">Introduction</h2>
 <p>对于相互作用体系，系统完整的哈密顿量为：</p>
-<p>$$
+$$
 \begin{aligned}
-\hat{H} = \hat{H}<em>0 + \hat{V}</em>{int}
+\hat{H} = \hat{H}_0 + \hat{V}_{int}
 \end{aligned}
-$$</p>
-<p>其中，$\hat{H}_0 \sim \sum c^\dagger c$，为费米子产生湮灭算符的二次型部分，比较容易处理成independent free particle。</p>
+$$<p>其中，$\hat{H}_0 \sim \sum c^\dagger c$，为费米子产生湮灭算符的二次型部分，比较容易处理成independent free particle。</p>
 <p>而$\hat{V}_{int} \sim \sum c^\dagger c^\dagger c c$，为相互作用部分。</p>
 <p>由于相互作用的存在，我们比较难求系统的基态波函数或者平衡态密度矩阵，从而比较难以计算相互作用体系的各种信息。因此，我们常常用各种近似方法来处理。</p>
 <p>平均场近似便是一种方法，我们取一个可以严格解的平均场近似哈密顿量：</p>
-<p>$$
+$$
 \begin{aligned}
-\hat{H}_{mf} = \hat{H}<em>0 + \hat{V}</em>{mf}
+\hat{H}_{mf} = \hat{H}_0 + \hat{V}_{mf}
 \end{aligned}
-$$</p>
-<p>使得$\hat{V}_{mf}$也为二次型，则比较好求严格解，我们便可以用这个平均场近似哈密顿量的解来近似给出系统的各种性质。</p>
+$$<p>使得$\hat{V}_{mf}$也为二次型，则比较好求严格解，我们便可以用这个平均场近似哈密顿量的解来近似给出系统的各种性质。</p>
 <h2 id="mean-field-theory-by-decoupling">Mean Field Theory by Decoupling</h2>
 <p>但取近似不能瞎取，也需要一定技巧。</p>
-<p>量子力学课本中教我们，平均场近似就是把算符的quantum fluctuation部分给忽略，即Decoupling Method：</p>]]></description>
+<p>量子力学课本中教我们，平均场近似就是把算符的quantum fluctuation部分给忽略，即Decoupling Method：</p>
+$$
+\begin{aligned}
+A^\dagger A & = [\langle A \rangle + (A - \langle A \rangle)]^\dagger [\langle A \rangle + (A - \langle A \rangle)] \\
+& \equiv [\langle A \rangle + \delta A]^\dagger [\langle A \rangle + \delta A]  \\
+& = \underbrace{\langle A^\dagger \rangle \langle A \rangle}_{\mathcal{O}(\delta A^0)} + \underbrace{\langle A^\dagger \rangle \delta A +  \delta A^\dagger \langle A \rangle}_{\mathcal{O}(\delta A^1)} + \underbrace{\delta A^\dagger \delta A}_{\mathcal{O}(\delta A^2)} \\
+& = \underbrace{\langle A^\dagger \rangle A + A^\dagger \langle A \rangle - \langle A^\dagger \rangle \langle A \rangle}_{\text{mean field}\ =\ \mathcal{O}(\delta A^0) + \mathcal{O}(\delta A^1)} \\
+& + \underbrace{(A - \langle A \rangle)^\dagger (A - \langle A \rangle)}_{\text{quantum fluctuation}\ =\ \mathcal{O}(\delta A^2)} \\
+& \approx \langle A^\dagger \rangle A + A^\dagger \langle A \rangle - \langle A^\dagger \rangle \langle A \rangle
+\end{aligned}
+$$<p>其中mean field部分保留了算符涨落$\delta A$的零阶和一阶部分，而quantum fluctuation包含了算符涨落$\delta A$的二阶部分。</p>]]></description>
 </item>
 <item>
     <title>费米黄金定则？焦耳热罢了！</title>
@@ -86,18 +92,17 @@ $$</p>
 <h2 id="fermi-golden-rule">Fermi Golden Rule</h2>
 <p>费米黄金法则旨在计算时谐外场微扰下，量子系统从初态$|i\rangle$到末态$|f\rangle$（均为$H_0$的本征态）的跃迁速率。在之前的费米黄金法则的文章中，我们用Dirac Picture重新推导了一遍，而使用Dirac Picture是为了更好与Kubo Formula进行比较。</p>
 <p>Dirac表象下态的运动方程：</p>
-<p>$$
+$$
 \begin{aligned}
 i \hbar \partial_t |\psi(t) \rangle_D = \hat{V}_D(t) |\psi(t) \rangle_D
 \end{aligned}
-$$</p>
-<p>对运动方程积分后迭代可以得到Dirac表象下态随时间演化的微扰展开形式。假设系统在$t = t_0$时，初态为$|i\rangle$，则：</p>
-<p>$$
+$$<p>对运动方程积分后迭代可以得到Dirac表象下态随时间演化的微扰展开形式。假设系统在$t = t_0$时，初态为$|i\rangle$，则：</p>
+$$
 \begin{aligned}
-| \psi (t) \rangle_D &amp; = |i\rangle + (-i/\hbar) \int_{t_0}^{t}dt_1 \hat{V}<em>D(t_1)|i\rangle + (-i/\hbar)^2 \int</em>{t_0}^{t}dt_1 \int_{t_0}^{\mathbf{t_1}}dt_2  \hat{V}_D(t_1) \hat{V}_D(t_2)|i\rangle + \dots \
-&amp; = | \psi^{(0)} \rangle + | \psi^{(1)}\rangle + | \psi^{(2)}\rangle + \dots
+| \psi (t) \rangle_D & = |i\rangle + (-i/\hbar) \int_{t_0}^{t}dt_1 \hat{V}_D(t_1)|i\rangle + (-i/\hbar)^2 \int_{t_0}^{t}dt_1 \int_{t_0}^{\mathbf{t_1}}dt_2  \hat{V}_D(t_1) \hat{V}_D(t_2)|i\rangle + \dots \\
+& = | \psi^{(0)} \rangle + | \psi^{(1)}\rangle + | \psi^{(2)}\rangle + \dots
 \end{aligned}
-$$</p>]]></description>
+$$<p>则$t$时刻$|f\rangle$态的概率为也可以微扰展开成：</p>]]></description>
 </item>
 <item>
     <title>分数量子霍尔效应(FQHE)、分数反常量子霍尔效应(FAQHE)与分数陈绝缘体(FCI)</title>
@@ -118,11 +123,11 @@ $$</p>]]></description>
 <h2 id="physics-in-lll">Physics in L.L.L.</h2>
 <p>为了将（近）自由电子气系统中的分数量子霍尔效应“<strong>无缝衔接</strong>”到陈绝缘体的晶格系统中，我们首先回顾最低朗道能级(L.L.L.)中的物理。</p>
 <p>磁场中电子的Hamiltonian：</p>
-<p>$$
+$$
 \begin{aligned}
 H=\frac{1}{2 m}\left( \hat{\mathbf{p}} + e \mathbf{A}(\hat{\mathbf{r}}) \right)^2 = \frac{\boldsymbol{\pi}^2}{2m}
 \end{aligned}
-$$</p>]]></description>
+$$<p>对于恒定外磁场中的自由电子气，可以不选取特定规范计算Landau能级，也可以在Landau Gauge和Symmetric Gauge下严格求解单电子波函数。</p>]]></description>
 </item>
 <item>
     <title>久保同学不放过我｜Kubo Formula的非线性响应理论</title>
@@ -144,17 +149,16 @@ $$</p>]]></description>
 <p>Kubo Formula的推导从相互作用（Dirac）绘景下，系统密度矩阵的演化开始。</p>
 <p>在Fermi Golden Rule那节中，我们已经推导了相互作用（Dirac）绘景下波函数的运动方程。</p>
 <p>简单将密度矩阵看成$\hat{\rho}_D(t) \sim | \psi (t) \rangle_D \langle \psi(t) |_D$，有利于我们快速回忆起相互作用（Dirac）绘景下密度矩阵的运动方程：</p>
-<p>$$
+$$
 \begin{aligned}
 \frac{d}{dt} \hat{\rho}_D(t) = - \frac{i}{\hbar} [ \hat{\rho}_D(t) , \hat{V}_D(t) ]
 \end{aligned}
-$$</p>
-<p>积分后重复迭代，我们可以得到密度矩阵的展开式：</p>
-<p>$$
+$$<p>积分后重复迭代，我们可以得到密度矩阵的展开式：</p>
+$$
 \begin{aligned}
-\hat{\rho}<em>D(t) = \hat{\rho}<em>0 + \sum</em>{n = 1}^{\infty} (-\frac{\mathrm{i}}{\hbar})^n \int</em>{-\infty}^{t} dt_1 \int_{-\infty}^{t_1} dt_2 \dots \int_{-\infty}^{t_{n-1}} dt_n [\hat{V}_D(t_1),[\dots[\hat{V}_D(t_n),\hat{\rho}_0]\dots] ]
+\hat{\rho}_D(t) = \hat{\rho}_0 + \sum_{n = 1}^{\infty} (-\frac{\mathrm{i}}{\hbar})^n \int_{-\infty}^{t} dt_1 \int_{-\infty}^{t_1} dt_2 \dots \int_{-\infty}^{t_{n-1}} dt_n [\hat{V}_D(t_1),[\dots[\hat{V}_D(t_n),\hat{\rho}_0]\dots] ]
 \end{aligned}
-$$</p>]]></description>
+$$<p>注意每个积分的上界并非均为$t$。</p>]]></description>
 </item>
 <item>
     <title>只看基态如何区分导体和绝缘体？🤔</title>
@@ -165,7 +169,7 @@ $$</p>]]></description>
     <description><![CDATA[<p>本note旨在阐述多体系统<strong>导电性</strong>与<strong>基态量子几何性质</strong>的关联，并解释如何仅通过基态波函数的“局域”程度，来区分导体和绝缘体。</p>
 <h2 id="introduction">Introduction</h2>
 <p>“只看基态就能区分导体和绝缘体”，这个argument似乎有些离谱。</p>
-<p>1930年代的能带论（一定程度上）解释了导体和绝缘体的区别。在non-interacting层面上，导体与绝缘体可以根据基态能带是否填满来判断。价带若被填满，且和导带有带隙$E_g &gt; 0$，则是绝缘体；反之则为导体。此时可以用带隙$E_g$区分导体和绝缘体，而带隙$E_g$至少需要知道激发态的能量，故不可避免涉及激发态性质。</p>
+<p>1930年代的能带论（一定程度上）解释了导体和绝缘体的区别。在non-interacting层面上，导体与绝缘体可以根据基态能带是否填满来判断。价带若被填满，且和导带有带隙$E_g > 0$，则是绝缘体；反之则为导体。此时可以用带隙$E_g$区分导体和绝缘体，而带隙$E_g$至少需要知道激发态的能量，故不可避免涉及激发态性质。</p>
 <p>但1949年提出的Mott Insulator（由强电子-电子关联导致）和1958年提出的Anderson Insulator（由强无序导致）指出了能带论在区分导体和绝缘体上的漏洞，即多体系统的绝缘机制不只有包括价带被填满，还可能与强关联、无序有关。同理，除了无带隙可以是导体的产生机制，一些无序的金属合金也可能是导体。例如，无序的合金体系中，虽然没有带隙，但仍可能为绝缘体，这正是Anderson Localization导致的局域态没法稳定输运电流导致的。</p>
 <p>更何况，多体系统可以根本没有晶格，我们急需一种更universal的判断多体系统导电性质的indicator。</p>
 <p>唯象而言，导体与绝缘体的区别在于直流电导率$\text{Re}\sigma(\omega\rightarrow 0)$的不同，因为一般的绝缘体通交流电也能导电。或者靠电极化现象区分，绝缘体中电子束缚，只能在原子附近运动，才有明显的电极化现象，而导体中电子趋于自由运动，外加电场会使其自由流动，因而没有良定的电极化现象。</p>
@@ -179,13 +183,17 @@ $$</p>]]></description>
 <p>这里需要阐明，所谓“基态多体波函数在many-body configuration的‘局域’程度”，与单体波函数的局域程度不同，但在定义上有相似之处。而且从单体波函数的角度推导更加简单，所以我们先介绍单体波函数的局域程度的定义，讨论其性质，之后再推广到Kohn、Resta等人论文中的多体情形。</p>
 <p>以固体能带体系为例，不论是绝缘体还是导体，其单电子本征态都是延展的Bloch波函数。不过我们可以通过Fourier Transfer将这些实空间延展的Bloch本征态变成实空间局域的Wannier Function。</p>
 <p>Wannier函数$|\mathbf{R} n\rangle$和Bloch波函数$\left|\psi_{n \mathbf{k}}\right\rangle$之间的转换关系：</p>
-<p>$$
+$$
 \begin{aligned}
 \left|\psi_{n \mathbf{k}}\right\rangle=
 \sum_{\mathbf{R}} e^{i \mathbf{k} \cdot \mathbf{R}}|\mathbf{R} n\rangle \Leftrightarrow |\mathbf{R} n\rangle=\frac{1}{N} \sum_{\mathbf{k}} e^{-i \mathbf{k} \cdot \mathbf{R}}\left|\psi_{n \mathbf{k}}\right\rangle
 \end{aligned}
-$$</p>
-<p>Wannier波函数的局域程度与能带的规范选取有关。如果我们给Bloch波函数加上一个与$\mathbf{k}$有关的相位（规范），仍然是本征态。</p>]]></description>
+$$<p>Wannier波函数的局域程度与能带的规范选取有关。如果我们给Bloch波函数加上一个与$\mathbf{k}$有关的相位（规范），仍然是本征态。</p>
+$$
+\begin{aligned}
+\left|\tilde{\psi}_{n \mathbf{k}}\right\rangle=e^{i \varphi_n(\mathbf{k})}\left|\psi_{n \mathbf{k}}\right\rangle \ \Rightarrow\ \hat{H}\left|\tilde{\psi}_{n \mathbf{k}}\right\rangle = \epsilon_n(\mathbf{k}) \left|\tilde{\psi}_{n \mathbf{k}}\right\rangle
+\end{aligned}
+$$<p>如何通过调节gauge使得Wannier函数达到最大局域化相关内容可以参考Vanderbilt的1997年的PRB，“Maximally localized generalized Wannier functions for composite energy bands”以及2012年的RMP，“Maximally localized Wannier functions: Theory and applications”：</p>]]></description>
 </item>
 </channel>
 </rss>
