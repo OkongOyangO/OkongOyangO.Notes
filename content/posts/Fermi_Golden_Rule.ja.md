@@ -34,11 +34,15 @@ $$
 運動方程式を積分して反復することで、ディラック描像における状態の時間発展演算子$\mathcal{U}(t,t')$が得られます：
 
 $$
-\begin{aligned}
-\mathcal{U}(t,t') & = \mathcal{T} e^{-i \int_{t'}^{t}dt'' \hat{V}_D(t'')/\hbar }  \\
-& = 1 + (-i/\hbar) \int_{t'}^{t}dt_1 \hat{V}_D(t_1) + \frac{1}{2!} (-i/\hbar)^2 \int_{t'}^{t}dt_1 \int_{t'}^{t}dt_2 \mathcal{T} \hat{V}_D(t_1) \hat{V}_D(t_2) + \dots \\
-& = 1 + (-i/\hbar) \int_{t'}^{t}dt_1 \hat{V}_D(t_1) +  (-i/\hbar)^2 \int_{t'}^{t}dt_1 \int_{t'}^{\mathbf{t_1}}dt_2  \hat{V}_D(t_1) \hat{V}_D(t_2) + \dots 
-\end{aligned}
+\mathcal{U}(t,t') = \mathcal{T} e^{-i \int_{t'}^{t}dt'' \hat{V}_D(t'')/\hbar }
+$$
+
+$$
+= 1 + (-i/\hbar) \int_{t'}^{t}dt_1 \hat{V}_D(t_1) + \frac{1}{2!} (-i/\hbar)^2 \int_{t'}^{t}dt_1 \int_{t'}^{t}dt_2 \mathcal{T} \hat{V}_D(t_1) \hat{V}_D(t_2) + \dots
+$$
+
+$$
+= 1 + (-i/\hbar) \int_{t'}^{t}dt_1 \hat{V}_D(t_1) +  (-i/\hbar)^2 \int_{t'}^{t}dt_1 \int_{t'}^{\mathbf{t_1}}dt_2  \hat{V}_D(t_1) \hat{V}_D(t_2) + \dots
 $$
 
 ここで$\mathcal{T}$は時間順序積演算子（time ordering operator）であり、時間の小さい演算子を右側に配置し、先に状態ベクトルに作用させます。上記には時間順序積を用いない式も示されており、これは運動方程式を積分し、反復することで得られます。
