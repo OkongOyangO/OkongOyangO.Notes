@@ -7,16 +7,7 @@
         <title>分数量子霍尔效应(FQHE)、分数反常量子霍尔效应(FAQHE)与分数陈绝缘体(FCI) - OkongOyangO的物理笔记</title><meta name="Description" content="关于拓扑、几何和非线性响应的物理笔记"><meta property="og:url" content="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/fqhe_faqhe_fci/">
   <meta property="og:site_name" content="OkongOyangO的物理笔记">
   <meta property="og:title" content="分数量子霍尔效应(FQHE)、分数反常量子霍尔效应(FAQHE)与分数陈绝缘体(FCI)">
-  <meta property="og:description" content="本note全文约10000字，旨在帮助读者入门分数量子霍尔效应、分数反常量子霍尔效应以及分数陈绝缘体的相关内容。本文仅为一己之见，有很多疏漏，还望读者不吝赐教。下面是正文～
-Introduction to FQHE, FAQHE &amp; FCI 量子霍尔效应需要强磁场环境才能实现，而Haldane Model以及陈绝缘体的出现使得量子霍尔效应得以在无外磁场的晶格系统中便能实现。这种现象称为“量子反常霍尔效应”，在陈绝缘体中，非平庸的Berry Curvature分布使得晶格体系具有了类似量子霍尔效应的非平庸拓扑性质，或者更进一步，Berry Curvature取代了磁场（虽然Berry Curvature定义在在倒空间中，而磁场出现在实空间中）。由它引申出的对陈绝缘体及其他拓扑相的讨论也成为前些年凝聚态理论领域的热点话题。
-另一方面，当磁场强度足够大，使得电子全部简并在最低朗道能级(Lowest Landau Level, LLL)，特别是当一个电子平均占有整数（或分数）个量子磁通时，分数量子霍尔效应便出现了。与量子霍尔效应、量子反常霍尔效应或是一般的拓扑绝缘体不同，分数量子霍尔效应是LLL中简并电子强相互作用的结果，而之前的讨论基本限于non-interacting的有能隙费米系统。
-分数量子霍尔体系有着拓扑相关的基态简并度(Ground State Degeneracy, GSD)、分数激发与任意子统计，这可能应用于拓扑量子计算等领域，但需要比量子霍尔效应更强的磁场这一条件便能“劝退”很多想要应用化该效应的人。
-类似英语语法中的各种时态，我们也想用“反常”和“分数”组合出一种新的量子霍尔效应，及“分数反常量子霍尔效应”（Fractional Anomalous Quantum Hall Effect, FAQHE），简称“FAQ”（“发Q”）。
-特别地，我们希望这一现象在格点体系中便能实现。结合量子反常霍尔效应在陈绝缘体中的实现，物理学家们便把目光投向了陈绝缘体中拓扑非平庸的Chern Band，并仿照分数填布的LLL，在Chern Band中进行1/3、1/5、1/7…的电子数填布，并给系统Hamiltonian加上电子-电子关联项（例如Hubbard Model），来观测这种分数填布的陈绝缘体是否能表现出类似FQH体系的现象（之前提到的GSD、分数激发、任意子统计等）。
-在对分数填布、拓扑非平庸的Haldane Model、Kagome Lattice等体系的数值模拟中，确实观测到了热力学极限下有限大的many-body gap、非平庸的GSD、分数激发等现象，物理学家们便把这种新奇的拓扑物态命名为“分数陈绝缘体”(Fractional Chern Insulator, FCI)。
-Physics in L.L.L. 为了将（近）自由电子气系统中的分数量子霍尔效应“无缝衔接”到陈绝缘体的晶格系统中，我们首先回顾最低朗道能级(L.L.L.)中的物理。
-磁场中电子的Hamiltonian：
-$$ \begin{aligned} H=\frac{1}{2 m}\left( \hat{\mathbf{p}} &#43; e \mathbf{A}(\hat{\mathbf{r}}) \right)^2 = \frac{\boldsymbol{\pi}^2}{2m} \end{aligned} $$对于恒定外磁场中的自由电子气，可以不选取特定规范计算Landau能级，也可以在Landau Gauge和Symmetric Gauge下严格求解单电子波函数。">
+  <meta property="og:description" content="本note全文约10000字，旨在帮助读者入门分数量子霍尔效应、分数反常量子霍尔效应以及分数陈绝缘体的相关内容。本文仅为一己之见，有很多疏漏，还望读者不吝赐教。下面是正文～">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -28,21 +19,12 @@ $$ \begin{aligned} H=\frac{1}{2 m}\left( \hat{\mathbf{p}} &#43; e \mathbf{A}(\ha
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="分数量子霍尔效应(FQHE)、分数反常量子霍尔效应(FAQHE)与分数陈绝缘体(FCI)">
-  <meta name="twitter:description" content="本note全文约10000字，旨在帮助读者入门分数量子霍尔效应、分数反常量子霍尔效应以及分数陈绝缘体的相关内容。本文仅为一己之见，有很多疏漏，还望读者不吝赐教。下面是正文～
-Introduction to FQHE, FAQHE &amp; FCI 量子霍尔效应需要强磁场环境才能实现，而Haldane Model以及陈绝缘体的出现使得量子霍尔效应得以在无外磁场的晶格系统中便能实现。这种现象称为“量子反常霍尔效应”，在陈绝缘体中，非平庸的Berry Curvature分布使得晶格体系具有了类似量子霍尔效应的非平庸拓扑性质，或者更进一步，Berry Curvature取代了磁场（虽然Berry Curvature定义在在倒空间中，而磁场出现在实空间中）。由它引申出的对陈绝缘体及其他拓扑相的讨论也成为前些年凝聚态理论领域的热点话题。
-另一方面，当磁场强度足够大，使得电子全部简并在最低朗道能级(Lowest Landau Level, LLL)，特别是当一个电子平均占有整数（或分数）个量子磁通时，分数量子霍尔效应便出现了。与量子霍尔效应、量子反常霍尔效应或是一般的拓扑绝缘体不同，分数量子霍尔效应是LLL中简并电子强相互作用的结果，而之前的讨论基本限于non-interacting的有能隙费米系统。
-分数量子霍尔体系有着拓扑相关的基态简并度(Ground State Degeneracy, GSD)、分数激发与任意子统计，这可能应用于拓扑量子计算等领域，但需要比量子霍尔效应更强的磁场这一条件便能“劝退”很多想要应用化该效应的人。
-类似英语语法中的各种时态，我们也想用“反常”和“分数”组合出一种新的量子霍尔效应，及“分数反常量子霍尔效应”（Fractional Anomalous Quantum Hall Effect, FAQHE），简称“FAQ”（“发Q”）。
-特别地，我们希望这一现象在格点体系中便能实现。结合量子反常霍尔效应在陈绝缘体中的实现，物理学家们便把目光投向了陈绝缘体中拓扑非平庸的Chern Band，并仿照分数填布的LLL，在Chern Band中进行1/3、1/5、1/7…的电子数填布，并给系统Hamiltonian加上电子-电子关联项（例如Hubbard Model），来观测这种分数填布的陈绝缘体是否能表现出类似FQH体系的现象（之前提到的GSD、分数激发、任意子统计等）。
-在对分数填布、拓扑非平庸的Haldane Model、Kagome Lattice等体系的数值模拟中，确实观测到了热力学极限下有限大的many-body gap、非平庸的GSD、分数激发等现象，物理学家们便把这种新奇的拓扑物态命名为“分数陈绝缘体”(Fractional Chern Insulator, FCI)。
-Physics in L.L.L. 为了将（近）自由电子气系统中的分数量子霍尔效应“无缝衔接”到陈绝缘体的晶格系统中，我们首先回顾最低朗道能级(L.L.L.)中的物理。
-磁场中电子的Hamiltonian：
-$$ \begin{aligned} H=\frac{1}{2 m}\left( \hat{\mathbf{p}} &#43; e \mathbf{A}(\hat{\mathbf{r}}) \right)^2 = \frac{\boldsymbol{\pi}^2}{2m} \end{aligned} $$对于恒定外磁场中的自由电子气，可以不选取特定规范计算Landau能级，也可以在Landau Gauge和Symmetric Gauge下严格求解单电子波函数。">
+  <meta name="twitter:description" content="本note全文约10000字，旨在帮助读者入门分数量子霍尔效应、分数反常量子霍尔效应以及分数陈绝缘体的相关内容。本文仅为一己之见，有很多疏漏，还望读者不吝赐教。下面是正文～">
 <meta name="application-name" content="My cool site">
 <meta name="apple-mobile-web-app-title" content="My cool site">
 <meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/fqhe_faqhe_fci/" /><link rel="prev" href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/nonlinear-kubo-formalism/" /><link rel="next" href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/joule_heat/" /><link rel="stylesheet" href="/OkongOyangO.Notes/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/fqhe_faqhe_fci/" /><link rel="next" href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/nonlinear-kubo-formalism/" /><link rel="stylesheet" href="/OkongOyangO.Notes/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -81,7 +63,7 @@ $$ \begin{aligned} H=\frac{1}{2 m}\left( \hat{\mathbf{p}} &#43; e \mathbf{A}(\ha
             <a href="/OkongOyangO.Notes/zh-cn/" title="OkongOyangO的物理笔记">OkongOyangO&#39;s Notes</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/zh-cn/OkongOyangO.Notes/posts/"><i class='fas fa-archive fa-fw'></i> 文章 </a><a class="menu-item" href="/zh-cn/OkongOyangO.Notes/tags/"><i class='fas fa-tags fa-fw'></i> 标签 </a><a class="menu-item" href="https://OkongOyangO.github.io" rel="noopener noreffer" target="_blank"><i class='fas fa-home fa-fw'></i> 主页 (Main Site) </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+            <div class="menu-inner"><a class="menu-item" href="/zh-cn/OkongOyangO.Notes/posts/"><i class='fas fa-archive fa-fw'></i> 文章 </a><a class="menu-item" href="/zh-cn/OkongOyangO.Notes/tags/"><i class='fas fa-tags fa-fw'></i> 标签 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="Search/搜索/検索..." id="search-input-desktop">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
                             <i class="fas fa-search fa-fw" aria-hidden="true"></i>
@@ -96,7 +78,7 @@ $$ \begin{aligned} H=\frac{1}{2 m}\left( \hat{\mathbf{p}} &#43; e \mathbf{A}(\ha
                     <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
                 </a><a href="javascript:void(0);" class="menu-item language" title="选择语言">
                     <i class="fa fa-globe fa-fw" aria-hidden="true"></i>                      
-                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/fqhe_faqhe_fci/"></option><option value="/OkongOyangO.Notes/zh-cn/posts/fqhe_faqhe_fci/" selected></option><option value="/OkongOyangO.Notes/ja/posts/fqhe_faqhe_fci/"></option></select>
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/fqhe_faqhe_fci/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/fqhe_faqhe_fci/" selected>简体中文</option><option value="/OkongOyangO.Notes/ja/posts/fqhe_faqhe_fci/">日本語</option></select>
                 </a></div>
         </div>
     </div>
@@ -126,11 +108,11 @@ $$ \begin{aligned} H=\frac{1}{2 m}\left( \hat{\mathbf{p}} &#43; e \mathbf{A}(\ha
                     <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
                         取消
                     </a>
-                </div><a class="menu-item" href="/zh-cn/OkongOyangO.Notes/posts/" title=""><i class='fas fa-archive fa-fw'></i>文章</a><a class="menu-item" href="/zh-cn/OkongOyangO.Notes/tags/" title=""><i class='fas fa-tags fa-fw'></i>标签</a><a class="menu-item" href="https://OkongOyangO.github.io" title="" rel="noopener noreffer" target="_blank"><i class='fas fa-home fa-fw'></i>主页 (Main Site)</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                </div><a class="menu-item" href="/zh-cn/OkongOyangO.Notes/posts/" title=""><i class='fas fa-archive fa-fw'></i>文章</a><a class="menu-item" href="/zh-cn/OkongOyangO.Notes/tags/" title=""><i class='fas fa-tags fa-fw'></i>标签</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                 <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
             </a><a href="javascript:void(0);" class="menu-item" title="选择语言">
                     <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
-                    <select class="language-select" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/fqhe_faqhe_fci/"></option><option value="/OkongOyangO.Notes/zh-cn/posts/fqhe_faqhe_fci/" selected></option><option value="/OkongOyangO.Notes/ja/posts/fqhe_faqhe_fci/"></option></select>
+                    <select class="language-select" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/fqhe_faqhe_fci/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/fqhe_faqhe_fci/" selected>简体中文</option><option value="/OkongOyangO.Notes/ja/posts/fqhe_faqhe_fci/">日本語</option></select>
                 </a></div>
     </div>
 </header><div class="search-dropdown desktop">
@@ -143,7 +125,7 @@ $$ \begin{aligned} H=\frac{1}{2 m}\left( \hat{\mathbf{p}} &#43; e \mathbf{A}(\ha
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">分数量子霍尔效应(FQHE)、分数反常量子霍尔效应(FAQHE)与分数陈绝缘体(FCI)</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="https://OkongOyangO.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">收录于 <a href="/OkongOyangO.Notes/zh-cn/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
+            <div class="post-meta-line"><span class="post-author"><a href="/OkongOyangO.Notes/zh-cn/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">收录于 <a href="/OkongOyangO.Notes/zh-cn/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-01-08">2026-01-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 2755 字&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 13 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
@@ -1134,8 +1116,7 @@ $$<p>为何关心这个数学不等式？<strong>因为这个不等式取等号�
 <li>
 <p><a href="https://www.cambridge.org/core/books/quantum-theory-of-the-electron-liquid/B14D8B6E3245464D928B365B6C48B01F" target="_blank" rel="noopener noreffer ">Giuliani, G., &amp; Vignale, G. (2005). Quantum theory of the electron liquid. Cambridge university press.</a></p>
 </li>
-</ul>
-</div><div class="post-footer" id="post-footer">
+</ul></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
@@ -1156,13 +1137,13 @@ $$<p>为何关心这个数学不等式？<strong>因为这个不等式取等号�
         </section>
     </div>
 
-    <div class="post-nav"><a href="/OkongOyangO.Notes/zh-cn/posts/nonlinear-kubo-formalism/" class="prev" rel="prev" title="久保同学不放过我｜Kubo Formula的非线性响应理论"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>久保同学不放过我｜Kubo Formula的非线性响应理论</a>
-            <a href="/OkongOyangO.Notes/zh-cn/posts/joule_heat/" class="next" rel="next" title="费米黄金定则？焦耳热罢了！">费米黄金定则？焦耳热罢了！<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+    <div class="post-nav">
+            <a href="/OkongOyangO.Notes/zh-cn/posts/nonlinear-kubo-formalism/" class="next" rel="next" title="久保同学不放过我｜Kubo Formula的非线性响应理论">久保同学不放过我｜Kubo Formula的非线性响应理论<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 </article></div>
             </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.154.3">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
-                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://OkongOyangO.github.io" target="_blank">OkongOyangO</a></span></div>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/OkongOyangO.Notes/zh-cn/" target="_blank">OkongOyangO</a></span></div>
         </div>
     </footer></div>
 

@@ -8,21 +8,7 @@
   <meta property="og:site_name" content="OkongOyangO的物理笔记">
   <meta property="og:title" content="平均场近似与变分法｜Hartree, Fock, BCS能1:1:1混用吗？">
   <meta property="og:description" content="本文旨在介绍平均场近似，同时阐述其变分法本质。
-Hartree, Fock, BCS这一个一个一个平均场近似，看似是一个一个一个互不相容的decouple方法，但利用平均场近似的变分法本质，我们发现他们事实上确实可以1:1:1混着用。
-Preface 本文灵感首先来自来自和@ykli同学的讨论，在此特别感谢@ykli在推导过程中给予的大量帮助。
-这个问题在physics stackexchange网站上也被提及（被称为“Multi-channel Mean Field Theory”），在此也放上链接供大家参考：
-https://physics.stackexchange.com/questions/742905/multi-channel-mean-field-theory
-同时，@阿兰那行学长关于“物理圈黑话”的回答也给了我相当多的灵感，有兴趣的读者可以移步：
-https://www.zhihu.com/question/410499049/answer/2442413803
-Introduction 对于相互作用体系，系统完整的哈密顿量为：
-$$ \begin{aligned} \hat{H} = \hat{H}_0 &#43; \hat{V}_{int} \end{aligned} $$其中，$\hat{H}_0 \sim \sum c^\dagger c$，为费米子产生湮灭算符的二次型部分，比较容易处理成independent free particle。
-而$\hat{V}_{int} \sim \sum c^\dagger c^\dagger c c$，为相互作用部分。
-由于相互作用的存在，我们比较难求系统的基态波函数或者平衡态密度矩阵，从而比较难以计算相互作用体系的各种信息。因此，我们常常用各种近似方法来处理。
-平均场近似便是一种方法，我们取一个可以严格解的平均场近似哈密顿量：
-$$ \begin{aligned} \hat{H}_{mf} = \hat{H}_0 &#43; \hat{V}_{mf} \end{aligned} $$使得$\hat{V}_{mf}$也为二次型，则比较好求严格解，我们便可以用这个平均场近似哈密顿量的解来近似给出系统的各种性质。
-Mean Field Theory by Decoupling 但取近似不能瞎取，也需要一定技巧。
-量子力学课本中教我们，平均场近似就是把算符的quantum fluctuation部分给忽略，即Decoupling Method：
-$$ \begin{aligned} A^\dagger A &amp; = [\langle A \rangle &#43; (A - \langle A \rangle)]^\dagger [\langle A \rangle &#43; (A - \langle A \rangle)] \\ &amp; \equiv [\langle A \rangle &#43; \delta A]^\dagger [\langle A \rangle &#43; \delta A] \\ &amp; = \underbrace{\langle A^\dagger \rangle \langle A \rangle}_{\mathcal{O}(\delta A^0)} &#43; \underbrace{\langle A^\dagger \rangle \delta A &#43; \delta A^\dagger \langle A \rangle}_{\mathcal{O}(\delta A^1)} &#43; \underbrace{\delta A^\dagger \delta A}_{\mathcal{O}(\delta A^2)} \\ &amp; = \underbrace{\langle A^\dagger \rangle A &#43; A^\dagger \langle A \rangle - \langle A^\dagger \rangle \langle A \rangle}_{\text{mean field}\ =\ \mathcal{O}(\delta A^0) &#43; \mathcal{O}(\delta A^1)} \\ &amp; &#43; \underbrace{(A - \langle A \rangle)^\dagger (A - \langle A \rangle)}_{\text{quantum fluctuation}\ =\ \mathcal{O}(\delta A^2)} \\ &amp; \approx \langle A^\dagger \rangle A &#43; A^\dagger \langle A \rangle - \langle A^\dagger \rangle \langle A \rangle \end{aligned} $$其中mean field部分保留了算符涨落$\delta A$的零阶和一阶部分，而quantum fluctuation包含了算符涨落$\delta A$的二阶部分。">
+Hartree, Fock, BCS这一个一个一个平均场近似，看似是一个一个一个互不相容的decouple方法，但利用平均场近似的变分法本质，我们发现他们事实上确实可以1:1:1混着用。">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -34,21 +20,7 @@ $$ \begin{aligned} A^\dagger A &amp; = [\langle A \rangle &#43; (A - \langle A \
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="平均场近似与变分法｜Hartree, Fock, BCS能1:1:1混用吗？">
   <meta name="twitter:description" content="本文旨在介绍平均场近似，同时阐述其变分法本质。
-Hartree, Fock, BCS这一个一个一个平均场近似，看似是一个一个一个互不相容的decouple方法，但利用平均场近似的变分法本质，我们发现他们事实上确实可以1:1:1混着用。
-Preface 本文灵感首先来自来自和@ykli同学的讨论，在此特别感谢@ykli在推导过程中给予的大量帮助。
-这个问题在physics stackexchange网站上也被提及（被称为“Multi-channel Mean Field Theory”），在此也放上链接供大家参考：
-https://physics.stackexchange.com/questions/742905/multi-channel-mean-field-theory
-同时，@阿兰那行学长关于“物理圈黑话”的回答也给了我相当多的灵感，有兴趣的读者可以移步：
-https://www.zhihu.com/question/410499049/answer/2442413803
-Introduction 对于相互作用体系，系统完整的哈密顿量为：
-$$ \begin{aligned} \hat{H} = \hat{H}_0 &#43; \hat{V}_{int} \end{aligned} $$其中，$\hat{H}_0 \sim \sum c^\dagger c$，为费米子产生湮灭算符的二次型部分，比较容易处理成independent free particle。
-而$\hat{V}_{int} \sim \sum c^\dagger c^\dagger c c$，为相互作用部分。
-由于相互作用的存在，我们比较难求系统的基态波函数或者平衡态密度矩阵，从而比较难以计算相互作用体系的各种信息。因此，我们常常用各种近似方法来处理。
-平均场近似便是一种方法，我们取一个可以严格解的平均场近似哈密顿量：
-$$ \begin{aligned} \hat{H}_{mf} = \hat{H}_0 &#43; \hat{V}_{mf} \end{aligned} $$使得$\hat{V}_{mf}$也为二次型，则比较好求严格解，我们便可以用这个平均场近似哈密顿量的解来近似给出系统的各种性质。
-Mean Field Theory by Decoupling 但取近似不能瞎取，也需要一定技巧。
-量子力学课本中教我们，平均场近似就是把算符的quantum fluctuation部分给忽略，即Decoupling Method：
-$$ \begin{aligned} A^\dagger A &amp; = [\langle A \rangle &#43; (A - \langle A \rangle)]^\dagger [\langle A \rangle &#43; (A - \langle A \rangle)] \\ &amp; \equiv [\langle A \rangle &#43; \delta A]^\dagger [\langle A \rangle &#43; \delta A] \\ &amp; = \underbrace{\langle A^\dagger \rangle \langle A \rangle}_{\mathcal{O}(\delta A^0)} &#43; \underbrace{\langle A^\dagger \rangle \delta A &#43; \delta A^\dagger \langle A \rangle}_{\mathcal{O}(\delta A^1)} &#43; \underbrace{\delta A^\dagger \delta A}_{\mathcal{O}(\delta A^2)} \\ &amp; = \underbrace{\langle A^\dagger \rangle A &#43; A^\dagger \langle A \rangle - \langle A^\dagger \rangle \langle A \rangle}_{\text{mean field}\ =\ \mathcal{O}(\delta A^0) &#43; \mathcal{O}(\delta A^1)} \\ &amp; &#43; \underbrace{(A - \langle A \rangle)^\dagger (A - \langle A \rangle)}_{\text{quantum fluctuation}\ =\ \mathcal{O}(\delta A^2)} \\ &amp; \approx \langle A^\dagger \rangle A &#43; A^\dagger \langle A \rangle - \langle A^\dagger \rangle \langle A \rangle \end{aligned} $$其中mean field部分保留了算符涨落$\delta A$的零阶和一阶部分，而quantum fluctuation包含了算符涨落$\delta A$的二阶部分。">
+Hartree, Fock, BCS这一个一个一个平均场近似，看似是一个一个一个互不相容的decouple方法，但利用平均场近似的变分法本质，我们发现他们事实上确实可以1:1:1混着用。">
 <meta name="application-name" content="My cool site">
 <meta name="apple-mobile-web-app-title" content="My cool site">
 <meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
@@ -92,7 +64,7 @@ $$ \begin{aligned} A^\dagger A &amp; = [\langle A \rangle &#43; (A - \langle A \
             <a href="/OkongOyangO.Notes/zh-cn/" title="OkongOyangO的物理笔记">OkongOyangO&#39;s Notes</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/zh-cn/OkongOyangO.Notes/posts/"><i class='fas fa-archive fa-fw'></i> 文章 </a><a class="menu-item" href="/zh-cn/OkongOyangO.Notes/tags/"><i class='fas fa-tags fa-fw'></i> 标签 </a><a class="menu-item" href="https://OkongOyangO.github.io" rel="noopener noreffer" target="_blank"><i class='fas fa-home fa-fw'></i> 主页 (Main Site) </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+            <div class="menu-inner"><a class="menu-item" href="/zh-cn/OkongOyangO.Notes/posts/"><i class='fas fa-archive fa-fw'></i> 文章 </a><a class="menu-item" href="/zh-cn/OkongOyangO.Notes/tags/"><i class='fas fa-tags fa-fw'></i> 标签 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="Search/搜索/検索..." id="search-input-desktop">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
                             <i class="fas fa-search fa-fw" aria-hidden="true"></i>
@@ -107,7 +79,7 @@ $$ \begin{aligned} A^\dagger A &amp; = [\langle A \rangle &#43; (A - \langle A \
                     <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
                 </a><a href="javascript:void(0);" class="menu-item language" title="选择语言">
                     <i class="fa fa-globe fa-fw" aria-hidden="true"></i>                      
-                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/mean_field_approximation/"></option><option value="/OkongOyangO.Notes/zh-cn/posts/mean_field_approximation/" selected></option><option value="/OkongOyangO.Notes/ja/posts/mean_field_approximation/"></option></select>
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/mean_field_approximation/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/mean_field_approximation/" selected>简体中文</option><option value="/OkongOyangO.Notes/ja/posts/mean_field_approximation/">日本語</option></select>
                 </a></div>
         </div>
     </div>
@@ -137,11 +109,11 @@ $$ \begin{aligned} A^\dagger A &amp; = [\langle A \rangle &#43; (A - \langle A \
                     <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
                         取消
                     </a>
-                </div><a class="menu-item" href="/zh-cn/OkongOyangO.Notes/posts/" title=""><i class='fas fa-archive fa-fw'></i>文章</a><a class="menu-item" href="/zh-cn/OkongOyangO.Notes/tags/" title=""><i class='fas fa-tags fa-fw'></i>标签</a><a class="menu-item" href="https://OkongOyangO.github.io" title="" rel="noopener noreffer" target="_blank"><i class='fas fa-home fa-fw'></i>主页 (Main Site)</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                </div><a class="menu-item" href="/zh-cn/OkongOyangO.Notes/posts/" title=""><i class='fas fa-archive fa-fw'></i>文章</a><a class="menu-item" href="/zh-cn/OkongOyangO.Notes/tags/" title=""><i class='fas fa-tags fa-fw'></i>标签</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                 <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
             </a><a href="javascript:void(0);" class="menu-item" title="选择语言">
                     <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
-                    <select class="language-select" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/mean_field_approximation/"></option><option value="/OkongOyangO.Notes/zh-cn/posts/mean_field_approximation/" selected></option><option value="/OkongOyangO.Notes/ja/posts/mean_field_approximation/"></option></select>
+                    <select class="language-select" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/mean_field_approximation/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/mean_field_approximation/" selected>简体中文</option><option value="/OkongOyangO.Notes/ja/posts/mean_field_approximation/">日本語</option></select>
                 </a></div>
     </div>
 </header><div class="search-dropdown desktop">
@@ -154,7 +126,7 @@ $$ \begin{aligned} A^\dagger A &amp; = [\langle A \rangle &#43; (A - \langle A \
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">平均场近似与变分法｜Hartree, Fock, BCS能1:1:1混用吗？</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="https://OkongOyangO.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">收录于 <a href="/OkongOyangO.Notes/zh-cn/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
+            <div class="post-meta-line"><span class="post-author"><a href="/OkongOyangO.Notes/zh-cn/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">收录于 <a href="/OkongOyangO.Notes/zh-cn/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-01-09">2026-01-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1234 字&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 6 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
@@ -463,8 +435,7 @@ $$<p>但这种decouple method在使用两种及以上的平均场近似时，容
 <li>[1] Bruus, H., &amp; Flensberg, K. (2004). Many-body quantum theory in condensed matter physics: an introduction. Oxford university press.</li>
 <li>[2] Coleman, P. (2015). Introduction to many-body physics. Cambridge University Press.</li>
 <li>[3] Altland, A., &amp; Simons, B. D. (2010). Condensed matter field theory. Cambridge university press.</li>
-</ul>
-</div><div class="post-footer" id="post-footer">
+</ul></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
@@ -491,7 +462,7 @@ $$<p>但这种decouple method在使用两种及以上的平均场近似时，容
 </article></div>
             </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.154.3">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
-                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://OkongOyangO.github.io" target="_blank">OkongOyangO</a></span></div>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/OkongOyangO.Notes/zh-cn/" target="_blank">OkongOyangO</a></span></div>
         </div>
     </footer></div>
 

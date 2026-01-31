@@ -7,16 +7,7 @@
         <title>分数量子ホール効果 (FQHE)、分数異常量子ホール効果 (FAQHE)、そして分数チャーン絶縁体 (FCI) - OkongOyangOのノート</title><meta name="Description" content="トポロジー、幾何学、非線形応答に関する物理ノート"><meta property="og:url" content="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/fqhe_faqhe_fci/">
   <meta property="og:site_name" content="OkongOyangOのノート">
   <meta property="og:title" content="分数量子ホール効果 (FQHE)、分数異常量子ホール効果 (FAQHE)、そして分数チャーン絶縁体 (FCI)">
-  <meta property="og:description" content="本ノートは約10,000文字あり、読者が分数量子ホール効果、分数異常量子ホール効果、および分数チャーン絶縁体に関する内容に入門することを目的としています。本文は私見に過ぎず、多くの不備があるかと思いますので、読者の皆様からのご指摘を歓迎いたします。以下、本文です。
-Introduction to FQHE, FAQHE &amp; FCI 量子ホール効果の実現には強磁場環境が必要ですが、Haldane模型およびチャーン絶縁体（Chern Insulator）の出現により、外部磁場のない格子系においても量子ホール効果が実現可能となりました。この現象は「量子異常ホール効果（Quantum Anomalous Hall Effect）」と呼ばれます。チャーン絶縁体においては、自明でないベリー曲率（Berry Curvature）の分布により、格子系が量子ホール効果に類似した非自明なトポロジカルな性質を持つようになります。さらに言えば、ベリー曲率が磁場に取って代わったと言えます（もっとも、ベリー曲率は逆空間で定義されるのに対し、磁場は実空間に現れるものですが）。これに端を発するチャーン絶縁体やその他のトポロジカル相に関する議論は、近年の凝縮系理論分野におけるホットトピックとなっています。
-一方で、磁場強度が十分に大きく、電子がすべて最低ランダウ準位（Lowest Landau Level, LLL）に縮退している場合、特に電子1個が平均して整数個（または分数個）の量子磁束を占有している時に、分数量子ホール効果（FQHE）が現れます。量子ホール効果、量子異常ホール効果、あるいは一般的なトポロジカル絶縁体とは異なり、分数量子ホール効果はLLL内で縮退した電子間の強い相互作用の結果であり、それ以前の議論は基本的に相互作用のない（non-interacting）ギャップを持つフェルミ系に限られていました。
-分数量子ホール系は、トポロジカルに関連した基底状態縮退度（Ground State Degeneracy, GSD）、分数励起、およびエニオン統計（Anyon statistics）を持ち、これらはトポロジカル量子計算などの分野への応用が期待されています。しかし、量子ホール効果よりもさらに強い磁場が必要であるという条件は、この効果を応用しようとする多くの人々を「躊躇（または断念）」させてきました。
-英語の文法における様々な時制のように、「異常（Anomalous）」と「分数（Fractional）」を組み合わせて、新しい量子ホール効果、すなわち「分数異常量子ホール効果」（Fractional Anomalous Quantum Hall Effect, FAQHE）、略して「FAQ」（「ファッQ」）を作り出したいと考えるのは自然なことです。
-特に、この現象を格子系で実現したいという期待があります。チャーン絶縁体における量子異常ホール効果の実現と結びつけ、物理学者たちはチャーン絶縁体中のトポロジカルに非自明なチャーンバンド（Chern Band）に注目しました。そして、分数充填されたLLLを模倣し、チャーンバンド内で1/3、1/5、1/7…といった電子数の充填を行い、システムのハミルトニアンに電子-電子相関項（ハバード模型など）を加えることで、この分数充填されたチャーン絶縁体がFQH系に類似した現象（前述のGSD、分数励起、エニオン統計など）を示すかどうかを観測しようとしました。
-分数充填、トポロジカルに非自明なHaldane模型、カゴメ格子などのシステムにおける数値シミュレーションにおいて、実際に熱力学的極限での有限の多体ギャップ（many-body gap）、非自明なGSD、分数励起などの現象が観測されました。物理学者たちはこの新奇なトポロジカル物質相を「分数チャーン絶縁体」（Fractional Chern Insulator, FCI）と名付けました。
-Physics in L.L.L. （近）自由電子ガス系における分数量子ホール効果をチャーン絶縁体の格子系に「シームレスに接続」するために、まず最低ランダウ準位（L.L.L.）における物理を振り返ります。
-磁場中の電子のハミルトニアン：
-$$ \begin{aligned} H=\frac{1}{2 m}\left( \hat{\mathbf{p}} &#43; e \mathbf{A}(\hat{\mathbf{r}}) \right)^2 = \frac{\boldsymbol{\pi}^2}{2m} \end{aligned} $$一定の外部磁場中の自由電子ガスに対しては、特定のゲージを選ばずにランダウ準位を計算することもできますし、ランダウゲージ（Landau Gauge）や対称ゲージ（Symmetric Gauge）の下で単電子波動関数を厳密に解くこともできます。">
+  <meta property="og:description" content="本ノートは約10,000文字あり、読者が分数量子ホール効果、分数異常量子ホール効果、および分数チャーン絶縁体に関する内容に入門することを目的としています。本文は私見に過ぎず、多くの不備があるかと思いますので、読者の皆様からのご指摘を歓迎いたします。以下、本文です。">
   <meta property="og:locale" content="ja">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -28,16 +19,7 @@ $$ \begin{aligned} H=\frac{1}{2 m}\left( \hat{\mathbf{p}} &#43; e \mathbf{A}(\ha
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="分数量子ホール効果 (FQHE)、分数異常量子ホール効果 (FAQHE)、そして分数チャーン絶縁体 (FCI)">
-  <meta name="twitter:description" content="本ノートは約10,000文字あり、読者が分数量子ホール効果、分数異常量子ホール効果、および分数チャーン絶縁体に関する内容に入門することを目的としています。本文は私見に過ぎず、多くの不備があるかと思いますので、読者の皆様からのご指摘を歓迎いたします。以下、本文です。
-Introduction to FQHE, FAQHE &amp; FCI 量子ホール効果の実現には強磁場環境が必要ですが、Haldane模型およびチャーン絶縁体（Chern Insulator）の出現により、外部磁場のない格子系においても量子ホール効果が実現可能となりました。この現象は「量子異常ホール効果（Quantum Anomalous Hall Effect）」と呼ばれます。チャーン絶縁体においては、自明でないベリー曲率（Berry Curvature）の分布により、格子系が量子ホール効果に類似した非自明なトポロジカルな性質を持つようになります。さらに言えば、ベリー曲率が磁場に取って代わったと言えます（もっとも、ベリー曲率は逆空間で定義されるのに対し、磁場は実空間に現れるものですが）。これに端を発するチャーン絶縁体やその他のトポロジカル相に関する議論は、近年の凝縮系理論分野におけるホットトピックとなっています。
-一方で、磁場強度が十分に大きく、電子がすべて最低ランダウ準位（Lowest Landau Level, LLL）に縮退している場合、特に電子1個が平均して整数個（または分数個）の量子磁束を占有している時に、分数量子ホール効果（FQHE）が現れます。量子ホール効果、量子異常ホール効果、あるいは一般的なトポロジカル絶縁体とは異なり、分数量子ホール効果はLLL内で縮退した電子間の強い相互作用の結果であり、それ以前の議論は基本的に相互作用のない（non-interacting）ギャップを持つフェルミ系に限られていました。
-分数量子ホール系は、トポロジカルに関連した基底状態縮退度（Ground State Degeneracy, GSD）、分数励起、およびエニオン統計（Anyon statistics）を持ち、これらはトポロジカル量子計算などの分野への応用が期待されています。しかし、量子ホール効果よりもさらに強い磁場が必要であるという条件は、この効果を応用しようとする多くの人々を「躊躇（または断念）」させてきました。
-英語の文法における様々な時制のように、「異常（Anomalous）」と「分数（Fractional）」を組み合わせて、新しい量子ホール効果、すなわち「分数異常量子ホール効果」（Fractional Anomalous Quantum Hall Effect, FAQHE）、略して「FAQ」（「ファッQ」）を作り出したいと考えるのは自然なことです。
-特に、この現象を格子系で実現したいという期待があります。チャーン絶縁体における量子異常ホール効果の実現と結びつけ、物理学者たちはチャーン絶縁体中のトポロジカルに非自明なチャーンバンド（Chern Band）に注目しました。そして、分数充填されたLLLを模倣し、チャーンバンド内で1/3、1/5、1/7…といった電子数の充填を行い、システムのハミルトニアンに電子-電子相関項（ハバード模型など）を加えることで、この分数充填されたチャーン絶縁体がFQH系に類似した現象（前述のGSD、分数励起、エニオン統計など）を示すかどうかを観測しようとしました。
-分数充填、トポロジカルに非自明なHaldane模型、カゴメ格子などのシステムにおける数値シミュレーションにおいて、実際に熱力学的極限での有限の多体ギャップ（many-body gap）、非自明なGSD、分数励起などの現象が観測されました。物理学者たちはこの新奇なトポロジカル物質相を「分数チャーン絶縁体」（Fractional Chern Insulator, FCI）と名付けました。
-Physics in L.L.L. （近）自由電子ガス系における分数量子ホール効果をチャーン絶縁体の格子系に「シームレスに接続」するために、まず最低ランダウ準位（L.L.L.）における物理を振り返ります。
-磁場中の電子のハミルトニアン：
-$$ \begin{aligned} H=\frac{1}{2 m}\left( \hat{\mathbf{p}} &#43; e \mathbf{A}(\hat{\mathbf{r}}) \right)^2 = \frac{\boldsymbol{\pi}^2}{2m} \end{aligned} $$一定の外部磁場中の自由電子ガスに対しては、特定のゲージを選ばずにランダウ準位を計算することもできますし、ランダウゲージ（Landau Gauge）や対称ゲージ（Symmetric Gauge）の下で単電子波動関数を厳密に解くこともできます。">
+  <meta name="twitter:description" content="本ノートは約10,000文字あり、読者が分数量子ホール効果、分数異常量子ホール効果、および分数チャーン絶縁体に関する内容に入門することを目的としています。本文は私見に過ぎず、多くの不備があるかと思いますので、読者の皆様からのご指摘を歓迎いたします。以下、本文です。">
 <meta name="application-name" content="My cool site">
 <meta name="apple-mobile-web-app-title" content="My cool site">
 <meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
@@ -81,7 +63,7 @@ $$ \begin{aligned} H=\frac{1}{2 m}\left( \hat{\mathbf{p}} &#43; e \mathbf{A}(\ha
             <a href="/OkongOyangO.Notes/ja/" title="OkongOyangOのノート">OkongOyangO&#39;s Notes</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/ja/OkongOyangO.Notes/posts/"><i class='fas fa-archive fa-fw'></i> 記事 </a><a class="menu-item" href="/ja/OkongOyangO.Notes/tags/"><i class='fas fa-tags fa-fw'></i> タグ </a><a class="menu-item" href="https://OkongOyangO.github.io" rel="noopener noreffer" target="_blank"><i class='fas fa-home fa-fw'></i> メインページ </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+            <div class="menu-inner"><a class="menu-item" href="/ja/OkongOyangO.Notes/posts/"><i class='fas fa-archive fa-fw'></i> 記事 </a><a class="menu-item" href="/ja/OkongOyangO.Notes/tags/"><i class='fas fa-tags fa-fw'></i> タグ </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="Search/搜索/検索..." id="search-input-desktop">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
                             <i class="fas fa-search fa-fw" aria-hidden="true"></i>
@@ -96,7 +78,7 @@ $$ \begin{aligned} H=\frac{1}{2 m}\left( \hat{\mathbf{p}} &#43; e \mathbf{A}(\ha
                     <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
                 </a><a href="javascript:void(0);" class="menu-item language" title="Select Language">
                     <i class="fa fa-globe fa-fw" aria-hidden="true"></i>                      
-                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/fqhe_faqhe_fci/"></option><option value="/OkongOyangO.Notes/zh-cn/posts/fqhe_faqhe_fci/"></option><option value="/OkongOyangO.Notes/ja/posts/fqhe_faqhe_fci/" selected></option></select>
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/fqhe_faqhe_fci/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/fqhe_faqhe_fci/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/fqhe_faqhe_fci/" selected>日本語</option></select>
                 </a></div>
         </div>
     </div>
@@ -126,11 +108,11 @@ $$ \begin{aligned} H=\frac{1}{2 m}\left( \hat{\mathbf{p}} &#43; e \mathbf{A}(\ha
                     <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
                         Cancel
                     </a>
-                </div><a class="menu-item" href="/ja/OkongOyangO.Notes/posts/" title=""><i class='fas fa-archive fa-fw'></i>記事</a><a class="menu-item" href="/ja/OkongOyangO.Notes/tags/" title=""><i class='fas fa-tags fa-fw'></i>タグ</a><a class="menu-item" href="https://OkongOyangO.github.io" title="" rel="noopener noreffer" target="_blank"><i class='fas fa-home fa-fw'></i>メインページ</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                </div><a class="menu-item" href="/ja/OkongOyangO.Notes/posts/" title=""><i class='fas fa-archive fa-fw'></i>記事</a><a class="menu-item" href="/ja/OkongOyangO.Notes/tags/" title=""><i class='fas fa-tags fa-fw'></i>タグ</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
                 <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
             </a><a href="javascript:void(0);" class="menu-item" title="Select Language">
                     <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
-                    <select class="language-select" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/fqhe_faqhe_fci/"></option><option value="/OkongOyangO.Notes/zh-cn/posts/fqhe_faqhe_fci/"></option><option value="/OkongOyangO.Notes/ja/posts/fqhe_faqhe_fci/" selected></option></select>
+                    <select class="language-select" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/fqhe_faqhe_fci/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/fqhe_faqhe_fci/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/fqhe_faqhe_fci/" selected>日本語</option></select>
                 </a></div>
     </div>
 </header><div class="search-dropdown desktop">
@@ -143,7 +125,7 @@ $$ \begin{aligned} H=\frac{1}{2 m}\left( \hat{\mathbf{p}} &#43; e \mathbf{A}(\ha
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">分数量子ホール効果 (FQHE)、分数異常量子ホール効果 (FAQHE)、そして分数チャーン絶縁体 (FCI)</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="https://OkongOyangO.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">included in <a href="/OkongOyangO.Notes/ja/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
+            <div class="post-meta-line"><span class="post-author"><a href="/OkongOyangO.Notes/ja/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">included in <a href="/OkongOyangO.Notes/ja/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-01-08">2026-01-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2620 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;13 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
@@ -1134,8 +1116,7 @@ $$<p>なぜこの数学的不等式に関心を持つのでしょうか？<stron
 <li>
 <p><a href="https://www.cambridge.org/core/books/quantum-theory-of-the-electron-liquid/B14D8B6E3245464D928B365B6C48B01F" target="_blank" rel="noopener noreffer ">Giuliani, G., &amp; Vignale, G. (2005). Quantum theory of the electron liquid. Cambridge university press.</a></p>
 </li>
-</ul>
-</div><div class="post-footer" id="post-footer">
+</ul></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
@@ -1162,7 +1143,7 @@ $$<p>なぜこの数学的不等式に関心を持つのでしょうか？<stron
 </article></div>
             </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.154.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
-                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://OkongOyangO.github.io" target="_blank">OkongOyangO</a></span></div>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/OkongOyangO.Notes/ja/" target="_blank">OkongOyangO</a></span></div>
         </div>
     </footer></div>
 

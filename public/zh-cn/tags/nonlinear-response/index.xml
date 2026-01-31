@@ -8,14 +8,14 @@
     <language>zh-CN</language>
     <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
     <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
-    <lastBuildDate>Thu, 08 Jan 2026 21:54:37 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 08 Jan 2026 22:00:00 -0500</lastBuildDate>
     <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/nonlinear-response/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>久保同学不放过我｜Kubo Formula的非线性响应理论</title>
       <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/nonlinear-kubo-formalism/</link>
-      <pubDate>Thu, 08 Jan 2026 21:54:37 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <pubDate>Thu, 08 Jan 2026 22:00:00 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
       <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/nonlinear-kubo-formalism/</guid>
-      <description>&lt;p&gt;#! &lt;a href=&#34;https://zhuanlan.zhihu.com/p/611996682&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;https://zhuanlan.zhihu.com/p/611996682&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;久保同学不放过我kubo-formula的非线性响应理论&#34;&gt;久保同学不放过我｜Kubo Formula的非线性响应理论&lt;/h1&gt;&#xA;&lt;p&gt;本文旨在推导Kubo Formula的非线性响应理论。&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Kubo Formula的线性和非线性响应理论本质上都是量子力学的微扰论。&lt;/p&gt;&#xA;&lt;p&gt;其中线性响应更为常见，例如实验测量的电导率、磁化率、电极化率等susceptibility均为线性响应函数（Retarded Green Function）。&lt;/p&gt;&#xA;&lt;p&gt;但非线性响应也有其应用价值，例如半导体中的二阶电流响应，包括2nd Harmonic Generation，Injection and Shift Current等等。&lt;/p&gt;&#xA;&lt;p&gt;二阶响应甚至可以用来解释上一节Fermi Golden Rule中的常跃迁速率和二倍频跃迁速率两种响应。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/611688122&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;https://zhuanlan.zhihu.com/p/611688122&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;可见&lt;strong&gt;只要胆够大，处处皆是非线性响应（bushi&lt;/strong&gt;。&lt;/p&gt;&#xA;&lt;h2 id=&#34;density-matrix-in-dirac-picture&#34;&gt;Density Matrix in Dirac Picture&lt;/h2&gt;&#xA;&lt;p&gt;Kubo Formula的推导从相互作用（Dirac）绘景下，系统密度矩阵的演化开始。&lt;/p&gt;&#xA;&lt;p&gt;在Fermi Golden Rule那节中，我们已经推导了相互作用（Dirac）绘景下波函数的运动方程。&lt;/p&gt;&#xA;&lt;p&gt;简单将密度矩阵看成$\hat{\rho}_D(t) \sim | \psi (t) \rangle_D \langle \psi(t) |_D$，有利于我们快速回忆起相互作用（Dirac）绘景下密度矩阵的运动方程：&lt;/p&gt;&#xA;$$&#xA;\begin{aligned}&#xA;\frac{d}{dt} \hat{\rho}_D(t) = - \frac{i}{\hbar} [ \hat{\rho}_D(t) , \hat{V}_D(t) ]&#xA;\end{aligned}&#xA;$$&lt;p&gt;积分后重复迭代，我们可以得到密度矩阵的展开式：&lt;/p&gt;&#xA;$$&#xA;\begin{aligned}&#xA;\hat{\rho}_D(t) = \hat{\rho}_0 + \sum_{n = 1}^{\infty} (-\frac{\mathrm{i}}{\hbar})^n \int_{-\infty}^{t} dt_1 \int_{-\infty}^{t_1} dt_2 \dots \int_{-\infty}^{t_{n-1}} dt_n [\hat{V}_D(t_1),[\dots[\hat{V}_D(t_n),\hat{\rho}_0]\dots] ]&#xA;\end{aligned}&#xA;$$&lt;p&gt;注意每个积分的上界并非均为$t$。&lt;/p&gt;</description>
+      <description>&lt;p&gt;本文旨在推导Kubo Formula的非线性响应理论。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

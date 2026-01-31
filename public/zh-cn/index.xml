@@ -12,28 +12,7 @@
     <pubDate>Sat, 10 Jan 2026 02:59:13 &#43;0000</pubDate>
     <author>yzj5306@psu.edu (OkongOyangO)</author>
     <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/fermi_golden_rule/</guid>
-    <description><![CDATA[<p>本文旨在计算严格的量子跃迁速率，并指出费米黄金法则是其的“长时间平均”的结果。严格的量子跃迁速率相比费米黄金法则还多一项振幅不可忽略的二倍频振荡项，前后者关系类似交流电路中的“瞬时功率”与“平均功率”。</p>
-<h2 id="fermi-golden-rule">Fermi Golden Rule</h2>
-<p>费米黄金法则旨在计算时谐外场微扰下，量子系统从初态$|i\rangle$到末态$|f\rangle$（均为$H_0$的本征态）的跃迁速率。由于量子力学课程中已经阐述的很完备，此处我们在Dirac表象（相互作用表象）下速通一遍。使用Dirac表象是为了更好与Kubo Formula进行比较</p>
-<p>Dirac表象下态的运动方程：</p>
-$$
-\begin{aligned}
-i \hbar \partial_t |\psi(t) \rangle_D = \hat{V}_D(t) |\psi(t) \rangle_D
-\end{aligned}
-$$<p>Dirac表象下的算符：</p>
-$$
-\begin{aligned}
-\hat{\mathcal{O}}_D(t) = e^{i\hat{H_0}t/\hbar} \hat{\mathcal{O}}_S(t) e^{-i\hat{H_0}t/\hbar}
-\end{aligned}
-$$<p>下标$D,\,S$分别代表Dirac表象和Schrodinger表象。</p>
-<p>对运动方程积分后迭代可以得到Dirac表象下态的演化算符$\mathcal{U}(t,t')$：</p>
-$$
-\begin{aligned}
-\mathcal{U}(t,t') & = \mathcal{T} e^{-i \int_{t'}^{t}dt'' \hat{V}_D(t'')/\hbar }  \\
-& = 1 + (-i/\hbar) \int_{t'}^{t}dt_1 \hat{V}_D(t_1) + \frac{1}{2!} (-i/\hbar)^2 \int_{t'}^{t}dt_1 \int_{t'}^{t}dt_2 \mathcal{T} \hat{V}_D(t_1) \hat{V}_D(t_2) + \dots \\
-& = 1 + (-i/\hbar) \int_{t'}^{t}dt_1 \hat{V}_D(t_1) +  (-i/\hbar)^2 \int_{t'}^{t}dt_1 \int_{t'}^{\mathbf{t_1}}dt_2  \hat{V}_D(t_1) \hat{V}_D(t_2) + \dots 
-\end{aligned}
-$$<p>其中$\mathcal{T}$是time ordering operator，将时间小的算符放在右边，先和态矢作用。上面也给出了不用time ordering的表达式，可以对运动方程积分，迭代获得。</p>]]></description>
+    <description><![CDATA[<p>本文旨在计算严格的量子跃迁速率，并指出费米黄金法则是其的&quot;长时间平均&quot;的结果。严格的量子跃迁速率相比费米黄金法则还多一项振幅不可忽略的二倍频振荡项，前后者关系类似交流电路中的&quot;瞬时功率&quot;与&quot;平均功率&quot;。</p>]]></description>
 </item>
 <item>
     <title>平均场近似与变分法｜Hartree, Fock, BCS能1:1:1混用吗？</title>
@@ -42,69 +21,31 @@ $$<p>其中$\mathcal{T}$是time ordering operator，将时间小的算符放在�
     <author>yzj5306@psu.edu (OkongOyangO)</author>
     <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/mean_field_approximation/</guid>
     <description><![CDATA[<p>本文旨在介绍平均场近似，同时阐述其变分法本质。</p>
-<p>Hartree, Fock, BCS这一个一个一个平均场近似，看似是一个一个一个互不相容的decouple方法，但利用平均场近似的变分法本质，我们发现他们事实上确实可以1:1:1混着用。</p>
-<h2 id="preface">Preface</h2>
-<p>本文灵感首先来自来自和<a href="https://www.zhihu.com/people/li-yong-kang-9-34" target="_blank" rel="noopener noreffer ">@ykli</a>同学的讨论，在此特别感谢<a href="https://www.zhihu.com/people/li-yong-kang-9-34" target="_blank" rel="noopener noreffer ">@ykli</a>在推导过程中给予的大量帮助。</p>
-<p>这个问题在physics stackexchange网站上也被提及（被称为“Multi-channel Mean Field Theory”），在此也放上链接供大家参考：</p>
-<p><a href="https://physics.stackexchange.com/questions/742905/multi-channel-mean-field-theory" target="_blank" rel="noopener noreffer ">https://physics.stackexchange.com/questions/742905/multi-channel-mean-field-theory</a></p>
-<p>同时，<a href="https://www.zhihu.com/people/deng-wwzz" target="_blank" rel="noopener noreffer ">@阿兰那行</a>学长关于“物理圈黑话”的回答也给了我相当多的灵感，有兴趣的读者可以移步：</p>
-<p><a href="https://www.zhihu.com/question/410499049/answer/2442413803" target="_blank" rel="noopener noreffer ">https://www.zhihu.com/question/410499049/answer/2442413803</a></p>
-<h2 id="introduction">Introduction</h2>
-<p>对于相互作用体系，系统完整的哈密顿量为：</p>
-$$
-\begin{aligned}
-\hat{H} = \hat{H}_0 + \hat{V}_{int}
-\end{aligned}
-$$<p>其中，$\hat{H}_0 \sim \sum c^\dagger c$，为费米子产生湮灭算符的二次型部分，比较容易处理成independent free particle。</p>
-<p>而$\hat{V}_{int} \sim \sum c^\dagger c^\dagger c c$，为相互作用部分。</p>
-<p>由于相互作用的存在，我们比较难求系统的基态波函数或者平衡态密度矩阵，从而比较难以计算相互作用体系的各种信息。因此，我们常常用各种近似方法来处理。</p>
-<p>平均场近似便是一种方法，我们取一个可以严格解的平均场近似哈密顿量：</p>
-$$
-\begin{aligned}
-\hat{H}_{mf} = \hat{H}_0 + \hat{V}_{mf}
-\end{aligned}
-$$<p>使得$\hat{V}_{mf}$也为二次型，则比较好求严格解，我们便可以用这个平均场近似哈密顿量的解来近似给出系统的各种性质。</p>
-<h2 id="mean-field-theory-by-decoupling">Mean Field Theory by Decoupling</h2>
-<p>但取近似不能瞎取，也需要一定技巧。</p>
-<p>量子力学课本中教我们，平均场近似就是把算符的quantum fluctuation部分给忽略，即Decoupling Method：</p>
-$$
-\begin{aligned}
-A^\dagger A & = [\langle A \rangle + (A - \langle A \rangle)]^\dagger [\langle A \rangle + (A - \langle A \rangle)] \\
-& \equiv [\langle A \rangle + \delta A]^\dagger [\langle A \rangle + \delta A]  \\
-& = \underbrace{\langle A^\dagger \rangle \langle A \rangle}_{\mathcal{O}(\delta A^0)} + \underbrace{\langle A^\dagger \rangle \delta A +  \delta A^\dagger \langle A \rangle}_{\mathcal{O}(\delta A^1)} + \underbrace{\delta A^\dagger \delta A}_{\mathcal{O}(\delta A^2)} \\
-& = \underbrace{\langle A^\dagger \rangle A + A^\dagger \langle A \rangle - \langle A^\dagger \rangle \langle A \rangle}_{\text{mean field}\ =\ \mathcal{O}(\delta A^0) + \mathcal{O}(\delta A^1)} \\
-& + \underbrace{(A - \langle A \rangle)^\dagger (A - \langle A \rangle)}_{\text{quantum fluctuation}\ =\ \mathcal{O}(\delta A^2)} \\
-& \approx \langle A^\dagger \rangle A + A^\dagger \langle A \rangle - \langle A^\dagger \rangle \langle A \rangle
-\end{aligned}
-$$<p>其中mean field部分保留了算符涨落$\delta A$的零阶和一阶部分，而quantum fluctuation包含了算符涨落$\delta A$的二阶部分。</p>]]></description>
+<p>Hartree, Fock, BCS这一个一个一个平均场近似，看似是一个一个一个互不相容的decouple方法，但利用平均场近似的变分法本质，我们发现他们事实上确实可以1:1:1混着用。</p>]]></description>
 </item>
 <item>
     <title>费米黄金定则？焦耳热罢了！</title>
     <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/joule_heat/</link>
-    <pubDate>Thu, 08 Jan 2026 21:54:37 -0500</pubDate>
+    <pubDate>Thu, 08 Jan 2026 23:00:00 -0500</pubDate>
     <author>yzj5306@psu.edu (OkongOyangO)</author>
     <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/joule_heat/</guid>
-    <description><![CDATA[<p>本文旨在阐述费米黄金法则和焦耳热的一致性。</p>
-<h2 id="introduction">Introduction</h2>
-<p>费米黄金法则能计算系统对电磁场的吸收，而Kubo Formula能计算电流响应，用焦耳热公式也能计算电磁场的吸收。</p>
-<p>前者似乎完全从量子跃迁的角度计算，而后者似乎完全从焦耳热的角度计算。但两者本质上都是量子力学中的含时围绕理论的应用，这一点我们在前两篇文章中便有所涉及，只不过对两者的一致性没有详尽的阐述，有兴趣的读者可以移步浏览：</p>
-<p><a href="https://zhuanlan.zhihu.com/p/611688122" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/611688122</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/611996682" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/611996682</a></p>
-<p>可以证明，费米黄金法则对应Kubo Formula中哈密顿量$H_0$的二阶响应变化率$\frac{d }{dt}\langle H_0 \rangle^{(2)}$，而此二阶响应变化率可以表示成电流线性响应与外加电场的内积$\langle \hat{\mathbf{J}} \rangle^{(1)} \cdot \mathbf{E}$。</p>
-<h2 id="fermi-golden-rule">Fermi Golden Rule</h2>
-<p>费米黄金法则旨在计算时谐外场微扰下，量子系统从初态$|i\rangle$到末态$|f\rangle$（均为$H_0$的本征态）的跃迁速率。在之前的费米黄金法则的文章中，我们用Dirac Picture重新推导了一遍，而使用Dirac Picture是为了更好与Kubo Formula进行比较。</p>
-<p>Dirac表象下态的运动方程：</p>
-$$
-\begin{aligned}
-i \hbar \partial_t |\psi(t) \rangle_D = \hat{V}_D(t) |\psi(t) \rangle_D
-\end{aligned}
-$$<p>对运动方程积分后迭代可以得到Dirac表象下态随时间演化的微扰展开形式。假设系统在$t = t_0$时，初态为$|i\rangle$，则：</p>
-$$
-\begin{aligned}
-| \psi (t) \rangle_D & = |i\rangle + (-i/\hbar) \int_{t_0}^{t}dt_1 \hat{V}_D(t_1)|i\rangle + (-i/\hbar)^2 \int_{t_0}^{t}dt_1 \int_{t_0}^{\mathbf{t_1}}dt_2  \hat{V}_D(t_1) \hat{V}_D(t_2)|i\rangle + \dots \\
-& = | \psi^{(0)} \rangle + | \psi^{(1)}\rangle + | \psi^{(2)}\rangle + \dots
-\end{aligned}
-$$<p>则$t$时刻$|f\rangle$态的概率为也可以微扰展开成：</p>]]></description>
+    <description><![CDATA[<p>本文旨在阐述费米黄金法则和焦耳热的一致性。</p>]]></description>
+</item>
+<item>
+    <title>只看基态如何区分导体和绝缘体？🤔</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/distinguish_conductors_insulators_ground_state/</link>
+    <pubDate>Thu, 08 Jan 2026 22:30:00 -0500</pubDate>
+    <author>yzj5306@psu.edu (OkongOyangO)</author>
+    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/distinguish_conductors_insulators_ground_state/</guid>
+    <description><![CDATA[<p>本note旨在阐述多体系统<strong>导电性</strong>与<strong>基态量子几何性质</strong>的关联，并解释如何仅通过基态波函数的&quot;局域&quot;程度，来区分导体和绝缘体。</p>]]></description>
+</item>
+<item>
+    <title>久保同学不放过我｜Kubo Formula的非线性响应理论</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/nonlinear-kubo-formalism/</link>
+    <pubDate>Thu, 08 Jan 2026 22:00:00 -0500</pubDate>
+    <author>yzj5306@psu.edu (OkongOyangO)</author>
+    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/nonlinear-kubo-formalism/</guid>
+    <description><![CDATA[<p>本文旨在推导Kubo Formula的非线性响应理论。</p>]]></description>
 </item>
 <item>
     <title>分数量子霍尔效应(FQHE)、分数反常量子霍尔效应(FAQHE)与分数陈绝缘体(FCI)</title>
@@ -112,90 +53,7 @@ $$<p>则$t$时刻$|f\rangle$态的概率为也可以微扰展开成：</p>]]></d
     <pubDate>Thu, 08 Jan 2026 21:54:37 -0500</pubDate>
     <author>yzj5306@psu.edu (OkongOyangO)</author>
     <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/fqhe_faqhe_fci/</guid>
-    <description><![CDATA[<p>本note全文约10000字，旨在帮助读者入门分数量子霍尔效应、分数反常量子霍尔效应以及分数陈绝缘体的相关内容。本文仅为一己之见，有很多疏漏，还望读者不吝赐教。下面是正文～</p>
-<h2 id="introduction-to-fqhe-faqhe--fci">Introduction to FQHE, FAQHE &amp; FCI</h2>
-<p>量子霍尔效应需要强磁场环境才能实现，而Haldane Model以及陈绝缘体的出现使得量子霍尔效应得以在<strong>无外磁场的晶格系统</strong>中便能实现。这种现象称为“量子反常霍尔效应”，在陈绝缘体中，非平庸的Berry Curvature分布使得晶格体系具有了类似量子霍尔效应的非平庸拓扑性质，或者更进一步，<strong>Berry Curvature取代了磁场</strong>（虽然Berry Curvature定义在在倒空间中，而磁场出现在实空间中）。由它引申出的对陈绝缘体及其他拓扑相的讨论也成为前些年凝聚态理论领域的热点话题。</p>
-<p></p>
-<p>另一方面，当磁场强度足够大，使得电子全部简并在最低朗道能级(Lowest Landau Level, LLL)，特别是当一个电子平均占有整数（或分数）个量子磁通时，分数量子霍尔效应便出现了。与量子霍尔效应、量子反常霍尔效应或是一般的拓扑绝缘体不同，分数量子霍尔效应是LLL中简并<strong>电子强相互作用</strong>的结果，而之前的讨论基本限于non-interacting的有能隙费米系统。</p>
-<p>分数量子霍尔体系有着拓扑相关的基态简并度(Ground State Degeneracy, GSD)、分数激发与任意子统计，这可能应用于拓扑量子计算等领域，但需要比量子霍尔效应更强的磁场这一条件便能“<strong>劝退</strong>”很多想要应用化该效应的人。</p>
-<p>类似英语语法中的各种时态，我们也想用“反常”和“分数”组合出一种新的量子霍尔效应，及“<strong>分数反常量子霍尔效应</strong>”（Fractional Anomalous Quantum Hall Effect, FAQHE），<strong>简称“FAQ”</strong>（“发Q”）。</p>
-<p></p>
-<p>特别地，我们希望这一现象在格点体系中便能实现。结合量子反常霍尔效应在陈绝缘体中的实现，物理学家们便把目光投向了陈绝缘体中拓扑非平庸的Chern Band，并仿照分数填布的LLL，在Chern Band中进行1/3、1/5、1/7&hellip;的电子数填布，并给系统Hamiltonian加上电子-电子关联项（例如Hubbard Model），来观测这种分数填布的陈绝缘体是否能表现出类似FQH体系的现象（之前提到的GSD、分数激发、任意子统计等）。</p>
-<p>在对分数填布、拓扑非平庸的Haldane Model、Kagome Lattice等体系的数值模拟中，确实观测到了热力学极限下有限大的many-body gap、非平庸的GSD、分数激发等现象，物理学家们便把这种新奇的拓扑物态命名为“<strong>分数陈绝缘体</strong>”(Fractional Chern Insulator, FCI)。</p>
-<h2 id="physics-in-lll">Physics in L.L.L.</h2>
-<p>为了将（近）自由电子气系统中的分数量子霍尔效应“<strong>无缝衔接</strong>”到陈绝缘体的晶格系统中，我们首先回顾最低朗道能级(L.L.L.)中的物理。</p>
-<p>磁场中电子的Hamiltonian：</p>
-$$
-\begin{aligned}
-H=\frac{1}{2 m}\left( \hat{\mathbf{p}} + e \mathbf{A}(\hat{\mathbf{r}}) \right)^2 = \frac{\boldsymbol{\pi}^2}{2m}
-\end{aligned}
-$$<p>对于恒定外磁场中的自由电子气，可以不选取特定规范计算Landau能级，也可以在Landau Gauge和Symmetric Gauge下严格求解单电子波函数。</p>]]></description>
-</item>
-<item>
-    <title>久保同学不放过我｜Kubo Formula的非线性响应理论</title>
-    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/nonlinear-kubo-formalism/</link>
-    <pubDate>Thu, 08 Jan 2026 21:54:37 -0500</pubDate>
-    <author>yzj5306@psu.edu (OkongOyangO)</author>
-    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/nonlinear-kubo-formalism/</guid>
-    <description><![CDATA[<p>#! <a href="https://zhuanlan.zhihu.com/p/611996682" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/611996682</a></p>
-<h1 id="久保同学不放过我kubo-formula的非线性响应理论">久保同学不放过我｜Kubo Formula的非线性响应理论</h1>
-<p>本文旨在推导Kubo Formula的非线性响应理论。</p>
-<h2 id="introduction">Introduction</h2>
-<p>Kubo Formula的线性和非线性响应理论本质上都是量子力学的微扰论。</p>
-<p>其中线性响应更为常见，例如实验测量的电导率、磁化率、电极化率等susceptibility均为线性响应函数（Retarded Green Function）。</p>
-<p>但非线性响应也有其应用价值，例如半导体中的二阶电流响应，包括2nd Harmonic Generation，Injection and Shift Current等等。</p>
-<p>二阶响应甚至可以用来解释上一节Fermi Golden Rule中的常跃迁速率和二倍频跃迁速率两种响应。</p>
-<p><a href="https://zhuanlan.zhihu.com/p/611688122" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/611688122</a></p>
-<p>可见<strong>只要胆够大，处处皆是非线性响应（bushi</strong>。</p>
-<h2 id="density-matrix-in-dirac-picture">Density Matrix in Dirac Picture</h2>
-<p>Kubo Formula的推导从相互作用（Dirac）绘景下，系统密度矩阵的演化开始。</p>
-<p>在Fermi Golden Rule那节中，我们已经推导了相互作用（Dirac）绘景下波函数的运动方程。</p>
-<p>简单将密度矩阵看成$\hat{\rho}_D(t) \sim | \psi (t) \rangle_D \langle \psi(t) |_D$，有利于我们快速回忆起相互作用（Dirac）绘景下密度矩阵的运动方程：</p>
-$$
-\begin{aligned}
-\frac{d}{dt} \hat{\rho}_D(t) = - \frac{i}{\hbar} [ \hat{\rho}_D(t) , \hat{V}_D(t) ]
-\end{aligned}
-$$<p>积分后重复迭代，我们可以得到密度矩阵的展开式：</p>
-$$
-\begin{aligned}
-\hat{\rho}_D(t) = \hat{\rho}_0 + \sum_{n = 1}^{\infty} (-\frac{\mathrm{i}}{\hbar})^n \int_{-\infty}^{t} dt_1 \int_{-\infty}^{t_1} dt_2 \dots \int_{-\infty}^{t_{n-1}} dt_n [\hat{V}_D(t_1),[\dots[\hat{V}_D(t_n),\hat{\rho}_0]\dots] ]
-\end{aligned}
-$$<p>注意每个积分的上界并非均为$t$。</p>]]></description>
-</item>
-<item>
-    <title>只看基态如何区分导体和绝缘体？🤔</title>
-    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/distinguish_conductors_insulators_ground_state/</link>
-    <pubDate>Thu, 08 Jan 2026 21:54:37 -0500</pubDate>
-    <author>yzj5306@psu.edu (OkongOyangO)</author>
-    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/distinguish_conductors_insulators_ground_state/</guid>
-    <description><![CDATA[<p>本note旨在阐述多体系统<strong>导电性</strong>与<strong>基态量子几何性质</strong>的关联，并解释如何仅通过基态波函数的“局域”程度，来区分导体和绝缘体。</p>
-<h2 id="introduction">Introduction</h2>
-<p>“只看基态就能区分导体和绝缘体”，这个argument似乎有些离谱。</p>
-<p>1930年代的能带论（一定程度上）解释了导体和绝缘体的区别。在non-interacting层面上，导体与绝缘体可以根据基态能带是否填满来判断。价带若被填满，且和导带有带隙$E_g > 0$，则是绝缘体；反之则为导体。此时可以用带隙$E_g$区分导体和绝缘体，而带隙$E_g$至少需要知道激发态的能量，故不可避免涉及激发态性质。</p>
-<p>但1949年提出的Mott Insulator（由强电子-电子关联导致）和1958年提出的Anderson Insulator（由强无序导致）指出了能带论在区分导体和绝缘体上的漏洞，即多体系统的绝缘机制不只有包括价带被填满，还可能与强关联、无序有关。同理，除了无带隙可以是导体的产生机制，一些无序的金属合金也可能是导体。例如，无序的合金体系中，虽然没有带隙，但仍可能为绝缘体，这正是Anderson Localization导致的局域态没法稳定输运电流导致的。</p>
-<p>更何况，多体系统可以根本没有晶格，我们急需一种更universal的判断多体系统导电性质的indicator。</p>
-<p>唯象而言，导体与绝缘体的区别在于直流电导率$\text{Re}\sigma(\omega\rightarrow 0)$的不同，因为一般的绝缘体通交流电也能导电。或者靠电极化现象区分，绝缘体中电子束缚，只能在原子附近运动，才有明显的电极化现象，而导体中电子趋于自由运动，外加电场会使其自由流动，因而没有良定的电极化现象。</p>
-<p>我们总可以通过计算线性响应理论计算电导率或者电极化率，从而区分导体和绝缘体，但这还是需要考虑激发态的性质。</p>
-<p>但Kohn在1964年的论文&quot;Theory of the insulating state&quot;提出，多体系统的导电性可以用基态多体波函数在many-body configuration的“局域”程度来判断。</p>
-<p><a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.133.A171" target="_blank" rel="noopener noreffer ">https://journals.aps.org/pr/abstract/10.1103/PhysRev.133.A171</a></p>
-<p>20世纪末，Resta等人注意到这种局域程度可以用多体基态波函数的second cumulant moment$\langle r_\alpha r_\beta \rangle_c$（“c&quot; for &ldquo;cumulant&rdquo;）更好的刻画，并揭示了其Quantum Geometry的本质。</p>
-<p><a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.82.370" target="_blank" rel="noopener noreffer ">https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.82.370</a></p>
-<p>那么首先，我们来阐明怎么定义波函数的局域程度。</p>
-<h2 id="wannierizability--quantum-geometry">Wannierizability &amp; Quantum Geometry</h2>
-<p>这里需要阐明，所谓“基态多体波函数在many-body configuration的‘局域’程度”，与单体波函数的局域程度不同，但在定义上有相似之处。而且从单体波函数的角度推导更加简单，所以我们先介绍单体波函数的局域程度的定义，讨论其性质，之后再推广到Kohn、Resta等人论文中的多体情形。</p>
-<p>以固体能带体系为例，不论是绝缘体还是导体，其单电子本征态都是延展的Bloch波函数。不过我们可以通过Fourier Transfer将这些实空间延展的Bloch本征态变成实空间局域的Wannier Function。</p>
-<p>Wannier函数$|\mathbf{R} n\rangle$和Bloch波函数$\left|\psi_{n \mathbf{k}}\right\rangle$之间的转换关系：</p>
-$$
-\begin{aligned}
-\left|\psi_{n \mathbf{k}}\right\rangle=
-\sum_{\mathbf{R}} e^{i \mathbf{k} \cdot \mathbf{R}}|\mathbf{R} n\rangle \Leftrightarrow |\mathbf{R} n\rangle=\frac{1}{N} \sum_{\mathbf{k}} e^{-i \mathbf{k} \cdot \mathbf{R}}\left|\psi_{n \mathbf{k}}\right\rangle
-\end{aligned}
-$$<p>Wannier波函数的局域程度与能带的规范选取有关。如果我们给Bloch波函数加上一个与$\mathbf{k}$有关的相位（规范），仍然是本征态。</p>
-$$
-\begin{aligned}
-\left|\tilde{\psi}_{n \mathbf{k}}\right\rangle=e^{i \varphi_n(\mathbf{k})}\left|\psi_{n \mathbf{k}}\right\rangle \ \Rightarrow\ \hat{H}\left|\tilde{\psi}_{n \mathbf{k}}\right\rangle = \epsilon_n(\mathbf{k}) \left|\tilde{\psi}_{n \mathbf{k}}\right\rangle
-\end{aligned}
-$$<p>如何通过调节gauge使得Wannier函数达到最大局域化相关内容可以参考Vanderbilt的1997年的PRB，“Maximally localized generalized Wannier functions for composite energy bands”以及2012年的RMP，“Maximally localized Wannier functions: Theory and applications”：</p>]]></description>
+    <description><![CDATA[<p>本note全文约10000字，旨在帮助读者入门分数量子霍尔效应、分数反常量子霍尔效应以及分数陈绝缘体的相关内容。本文仅为一己之见，有很多疏漏，还望读者不吝赐教。下面是正文～</p>]]></description>
 </item>
 </channel>
 </rss>

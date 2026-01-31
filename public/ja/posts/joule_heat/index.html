@@ -7,36 +7,18 @@
         <title>フェルミの黄金律？ただのジュール熱さ！ - OkongOyangOのノート</title><meta name="Description" content="トポロジー、幾何学、非線形応答に関する物理ノート"><meta property="og:url" content="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/joule_heat/">
   <meta property="og:site_name" content="OkongOyangOのノート">
   <meta property="og:title" content="フェルミの黄金律？ただのジュール熱さ！">
-  <meta property="og:description" content="本文はフェルミの黄金律とジュール熱の整合性を説明することを目的としています。
-Introduction フェルミの黄金律は系の電磁場吸収を計算でき、久保公式（Kubo Formula）は電流応答を計算でき、ジュール熱公式も電磁場の吸収を計算できます。
-前者は完全に量子遷移の観点から計算しているように見え、後者は完全にジュール熱の観点から計算しているように見えます。しかし、両者は本質的に量子力学における時間依存摂動論の応用であり、この点については以前の2つの記事でも触れましたが、両者の整合性については詳細に説明していませんでした。興味のある読者は以下をご覧ください：
-https://zhuanlan.zhihu.com/p/611688122
-https://zhuanlan.zhihu.com/p/611996682
-フェルミの黄金律は、久保公式におけるハミルトニアン $H_0$ の二次応答の変化率 $\frac{d }{dt}\langle H_0 \rangle^{(2)}$ に対応し、この二次応答の変化率は電流の線形応答と外部電場の内積 $\langle \hat{\mathbf{J}} \rangle^{(1)} \cdot \mathbf{E}$ として表せることが証明できます。
-Fermi Golden Rule フェルミの黄金律は、時間調和外場摂動下で、量子系が初期状態 $|i\rangle$ から終状態 $|f\rangle$ （いずれも $H_0$ の固有状態）へ遷移する速度を計算することを目的としています。以前のフェルミの黄金律の記事では、久保公式と比較しやすくするために、ディラック描像（Dirac Picture）を用いて再導出しました。
-ディラック描像における状態の運動方程式：
-$$ \begin{aligned} i \hbar \partial_t |\psi(t) \rangle_D = \hat{V}_D(t) |\psi(t) \rangle_D \end{aligned} $$運動方程式を積分して反復することで、ディラック描像における状態の時間発展の摂動展開形式が得られます。系が $t = t_0$ において初期状態 $|i\rangle$ にあると仮定すると：
-$$ \begin{aligned} | \psi (t) \rangle_D &amp; = |i\rangle &#43; (-i/\hbar) \int_{t_0}^{t}dt_1 \hat{V}_D(t_1)|i\rangle &#43; (-i/\hbar)^2 \int_{t_0}^{t}dt_1 \int_{t_0}^{\mathbf{t_1}}dt_2 \hat{V}_D(t_1) \hat{V}_D(t_2)|i\rangle &#43; \dots \\ &amp; = | \psi^{(0)} \rangle &#43; | \psi^{(1)}\rangle &#43; | \psi^{(2)}\rangle &#43; \dots \end{aligned} $$したがって、時刻 $t$ における $|f\rangle$ 状態の確率も摂動展開できます：">
+  <meta property="og:description" content="本文はフェルミの黄金律とジュール熱の整合性を説明することを目的としています。">
   <meta property="og:locale" content="ja">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2026-01-08T21:54:37-05:00">
-    <meta property="article:modified_time" content="2026-01-08T21:54:37-05:00">
+    <meta property="article:published_time" content="2026-01-08T23:00:00-05:00">
+    <meta property="article:modified_time" content="2026-01-08T23:00:00-05:00">
     <meta property="article:tag" content="Quantum Mechanics">
     <meta property="article:tag" content="Joule Heat">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="フェルミの黄金律？ただのジュール熱さ！">
-  <meta name="twitter:description" content="本文はフェルミの黄金律とジュール熱の整合性を説明することを目的としています。
-Introduction フェルミの黄金律は系の電磁場吸収を計算でき、久保公式（Kubo Formula）は電流応答を計算でき、ジュール熱公式も電磁場の吸収を計算できます。
-前者は完全に量子遷移の観点から計算しているように見え、後者は完全にジュール熱の観点から計算しているように見えます。しかし、両者は本質的に量子力学における時間依存摂動論の応用であり、この点については以前の2つの記事でも触れましたが、両者の整合性については詳細に説明していませんでした。興味のある読者は以下をご覧ください：
-https://zhuanlan.zhihu.com/p/611688122
-https://zhuanlan.zhihu.com/p/611996682
-フェルミの黄金律は、久保公式におけるハミルトニアン $H_0$ の二次応答の変化率 $\frac{d }{dt}\langle H_0 \rangle^{(2)}$ に対応し、この二次応答の変化率は電流の線形応答と外部電場の内積 $\langle \hat{\mathbf{J}} \rangle^{(1)} \cdot \mathbf{E}$ として表せることが証明できます。
-Fermi Golden Rule フェルミの黄金律は、時間調和外場摂動下で、量子系が初期状態 $|i\rangle$ から終状態 $|f\rangle$ （いずれも $H_0$ の固有状態）へ遷移する速度を計算することを目的としています。以前のフェルミの黄金律の記事では、久保公式と比較しやすくするために、ディラック描像（Dirac Picture）を用いて再導出しました。
-ディラック描像における状態の運動方程式：
-$$ \begin{aligned} i \hbar \partial_t |\psi(t) \rangle_D = \hat{V}_D(t) |\psi(t) \rangle_D \end{aligned} $$運動方程式を積分して反復することで、ディラック描像における状態の時間発展の摂動展開形式が得られます。系が $t = t_0$ において初期状態 $|i\rangle$ にあると仮定すると：
-$$ \begin{aligned} | \psi (t) \rangle_D &amp; = |i\rangle &#43; (-i/\hbar) \int_{t_0}^{t}dt_1 \hat{V}_D(t_1)|i\rangle &#43; (-i/\hbar)^2 \int_{t_0}^{t}dt_1 \int_{t_0}^{\mathbf{t_1}}dt_2 \hat{V}_D(t_1) \hat{V}_D(t_2)|i\rangle &#43; \dots \\ &amp; = | \psi^{(0)} \rangle &#43; | \psi^{(1)}\rangle &#43; | \psi^{(2)}\rangle &#43; \dots \end{aligned} $$したがって、時刻 $t$ における $|f\rangle$ 状態の確率も摂動展開できます：">
+  <meta name="twitter:description" content="本文はフェルミの黄金律とジュール熱の整合性を説明することを目的としています。">
 <meta name="application-name" content="My cool site">
 <meta name="apple-mobile-web-app-title" content="My cool site">
 <meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
@@ -53,7 +35,7 @@ $$ \begin{aligned} | \psi (t) \rangle_D &amp; = |i\rangle &#43; (-i/\hbar) \int_
             "@type": "WebPage",
             "@id": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/ja\/posts\/joule_heat\/"
         },"genre": "posts","keywords": "Quantum Mechanics, Joule Heat","wordcount":  1098 ,
-        "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/ja\/posts\/joule_heat\/","datePublished": "2026-01-08T21:54:37-05:00","dateModified": "2026-01-08T21:54:37-05:00","publisher": {
+        "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/ja\/posts\/joule_heat\/","datePublished": "2026-01-08T23:00:00-05:00","dateModified": "2026-01-08T23:00:00-05:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -80,7 +62,7 @@ $$ \begin{aligned} | \psi (t) \rangle_D &amp; = |i\rangle &#43; (-i/\hbar) \int_
             <a href="/OkongOyangO.Notes/ja/" title="OkongOyangOのノート">OkongOyangO&#39;s Notes</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/ja/OkongOyangO.Notes/posts/"><i class='fas fa-archive fa-fw'></i> 記事 </a><a class="menu-item" href="/ja/OkongOyangO.Notes/tags/"><i class='fas fa-tags fa-fw'></i> タグ </a><a class="menu-item" href="https://OkongOyangO.github.io" rel="noopener noreffer" target="_blank"><i class='fas fa-home fa-fw'></i> メインページ </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+            <div class="menu-inner"><a class="menu-item" href="/ja/OkongOyangO.Notes/posts/"><i class='fas fa-archive fa-fw'></i> 記事 </a><a class="menu-item" href="/ja/OkongOyangO.Notes/tags/"><i class='fas fa-tags fa-fw'></i> タグ </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="Search/搜索/検索..." id="search-input-desktop">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
                             <i class="fas fa-search fa-fw" aria-hidden="true"></i>
@@ -95,7 +77,7 @@ $$ \begin{aligned} | \psi (t) \rangle_D &amp; = |i\rangle &#43; (-i/\hbar) \int_
                     <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
                 </a><a href="javascript:void(0);" class="menu-item language" title="Select Language">
                     <i class="fa fa-globe fa-fw" aria-hidden="true"></i>                      
-                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/joule_heat/"></option><option value="/OkongOyangO.Notes/zh-cn/posts/joule_heat/"></option><option value="/OkongOyangO.Notes/ja/posts/joule_heat/" selected></option></select>
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/joule_heat/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/joule_heat/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/joule_heat/" selected>日本語</option></select>
                 </a></div>
         </div>
     </div>
@@ -125,11 +107,11 @@ $$ \begin{aligned} | \psi (t) \rangle_D &amp; = |i\rangle &#43; (-i/\hbar) \int_
                     <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
                         Cancel
                     </a>
-                </div><a class="menu-item" href="/ja/OkongOyangO.Notes/posts/" title=""><i class='fas fa-archive fa-fw'></i>記事</a><a class="menu-item" href="/ja/OkongOyangO.Notes/tags/" title=""><i class='fas fa-tags fa-fw'></i>タグ</a><a class="menu-item" href="https://OkongOyangO.github.io" title="" rel="noopener noreffer" target="_blank"><i class='fas fa-home fa-fw'></i>メインページ</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                </div><a class="menu-item" href="/ja/OkongOyangO.Notes/posts/" title=""><i class='fas fa-archive fa-fw'></i>記事</a><a class="menu-item" href="/ja/OkongOyangO.Notes/tags/" title=""><i class='fas fa-tags fa-fw'></i>タグ</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
                 <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
             </a><a href="javascript:void(0);" class="menu-item" title="Select Language">
                     <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
-                    <select class="language-select" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/joule_heat/"></option><option value="/OkongOyangO.Notes/zh-cn/posts/joule_heat/"></option><option value="/OkongOyangO.Notes/ja/posts/joule_heat/" selected></option></select>
+                    <select class="language-select" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/joule_heat/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/joule_heat/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/joule_heat/" selected>日本語</option></select>
                 </a></div>
     </div>
 </header><div class="search-dropdown desktop">
@@ -142,7 +124,7 @@ $$ \begin{aligned} | \psi (t) \rangle_D &amp; = |i\rangle &#43; (-i/\hbar) \int_
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">フェルミの黄金律？ただのジュール熱さ！</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="https://OkongOyangO.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">included in <a href="/OkongOyangO.Notes/ja/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
+            <div class="post-meta-line"><span class="post-author"><a href="/OkongOyangO.Notes/ja/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">included in <a href="/OkongOyangO.Notes/ja/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-01-08">2026-01-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1098 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;6 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
@@ -342,8 +324,7 @@ $$
 \Leftrightarrow \  &P = \frac{d}{dt} \langle \hat{H}_0 \rangle^{(2)} = (-\frac{\mathrm{i}}{\hbar})^2  \int_{-\infty}^{t} \mathrm{~d} t_2  \operatorname{Tr} \left\{\hat{\rho}_0\left[ \left[\hat{H}_0, \hat{V}_{D}(t)\right],\hat{V}_{D}(t_2)\right]\right\}
 \end{aligned}
 $$<p>つまり、電流の応答に電場を掛けたジュール熱公式と、量子遷移速度にエネルギー変化を掛けたフェルミの黄金律は、本質的にどちらもエネルギー応答の変化率なのです。</p>
-<p>したがって、一見巨視的な「ジュール熱」と一見微視的な「フェルミの黄金律」は同じものであると言えます。</p>
-</div><div class="post-footer" id="post-footer">
+<p>したがって、一見巨視的な「ジュール熱」と一見微視的な「フェルミの黄金律」は同じものであると言えます。</p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
@@ -370,7 +351,7 @@ $$<p>つまり、電流の応答に電場を掛けたジュール熱公式と、
 </article></div>
             </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.154.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
-                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://OkongOyangO.github.io" target="_blank">OkongOyangO</a></span></div>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/OkongOyangO.Notes/ja/" target="_blank">OkongOyangO</a></span></div>
         </div>
     </footer></div>
 

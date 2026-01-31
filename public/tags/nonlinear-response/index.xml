@@ -8,14 +8,14 @@
     <language>en</language>
     <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
     <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
-    <lastBuildDate>Thu, 08 Jan 2026 21:54:37 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 08 Jan 2026 22:00:00 -0500</lastBuildDate>
     <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/tags/nonlinear-response/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Nonlinear Response Theory of the Kubo Formula</title>
       <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/nonlinear-kubo-formalism/</link>
-      <pubDate>Thu, 08 Jan 2026 21:54:37 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <pubDate>Thu, 08 Jan 2026 22:00:00 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
       <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/nonlinear-kubo-formalism/</guid>
-      <description>&lt;p&gt;#! &lt;a href=&#34;https://zhuanlan.zhihu.com/p/611996682&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;https://zhuanlan.zhihu.com/p/611996682&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;nonlinear-response-theory-of-the-kubo-formula&#34;&gt;Nonlinear Response Theory of the Kubo Formula&lt;/h1&gt;&#xA;&lt;p&gt;This article aims to derive the nonlinear response theory of the Kubo Formula.&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Both linear and nonlinear response theories of the Kubo Formula are essentially perturbation theories in quantum mechanics.&lt;/p&gt;&#xA;&lt;p&gt;Linear response is more common; for example, experimentally measured susceptibilities such as conductivity, magnetic susceptibility, and electric polarizability are all linear response functions (Retarded Green Functions).&lt;/p&gt;&#xA;&lt;p&gt;However, nonlinear response also has its application values, such as second-order current response in semiconductors, including Second Harmonic Generation, Injection and Shift Current, etc.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This article aims to derive the nonlinear response theory of the Kubo Formula.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

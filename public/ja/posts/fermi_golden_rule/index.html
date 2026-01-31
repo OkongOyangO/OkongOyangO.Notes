@@ -7,13 +7,7 @@
         <title>フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？ - OkongOyangOのノート</title><meta name="Description" content="トポロジー、幾何学、非線形応答に関する物理ノート"><meta property="og:url" content="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/fermi_golden_rule/">
   <meta property="og:site_name" content="OkongOyangOのノート">
   <meta property="og:title" content="フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？">
-  <meta property="og:description" content="本文は厳密な量子遷移率を計算し、フェルミの黄金律がその「長時間平均」の結果であることを指摘することを目的としています。厳密な量子遷移率は、フェルミの黄金律と比較して、無視できない振幅を持つ二倍周波数振動項（double-frequency oscillation term）をさらに含んでいます。両者の関係は、交流回路における「瞬時電力」と「平均電力」の関係に似ています。
-Fermi Golden Rule フェルミの黄金律は、時間調和外場摂動下で、量子系が初期状態$|i\rangle$から終状態$|f\rangle$（いずれも$H_0$の固有状態）へ遷移する遷移率を計算することを目的としています。量子力学の講義ですでに十分に説明されているため、ここではディラック描像（相互作用描像）の下ですばやく確認します。ディラック描像を使用するのは、久保公式（Kubo Formula）との比較を容易にするためです。
-ディラック描像における状態の運動方程式：
-$$ \begin{aligned} i \hbar \partial_t |\psi(t) \rangle_D = \hat{V}_D(t) |\psi(t) \rangle_D \end{aligned} $$ディラック描像における演算子：
-$$ \begin{aligned} \hat{\mathcal{O}}_D(t) = e^{i\hat{H_0}t/\hbar} \hat{\mathcal{O}}_S(t) e^{-i\hat{H_0}t/\hbar} \end{aligned} $$添字$D,\,S$はそれぞれディラック描像とシュレーディンガー描像を表します。
-運動方程式を積分して反復することで、ディラック描像における状態の時間発展演算子$\mathcal{U}(t,t&#39;)$が得られます：
-$$ \begin{aligned} \mathcal{U}(t,t&#39;) &amp; = \mathcal{T} e^{-i \int_{t&#39;}^{t}dt&#39;&#39; \hat{V}_D(t&#39;&#39;)/\hbar } \\ &amp; = 1 &#43; (-i/\hbar) \int_{t&#39;}^{t}dt_1 \hat{V}_D(t_1) &#43; \frac{1}{2!} (-i/\hbar)^2 \int_{t&#39;}^{t}dt_1 \int_{t&#39;}^{t}dt_2 \mathcal{T} \hat{V}_D(t_1) \hat{V}_D(t_2) &#43; \dots \\ &amp; = 1 &#43; (-i/\hbar) \int_{t&#39;}^{t}dt_1 \hat{V}_D(t_1) &#43; (-i/\hbar)^2 \int_{t&#39;}^{t}dt_1 \int_{t&#39;}^{\mathbf{t_1}}dt_2 \hat{V}_D(t_1) \hat{V}_D(t_2) &#43; \dots \end{aligned} $$ここで$\mathcal{T}$は時間順序積演算子（time ordering operator）であり、時間の小さい演算子を右側に配置し、先に状態ベクトルに作用させます。上記には時間順序積を用いない式も示されており、これは運動方程式を積分し、反復することで得られます。">
+  <meta property="og:description" content="本文は厳密な量子遷移率を計算し、フェルミの黄金律がその「長時間平均」の結果であることを指摘することを目的としています。厳密な量子遷移率は、フェルミの黄金律と比較して、無視できない振幅を持つ二倍周波数振動項（double-frequency oscillation term）をさらに含んでいます。両者の関係は、交流回路における「瞬時電力」と「平均電力」の関係に似ています。">
   <meta property="og:locale" content="ja">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -24,13 +18,7 @@ $$ \begin{aligned} \mathcal{U}(t,t&#39;) &amp; = \mathcal{T} e^{-i \int_{t&#39;}
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？">
-  <meta name="twitter:description" content="本文は厳密な量子遷移率を計算し、フェルミの黄金律がその「長時間平均」の結果であることを指摘することを目的としています。厳密な量子遷移率は、フェルミの黄金律と比較して、無視できない振幅を持つ二倍周波数振動項（double-frequency oscillation term）をさらに含んでいます。両者の関係は、交流回路における「瞬時電力」と「平均電力」の関係に似ています。
-Fermi Golden Rule フェルミの黄金律は、時間調和外場摂動下で、量子系が初期状態$|i\rangle$から終状態$|f\rangle$（いずれも$H_0$の固有状態）へ遷移する遷移率を計算することを目的としています。量子力学の講義ですでに十分に説明されているため、ここではディラック描像（相互作用描像）の下ですばやく確認します。ディラック描像を使用するのは、久保公式（Kubo Formula）との比較を容易にするためです。
-ディラック描像における状態の運動方程式：
-$$ \begin{aligned} i \hbar \partial_t |\psi(t) \rangle_D = \hat{V}_D(t) |\psi(t) \rangle_D \end{aligned} $$ディラック描像における演算子：
-$$ \begin{aligned} \hat{\mathcal{O}}_D(t) = e^{i\hat{H_0}t/\hbar} \hat{\mathcal{O}}_S(t) e^{-i\hat{H_0}t/\hbar} \end{aligned} $$添字$D,\,S$はそれぞれディラック描像とシュレーディンガー描像を表します。
-運動方程式を積分して反復することで、ディラック描像における状態の時間発展演算子$\mathcal{U}(t,t&#39;)$が得られます：
-$$ \begin{aligned} \mathcal{U}(t,t&#39;) &amp; = \mathcal{T} e^{-i \int_{t&#39;}^{t}dt&#39;&#39; \hat{V}_D(t&#39;&#39;)/\hbar } \\ &amp; = 1 &#43; (-i/\hbar) \int_{t&#39;}^{t}dt_1 \hat{V}_D(t_1) &#43; \frac{1}{2!} (-i/\hbar)^2 \int_{t&#39;}^{t}dt_1 \int_{t&#39;}^{t}dt_2 \mathcal{T} \hat{V}_D(t_1) \hat{V}_D(t_2) &#43; \dots \\ &amp; = 1 &#43; (-i/\hbar) \int_{t&#39;}^{t}dt_1 \hat{V}_D(t_1) &#43; (-i/\hbar)^2 \int_{t&#39;}^{t}dt_1 \int_{t&#39;}^{\mathbf{t_1}}dt_2 \hat{V}_D(t_1) \hat{V}_D(t_2) &#43; \dots \end{aligned} $$ここで$\mathcal{T}$は時間順序積演算子（time ordering operator）であり、時間の小さい演算子を右側に配置し、先に状態ベクトルに作用させます。上記には時間順序積を用いない式も示されており、これは運動方程式を積分し、反復することで得られます。">
+  <meta name="twitter:description" content="本文は厳密な量子遷移率を計算し、フェルミの黄金律がその「長時間平均」の結果であることを指摘することを目的としています。厳密な量子遷移率は、フェルミの黄金律と比較して、無視できない振幅を持つ二倍周波数振動項（double-frequency oscillation term）をさらに含んでいます。両者の関係は、交流回路における「瞬時電力」と「平均電力」の関係に似ています。">
 <meta name="application-name" content="My cool site">
 <meta name="apple-mobile-web-app-title" content="My cool site">
 <meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
@@ -46,7 +34,7 @@ $$ \begin{aligned} \mathcal{U}(t,t&#39;) &amp; = \mathcal{T} e^{-i \int_{t&#39;}
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/ja\/posts\/fermi_golden_rule\/"
-        },"genre": "posts","keywords": "Quantum Mechanics, Fermi Golden Rule","wordcount":  1274 ,
+        },"genre": "posts","keywords": "Quantum Mechanics, Fermi Golden Rule","wordcount":  1269 ,
         "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/ja\/posts\/fermi_golden_rule\/","datePublished": "2026-01-10T02:59:13+00:00","dateModified": "2026-01-10T02:59:13+00:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -74,7 +62,7 @@ $$ \begin{aligned} \mathcal{U}(t,t&#39;) &amp; = \mathcal{T} e^{-i \int_{t&#39;}
             <a href="/OkongOyangO.Notes/ja/" title="OkongOyangOのノート">OkongOyangO&#39;s Notes</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/ja/OkongOyangO.Notes/posts/"><i class='fas fa-archive fa-fw'></i> 記事 </a><a class="menu-item" href="/ja/OkongOyangO.Notes/tags/"><i class='fas fa-tags fa-fw'></i> タグ </a><a class="menu-item" href="https://OkongOyangO.github.io" rel="noopener noreffer" target="_blank"><i class='fas fa-home fa-fw'></i> メインページ </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+            <div class="menu-inner"><a class="menu-item" href="/ja/OkongOyangO.Notes/posts/"><i class='fas fa-archive fa-fw'></i> 記事 </a><a class="menu-item" href="/ja/OkongOyangO.Notes/tags/"><i class='fas fa-tags fa-fw'></i> タグ </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="Search/搜索/検索..." id="search-input-desktop">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
                             <i class="fas fa-search fa-fw" aria-hidden="true"></i>
@@ -89,7 +77,7 @@ $$ \begin{aligned} \mathcal{U}(t,t&#39;) &amp; = \mathcal{T} e^{-i \int_{t&#39;}
                     <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
                 </a><a href="javascript:void(0);" class="menu-item language" title="Select Language">
                     <i class="fa fa-globe fa-fw" aria-hidden="true"></i>                      
-                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/fermi_golden_rule/"></option><option value="/OkongOyangO.Notes/zh-cn/posts/fermi_golden_rule/"></option><option value="/OkongOyangO.Notes/ja/posts/fermi_golden_rule/" selected></option></select>
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/fermi_golden_rule/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/fermi_golden_rule/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/fermi_golden_rule/" selected>日本語</option></select>
                 </a></div>
         </div>
     </div>
@@ -119,11 +107,11 @@ $$ \begin{aligned} \mathcal{U}(t,t&#39;) &amp; = \mathcal{T} e^{-i \int_{t&#39;}
                     <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
                         Cancel
                     </a>
-                </div><a class="menu-item" href="/ja/OkongOyangO.Notes/posts/" title=""><i class='fas fa-archive fa-fw'></i>記事</a><a class="menu-item" href="/ja/OkongOyangO.Notes/tags/" title=""><i class='fas fa-tags fa-fw'></i>タグ</a><a class="menu-item" href="https://OkongOyangO.github.io" title="" rel="noopener noreffer" target="_blank"><i class='fas fa-home fa-fw'></i>メインページ</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                </div><a class="menu-item" href="/ja/OkongOyangO.Notes/posts/" title=""><i class='fas fa-archive fa-fw'></i>記事</a><a class="menu-item" href="/ja/OkongOyangO.Notes/tags/" title=""><i class='fas fa-tags fa-fw'></i>タグ</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
                 <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
             </a><a href="javascript:void(0);" class="menu-item" title="Select Language">
                     <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
-                    <select class="language-select" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/fermi_golden_rule/"></option><option value="/OkongOyangO.Notes/zh-cn/posts/fermi_golden_rule/"></option><option value="/OkongOyangO.Notes/ja/posts/fermi_golden_rule/" selected></option></select>
+                    <select class="language-select" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/fermi_golden_rule/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/fermi_golden_rule/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/fermi_golden_rule/" selected>日本語</option></select>
                 </a></div>
     </div>
 </header><div class="search-dropdown desktop">
@@ -136,8 +124,8 @@ $$ \begin{aligned} \mathcal{U}(t,t&#39;) &amp; = \mathcal{T} e^{-i \int_{t&#39;}
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="https://OkongOyangO.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">included in <a href="/OkongOyangO.Notes/ja/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-01-10">2026-01-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1274 words&nbsp;
+            <div class="post-meta-line"><span class="post-author"><a href="/OkongOyangO.Notes/ja/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">included in <a href="/OkongOyangO.Notes/ja/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-01-10">2026-01-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1269 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;6 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
@@ -172,11 +160,11 @@ $$
 $$<p>添字$D,\,S$はそれぞれディラック描像とシュレーディンガー描像を表します。</p>
 <p>運動方程式を積分して反復することで、ディラック描像における状態の時間発展演算子$\mathcal{U}(t,t')$が得られます：</p>
 $$
-\begin{aligned}
-\mathcal{U}(t,t') & = \mathcal{T} e^{-i \int_{t'}^{t}dt'' \hat{V}_D(t'')/\hbar }  \\
-& = 1 + (-i/\hbar) \int_{t'}^{t}dt_1 \hat{V}_D(t_1) + \frac{1}{2!} (-i/\hbar)^2 \int_{t'}^{t}dt_1 \int_{t'}^{t}dt_2 \mathcal{T} \hat{V}_D(t_1) \hat{V}_D(t_2) + \dots \\
-& = 1 + (-i/\hbar) \int_{t'}^{t}dt_1 \hat{V}_D(t_1) +  (-i/\hbar)^2 \int_{t'}^{t}dt_1 \int_{t'}^{\mathbf{t_1}}dt_2  \hat{V}_D(t_1) \hat{V}_D(t_2) + \dots 
-\end{aligned}
+\mathcal{U}(t,t') = \mathcal{T} e^{-i \int_{t'}^{t}dt'' \hat{V}_D(t'')/\hbar }
+$$$$
+= 1 + (-i/\hbar) \int_{t'}^{t}dt_1 \hat{V}_D(t_1) + \frac{1}{2!} (-i/\hbar)^2 \int_{t'}^{t}dt_1 \int_{t'}^{t}dt_2 \mathcal{T} \hat{V}_D(t_1) \hat{V}_D(t_2) + \dots
+$$$$
+= 1 + (-i/\hbar) \int_{t'}^{t}dt_1 \hat{V}_D(t_1) +  (-i/\hbar)^2 \int_{t'}^{t}dt_1 \int_{t'}^{\mathbf{t_1}}dt_2  \hat{V}_D(t_1) \hat{V}_D(t_2) + \dots
 $$<p>ここで$\mathcal{T}$は時間順序積演算子（time ordering operator）であり、時間の小さい演算子を右側に配置し、先に状態ベクトルに作用させます。上記には時間順序積を用いない式も示されており、これは運動方程式を積分し、反復することで得られます。</p>
 <p>系が$t = t_0$において初期状態$|i\rangle$にあると仮定し、$\mathcal{O}(V)$次の近似をとると：</p>
 $$
@@ -371,7 +359,7 @@ $$</div><div class="post-footer" id="post-footer">
 </article></div>
             </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.154.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
-                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://OkongOyangO.github.io" target="_blank">OkongOyangO</a></span></div>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/OkongOyangO.Notes/ja/" target="_blank">OkongOyangO</a></span></div>
         </div>
     </footer></div>
 

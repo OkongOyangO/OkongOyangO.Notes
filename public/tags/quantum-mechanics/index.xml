@@ -15,14 +15,14 @@
       <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/fermi_golden_rule/</link>
       <pubDate>Sat, 10 Jan 2026 02:59:13 +0000</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
       <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/fermi_golden_rule/</guid>
-      <description>&lt;p&gt;This article aims to calculate the strict quantum transition rate and points out that the Fermi Golden Rule is the result of its &amp;ldquo;long-time average&amp;rdquo;. The strict quantum transition rate contains an additional double-frequency oscillation term with non-negligible amplitude compared to the Fermi Golden Rule. The relationship between the two is similar to &amp;ldquo;instantaneous power&amp;rdquo; and &amp;ldquo;average power&amp;rdquo; in AC circuits.&lt;/p&gt;&#xA;&lt;h2 id=&#34;fermi-golden-rule&#34;&gt;Fermi Golden Rule&lt;/h2&gt;&#xA;&lt;p&gt;The Fermi Golden Rule aims to calculate the transition rate of a quantum system from an initial state $|i\rangle$ to a final state $|f\rangle$ (both are eigenstates of $H_0$) under a time-harmonic external field perturbation. Since this is well-covered in quantum mechanics courses, we will quickly go through it in the Dirac picture (interaction picture). The Dirac picture is used to better compare with the Kubo Formula.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This article aims to calculate the strict quantum transition rate and points out that the Fermi Golden Rule is the result of its &amp;ldquo;long-time average&amp;rdquo;. The strict quantum transition rate contains an additional double-frequency oscillation term with non-negligible amplitude compared to the Fermi Golden Rule. The relationship between the two is similar to &amp;ldquo;instantaneous power&amp;rdquo; and &amp;ldquo;average power&amp;rdquo; in AC circuits.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Fermi Golden Rule? Just Joule Heat!</title>
       <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/joule_heat/</link>
-      <pubDate>Thu, 08 Jan 2026 21:54:37 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <pubDate>Thu, 08 Jan 2026 23:00:00 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
       <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/joule_heat/</guid>
-      <description>&lt;p&gt;This article aims to clarify the consistency between Fermi&amp;rsquo;s Golden Rule and Joule Heat.&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Fermi&amp;rsquo;s Golden Rule can calculate the system&amp;rsquo;s absorption of electromagnetic fields, while the Kubo Formula can calculate the current response, and the Joule heat formula can also calculate the absorption of electromagnetic fields.&lt;/p&gt;&#xA;&lt;p&gt;The former seems to calculate entirely from the perspective of quantum transitions, while the latter seems to calculate entirely from the perspective of Joule heat. However, both are essentially applications of time-dependent perturbation theory in quantum mechanics. We touched upon this in the previous two articles, but did not elaborate on their consistency. Interested readers can visit:&lt;/p&gt;</description>
+      <description>&lt;p&gt;This article aims to clarify the consistency between Fermi&amp;rsquo;s Golden Rule and Joule Heat.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

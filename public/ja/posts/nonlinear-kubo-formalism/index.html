@@ -7,44 +7,18 @@
         <title>久保公式の非線形応答理論 - OkongOyangOのノート</title><meta name="Description" content="トポロジー、幾何学、非線形応答に関する物理ノート"><meta property="og:url" content="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/nonlinear-kubo-formalism/">
   <meta property="og:site_name" content="OkongOyangOのノート">
   <meta property="og:title" content="久保公式の非線形応答理論">
-  <meta property="og:description" content="#! https://zhuanlan.zhihu.com/p/611996682
-久保公式の非線形応答理論 この記事は、久保公式の非線形応答理論を導出することを目的としています。
-はじめに 久保公式の線形および非線形応答理論は、本質的に量子力学の摂動論です。
-線形応答の方が一般的で、例えば実験で測定される電気伝導率、磁化率、電気分極率などの感受率（Susceptibility）はすべて線形応答関数（遅延グリーン関数）です。
-しかし、非線形応答にも応用価値があります。例えば、半導体における第二次高調波発生（SHG）、注入電流（Injection Current）、シフト電流（Shift Current）などの二次電流応答です。
-二次応答は、前節のフェルミの黄金律（Fermi Golden Rule）で議論した、一定の遷移速度と二倍周波数の遷移速度という2種類の応答を説明するためにも使用できます。
-https://zhuanlan.zhihu.com/p/611688122
-度胸さえあれば、至る所に非線形応答があることがわかります（笑）。
-相互作用描像における密度行列 久保公式の導出は、相互作用（ディラック）描像における系の密度行列の時間発展から始まります。
-フェルミの黄金律の節で、すでに相互作用（ディラック）描像における波動関数の運動方程式を導出しました。
-密度行列を単に $\hat{\rho}_D(t) \sim | \psi (t) \rangle_D \langle \psi(t) |_D$ と見なすと、相互作用（ディラック）描像における密度行列の運動方程式をすぐに思い出すことができます：
-$$ \begin{aligned} \frac{d}{dt} \hat{\rho}_D(t) = - \frac{i}{\hbar} [ \hat{\rho}_D(t) , \hat{V}_D(t) ] \end{aligned} $$積分して繰り返し反復することで、密度行列の展開式が得られます：
-$$ \begin{aligned} \hat{\rho}_D(t) = \hat{\rho}_0 &#43; \sum_{n = 1}^{\infty} (-\frac{\mathrm{i}}{\hbar})^n \int_{-\infty}^{t} dt_1 \int_{-\infty}^{t_1} dt_2 \dots \int_{-\infty}^{t_{n-1}} dt_n [\hat{V}_D(t_1),[\dots[\hat{V}_D(t_n),\hat{\rho}_0]\dots] ] \end{aligned} $$各積分の積分上限が常に $t$ ではないことに注意してください。
-線形応答 線形応答のみを考えます：">
+  <meta property="og:description" content="この記事は、久保公式の非線形応答理論を導出することを目的としています。">
   <meta property="og:locale" content="ja">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2026-01-08T21:54:37-05:00">
-    <meta property="article:modified_time" content="2026-01-08T21:54:37-05:00">
+    <meta property="article:published_time" content="2026-01-08T22:00:00-05:00">
+    <meta property="article:modified_time" content="2026-01-08T22:00:00-05:00">
     <meta property="article:tag" content="Nonlinear Response">
     <meta property="article:tag" content="Kubo Formula">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="久保公式の非線形応答理論">
-  <meta name="twitter:description" content="#! https://zhuanlan.zhihu.com/p/611996682
-久保公式の非線形応答理論 この記事は、久保公式の非線形応答理論を導出することを目的としています。
-はじめに 久保公式の線形および非線形応答理論は、本質的に量子力学の摂動論です。
-線形応答の方が一般的で、例えば実験で測定される電気伝導率、磁化率、電気分極率などの感受率（Susceptibility）はすべて線形応答関数（遅延グリーン関数）です。
-しかし、非線形応答にも応用価値があります。例えば、半導体における第二次高調波発生（SHG）、注入電流（Injection Current）、シフト電流（Shift Current）などの二次電流応答です。
-二次応答は、前節のフェルミの黄金律（Fermi Golden Rule）で議論した、一定の遷移速度と二倍周波数の遷移速度という2種類の応答を説明するためにも使用できます。
-https://zhuanlan.zhihu.com/p/611688122
-度胸さえあれば、至る所に非線形応答があることがわかります（笑）。
-相互作用描像における密度行列 久保公式の導出は、相互作用（ディラック）描像における系の密度行列の時間発展から始まります。
-フェルミの黄金律の節で、すでに相互作用（ディラック）描像における波動関数の運動方程式を導出しました。
-密度行列を単に $\hat{\rho}_D(t) \sim | \psi (t) \rangle_D \langle \psi(t) |_D$ と見なすと、相互作用（ディラック）描像における密度行列の運動方程式をすぐに思い出すことができます：
-$$ \begin{aligned} \frac{d}{dt} \hat{\rho}_D(t) = - \frac{i}{\hbar} [ \hat{\rho}_D(t) , \hat{V}_D(t) ] \end{aligned} $$積分して繰り返し反復することで、密度行列の展開式が得られます：
-$$ \begin{aligned} \hat{\rho}_D(t) = \hat{\rho}_0 &#43; \sum_{n = 1}^{\infty} (-\frac{\mathrm{i}}{\hbar})^n \int_{-\infty}^{t} dt_1 \int_{-\infty}^{t_1} dt_2 \dots \int_{-\infty}^{t_{n-1}} dt_n [\hat{V}_D(t_1),[\dots[\hat{V}_D(t_n),\hat{\rho}_0]\dots] ] \end{aligned} $$各積分の積分上限が常に $t$ ではないことに注意してください。
-線形応答 線形応答のみを考えます：">
+  <meta name="twitter:description" content="この記事は、久保公式の非線形応答理論を導出することを目的としています。">
 <meta name="application-name" content="My cool site">
 <meta name="apple-mobile-web-app-title" content="My cool site">
 <meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
@@ -60,8 +34,8 @@ $$ \begin{aligned} \hat{\rho}_D(t) = \hat{\rho}_0 &#43; \sum_{n = 1}^{\infty} (-
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/ja\/posts\/nonlinear-kubo-formalism\/"
-        },"genre": "posts","keywords": "Nonlinear Response, Kubo Formula","wordcount":  1829 ,
-        "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/ja\/posts\/nonlinear-kubo-formalism\/","datePublished": "2026-01-08T21:54:37-05:00","dateModified": "2026-01-08T21:54:37-05:00","publisher": {
+        },"genre": "posts","keywords": "Nonlinear Response, Kubo Formula","wordcount":  1826 ,
+        "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/ja\/posts\/nonlinear-kubo-formalism\/","datePublished": "2026-01-08T22:00:00-05:00","dateModified": "2026-01-08T22:00:00-05:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -88,7 +62,7 @@ $$ \begin{aligned} \hat{\rho}_D(t) = \hat{\rho}_0 &#43; \sum_{n = 1}^{\infty} (-
             <a href="/OkongOyangO.Notes/ja/" title="OkongOyangOのノート">OkongOyangO&#39;s Notes</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/ja/OkongOyangO.Notes/posts/"><i class='fas fa-archive fa-fw'></i> 記事 </a><a class="menu-item" href="/ja/OkongOyangO.Notes/tags/"><i class='fas fa-tags fa-fw'></i> タグ </a><a class="menu-item" href="https://OkongOyangO.github.io" rel="noopener noreffer" target="_blank"><i class='fas fa-home fa-fw'></i> メインページ </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+            <div class="menu-inner"><a class="menu-item" href="/ja/OkongOyangO.Notes/posts/"><i class='fas fa-archive fa-fw'></i> 記事 </a><a class="menu-item" href="/ja/OkongOyangO.Notes/tags/"><i class='fas fa-tags fa-fw'></i> タグ </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="Search/搜索/検索..." id="search-input-desktop">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
                             <i class="fas fa-search fa-fw" aria-hidden="true"></i>
@@ -103,7 +77,7 @@ $$ \begin{aligned} \hat{\rho}_D(t) = \hat{\rho}_0 &#43; \sum_{n = 1}^{\infty} (-
                     <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
                 </a><a href="javascript:void(0);" class="menu-item language" title="Select Language">
                     <i class="fa fa-globe fa-fw" aria-hidden="true"></i>                      
-                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/nonlinear-kubo-formalism/"></option><option value="/OkongOyangO.Notes/zh-cn/posts/nonlinear-kubo-formalism/"></option><option value="/OkongOyangO.Notes/ja/posts/nonlinear-kubo-formalism/" selected></option></select>
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/nonlinear-kubo-formalism/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/nonlinear-kubo-formalism/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/nonlinear-kubo-formalism/" selected>日本語</option></select>
                 </a></div>
         </div>
     </div>
@@ -133,11 +107,11 @@ $$ \begin{aligned} \hat{\rho}_D(t) = \hat{\rho}_0 &#43; \sum_{n = 1}^{\infty} (-
                     <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
                         Cancel
                     </a>
-                </div><a class="menu-item" href="/ja/OkongOyangO.Notes/posts/" title=""><i class='fas fa-archive fa-fw'></i>記事</a><a class="menu-item" href="/ja/OkongOyangO.Notes/tags/" title=""><i class='fas fa-tags fa-fw'></i>タグ</a><a class="menu-item" href="https://OkongOyangO.github.io" title="" rel="noopener noreffer" target="_blank"><i class='fas fa-home fa-fw'></i>メインページ</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                </div><a class="menu-item" href="/ja/OkongOyangO.Notes/posts/" title=""><i class='fas fa-archive fa-fw'></i>記事</a><a class="menu-item" href="/ja/OkongOyangO.Notes/tags/" title=""><i class='fas fa-tags fa-fw'></i>タグ</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
                 <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
             </a><a href="javascript:void(0);" class="menu-item" title="Select Language">
                     <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
-                    <select class="language-select" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/nonlinear-kubo-formalism/"></option><option value="/OkongOyangO.Notes/zh-cn/posts/nonlinear-kubo-formalism/"></option><option value="/OkongOyangO.Notes/ja/posts/nonlinear-kubo-formalism/" selected></option></select>
+                    <select class="language-select" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/nonlinear-kubo-formalism/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/nonlinear-kubo-formalism/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/nonlinear-kubo-formalism/" selected>日本語</option></select>
                 </a></div>
     </div>
 </header><div class="search-dropdown desktop">
@@ -150,8 +124,8 @@ $$ \begin{aligned} \hat{\rho}_D(t) = \hat{\rho}_0 &#43; \sum_{n = 1}^{\infty} (-
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">久保公式の非線形応答理論</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="https://OkongOyangO.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">included in <a href="/OkongOyangO.Notes/ja/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-01-08">2026-01-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1829 words&nbsp;
+            <div class="post-meta-line"><span class="post-author"><a href="/OkongOyangO.Notes/ja/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">included in <a href="/OkongOyangO.Notes/ja/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-01-08">2026-01-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1826 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;9 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
@@ -176,9 +150,7 @@ $$ \begin{aligned} \hat{\rho}_D(t) = \hat{\rho}_0 &#43; \sum_{n = 1}^{\infty} (-
     <li><a href="#フェルミの黄金律のための久保公式">フェルミの黄金律のための久保公式</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><p>#! <a href="https://zhuanlan.zhihu.com/p/611996682" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/611996682</a></p>
-<h1 id="久保公式の非線形応答理論">久保公式の非線形応答理論</h1>
-<p>この記事は、久保公式の非線形応答理論を導出することを目的としています。</p>
+            </div><div class="content" id="content"><p>この記事は、久保公式の非線形応答理論を導出することを目的としています。</p>
 <h2 id="はじめに">はじめに</h2>
 <p>久保公式の線形および非線形応答理論は、本質的に量子力学の摂動論です。</p>
 <p>線形応答の方が一般的で、例えば実験で測定される電気伝導率、磁化率、電気分極率などの感受率（Susceptibility）はすべて線形応答関数（遅延グリーン関数）です。</p>
@@ -585,8 +557,7 @@ $$
 \end{aligned}
 $$<p>導出の詳細はひとまず飛ばして、系の二次応答を直接見ると（一次応答が0であることは証明できます）、第二次高調波発生に対応する二倍周波数応答とゼロ周波数応答があることがわかります。</p>
 <p>後者は一般的なフェルミの黄金律で計算される一定の遷移速度に対応し、前者は前節で述べたフェルミの黄金律で省略された二倍周波数応答です。長時間平均近似の下では、フェルミの黄金律の結果と完全に一致します。</p>
-<p>したがって、フェルミの黄金律は本質的に一種の二次応答であり、非線形次数の久保公式を用いて計算することができます。</p>
-</div><div class="post-footer" id="post-footer">
+<p>したがって、フェルミの黄金律は本質的に一種の二次応答であり、非線形次数の久保公式を用いて計算することができます。</p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
@@ -613,7 +584,7 @@ $$<p>導出の詳細はひとまず飛ばして、系の二次応答を直接見
 </article></div>
             </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.154.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
-                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://OkongOyangO.github.io" target="_blank">OkongOyangO</a></span></div>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/OkongOyangO.Notes/ja/" target="_blank">OkongOyangO</a></span></div>
         </div>
     </footer></div>
 

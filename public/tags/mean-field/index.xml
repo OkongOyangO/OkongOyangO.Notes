@@ -15,7 +15,7 @@
       <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/mean_field_approximation/</link>
       <pubDate>Fri, 09 Jan 2026 19:05:46 +0000</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
       <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/mean_field_approximation/</guid>
-      <description>&lt;p&gt;This article aims to introduce the mean field approximation while elucidating its variational nature.&lt;/p&gt;&#xA;&lt;p&gt;Hartree, Fock, and BCS—these individual mean field approximations appear to be mutually incompatible decoupling methods. However, by leveraging the variational nature of the mean field approximation, we discover that they can indeed be mixed 1:1:1.&lt;/p&gt;&#xA;&lt;h2 id=&#34;preface&#34;&gt;Preface&lt;/h2&gt;&#xA;&lt;p&gt;The inspiration for this article primarily comes from discussions with classmate &lt;a href=&#34;https://www.zhihu.com/people/li-yong-kang-9-34&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;@ykli&lt;/a&gt;. I would like to express my special thanks to &lt;a href=&#34;https://www.zhihu.com/people/li-yong-kang-9-34&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;@ykli&lt;/a&gt; for the significant assistance provided during the derivation process.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This article aims to introduce the mean field approximation while elucidating its variational nature.&lt;/p&gt;&#xA;&lt;p&gt;Hartree, Fock, and BCS—these individual mean field approximations appear to be mutually incompatible decoupling methods. However, by leveraging the variational nature of the mean field approximation, we discover that they can indeed be mixed 1:1:1.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

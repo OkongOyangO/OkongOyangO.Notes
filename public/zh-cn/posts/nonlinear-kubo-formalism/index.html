@@ -7,47 +7,23 @@
         <title>久保同学不放过我｜Kubo Formula的非线性响应理论 - OkongOyangO的物理笔记</title><meta name="Description" content="关于拓扑、几何和非线性响应的物理笔记"><meta property="og:url" content="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/nonlinear-kubo-formalism/">
   <meta property="og:site_name" content="OkongOyangO的物理笔记">
   <meta property="og:title" content="久保同学不放过我｜Kubo Formula的非线性响应理论">
-  <meta property="og:description" content="#! https://zhuanlan.zhihu.com/p/611996682
-久保同学不放过我｜Kubo Formula的非线性响应理论 本文旨在推导Kubo Formula的非线性响应理论。
-Introduction Kubo Formula的线性和非线性响应理论本质上都是量子力学的微扰论。
-其中线性响应更为常见，例如实验测量的电导率、磁化率、电极化率等susceptibility均为线性响应函数（Retarded Green Function）。
-但非线性响应也有其应用价值，例如半导体中的二阶电流响应，包括2nd Harmonic Generation，Injection and Shift Current等等。
-二阶响应甚至可以用来解释上一节Fermi Golden Rule中的常跃迁速率和二倍频跃迁速率两种响应。
-https://zhuanlan.zhihu.com/p/611688122
-可见只要胆够大，处处皆是非线性响应（bushi。
-Density Matrix in Dirac Picture Kubo Formula的推导从相互作用（Dirac）绘景下，系统密度矩阵的演化开始。
-在Fermi Golden Rule那节中，我们已经推导了相互作用（Dirac）绘景下波函数的运动方程。
-简单将密度矩阵看成$\hat{\rho}_D(t) \sim | \psi (t) \rangle_D \langle \psi(t) |_D$，有利于我们快速回忆起相互作用（Dirac）绘景下密度矩阵的运动方程：
-$$ \begin{aligned} \frac{d}{dt} \hat{\rho}_D(t) = - \frac{i}{\hbar} [ \hat{\rho}_D(t) , \hat{V}_D(t) ] \end{aligned} $$积分后重复迭代，我们可以得到密度矩阵的展开式：
-$$ \begin{aligned} \hat{\rho}_D(t) = \hat{\rho}_0 &#43; \sum_{n = 1}^{\infty} (-\frac{\mathrm{i}}{\hbar})^n \int_{-\infty}^{t} dt_1 \int_{-\infty}^{t_1} dt_2 \dots \int_{-\infty}^{t_{n-1}} dt_n [\hat{V}_D(t_1),[\dots[\hat{V}_D(t_n),\hat{\rho}_0]\dots] ] \end{aligned} $$注意每个积分的上界并非均为$t$。">
+  <meta property="og:description" content="本文旨在推导Kubo Formula的非线性响应理论。">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2026-01-08T21:54:37-05:00">
-    <meta property="article:modified_time" content="2026-01-08T21:54:37-05:00">
+    <meta property="article:published_time" content="2026-01-08T22:00:00-05:00">
+    <meta property="article:modified_time" content="2026-01-08T22:00:00-05:00">
     <meta property="article:tag" content="Nonlinear Response">
     <meta property="article:tag" content="Kubo Formula">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="久保同学不放过我｜Kubo Formula的非线性响应理论">
-  <meta name="twitter:description" content="#! https://zhuanlan.zhihu.com/p/611996682
-久保同学不放过我｜Kubo Formula的非线性响应理论 本文旨在推导Kubo Formula的非线性响应理论。
-Introduction Kubo Formula的线性和非线性响应理论本质上都是量子力学的微扰论。
-其中线性响应更为常见，例如实验测量的电导率、磁化率、电极化率等susceptibility均为线性响应函数（Retarded Green Function）。
-但非线性响应也有其应用价值，例如半导体中的二阶电流响应，包括2nd Harmonic Generation，Injection and Shift Current等等。
-二阶响应甚至可以用来解释上一节Fermi Golden Rule中的常跃迁速率和二倍频跃迁速率两种响应。
-https://zhuanlan.zhihu.com/p/611688122
-可见只要胆够大，处处皆是非线性响应（bushi。
-Density Matrix in Dirac Picture Kubo Formula的推导从相互作用（Dirac）绘景下，系统密度矩阵的演化开始。
-在Fermi Golden Rule那节中，我们已经推导了相互作用（Dirac）绘景下波函数的运动方程。
-简单将密度矩阵看成$\hat{\rho}_D(t) \sim | \psi (t) \rangle_D \langle \psi(t) |_D$，有利于我们快速回忆起相互作用（Dirac）绘景下密度矩阵的运动方程：
-$$ \begin{aligned} \frac{d}{dt} \hat{\rho}_D(t) = - \frac{i}{\hbar} [ \hat{\rho}_D(t) , \hat{V}_D(t) ] \end{aligned} $$积分后重复迭代，我们可以得到密度矩阵的展开式：
-$$ \begin{aligned} \hat{\rho}_D(t) = \hat{\rho}_0 &#43; \sum_{n = 1}^{\infty} (-\frac{\mathrm{i}}{\hbar})^n \int_{-\infty}^{t} dt_1 \int_{-\infty}^{t_1} dt_2 \dots \int_{-\infty}^{t_{n-1}} dt_n [\hat{V}_D(t_1),[\dots[\hat{V}_D(t_n),\hat{\rho}_0]\dots] ] \end{aligned} $$注意每个积分的上界并非均为$t$。">
+  <meta name="twitter:description" content="本文旨在推导Kubo Formula的非线性响应理论。">
 <meta name="application-name" content="My cool site">
 <meta name="apple-mobile-web-app-title" content="My cool site">
 <meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/nonlinear-kubo-formalism/" /><link rel="prev" href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/distinguish_conductors_insulators_ground_state/" /><link rel="next" href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/fqhe_faqhe_fci/" /><link rel="stylesheet" href="/OkongOyangO.Notes/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/nonlinear-kubo-formalism/" /><link rel="prev" href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/fqhe_faqhe_fci/" /><link rel="next" href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/distinguish_conductors_insulators_ground_state/" /><link rel="stylesheet" href="/OkongOyangO.Notes/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -58,8 +34,8 @@ $$ \begin{aligned} \hat{\rho}_D(t) = \hat{\rho}_0 &#43; \sum_{n = 1}^{\infty} (-
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/zh-cn\/posts\/nonlinear-kubo-formalism\/"
-        },"genre": "posts","keywords": "Nonlinear Response, Kubo Formula","wordcount":  1861 ,
-        "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/zh-cn\/posts\/nonlinear-kubo-formalism\/","datePublished": "2026-01-08T21:54:37-05:00","dateModified": "2026-01-08T21:54:37-05:00","publisher": {
+        },"genre": "posts","keywords": "Nonlinear Response, Kubo Formula","wordcount":  1857 ,
+        "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/zh-cn\/posts\/nonlinear-kubo-formalism\/","datePublished": "2026-01-08T22:00:00-05:00","dateModified": "2026-01-08T22:00:00-05:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -86,7 +62,7 @@ $$ \begin{aligned} \hat{\rho}_D(t) = \hat{\rho}_0 &#43; \sum_{n = 1}^{\infty} (-
             <a href="/OkongOyangO.Notes/zh-cn/" title="OkongOyangO的物理笔记">OkongOyangO&#39;s Notes</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/zh-cn/OkongOyangO.Notes/posts/"><i class='fas fa-archive fa-fw'></i> 文章 </a><a class="menu-item" href="/zh-cn/OkongOyangO.Notes/tags/"><i class='fas fa-tags fa-fw'></i> 标签 </a><a class="menu-item" href="https://OkongOyangO.github.io" rel="noopener noreffer" target="_blank"><i class='fas fa-home fa-fw'></i> 主页 (Main Site) </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+            <div class="menu-inner"><a class="menu-item" href="/zh-cn/OkongOyangO.Notes/posts/"><i class='fas fa-archive fa-fw'></i> 文章 </a><a class="menu-item" href="/zh-cn/OkongOyangO.Notes/tags/"><i class='fas fa-tags fa-fw'></i> 标签 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="Search/搜索/検索..." id="search-input-desktop">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
                             <i class="fas fa-search fa-fw" aria-hidden="true"></i>
@@ -101,7 +77,7 @@ $$ \begin{aligned} \hat{\rho}_D(t) = \hat{\rho}_0 &#43; \sum_{n = 1}^{\infty} (-
                     <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
                 </a><a href="javascript:void(0);" class="menu-item language" title="选择语言">
                     <i class="fa fa-globe fa-fw" aria-hidden="true"></i>                      
-                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/nonlinear-kubo-formalism/"></option><option value="/OkongOyangO.Notes/zh-cn/posts/nonlinear-kubo-formalism/" selected></option><option value="/OkongOyangO.Notes/ja/posts/nonlinear-kubo-formalism/"></option></select>
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/nonlinear-kubo-formalism/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/nonlinear-kubo-formalism/" selected>简体中文</option><option value="/OkongOyangO.Notes/ja/posts/nonlinear-kubo-formalism/">日本語</option></select>
                 </a></div>
         </div>
     </div>
@@ -131,11 +107,11 @@ $$ \begin{aligned} \hat{\rho}_D(t) = \hat{\rho}_0 &#43; \sum_{n = 1}^{\infty} (-
                     <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
                         取消
                     </a>
-                </div><a class="menu-item" href="/zh-cn/OkongOyangO.Notes/posts/" title=""><i class='fas fa-archive fa-fw'></i>文章</a><a class="menu-item" href="/zh-cn/OkongOyangO.Notes/tags/" title=""><i class='fas fa-tags fa-fw'></i>标签</a><a class="menu-item" href="https://OkongOyangO.github.io" title="" rel="noopener noreffer" target="_blank"><i class='fas fa-home fa-fw'></i>主页 (Main Site)</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                </div><a class="menu-item" href="/zh-cn/OkongOyangO.Notes/posts/" title=""><i class='fas fa-archive fa-fw'></i>文章</a><a class="menu-item" href="/zh-cn/OkongOyangO.Notes/tags/" title=""><i class='fas fa-tags fa-fw'></i>标签</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                 <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
             </a><a href="javascript:void(0);" class="menu-item" title="选择语言">
                     <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
-                    <select class="language-select" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/nonlinear-kubo-formalism/"></option><option value="/OkongOyangO.Notes/zh-cn/posts/nonlinear-kubo-formalism/" selected></option><option value="/OkongOyangO.Notes/ja/posts/nonlinear-kubo-formalism/"></option></select>
+                    <select class="language-select" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/nonlinear-kubo-formalism/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/nonlinear-kubo-formalism/" selected>简体中文</option><option value="/OkongOyangO.Notes/ja/posts/nonlinear-kubo-formalism/">日本語</option></select>
                 </a></div>
     </div>
 </header><div class="search-dropdown desktop">
@@ -148,8 +124,8 @@ $$ \begin{aligned} \hat{\rho}_D(t) = \hat{\rho}_0 &#43; \sum_{n = 1}^{\infty} (-
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">久保同学不放过我｜Kubo Formula的非线性响应理论</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="https://OkongOyangO.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">收录于 <a href="/OkongOyangO.Notes/zh-cn/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-01-08">2026-01-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1861 字&nbsp;
+            <div class="post-meta-line"><span class="post-author"><a href="/OkongOyangO.Notes/zh-cn/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">收录于 <a href="/OkongOyangO.Notes/zh-cn/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-01-08">2026-01-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1857 字&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 9 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
@@ -174,9 +150,7 @@ $$ \begin{aligned} \hat{\rho}_D(t) = \hat{\rho}_0 &#43; \sum_{n = 1}^{\infty} (-
     <li><a href="#kubo-formula-for-fermi-golden-rule">Kubo Formula for Fermi Golden Rule</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><p>#! <a href="https://zhuanlan.zhihu.com/p/611996682" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/611996682</a></p>
-<h1 id="久保同学不放过我kubo-formula的非线性响应理论">久保同学不放过我｜Kubo Formula的非线性响应理论</h1>
-<p>本文旨在推导Kubo Formula的非线性响应理论。</p>
+            </div><div class="content" id="content"><p>本文旨在推导Kubo Formula的非线性响应理论。</p>
 <h2 id="introduction">Introduction</h2>
 <p>Kubo Formula的线性和非线性响应理论本质上都是量子力学的微扰论。</p>
 <p>其中线性响应更为常见，例如实验测量的电导率、磁化率、电极化率等susceptibility均为线性响应函数（Retarded Green Function）。</p>
@@ -583,8 +557,7 @@ $$
 \end{aligned}
 $$<p>我们暂且跳过推导细节，直接看系统的二阶响应（可以证明一阶响应为0），也将会有2nd Harmonic Generation对应的二倍频响应和Zero Frequency Response。</p>
 <p>后者对应一般的Fermi Golden Rule计算的常跃迁速率，而前者则是我们上一节提到的，Fermi Golden Rule中略去的二倍频响应。在长时间平均近似下，便完全对应Fermi Golden Rule的结果。</p>
-<p>所以Fermi Golden Rule本质上是一种二阶响应，可以用Nonlinear Order Kubo Formula来计算。</p>
-</div><div class="post-footer" id="post-footer">
+<p>所以Fermi Golden Rule本质上是一种二阶响应，可以用Nonlinear Order Kubo Formula来计算。</p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
@@ -605,13 +578,13 @@ $$<p>我们暂且跳过推导细节，直接看系统的二阶响应（可以证
         </section>
     </div>
 
-    <div class="post-nav"><a href="/OkongOyangO.Notes/zh-cn/posts/distinguish_conductors_insulators_ground_state/" class="prev" rel="prev" title="只看基态如何区分导体和绝缘体？🤔"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>只看基态如何区分导体和绝缘体？🤔</a>
-            <a href="/OkongOyangO.Notes/zh-cn/posts/fqhe_faqhe_fci/" class="next" rel="next" title="分数量子霍尔效应(FQHE)、分数反常量子霍尔效应(FAQHE)与分数陈绝缘体(FCI)">分数量子霍尔效应(FQHE)、分数反常量子霍尔效应(FAQHE)与分数陈绝缘体(FCI)<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+    <div class="post-nav"><a href="/OkongOyangO.Notes/zh-cn/posts/fqhe_faqhe_fci/" class="prev" rel="prev" title="分数量子霍尔效应(FQHE)、分数反常量子霍尔效应(FAQHE)与分数陈绝缘体(FCI)"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>分数量子霍尔效应(FQHE)、分数反常量子霍尔效应(FAQHE)与分数陈绝缘体(FCI)</a>
+            <a href="/OkongOyangO.Notes/zh-cn/posts/distinguish_conductors_insulators_ground_state/" class="next" rel="next" title="只看基态如何区分导体和绝缘体？🤔">只看基态如何区分导体和绝缘体？🤔<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 </article></div>
             </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.154.3">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
-                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://OkongOyangO.github.io" target="_blank">OkongOyangO</a></span></div>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/OkongOyangO.Notes/zh-cn/" target="_blank">OkongOyangO</a></span></div>
         </div>
     </footer></div>
 
