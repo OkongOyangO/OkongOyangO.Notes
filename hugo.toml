@@ -29,12 +29,6 @@ theme = "LoveIt"
         name = "Tags"
         url = "/tags/"
         weight = 2
-      [[languages.en.menu.main]]
-        identifier = "main-site"
-        pre = "<i class='fas fa-home fa-fw'></i>"
-        name = "Main Homepage"
-        url = "https://OkongOyangO.github.io"
-        weight = 10
 
   [languages.zh-cn]
     weight = 2
@@ -56,12 +50,6 @@ theme = "LoveIt"
         name = "标签"
         url = "/tags/"
         weight = 2
-      [[languages.zh-cn.menu.main]]
-        identifier = "main-site"
-        pre = "<i class='fas fa-home fa-fw'></i>"
-        name = "主页 (Main Site)"
-        url = "https://OkongOyangO.github.io"
-        weight = 10
 
   [languages.ja]
     weight = 3
@@ -83,12 +71,6 @@ theme = "LoveIt"
         name = "タグ"
         url = "/tags/"
         weight = 2
-      [[languages.ja.menu.main]]
-        identifier = "main-site"
-        pre = "<i class='fas fa-home fa-fw'></i>"
-        name = "メインページ"
-        url = "https://OkongOyangO.github.io"
-        weight = 10
 
 # -----------------------------------------------------------------------------
 # LoveIt Specifics
@@ -100,7 +82,7 @@ theme = "LoveIt"
   [params.author]
     name = "OkongOyangO"
     email = "yzj5306@psu.edu"
-    link = "https://OkongOyangO.github.io"
+    link = ""
 
   # Header Configuration
   [params.header]
