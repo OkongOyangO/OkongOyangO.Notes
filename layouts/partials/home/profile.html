@@ -193,9 +193,8 @@
             {{- range sort $socialArr "Weight" -}}
                 {{- partial "plugin/social.html" . -}}
             {{- end -}}
-            <a href="https://github.com/OkongOyangO/OkongOyangO.Notes" target="_blank" rel="noopener noreffer me" title="Like this site? Star on GitHub!">
-                <i class="fas fa-heart fa-fw" aria-hidden="true"></i>
-            </a>
+            {{- /* Like this site - star on GitHub */ -}}
+            <a href="https://github.com/OkongOyangO/OkongOyangO.Notes" title="Like this site? Star on GitHub!" target="_blank" rel="noopener noreffer me"><i class="fas fa-heart fa-fw" aria-hidden="true"></i></a>
         </div>
     {{- end -}}
 
