@@ -12,7 +12,7 @@ Personal notes on condensed matter physics, quantum geometry, and nonlinear resp
 
 ### About
 
-This is a multilingual (English / 简体中文 / 日本語) collection of physics notes and research logs maintained by [Yiyang Jiang](https://OkongOyangO.github.io), a Ph.D. student in condensed matter theory at Penn State University.
+This is a multilingual (English / 简体中文 / 日本語) collection of physics notes and research logs maintained by [OkongOyangO](https://www.zhihu.com/people/O-kong-O-yang-O), a Ph.D. student in condensed matter theory at Penn State University.
 
 ### Topics
 
@@ -44,7 +44,7 @@ If you find these notes helpful, consider giving this repo a star!
 
 ### 关于
 
-这是一个多语言（English / 简体中文 / 日本語）的物理笔记与科研日志合集，由宾夕法尼亚州立大学凝聚态理论方向博士生[蒋逸扬](https://OkongOyangO.github.io)维护。
+这是一个多语言（English / 简体中文 / 日本語）的物理笔记与科研日志合集，由[O空O扬O](https://www.zhihu.com/people/O-kong-O-yang-O)维护。
 
 ### 主题
 
@@ -76,7 +76,7 @@ If you find these notes helpful, consider giving this repo a star!
 
 ### 概要
 
-ペンシルベニア州立大学の凝縮系理論博士課程に在籍する[蒋逸扬](https://OkongOyangO.github.io)が管理する、多言語対応（English / 简体中文 / 日本語）の物理ノート・研究ログ集です。
+[O空O揚O](https://www.zhihu.com/people/O-kong-O-yang-O)が管理する、多言語対応（English / 简体中文 / 日本語）の物理ノート・研究ログ集です。
 
 ### トピック
 
