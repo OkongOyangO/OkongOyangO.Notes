@@ -4,40 +4,40 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>平均场近似与变分法｜Hartree, Fock, BCS能1:1:1混用吗？ - OkongOyangO的物理笔记</title><meta name="Description" content="关于拓扑、几何和非线性响应的物理笔记"><meta property="og:url" content="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/mean_field_approximation/">
+        <title>🤫平均场近似与变分法｜Hartree, Fock, BCS能1:1:1混用吗？ - OkongOyangO的物理笔记</title><meta name="Description" content="OkongOyangO的凝聚态物理笔记"><meta property="og:url" content="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/mean_field_approximation/">
   <meta property="og:site_name" content="OkongOyangO的物理笔记">
-  <meta property="og:title" content="平均场近似与变分法｜Hartree, Fock, BCS能1:1:1混用吗？">
+  <meta property="og:title" content="🤫平均场近似与变分法｜Hartree, Fock, BCS能1:1:1混用吗？">
   <meta property="og:description" content="本文旨在介绍平均场近似，同时阐述其变分法本质。
 Hartree, Fock, BCS这一个一个一个平均场近似，看似是一个一个一个互不相容的decouple方法，但利用平均场近似的变分法本质，我们发现他们事实上确实可以1:1:1混着用。">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2026-01-09T19:05:46+00:00">
-    <meta property="article:modified_time" content="2026-01-09T19:05:46+00:00">
+    <meta property="article:published_time" content="2023-03-11T22:30:00-05:00">
+    <meta property="article:modified_time" content="2023-03-11T22:30:00-05:00">
     <meta property="article:tag" content="Condensed Matter">
     <meta property="article:tag" content="Mean Field">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="平均场近似与变分法｜Hartree, Fock, BCS能1:1:1混用吗？">
+  <meta name="twitter:title" content="🤫平均场近似与变分法｜Hartree, Fock, BCS能1:1:1混用吗？">
   <meta name="twitter:description" content="本文旨在介绍平均场近似，同时阐述其变分法本质。
 Hartree, Fock, BCS这一个一个一个平均场近似，看似是一个一个一个互不相容的decouple方法，但利用平均场近似的变分法本质，我们发现他们事实上确实可以1:1:1混着用。">
 <meta name="application-name" content="My cool site">
 <meta name="apple-mobile-web-app-title" content="My cool site">
 <meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/OkongOyangO.Notes/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/OkongOyangO.Notes/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/OkongOyangO.Notes/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/OkongOyangO.Notes/apple-touch-icon.png"><link rel="mask-icon" href="/OkongOyangO.Notes/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/OkongOyangO.Notes/site.webmanifest"><link rel="canonical" href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/mean_field_approximation/" /><link rel="prev" href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/joule_heat/" /><link rel="next" href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/fermi_golden_rule/" /><link rel="stylesheet" href="/OkongOyangO.Notes/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/OkongOyangO.Notes/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/OkongOyangO.Notes/apple-touch-icon.png"><link rel="mask-icon" href="/OkongOyangO.Notes/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/OkongOyangO.Notes/site.webmanifest"><link rel="canonical" href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/mean_field_approximation/" /><link rel="prev" href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/joule_heat/" /><link rel="next" href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/distinguish_conductors_insulators_ground_state/" /><link rel="stylesheet" href="/OkongOyangO.Notes/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "平均场近似与变分法｜Hartree, Fock, BCS能1:1:1混用吗？",
+        "headline": "🤫平均场近似与变分法｜Hartree, Fock, BCS能1:1:1混用吗？",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/zh-cn\/posts\/mean_field_approximation\/"
         },"genre": "posts","keywords": "Condensed Matter, Mean Field","wordcount":  1234 ,
-        "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/zh-cn\/posts\/mean_field_approximation\/","datePublished": "2026-01-09T19:05:46+00:00","dateModified": "2026-01-09T19:05:46+00:00","publisher": {
+        "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/zh-cn\/posts\/mean_field_approximation\/","datePublished": "2023-03-11T22:30:00-05:00","dateModified": "2023-03-11T22:30:00-05:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -67,7 +67,7 @@ Hartree, Fock, BCS这一个一个一个平均场近似，看似是一个一个�
             <div class="menu-inner"><a class="menu-item active" href="/OkongOyangO.Notes/zh-cn/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i> 文章 </a><a class="menu-item" href="/OkongOyangO.Notes/zh-cn/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i> 标签 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="Search/搜索/検索..." id="search-input-desktop">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
-                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i> Search
                         </a>
                         <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
                             <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
@@ -76,9 +76,9 @@ Hartree, Fock, BCS这一个一个一个平均场近似，看似是一个一个�
                             <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
                         </span>
                     </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
-                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i> Theme
                 </a><a href="javascript:void(0);" class="menu-item language" title="选择语言">
-                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>                      
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i> Language
                     <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/mean_field_approximation/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/mean_field_approximation/" selected>简体中文</option><option value="/OkongOyangO.Notes/ja/posts/mean_field_approximation/">日本語</option></select>
                 </a></div>
         </div>
@@ -110,9 +110,9 @@ Hartree, Fock, BCS这一个一个一个平均场近似，看似是一个一个�
                         取消
                     </a>
                 </div><a class="menu-item" href="/OkongOyangO.Notes/zh-cn/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i>文章</a><a class="menu-item" href="/OkongOyangO.Notes/zh-cn/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i>标签</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
-                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>Theme
             </a><a href="javascript:void(0);" class="menu-item" title="选择语言">
-                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>Language
                     <select class="language-select" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/mean_field_approximation/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/mean_field_approximation/" selected>简体中文</option><option value="/OkongOyangO.Notes/ja/posts/mean_field_approximation/">日本語</option></select>
                 </a></div>
     </div>
@@ -125,9 +125,9 @@ Hartree, Fock, BCS这一个一个一个平均场近似，看似是一个一个�
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">平均场近似与变分法｜Hartree, Fock, BCS能1:1:1混用吗？</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">🤫平均场近似与变分法｜Hartree, Fock, BCS能1:1:1混用吗？</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/OkongOyangO.Notes/zh-cn/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">收录于 <a href="/OkongOyangO.Notes/zh-cn/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-01-09">2026-01-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1234 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-03-11">2023-03-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1234 字&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 6 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
@@ -439,12 +439,12 @@ $$<p>但这种decouple method在使用两种及以上的平均场近似时，容
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2026-01-09</span>
+                <span>更新于 2023-03-11</span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 X" data-sharer="x" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/mean_field_approximation/" data-title="平均场近似与变分法｜Hartree, Fock, BCS能1:1:1混用吗？" data-hashtags="Condensed Matter,Mean Field"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Threads" data-sharer="threads" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/mean_field_approximation/" data-title="平均场近似与变分法｜Hartree, Fock, BCS能1:1:1混用吗？"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/mean_field_approximation/" data-hashtag="Condensed Matter"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/mean_field_approximation/" data-title="平均场近似与变分法｜Hartree, Fock, BCS能1:1:1混用吗？"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/mean_field_approximation/" data-title="平均场近似与变分法｜Hartree, Fock, BCS能1:1:1混用吗？"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/mean_field_approximation/" data-title="平均场近似与变分法｜Hartree, Fock, BCS能1:1:1混用吗？"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Diaspora" data-sharer="diaspora" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/mean_field_approximation/" data-title="平均场近似与变分法｜Hartree, Fock, BCS能1:1:1混用吗？" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fOkongOyangO.github.io%2fOkongOyangO.Notes%2fzh-cn%2fposts%2fmean_field_approximation%2f&amp;text=%e5%b9%b3%e5%9d%87%e5%9c%ba%e8%bf%91%e4%bc%bc%e4%b8%8e%e5%8f%98%e5%88%86%e6%b3%95%ef%bd%9cHartree%2c%20Fock%2c%20BCS%e8%83%bd1%3a1%3a1%e6%b7%b7%e7%94%a8%e5%90%97%ef%bc%9f" target="_blank" title="分享到 Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 X" data-sharer="x" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/mean_field_approximation/" data-title="🤫平均场近似与变分法｜Hartree, Fock, BCS能1:1:1混用吗？" data-hashtags="Condensed Matter,Mean Field"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Threads" data-sharer="threads" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/mean_field_approximation/" data-title="🤫平均场近似与变分法｜Hartree, Fock, BCS能1:1:1混用吗？"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/mean_field_approximation/" data-hashtag="Condensed Matter"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/mean_field_approximation/" data-title="🤫平均场近似与变分法｜Hartree, Fock, BCS能1:1:1混用吗？"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/mean_field_approximation/" data-title="🤫平均场近似与变分法｜Hartree, Fock, BCS能1:1:1混用吗？"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/mean_field_approximation/" data-title="🤫平均场近似与变分法｜Hartree, Fock, BCS能1:1:1混用吗？"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Diaspora" data-sharer="diaspora" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/mean_field_approximation/" data-title="🤫平均场近似与变分法｜Hartree, Fock, BCS能1:1:1混用吗？" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fOkongOyangO.github.io%2fOkongOyangO.Notes%2fzh-cn%2fposts%2fmean_field_approximation%2f&amp;text=%f0%9f%a4%ab%e5%b9%b3%e5%9d%87%e5%9c%ba%e8%bf%91%e4%bc%bc%e4%b8%8e%e5%8f%98%e5%88%86%e6%b3%95%ef%bd%9cHartree%2c%20Fock%2c%20BCS%e8%83%bd1%3a1%3a1%e6%b7%b7%e7%94%a8%e5%90%97%ef%bc%9f" target="_blank" title="分享到 Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
@@ -456,8 +456,8 @@ $$<p>但这种decouple method在使用两种及以上的平均场近似时，容
         </section>
     </div>
 
-    <div class="post-nav"><a href="/OkongOyangO.Notes/zh-cn/posts/joule_heat/" class="prev" rel="prev" title="费米黄金定则？焦耳热罢了！"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>费米黄金定则？焦耳热罢了！</a>
-            <a href="/OkongOyangO.Notes/zh-cn/posts/fermi_golden_rule/" class="next" rel="next" title="费米黄金法则（Fermi Golden Rule）漏了什么？">费米黄金法则（Fermi Golden Rule）漏了什么？<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+    <div class="post-nav"><a href="/OkongOyangO.Notes/zh-cn/posts/joule_heat/" class="prev" rel="prev" title="🔥费米黄金定则？焦耳热罢了！"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>🔥费米黄金定则？焦耳热罢了！</a>
+            <a href="/OkongOyangO.Notes/zh-cn/posts/distinguish_conductors_insulators_ground_state/" class="next" rel="next" title="🤔只看基态如何区分导体和绝缘体？">🤔只看基态如何区分导体和绝缘体？<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 </article></div>
             </main><footer class="footer">

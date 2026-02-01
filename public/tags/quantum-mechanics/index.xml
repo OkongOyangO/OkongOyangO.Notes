@@ -8,21 +8,21 @@
     <language>en</language>
     <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
     <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
-    <lastBuildDate>Sat, 10 Jan 2026 02:59:13 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Mar 2023 22:30:00 -0500</lastBuildDate>
     <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/tags/quantum-mechanics/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>What did Fermi Golden Rule Miss?</title>
-      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/fermi_golden_rule/</link>
-      <pubDate>Sat, 10 Jan 2026 02:59:13 +0000</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
-      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/fermi_golden_rule/</guid>
-      <description>&lt;p&gt;This article aims to calculate the strict quantum transition rate and points out that the Fermi Golden Rule is the result of its &amp;ldquo;long-time average&amp;rdquo;. The strict quantum transition rate contains an additional double-frequency oscillation term with non-negligible amplitude compared to the Fermi Golden Rule. The relationship between the two is similar to &amp;ldquo;instantaneous power&amp;rdquo; and &amp;ldquo;average power&amp;rdquo; in AC circuits.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Fermi Golden Rule? Just Joule Heat!</title>
+      <title>🔥Fermi Golden Rule? Just Joule Heat!</title>
       <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/joule_heat/</link>
-      <pubDate>Thu, 08 Jan 2026 23:00:00 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <pubDate>Tue, 07 Mar 2023 22:30:00 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
       <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/joule_heat/</guid>
       <description>&lt;p&gt;This article aims to clarify the consistency between Fermi&amp;rsquo;s Golden Rule and Joule Heat.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>😯What did Fermi Golden Rule Miss?</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/fermi_golden_rule/</link>
+      <pubDate>Mon, 06 Mar 2023 22:30:00 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/fermi_golden_rule/</guid>
+      <description>&lt;p&gt;This article aims to calculate the strict quantum transition rate and points out that the Fermi Golden Rule is the result of its &amp;ldquo;long-time average&amp;rdquo;. The strict quantum transition rate contains an additional double-frequency oscillation term with non-negligible amplitude compared to the Fermi Golden Rule. The relationship between the two is similar to &amp;ldquo;instantaneous power&amp;rdquo; and &amp;ldquo;average power&amp;rdquo; in AC circuits.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -8,21 +8,21 @@
     <language>zh-CN</language>
     <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
     <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
-    <lastBuildDate>Sat, 10 Jan 2026 02:59:13 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Mar 2023 22:30:00 -0500</lastBuildDate>
     <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/quantum-mechanics/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>费米黄金法则（Fermi Golden Rule）漏了什么？</title>
-      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/fermi_golden_rule/</link>
-      <pubDate>Sat, 10 Jan 2026 02:59:13 +0000</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
-      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/fermi_golden_rule/</guid>
-      <description>&lt;p&gt;本文旨在计算严格的量子跃迁速率，并指出费米黄金法则是其的&amp;quot;长时间平均&amp;quot;的结果。严格的量子跃迁速率相比费米黄金法则还多一项振幅不可忽略的二倍频振荡项，前后者关系类似交流电路中的&amp;quot;瞬时功率&amp;quot;与&amp;quot;平均功率&amp;quot;。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>费米黄金定则？焦耳热罢了！</title>
+      <title>🔥费米黄金定则？焦耳热罢了！</title>
       <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/joule_heat/</link>
-      <pubDate>Thu, 08 Jan 2026 23:00:00 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <pubDate>Tue, 07 Mar 2023 22:30:00 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
       <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/joule_heat/</guid>
       <description>&lt;p&gt;本文旨在阐述费米黄金法则和焦耳热的一致性。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>😯费米黄金法则（Fermi Golden Rule）漏了什么？</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/fermi_golden_rule/</link>
+      <pubDate>Mon, 06 Mar 2023 22:30:00 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/fermi_golden_rule/</guid>
+      <description>&lt;p&gt;本文旨在计算严格的量子跃迁速率，并指出费米黄金法则是其的&amp;quot;长时间平均&amp;quot;的结果。严格的量子跃迁速率相比费米黄金法则还多一项振幅不可忽略的二倍频振荡项，前后者关系类似交流电路中的&amp;quot;瞬时功率&amp;quot;与&amp;quot;平均功率&amp;quot;。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

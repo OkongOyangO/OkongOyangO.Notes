@@ -1,6 +1,6 @@
 ---
-title: "What did Fermi Golden Rule Miss?"
-date: 2026-01-10T02:59:13Z
+title: "😯What did Fermi Golden Rule Miss?"
+date: 2023-03-06T22:30:00-05:00
 draft: false
 math: true
 tags: ["Quantum Mechanics", "Fermi Golden Rule"]

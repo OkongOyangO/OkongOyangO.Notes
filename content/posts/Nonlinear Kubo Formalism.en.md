@@ -1,6 +1,6 @@
 ---
-title: "Nonlinear Response Theory of the Kubo Formula"
-date: 2026-01-08T22:00:00-05:00
+title: "🥸Nonlinear Response Theory of the Kubo Formula"
+date: 2023-03-07T22:30:00-05:00
 draft: false
 math: true
 tags: ["Nonlinear Response", "Kubo Formula"]

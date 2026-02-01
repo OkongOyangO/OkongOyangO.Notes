@@ -4,40 +4,40 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>平均場近似と変分法｜Hartree, Fock, BCSは1:1:1で混ぜて使えるか？ - OkongOyangOのノート</title><meta name="Description" content="トポロジー、幾何学、非線形応答に関する物理ノート"><meta property="og:url" content="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/mean_field_approximation/">
+        <title>🤫平均場近似と変分法｜Hartree, Fock, BCSは1:1:1で混ぜて使えるか？ - OkongOyangOのノート</title><meta name="Description" content="OkongOyangOの凝縮系物理学ノート"><meta property="og:url" content="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/mean_field_approximation/">
   <meta property="og:site_name" content="OkongOyangOのノート">
-  <meta property="og:title" content="平均場近似と変分法｜Hartree, Fock, BCSは1:1:1で混ぜて使えるか？">
+  <meta property="og:title" content="🤫平均場近似と変分法｜Hartree, Fock, BCSは1:1:1で混ぜて使えるか？">
   <meta property="og:description" content="本文は平均場近似を紹介すると同時に、その変分法的本質を説明することを目的としています。
 Hartree, Fock, BCSといった個々の平均場近似は、一見すると互いに相容れないdecouple（分離）手法のように見えますが、平均場近似の変分法的本質を利用することで、これらは実際に1:1:1で混ぜて使用できることがわかります。">
   <meta property="og:locale" content="ja">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2026-01-09T19:05:46+00:00">
-    <meta property="article:modified_time" content="2026-01-09T19:05:46+00:00">
+    <meta property="article:published_time" content="2023-03-11T22:30:00-05:00">
+    <meta property="article:modified_time" content="2023-03-11T22:30:00-05:00">
     <meta property="article:tag" content="Condensed Matter">
     <meta property="article:tag" content="Mean Field">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="平均場近似と変分法｜Hartree, Fock, BCSは1:1:1で混ぜて使えるか？">
+  <meta name="twitter:title" content="🤫平均場近似と変分法｜Hartree, Fock, BCSは1:1:1で混ぜて使えるか？">
   <meta name="twitter:description" content="本文は平均場近似を紹介すると同時に、その変分法的本質を説明することを目的としています。
 Hartree, Fock, BCSといった個々の平均場近似は、一見すると互いに相容れないdecouple（分離）手法のように見えますが、平均場近似の変分法的本質を利用することで、これらは実際に1:1:1で混ぜて使用できることがわかります。">
 <meta name="application-name" content="My cool site">
 <meta name="apple-mobile-web-app-title" content="My cool site">
 <meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/OkongOyangO.Notes/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/OkongOyangO.Notes/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/OkongOyangO.Notes/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/OkongOyangO.Notes/apple-touch-icon.png"><link rel="mask-icon" href="/OkongOyangO.Notes/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/OkongOyangO.Notes/site.webmanifest"><link rel="canonical" href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/mean_field_approximation/" /><link rel="prev" href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/joule_heat/" /><link rel="next" href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/fermi_golden_rule/" /><link rel="stylesheet" href="/OkongOyangO.Notes/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/OkongOyangO.Notes/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/OkongOyangO.Notes/apple-touch-icon.png"><link rel="mask-icon" href="/OkongOyangO.Notes/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/OkongOyangO.Notes/site.webmanifest"><link rel="canonical" href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/mean_field_approximation/" /><link rel="prev" href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/joule_heat/" /><link rel="next" href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/distinguish_conductors_insulators_ground_state/" /><link rel="stylesheet" href="/OkongOyangO.Notes/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "平均場近似と変分法｜Hartree, Fock, BCSは1:1:1で混ぜて使えるか？",
+        "headline": "🤫平均場近似と変分法｜Hartree, Fock, BCSは1:1:1で混ぜて使えるか？",
         "inLanguage": "ja",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/ja\/posts\/mean_field_approximation\/"
         },"genre": "posts","keywords": "Condensed Matter, Mean Field","wordcount":  1233 ,
-        "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/ja\/posts\/mean_field_approximation\/","datePublished": "2026-01-09T19:05:46+00:00","dateModified": "2026-01-09T19:05:46+00:00","publisher": {
+        "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/ja\/posts\/mean_field_approximation\/","datePublished": "2023-03-11T22:30:00-05:00","dateModified": "2023-03-11T22:30:00-05:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -67,7 +67,7 @@ Hartree, Fock, BCSといった個々の平均場近似は、一見すると互�
             <div class="menu-inner"><a class="menu-item active" href="/OkongOyangO.Notes/ja/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i> 記事 </a><a class="menu-item" href="/OkongOyangO.Notes/ja/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i> タグ </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="Search/搜索/検索..." id="search-input-desktop">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
-                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i> Search
                         </a>
                         <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
                             <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
@@ -76,9 +76,9 @@ Hartree, Fock, BCSといった個々の平均場近似は、一見すると互�
                             <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
                         </span>
                     </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
-                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i> Theme
                 </a><a href="javascript:void(0);" class="menu-item language" title="Select Language">
-                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>                      
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i> Language
                     <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/mean_field_approximation/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/mean_field_approximation/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/mean_field_approximation/" selected>日本語</option></select>
                 </a></div>
         </div>
@@ -110,9 +110,9 @@ Hartree, Fock, BCSといった個々の平均場近似は、一見すると互�
                         Cancel
                     </a>
                 </div><a class="menu-item" href="/OkongOyangO.Notes/ja/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i>記事</a><a class="menu-item" href="/OkongOyangO.Notes/ja/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i>タグ</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
-                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>Theme
             </a><a href="javascript:void(0);" class="menu-item" title="Select Language">
-                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>Language
                     <select class="language-select" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/mean_field_approximation/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/mean_field_approximation/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/mean_field_approximation/" selected>日本語</option></select>
                 </a></div>
     </div>
@@ -125,9 +125,9 @@ Hartree, Fock, BCSといった個々の平均場近似は、一見すると互�
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">平均場近似と変分法｜Hartree, Fock, BCSは1:1:1で混ぜて使えるか？</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">🤫平均場近似と変分法｜Hartree, Fock, BCSは1:1:1で混ぜて使えるか？</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/OkongOyangO.Notes/ja/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">included in <a href="/OkongOyangO.Notes/ja/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-01-09">2026-01-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1233 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-03-11">2023-03-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1233 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;6 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
@@ -439,12 +439,12 @@ $$<p>しかし、このdecouple methodは、2種類以上の平均場近似を�
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2026-01-09</span>
+                <span>Updated on 2023-03-11</span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/mean_field_approximation/" data-title="平均場近似と変分法｜Hartree, Fock, BCSは1:1:1で混ぜて使えるか？" data-hashtags="Condensed Matter,Mean Field"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/mean_field_approximation/" data-title="平均場近似と変分法｜Hartree, Fock, BCSは1:1:1で混ぜて使えるか？"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/mean_field_approximation/" data-hashtag="Condensed Matter"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/mean_field_approximation/" data-title="平均場近似と変分法｜Hartree, Fock, BCSは1:1:1で混ぜて使えるか？"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/mean_field_approximation/" data-title="平均場近似と変分法｜Hartree, Fock, BCSは1:1:1で混ぜて使えるか？"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/mean_field_approximation/" data-title="平均場近似と変分法｜Hartree, Fock, BCSは1:1:1で混ぜて使えるか？"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/mean_field_approximation/" data-title="平均場近似と変分法｜Hartree, Fock, BCSは1:1:1で混ぜて使えるか？" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fOkongOyangO.github.io%2fOkongOyangO.Notes%2fja%2fposts%2fmean_field_approximation%2f&amp;text=%e5%b9%b3%e5%9d%87%e5%a0%b4%e8%bf%91%e4%bc%bc%e3%81%a8%e5%a4%89%e5%88%86%e6%b3%95%ef%bd%9cHartree%2c%20Fock%2c%20BCS%e3%81%af1%3a1%3a1%e3%81%a7%e6%b7%b7%e3%81%9c%e3%81%a6%e4%bd%bf%e3%81%88%e3%82%8b%e3%81%8b%ef%bc%9f" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/mean_field_approximation/" data-title="🤫平均場近似と変分法｜Hartree, Fock, BCSは1:1:1で混ぜて使えるか？" data-hashtags="Condensed Matter,Mean Field"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/mean_field_approximation/" data-title="🤫平均場近似と変分法｜Hartree, Fock, BCSは1:1:1で混ぜて使えるか？"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/mean_field_approximation/" data-hashtag="Condensed Matter"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/mean_field_approximation/" data-title="🤫平均場近似と変分法｜Hartree, Fock, BCSは1:1:1で混ぜて使えるか？"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/mean_field_approximation/" data-title="🤫平均場近似と変分法｜Hartree, Fock, BCSは1:1:1で混ぜて使えるか？"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/mean_field_approximation/" data-title="🤫平均場近似と変分法｜Hartree, Fock, BCSは1:1:1で混ぜて使えるか？"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/mean_field_approximation/" data-title="🤫平均場近似と変分法｜Hartree, Fock, BCSは1:1:1で混ぜて使えるか？" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fOkongOyangO.github.io%2fOkongOyangO.Notes%2fja%2fposts%2fmean_field_approximation%2f&amp;text=%f0%9f%a4%ab%e5%b9%b3%e5%9d%87%e5%a0%b4%e8%bf%91%e4%bc%bc%e3%81%a8%e5%a4%89%e5%88%86%e6%b3%95%ef%bd%9cHartree%2c%20Fock%2c%20BCS%e3%81%af1%3a1%3a1%e3%81%a7%e6%b7%b7%e3%81%9c%e3%81%a6%e4%bd%bf%e3%81%88%e3%82%8b%e3%81%8b%ef%bc%9f" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
@@ -456,8 +456,8 @@ $$<p>しかし、このdecouple methodは、2種類以上の平均場近似を�
         </section>
     </div>
 
-    <div class="post-nav"><a href="/OkongOyangO.Notes/ja/posts/joule_heat/" class="prev" rel="prev" title="フェルミの黄金律？ただのジュール熱さ！"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>フェルミの黄金律？ただのジュール熱さ！</a>
-            <a href="/OkongOyangO.Notes/ja/posts/fermi_golden_rule/" class="next" rel="next" title="フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？">フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+    <div class="post-nav"><a href="/OkongOyangO.Notes/ja/posts/joule_heat/" class="prev" rel="prev" title="🔥フェルミの黄金律？ただのジュール熱さ！"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>🔥フェルミの黄金律？ただのジュール熱さ！</a>
+            <a href="/OkongOyangO.Notes/ja/posts/distinguish_conductors_insulators_ground_state/" class="next" rel="next" title="🤔基底状態だけで導体と絶縁体をどう区別するか？">🤔基底状態だけで導体と絶縁体をどう区別するか？<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 </article></div>
             </main><footer class="footer">

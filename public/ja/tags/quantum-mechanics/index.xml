@@ -8,21 +8,21 @@
     <language>ja</language>
     <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
     <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
-    <lastBuildDate>Sat, 10 Jan 2026 02:59:13 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Mar 2023 22:30:00 -0500</lastBuildDate>
     <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/quantum-mechanics/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？</title>
-      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/fermi_golden_rule/</link>
-      <pubDate>Sat, 10 Jan 2026 02:59:13 +0000</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
-      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/fermi_golden_rule/</guid>
-      <description>&lt;p&gt;本文は厳密な量子遷移率を計算し、フェルミの黄金律がその「長時間平均」の結果であることを指摘することを目的としています。厳密な量子遷移率は、フェルミの黄金律と比較して、無視できない振幅を持つ二倍周波数振動項（double-frequency oscillation term）をさらに含んでいます。両者の関係は、交流回路における「瞬時電力」と「平均電力」の関係に似ています。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>フェルミの黄金律？ただのジュール熱さ！</title>
+      <title>🔥フェルミの黄金律？ただのジュール熱さ！</title>
       <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/joule_heat/</link>
-      <pubDate>Thu, 08 Jan 2026 23:00:00 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <pubDate>Tue, 07 Mar 2023 22:30:00 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
       <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/joule_heat/</guid>
       <description>&lt;p&gt;本文はフェルミの黄金律とジュール熱の整合性を説明することを目的としています。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>😯フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/fermi_golden_rule/</link>
+      <pubDate>Mon, 06 Mar 2023 22:30:00 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/fermi_golden_rule/</guid>
+      <description>&lt;p&gt;本文は厳密な量子遷移率を計算し、フェルミの黄金律がその「長時間平均」の結果であることを指摘することを目的としています。厳密な量子遷移率は、フェルミの黄金律と比較して、無視できない振幅を持つ二倍周波数振動項（double-frequency oscillation term）をさらに含んでいます。両者の関係は、交流回路における「瞬時電力」と「平均電力」の関係に似ています。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

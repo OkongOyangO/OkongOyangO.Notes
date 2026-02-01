@@ -4,38 +4,38 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？ - OkongOyangOのノート</title><meta name="Description" content="トポロジー、幾何学、非線形応答に関する物理ノート"><meta property="og:url" content="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/fermi_golden_rule/">
+        <title>😯フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？ - OkongOyangOのノート</title><meta name="Description" content="OkongOyangOの凝縮系物理学ノート"><meta property="og:url" content="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/fermi_golden_rule/">
   <meta property="og:site_name" content="OkongOyangOのノート">
-  <meta property="og:title" content="フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？">
+  <meta property="og:title" content="😯フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？">
   <meta property="og:description" content="本文は厳密な量子遷移率を計算し、フェルミの黄金律がその「長時間平均」の結果であることを指摘することを目的としています。厳密な量子遷移率は、フェルミの黄金律と比較して、無視できない振幅を持つ二倍周波数振動項（double-frequency oscillation term）をさらに含んでいます。両者の関係は、交流回路における「瞬時電力」と「平均電力」の関係に似ています。">
   <meta property="og:locale" content="ja">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2026-01-10T02:59:13+00:00">
-    <meta property="article:modified_time" content="2026-01-10T02:59:13+00:00">
+    <meta property="article:published_time" content="2023-03-06T22:30:00-05:00">
+    <meta property="article:modified_time" content="2023-03-06T22:30:00-05:00">
     <meta property="article:tag" content="Quantum Mechanics">
     <meta property="article:tag" content="Fermi Golden Rule">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？">
+  <meta name="twitter:title" content="😯フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？">
   <meta name="twitter:description" content="本文は厳密な量子遷移率を計算し、フェルミの黄金律がその「長時間平均」の結果であることを指摘することを目的としています。厳密な量子遷移率は、フェルミの黄金律と比較して、無視できない振幅を持つ二倍周波数振動項（double-frequency oscillation term）をさらに含んでいます。両者の関係は、交流回路における「瞬時電力」と「平均電力」の関係に似ています。">
 <meta name="application-name" content="My cool site">
 <meta name="apple-mobile-web-app-title" content="My cool site">
 <meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/OkongOyangO.Notes/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/OkongOyangO.Notes/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/OkongOyangO.Notes/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/OkongOyangO.Notes/apple-touch-icon.png"><link rel="mask-icon" href="/OkongOyangO.Notes/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/OkongOyangO.Notes/site.webmanifest"><link rel="canonical" href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/fermi_golden_rule/" /><link rel="prev" href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/mean_field_approximation/" /><link rel="stylesheet" href="/OkongOyangO.Notes/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/OkongOyangO.Notes/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/OkongOyangO.Notes/apple-touch-icon.png"><link rel="mask-icon" href="/OkongOyangO.Notes/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/OkongOyangO.Notes/site.webmanifest"><link rel="canonical" href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/fermi_golden_rule/" /><link rel="prev" href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/fqhe_faqhe_fci/" /><link rel="next" href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/nonlinear-kubo-formalism/" /><link rel="stylesheet" href="/OkongOyangO.Notes/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？",
+        "headline": "😯フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？",
         "inLanguage": "ja",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/ja\/posts\/fermi_golden_rule\/"
         },"genre": "posts","keywords": "Quantum Mechanics, Fermi Golden Rule","wordcount":  1269 ,
-        "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/ja\/posts\/fermi_golden_rule\/","datePublished": "2026-01-10T02:59:13+00:00","dateModified": "2026-01-10T02:59:13+00:00","publisher": {
+        "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/ja\/posts\/fermi_golden_rule\/","datePublished": "2023-03-06T22:30:00-05:00","dateModified": "2023-03-06T22:30:00-05:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -65,7 +65,7 @@
             <div class="menu-inner"><a class="menu-item active" href="/OkongOyangO.Notes/ja/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i> 記事 </a><a class="menu-item" href="/OkongOyangO.Notes/ja/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i> タグ </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="Search/搜索/検索..." id="search-input-desktop">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
-                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i> Search
                         </a>
                         <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
                             <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
@@ -74,9 +74,9 @@
                             <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
                         </span>
                     </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
-                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i> Theme
                 </a><a href="javascript:void(0);" class="menu-item language" title="Select Language">
-                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>                      
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i> Language
                     <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/fermi_golden_rule/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/fermi_golden_rule/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/fermi_golden_rule/" selected>日本語</option></select>
                 </a></div>
         </div>
@@ -108,9 +108,9 @@
                         Cancel
                     </a>
                 </div><a class="menu-item" href="/OkongOyangO.Notes/ja/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i>記事</a><a class="menu-item" href="/OkongOyangO.Notes/ja/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i>タグ</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
-                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>Theme
             </a><a href="javascript:void(0);" class="menu-item" title="Select Language">
-                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>Language
                     <select class="language-select" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/fermi_golden_rule/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/fermi_golden_rule/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/fermi_golden_rule/" selected>日本語</option></select>
                 </a></div>
     </div>
@@ -123,9 +123,9 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">😯フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/OkongOyangO.Notes/ja/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">included in <a href="/OkongOyangO.Notes/ja/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-01-10">2026-01-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1269 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-03-06">2023-03-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1269 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;6 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
@@ -337,12 +337,12 @@ $$</div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2026-01-10</span>
+                <span>Updated on 2023-03-06</span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/fermi_golden_rule/" data-title="フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？" data-hashtags="Quantum Mechanics,Fermi Golden Rule"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/fermi_golden_rule/" data-title="フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/fermi_golden_rule/" data-hashtag="Quantum Mechanics"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/fermi_golden_rule/" data-title="フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/fermi_golden_rule/" data-title="フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/fermi_golden_rule/" data-title="フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/fermi_golden_rule/" data-title="フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fOkongOyangO.github.io%2fOkongOyangO.Notes%2fja%2fposts%2ffermi_golden_rule%2f&amp;text=%e3%83%95%e3%82%a7%e3%83%ab%e3%83%9f%e3%81%ae%e9%bb%84%e9%87%91%e5%be%8b%ef%bc%88Fermi%20Golden%20Rule%ef%bc%89%e3%81%af%e4%bd%95%e3%82%92%e8%a6%8b%e8%90%bd%e3%81%a8%e3%81%97%e3%81%a6%e3%81%84%e3%82%8b%e3%81%ae%e3%81%8b%ef%bc%9f" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/fermi_golden_rule/" data-title="😯フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？" data-hashtags="Quantum Mechanics,Fermi Golden Rule"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/fermi_golden_rule/" data-title="😯フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/fermi_golden_rule/" data-hashtag="Quantum Mechanics"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/fermi_golden_rule/" data-title="😯フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/fermi_golden_rule/" data-title="😯フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/fermi_golden_rule/" data-title="😯フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/fermi_golden_rule/" data-title="😯フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fOkongOyangO.github.io%2fOkongOyangO.Notes%2fja%2fposts%2ffermi_golden_rule%2f&amp;text=%f0%9f%98%af%e3%83%95%e3%82%a7%e3%83%ab%e3%83%9f%e3%81%ae%e9%bb%84%e9%87%91%e5%be%8b%ef%bc%88Fermi%20Golden%20Rule%ef%bc%89%e3%81%af%e4%bd%95%e3%82%92%e8%a6%8b%e8%90%bd%e3%81%a8%e3%81%97%e3%81%a6%e3%81%84%e3%82%8b%e3%81%ae%e3%81%8b%ef%bc%9f" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
@@ -354,7 +354,8 @@ $$</div><div class="post-footer" id="post-footer">
         </section>
     </div>
 
-    <div class="post-nav"><a href="/OkongOyangO.Notes/ja/posts/mean_field_approximation/" class="prev" rel="prev" title="平均場近似と変分法｜Hartree, Fock, BCSは1:1:1で混ぜて使えるか？"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>平均場近似と変分法｜Hartree, Fock, BCSは1:1:1で混ぜて使えるか？</a></div>
+    <div class="post-nav"><a href="/OkongOyangO.Notes/ja/posts/fqhe_faqhe_fci/" class="prev" rel="prev" title="🧐分数量子ホール効果 (FQHE)、分数異常量子ホール効果 (FAQHE)、そして分数チャーン絶縁体 (FCI)"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>🧐分数量子ホール効果 (FQHE)、分数異常量子ホール効果 (FAQHE)、そして分数チャーン絶縁体 (FCI)</a>
+            <a href="/OkongOyangO.Notes/ja/posts/nonlinear-kubo-formalism/" class="next" rel="next" title="🥸久保公式の非線形応答理論">🥸久保公式の非線形応答理論<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 </article></div>
             </main><footer class="footer">

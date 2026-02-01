@@ -1,6 +1,6 @@
 ---
-title: "How to Distinguish Conductors and Insulators by Ground State Only? 🤔"
-date: 2026-01-08T22:30:00-05:00
+title: "🤔How to Distinguish Conductors and Insulators by Ground State Only? "
+date: 2023-05-14T22:30:00-05:00
 draft: false
 math: true
 tags: ["Condensed Matter", "Insulators"]

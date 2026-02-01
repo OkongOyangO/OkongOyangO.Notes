@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>FQHE on OkongOyangO&#39;s Notes</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/tags/fqhe/</link>
+    <description>Recent content in FQHE on OkongOyangO&#39;s Notes</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
+    <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
+    <lastBuildDate>Fri, 05 Apr 2024 12:00:00 +0800</lastBuildDate>
+    <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/tags/fqhe/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>🤯Chiral Graviton in Fractional Quantum Hall Effect (FQHE)</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/chiral-graviton-in-fqhe/</link>
+      <pubDate>Fri, 05 Apr 2024 12:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/chiral-graviton-in-fqhe/</guid>
+      <description>&lt;p&gt;This article aims to briefly introduce the theoretical and experimental detection methods related to &amp;ldquo;chiral graviton&amp;rdquo; excitations in fractional quantum Hall liquids, providing material for the recent heated discussions in related fields. My ability is limited, so I welcome any corrections from experts.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

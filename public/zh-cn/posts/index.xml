@@ -4,51 +4,59 @@
         <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/</link>
         <description>所有文章 | OkongOyangO的物理笔记</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
-            <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster><lastBuildDate>Sat, 10 Jan 2026 02:59:13 &#43;0000</lastBuildDate><atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>费米黄金法则（Fermi Golden Rule）漏了什么？</title>
-    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/fermi_golden_rule/</link>
-    <pubDate>Sat, 10 Jan 2026 02:59:13 &#43;0000</pubDate>
+            <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster><lastBuildDate>Fri, 05 Apr 2024 12:00:00 &#43;0800</lastBuildDate><atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>🤯南大发现引力子？手征引力子与分数量子霍尔态内禀量子几何</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/chiral-graviton-in-fqhe/</link>
+    <pubDate>Fri, 05 Apr 2024 12:00:00 &#43;0800</pubDate>
     <author>yzj5306@psu.edu (OkongOyangO)</author>
-    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/fermi_golden_rule/</guid>
-    <description><![CDATA[<p>本文旨在计算严格的量子跃迁速率，并指出费米黄金法则是其的&quot;长时间平均&quot;的结果。严格的量子跃迁速率相比费米黄金法则还多一项振幅不可忽略的二倍频振荡项，前后者关系类似交流电路中的&quot;瞬时功率&quot;与&quot;平均功率&quot;。</p>]]></description>
+    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/chiral-graviton-in-fqhe/</guid>
+    <description><![CDATA[<p>本文旨在简要介绍分数量子霍尔液体中“手征重力子”激发的相关理论和实验探测方式，为近期相关领域的火热讨论提供吃瓜素材。本人能力有限，有不足之处还望各位大佬不吝赐教。</p>]]></description>
 </item>
 <item>
-    <title>平均场近似与变分法｜Hartree, Fock, BCS能1:1:1混用吗？</title>
+    <title>🤔只看基态如何区分导体和绝缘体？</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/distinguish_conductors_insulators_ground_state/</link>
+    <pubDate>Sun, 14 May 2023 22:30:00 -0500</pubDate>
+    <author>yzj5306@psu.edu (OkongOyangO)</author>
+    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/distinguish_conductors_insulators_ground_state/</guid>
+    <description><![CDATA[<p>本note旨在阐述多体系统<strong>导电性</strong>与<strong>基态量子几何性质</strong>的关联，并解释如何仅通过基态波函数的&quot;局域&quot;程度，来区分导体和绝缘体。</p>]]></description>
+</item>
+<item>
+    <title>🤫平均场近似与变分法｜Hartree, Fock, BCS能1:1:1混用吗？</title>
     <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/mean_field_approximation/</link>
-    <pubDate>Fri, 09 Jan 2026 19:05:46 &#43;0000</pubDate>
+    <pubDate>Sat, 11 Mar 2023 22:30:00 -0500</pubDate>
     <author>yzj5306@psu.edu (OkongOyangO)</author>
     <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/mean_field_approximation/</guid>
     <description><![CDATA[<p>本文旨在介绍平均场近似，同时阐述其变分法本质。</p>
 <p>Hartree, Fock, BCS这一个一个一个平均场近似，看似是一个一个一个互不相容的decouple方法，但利用平均场近似的变分法本质，我们发现他们事实上确实可以1:1:1混着用。</p>]]></description>
 </item>
 <item>
-    <title>费米黄金定则？焦耳热罢了！</title>
+    <title>🔥费米黄金定则？焦耳热罢了！</title>
     <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/joule_heat/</link>
-    <pubDate>Thu, 08 Jan 2026 23:00:00 -0500</pubDate>
+    <pubDate>Tue, 07 Mar 2023 22:30:00 -0500</pubDate>
     <author>yzj5306@psu.edu (OkongOyangO)</author>
     <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/joule_heat/</guid>
     <description><![CDATA[<p>本文旨在阐述费米黄金法则和焦耳热的一致性。</p>]]></description>
 </item>
 <item>
-    <title>只看基态如何区分导体和绝缘体？🤔</title>
-    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/distinguish_conductors_insulators_ground_state/</link>
-    <pubDate>Thu, 08 Jan 2026 22:30:00 -0500</pubDate>
-    <author>yzj5306@psu.edu (OkongOyangO)</author>
-    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/distinguish_conductors_insulators_ground_state/</guid>
-    <description><![CDATA[<p>本note旨在阐述多体系统<strong>导电性</strong>与<strong>基态量子几何性质</strong>的关联，并解释如何仅通过基态波函数的&quot;局域&quot;程度，来区分导体和绝缘体。</p>]]></description>
-</item>
-<item>
-    <title>久保同学不放过我｜Kubo Formula的非线性响应理论</title>
+    <title>🥸久保同学不放过我｜Kubo Formula的非线性响应理论</title>
     <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/nonlinear-kubo-formalism/</link>
-    <pubDate>Thu, 08 Jan 2026 22:00:00 -0500</pubDate>
+    <pubDate>Tue, 07 Mar 2023 22:30:00 -0500</pubDate>
     <author>yzj5306@psu.edu (OkongOyangO)</author>
     <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/nonlinear-kubo-formalism/</guid>
     <description><![CDATA[<p>本文旨在推导Kubo Formula的非线性响应理论。</p>]]></description>
 </item>
 <item>
-    <title>分数量子霍尔效应(FQHE)、分数反常量子霍尔效应(FAQHE)与分数陈绝缘体(FCI)</title>
+    <title>😯费米黄金法则（Fermi Golden Rule）漏了什么？</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/fermi_golden_rule/</link>
+    <pubDate>Mon, 06 Mar 2023 22:30:00 -0500</pubDate>
+    <author>yzj5306@psu.edu (OkongOyangO)</author>
+    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/fermi_golden_rule/</guid>
+    <description><![CDATA[<p>本文旨在计算严格的量子跃迁速率，并指出费米黄金法则是其的&quot;长时间平均&quot;的结果。严格的量子跃迁速率相比费米黄金法则还多一项振幅不可忽略的二倍频振荡项，前后者关系类似交流电路中的&quot;瞬时功率&quot;与&quot;平均功率&quot;。</p>]]></description>
+</item>
+<item>
+    <title>🧐分数量子霍尔效应(FQHE)、分数反常量子霍尔效应(FAQHE)与分数陈绝缘体(FCI)</title>
     <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/fqhe_faqhe_fci/</link>
-    <pubDate>Thu, 08 Jan 2026 21:54:37 -0500</pubDate>
+    <pubDate>Mon, 17 Oct 2022 22:30:00 -0500</pubDate>
     <author>yzj5306@psu.edu (OkongOyangO)</author>
     <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/fqhe_faqhe_fci/</guid>
     <description><![CDATA[<p>本note全文约10000字，旨在帮助读者入门分数量子霍尔效应、分数反常量子霍尔效应以及分数陈绝缘体的相关内容。本文仅为一己之见，有很多疏漏，还望读者不吝赐教。下面是正文～</p>]]></description>

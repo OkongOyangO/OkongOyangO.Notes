@@ -1,6 +1,6 @@
 ---
-title: "Fermi Golden Rule? Just Joule Heat!"
-date: 2026-01-08T23:00:00-05:00
+title: "🔥Fermi Golden Rule? Just Joule Heat!"
+date: 2023-03-07T22:30:00-05:00
 draft: false
 math: true
 tags: ["Quantum Mechanics", "Joule Heat"]

@@ -1,6 +1,6 @@
 ---
-title: "フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？"
-date: 2026-01-10T02:59:13Z
+title: "😯フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？"
+date: 2023-03-06T22:30:00-05:00
 draft: false
 math: true
 tags: ["Quantum Mechanics", "Fermi Golden Rule"]

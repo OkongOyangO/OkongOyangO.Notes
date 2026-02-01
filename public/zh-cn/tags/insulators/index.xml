@@ -8,12 +8,12 @@
     <language>zh-CN</language>
     <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
     <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
-    <lastBuildDate>Thu, 08 Jan 2026 22:30:00 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 14 May 2023 22:30:00 -0500</lastBuildDate>
     <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/insulators/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>只看基态如何区分导体和绝缘体？🤔</title>
+      <title>🤔只看基态如何区分导体和绝缘体？</title>
       <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/distinguish_conductors_insulators_ground_state/</link>
-      <pubDate>Thu, 08 Jan 2026 22:30:00 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <pubDate>Sun, 14 May 2023 22:30:00 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
       <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/distinguish_conductors_insulators_ground_state/</guid>
       <description>&lt;p&gt;本note旨在阐述多体系统&lt;strong&gt;导电性&lt;/strong&gt;与&lt;strong&gt;基态量子几何性质&lt;/strong&gt;的关联，并解释如何仅通过基态波函数的&amp;quot;局域&amp;quot;程度，来区分导体和绝缘体。&lt;/p&gt;</description>
     </item>

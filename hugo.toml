@@ -15,7 +15,7 @@ theme = "LoveIt"
     title = "OkongOyangO's Notes"
     languageCode = "en"
     [languages.en.params]
-      description = "Notes on Topology, Geometry, and Nonlinear Responses"
+      description = "OkongOyangO's Notes on Condensed Matter Physics"
     [languages.en.menu]
       [[languages.en.menu.main]]
         identifier = "posts"
@@ -36,7 +36,7 @@ theme = "LoveIt"
     title = "OkongOyangO的物理笔记"
     languageCode = "zh-CN"
     [languages.zh-cn.params]
-      description = "关于拓扑、几何和非线性响应的物理笔记"
+      description = "OkongOyangO的凝聚态物理笔记"
     [languages.zh-cn.menu]
       [[languages.zh-cn.menu.main]]
         identifier = "posts"
@@ -57,7 +57,7 @@ theme = "LoveIt"
     title = "OkongOyangOのノート"
     languageCode = "ja"
     [languages.ja.params]
-      description = "トポロジー、幾何学、非線形応答に関する物理ノート"
+      description = "OkongOyangOの凝縮系物理学ノート"
     [languages.ja.menu]
       [[languages.ja.menu.main]]
         identifier = "posts"
@@ -112,9 +112,9 @@ theme = "LoveIt"
     [params.home.profile]
       enable = true
       gravatarEmail = ""
-      avatarURL = "/OkongOyangO.Notes/images/profile.png"
+      avatarURL = "/OkongOyangO.Notes/images/profile.gif"
       title = "Physics Notes & Research Logs"
-      subtitle = "Notes on Topology, Geometry, and Nonlinear Responses"
+      subtitle = "OkongOyangO's Notes on Condensed Matter Physics"
       type = "it"
       social = true
 

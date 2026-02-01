@@ -1,6 +1,6 @@
 ---
-title: "Fractional Quantum Hall Effect (FQHE), Fractional Anomalous Quantum Hall Effect (FAQHE) and Fractional Chern Insulator (FCI)"
-date: 2026-01-08T21:54:37-05:00
+title: "🧐Fractional Quantum Hall Effect (FQHE), Fractional Anomalous Quantum Hall Effect (FAQHE) and Fractional Chern Insulator (FCI)"
+date: 2022-10-17T22:30:00-05:00
 draft: false
 math: true
 tags: ["Topology", "Quantum Hall Effect", "FCI"]

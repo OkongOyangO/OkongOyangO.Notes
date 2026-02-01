@@ -1,6 +1,6 @@
 ---
-title: "分数量子ホール効果 (FQHE)、分数異常量子ホール効果 (FAQHE)、そして分数チャーン絶縁体 (FCI)"
-date: 2026-01-08T21:54:37-05:00
+title: "🧐分数量子ホール効果 (FQHE)、分数異常量子ホール効果 (FAQHE)、そして分数チャーン絶縁体 (FCI)"
+date: 2022-10-17T22:30:00-05:00
 draft: false
 math: true
 tags: ["Topology", "Quantum Hall Effect", "FCI"]

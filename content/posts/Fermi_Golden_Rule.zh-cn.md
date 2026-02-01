@@ -1,6 +1,6 @@
 ---
-title: "费米黄金法则（Fermi Golden Rule）漏了什么？"
-date: 2026-01-10T02:59:13Z
+title: "😯费米黄金法则（Fermi Golden Rule）漏了什么？"
+date: 2023-03-06T22:30:00-05:00
 draft: false
 math: true
 tags: ["Quantum Mechanics", "Fermi Golden Rule"]

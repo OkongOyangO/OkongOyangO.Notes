@@ -2,55 +2,63 @@
     <channel>
         <title>OkongOyangO&#39;s Notes</title>
         <link>https://OkongOyangO.github.io/OkongOyangO.Notes/</link>
-        <description>Notes on Topology, Geometry, and Nonlinear Responses</description>
+        <description>OkongOyangO&#39;s Notes on Condensed Matter Physics</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
-            <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster><lastBuildDate>Sat, 10 Jan 2026 02:59:13 &#43;0000</lastBuildDate>
+            <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster><lastBuildDate>Fri, 05 Apr 2024 12:00:00 &#43;0800</lastBuildDate>
             <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title>What did Fermi Golden Rule Miss?</title>
-    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/fermi_golden_rule/</link>
-    <pubDate>Sat, 10 Jan 2026 02:59:13 &#43;0000</pubDate>
+    <title>🤯Chiral Graviton in Fractional Quantum Hall Effect (FQHE)</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/chiral-graviton-in-fqhe/</link>
+    <pubDate>Fri, 05 Apr 2024 12:00:00 &#43;0800</pubDate>
     <author>yzj5306@psu.edu (OkongOyangO)</author>
-    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/fermi_golden_rule/</guid>
-    <description><![CDATA[<p>This article aims to calculate the strict quantum transition rate and points out that the Fermi Golden Rule is the result of its &ldquo;long-time average&rdquo;. The strict quantum transition rate contains an additional double-frequency oscillation term with non-negligible amplitude compared to the Fermi Golden Rule. The relationship between the two is similar to &ldquo;instantaneous power&rdquo; and &ldquo;average power&rdquo; in AC circuits.</p>]]></description>
+    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/chiral-graviton-in-fqhe/</guid>
+    <description><![CDATA[<p>This article aims to briefly introduce the theoretical and experimental detection methods related to &ldquo;chiral graviton&rdquo; excitations in fractional quantum Hall liquids, providing material for the recent heated discussions in related fields. My ability is limited, so I welcome any corrections from experts.</p>]]></description>
 </item>
 <item>
-    <title>Mean Field Approximation and Variational Method | Can Hartree, Fock, and BCS be Mixed 1:1:1?</title>
+    <title>🤔How to Distinguish Conductors and Insulators by Ground State Only? </title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/distinguish_conductors_insulators_ground_state/</link>
+    <pubDate>Sun, 14 May 2023 22:30:00 -0500</pubDate>
+    <author>yzj5306@psu.edu (OkongOyangO)</author>
+    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/distinguish_conductors_insulators_ground_state/</guid>
+    <description><![CDATA[<p>This note aims to elucidate the connection between the <strong>conductivity</strong> of a many-body system and the <strong>quantum geometry of its ground state</strong>, and to explain how to distinguish between conductors and insulators solely based on the &ldquo;locality&rdquo; of the ground state wavefunction.</p>]]></description>
+</item>
+<item>
+    <title>🤫Mean Field Approximation and Variational Method | Can Hartree, Fock, and BCS be Mixed 1:1:1?</title>
     <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/mean_field_approximation/</link>
-    <pubDate>Fri, 09 Jan 2026 19:05:46 &#43;0000</pubDate>
+    <pubDate>Sat, 11 Mar 2023 22:30:00 -0500</pubDate>
     <author>yzj5306@psu.edu (OkongOyangO)</author>
     <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/mean_field_approximation/</guid>
     <description><![CDATA[<p>This article aims to introduce the mean field approximation while elucidating its variational nature.</p>
 <p>Hartree, Fock, and BCS—these individual mean field approximations appear to be mutually incompatible decoupling methods. However, by leveraging the variational nature of the mean field approximation, we discover that they can indeed be mixed 1:1:1.</p>]]></description>
 </item>
 <item>
-    <title>Fermi Golden Rule? Just Joule Heat!</title>
+    <title>🔥Fermi Golden Rule? Just Joule Heat!</title>
     <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/joule_heat/</link>
-    <pubDate>Thu, 08 Jan 2026 23:00:00 -0500</pubDate>
+    <pubDate>Tue, 07 Mar 2023 22:30:00 -0500</pubDate>
     <author>yzj5306@psu.edu (OkongOyangO)</author>
     <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/joule_heat/</guid>
     <description><![CDATA[<p>This article aims to clarify the consistency between Fermi&rsquo;s Golden Rule and Joule Heat.</p>]]></description>
 </item>
 <item>
-    <title>How to Distinguish Conductors and Insulators by Ground State Only? 🤔</title>
-    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/distinguish_conductors_insulators_ground_state/</link>
-    <pubDate>Thu, 08 Jan 2026 22:30:00 -0500</pubDate>
-    <author>yzj5306@psu.edu (OkongOyangO)</author>
-    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/distinguish_conductors_insulators_ground_state/</guid>
-    <description><![CDATA[<p>This note aims to elucidate the connection between the <strong>conductivity</strong> of a many-body system and the <strong>quantum geometry of its ground state</strong>, and to explain how to distinguish between conductors and insulators solely based on the &ldquo;locality&rdquo; of the ground state wavefunction.</p>]]></description>
-</item>
-<item>
-    <title>Nonlinear Response Theory of the Kubo Formula</title>
+    <title>🥸Nonlinear Response Theory of the Kubo Formula</title>
     <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/nonlinear-kubo-formalism/</link>
-    <pubDate>Thu, 08 Jan 2026 22:00:00 -0500</pubDate>
+    <pubDate>Tue, 07 Mar 2023 22:30:00 -0500</pubDate>
     <author>yzj5306@psu.edu (OkongOyangO)</author>
     <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/nonlinear-kubo-formalism/</guid>
     <description><![CDATA[<p>This article aims to derive the nonlinear response theory of the Kubo Formula.</p>]]></description>
 </item>
 <item>
-    <title>Fractional Quantum Hall Effect (FQHE), Fractional Anomalous Quantum Hall Effect (FAQHE) and Fractional Chern Insulator (FCI)</title>
+    <title>😯What did Fermi Golden Rule Miss?</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/fermi_golden_rule/</link>
+    <pubDate>Mon, 06 Mar 2023 22:30:00 -0500</pubDate>
+    <author>yzj5306@psu.edu (OkongOyangO)</author>
+    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/fermi_golden_rule/</guid>
+    <description><![CDATA[<p>This article aims to calculate the strict quantum transition rate and points out that the Fermi Golden Rule is the result of its &ldquo;long-time average&rdquo;. The strict quantum transition rate contains an additional double-frequency oscillation term with non-negligible amplitude compared to the Fermi Golden Rule. The relationship between the two is similar to &ldquo;instantaneous power&rdquo; and &ldquo;average power&rdquo; in AC circuits.</p>]]></description>
+</item>
+<item>
+    <title>🧐Fractional Quantum Hall Effect (FQHE), Fractional Anomalous Quantum Hall Effect (FAQHE) and Fractional Chern Insulator (FCI)</title>
     <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/fqhe_faqhe_fci/</link>
-    <pubDate>Thu, 08 Jan 2026 21:54:37 -0500</pubDate>
+    <pubDate>Mon, 17 Oct 2022 22:30:00 -0500</pubDate>
     <author>yzj5306@psu.edu (OkongOyangO)</author>
     <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/fqhe_faqhe_fci/</guid>
     <description><![CDATA[<p>This note is approximately 10,000 words long and aims to help readers get started with Fractional Quantum Hall Effect (FQHE), Fractional Anomalous Quantum Hall Effect (FAQHE), and Fractional Chern Insulators (FCI). This article represents only my personal perspective and may contain errors; I welcome corrections from readers. Below is the main text.</p>]]></description>

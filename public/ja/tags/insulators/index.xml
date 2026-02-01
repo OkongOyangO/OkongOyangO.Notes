@@ -8,12 +8,12 @@
     <language>ja</language>
     <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
     <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
-    <lastBuildDate>Thu, 08 Jan 2026 22:30:00 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 14 May 2023 22:30:00 -0500</lastBuildDate>
     <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/insulators/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>基底状態だけで導体と絶縁体をどう区別するか？🤔</title>
+      <title>🤔基底状態だけで導体と絶縁体をどう区別するか？</title>
       <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/distinguish_conductors_insulators_ground_state/</link>
-      <pubDate>Thu, 08 Jan 2026 22:30:00 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <pubDate>Sun, 14 May 2023 22:30:00 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
       <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/distinguish_conductors_insulators_ground_state/</guid>
       <description>&lt;p&gt;本稿は、多体系の&lt;strong&gt;導電性&lt;/strong&gt;と**基底状態の量子幾何学（Quantum Geometry）**との関連性を明らかにし、基底状態の波動関数の「局在性（Locality）」だけで導体と絶縁体を区別する方法について解説することを目的としています。&lt;/p&gt;</description>
     </item>

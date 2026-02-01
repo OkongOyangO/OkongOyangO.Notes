@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>🤯Chiral Graviton in Fractional Quantum Hall Effect (FQHE) - OkongOyangO&#39;s Notes</title><meta name="Description" content="OkongOyangO&#39;s Notes on Condensed Matter Physics"><meta property="og:url" content="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/chiral-graviton-in-fqhe/">
+  <meta property="og:site_name" content="OkongOyangO&#39;s Notes">
+  <meta property="og:title" content="🤯Chiral Graviton in Fractional Quantum Hall Effect (FQHE)">
+  <meta property="og:description" content="This article aims to briefly introduce the theoretical and experimental detection methods related to “chiral graviton” excitations in fractional quantum Hall liquids, providing material for the recent heated discussions in related fields. My ability is limited, so I welcome any corrections from experts.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-04-05T12:00:00+08:00">
+    <meta property="article:modified_time" content="2024-04-05T12:00:00+08:00">
+    <meta property="article:tag" content="FQHE">
+    <meta property="article:tag" content="Graviton">
+    <meta property="article:tag" content="Metric">
+    <meta property="article:tag" content="Quantum Geometry">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="🤯Chiral Graviton in Fractional Quantum Hall Effect (FQHE)">
+  <meta name="twitter:description" content="This article aims to briefly introduce the theoretical and experimental detection methods related to “chiral graviton” excitations in fractional quantum Hall liquids, providing material for the recent heated discussions in related fields. My ability is limited, so I welcome any corrections from experts.">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/OkongOyangO.Notes/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/OkongOyangO.Notes/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/OkongOyangO.Notes/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/OkongOyangO.Notes/apple-touch-icon.png"><link rel="mask-icon" href="/OkongOyangO.Notes/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/OkongOyangO.Notes/site.webmanifest"><link rel="canonical" href="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/chiral-graviton-in-fqhe/" /><link rel="prev" href="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/distinguish_conductors_insulators_ground_state/" /><link rel="stylesheet" href="/OkongOyangO.Notes/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "🤯Chiral Graviton in Fractional Quantum Hall Effect (FQHE)",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/posts\/chiral-graviton-in-fqhe\/"
+        },"genre": "posts","keywords": "FQHE, Graviton, Metric, Quantum Geometry","wordcount":  5884 ,
+        "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/posts\/chiral-graviton-in-fqhe\/","datePublished": "2024-04-05T12:00:00+08:00","dateModified": "2024-04-05T12:00:00+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "OkongOyangO"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/OkongOyangO.Notes/" title="OkongOyangO&#39;s Notes">OkongOyangO&#39;s Notes</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item active" href="/OkongOyangO.Notes/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i> Posts </a><a class="menu-item" href="/OkongOyangO.Notes/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i> Search
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i> Theme
+                </a><a href="javascript:void(0);" class="menu-item language" title="Select Language">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i> Language
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/chiral-graviton-in-fqhe/" selected>English</option><option value="/OkongOyangO.Notes/zh-cn/posts/chiral-graviton-in-fqhe/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/chiral-graviton-in-fqhe/">日本語</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/OkongOyangO.Notes/" title="OkongOyangO&#39;s Notes">OkongOyangO&#39;s Notes</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/OkongOyangO.Notes/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i>Posts</a><a class="menu-item" href="/OkongOyangO.Notes/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i>Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>Theme
+            </a><a href="javascript:void(0);" class="menu-item" title="Select Language">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>Language
+                    <select class="language-select" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/chiral-graviton-in-fqhe/" selected>English</option><option value="/OkongOyangO.Notes/zh-cn/posts/chiral-graviton-in-fqhe/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/chiral-graviton-in-fqhe/">日本語</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">🤯Chiral Graviton in Fractional Quantum Hall Effect (FQHE)</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/OkongOyangO.Notes/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">included in <a href="/OkongOyangO.Notes/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-04-05">2024-04-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;5884 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;28 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#anisotropic-fqhe-and-intrinsic-quantum-geometry">Anisotropic FQHE and Intrinsic Quantum Geometry</a>
+      <ul>
+        <li><a href="#band-and-dielectric-anisotropy-galilean-and-coulomb-interaction-metric">Band and Dielectric Anisotropy: Galilean and Coulomb (Interaction) Metric</a></li>
+        <li><a href="#landau-level-with-anosotropic-galilean-metric">Landau Level with Anosotropic Galilean metric</a>
+          <ul>
+            <li><a href="#construction-of-landau-level-and-guiding-center-ladder-operators">Construction of Landau Level and Guiding Center Ladder Operators</a></li>
+            <li><a href="#introduction-of-symmetric-gauge">Introduction of Symmetric Gauge</a></li>
+          </ul>
+        </li>
+        <li><a href="#intrinsic-quantum-geometry-of-fqh-state-guiding-center-metric">Intrinsic Quantum Geometry of FQH state: Guiding Center Metric</a></li>
+        <li><a href="#compromise-of-intrinsic-geometry-between-galilean-and-coulomb-metric">Compromise of Intrinsic Geometry between Galilean and Coulomb Metric</a>
+          <ul>
+            <li><a href="#projected-interaction">Projected Interaction</a></li>
+            <li><a href="#gaussian-interaction">Gaussian Interaction</a></li>
+            <li><a href="#many-body-ground-state-of-anisotropic-fqhe">Many-Body Ground State of Anisotropic FQHE</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#dynamics-of-intrinsic-quantum-geometry-as-chiral-graviton">Dynamics of Intrinsic Quantum Geometry as Chiral Graviton</a>
+      <ul>
+        <li><a href="#dynamics-of-intrinsic-quantum-geometry">Dynamics of Intrinsic Quantum Geometry</a></li>
+        <li><a href="#chirality-of-graviton">Chirality of Graviton</a></li>
+        <li><a href="#inaccessibility-of-normal-magnetoroton-modes">Inaccessibility of normal Magnetoroton modes</a></li>
+        <li><a href="#detection-of-chiral-graviton-in-fqhe">Detection of Chiral Graviton in FQHE</a></li>
+      </ul>
+    </li>
+    <li><a href="#relation-with-band-geometry-from-momentum-space-duality">Relation with Band Geometry from Momentum-Space Duality</a></li>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#reference">Reference</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>This article aims to briefly introduce the theoretical and experimental detection methods related to &ldquo;chiral graviton&rdquo; excitations in fractional quantum Hall liquids, providing material for the recent heated discussions in related fields. My ability is limited, so I welcome any corrections from experts.</p>
+<h2 id="introduction">Introduction</h2>
+<p>Recently, Lingjie Du&rsquo;s group at Nanjing University, in collaboration with colleagues from Germany and the United States, published a paper in Nature on the experimental detection of &ldquo;Chiral Graviton&rdquo; excitations in Fractional Quantum Hall (FQH) liquids. This was subsequently hyped by various media outlets, sparking a series of discussions within and outside the condensed matter physics community regarding the use of the term &ldquo;graviton&rdquo; in the paper and the naming conventions for various quasiparticles in condensed matter physics.</p>
+<p><a href="https://www.nature.com/articles/s41586-024-07201-w" target="_blank" rel="noopener noreffer ">https://www.nature.com/articles/s41586-024-07201-w</a></p>
+<p>This article does not intend to join the debate, as science itself is innocent, and it is often the execution by others that goes awry. Therefore, we might as well take this opportunity to understand the relevant theoretical and experimental knowledge and enjoy the scientific spectacle.</p>
+<p>For prerequisite content such as the Fractional Quantum Hall Effect, you can refer to the notes I wrote a few years ago:</p>
+<p><a href="https://zhuanlan.zhihu.com/p/574597173" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/574597173</a></p>
+<p>Regarding Quantum Geometry, the Quantum Geometry mentioned here refers to a new intrinsic degree of freedom proposed by Haldane for the FQH ground state wave function under an anisotropic mass tensor or Coulomb interaction (Dielectric tensor). This is not entirely the same as the Quantum Geometry defined in a specific parameter space (such as momentum space) of the wave function that I have written about previously.</p>
+<p>However, both types of Quantum Geometry reveal a new property of quantum states in addition to the various topological properties that have emerged in recent decades—the importance of geometric properties and their responses. Regarding the latter, its manifestation in the fractional quantum Hall effect and its nonlinear optical and transport responses are hot topics in the field of condensed matter physics recently. Those interested can refer to my previous notes or follow my future updates:</p>
+<p><a href="https://zhuanlan.zhihu.com/p/580756343" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/580756343</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/586913698" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/586913698</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/580954377" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/580954377</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/581596244" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/581596244</a></p>
+<p><a href="https://www.zhihu.com/question/616351382/answer/3157331169" target="_blank" rel="noopener noreffer ">https://www.zhihu.com/question/616351382/answer/3157331169</a></p>
+<p>Returning to the Quantum Geometry proposed by Haldane as a new intrinsic degree of freedom of the FQH wave function, later researchers found that this Quantum Geometry not only describes a parameter of the FQH ground state wave function but can also be regarded as a dynamic parameter. It corresponds to the dynamics of the most important collective neutral excitation in FQH—the magnetoroton excitation—in the long-wavelength limit. Since this long-wavelength magnetoroton excitation is extremely difficult to observe and originates from intrinsic Quantum Geometry Dynamics, condensed matter theorists have also termed this excitation mode &ldquo;graviton&rdquo; (some literature still refers to it as the magnetoroton in the long-wavelength limit, but that isn&rsquo;t catchy enough to get funding, just kidding).</p>
+<p>This is obviously an analogy with the gravitational waves caused by the curvature of the spacetime metric in general relativity. At the same time, due to the spin-2 characteristic of this excitation, it is also analogous to the spin-2 graviton that we hope to quantize in quantum field theory. This can be said to be brushing against High Energy physics, or it can be said to be an extension and enrichment of the concept of the graviton in condensed matter systems. After all, concepts from high energy physics such as Weyl Fermions and Majorana Fermions have also been introduced into the field of condensed matter physics, which is often commonplace for insiders.</p>
+<p>Furthermore, this graviton also possesses chirality. For example, in an FQH state with filling </p>
+$$\nu = 1/3$$<p>, its Graviton excitation not only has spin 2 but also has an angular momentum of -2. Conversely, in its particle-hole conjugate FQH state with filling </p>
+$$\nu = 1 - 1/3$$<p>, the spin angular momentum of the Graviton excitation becomes 2. This selectivity of the Graviton Angular Momentum by different FQH states echoes what we commonly call Chirality. We thus further refer to the long-wavelength elementary excitation based on intrinsic Quantum Geometry dynamics in FQH as the &ldquo;Chiral Graviton,&rdquo; which is also the naming convention we see in the title of the Nanjing University paper.</p>
+<h2 id="anisotropic-fqhe-and-intrinsic-quantum-geometry">Anisotropic FQHE and Intrinsic Quantum Geometry</h2>
+<p>Ultimately, the appearance of the Graviton is inseparable from the Intrinsic Quantum Geometry of Anisotropic FQHE proposed by Haldane. For relevant details, see Haldane&rsquo;s original paper:</p>
+<p><a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.107.116801" target="_blank" rel="noopener noreffer ">https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.107.116801</a></p>
+<h3 id="band-and-dielectric-anisotropy-galilean-and-coulomb-interaction-metric">Band and Dielectric Anisotropy: Galilean and Coulomb (Interaction) Metric</h3>
+<p>Specifically, Haldane added the anisotropy of the band mass tensor and Coulomb potential to the Hamiltonian in a general magnetic field, using the Galiean metric </p>
+$$g^{ab}$$<p>.
+</p>
+$$
+H = H_0 + V 
+$$<p>
+Non-interacting part:
+</p>
+$$
+H_0 = \frac{1}{2} (m^{-1})^{ab} \pi_a\pi_b =  \frac{1}{2m} g^{ab} \pi_a\pi_b,
+\quad \bm \pi = \bm p - e\bm A,
+$$<p>
+where the non-commutative algebra of the mechanical momentum brought by the magnetic field is,
+</p>
+$$
+[r_i^a,\pi_{jb}]= i\delta_{ij}\hbar \delta^a_b, \quad 
+[\pi_{ia},\pi_{jb}] = i\delta_{ij}\epsilon_{ab}\hbar^2/\ell_B^2.
+$$<p>
+where </p>
+$$\ell=\sqrt{\hbar/(eB)}$$<p> is the magnetic length.</p>
+<p>This non-commutative algebra can give different LLL (Lowest Landau Level) single-particle wavefunctions under various gauge selections. For example, under the isotropic condition </p>
+$$g^{ab} = \delta^{ab}$$<p> and symmetric gauge, the rotational symmetry of the system can be preserved, so the LLL single-particle wavefunction can be a common eigenstate of </p>
+$$H_0$$<p> and the angular momentum </p>
+$$L_z$$<p>. The LLL single-particle wavefunction constructed in this way and the Laughlin many-body wavefunction constructed on this basis are both rotationally symmetric.</p>
+<p>But Haldane considered a more general anisotropic Galilean metric, where </p>
+$$g^{ab}$$<p> is not isotropic. At the same time, Haldane further considered the interaction anisotropy characterized by the interaction metric </p>
+$$\tilde g^{ab}$$<p>:
+</p>
+$$
+\lim_{\lambda \rightarrow 0} \lambda V(\lambda \bm q) \rightarrow 
+\frac{e^2}{2\varepsilon}(\tilde g^{ab}q_aq_b)^{-1/2} ,
+$$<p>
+These two types of anisotropy come from the anisotropy of the band mass tensor and the dielectric tensor, respectively, and can be two independent metrics. previously, the FQH systems we considered often assumed both metrics to be isotropic by default, so the obtained wavefunctions were also isotropic. This fails to reflect the anisotropy that may appear in the wavefunction itself and its intrinsic quantum geometry information.</p>
+<p>Now, to discuss the anisotropy of the band mass tensor and dielectric tensor, we need to construct anisotropic LLL wavefunctions similar to the isotropic case. In this process, we will discover the intrinsic quantum geometric degrees of freedom of the system itself.</p>
+<h3 id="landau-level-with-anosotropic-galilean-metric">Landau Level with Anosotropic Galilean metric</h3>
+<p>First, let&rsquo;s consider the construction of the anisotropic LLL single-particle wavefunction, which is completely a generalization of the isotropic case. Details can be found in:</p>
+<p><a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.85.115308" target="_blank" rel="noopener noreffer ">https://journals.aps.org/prb/abstract/10.1103/PhysRevB.85.115308</a></p>
+<p>Specifically, at this time we only need to consider the anisotropy of the mass tensor. We can use a unimodular complex vector </p>
+$$\omega$$<p> to parametrize the mass tensor:
+</p>
+$$
+m_{ab}=m (\omega_a^*\omega_b + \omega_b^*\omega_a)
+$$<p>
+</p>
+$$
+(m^{-1})^{ab}=m^{-1}(\omega^{a*}\omega^b + \omega^{b*}\omega^a).
+$$<p>
+It is not difficult to find that the special case of isotropic is </p>
+$$\omega = \frac{1}{\sqrt{2}} (1, i)^T$$<p>, and a more general </p>
+$$\omega$$<p> represents the general anisotropic case, which relates to our discussion of the connection between the two and the analogy and generalization from the former to the latter.</p>
+<h4 id="construction-of-landau-level-and-guiding-center-ladder-operators">Construction of Landau Level and Guiding Center Ladder Operators</h4>
+<p>The single-particle Hamiltonian can be expressed as:
+</p>
+$$
+H_0 ={\textstyle \frac{1}{2}}\hbar \omega_c
+\left( b^{\dagger}b + bb^{\dagger}\right)
+$$<p>
+where </p>
+$$\hbar\omega_c = \hbar^2/m\ell^2$$<p> is the cyclotron energy. The Landau Level ladder operators under anisotropic conditions can be generalized to:
+</p>
+$$
+b = \hbar^{-1}\ell \left (\bm \omega \cdot \bm \pi\right ),
+\quad b^\dagger = \hbar^{-1}\ell \left (\bm \omega^* \cdot \bm \pi\right )
+$$<p>
+The ladder operators satisfy the commutation relation </p>
+$$[b,b^{\dagger}] = 1$$<p>. This ladder operator is used to raise and lower the wavefunction between different Landau Levels, with a difference of one cyclotron energy before and after.</p>
+<p>Further introduce &ldquo;guiding center&rdquo; coordinates </p>
+$${\bm R}$$<p>:
+</p>
+$$
+R^a=r^a+\hbar^{-1}\ell^2\epsilon^{ab}\pi_b,
+$$<p>
+The &ldquo;guiding center&rdquo; coordinate operators satisfy:
+</p>
+$$
+[R^a, R^b]=-i\epsilon^{ab}\ell^2,\quad [R^a,\pi_b]=0,
+$$<p>
+The &ldquo;guiding center&rdquo; coordinates </p>
+$${\bm R}$$<p> are used to generate &ldquo;guiding center&rdquo; ladder operators: </p>
+$$a$$<p>, </p>
+$$a^{\dagger}$$<p>:
+</p>
+$$
+a=\ell^{-1}\left({\bm \omega}^*\cdot{\bm R}\right),
+\quad a^\dagger=\ell^{-1}\left({\bm \omega}\cdot{\bm R}\right),
+\quad [a,a^\dagger]=1
+$$<p>
+This set of creation and annihilation operators commutes with the Landau Level ladder operators </p>
+$$b$$<p> and </p>
+$$b^{\dagger}$$<p>, and can thus describe the degeneracy of the LLL single-particle wavefunction within the same Landau Level. This is also a classic operation in isotropic LL derivation.</p>
+<p>It is worth noting that the above discussion can obtain information such as Landau Level and its degeneracy without introducing a specific gauge. In other words, the construction of the LLL wavefunction does not require introducing a symmetric gauge to preserve rotational symmetry. This shows that the isotropic nature of QH and FQH states that we assumed by default in the past is itself accidental. We are completely free to choose anisotropic LLL wavefunctions to construct the degrees of freedom of FQH theory, which was ignored before.</p>
+<p>For more detailed derivation, please refer to UCSD&rsquo;s QHE related notes:</p>
+<p><a href="https://courses.physics.ucsd.edu/2019/Spring/physics230/LECTURES/QHE.pdf" target="_blank" rel="noopener noreffer ">https://courses.physics.ucsd.edu/2019/Spring/physics230/LECTURES/QHE.pdf</a></p>
+<h4 id="introduction-of-symmetric-gauge">Introduction of Symmetric Gauge</h4>
+<p>Furthermore, we will show that we can construct anisotropic LLL wavefunctions even under the symmetric gauge. This is because LLL wavefunctions are often determined by the common eigenstates of the Hamiltonian </p>
+$$H_0$$<p> and angular momentum </p>
+$$L_z$$<p>. We will show that we can obtain different LLL single-particle wavefunctions as the basis for discussing FQH by constructing an anisotropic </p>
+$$L_z$$<p>.</p>
+<p>We now choose the symmetric gauge:
+</p>
+$$
+{\bm A}={\textstyle\frac{1}{2}}{\bm B}\times{\bm r}={\textstyle\frac{1}{2}}B(-y,x),
+$$<p>
+And use </p>
+$$\omega$$<p> containing mass tensor anisotropy information to construct the complex coordinate:
+</p>
+$$
+z = \frac{\bm \omega \cdot \bm r}{\ell}.
+$$<p>
+In the special case of an isotropic mass tensor, we have,
+</p>
+$$z = \frac{x+iy}{\sqrt{2}\ell}$$<p>
+We can skillfully construct the representation of the Landau Level and guiding center ladder operators under complex coordinates. It is not difficult to prove that this also holds under any anisotropic mass tensor. Here we directly give the conclusion:
+</p>
+$$
+b = {\textstyle \frac{1}{2}}z + \partial_{z*} ,\quad  b^{\dagger} =
+{\textstyle \frac{1}{2}}z^* - \partial_{z}
+$$<p>
+</p>
+$$
+a = {\textstyle \frac{1}{2}}z^* + \partial_{z} ,\quad  a^{\dagger} =
+{\textstyle \frac{1}{2}}z - \partial_{z^*}
+$$<p>
+The corresponding angular momentum operator can be defined as:
+</p>
+$$L_0 = a^{\dagger}a - b^{\dagger}b, \quad [L_0,H_0] =0$$<p>
+Simultaneous diagonalization of </p>
+$$H_0$$<p> and </p>
+$$L_0$$<p> yields the n-th LL single-particle wavefunction </p>
+$$|\psi_{nm}\rangle$$<p>:
+</p>
+$$
+\begin{aligned}
+&H_0|\psi_{nm}\rangle = (n+{\textstyle\frac{1}{2}})\hbar
+\omega_c|\psi_{nm}\rangle, \\
+&L_0|\psi_{nm}\rangle = (m-n)|\psi_{nm}\rangle, \\
+&|\psi_{nm}\rangle =
+\frac {(a^{\dagger})^m(b^{\dagger})^n}{\sqrt{m!n!}}|\psi_{00}\rangle\\
+& a|\psi_{00}\rangle = b|\psi_{00}\rangle = 0.
+\end{aligned}
+$$<p>
+The above process is just a generalization of changing </p>
+$$\omega = \frac{1}{\sqrt{2}} (1,i)^T$$<p> to an arbitrary unimodular vector. It shows that for a general Galilean metric, we can still construct an anisotropic mass tensor adapted angular momentum operator to generate the &ldquo;rotational symmetry&rdquo; of the system. This is similar to stretching an ellipse into a circle, which is still isotropic to some extent, but up to an anisotropic mass tensor.</p>
+<h3 id="intrinsic-quantum-geometry-of-fqh-state-guiding-center-metric">Intrinsic Quantum Geometry of FQH state: Guiding Center Metric</h3>
+<p>But does this mean that the Galilean metric is the direction of anisotropy that the system &ldquo;tends&rdquo; to choose? No. We can also modify the definition of </p>
+$$L_0$$<p> (that is, modify the degrees of freedom of the Guiding center Metric) to show that before introducing interaction and Coulomb metric, our wavefunction selection still has an intrinsic quantum geometry degree of freedom to choose from.</p>
+<p>Our Guiding Center </p>
+$$R$$<p>, and its ladder operators </p>
+$$a,\,a^\dagger$$<p>, were constructed to specify the degenerate state within a unified LL. However, as we learned when first studying quantum mechanics, the selection of a complete basis for degenerate states is not unique. We can completely perform a unitary transformation on this set of bases to obtain a new set of complete bases. In the context of our discussion on the Guiding Center, recall our previous construction of the Guiding Center Ladder Operator:</p>
+$$
+R^a=r^a+\hbar^{-1}\ell^2\epsilon^{ab}\pi_b,
+$$<p>
+The &ldquo;guiding center&rdquo; coordinate operators satisfy:
+</p>
+$$
+[R^a, R^b]=-i\epsilon^{ab}\ell^2,\quad [R^a,\pi_b]=0,
+$$<p>
+Construction of &ldquo;guiding center&rdquo; ladder operators: </p>
+$$a$$<p>, </p>
+$$a^{\dagger}$$<p>:
+</p>
+$$
+a=\ell^{-1}\left({\bm \omega}^*\cdot{\bm R}\right),
+\quad a^\dagger=\ell^{-1}\left({\bm \omega}\cdot{\bm R}\right),
+\quad [a,a^\dagger]=1
+$$<p>
+It is not difficult to find that we presumptuously used the unimodular vector </p>
+$$\omega$$<p> defined by the Galilean Metric to define the ladder operator of the Guiding center. But we said: we can completely perform a unitary transformation on this set of bases to obtain a new set of complete bases. This is completely fine in the non-interacting case. Our system currently has no reason to specify the Galilean metric as its intrinsic property. Conversely, this uncertainty in the selection of the complete basis gives us a new degree of freedom for constructing the LLL single-particle wavefunction, namely the degree of freedom of the Guiding Center Metric. This will later evolve into the Intrinsic Quantum Geometric degree of freedom that we often discuss in FQH (metric and geometry are often inseparable).</p>
+<p>In the article &ldquo;Model Anisotropic quantum Hall states&rdquo; by RZ Qiu, FDM Haldane, X Wan, K Yang, S Yi et al., it is explained as follows:</p>
+<p>We first split the angular momentum operator:
+</p>
+$$
+L_0 = L + \bar L
+$$<p>
+</p>
+$$
+L  = {\textstyle\frac{1}{2}}(b^{\dagger}b + bb^{\dagger})
+$$<p>
+</p>
+$$
+H_0  =  \hbar \omega_c L
+$$<p>
+</p>
+$$
+\bar L = {\textstyle\frac{1}{2}}(a^{\dagger}a + aa^{\dagger}).
+$$<p>
+It is not difficult to find that </p>
+$$L$$<p> in </p>
+$$L_0 = L + \bar L$$<p> already commutes with </p>
+$$H_0$$<p>, so the nontrivial part of </p>
+$$L_0$$<p> comes from </p>
+$$\bar L$$<p>.</p>
+<p>Then the common eigenstates of </p>
+$$H_0$$<p> and </p>
+$$\bar L$$<p> that we originally defined can determine the m-th degenerate wavefunction of the n-th LL
+</p>
+$$
+\bar L |\psi_{nm} \rangle =
+(m+{\textstyle\frac{1}{2}})|\psi_{nm}\rangle
+$$<p>
+To reflect how the Galilean metric &ldquo;presumptuously&rdquo; entered our construction of the Guiding center Degeneracy degree of freedom in the above discussion, we can write </p>
+$$\bar L$$<p> as:
+</p>
+$$
+\bar L = \bar L(g^0)
+$$<p>
+And define </p>
+$$\bar L$$<p> under an arbitrary guiding center metric:
+</p>
+$$
+\bar L(g) =  \frac{1}{2\ell^2}g_{ab}R^aR^b
+$$<p>
+Here we denote the &ldquo;Galilean metric&rdquo; from the band mass tensor as </p>
+$$g^0_{ab}$$<p> to reflect its distinctiveness. At the same time, we also use a unimodular vector </p>
+$$\bar \omega$$<p> to define an arbitrary guiding center metric.</p>
+<p>For </p>
+$$\bar L$$<p> under an arbitrary guiding center metric:
+</p>
+$$
+m_{ab}=m(\omega^*_a\omega_b+\omega^*_b\omega_a)=mg^0_{ab}.
+$$<p>
+Similarly, </p>
+$$\bar \omega$$<p> can be used to parametrize any guiding center metric:
+</p>
+$$
+g_{ab} = \bar \omega^*_a \bar \omega_b+ \bar \omega^*_b \bar \omega_a.
+$$<p>
+This is equivalent to choosing the following when constructing the &ldquo;guiding center&rdquo; ladder operators: </p>
+$$a$$<p>, </p>
+$$a^{\dagger}$$<p>:
+</p>
+$$
+a=\ell^{-1}\left(\bar {\bm \omega}^*\cdot{\bm R}\right),
+\quad a^\dagger=\ell^{-1}\left( \bar {\bm \omega}\cdot{\bm R}\right),
+\quad [a,a^\dagger]=1
+$$<p>
+From </p>
+$$\omega$$<p> to an arbitrary </p>
+$$\bar \omega$$<p>, or equivalently, from </p>
+$$g_0^{ab}$$<p> to an arbitrary guiding center metric </p>
+$$g^{ab}$$<p>, is equivalent to performing a Bogoliubov Transformation on the ladder operator used to distinguish degeneracy within the LL. This shows that the complete basis describing LL degeneracy itself remains complete, it&rsquo;s just that a more natural, more arbitrary basis has been swapped in, one that is not &ldquo;presumptuously&rdquo; selected by the Galilean metric.</p>
+<p>This is reasonable in the non-interacting context. After we introduce interaction and the Coulomb metric, this arbitrary guiding center metric/Intrinsic Quantum Geometry becomes a variational parameter of the many-body wavefunction. The system will tend to choose the many-body wavefunction, such as the Laughlin state, composed of the guiding center metric with the lowest energy.</p>
+<p>In order to distinguish the difference between the guiding center metric </p>
+$$\bar \omega_a$$<p> and the original Galilean metric </p>
+$$\omega$$<p>, RZ Qiu, FDM Haldane, X Wan, K Yang, S Yi et al. further introduced a complex number </p>
+$$\gamma$$<p> to parametrize the difference between the two.</p>
+<p>This parameter satisfies </p>
+$$|\gamma| < 1$$<p>. Its physical meaning is similar to eccentricity, used to define anisotropy up to a Galilean metric. We can discover this in the features of the single-particle wavefunction later.</p>
+<p>Specifically, the guiding center metric parametrized by </p>
+$$\gamma$$<p> can be further expressed as
+</p>
+$$
+\bar \omega_a = (1-|\gamma|^2)^{-1/2}(\omega_a + \gamma^* \omega_a^*),
+$$<p>
+that determines a unimodular metric </p>
+$$g_{ab}(\gamma)$$<p>，
+</p>
+$$
+\begin{aligned}
+g_{ab}(\gamma) & = \bar \omega_a^*\bar \omega_b+\bar \omega_a\bar \omega_b^* \\
+& = \frac{1}{1-\gamma^*\gamma}\left(\begin{array}{cc}
+(1+\gamma)(1+\gamma^*) & i(\gamma-\gamma^*)\\
+i(\gamma-\gamma^*) & (1-\gamma)(1-\gamma^*) \\
+\end{array}\right)\nonumber
+\end{aligned}
+$$<p>
+A new set of &ldquo;guiding center&rdquo; ladder operators defined by it is:
+</p>
+$$
+a_\gamma =\frac{{\bar {\bm\omega}^*}\cdot{\bm R}}{\sqrt{2}\ell} ,\quad
+ a_\gamma^\dagger =
+\frac{{\bar {\bm\omega}}\cdot{\bm R}}{\sqrt{2}\ell}
+$$<p>
+This is indeed the Bogoliubov transformation we mentioned earlier:
+</p>
+$$
+\left(\begin{array}{c}
+a_\gamma \\
+a_\gamma^\dag \\
+\end{array}\right)
+=\frac{1}{\sqrt{1-\gamma^*\gamma}}
+\left(\begin{array}{cc}
+1 & \gamma  \\
+\gamma^*  & 1 \\
+\end{array}\right)
+\left(\begin{array}{c}
+a \\
+a^\dag \\
+\end{array}\right).
+$$<p>
+This shows that the selection from the Galilean metric to a general guiding center metric is just selecting a new complete basis for the LL degeneracy.</p>
+<p>The similarly constructed LL single-particle wavefunction is:
+</p>
+$$
+|\psi_{nm}(\gamma)\rangle
+=\frac{(b^\dag)^n(a^{\dagger}_{\gamma})^m}{\sqrt{n!m!}}
+|\psi_{00}(\gamma)\rangle
+$$<p>
+Where </p>
+$$|\psi_{00}(\gamma)\rangle$$<p> is the basis in the LLL single-particle wavefunction used to generate other LLL degenerate wavefunctions, satisfying:
+</p>
+$$
+a_{\gamma}|\psi_{00}(\gamma)\rangle =
+b|\psi_{00}(\gamma)\rangle  = 0.
+$$<p>
+Afterwards, we can similarly define the LLL single-particle wavefunction under an arbitrary guiding center metric, in order to facilitate the construction of many-body wavefunctions such as Laughlin and MR that contain the guiding center metric variational parameter. We will not go into details here; please refer to the original text for specific details.</p>
+<p>In summary, in the process of constructing the LL single-particle wavefunction, we discovered a new degree of freedom defined by the system&rsquo;s guiding center metric. In the case where there is only the Galilean metric, i.e., no interaction, its selection is arbitrary. Essentially, this new degree of freedom comes from the freedom of selecting the degenerate complete basis inside the LL. In the process of introducing interaction and constructing many-body wavefunctions such as Laughlin and MR, this Intrinsic Quantum Geometry degree of freedom in the FQH state will become a variational parameter, selecting the guiding center metric/Intrinsic Quantum Geometry that minimizes the energy of the system and state within the more general anisotropic Galilean metric and interaction metric.</p>
+<p>This process is also described as &ldquo;Compromise of Intrinsic Geometry between Galilean and Coulomb Metric&rdquo;. We will discuss the selection of Intrinsic Geometry after introducing interaction in the next subsection.</p>
+<h3 id="compromise-of-intrinsic-geometry-between-galilean-and-coulomb-metric">Compromise of Intrinsic Geometry between Galilean and Coulomb Metric</h3>
+<p>As mentioned before, after we introduce interaction, the Hamiltonian is:
+</p>
+$$
+H=T+V,
+$$<p>
+The kinetic energy contains the Galilean metric, which is one of the sources of the anisotropy QH/FQH state, generally written as:
+</p>
+$$
+T=\frac{1}{2}(m^{-1})^{\mu\nu}\Pi_{\mu}\Pi_{\nu} = \frac{g^{\mu\nu}\Pi_{\mu}\Pi_{\nu}}{2m},
+$$<p>
+For simplicity, by redefining basis, we can also write it as;
+</p>
+$$
+T=\sum_j{1\over 2m}\left[a(\Pi^j_x)^2+(\Pi^j_y)^2/a\right].
+$$<p>
+In this way, </p>
+$$a=1$$<p> degenerates to the isotropic case, and a general </p>
+$$a$$<p> represents the selection of a general anisotropic Galilean metric. This is equivalent to selecting the Galilean metric:
+</p>
+$$
+g_{ab} = \begin{pmatrix}
+a & 0 \\
+0 & a^{-1}
+\end{pmatrix}
+$$<p>
+Similar definitions of mechanical momentum and guiding center coordinate are:
+</p>
+$$
+{\bf \Pi}={\bf p}+{e\over c}{\bf A}({\bf r})
+$$<p>
+</p>
+$$
+{\bf R}={\bf r}-(\ell^2/\hbar)\hat{z}\times{\bf \Pi}
+$$<p>
+Consider the two-body interaction, its expression in real space and momentum space is:
+</p>
+$$
+V=\sum_{i < j} V({\bf r}_i-{\bf r}_j)=\frac{1}{2}\sum_{\bf q}V_{\bf q}\rho_{\bf q}\rho_{-{\bf q}},
+$$<p>
+Where the density operator in momentum space is:
+</p>
+$$
+\rho_{\bf q}=\sum_{i}e^{i{\bf q}\cdot{\bf r}_i}
+$$<p>
+Generally we will also have the interaction anisotropy characterized by anisotropic </p>
+$$\tilde g^{ab}$$<p>:
+</p>
+$$
+\lim_{\lambda \rightarrow 0} \lambda V(\lambda \bm q) \rightarrow 
+\frac{e^2}{2\varepsilon}(\tilde g^{ab}q_aq_b)^{-1/2} ,
+$$<p>
+These two anisotropies: the anisotropy of the band mass tensor and the dielectric tensor, can be two mutually independent metrics. For simplicity, we can only consider the case of anisotropic band mass tensor + isotropic Coulomb interaction, because our main purpose is to see how the guiding center metric selects the ground state with lower energy after adding interaction, so that the arbitrary guiding center metric selection in the noninteracting problem becomes an intrinsic property of the FQH many-body state in the interacting problem.</p>
+<h4 id="projected-interaction">Projected Interaction</h4>
+<p>To simplify the model, we consider the case where the magnetic field is very large, and the splitting </p>
+$$\hbar \omega_c$$<p> between LLs is much larger than the interaction scale </p>
+$$e^2/a$$<p>, so that we can assume that the wavefunction basically does not enter the higher landau level, and thus the entire problem can be projected to the LLL for discussion. This is also a customary operation when discussing fractional Chern insulators. Those interested can refer to:</p>
+<p><a href="https://zhuanlan.zhihu.com/p/574597173" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/574597173</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/580756343" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/580756343</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/586913698" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/586913698</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/580954377" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/580954377</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/581596244" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/581596244</a></p>
+<p><a href="https://www.zhihu.com/question/616351382/answer/3157331169" target="_blank" rel="noopener noreffer ">https://www.zhihu.com/question/616351382/answer/3157331169</a></p>
+<p>Specific details can be found in:</p>
+<p><a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.88.241105" target="_blank" rel="noopener noreffer ">https://journals.aps.org/prb/abstract/10.1103/PhysRevB.88.241105</a></p>
+<p>Specifically, the interaction under the general LL basis can be expressed as:
+</p>
+$$
+\tilde{V}=\sum_{i < j}\sum_{\bf q}v_{\bf q} e^{i{\bf q}\cdot({\bf R}_i-{\bf R}_j)}F_n({\bf q}, a),
+$$<p>
+The coefficient is:
+</p>
+$$
+F_n({\bf q}, a)=|\langle n|e^{i{\bf q}\cdot(\hat{z}\times{\bf \Pi})}|n\rangle|^2 = e^{-(aq_x^2+q_y^2/a)\ell^2/2}|L_n[(aq_x^2+q_y^2/a)\ell^2/2]|^2
+$$<p>
+For LLL projected interaction, the coefficient is:
+</p>
+$$
+F_0({\bf q}, a)=e^{-(aq_x^2+q_y^2/a)\ell^2/2}.
+$$<p>
+LLL projected interaction is
+</p>
+$$
+\tilde{V}=\frac{1}{2}\sum_{\bf q}V_{\bf q}e^{-\frac{1}{2}(aq_x^2+q_y^2/a)\ell^2}\overline{\rho}_{\bf
+q}\overline{\rho}_{-{\bf q}},
+$$<p>
+Where the LLL projected density operator is:
+</p>
+$$
+\overline{\rho}_{\bf q}=\sum_{i}e^{i{\bf q}\cdot{\bf R}_i}
+$$<p>
+The GMP algebra it satisfies is also an important element in the construction of fractional Chern insulators. But here we focus on the form of LLL projected interaction. We see that although the original Coulomb interaction is isotropic, due to the anisotropy of the Galilean metric when constructing the LLL wavefunction, the anisotropy of the band mass tensor enters the anisotropy of the projected interaction. Since the single-particle energy of the LLL is always the same, we only need to consider the LLL projected interaction and consider which wavefunction minimizes its energy (variational method).</p>
+<h4 id="gaussian-interaction">Gaussian Interaction</h4>
+<p>Even with so many simplifications, the general form of interaction is difficult to calculate analytically. We further consider a special case, that is, the case where the Coulomb potential is a Gaussian function, which roughly describes the characteristics of a screened Coulomb interaction.</p>
+<p>Isotropic interaction is reflected in the isotropy of the coefficient distribution of </p>
+$$V_q$$<p>: </p>
+$$v({\bf r})=v(r)$$<p>, </p>
+$$v_{\bf q}=v_q$$<p>.</p>
+<p>Further consider Gaussian Interaction:
+</p>
+$$
+v(r)=v(0)e^{-r^2/(2s^2)}
+$$<p>
+Thus the interaction in momentum space is also in Gaussian form:
+</p>
+$$
+v_q=v_0e^{-q^2s^2/2}
+$$<p>
+Further written as:
+</p>
+$$
+\tilde{V}_g=\sum_{i < j}\sum_{\bf q}v_0 e^{-\tilde{q}^2\tilde{s}^2/2} e^{i{\bf q}\cdot({\bf R}_i-{\bf R}_j)}
+$$<p>
+Where
+</p>
+$$
+\tilde{s}=[(a\ell^2+s^2)(\ell^2/a+s^2)]^{1/4}
+$$<p>
+</p>
+$$
+\tilde{q}^2=g q_x^2 + q_y^2/g,
+$$<p>
+</p>
+$$
+g=\sqrt{(a\ell^2+s^2)/(\ell^2/a+s^2)}.
+$$<p>
+Although the above steps are simple mathematical derivations, we will later find that </p>
+$$g$$<p> defined here is directly related to the anisotropy of the guiding center metric discussed in the previous section. Moreover, under this special Gaussian Interaction, </p>
+$$g=\sqrt{(a\ell^2+s^2)/(\ell^2/a+s^2)}$$<p> directly gives a guiding center metric selection that minimizes the energy of the many-body ground state wavefunction in the interaction problem.</p>
+<p>First, let&rsquo;s look at some properties of g here:</p>
+$$g\rightarrow a$$<p> for </p>
+$$s\ll \ell$$<p>, </p>
+$$g\rightarrow 1$$<p> for </p>
+$$s\gg \ell$$<p>At the same time, generally we have:
+</p>
+$$
+1 < g < a
+$$<p>
+In fact, the lower bound 1 reflects the isotropic interaction metric, and the upper bound </p>
+$$a$$<p> reflects the anisotropic mass tensor metric. If we accept the previous statement regarding </p>
+$$g$$<p> being the intrinsic quantum geometry anisotropy information of the optimal ground state selection, this inequality indeed reflects the discussion at the beginning of this section:</p>
+<p>Intrinsic Geometry as a Compromise between Galilean and Coulomb Metric.</p>
+<h4 id="many-body-ground-state-of-anisotropic-fqhe">Many-Body Ground State of Anisotropic FQHE</h4>
+<p>Below we prove the connection between </p>
+$$g$$<p> and the FQH state Intrinsic quantum geometry/guiding center metric through some arguments, and explain why </p>
+$$g=\sqrt{(a\ell^2+s^2)/(\ell^2/a+s^2)}$$<p> is the optimal selection for variational parameters of many-body wavefunctions such as Laughlin.</p>
+<p>First, we can establish the connection between general </p>
+$$g$$<p> and the special case of </p>
+$$g=1$$<p>:
+</p>
+$$
+\tilde{V}_g=O^\dagger[\lambda(g)]\tilde{V}_{g=1} O[\lambda(g)],
+$$<p>
+Where:
+</p>
+$$
+O(\lambda)=e^{{i\lambda\over 2\ell^2}\sum_j R^j_x R^j_y},
+$$<p>
+</p>
+$$
+\lambda(g)=-{1\over 2}\ln g
+$$<p>
+</p>
+$$
+O^\dagger(\lambda)R_x^i O(\lambda)=e^{\lambda} R_x^i
+$$<p>
+</p>
+$$
+O^\dagger(\lambda)R_y^i O(\lambda)=e^{-\lambda} R_y^i.
+$$<p>
+This process of guiding center changing from isotropic to anisotropic is consistent with the operation of selecting different guiding center metrics to construct guiding center operators and thus constructing a set of complete degenerate bases inside the LL. This explains the connection between </p>
+$$g$$<p> and the FQH state Intrinsic quantum geometry/guiding center metric.</p>
+<p>Furthermore, since we know that </p>
+$$g=1$$<p> is the special case of isotropic, at this time we know that the ground state under Interaction LLL is the Laughlin State (strictly speaking, the Laughlin State is the strict ground state under the 2-body Haldane Pseudopotential, but we tentatively assume that the Laughlin state is still close to the FQH ground state under Gaussian interaction), then the ground state of </p>
+$$\tilde{V}_{g=1}$$<p> (kinetic energy can be ignored) is </p>
+$$|\Psi_{GS,g=1}\rangle \approx |\Psi_{Laughlin} \rangle$$<p>,</p>
+<p>Thus the ground state of the transformed </p>
+$$\tilde{V}_g=O^\dagger[\lambda(g)]\tilde{V}_{g=1} O[\lambda(g)]$$<p> can be roughly considered to be (Hamiltonian differs by a Unitary transformation, the energy spectrum does not change, and the corresponding wavefunction including the ground state should also only differ by the same Unitary transformation):
+</p>
+$$
+|\Psi_{GS,g}\rangle=O^\dagger[\lambda(g)]|\Psi_{g=1}\rangle \approx O^\dagger[\lambda(g)] |\Psi_{Laughlin} \rangle =|\Psi^{Laughlin}_{g}\rangle
+$$<p>
+Coupled with the previous point that </p>
+$$g$$<p> represents the information of the system&rsquo;s guiding center metric anisotropy, we can consider that </p>
+$$|\Psi^{Laughlin}_{g=\sqrt{(a\ell^2+s^2)/(\ell^2/a+s^2)}}\rangle$$<p> is the optimal variational ground state solution for the more general Laughlin wavefunction with guiding center metric anisotropy/Intrinsic quantum geometry as variational parameters under anisotropic mass tensor + isotropic gaussian interaction.</p>
+<p>Thus </p>
+$$g=\sqrt{(a\ell^2+s^2)/(\ell^2/a+s^2)} \in (1,a)$$<p> completely reflects the determination of the Intrinsic Geometry of FQH under different interactions. Qualitatively, it is still the discussion at the beginning of this section:</p>
+<p>Intrinsic Geometry as a Compromise between Galilean and Coulomb Metric</p>
+<p>So far, we have explained the origin of the Intrinsic Quantum Geometry degree of freedom inside FQH and its determination from a variational Compromise between Galilean and Coulomb Metric. This shows that even in a system that breaks rotational symmetry, the anisotropic FQH state may still be the ground state. If we further consider the perturbation coupled with the Intrinsic Quantum Geometry degree of freedom, we can focus on the dynamics of this Intrinsic Quantum Geometry, which turns out to be the chiral graviton mode discovered by Nanjing University.</p>
+<h2 id="dynamics-of-intrinsic-quantum-geometry-as-chiral-graviton">Dynamics of Intrinsic Quantum Geometry as Chiral Graviton</h2>
+<p>Below we consider the dynamics of Intrinsic Quantum Geometry in the FQH state and its quasiparticle excitation, the Chiral Graviton.</p>
+<h3 id="dynamics-of-intrinsic-quantum-geometry">Dynamics of Intrinsic Quantum Geometry</h3>
+<p>The most direct idea is to find a perturbation that directly couples with Intrinsic Quantum Geometry, but this is generally difficult to achieve. In the model, the degree of freedom that is easier to couple directly is the band mass tensor, for example, using acoustic waves to perturb the FQH background lattice system. We tentatively assume that our picture of Intrinsic Quantum Geometry determined by band mass tensor anisotropy under Gaussian Interaction discussed above is also feasible in more general cases. Then we can consider that coupling the band mass tensor is equivalent to indirectly coupling the Intrinsic Quantum Geometry.</p>
+<p>For simplicity, still use the kinetic energy:
+</p>
+$$
+T=\sum_j{1\over 2m}\left[a(\Pi^j_x)^2+(\Pi^j_y)^2/a\right].
+$$<p>
+This is equivalent to selecting the Galilean metric:
+</p>
+$$
+g_{ab} = \begin{pmatrix}
+a & 0 \\
+0 & a^{-1}
+\end{pmatrix}
+$$<p>
+Consider the general LLL projected interaction again:
+</p>
+$$
+\tilde{V}=\frac{1}{2}\sum_{\bf q}V_{\bf q}e^{-\frac{1}{2}(aq_x^2+q_y^2/a)\ell^2}\overline{\rho}_{\bf
+q}\overline{\rho}_{-{\bf q}},
+$$<p>
+</p>
+$$
+\overline{\rho}_{\bf q}=\sum_{i}e^{i{\bf q}\cdot{\bf R}_i}
+$$<p>
+Assume we perform a time-dependent perturbation on the band mass anisotropy through acoustic wave:
+</p>
+$$
+a=1+\xi(t)
+$$<p>
+This will be reflected in the oscillating metric through </p>
+$$g = g(a)$$<p>. We know that the physical image of the oscillating metric is the gravitational wave. Then the quasiparticles excited by the oscillating metric are very likely to have similar properties to the graviton discussed in high energy physics.</p>
+<p>Expand </p>
+$$\tilde{V}$$<p> according to </p>
+$$a=1+\xi(t)$$<p>:
+</p>
+$$
+\delta\tilde{V}(t)=\frac{\xi(t)}{4}\sum_{\bf q}(q^2_y - q^2_x)V_{\bf
+q}e^{-\frac{1}{2}q^2\ell^2}\overline{\rho}_{\bf q}\overline{\rho}_{-{\bf q}}.
+$$<p>
+We find that the part of </p>
+$$(q^2_y - q^2_x)$$<p> indeed has d-wave symmetry. This shows that the quasiparticles excited by the oscillating metric are likely to be quasiparticles with spin 2. This &ldquo;coincides&rdquo; with the spin-2 nature of the graviton widely believed in high energy physics (essentially because both are oscillations of the metric field, it is not difficult to guess that their quantum have similar properties).</p>
+<p>For harmonic perturbation, the experimentally measured spectral function is not difficult to obtain through the well-known Fermi Golden Rule:
+</p>
+$$
+I(\omega)=\sum_n|\langle n|\hat{O}|0\rangle|^2\delta(\omega-\omega_n),
+$$<p>
+Where the perturbation operator is:
+</p>
+$$
+\hat{O}=\sum_{\bf q}(q^2_y - q^2_x)V_{\bf q}e^{-\frac{1}{2}q^2\ell^2}\overline{\rho}_{\bf
+q}\overline{\rho}_{-{\bf q}}
+$$<p>
+We can further split this perturbation operator into the form of </p>
+$$S_z = \pm 2$$<p>:
+</p>
+$$
+\hat{O}_\mp^{(2)}=\sum_{\bf q}(q_x \mp i q_y)^2 V_{\bf q}e^{-\frac{1}{2}q^2\ell^2}\overline{\rho}_{\bf
+q}\overline{\rho}_{-{\bf q}},
+$$<p>
+These two operators reflect the graviton excitation with spin </p>
+$$S_z = \pm2$$<p> respectively. The corresponding spectrum is:
+</p>
+$$
+I_\sigma(\omega)=\sum_n|\langle n|\hat{O} _{\sigma}|0\rangle|^2\delta(\omega-\omega_n),
+$$<p>
+Where </p>
+$$\hat{O}_\mp$$<p> can be regarded as the creation and annihilation operator of the graviton. Here it is equivalent to us specifying that the generated quasiparticle excitation can only be </p>
+$$S_z = -2$$<p>, so this graviton excitation is also called Chiral Graviton. We will explain the source of this choice later. Conversely, for the particle-hole conjugate FQH state, the spin of the graviton excitation is opposite, which further reflects its Chiral nature.</p>
+<p>And </p>
+$$\hat{O}=(\hat{O} _{+} + \hat{O} _{-})/2$$<p> is equivalent to the displacement operator in a harmonic oscillator, coupled with the &ldquo;gravitational wave&rdquo; (essentially acoustic wave induced oscillating mass tensor anisotropy) as a perturbation operator.</p>
+<h3 id="chirality-of-graviton">Chirality of Graviton</h3>
+<p>Why is the Graviton excitation chiral? We analyze it using the Laughlin state of </p>
+$$\nu = 1/3$$<p> as an example. It is not difficult to find that when </p>
+$$\hat{O}_\mp$$<p> acts on the 2 particle wave function, we have
+</p>
+$$
+O_{+} \propto \sum\limits_{M} |m+2, M \rangle \langle m, M|
+$$<p>
+</p>
+$$
+O_{-} \propto \sum\limits_{M} |m, M \rangle \langle m + 2, M|$$<p>
+Where </p>
+$$m$$<p> and </p>
+$$M$$<p> in </p>
+$$|m, M \rangle$$<p> represent the relative angular momentum and center-of-mass angular momentum of the two-body wavefunction state, respectively.</p>
+<p>It is not difficult to find that </p>
+$$\hat{O}_{+}$$<p> will annihilate the Laughlin state: because </p>
+$$\hat{O}_{+}$$<p> will change a two-particle state with relative angular momentum </p>
+$$m$$<p> to relative angular momentum </p>
+$$m+2$$<p>, which is not within the Laughlin state, thereby annihilating the Laughlin state.</p>
+<p>Thus, the </p>
+$$I _{+}(\omega)$$<p> spectrum is always 0. While </p>
+$$I _{-}(\omega)$$<p> always shows strong graviton peaks in fermionic and bosonic cases. This shows that the graviton excitation of the Laughlin state of </p>
+$$\nu = 1/3$$<p> is always </p>
+$$S_z  =-2$$<p>; conversely, the graviton excitation of the hole Laughlin state of its PH conjugate </p>
+$$\nu = 1 - 1/3$$<p> is always </p>
+$$S_z  = 2$$<p>. This reflects the chirality of the graviton excitation.</p>
+<h3 id="inaccessibility-of-normal-magnetoroton-modes">Inaccessibility of normal Magnetoroton modes</h3>
+<p>Essentially, the graviton mode is the neutral collective excitation we discuss in FQH: the limit of the GMP magnetoroton mode at </p>
+$$k\rightarrow 0$$<p>; in other words, in the long-wavelength limit, the dynamics of FQH can be determined by the Intrinsic Quantum Geometry dynamics we discussed above. In some cases, the chiral graviton mode is also referred to as a special case of the GMP magnetoroton mode in the long-wavelength limit. However, due to the structural factor of the GMP magnetoroton mode </p>
+$$\langle 0|\rho_{{\bf k}}\rho_{-{\bf k}}|0\rangle\propto (k\ell)^4$$<p> in the long-wavelength limit, it is difficult to detect the GMP magnetoroton mode in the long-wavelength limit using general methods of coupling electromagnetic fields with electron density. For details on the GMP magnetoroton, you can also refer to my previous notes:</p>
+<p><a href="https://zhuanlan.zhihu.com/p/574597173" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/574597173</a></p>
+<p>In short, due to the above reasons, although the GMP magnetoroton mode has been observed experimentally, its detection in the long-wavelength limit is difficult. General electromagnetic field perturbations fail because the photon spin is 1, making it difficult to couple with the graviton with spin 2. Thus, the uniqueness of the graviton mode in Intrinsic Quantum Geometry&rsquo;s origin and experimental detection distinguishes it from the general GMP magnetoroton mode, and its detection has become a very meaningful event in the field of condensed matter physics.</p>
+<h3 id="detection-of-chiral-graviton-in-fqhe">Detection of Chiral Graviton in FQHE</h3>
+<p>In addition to the above Acoustic wave method, the method used by Nanjing University to detect the graviton utilizes spectroscopy related to circularly polarized light. Because circularly polarized light has a spin of </p>
+$$S_z = \pm1$$<p>, if circularly polarized light with </p>
+$$S_z = -1$$<p> is used to excite a chiral graviton with </p>
+$$S_z = -2$$<p>, the light emitted after the system absorbs it should be </p>
+$$S_z = 1$$<p>. Through this principle, Lingjie Du&rsquo;s group at Nanjing University and their colleagues from Germany and the United States successfully discovered the chiral graviton mode in FQHE and published it in Nature. This is the story we are familiar with.</p>
+<h2 id="relation-with-band-geometry-from-momentum-space-duality">Relation with Band Geometry from Momentum-Space Duality</h2>
+<p>The Intrinsic Quantum Geometry of the FQH state we discussed in the above process is different in definition from the Band Geometry we often discuss in fractional Chern insulators, flat band superconductivity, and nonlinear response, but the metric fields of the two are essentially consistent. This idea of Geometric Description of FQH state has also been introduced into systems discussing Band Geometry such as fractional Chern insulators, providing insights into the stability and other properties of FQH states in lattice systems.</p>
+<p>For example, a PRL titled &ldquo;Position-momentum duality and fractional quantum hall effect in chern insulators&rdquo; by Claassen, M., Lee, C. H., Thomale, R., Qi, X. L., &amp; Devereaux, T. P. et al. in 2015 discussed the connection between Band Geometry and the Intrinsic Quantum Geometry of the FQH state.</p>
+<p>Specifically, in the Band System, we have the symplectic geometry of the wave function space (Projected Hilbert Space </p>
+$$\mathbb{C}P^{N-1}$$<p>), the imaginary part of which is the Berry Curvature we are familiar with, similar to the magnetic field in momentum space:
+</p>
+$$
+\Omega(k) = \epsilon^{\mu\nu} \partial_{k_\mu} \mathbf{A}_\nu(k)
+$$<p>
+Coming from a vector potential similar to momentum space, Berry Connection:
+</p>
+$$
+\mathbf{A}_\nu(k) = -i \langle u_k | \partial_{k_\nu} | u_k \rangle
+$$<p>
+The real part of the symplectic geometry defines the metric of the wave function space, namely the Fubini-Study metric
+</p>
+$$
+g_{\mu\nu}(k) = \frac{1}{2} \langle \partial_{k_\mu} u_k | \left[1 - |u_k\rangle \langle u_k | \right] | \partial_{k_\nu} u_k \rangle + \left(\mu \leftrightarrow \nu \right)
+$$<p>
+Using a method similar to distinguishing degeneracy in LLL through angular momentum operators in FQH, we can similarly define a confinement potential to coincide with the eigenstates of the Hamiltonian, thereby achieving the purpose of defining &ldquo;pseudo-angular momentum operators&rdquo; in lattice systems that break rotational symmetry:
+</p>
+$$
+\hat{V}(r)= \tfrac{1}{2} \lambda~ x_{\mu} \eta^{\mu\nu} x_{\nu}
+$$<p>
+</p>
+$$\eta^{\mu\nu}$$<p> can be used to describe the metric used to define the &ldquo;pseudo-angular momentum operator&rdquo; in the lattice system that breaks rotational symmetry, that is, the analogy of Guiding Center Metric in Lattice System, which is the Lattice version of Intrinsic Quantum Geometry.</p>
+<p>Considering the projection on LLL similarly, the projection of this single-particle &ldquo;pseudo-angular momentum operator&rdquo; (essentially an artificial confinement potential) is:
+</p>
+$$
+\bar{V} =  \hat P\hat V(r)\hat P^\top= \frac{\lambda}{2} \Pi_\mu \eta^{\mu\nu} \Pi_\nu + \frac{\lambda}{2} \eta^{\mu\nu} g_{\nu\mu},\,k \in {\rm BZ}
+$$<p>
+The first term on the right is the common kinetic energy operator we see. In addition, there is a term coupled with Band Geometry. This shows that the FQH physics in the Lattice System is also affected by Band Geometry compared to the FQH physics in the continuum system. The coupling between the two gives the physics of Intrinsic Quantum Geometry of FQH in a more general system. Relevant details can be further referred to in the original text:</p>
+<p><a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.114.236802" target="_blank" rel="noopener noreffer ">https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.114.236802</a></p>
+<p>We stop here, just explaining the connection between Intrinsic Quantum Geometry and Band Geometry.</p>
+<h2 id="summary">Summary</h2>
+<p>In summary, we discussed the recent hot news of &ldquo;Nanjing University discovering (chiral) graviton (quasiparticle excitation) in FQH system&rdquo;, gave the origin of Intrinsic Quantum Geometry in FQH state, and discussed the origin of the Chiral Graviton mode corresponding to the quasiparticle of its dynamics. We also briefly discussed its detection and its connection with the Band Geometry we are familiar with, hoping to provide more material for everyone to enjoy the scientific spectacle.</p>
+<h2 id="reference">Reference</h2>
+<ul>
+<li>
+<p><a href="https://www.nature.com/articles/s41586-024-07201-w" target="_blank" rel="noopener noreffer ">Evidence for chiral graviton modes in fractional quantum Hall liquids</a></p>
+</li>
+<li>
+<p><a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.107.116801" target="_blank" rel="noopener noreffer ">Geometrical description of the fractional quantum Hall effect</a></p>
+</li>
+<li>
+<p><a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.33.2481" target="_blank" rel="noopener noreffer ">Magneto-roton theory of collective excitations in the fractional quantum Hall effect</a></p>
+</li>
+<li>
+<p><a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.123.146801" target="_blank" rel="noopener noreffer ">Chiral gravitons in fractional quantum hall liquids</a></p>
+</li>
+<li>
+<p><a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.86.035122" target="_blank" rel="noopener noreffer ">Fractional quantum Hall states in two-dimensional electron systems with anisotropic interactions</a></p>
+</li>
+<li>
+<p><a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.85.165318" target="_blank" rel="noopener noreffer ">Band mass anisotropy and the intrinsic metric of fractional quantum Hall systems</a></p>
+</li>
+<li>
+<p><a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.93.161302" target="_blank" rel="noopener noreffer ">Acoustic wave absorption as a probe of dynamical geometrical response of fractional quantum hall liquids</a></p>
+</li>
+<li>
+<p><a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.88.241105" target="_blank" rel="noopener noreffer ">Geometry of compressible and incompressible quantum Hall states: Application to anisotropic composite-fermion liquids</a></p>
+</li>
+<li>
+<p><a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.85.115308" target="_blank" rel="noopener noreffer ">Model anisotropic quantum Hall states</a></p>
+</li>
+<li>
+<p><a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.114.236802" target="_blank" rel="noopener noreffer ">Position-momentum duality and fractional quantum hall effect in chern insulators</a></p>
+</li>
+<li>
+<p><a href="https://courses.physics.ucsd.edu/2019/Spring/physics230/LECTURES/QHE.pdf" target="_blank" rel="noopener noreffer ">UCSD QHE Lecture note</a></p>
+</li>
+</ul></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2024-04-05</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/chiral-graviton-in-fqhe/" data-title="🤯Chiral Graviton in Fractional Quantum Hall Effect (FQHE)" data-hashtags="FQHE,Graviton,Metric,Quantum Geometry"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/chiral-graviton-in-fqhe/" data-title="🤯Chiral Graviton in Fractional Quantum Hall Effect (FQHE)"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/chiral-graviton-in-fqhe/" data-hashtag="FQHE"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/chiral-graviton-in-fqhe/" data-title="🤯Chiral Graviton in Fractional Quantum Hall Effect (FQHE)"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/chiral-graviton-in-fqhe/" data-title="🤯Chiral Graviton in Fractional Quantum Hall Effect (FQHE)"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/chiral-graviton-in-fqhe/" data-title="🤯Chiral Graviton in Fractional Quantum Hall Effect (FQHE)"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/chiral-graviton-in-fqhe/" data-title="🤯Chiral Graviton in Fractional Quantum Hall Effect (FQHE)" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fOkongOyangO.github.io%2fOkongOyangO.Notes%2fposts%2fchiral-graviton-in-fqhe%2f&amp;text=%f0%9f%a4%afChiral%20Graviton%20in%20Fractional%20Quantum%20Hall%20Effect%20%28FQHE%29" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/OkongOyangO.Notes/tags/fqhe/">FQHE</a>,&nbsp;<a href="/OkongOyangO.Notes/tags/graviton/">Graviton</a>,&nbsp;<a href="/OkongOyangO.Notes/tags/metric/">Metric</a>,&nbsp;<a href="/OkongOyangO.Notes/tags/quantum-geometry/">Quantum Geometry</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/OkongOyangO.Notes/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/OkongOyangO.Notes/posts/distinguish_conductors_insulators_ground_state/" class="prev" rel="prev" title="🤔How to Distinguish Conductors and Insulators by Ground State Only? "><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>🤔How to Distinguish Conductors and Insulators by Ground State Only? </a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.154.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/OkongOyangO.Notes/" target="_blank">OkongOyangO</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/copy-tex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/mhchem.min.js"></script><script>window.config={"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/OkongOyangO.Notes/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/OkongOyangO.Notes/js/theme.min.js"></script></body>
+</html>
