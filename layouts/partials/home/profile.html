@@ -196,6 +196,12 @@
         </div>
     {{- end -}}
 
+    {{- /* GitHub Star Button */ -}}
+    <div class="github-star" style="margin-top: 1rem;">
+        <iframe src="https://ghbtns.com/github-btn.html?user=OkongOyangO&repo=OkongOyangO.Notes&type=star&count=true&size=large"
+                frameborder="0" scrolling="0" width="170" height="30" title="GitHub Stars"></iframe>
+    </div>
+
     {{- with $profile.disclaimer -}}
         <h3 class="home-disclaimer">
             {{- . | safeHTML -}}
