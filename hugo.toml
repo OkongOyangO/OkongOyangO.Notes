@@ -36,7 +36,7 @@ theme = "LoveIt"
     title = "OkongOyangO的物理笔记"
     languageCode = "zh-CN"
     [languages.zh-cn.params]
-      description = "OkongOyangO的凝聚态物理笔记"
+      description = "O空O扬O的物理笔记"
     [languages.zh-cn.menu]
       [[languages.zh-cn.menu.main]]
         identifier = "posts"
@@ -57,7 +57,7 @@ theme = "LoveIt"
     title = "OkongOyangOのノート"
     languageCode = "ja"
     [languages.ja.params]
-      description = "OkongOyangOの凝縮系物理学ノート"
+      description = "O空O揚Oの物理学ノート"
     [languages.ja.menu]
       [[languages.ja.menu.main]]
         identifier = "posts"
