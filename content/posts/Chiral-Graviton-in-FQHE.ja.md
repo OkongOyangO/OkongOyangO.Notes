@@ -41,7 +41,7 @@ FQH波動関数の新しい内因性自由度としてHaldaneが提案したQuan
 
 これは明らかに、一般相対性理論において時空の計量（metric）の歪みが引き起こす重力波との類推であり、同時にこの励起がスピン2の特性を持つことから、場の量子論において重力を量子化した際に同様にスピン2を持つ重力子との類推でもあります。これは高エネルギー物理学の境界に触れているとも言えますし、凝縮系における重力子の概念の拡張と内包の豊かさを示しているとも言えます。結局のところ、ワイルフェルミオン（Weyl Fermion）やマヨラナフェルミオン（Majorana Fermion）など、元々は高エネルギー物理学の概念も相次いで凝縮系物理学の分野に導入されており、業界内ではすでに見慣れた光景となっています。
 
-さらに、この重力子はカイラリティ（Chirality、手性）を持っています。例えば、$$\nu = 1/3$$ 充填のFQHでは、そのGraviton励起はスピン2を持つだけでなく、角運動量は-2となります。逆に、その粒子-正孔共役（particle-hole conjugate）である $$\nu = 1 - 1/3$$ 充填のFQH状態では、Graviton励起のスピン角運動量は2に変わります。このように異なる充填率のFQH状態がGravitonの角運動量を選択する性質（Selectivity）は、私たちがよく言うカイラリティと呼応しています。私たちはさらに、FQHにおける内因性Quantum Geometryダイナミクスに基づく長波長素励起を「カイラル重力子（Chiral Graviton）」と呼んでおり、これは南京大学の論文タイトルに見られる命名法でもあります。
+さらに、この重力子はカイラリティ（Chirality、手性）を持っています。例えば、$\nu = 1/3$ 充填のFQHでは、そのGraviton励起はスピン2を持つだけでなく、角運動量は-2となります。逆に、その粒子-正孔共役（particle-hole conjugate）である $\nu = 1 - 1/3$ 充填のFQH状態では、Graviton励起のスピン角運動量は2に変わります。このように異なる充填率のFQH状態がGravitonの角運動量を選択する性質（Selectivity）は、私たちがよく言うカイラリティと呼応しています。私たちはさらに、FQHにおける内因性Quantum Geometryダイナミクスに基づく長波長素励起を「カイラル重力子（Chiral Graviton）」と呼んでおり、これは南京大学の論文タイトルに見られる命名法でもあります。
 
 ## Anisotropic FQHE and Intrinsic Quantum Geometry
 
@@ -51,7 +51,7 @@ https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.107.116801
 
 ### Band and Dielectric Anisotropy: Galilean and Coulomb (Interaction) Metric
 
-具体的には、Haldaneは一般的な磁場中のハミルトニアンに、band mass tensorおよびCoulomb potentialの異方性（anisotropy）を加え、Galiean metric $$g^{ab}$$ を用いました。
+具体的には、Haldaneは一般的な磁場中のハミルトニアンに、band mass tensorおよびCoulomb potentialの異方性（anisotropy）を加え、Galiean metric $g^{ab}$ を用いました。
 $$
 H = H_0 + V 
 $$
@@ -65,11 +65,11 @@ $$
 [r_i^a,\pi_{jb}]= i\delta_{ij}\hbar \delta^a_b, \quad 
 [\pi_{ia},\pi_{jb}] = i\delta_{ij}\epsilon_{ab}\hbar^2/\ell_B^2.
 $$
-ここで、$$\ell=\sqrt{\hbar/(eB)}$$ は磁気長（magnetic length）です。
+ここで、$\ell=\sqrt{\hbar/(eB)}$ は磁気長（magnetic length）です。
 
-この非可換代数は、様々なゲージ選択の下で異なるLLL（最下ランダウ準位、Lowest Landau Level）の単一粒子波動関数を与えることができます。例えば、等方的な条件 $$g^{ab} = \delta^{ab}$$ および対称ゲージ（symmetric gauge）の下では、システムの回転対称性を保持できるため、LLL単一粒子波動関数は $$H_0$$ と角運動量 $$L_z$$ の同時固有状態となり得ます。このように構成されたLLL単一粒子波動関数およびそれに基づいて構築されたLaughlin多体波動関数は、いずれも回転対称となります。
+この非可換代数は、様々なゲージ選択の下で異なるLLL（最下ランダウ準位、Lowest Landau Level）の単一粒子波動関数を与えることができます。例えば、等方的な条件 $g^{ab} = \delta^{ab}$ および対称ゲージ（symmetric gauge）の下では、システムの回転対称性を保持できるため、LLL単一粒子波動関数は $H_0$ と角運動量 $L_z$ の同時固有状態となり得ます。このように構成されたLLL単一粒子波動関数およびそれに基づいて構築されたLaughlin多体波動関数は、いずれも回転対称となります。
 
-しかし、Haldaneはより一般的な異方的なGalilean metric、すなわち $$g^{ab}$$ が等方的ではない場合を考慮しました。同時に、Haldaneはinteraction metric $$\tilde g^{ab}$$ によって特徴付けられる相互作用の異方性（interaction anisotropy）も考慮しました：
+しかし、Haldaneはより一般的な異方的なGalilean metric、すなわち $g^{ab}$ が等方的ではない場合を考慮しました。同時に、Haldaneはinteraction metric $\tilde g^{ab}$ によって特徴付けられる相互作用の異方性（interaction anisotropy）も考慮しました：
 $$
 \lim_{\lambda \rightarrow 0} \lambda V(\lambda \bm q) \rightarrow 
 \frac{e^2}{2\varepsilon}(\tilde g^{ab}q_aq_b)^{-1/2} ,
@@ -84,14 +84,14 @@ $$
 
 https://journals.aps.org/prb/abstract/10.1103/PhysRevB.85.115308
 
-具体的には、このときmass tensorの異方性のみを考慮すればよく、unimodularな複素ベクトル $$\omega$$ を用いてmass tensorをパラメータ化（parametrize）できます：
+具体的には、このときmass tensorの異方性のみを考慮すればよく、unimodularな複素ベクトル $\omega$ を用いてmass tensorをパラメータ化（parametrize）できます：
 $$
 m_{ab}=m (\omega_a^*\omega_b + \omega_b^*\omega_a)
 $$
 $$
 (m^{-1})^{ab}=m^{-1}(\omega^{a*}\omega^b + \omega^{b*}\omega^a).
 $$
-等方的な特殊なケースは $$\omega = \frac{1}{\sqrt{2}} (1, i)^T$$ であることが容易にわかります。より一般的な $$\omega$$ は一般的な異方的なケースを表しており、これは両者の関係や前者から後者への類推と拡張を議論する際に重要です。
+等方的な特殊なケースは $\omega = \frac{1}{\sqrt{2}} (1, i)^T$ であることが容易にわかります。より一般的な $\omega$ は一般的な異方的なケースを表しており、これは両者の関係や前者から後者への類推と拡張を議論する際に重要です。
 
 #### Construction of Landau Level and Guiding Center Ladder Operators
 
@@ -100,14 +100,14 @@ $$
 H_0 ={\textstyle \frac{1}{2}}\hbar \omega_c
 \left( b^{\dagger}b + bb^{\dagger}\right)
 $$
-ここで $$\hbar\omega_c = \hbar^2/m\ell^2$$ はサイクロトロンエネルギーです。異方性条件下でのLandau Level ladder operators（昇降演算子）は以下のように拡張できます：
+ここで $\hbar\omega_c = \hbar^2/m\ell^2$ はサイクロトロンエネルギーです。異方性条件下でのLandau Level ladder operators（昇降演算子）は以下のように拡張できます：
 $$
 b = \hbar^{-1}\ell \left (\bm \omega \cdot \bm \pi\right ),
 \quad b^\dagger = \hbar^{-1}\ell \left (\bm \omega^* \cdot \bm \pi\right )
 $$
-ladder operatorは交換関係 $$[b,b^{\dagger}] = 1$$ を満たします。このladder operatorは、波動関数を異なるLandau Level間で昇降させるために使用され、昇降の前後でサイクロトロンエネルギー1つ分の差が生じます。
+ladder operatorは交換関係 $[b,b^{\dagger}] = 1$ を満たします。このladder operatorは、波動関数を異なるLandau Level間で昇降させるために使用され、昇降の前後でサイクロトロンエネルギー1つ分の差が生じます。
 
-さらに、"guiding center"座標 $${\bm R}$$ を導入します：
+さらに、"guiding center"座標 ${\bm R}$ を導入します：
 $$
 R^a=r^a+\hbar^{-1}\ell^2\epsilon^{ab}\pi_b,
 $$
@@ -115,13 +115,13 @@ $$
 $$
 [R^a, R^b]=-i\epsilon^{ab}\ell^2,\quad [R^a,\pi_b]=0,
 $$
-"guiding center"座標 $${\bm R}$$ は、"guiding center" ladder operators：$$a$$，$$a^{\dagger}$$ を生成するために使用されます：
+"guiding center"座標 ${\bm R}$ は、"guiding center" ladder operators：$a$，$a^{\dagger}$ を生成するために使用されます：
 $$
 a=\ell^{-1}\left({\bm \omega}^*\cdot{\bm R}\right),
 \quad a^\dagger=\ell^{-1}\left({\bm \omega}\cdot{\bm R}\right),
 \quad [a,a^\dagger]=1
 $$
-この生成・消滅演算子の組は、Landau Level ladder operatorである $$b$$ および $$b^{\dagger}$$ と可換であり、したがって同一Landau Level内のLLL単一粒子波動関数の縮退（degeneracy）を記述することができます。これは等方的なLLの導出における古典的な操作と同じです。
+この生成・消滅演算子の組は、Landau Level ladder operatorである $b$ および $b^{\dagger}$ と可換であり、したがって同一Landau Level内のLLL単一粒子波動関数の縮退（degeneracy）を記述することができます。これは等方的なLLの導出における古典的な操作と同じです。
 
 注目すべきは、以上の議論が具体的なゲージを導入することなくLandau Levelとその縮退などの情報を得られるという点です。言い換えれば、LLL波動関数の構築において、回転対称性を保存するために対称ゲージを導入する必要はありません。これは、私たちがこれまでデフォルトとしていたQHおよびFQH状態の等方的な性質自体が偶発的（accidental）なものであったことを示しています。私たちは、FQH理論の自由度を構築するために異方的なLLL波動関数を選択する自由を完全に持っており、これは以前は無視されていました。
 
@@ -131,13 +131,13 @@ https://courses.physics.ucsd.edu/2019/Spring/physics230/LECTURES/QHE.pdf
 
 #### Introduction of Symmetric Gauge
 
-さらに進んで、対称ゲージ（symmetric gauge）の下でも異方的なLLL波動関数を構築できることを示します。LLL波動関数はしばしばハミルトニアン $$H_0$$ と角運動量 $$L_z$$ の同時固有状態によって決定されますが、ここでは異方的な $$L_z$$ を構築することで、FQHを議論する基礎となる異なるLLL単一粒子波動関数を得ることができることを示します。
+さらに進んで、対称ゲージ（symmetric gauge）の下でも異方的なLLL波動関数を構築できることを示します。LLL波動関数はしばしばハミルトニアン $H_0$ と角運動量 $L_z$ の同時固有状態によって決定されますが、ここでは異方的な $L_z$ を構築することで、FQHを議論する基礎となる異なるLLL単一粒子波動関数を得ることができることを示します。
 
 今、対称ゲージを選択します：
 $$
 {\bm A}={\textstyle\frac{1}{2}}{\bm B}\times{\bm r}={\textstyle\frac{1}{2}}B(-y,x),
 $$
-そして、mass tensorの異方性情報を含む $$\omega$$ を利用して複素座標（complex coordinate）を構築します：
+そして、mass tensorの異方性情報を含む $\omega$ を利用して複素座標（complex coordinate）を構築します：
 $$
 z = \frac{\bm \omega \cdot \bm r}{\ell}.
 $$
@@ -154,7 +154,7 @@ a = {\textstyle \frac{1}{2}}z^* + \partial_{z} ,\quad  a^{\dagger} =
 $$
 対応する角運動量演算子は次のように定義できます：
 $$L_0 = a^{\dagger}a - b^{\dagger}b, \quad [L_0,H_0] =0$$
-$$H_0$$ と $$L_0$$ を同時対角化することで、n番目のLLの単一粒子波動関数 $$|\psi_{nm}\rangle$$ が得られます：
+$H_0$ と $L_0$ を同時対角化することで、n番目のLLの単一粒子波動関数 $|\psi_{nm}\rangle$ が得られます：
 $$
 \begin{aligned}
 &H_0|\psi_{nm}\rangle = (n+{\textstyle\frac{1}{2}})\hbar
@@ -165,13 +165,13 @@ $$
 & a|\psi_{00}\rangle = b|\psi_{00}\rangle = 0.
 \end{aligned}
 $$
-以上のプロセスは、単に $$\omega = \frac{1}{\sqrt{2}} (1,i)^T$$ を任意のunimodular vectorに拡張しただけであり、一般的なGalilean metricに対しても、システムの「回転対称性」を生成するanisotropic mass tensor adapted angular momentum operatorを構築できることを示しています。これは楕円を引き伸ばして円にするようなもので、ある程度は等方的ですが、それは異方的なmass tensorを除いて（up to a anisotropic mass tensor）の話です。
+以上のプロセスは、単に $\omega = \frac{1}{\sqrt{2}} (1,i)^T$ を任意のunimodular vectorに拡張しただけであり、一般的なGalilean metricに対しても、システムの「回転対称性」を生成するanisotropic mass tensor adapted angular momentum operatorを構築できることを示しています。これは楕円を引き伸ばして円にするようなもので、ある程度は等方的ですが、それは異方的なmass tensorを除いて（up to a anisotropic mass tensor）の話です。
 
 ### Intrinsic Quantum Geometry of FQH state: Guiding Center Metric
 
-しかし、これはGalilean metricがシステムが「好んで」選択する異方性の方向であることを意味するのでしょうか？いいえ。$$L_0$$ の定義を修正する（つまりGuiding center Metricの自由度を修正する）ことで、相互作用やCoulomb metricを導入する前であっても、波動関数の選択には依然として内因的なquantum geometryの自由度が存在することを示すことができます。
+しかし、これはGalilean metricがシステムが「好んで」選択する異方性の方向であることを意味するのでしょうか？いいえ。$L_0$ の定義を修正する（つまりGuiding center Metricの自由度を修正する）ことで、相互作用やCoulomb metricを導入する前であっても、波動関数の選択には依然として内因的なquantum geometryの自由度が存在することを示すことができます。
 
-私たちのGuiding Center $$R$$、およびそのladder operator $$a,\,a^\dagger$$ は、統一されたLL内の縮退状態（degenerate state）を特定するために構築されました。しかし、量子力学の初歩で学ぶように、縮退状態の完全基底の選び方は一意ではありません。この基底の組に対してユニタリ変換を行い、新しい完全基底の組を得ることは完全に可能です。Guiding Centerの文脈で、以前のGuiding Center Ladder Operatorの構築を思い出してみましょう：
+私たちのGuiding Center $R$、およびそのladder operator $a,\,a^\dagger$ は、統一されたLL内の縮退状態（degenerate state）を特定するために構築されました。しかし、量子力学の初歩で学ぶように、縮退状態の完全基底の選び方は一意ではありません。この基底の組に対してユニタリ変換を行い、新しい完全基底の組を得ることは完全に可能です。Guiding Centerの文脈で、以前のGuiding Center Ladder Operatorの構築を思い出してみましょう：
 
 $$
 R^a=r^a+\hbar^{-1}\ell^2\epsilon^{ab}\pi_b,
@@ -180,13 +180,13 @@ $$
 $$
 [R^a, R^b]=-i\epsilon^{ab}\ell^2,\quad [R^a,\pi_b]=0,
 $$
-"guiding center" ladder operators：$$a$$，$$a^{\dagger}$$ の構築：
+"guiding center" ladder operators：$a$，$a^{\dagger}$ の構築：
 $$
 a=\ell^{-1}\left({\bm \omega}^*\cdot{\bm R}\right),
 \quad a^\dagger=\ell^{-1}\left({\bm \omega}\cdot{\bm R}\right),
 \quad [a,a^\dagger]=1
 $$
-ここで、Guiding centerのladder operatorを定義するために、Galilean Metricで定義されたunimodular vector $$\omega$$ を先入観を持って使用してしまったことに気づくのは難しくありません。しかし、前述のように、この基底の組に対してユニタリ変換を行い、新しい完全基底の組を得ることは完全に可能です。相互作用のない（noninteracting）状況下ではこれは全く問題ありません。現在のシステムには、Galilean metricをその内因的（intrinsic）な性質として特定する理由はありません。逆に言えば、この完全基底選択の不確定性は、LLL単一粒子波動関数を構築するための新しい自由度、すなわちGuiding Center Metricの自由度を私たちに与えてくれます。これは後に、FQHでよく議論されるIntrinsic Quantum Geometric自由度へと発展します（metricとgeometryはしばしば不可分です）。
+ここで、Guiding centerのladder operatorを定義するために、Galilean Metricで定義されたunimodular vector $\omega$ を先入観を持って使用してしまったことに気づくのは難しくありません。しかし、前述のように、この基底の組に対してユニタリ変換を行い、新しい完全基底の組を得ることは完全に可能です。相互作用のない（noninteracting）状況下ではこれは全く問題ありません。現在のシステムには、Galilean metricをその内因的（intrinsic）な性質として特定する理由はありません。逆に言えば、この完全基底選択の不確定性は、LLL単一粒子波動関数を構築するための新しい自由度、すなわちGuiding Center Metricの自由度を私たちに与えてくれます。これは後に、FQHでよく議論されるIntrinsic Quantum Geometric自由度へと発展します（metricとgeometryはしばしば不可分です）。
 
 RZ Qiu, FDM Haldane, X Wan, K Yang, S Yiらによる論文「Model Anisotropic quantum Hall states」では、次のように説明されています：
 
@@ -203,50 +203,50 @@ $$
 $$
 \bar L = {\textstyle\frac{1}{2}}(a^{\dagger}a + aa^{\dagger}).
 $$
-$$L_0 = L + \bar L$$ の中の $$L$$ はすでに $$H_0$$ と可換であるため、$$L_0$$ の非自明な部分（nontrivial part）は $$\bar L$$ に由来することがわかります。
+$L_0 = L + \bar L$ の中の $L$ はすでに $H_0$ と可換であるため、$L_0$ の非自明な部分（nontrivial part）は $\bar L$ に由来することがわかります。
 
-すると、元々定義していた $$H_0$$ と $$\bar L$$ の同時固有状態によって、n番目のLLのm番目の縮退波動関数を決定できます。
+すると、元々定義していた $H_0$ と $\bar L$ の同時固有状態によって、n番目のLLのm番目の縮退波動関数を決定できます。
 $$
 \bar L |\psi_{nm} \rangle =
 (m+{\textstyle\frac{1}{2}})|\psi_{nm}\rangle
 $$
-上記の議論でGalilean metricがどのように「先入観を持って」Guiding center Degeneracy自由度の構築に入り込んだかを表現するために、$$\bar L$$ を次のように書くことができます：
+上記の議論でGalilean metricがどのように「先入観を持って」Guiding center Degeneracy自由度の構築に入り込んだかを表現するために、$\bar L$ を次のように書くことができます：
 $$
 \bar L = \bar L(g^0)
 $$
-そして、任意のguiding center metricの下での $$\bar L$$ を定義します：
+そして、任意のguiding center metricの下での $\bar L$ を定義します：
 $$
 \bar L(g) =  \frac{1}{2\ell^2}g_{ab}R^aR^b
 $$
-ここで、band mass tensorに由来する "Galilean metric" を $$g^0_{ab}$$ と記し、その特殊性を反映させます。同時に、unimodular vector $$\bar \omega$$ を用いて任意のguiding center metricを定義します。
+ここで、band mass tensorに由来する "Galilean metric" を $g^0_{ab}$ と記し、その特殊性を反映させます。同時に、unimodular vector $\bar \omega$ を用いて任意のguiding center metricを定義します。
 
-任意のguiding center metricの下での $$\bar L$$ に対して：
+任意のguiding center metricの下での $\bar L$ に対して：
 $$
 m_{ab}=m(\omega^*_a\omega_b+\omega^*_b\omega_a)=mg^0_{ab}.
 $$
-同様に、$$\bar \omega$$ を用いて任意のguiding center metricをパラメータ化できます：
+同様に、$\bar \omega$ を用いて任意のguiding center metricをパラメータ化できます：
 $$
 g_{ab} = \bar \omega^*_a \bar \omega_b+ \bar \omega^*_b \bar \omega_a.
 $$
-これは、"guiding center" ladder operators：$$a$$，$$a^{\dagger}$$ を構築する際に以下を選択したことに相当します：
+これは、"guiding center" ladder operators：$a$，$a^{\dagger}$ を構築する際に以下を選択したことに相当します：
 $$
 a=\ell^{-1}\left(\bar {\bm \omega}^*\cdot{\bm R}\right),
 \quad a^\dagger=\ell^{-1}\left( \bar {\bm \omega}\cdot{\bm R}\right),
 \quad [a,a^\dagger]=1
 $$
-$$\omega$$ から任意の $$\bar \omega$$ へ、あるいは等価的に $$g_0^{ab}$$ から任意のguiding center metric $$g^{ab}$$ への変更は、LL内の縮退を区別するためのladder operatorに対してBogoliubov変換を行ったことに相当します。これは、LLの縮退を記述する完全基底自体は依然として完全であることを示しており、単に、より自然的で、より任意性があり、Galilean metricによって「先入観を持って」選ばれていない別の基底の組に取り替えただけです。
+$\omega$ から任意の $\bar \omega$ へ、あるいは等価的に $g_0^{ab}$ から任意のguiding center metric $g^{ab}$ への変更は、LL内の縮退を区別するためのladder operatorに対してBogoliubov変換を行ったことに相当します。これは、LLの縮退を記述する完全基底自体は依然として完全であることを示しており、単に、より自然的で、より任意性があり、Galilean metricによって「先入観を持って」選ばれていない別の基底の組に取り替えただけです。
 
 これはnoninteractingの文脈では合理的です。その後、相互作用とCoulomb metricを導入すると、この任意のguiding center metric/Intrinsic Quantum Geometryは多体波動関数の変分パラメータとなり、システムはエネルギーがより低いguiding center metricで構成されるLaughlin状態などの多体波動関数を選択する傾向があります。
 
-guiding center metric $$\bar \omega_a$$ と元のGalilean metric $$\omega$$ の違いを区別するために、RZ Qiu, FDM Haldane, X Wan, K Yang, S Yiらはさらに、両者の違いをパラメータ化するために複素数 $$\gamma$$ を導入しました。
+guiding center metric $\bar \omega_a$ と元のGalilean metric $\omega$ の違いを区別するために、RZ Qiu, FDM Haldane, X Wan, K Yang, S Yiらはさらに、両者の違いをパラメータ化するために複素数 $\gamma$ を導入しました。
 
-このパラメータは $$|\gamma| < 1$$ を満たし、その物理的意味は離心率に似ており、Galilean metricを除いた（up to a Galilean metric）異方性を定義するために使用されます。この点は、後の単一粒子波動関数の特徴に見出すことができます。
+このパラメータは $|\gamma| < 1$ を満たし、その物理的意味は離心率に似ており、Galilean metricを除いた（up to a Galilean metric）異方性を定義するために使用されます。この点は、後の単一粒子波動関数の特徴に見出すことができます。
 
-具体的には、$$\gamma$$ によってパラメータ化されたguiding center metricはさらに次のように表すことができます。
+具体的には、$\gamma$ によってパラメータ化されたguiding center metricはさらに次のように表すことができます。
 $$
 \bar \omega_a = (1-|\gamma|^2)^{-1/2}(\omega_a + \gamma^* \omega_a^*),
 $$
-これはunimodular metric $$g_{ab}(\gamma)$$ を決定します。
+これはunimodular metric $g_{ab}(\gamma)$ を決定します。
 $$
 \begin{aligned}
 g_{ab}(\gamma) & = \bar \omega_a^*\bar \omega_b+\bar \omega_a\bar \omega_b^* \\
@@ -286,7 +286,7 @@ $$
 =\frac{(b^\dag)^n(a^{\dagger}_{\gamma})^m}{\sqrt{n!m!}}
 |\psi_{00}(\gamma)\rangle
 $$
-ここで $$|\psi_{00}(\gamma)\rangle$$ は、他のLLL縮退波動関数を生成するために使用されるLLL単一粒子波動関数の基底であり、以下を満たします：
+ここで $|\psi_{00}(\gamma)\rangle$ は、他のLLL縮退波動関数を生成するために使用されるLLL単一粒子波動関数の基底であり、以下を満たします：
 $$
 a_{\gamma}|\psi_{00}(\gamma)\rangle =
 b|\psi_{00}(\gamma)\rangle  = 0.
@@ -311,7 +311,7 @@ $$
 $$
 T=\sum_j{1\over 2m}\left[a(\Pi^j_x)^2+(\Pi^j_y)^2/a\right].
 $$
-このようにすると $$a=1$$ は等方的な場合に退化し、一般的な $$a$$ は一般的な異方的なGalilean metricの選択を表します。これは以下のGalilean metricを選択したことに相当します：
+このようにすると $a=1$ は等方的な場合に退化し、一般的な $a$ は一般的な異方的なGalilean metricの選択を表します。これは以下のGalilean metricを選択したことに相当します：
 $$
 g_{ab} = \begin{pmatrix}
 a & 0 \\
@@ -333,7 +333,7 @@ $$
 $$
 \rho_{\bf q}=\sum_{i}e^{i{\bf q}\cdot{\bf r}_i}
 $$
-一般的には、異方的な $$\tilde g^{ab}$$ によって特徴付けられるinteraction anisotropyも存在します：
+一般的には、異方的な $\tilde g^{ab}$ によって特徴付けられるinteraction anisotropyも存在します：
 $$
 \lim_{\lambda \rightarrow 0} \lambda V(\lambda \bm q) \rightarrow 
 \frac{e^2}{2\varepsilon}(\tilde g^{ab}q_aq_b)^{-1/2} ,
@@ -342,7 +342,7 @@ $$
 
 #### Projected Interaction
 
-モデルを簡略化するために、磁場が非常に大きく、LL間の分裂 $$\hbar \omega_c$$ がinteraction scale $$e^2/a$$ よりもはるかに大きい場合を考えます。これにより、波動関数は基本的にhigher landau levelに入らないと見なすことができ、問題全体をLLLに射影（project）して議論することができます。これは分数チャーン絶縁体を議論する際の慣用的な操作でもあります。興味のある方は以下を参照してください：
+モデルを簡略化するために、磁場が非常に大きく、LL間の分裂 $\hbar \omega_c$ がinteraction scale $e^2/a$ よりもはるかに大きい場合を考えます。これにより、波動関数は基本的にhigher landau levelに入らないと見なすことができ、問題全体をLLLに射影（project）して議論することができます。これは分数チャーン絶縁体を議論する際の慣用的な操作でもあります。興味のある方は以下を参照してください：
 
 https://zhuanlan.zhihu.com/p/574597173
 
@@ -387,7 +387,7 @@ $$
 
 これほど多くの簡略化を行っても、一般形式の相互作用を解析的に計算するのは困難です。さらに特殊なケースとして、Coulombポテンシャルがガウス関数（Gaussian function）である場合を考えます。これは、遮蔽されたCoulomb相互作用（screened Coulomb interaction）の特徴を大まかに記述しています。
 
-等方的な相互作用は $$V_q$$ の係数分布の等方性に反映されます：$$v({\bf r})=v(r)$$，$$v_{\bf q}=v_q$$.
+等方的な相互作用は $V_q$ の係数分布の等方性に反映されます：$v({\bf r})=v(r)$，$v_{\bf q}=v_q$.
 
 さらにGaussian Interactionを考えます：
 $$
@@ -411,25 +411,25 @@ $$
 $$
 g=\sqrt{(a\ell^2+s^2)/(\ell^2/a+s^2)}.
 $$
-以上のステップは単純な数学的導出ですが、ここで定義された $$g$$ が前のセクションで議論したguiding center metricの異方性と直接関連していることが後でわかります。さらに、この特殊なGaussian Interactionの下では、$$g=\sqrt{(a\ell^2+s^2)/(\ell^2/a+s^2)}$$ が相互作用問題において多体基底状態波動関数のエネルギーを最小にするguiding center metricの選択を直接与えます。
+以上のステップは単純な数学的導出ですが、ここで定義された $g$ が前のセクションで議論したguiding center metricの異方性と直接関連していることが後でわかります。さらに、この特殊なGaussian Interactionの下では、$g=\sqrt{(a\ell^2+s^2)/(\ell^2/a+s^2)}$ が相互作用問題において多体基底状態波動関数のエネルギーを最小にするguiding center metricの選択を直接与えます。
 
 まず、ここでのgのいくつかの性質を見てみましょう：
 
-$$g\rightarrow a$$ for $$s\ll \ell$$, $$g\rightarrow 1$$ for $$s\gg \ell$$
+$g\rightarrow a$ for $s\ll \ell$, $g\rightarrow 1$ for $s\gg \ell$
 
 同時に、一般的に以下が成り立ちます：
 $$
 1 < g < a
 $$
-実際、下限1は等方的なinteraction metricを反映し、上限 $$a$$ は異方的なmass tensor metricを反映しています。もし、$$g$$ が最適な基底状態選択のintrinsic quantum geometryの異方性情報であるという以前の主張を認めるなら、この不等式は確かにこのセクションの冒頭の議論を反映しています：
+実際、下限1は等方的なinteraction metricを反映し、上限 $a$ は異方的なmass tensor metricを反映しています。もし、$g$ が最適な基底状態選択のintrinsic quantum geometryの異方性情報であるという以前の主張を認めるなら、この不等式は確かにこのセクションの冒頭の議論を反映しています：
 
 Intrinsic Geometry as a Compromise between Galilean and Coulomb Metric.
 
 #### Many-Body Ground State of Anisotropic FQHE
 
-以下では、いくつかの議論を通じて、$$g$$ とFQH状態のIntrinsic quantum geometry/guiding center metricとの関連を証明し、なぜ $$g=\sqrt{(a\ell^2+s^2)/(\ell^2/a+s^2)}$$ がLaughlinなどの多体波動関数の変分パラメータの最適な選択であるのかを説明します。
+以下では、いくつかの議論を通じて、$g$ とFQH状態のIntrinsic quantum geometry/guiding center metricとの関連を証明し、なぜ $g=\sqrt{(a\ell^2+s^2)/(\ell^2/a+s^2)}$ がLaughlinなどの多体波動関数の変分パラメータの最適な選択であるのかを説明します。
 
-まず、一般的な $$g$$ と $$g=1$$ の特殊なケースの関連を確立できます：
+まず、一般的な $g$ と $g=1$ の特殊なケースの関連を確立できます：
 $$
 \tilde{V}_g=O^\dagger[\lambda(g)]\tilde{V}_{g=1} O[\lambda(g)],
 $$
@@ -446,17 +446,17 @@ $$
 $$
 O^\dagger(\lambda)R_y^i O(\lambda)=e^{-\lambda} R_y^i.
 $$
-このguiding centerが等方的から異方的へと変化する過程は、以前に異なるguiding center metricを選択してguiding center operatorを構築し、それによってLL内部の完全な縮退基底の組を構築した操作と一致しています。これは $$g$$ とFQH状態のIntrinsic quantum geometry/guiding center metricとの関連を説明しています。
+このguiding centerが等方的から異方的へと変化する過程は、以前に異なるguiding center metricを選択してguiding center operatorを構築し、それによってLL内部の完全な縮退基底の組を構築した操作と一致しています。これは $g$ とFQH状態のIntrinsic quantum geometry/guiding center metricとの関連を説明しています。
 
-さらに、$$g=1$$ が等方的な特殊なケースであることを知っており、このときInteraction LLLの下での基底状態がLaughlin State（厳密にはLaughlin Stateは2体Haldane Pseudopotentialの下でのみ厳密な基底状態ですが、Gaussian interactionの下でもLaughlin stateは依然としてFQH基底状態に近いと仮定します）であることを熟知しています。したがって、$$\tilde{V}_{g=1}$$ の基底状態（運動エネルギーは無視できる）は $$|\Psi_{GS,g=1}\rangle \approx |\Psi_{Laughlin} \rangle$$ となります。
+さらに、$g=1$ が等方的な特殊なケースであることを知っており、このときInteraction LLLの下での基底状態がLaughlin State（厳密にはLaughlin Stateは2体Haldane Pseudopotentialの下でのみ厳密な基底状態ですが、Gaussian interactionの下でもLaughlin stateは依然としてFQH基底状態に近いと仮定します）であることを熟知しています。したがって、$\tilde{V}_{g=1}$ の基底状態（運動エネルギーは無視できる）は $|\Psi_{GS,g=1}\rangle \approx |\Psi_{Laughlin} \rangle$ となります。
 
-したがって、変換後の $$\tilde{V}_g=O^\dagger[\lambda(g)]\tilde{V}_{g=1} O[\lambda(g)]$$ の基底状態は、おおよそ次のように考えられます（ハミルトニアンがユニタリ変換一つ分異なるだけで、エネルギースペクトルは変化せず、基底状態を含む対応する波動関数も同じユニタリ変換一つ分異なるだけであるはずです）：
+したがって、変換後の $\tilde{V}_g=O^\dagger[\lambda(g)]\tilde{V}_{g=1} O[\lambda(g)]$ の基底状態は、おおよそ次のように考えられます（ハミルトニアンがユニタリ変換一つ分異なるだけで、エネルギースペクトルは変化せず、基底状態を含む対応する波動関数も同じユニタリ変換一つ分異なるだけであるはずです）：
 $$
 |\Psi_{GS,g}\rangle=O^\dagger[\lambda(g)]|\Psi_{g=1}\rangle \approx O^\dagger[\lambda(g)] |\Psi_{Laughlin} \rangle =|\Psi^{Laughlin}_{g}\rangle
 $$
-これに加えて、$$g$$ がシステムのguiding center metric anisotropyの情報を表しているという点を合わせると、$$|\Psi^{Laughlin}_{g=\sqrt{(a\ell^2+s^2)/(\ell^2/a+s^2)}}\rangle$$ は、anisotropic mass tensor + isotropic gaussian interactionの下で、guiding center metric anisotropy/Intrinsic quantum geometryを変分パラメータとする、より一般的なLaughlin波動関数の最適な変分基底状態解であると考えることができます。
+これに加えて、$g$ がシステムのguiding center metric anisotropyの情報を表しているという点を合わせると、$|\Psi^{Laughlin}_{g=\sqrt{(a\ell^2+s^2)/(\ell^2/a+s^2)}}\rangle$ は、anisotropic mass tensor + isotropic gaussian interactionの下で、guiding center metric anisotropy/Intrinsic quantum geometryを変分パラメータとする、より一般的なLaughlin波動関数の最適な変分基底状態解であると考えることができます。
 
-したがって、$$g=\sqrt{(a\ell^2+s^2)/(\ell^2/a+s^2)} \in (1,a)$$ は、異なる相互作用の下でのFQHのIntrinsic Geometryの決定（determination）を完全に反映しています。定性的には、やはりこのセクションの冒頭の議論通りです：
+したがって、$g=\sqrt{(a\ell^2+s^2)/(\ell^2/a+s^2)} \in (1,a)$ は、異なる相互作用の下でのFQHのIntrinsic Geometryの決定（determination）を完全に反映しています。定性的には、やはりこのセクションの冒頭の議論通りです：
 
 Intrinsic Geometry as a Compromise between Galilean and Coulomb Metric
 
@@ -493,14 +493,14 @@ $$
 $$
 a=1+\xi(t)
 $$
-これは $$g = g(a)$$ を通じて振動する（oscillating）metricとして現れます。振動するmetricの物理的描像は重力波（gravitational wave）であることを私たちは知っています。したがって、振動するmetricによって励起される準粒子は、高エネルギー物理学で議論されるgravitonと類似の性質を持つ可能性が高いです。
+これは $g = g(a)$ を通じて振動する（oscillating）metricとして現れます。振動するmetricの物理的描像は重力波（gravitational wave）であることを私たちは知っています。したがって、振動するmetricによって励起される準粒子は、高エネルギー物理学で議論されるgravitonと類似の性質を持つ可能性が高いです。
 
-$$a=1+\xi(t)$$ に基づいて $$\tilde{V}$$ を摂動展開します：
+$a=1+\xi(t)$ に基づいて $\tilde{V}$ を摂動展開します：
 $$
 \delta\tilde{V}(t)=\frac{\xi(t)}{4}\sum_{\bf q}(q^2_y - q^2_x)V_{\bf
 q}e^{-\frac{1}{2}q^2\ell^2}\overline{\rho}_{\bf q}\overline{\rho}_{-{\bf q}}.
 $$
-$$(q^2_y - q^2_x)$$ の部分が確かにd波の対称性を持っていることがわかります。これは、振動するmetricによって励起される準粒子がスピン2の準粒子である可能性が高いことを示しています。これは高エネルギー物理学で広く信じられているgravitonのスピン2の性質と「奇しくも一致」しています（本質的には、両者ともmetric場の振動であり、その量子が類似の性質を持つことは想像に難くありません）。
+$(q^2_y - q^2_x)$ の部分が確かにd波の対称性を持っていることがわかります。これは、振動するmetricによって励起される準粒子がスピン2の準粒子である可能性が高いことを示しています。これは高エネルギー物理学で広く信じられているgravitonのスピン2の性質と「奇しくも一致」しています（本質的には、両者ともmetric場の振動であり、その量子が類似の性質を持つことは想像に難くありません）。
 
 時間調和摂動（time-harmonic perturbation）の場合、実験的に測定されるスペクトル関数は、よく知られたフェルミの黄金律（Fermi Golden Rule）を通じて容易に得られます：
 $$
@@ -511,36 +511,36 @@ $$
 \hat{O}=\sum_{\bf q}(q^2_y - q^2_x)V_{\bf q}e^{-\frac{1}{2}q^2\ell^2}\overline{\rho}_{\bf
 q}\overline{\rho}_{-{\bf q}}
 $$
-この摂動演算子をさらに $$S_z = \pm 2$$ の形式に分割できます：
+この摂動演算子をさらに $S_z = \pm 2$ の形式に分割できます：
 $$
 \hat{O}_\mp^{(2)}=\sum_{\bf q}(q_x \mp i q_y)^2 V_{\bf q}e^{-\frac{1}{2}q^2\ell^2}\overline{\rho}_{\bf
 q}\overline{\rho}_{-{\bf q}},
 $$
-これら2つの演算子はそれぞれスピン $$S_z = \pm2$$ のgraviton励起を反映しており、対応するスペクトルは以下の通りです：
+これら2つの演算子はそれぞれスピン $S_z = \pm2$ のgraviton励起を反映しており、対応するスペクトルは以下の通りです：
 $$
 I_\sigma(\omega)=\sum_n|\langle n|\hat{O} _{\sigma}|0\rangle|^2\delta(\omega-\omega_n),
 $$
-ここで、$$\hat{O}_\mp$$ はgravitonの生成・消滅演算子と見なすことができます。ここでは、生成される準粒子励起が $$S_z = -2$$ のみであると特定（specify）していることに相当するため、このgraviton励起はカイラル重力子（Chiral Graviton）とも呼ばれます。この選択の由来については後で説明します。逆に、粒子-正孔共役（particle-hole conjugate）なFQH状態の場合、graviton励起のスピンは逆になり、これがさらにそのカイラル（Chiral）な特性を反映しています。
+ここで、$\hat{O}_\mp$ はgravitonの生成・消滅演算子と見なすことができます。ここでは、生成される準粒子励起が $S_z = -2$ のみであると特定（specify）していることに相当するため、このgraviton励起はカイラル重力子（Chiral Graviton）とも呼ばれます。この選択の由来については後で説明します。逆に、粒子-正孔共役（particle-hole conjugate）なFQH状態の場合、graviton励起のスピンは逆になり、これがさらにそのカイラル（Chiral）な特性を反映しています。
 
-そして $$\hat{O}=(\hat{O} _{+} + \hat{O} _{-})/2$$ は、調和振動子における変位演算子（displacement operator）に相当し、摂動演算子として「重力波」（本質的には音響波によって誘起された振動するmass tensor anisotropy）と結合します。
+そして $\hat{O}=(\hat{O} _{+} + \hat{O} _{-})/2$ は、調和振動子における変位演算子（displacement operator）に相当し、摂動演算子として「重力波」（本質的には音響波によって誘起された振動するmass tensor anisotropy）と結合します。
 
 ### Chirality of Graviton
 
-なぜGravitonの励起はカイラルなのでしょうか？ $$\nu = 1/3$$ のLaughlin stateを例にとって分析してみましょう。$$\hat{O}_\mp$$ が2粒子波動関数に作用するとき、次のようになることは容易にわかります。
+なぜGravitonの励起はカイラルなのでしょうか？ $\nu = 1/3$ のLaughlin stateを例にとって分析してみましょう。$\hat{O}_\mp$ が2粒子波動関数に作用するとき、次のようになることは容易にわかります。
 $$
 O_{+} \propto \sum\limits_{M} |m+2, M \rangle \langle m, M|
 $$
 $$
 O_{-} \propto \sum\limits_{M} |m, M \rangle \langle m + 2, M|$$
-ここで $$|m, M \rangle$$ の中の $$m$$ と $$M$$ はそれぞれ、2粒子波動関数状態の相対角運動量（relative angular momentum）と重心角運動量（center-of-mass angular momentum）を表しています。
+ここで $|m, M \rangle$ の中の $m$ と $M$ はそれぞれ、2粒子波動関数状態の相対角運動量（relative angular momentum）と重心角運動量（center-of-mass angular momentum）を表しています。
 
-$$\hat{O}_{+}$$ がLaughlin stateを消滅させることは容易にわかります。なぜなら、$$\hat{O}_{+}$$ は相対角運動量 $$m$$ の2粒子状態を相対角運動量 $$m+2$$ に変化させますが、これはLaughlin state内には存在しないため、Laughlin stateを消滅（annihilate）させるからです。
+$\hat{O}_{+}$ がLaughlin stateを消滅させることは容易にわかります。なぜなら、$\hat{O}_{+}$ は相対角運動量 $m$ の2粒子状態を相対角運動量 $m+2$ に変化させますが、これはLaughlin state内には存在しないため、Laughlin stateを消滅（annihilate）させるからです。
 
-したがって、$$I _{+}(\omega)$$ スペクトルは常に0です。一方、$$I _{-}(\omega)$$ はフェルミオンおよびボソンの場合において常に強いgravitonピークを示します。これは、$$\nu = 1/3$$ のLaughlin stateのgraviton励起が常に $$S_z  =-2$$ であることを示しています。逆に、そのPH共役である $$\nu = 1 - 1/3$$ の正孔Laughlin stateのgraviton励起は常に $$S_z  = 2$$ となり、これがgraviton励起のカイラリティを体現しています。
+したがって、$I _{+}(\omega)$ スペクトルは常に0です。一方、$I _{-}(\omega)$ はフェルミオンおよびボソンの場合において常に強いgravitonピークを示します。これは、$\nu = 1/3$ のLaughlin stateのgraviton励起が常に $S_z  =-2$ であることを示しています。逆に、そのPH共役である $\nu = 1 - 1/3$ の正孔Laughlin stateのgraviton励起は常に $S_z  = 2$ となり、これがgraviton励起のカイラリティを体現しています。
 
 ### Inaccessibility of normal Magnetoroton modes
 
-本質的に、graviton modeは私たちがFQHで議論する中性集団励起：$$k\rightarrow 0$$ の極限におけるGMP magnetoroton modeです。言い換えれば、長波長極限において、FQHのダイナミクスは上記で議論したIntrinsic Quantum Geometryのダイナミクスによって決定されます。場合によっては、chiral graviton modeは長波長極限におけるGMP magnetoroton modeの特殊なケースとも呼ばれます。しかし、長波長極限では、GMP magnetoroton modeの構造因子（structural factor）が $$\langle 0|\rho_{{\bf k}}\rho_{-{\bf k}}|0\rangle\propto (k\ell)^4$$ となるため、一般的な電磁場と電子密度を結合させる方法を用いて長波長極限のGMP magnetoroton modeを検出することは困難です。GMP magnetorotonの詳細については、私の以前のノートも参照できます：
+本質的に、graviton modeは私たちがFQHで議論する中性集団励起：$k\rightarrow 0$ の極限におけるGMP magnetoroton modeです。言い換えれば、長波長極限において、FQHのダイナミクスは上記で議論したIntrinsic Quantum Geometryのダイナミクスによって決定されます。場合によっては、chiral graviton modeは長波長極限におけるGMP magnetoroton modeの特殊なケースとも呼ばれます。しかし、長波長極限では、GMP magnetoroton modeの構造因子（structural factor）が $\langle 0|\rho_{{\bf k}}\rho_{-{\bf k}}|0\rangle\propto (k\ell)^4$ となるため、一般的な電磁場と電子密度を結合させる方法を用いて長波長極限のGMP magnetoroton modeを検出することは困難です。GMP magnetorotonの詳細については、私の以前のノートも参照できます：
 
 https://zhuanlan.zhihu.com/p/574597173
 
@@ -548,7 +548,7 @@ https://zhuanlan.zhihu.com/p/574597173
 
 ### Detection of Chiral Graviton in FQHE
 
-上述の音響波による方法以外に、南京大学がgravitonを検出した方法は、円偏光（circular polarized light）に関連する分光法を利用したものです。円偏光は $$S_z = \pm1$$ のスピンを持つため、もし $$S_z = -1$$ の円偏光を用いて $$S_z = -2$$ のchiral gravitonを励起した場合、システムが吸収した後に放出される光は $$S_z = 1$$ となるはずです。この原理を通じて、南京大学のLingjie Duの研究グループとそのドイツ・アメリカの同僚たちは、FQHEにおけるchiral graviton modeの発見に成功し、Nature誌に発表しました。これが私たちがよく知るストーリーです。
+上述の音響波による方法以外に、南京大学がgravitonを検出した方法は、円偏光（circular polarized light）に関連する分光法を利用したものです。円偏光は $S_z = \pm1$ のスピンを持つため、もし $S_z = -1$ の円偏光を用いて $S_z = -2$ のchiral gravitonを励起した場合、システムが吸収した後に放出される光は $S_z = 1$ となるはずです。この原理を通じて、南京大学のLingjie Duの研究グループとそのドイツ・アメリカの同僚たちは、FQHEにおけるchiral graviton modeの発見に成功し、Nature誌に発表しました。これが私たちがよく知るストーリーです。
 
 ## Relation with Band Geometry from Momentum-Space Duality
 
@@ -556,7 +556,7 @@ https://zhuanlan.zhihu.com/p/574597173
 
 例えば、Claassen, M., Lee, C. H., Thomale, R., Qi, X. L., & Devereaux, T. P.らによる2015年の「Position-momentum duality and fractional quantum hall effect in chern insulators」と題されたPRL論文では、Band GeometryとFQH状態のIntrinsic Quantum Geometryとの関連が議論されています。
 
-具体的には、Band Systemにおいて、波動関数空間（Projected Hilbert Space $$\mathbb{C}P^{N-1}$$）のシンプレクティック幾何学があり、その虚部は私たちがよく知るベリー曲率（Berry Curvature）で、運動量空間の磁場に似ています：
+具体的には、Band Systemにおいて、波動関数空間（Projected Hilbert Space $\mathbb{C}P^{N-1}$）のシンプレクティック幾何学があり、その虚部は私たちがよく知るベリー曲率（Berry Curvature）で、運動量空間の磁場に似ています：
 $$
 \Omega(k) = \epsilon^{\mu\nu} \partial_{k_\mu} \mathbf{A}_\nu(k)
 $$
@@ -572,7 +572,7 @@ FQHにおいて角運動量演算子によってLLL内の縮退を区別した�
 $$
 \hat{V}(r)= \tfrac{1}{2} \lambda~ x_{\mu} \eta^{\mu\nu} x_{\nu}
 $$
-$$\eta^{\mu\nu}$$ は、回転対称性を破った格子系において「擬角運動量演算子」を定義するために用いられるmetricを記述することができ、これはLattice SystemにおけるGuiding Center Metricの類似物（analogy）、すなわちIntrinsic Quantum GeometryのLattice versionです。
+$\eta^{\mu\nu}$ は、回転対称性を破った格子系において「擬角運動量演算子」を定義するために用いられるmetricを記述することができ、これはLattice SystemにおけるGuiding Center Metricの類似物（analogy）、すなわちIntrinsic Quantum GeometryのLattice versionです。
 
 同様にLLLへの射影を考えると、この単一粒子「擬角運動量演算子」（本質的には人工的な閉じ込めポテンシャル）の射影は以下のようになります：
 $$

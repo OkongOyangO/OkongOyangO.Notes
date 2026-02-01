@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Berry Phase on OkongOyangOのノート</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/berry-phase/</link>
+    <description>Recent content in Berry Phase on OkongOyangOのノート</description>
+    <generator>Hugo</generator>
+    <language>ja</language>
+    <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
+    <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
+    <lastBuildDate>Sat, 13 May 2023 10:00:00 -0500</lastBuildDate>
+    <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/berry-phase/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>🫨最大局在化ワニエ関数と量子幾何</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/maximally_localized_wannier_function_and_quantum_geometry/</link>
+      <pubDate>Sat, 13 May 2023 10:00:00 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/maximally_localized_wannier_function_and_quantum_geometry/</guid>
+      <description>&lt;p&gt;本ノートは、最大局在化ワニエ関数（Maximally Localized Wannier Function）のゲージ選択問題について簡単に説明し、量子幾何（Quantum Geometry）がその局在度をどのように制限するかを議論する。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

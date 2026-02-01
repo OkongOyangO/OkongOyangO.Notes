@@ -25,6 +25,13 @@
       <description>&lt;p&gt;本note旨在阐述多体系统&lt;strong&gt;导电性&lt;/strong&gt;与&lt;strong&gt;基态量子几何性质&lt;/strong&gt;的关联，并解释如何仅通过基态波函数的&amp;quot;局域&amp;quot;程度，来区分导体和绝缘体。&lt;/p&gt;</description>
     </item>
     <item>
+      <title>🫨最局域万尼尔函数与量子几何</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/maximally_localized_wannier_function_and_quantum_geometry/</link>
+      <pubDate>Sat, 13 May 2023 10:00:00 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/maximally_localized_wannier_function_and_quantum_geometry/</guid>
+      <description>&lt;p&gt;本note简述最大局域化Wannier函数（Maximally Localized Wannier Function）的规范选取问题，并讨论量子几何（Quantum Geometry）如何限制其局域程度。&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>🤫平均场近似与变分法｜Hartree, Fock, BCS能1:1:1混用吗？</title>
       <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/mean_field_approximation/</link>
       <pubDate>Sat, 11 Mar 2023 22:30:00 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>

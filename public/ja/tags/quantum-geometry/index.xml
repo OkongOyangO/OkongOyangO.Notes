@@ -17,5 +17,12 @@
       <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/chiral-graviton-in-fqhe/</guid>
       <description>&lt;p&gt;この記事は、分数量子ホール液体における「カイラル重力子（Chiral Graviton）」励起に関する理論と実験的検出方法を簡単に紹介し、最近の関連分野での熱い議論に「野次馬」的な素材を提供することを目的としています。筆者の能力には限りがありますので、専門家の皆様からのご指摘を歓迎します。&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>🫨最大局在化ワニエ関数と量子幾何</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/maximally_localized_wannier_function_and_quantum_geometry/</link>
+      <pubDate>Sat, 13 May 2023 10:00:00 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/maximally_localized_wannier_function_and_quantum_geometry/</guid>
+      <description>&lt;p&gt;本ノートは、最大局在化ワニエ関数（Maximally Localized Wannier Function）のゲージ選択問題について簡単に説明し、量子幾何（Quantum Geometry）がその局在度をどのように制限するかを議論する。&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

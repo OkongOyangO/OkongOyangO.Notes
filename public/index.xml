@@ -23,6 +23,14 @@
     <description><![CDATA[<p>This note aims to elucidate the connection between the <strong>conductivity</strong> of a many-body system and the <strong>quantum geometry of its ground state</strong>, and to explain how to distinguish between conductors and insulators solely based on the &ldquo;locality&rdquo; of the ground state wavefunction.</p>]]></description>
 </item>
 <item>
+    <title>🫨Maximally Localized Wannier Function &amp; Quantum Geometry</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/maximally_localized_wannier_function_and_quantum_geometry/</link>
+    <pubDate>Sat, 13 May 2023 10:00:00 -0500</pubDate>
+    <author>yzj5306@psu.edu (OkongOyangO)</author>
+    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/maximally_localized_wannier_function_and_quantum_geometry/</guid>
+    <description><![CDATA[<p>This note briefly describes the gauge selection problem of Maximally Localized Wannier Functions and discusses how Quantum Geometry limits their localization.</p>]]></description>
+</item>
+<item>
     <title>🤫Mean Field Approximation and Variational Method | Can Hartree, Fock, and BCS be Mixed 1:1:1?</title>
     <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/mean_field_approximation/</link>
     <pubDate>Sat, 11 Mar 2023 22:30:00 -0500</pubDate>

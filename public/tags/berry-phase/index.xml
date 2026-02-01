@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Berry Phase on OkongOyangO&#39;s Notes</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/tags/berry-phase/</link>
+    <description>Recent content in Berry Phase on OkongOyangO&#39;s Notes</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
+    <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
+    <lastBuildDate>Sat, 13 May 2023 10:00:00 -0500</lastBuildDate>
+    <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/tags/berry-phase/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>🫨Maximally Localized Wannier Function &amp; Quantum Geometry</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/maximally_localized_wannier_function_and_quantum_geometry/</link>
+      <pubDate>Sat, 13 May 2023 10:00:00 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/maximally_localized_wannier_function_and_quantum_geometry/</guid>
+      <description>&lt;p&gt;This note briefly describes the gauge selection problem of Maximally Localized Wannier Functions and discusses how Quantum Geometry limits their localization.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
