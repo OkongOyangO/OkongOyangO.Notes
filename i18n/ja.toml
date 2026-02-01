@@ -1,0 +1,60 @@
+# Japanese translations
+[selectLanguage]
+other = "言語"
+
+[switchTheme]
+other = "テーマ"
+
+[search]
+other = "検索"
+
+[clear]
+other = "クリア"
+
+[cancel]
+other = "キャンセル"
+
+[noResultsFound]
+other = "結果が見つかりません"
+
+[backToTop]
+other = "トップへ戻る"
+
+[viewComments]
+other = "コメントを見る"
+
+[posts]
+other = "記事"
+
+[tags]
+other = "タグ"
+
+[categories]
+other = "カテゴリ"
+
+[more]
+other = "もっと見る"
+
+[contents]
+other = "目次"
+
+[readMore]
+other = "続きを読む"
+
+[home]
+other = "ホーム"
+
+[back]
+other = "戻る"
+
+[pageNotFound]
+other = "ページが見つかりません"
+
+[pageNotFoundText]
+other = "お探しのページは存在しません。申し訳ありません。"
+
+[author]
+other = "著者"
+
+[copyToClipboard]
+other = "クリップボードにコピー"

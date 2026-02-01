@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>All Posts - OkongOyangOのノート</title>
+        <title>All 記事 - OkongOyangOのノート</title>
         <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/</link>
-        <description>All Posts | OkongOyangOのノート</description>
+        <description>All 記事 | OkongOyangOのノート</description>
         <generator>Hugo -- gohugo.io</generator><language>ja</language><managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
             <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster><lastBuildDate>Fri, 05 Apr 2024 12:00:00 &#43;0800</lastBuildDate><atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/" rel="self" type="application/rss+xml" /><item>
     <title>🤯分数量子ホール液体におけるカイラル重力子（Chiral Graviton）</title>
