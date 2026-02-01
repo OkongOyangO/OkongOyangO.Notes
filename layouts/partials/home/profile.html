@@ -193,14 +193,11 @@
             {{- range sort $socialArr "Weight" -}}
                 {{- partial "plugin/social.html" . -}}
             {{- end -}}
+            <a href="https://github.com/OkongOyangO/OkongOyangO.Notes" target="_blank" rel="noopener noreffer me" title="Like this site? Star on GitHub!">
+                <i class="fas fa-heart fa-fw" aria-hidden="true"></i>
+            </a>
         </div>
     {{- end -}}
-
-    {{- /* GitHub Star Button */ -}}
-    <div class="github-star" style="margin-top: 1rem;">
-        <iframe src="https://ghbtns.com/github-btn.html?user=OkongOyangO&repo=OkongOyangO.Notes&type=star&count=true&size=large"
-                frameborder="0" scrolling="0" width="170" height="30" title="GitHub Stars"></iframe>
-    </div>
 
     {{- with $profile.disclaimer -}}
         <h3 class="home-disclaimer">
