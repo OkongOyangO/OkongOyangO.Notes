@@ -114,9 +114,15 @@ theme = "LoveIt"
       gravatarEmail = ""
       avatarURL = "/OkongOyangO.Notes/images/profile.gif"
       title = "Physics Notes & Research Logs"
-      subtitle = "OkongOyangO's Notes on Condensed Matter Physics"
-      type = "it"
+      subtitle = "Welcome to OkongOyangO's PhysHub"
       social = true
+
+  # Social Links
+  [params.social]
+    zhihu = "O-kong-O-yang-O"
+    bilibili = "8734542"
+    x = "OkongOyangO"
+    email = "yzj5306@psu.edu"
 
   # Page Configuration
   [params.page]
