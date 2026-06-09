@@ -1,5 +1,5 @@
 ---
-title: "Quantum Geometry Everything？「量子幾何物理大応答」を一から解説する"
+title: "🥺 Quantum Geometry Everything？「量子幾何物理大応答」を一から解説する"
 date: 2026-06-09T12:00:00+08:00
 draft: false
 math: true
