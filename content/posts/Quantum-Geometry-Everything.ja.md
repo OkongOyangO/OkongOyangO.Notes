@@ -663,7 +663,7 @@ $$\mathrm{Tr}(g) \ge |\Omega|$$
 
 この境界についてのさらなる物理的詳細は、著者の以前の note を参照されたい：
 
-> 🔗 *【link: geometric bound / FCI note】*
+> 🔗 関連記事：[Band Geometry & GMP Algebra（フラットバンドFCI）](https://zhuanlan.zhihu.com/p/580954377) · [FQHE・GMP代数・分数チャーン絶縁体 (FCI)](https://zhuanlan.zhihu.com/p/574597173)
 
 これが geometric bound の幾何学的理解、すなわち「長さ」が「面積」に対して課す制限である。そして前章で知った通り、quantum geometry には幾何学的意味のほかに、それ自身の物理的意味もある。例えば quantum metric は波束の二次モーメント $\langle \Delta \hat{r}^a \Delta \hat{r}^b \rangle$ を記述し、波束の size を与えるに等しい。これは、非ゼロの Berry Curvature（トポロジカルな非自明性）が必然的に量子状態にパラメータ空間における非ゼロの「大きさ」を要求することを意味し、これがさらに電子の response（前小節の内容）や interaction（次小節の内容）に影響を与えうる。
 

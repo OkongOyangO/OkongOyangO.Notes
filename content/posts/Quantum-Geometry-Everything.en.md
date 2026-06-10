@@ -663,7 +663,7 @@ We gave a fairly detailed derivation in a previous note; here we give a pictoria
 
 For more physical details about this bound, you can refer to the author's previous note:
 
-> 🔗 *【link: geometric bound / FCI note】*
+> 🔗 Further reading: [Band Geometry & GMP Algebra in flat-band FCI](https://zhuanlan.zhihu.com/p/580954377) · [FQHE, GMP Algebra & Fractional Chern Insulator](https://zhuanlan.zhihu.com/p/574597173)
 
 This is the geometric understanding of the geometric bound, i.e., the constraint of "length" on "area." And as we learned in the previous chapter, beyond its geometric meaning, quantum geometry also has its own physical meaning—for example, the quantum metric describes the second moment of the wavepacket $\langle \Delta \hat{r}^a \Delta \hat{r}^b \rangle$, which essentially gives the size of the wavepacket. This means that a nonzero Berry Curvature (topological nontriviality) necessarily requires the quantum state to have a nonzero "size" in parameter space, which may further affect the electron's response (the previous subsection) and interaction (the next subsection).
 

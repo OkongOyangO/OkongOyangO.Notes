@@ -663,7 +663,7 @@ $$\mathrm{Tr}(g) \ge |\Omega|$$
 
 关于这个界限的更多物理细节，可以参考作者以前的note：
 
-> 🔗 *【link: geometric bound / FCI note】*
+> 🔗 延伸阅读：[拓扑平带中的分数陈绝缘体｜Band Geometry & GMP Algebra](https://zhuanlan.zhihu.com/p/580954377) · [分数量子霍尔效应(FQHE)、GMP代数与分数陈绝缘体(FCI)](https://zhuanlan.zhihu.com/p/574597173)
 
 这是geometric bound的几何理解，即"长度"对"面积"的限制。而我们在上一章节知道，出了几何含义，quantum geometry还有自身的物理含义，例如quantum metric描述了波包的二阶矩$\langle \Delta \hat{r}^a \Delta \hat{r}^b \rangle$，相当于给出了波包的size，这意味着，非零的 Berry Curvature（拓扑非平庸性）必然要求量子态在参数空间中具有非零的"大小"，这可能进一步影响电子的response（上一小节内容）和interaction（下一小节内容）。
 
