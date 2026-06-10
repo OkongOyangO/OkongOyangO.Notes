@@ -39,7 +39,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/ja\/posts\/quantum-geometry-everything\/"
-        },"genre": "posts","keywords": "Quantum Geometry, Berry Curvature, Quantum Metric, Nonlinear Response, Condensed Matter","wordcount":  4211 ,
+        },"genre": "posts","keywords": "Quantum Geometry, Berry Curvature, Quantum Metric, Nonlinear Response, Condensed Matter","wordcount":  4212 ,
         "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/ja\/posts\/quantum-geometry-everything\/","datePublished": "2026-06-09T12:00:00+08:00","dateModified": "2026-06-09T12:00:00+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -130,7 +130,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">🥺 Quantum Geometry Everything？「量子幾何物理大応答」を一から解説する</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/OkongOyangO.Notes/ja/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">included in <a href="/OkongOyangO.Notes/ja/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-06-09">2026-06-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;4211 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-06-09">2026-06-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;4212 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;20 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
@@ -166,7 +166,7 @@
 <h2 id="はじめに-introduction">はじめに (Introduction)</h2>
 <p>最近、量子幾何 (Quantum Geometry) という概念は凝聚系物理という分野で非常に注目を集めており、関連する論文やレビューが続々と現れている。筆者は夏季研究 (summer research) の期間に初めてこの概念に触れ、その後幸運にもnote、paper、reviewをいくつか発表する機会を得た。興味があれば以下を参照されたい：</p>
 <blockquote>
-<p>🔗 <em>【link: note paper链接】</em></p>
+<p>🔗 <a href="https://iopscience.iop.org/article/10.1088/1361-6633/ade454" target="_blank" rel="noopener noreffer ">Revealing quantum geometry in nonlinear quantum materials</a> · <a href="https://iopscience.iop.org/article/10.1088/2053-1583/ada0b8/meta" target="_blank" rel="noopener noreffer ">Electrical magnetochiral anisotropy and quantum metric in chiral conductors</a></p>
 </blockquote>
 <p>ただし筆者の力量には限りがあり、読んだ論文も多くなく、research experienceも限られているため、多くの見落としがあるはずである。読者の諸賢にはコメント欄にて遠慮なくご教示いただきたい！最後に、知乎の人気記事著者である小王[https://www.zhihu.com/people/Junkai-Wang]の更新催促に感謝する！</p>
 <h2 id="量子幾何とは何か-what-is-quantum-geometry">量子幾何とは何か？ (What is Quantum Geometry?)</h2>
@@ -217,10 +217,10 @@ $$
 Q^{\mu\nu}_{GS} = \langle \Delta \hat{r}^\mu \Delta \hat{r}^\nu \rangle_{GS} = \operatorname{tr} \left[ \hat{P} \hat{r}^\mu (\mathbb{I} - \hat{P}) \hat{r}^\nu \right]
 $$<p>ここで$\hat{P}$はGround State projector operatorであり、$\mathbb{I}$は単位行列である。このようにして、任意の（基底）状態に対してquantum geometric tensorを定義することができ、それは（基底）状態の内禀的な物理量として、基底状態の導電性などの一連の基礎的な物理的性質をも反映しうる：</p>
 <blockquote>
-<p>🔗 <em>【link: Wannier function spread note】</em></p>
+<p>🔗 <a href="https://zhuanlan.zhihu.com/p/629079639" target="_blank" rel="noopener noreffer ">Wannier function spread note</a></p>
 </blockquote>
 <blockquote>
-<p>🔗 <em>【link: insulator or metal】</em></p>
+<p>🔗 <a href="https://zhuanlan.zhihu.com/p/629260535" target="_blank" rel="noopener noreffer ">insulator or metal</a></p>
 </blockquote>
 <p><img
         class="lazyload"
@@ -253,7 +253,7 @@ $$
 $$<p>これは、一様に分布したスペクトルに対する系の総遷移率が量子幾何テンソルに比例することを教えてくれる。これもまたquantum geometric tensorのtransition dipole-dipole matrix elementとしての解釈の直接的な応用である：従来我々は一般にresponse functionの各種matrix elementから出発して幾何量を組み立て、その後これらの応答がgeometricであると主張していた。今や我々がgeometric quantityの物理的解釈についてより深い理解を得たのであれば、我々はその逆を行い、物理的意味から直接出発して物理量の幾何的応答を構築することが完全に可能となる。</p>
 <p>ここで我々は純粋なtransition rateについて和をとったが、同様の方法でさらに多くのtransition rateを構築することもできる。例えばtransition rateに「m-th bandからn-th bandへのエネルギー差」$\omega_{mn} = E_m - E_n$を掛ければenergy dissipation rateが得られる。電場駆動の系にとって、これは実はジュール熱Joule heatである。本人にも以前関連するnoteがあるので、参照されたい。</p>
 <blockquote>
-<p>🔗 <em>【link: Joule heat note】</em></p>
+<p>🔗 <a href="https://zhuanlan.zhihu.com/p/612275307" target="_blank" rel="noopener noreffer ">Joule heat note</a></p>
 </blockquote>
 <p>そしてJoule heatはさらにlinear conductivityの中のdissipativeな部分に対応する。これはdissipative linear conductivityもまたquantum geometricであることを示している。</p>
 <p>また例えば、transition rateに「m-th bandからn-th bandへの速度差」$v_m - v_n = \nabla_k \omega_{mn}$を掛ければvelocity shift rateが得られ、これはnonlinear optical conductivityの中のinjection currentと直接関連する；また例えば、transition rateに「m-th bandからn-th bandへの変位」$R_{mn} \sim \langle r \rangle_m - \langle r \rangle_n$を掛ければpositional shift rateが得られ、これはnonlinear optical conductivityの中のshift currentと直接関連する。そしてこの両者はいずれもquantum geometricであることが既に証明されており、前者はquantum metric/Berry curvatureと関連し、後者はより高次のquantum connectionと関連する。</p>
@@ -316,7 +316,7 @@ $$
 \langle \psi_{n\mathbf{k}} | \hat{r}^\mu | \psi_{n\mathbf{k'}} \rangle = \left[ -i \partial_{k_\mu} +  \underbrace{\langle u_n | i \partial_{k_\mu} | u_n \rangle}_{\mathcal{A}^\mu_{n}} \right] \delta(\mathbf{k} - \mathbf{k}')
 $$<p>ここで$|u_n\rangle$はBloch波動関数のperiodic部分であり、Bloch wavefunctionとの関係は$|\psi_{n\mathbf{k}}\rangle = e^{i \mathbf{k} \cdot \mathbf{r}} | u_{n\mathbf{k}} \rangle$である。以降の式では$\mathbf{k}$を省略することがあるが、その都度説明はしない。ただし特筆すべきは、これまでに現れた各種のdefinitionは系が周期的な格子系であることを要求していないという点である。したがって最も一般的な系に対してもquantum geometryを定義でき、例えばinteraction/disorderを持つ多体系、さらにはquasi crystalなどの非周期系にも適用できる。私の以前のnoteを参照されたい。</p>
 <blockquote>
-<p>🔗 <em>【link: how to distinguish insulator from metal with quantum geometry?】</em></p>
+<p>🔗 <a href="https://zhuanlan.zhihu.com/p/629260535" target="_blank" rel="noopener noreffer ">how to distinguish insulator from metal with quantum geometry?</a></p>
 </blockquote>
 <p>これは再びquantum geometryの普遍性を示している。その最も根本的な物理的描像と幾何学的意味は、系がperiodicでないからといって変わることはない。</p>
 <p>この式にはhighly singularなdelta functionの微分があり、もう一つの部分は実はn-th bandのBerry connectionである。modern polarization theoryにおいて、これは周期格子系におけるpolarization（すなわちposition operatorの期待値）に対応することが知られている。先ほどこれは人為的な座標の選び方に依存する量だと述べたが、まったく役に立たないというわけではない。modern polarization theoryでは、格子に電場を加えるとBrillouin zone全体の波動関数が同時に平行移動しpolarizationに寄与する状況に遭遇する。一周期の後、各波動関数は運動量空間で元の位置に戻るが、全体のpolarizationの変化は必ずしも0ではなく、Berry connectionの微分の積分$\Delta P = \int dk  \frac{\partial \mathcal{A}_n}{\partial k} $で与えられる。Berry connectionは周期格子におけるpolarizationとして、その定義はup to a unit lattice vectorの平行移動不変量であるため、積分の結果はゼロにもなり得るし、ゼロでない整数倍にもなり得る。これがThouless topological pumpの思考実験であり、topological insulatorの出発点でもある。これに加えて、Berry curvatureもBerry connectionの微分の反対称形$\Omega^{\mu\nu}_n = \partial_{k_\mu} \mathcal{A}^\nu_n - \partial_{k_\nu} \mathcal{A}^\mu_n$として書ける。これも、Berry connectionが人為的な座標の選び方に依存するとはいえ、重要な物理的意味を持つことを間接的に示している。</p>
@@ -334,7 +334,7 @@ $$$$
 Q^{\mu\nu}_n = \operatorname{tr}[\hat{P}_n\partial_\mu \hat{P}_n \partial_\nu \hat{P}_n]
 $$<p>興味のある読者は自分で証明するか、以下を参照されたい。</p>
 <blockquote>
-<p>🔗 <em>【link: Projector formalism paper】</em></p>
+<p>🔗 <a href="https://journals.aps.org/prb/abstract/10.1103/qscv-qxqt" target="_blank" rel="noopener noreffer ">Projector formalism paper</a></p>
 </blockquote>
 <p>Projector formalismにはさらに多くの利点がある。例えば、degenerate point/bandのquantum geometryについては、single-bandのquantum geometryの公式を直接コピーすることはできないが、Projectorをd-band projectorへと直接拡張できる。</p>
 $$
@@ -379,11 +379,11 @@ $$
 C^{\alpha\beta\gamma}_{nm} = \operatorname{tr} \left[ \hat{P}_n \partial_{\beta} \hat{P}_m \left( \partial_{\alpha} \partial_{\gamma} \hat{P}_n + \partial_{\alpha} \hat{P}_m \partial_{\gamma} \hat{P}_n \right) \right]
 $$<p>詳細な導出は以下を参照されたい。</p>
 <blockquote>
-<p>🔗 <em>【link: Projector formalism paper】</em></p>
+<p>🔗 <a href="https://journals.aps.org/prb/abstract/10.1103/qscv-qxqt" target="_blank" rel="noopener noreffer ">Projector formalism paper</a></p>
 </blockquote>
 <p>2-band quantum geometryは、系が2 band（2次元Hilbert space）しか持たないとき、二つのbandの固有状態が2D空間内で直交しているため、一方を知ればもう一方も分かる。このとき2-band quantum geometryと1-band quantum geometryは同じ情報を含むため、2-band quantum geometryが記述するresponseは、系が二バンドしか持たないときsingle-band quantum geometryが記述するresponseに退化する。例えばquantized injection conductivityが2-band systemでのみ成立するのは、quantized circular injection conductivityが実はすべての2-band quantum geometric tensorの和であるためであり、一方Chern number quantizationはsingle-bandのBerry curvatureに対してのみ成立する。詳細は原文を参照されたい。</p>
 <blockquote>
-<p>🔗 <em>【link: quantized circular injection conductivity】</em></p>
+<p>🔗 <a href="https://www.nature.com/articles/ncomms15995" target="_blank" rel="noopener noreffer ">quantized circular injection conductivity</a></p>
 </blockquote>
 <h2 id="量子幾何は何を意味するか-quantum-geometry-means-what">量子幾何は何を意味するか？ (Quantum Geometry means What?)</h2>
 <p>行列要素を quantum geometric tensor へとまとめ上げ、さまざまな物理量を理解することには多くの利点がある。</p>
@@ -407,10 +407,10 @@ $$
 \mathbf{E}_{\updownarrow}(\omega) = (1,0,0),\,\mathbf{E}_{\circlearrowleft/\circlearrowright}(\omega) = \frac{1}{\sqrt{2}} (1,\pm i,0)
 $$<p>詳細な導出については、著者の review paper の appendix、あるいは Ahn の paper を参照できる:</p>
 <blockquote>
-<p>🔗 <em>【link: Ahn&rsquo;s paper】</em></p>
+<p>🔗 <a href="https://journals.aps.org/prx/abstract/10.1103/PhysRevX.10.041041" target="_blank" rel="noopener noreffer ">Ahn&rsquo;s paper</a></p>
 </blockquote>
 <blockquote>
-<p>🔗 <em>【link: My review paper】</em></p>
+<p>🔗 <a href="https://iopscience.iop.org/article/10.1088/1361-6633/ade454" target="_blank" rel="noopener noreffer ">My review paper</a></p>
 </blockquote>
 <p>さらに進めると、この積分式は次のことを我々に教えてくれる。すなわち、frequency に対して一様に分布した power $I(\omega) \propto |\mathbf{E}(\omega)|^2$ で系を励起すると、系全体の transition rate は quantum geometric tensor に比例する。</p>
 <p>しかも注目すべきは、我々が $\mathbf{k}$ を陽に書いていないことであり、これはこの結果が任意の系に対して有効であることを意味する。バンド系の場合、さらに $\mathbf{k}$ 積分 $\int_{BZ} d^D\mathbf{k}$ を一つ加えればよいだけである。以降は特に断らない限り、結果の普遍性を強調するため $\mathbf{k}$ 積分は省略する。</p>
@@ -443,7 +443,7 @@ $$
 \int d\omega \frac{\sigma^{\mu\nu}_{\text{dis}}(\omega)}{\omega} = \frac{2\pi e^2}{\hbar^2} Q^{\mu\nu}
 $$<p>これはもう一つの sum rule であり、dissipative linear conductivity を frequency について $\frac{1}{\omega}$ の重みで積分したものが、系の quantum geometric tensor に比例することを教えてくれる。ここでは、すべての occupied band について和をとるステップ $Q^{\mu\nu} \equiv \sum_{n \in \text{occ}} Q^{\mu\nu}_{n}$ を省略しており、読者自身で補ってほしい。容易に見てとれるように、これもまた sum rule が「基底状態の property」と「physical response」を結びつける一例である。ついでに言えば、この sum rule は SWM sum rule とも呼ばれ、導体と絶縁体を区別するために提唱されたものである。詳細については、私の以前の note を参照できる:</p>
 <blockquote>
-<p>🔗 <em>【link: insulator or metal】</em></p>
+<p>🔗 <a href="https://zhuanlan.zhihu.com/p/629260535" target="_blank" rel="noopener noreffer ">insulator or metal</a></p>
 </blockquote>
 <p>特筆すべきは、linear conductivity に対しては、重み付けをしないもう一つの optical f-sum rule も存在することである:</p>
 $$
@@ -617,7 +617,7 @@ $$\Omega_I \propto \int_{BZ} Tr[g(\mathbf{k})] d\mathbf{k}$$<p>これは Quantum
 </ul>
 <p>特筆すべきは、不等式が等式になるとき、ちょうど Landau Level の ideal quantum geometry、すなわち最小不確定波束の場合に対応することである。Landau Level の quantum geometry については、私の以前の note を参照されたい：</p>
 <blockquote>
-<p>🔗 <em>【link: LL QG note】</em></p>
+<p>🔗 <a href="https://zhuanlan.zhihu.com/p/581596244" target="_blank" rel="noopener noreffer ">LL QG note</a></p>
 </blockquote>
 <p>これは別の側面から、geometric bound の物理的本質が量子力学の基本的な不確定性原理
 $[\hat{x}, \hat{p}] = i\hbar$
@@ -644,7 +644,7 @@ $$<p>ここで指摘しておきたいのは、Sum rule が系の intrinsic prop
 <p>この sum rule の偉大な点は、系の relaxation time がいくつであろうと（最終的には電気伝導度中の $\frac{1}{\omega + i/\tau}$ という因子に影響する）、最終的に周波数で積分した結果はこれら extrinsic な relaxation に依存せず、完全に系そのものの内因的性質（Drude weight）であるということである。</p>
 <p>同様に、geometric sum rule は一種の geometric weight として理解でき、系が $E(\omega) \sim \frac{1}{\omega}$ のスペクトル摂動の下で示す応答率を反映する。Fourier transformation をよく行う方なら、このスペクトルが「方形波信号」に対応することは推測に難くないだろう。つまり、系が step function の形をした perturbation に対して示す応答は、系の intrinsic なもう一種の weight、すなわち geometric weight を反映している。より詳しい内容は Verma の文章を参照されたい：</p>
 <blockquote>
-<p>🔗 <em>【link: Paper of Verma on instantaneous response】</em></p>
+<p>🔗 <a href="https://www.pnas.org/doi/10.1073/pnas.2405837122" target="_blank" rel="noopener noreffer ">Paper of Verma on instantaneous response</a></p>
 </blockquote>
 <p>(iii) Universal Bound</p>
 <p>Geometric Bound と Sum Rule を組み合わせると、凝縮系物理学における非常に深遠な結論が得られる。これは通常 Universal Bound と呼ばれる。</p>
@@ -714,7 +714,7 @@ $$<p>この式は、与えられた電子密度と有効質量に対して、ト
 </ul>
 <p>詳細は Verma の論文を参照されたい。</p>
 <blockquote>
-<p>🔗 <em>【link: Verma&rsquo;s paper on Generalized Sum Rule】</em></p>
+<p>🔗 <a href="https://www.pnas.org/doi/10.1073/pnas.2405837122" target="_blank" rel="noopener noreffer ">Verma&rsquo;s paper on Generalized Sum Rule</a></p>
 </blockquote>
 <p>2 非線形応答和則 (Nonlinear Sum Rule)</p>
 <p>従来の線形応答に加えて、和則の概念は非線形領域へも一般化することができる。</p>

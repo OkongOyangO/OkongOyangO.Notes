@@ -17,7 +17,7 @@ categories: ["Physics Notes"]
 
 最近、量子幾何 (Quantum Geometry) という概念は凝聚系物理という分野で非常に注目を集めており、関連する論文やレビューが続々と現れている。筆者は夏季研究 (summer research) の期間に初めてこの概念に触れ、その後幸運にもnote、paper、reviewをいくつか発表する機会を得た。興味があれば以下を参照されたい：
 
-> 🔗 *【link: note paper链接】*
+> 🔗 [Revealing quantum geometry in nonlinear quantum materials](https://iopscience.iop.org/article/10.1088/1361-6633/ade454) · [Electrical magnetochiral anisotropy and quantum metric in chiral conductors](https://iopscience.iop.org/article/10.1088/2053-1583/ada0b8/meta)
 
 ただし筆者の力量には限りがあり、読んだ論文も多くなく、research experienceも限られているため、多くの見落としがあるはずである。読者の諸賢にはコメント欄にて遠慮なくご教示いただきたい！最後に、知乎の人気記事著者である小王[https://www.zhihu.com/people/Junkai-Wang]の更新催促に感謝する！
 
@@ -85,9 +85,9 @@ $$
 
 ここで$\hat{P}$はGround State projector operatorであり、$\mathbb{I}$は単位行列である。このようにして、任意の（基底）状態に対してquantum geometric tensorを定義することができ、それは（基底）状態の内禀的な物理量として、基底状態の導電性などの一連の基礎的な物理的性質をも反映しうる：
 
-> 🔗 *【link: Wannier function spread note】*
+> 🔗 [Wannier function spread note](https://zhuanlan.zhihu.com/p/629079639)
 
-> 🔗 *【link: insulator or metal】*
+> 🔗 [insulator or metal](https://zhuanlan.zhihu.com/p/629260535)
 
 ![図：quantum metric vs real space spread](/posts/quantum-geometry-everything/fig03.png)
 
@@ -121,7 +121,7 @@ $$
 
 ここで我々は純粋なtransition rateについて和をとったが、同様の方法でさらに多くのtransition rateを構築することもできる。例えばtransition rateに「m-th bandからn-th bandへのエネルギー差」$\omega_{mn} = E_m - E_n$を掛ければenergy dissipation rateが得られる。電場駆動の系にとって、これは実はジュール熱Joule heatである。本人にも以前関連するnoteがあるので、参照されたい。
 
-> 🔗 *【link: Joule heat note】*
+> 🔗 [Joule heat note](https://zhuanlan.zhihu.com/p/612275307)
 
 そしてJoule heatはさらにlinear conductivityの中のdissipativeな部分に対応する。これはdissipative linear conductivityもまたquantum geometricであることを示している。
 
@@ -201,7 +201,7 @@ $$
 
 ここで$|u_n\rangle$はBloch波動関数のperiodic部分であり、Bloch wavefunctionとの関係は$|\psi_{n\mathbf{k}}\rangle = e^{i \mathbf{k} \cdot \mathbf{r}} | u_{n\mathbf{k}} \rangle$である。以降の式では$\mathbf{k}$を省略することがあるが、その都度説明はしない。ただし特筆すべきは、これまでに現れた各種のdefinitionは系が周期的な格子系であることを要求していないという点である。したがって最も一般的な系に対してもquantum geometryを定義でき、例えばinteraction/disorderを持つ多体系、さらにはquasi crystalなどの非周期系にも適用できる。私の以前のnoteを参照されたい。
 
-> 🔗 *【link: how to distinguish insulator from metal with quantum geometry?】*
+> 🔗 [how to distinguish insulator from metal with quantum geometry?](https://zhuanlan.zhihu.com/p/629260535)
 
 これは再びquantum geometryの普遍性を示している。その最も根本的な物理的描像と幾何学的意味は、系がperiodicでないからといって変わることはない。
 
@@ -233,7 +233,7 @@ $$
 
 興味のある読者は自分で証明するか、以下を参照されたい。
 
-> 🔗 *【link: Projector formalism paper】*
+> 🔗 [Projector formalism paper](https://journals.aps.org/prb/abstract/10.1103/qscv-qxqt)
 
 Projector formalismにはさらに多くの利点がある。例えば、degenerate point/bandのquantum geometryについては、single-bandのquantum geometryの公式を直接コピーすることはできないが、Projectorをd-band projectorへと直接拡張できる。
 
@@ -319,11 +319,11 @@ $$
 
 詳細な導出は以下を参照されたい。
 
-> 🔗 *【link: Projector formalism paper】*
+> 🔗 [Projector formalism paper](https://journals.aps.org/prb/abstract/10.1103/qscv-qxqt)
 
 2-band quantum geometryは、系が2 band（2次元Hilbert space）しか持たないとき、二つのbandの固有状態が2D空間内で直交しているため、一方を知ればもう一方も分かる。このとき2-band quantum geometryと1-band quantum geometryは同じ情報を含むため、2-band quantum geometryが記述するresponseは、系が二バンドしか持たないときsingle-band quantum geometryが記述するresponseに退化する。例えばquantized injection conductivityが2-band systemでのみ成立するのは、quantized circular injection conductivityが実はすべての2-band quantum geometric tensorの和であるためであり、一方Chern number quantizationはsingle-bandのBerry curvatureに対してのみ成立する。詳細は原文を参照されたい。
 
-> 🔗 *【link: quantized circular injection conductivity】*
+> 🔗 [quantized circular injection conductivity](https://www.nature.com/articles/ncomms15995)
 
 ## 量子幾何は何を意味するか？ (Quantum Geometry means What?)
 
@@ -367,9 +367,9 @@ $$
 
 詳細な導出については、著者の review paper の appendix、あるいは Ahn の paper を参照できる:
 
-> 🔗 *【link: Ahn's paper】*
+> 🔗 [Ahn's paper](https://journals.aps.org/prx/abstract/10.1103/PhysRevX.10.041041)
 
-> 🔗 *【link: My review paper】*
+> 🔗 [My review paper](https://iopscience.iop.org/article/10.1088/1361-6633/ade454)
 
 さらに進めると、この積分式は次のことを我々に教えてくれる。すなわち、frequency に対して一様に分布した power $I(\omega) \propto |\mathbf{E}(\omega)|^2$ で系を励起すると、系全体の transition rate は quantum geometric tensor に比例する。
 
@@ -427,7 +427,7 @@ $$
 
 これはもう一つの sum rule であり、dissipative linear conductivity を frequency について $\frac{1}{\omega}$ の重みで積分したものが、系の quantum geometric tensor に比例することを教えてくれる。ここでは、すべての occupied band について和をとるステップ $Q^{\mu\nu} \equiv \sum_{n \in \text{occ}} Q^{\mu\nu}_{n}$ を省略しており、読者自身で補ってほしい。容易に見てとれるように、これもまた sum rule が「基底状態の property」と「physical response」を結びつける一例である。ついでに言えば、この sum rule は SWM sum rule とも呼ばれ、導体と絶縁体を区別するために提唱されたものである。詳細については、私の以前の note を参照できる:
 
-> 🔗 *【link: insulator or metal】*
+> 🔗 [insulator or metal](https://zhuanlan.zhihu.com/p/629260535)
 
 特筆すべきは、linear conductivity に対しては、重み付けをしないもう一つの optical f-sum rule も存在することである:
 
@@ -689,7 +689,7 @@ $$\Omega_I \propto \int_{BZ} Tr[g(\mathbf{k})] d\mathbf{k}$$
 
 特筆すべきは、不等式が等式になるとき、ちょうど Landau Level の ideal quantum geometry、すなわち最小不確定波束の場合に対応することである。Landau Level の quantum geometry については、私の以前の note を参照されたい：
 
-> 🔗 *【link: LL QG note】*
+> 🔗 [LL QG note](https://zhuanlan.zhihu.com/p/581596244)
 
 これは別の側面から、geometric bound の物理的本質が量子力学の基本的な不確定性原理
 $[\hat{x}, \hat{p}] = i\hbar$
@@ -729,7 +729,7 @@ $$
 
 同様に、geometric sum rule は一種の geometric weight として理解でき、系が $E(\omega) \sim \frac{1}{\omega}$ のスペクトル摂動の下で示す応答率を反映する。Fourier transformation をよく行う方なら、このスペクトルが「方形波信号」に対応することは推測に難くないだろう。つまり、系が step function の形をした perturbation に対して示す応答は、系の intrinsic なもう一種の weight、すなわち geometric weight を反映している。より詳しい内容は Verma の文章を参照されたい：
 
-> 🔗 *【link: Paper of Verma on instantaneous response】*
+> 🔗 [Paper of Verma on instantaneous response](https://www.pnas.org/doi/10.1073/pnas.2405837122)
 
 (iii) Universal Bound
 
@@ -811,7 +811,7 @@ $W_\eta = \int_0^\infty \omega^\eta \text{Re}[\sigma(\omega)] d\omega$
 
 詳細は Verma の論文を参照されたい。
 
-> 🔗 *【link: Verma's paper on Generalized Sum Rule】*
+> 🔗 [Verma's paper on Generalized Sum Rule](https://www.pnas.org/doi/10.1073/pnas.2405837122)
 
 2 非線形応答和則 (Nonlinear Sum Rule)
 

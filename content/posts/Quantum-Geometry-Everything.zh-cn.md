@@ -17,7 +17,7 @@ categories: ["Physics Notes"]
 
 最近量子几何 (Quantum Geometry) 这一概念在凝聚态物理这一领域颇为火热，相关的论文和综述井喷。笔者在暑研期间初次接触，后有幸发表过note、paper、review一二，若有兴趣可移步：
 
-> 🔗 *【link: note paper链接】*
+> 🔗 [Revealing quantum geometry in nonlinear quantum materials](https://iopscience.iop.org/article/10.1088/1361-6633/ade454) · [Electrical magnetochiral anisotropy and quantum metric in chiral conductors](https://iopscience.iop.org/article/10.1088/2053-1583/ada0b8/meta)
 
 但笔者水平有限，看的论文不多，research experience也有限，有很多疏漏，还望各位读者大佬们评论区不吝赐教！最后感谢知乎网红文章作者小王[https://www.zhihu.com/people/Junkai-Wang]的催更！
 
@@ -85,9 +85,9 @@ $$
 
 其中$\hat{P}$为Ground State projector operator，$\mathbb{I}$为单位矩阵。这样一来，便可以对任意（基）态定义quantum geometric tensor，作为（基）态的内禀物理量，它还能反应基态的导电性等一系列基础物理性质：
 
-> 🔗 *【link: Wannier function spread note】*
+> 🔗 [Wannier function spread note](https://zhuanlan.zhihu.com/p/629079639)
 
-> 🔗 *【link: insulator or metal】*
+> 🔗 [insulator or metal](https://zhuanlan.zhihu.com/p/629260535)
 
 ![图：quantum metric vs real space spread](/posts/quantum-geometry-everything/fig03.png)
 
@@ -121,7 +121,7 @@ $$
 
 此处我们就对纯transition rate进行了求和，我们还能用类似的方法构造更多的transition rate，例如我们把transition rate乘上"m-th band到n-th band的能量差"$\omega_{mn} = E_m - E_n$便可以得到energy dissipation rate，对于电场驱动的系统，这其实就是焦耳热Joule heat，本人之前也有相关note，可以参考。
 
-> 🔗 *【link: Joule heat note】*
+> 🔗 [Joule heat note](https://zhuanlan.zhihu.com/p/612275307)
 
 而Joule heat进一步对应了linear conductivity中的disspative的部分，这说明dissipative linear conductivity也是quantum geometric的。
 
@@ -201,7 +201,7 @@ $$
 
 这里$|u_n\rangle$是Bloch波函数的periodic部分，与Bloch wavefunction的关系为$|\psi_{n\mathbf{k}}\rangle = e^{i \mathbf{k} \cdot \mathbf{r}} | u_{n\mathbf{k}} \rangle$，此后的式子里可能省略$\mathbf{k}$，不再多做说明。但值得一提的是，之前出现的各种definition并未要求系统是一个周期的晶格系统，所以对于最一般的体系，我们也可以定义quantum geometry，例如有interaction/disorder的多体系统，甚至是quasi crystal等一些非周期系统，可以参考我之前的一些note。
 
-> 🔗 *【link: how to distinguish insulator from metal with quantum geometry?】*
+> 🔗 [how to distinguish insulator from metal with quantum geometry?](https://zhuanlan.zhihu.com/p/629260535)
 
 这又一次体现了quantum geometry的普适性，其最根本的物理图像&几何意义并不会因为体系不是periodic的而改变。
 
@@ -233,7 +233,7 @@ $$
 
 感兴趣的读者可以自行证明或者移步：
 
-> 🔗 *【link: Projector formalism paper】*
+> 🔗 [Projector formalism paper](https://journals.aps.org/prb/abstract/10.1103/qscv-qxqt)
 
 Projector formalism还有更多好处，例如对于degenerate point/band的quantum geometry，我们没法直接copy single-band的quantum geometry公式，但我们可以直接把Projector推广成d-band projector：
 
@@ -319,11 +319,11 @@ $$
 
 详细的推导可以参考：
 
-> 🔗 *【link: Projector formalism paper】*
+> 🔗 [Projector formalism paper](https://journals.aps.org/prb/abstract/10.1103/qscv-qxqt)
 
 2-band quantum geometry在系统只有2 band（2维Hilbert space）时，由于两个band的本征态在2D空间内是正交的，所以知其一便知其二，此时2-band quantum geometry与1-band quantum geometry包含相同的信息，所以在2-band quantum geometry描述的response中，在系统只有两带时可以退化为single-band quantum geometry描述的response，例如quantized injection conductivity只在2-band system中成立，这便是因为quantized circular injection conductivity事实上是所有2-band quantum geometric tensor的求和，而Chern number quantization只对single-band的Berry curvature成立。具体可以参考原文：
 
-> 🔗 *【link: quantized circular injection conductivity】*
+> 🔗 [quantized circular injection conductivity](https://www.nature.com/articles/ncomms15995)
 
 ## 量子几何意味何？Quantum Geometry means What?
 
@@ -367,9 +367,9 @@ $$
 
 详细推导可以参考作者review paper的appendix，或者Ahn的paper：
 
-> 🔗 *【link: Ahn's paper】*
+> 🔗 [Ahn's paper](https://journals.aps.org/prx/abstract/10.1103/PhysRevX.10.041041)
 
-> 🔗 *【link: My review paper】*
+> 🔗 [My review paper](https://iopscience.iop.org/article/10.1088/1361-6633/ade454)
 
 再进一步，这个积分式告诉我们，如果我们用frequency均匀分布功率的$I(\omega) \propto |\mathbf{E}(\omega)|^2$来激发系统，那么整个系统的transition rate正比于quantum geometric tensor。
 
@@ -427,7 +427,7 @@ $$
 
 这是另一种sum rule，它告诉我们dissipative linear conductivity对频率按照$\frac{1}{\omega}$的加权的积分正比于系统的quantum geometric tensor。这里我们还省略了对所有occupied band求和的一步$Q^{\mu\nu} \equiv \sum_{n \in \text{occ}} Q^{\mu\nu}_{n}$，留给读者自行补充。不难看出，这又是sum rule连接"基态property"与"physical response"的又一例证。提一嘴，这个sum rule又叫SWM sum rule，它被提出用于区分导体和绝缘体，更多细节可以参考我之前的note：
 
-> 🔗 *【link: insulator or metal】*
+> 🔗 [insulator or metal](https://zhuanlan.zhihu.com/p/629260535)
 
 值得一提的是对于linear conductivity还有另一个不加权的optical f-sum rule：
 
@@ -689,7 +689,7 @@ $$\Omega_I \propto \int_{BZ} Tr[g(\mathbf{k})] d\mathbf{k}$$
 
 值得一提的是，当不等式变为等式时，恰好对应了Landau Level的ideal quantum geometry，即最小不确定波包的情形。Landau Level的quantum geometry可以参考我之前的note：
 
-> 🔗 *【link: LL QG note】*
+> 🔗 [LL QG note](https://zhuanlan.zhihu.com/p/581596244)
 
 这从另一方面说明，geometric bound的物理本质根植于量子力学的基本不确定性原理
 $[\hat{x}, \hat{p}] = i\hbar$
@@ -728,7 +728,7 @@ $$
 
 同理我们可以把geometric sum rule理解成一种geometric weight，反应了系统在$E(\omega) \sim \frac{1}{\omega}$的频谱微扰下的响应率，经常做Fourier transformation的同学不难猜出，这个频谱对应的是"方波信号"，也就是说系统对一个step function形状的perturbation的响应，反应了系统intrinsic的另一种weight，即geometric weight。更详细的内容可以参考Verma的文章：
 
-> 🔗 *【link: Paper of Verma on instantaneous response】*
+> 🔗 [Paper of Verma on instantaneous response](https://www.pnas.org/doi/10.1073/pnas.2405837122)
 
 (iii) Universal Bound
 
@@ -810,7 +810,7 @@ $W_\eta = \int_0^\infty \omega^\eta \text{Re}[\sigma(\omega)] d\omega$
 
 具体可以参考Verma的文章：
 
-> 🔗 *【link: Verma's paper on Generalized Sum Rule】*
+> 🔗 [Verma's paper on Generalized Sum Rule](https://www.pnas.org/doi/10.1073/pnas.2405837122)
 
 2 非线性响应求和律 (Nonlinear Sum Rule)
 

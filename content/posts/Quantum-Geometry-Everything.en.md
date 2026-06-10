@@ -17,7 +17,7 @@ The first half leans toward theoretical derivation, the second half toward exper
 
 Recently the concept of Quantum Geometry has become quite hot in the field of condensed matter physics, with a flood of related papers and reviews. I first encountered it during a summer research program, and was later fortunate enough to publish a note, a paper, and a review or two. If you are interested, feel free to take a look:
 
-> 🔗 *【link: note and paper】*
+> 🔗 [Revealing quantum geometry in nonlinear quantum materials](https://iopscience.iop.org/article/10.1088/1361-6633/ade454) · [Electrical magnetochiral anisotropy and quantum metric in chiral conductors](https://iopscience.iop.org/article/10.1088/2053-1583/ada0b8/meta)
 
 But my own level is limited, I have not read many papers, and my research experience is also limited, so there are many oversights. I hope all of you expert readers will not hesitate to offer your advice in the comments! Finally, thanks to Zhihu internet-famous article author Xiao Wang [https://www.zhihu.com/people/Junkai-Wang] for urging me to update!
 
@@ -85,9 +85,9 @@ $$
 
 where $\hat{P}$ is the Ground State projector operator and $\mathbb{I}$ is the identity matrix. In this way, a quantum geometric tensor can be defined for an arbitrary (ground) state, as an intrinsic physical quantity of the (ground) state, and it can also reflect a series of fundamental physical properties of the ground state such as its conductivity:
 
-> 🔗 *【link: Wannier function spread note】*
+> 🔗 [Wannier function spread note](https://zhuanlan.zhihu.com/p/629079639)
 
-> 🔗 *【link: insulator or metal】*
+> 🔗 [insulator or metal](https://zhuanlan.zhihu.com/p/629260535)
 
 ![Fig: quantum metric vs real space spread](/posts/quantum-geometry-everything/fig03.png)
 
@@ -121,7 +121,7 @@ This tells us that the total transition rate of the system for a uniformly distr
 
 Here we summed over the pure transition rate, but we can also use a similar method to construct more transition rates. For example, multiplying the transition rate by the "energy difference from the m-th band to the n-th band" $\omega_{mn} = E_m - E_n$ gives the energy dissipation rate, which for an electric-field-driven system is in fact the Joule heat. I have a related note before, which you may refer to.
 
-> 🔗 *【link: Joule heat note】*
+> 🔗 [Joule heat note](https://zhuanlan.zhihu.com/p/612275307)
 
 And the Joule heat further corresponds to the dissipative part of the linear conductivity, which shows that the dissipative linear conductivity is also quantum geometric.
 
@@ -201,7 +201,7 @@ $$
 
 Here $|u_n\rangle$ is the periodic part of the Bloch wavefunction, related to the Bloch wavefunction by $|\psi_{n\mathbf{k}}\rangle = e^{i \mathbf{k} \cdot \mathbf{r}} | u_{n\mathbf{k}} \rangle$; in the following formulas we may omit $\mathbf{k}$ without further note. It is worth mentioning, however, that none of the various definitions introduced earlier required the system to be a periodic lattice system, so for the most general systems we can also define quantum geometry — for example many-body systems with interaction/disorder, or even some non-periodic systems such as quasicrystals. You may refer to some of my earlier notes.
 
-> 🔗 *【link: how to distinguish insulator from metal with quantum geometry?】*
+> 🔗 [how to distinguish insulator from metal with quantum geometry?](https://zhuanlan.zhihu.com/p/629260535)
 
 This once again reflects the universality of quantum geometry: its most fundamental physical picture and geometric meaning do not change just because the system is non-periodic.
 
@@ -233,7 +233,7 @@ $$
 
 Interested readers can prove this themselves or refer to:
 
-> 🔗 *【link: Projector formalism paper】*
+> 🔗 [Projector formalism paper](https://journals.aps.org/prb/abstract/10.1103/qscv-qxqt)
 
 The projector formalism has further benefits. For example, for the quantum geometry of a degenerate point/band, we cannot directly copy the single-band quantum geometry formulas, but we can directly generalize the projector to a d-band projector:
 
@@ -319,11 +319,11 @@ $$
 
 For a detailed derivation, refer to:
 
-> 🔗 *【link: Projector formalism paper】*
+> 🔗 [Projector formalism paper](https://journals.aps.org/prb/abstract/10.1103/qscv-qxqt)
 
 When the system has only 2 bands (a 2-dimensional Hilbert space), since the eigenstates of the two bands are orthogonal within the 2D space, knowing one means knowing the other; in this case the 2-band quantum geometry contains the same information as the 1-band quantum geometry. Therefore, in responses described by 2-band quantum geometry, when the system has only two bands, the response can reduce to one described by single-band quantum geometry. For example, the quantized injection conductivity holds only in 2-band systems, precisely because the quantized circular injection conductivity is in fact the sum of all 2-band quantum geometric tensors, whereas the Chern number quantization holds only for the single-band Berry curvature. For details, refer to the original paper:
 
-> 🔗 *【link: quantized circular injection conductivity】*
+> 🔗 [quantized circular injection conductivity](https://www.nature.com/articles/ncomms15995)
 
 ## What Does Quantum Geometry Mean?
 
@@ -367,9 +367,9 @@ $$
 
 For a detailed derivation, one may refer to the appendix of the author's review paper, or to Ahn's paper:
 
-> 🔗 *【link: Ahn's paper】*
+> 🔗 [Ahn's paper](https://journals.aps.org/prx/abstract/10.1103/PhysRevX.10.041041)
 
-> 🔗 *【link: My review paper】*
+> 🔗 [My review paper](https://iopscience.iop.org/article/10.1088/1361-6633/ade454)
 
 Going one step further, this integral expression tells us that if we excite the system with $I(\omega) \propto |\mathbf{E}(\omega)|^2$ distributing power uniformly across frequency, then the total transition rate of the system is proportional to the quantum geometric tensor.
 
@@ -427,7 +427,7 @@ $$
 
 This is another kind of sum rule, which tells us that integrating the dissipative linear conductivity over frequency with a $\frac{1}{\omega}$ weighting is proportional to the system's quantum geometric tensor. Here we have also omitted the step of summing over all occupied bands, $Q^{\mu\nu} \equiv \sum_{n \in \text{occ}} Q^{\mu\nu}_{n}$, which is left for the reader to fill in. It is not hard to see that this is yet another example of a sum rule connecting a "ground-state property" with a "physical response." As an aside, this sum rule is also called the SWM sum rule; it was proposed to distinguish conductors from insulators, and more details can be found in my earlier note:
 
-> 🔗 *【link: insulator or metal】*
+> 🔗 [insulator or metal](https://zhuanlan.zhihu.com/p/629260535)
 
 It is worth mentioning that for the linear conductivity there is also another, unweighted, optical f-sum rule:
 
@@ -689,7 +689,7 @@ This means that the Quantum Metric sets the fundamental limit on how localized a
 
 It is worth mentioning that when the inequality becomes an equality, it corresponds exactly to the ideal quantum geometry of the Landau Level, i.e., the minimum-uncertainty wavepacket case. For the quantum geometry of the Landau Level, you can refer to my previous note:
 
-> 🔗 *【link: LL QG note】*
+> 🔗 [LL QG note](https://zhuanlan.zhihu.com/p/581596244)
 
 This shows from another angle that the physical essence of the geometric bound is rooted in the fundamental uncertainty principle of quantum mechanics
 $[\hat{x}, \hat{p}] = i\hbar$
@@ -728,7 +728,7 @@ The great thing about this sum rule is that, no matter what your system's relaxa
 
 Similarly, we can understand the geometric sum rule as a kind of geometric weight, reflecting the system's response rate under a spectral perturbation $E(\omega) \sim \frac{1}{\omega}$. Those who often do Fourier transformations will easily guess that this spectrum corresponds to a "square-wave signal"; that is to say, the system's response to a step-function-shaped perturbation reflects another kind of intrinsic weight of the system, namely the geometric weight. For more detailed content, you can refer to Verma's paper:
 
-> 🔗 *【link: Paper of Verma on instantaneous response】*
+> 🔗 [Paper of Verma on instantaneous response](https://www.pnas.org/doi/10.1073/pnas.2405837122)
 
 (iii) Universal Bound
 
@@ -810,7 +810,7 @@ Different values of $\eta$ correspond to different physical quantities, and conn
 
 For details one can refer to Verma's paper:
 
-> 🔗 *【link: Verma's paper on Generalized Sum Rule】*
+> 🔗 [Verma's paper on Generalized Sum Rule](https://www.pnas.org/doi/10.1073/pnas.2405837122)
 
 2 Nonlinear Sum Rule
 
