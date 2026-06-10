@@ -884,91 +884,27 @@ $\mathcal{S}_{\mu\nu}^\eta \equiv \int_0^\infty \frac{\text{Re}[\sigma_{\mu\nu}(
 
 ### 量子幾何相関相 (Quantum Geometric Correlated Phase)
 
-ここまで、我々が議論してきた範囲はすべて単体問題の内にあった。しかし実際には、quantum geometry はさまざまな関連相にも関与しており、特に multiband や flatband 系において、interaction と quantum geometry の interplay も量子幾何という分野のホットなトピックとなっている。
+ここまで単体問題を扱ってきたが、実際には量子幾何は様々な相関相にも関与する——特にマルチバンドおよびフラットバンド系で。
 
-まず、quantum geometry がどのように interacting physics に入り込むかを考えてみよう。
+(i) Quantum Geometric Spontaneous Symmetry Breaking
 
-まず従来の spontaneous symmetry breaking phase を考える。我々がよく知る自発的対称性の破れの相には、強磁性相（Ferromagnetism、FM）、反強磁性相（Antiferromagnetism、AFM）、電荷密度波（Charge Density Wave、CDW）、スピン密度波（Spin Density Wave、SDW）、超伝導相（Superconductivity、SC）がある。実のところ反強磁性相は、$\mathbf{Q}=(\pi,\pi,\pi)$ の一種のスピン密度波と見なすこともできる。
+フラットバンド極限（$W \to 0$）では、エネルギー因子が定数 $1/k_BT$ に退化し、物理は完全に幾何学的形状因子に支配される：
 
-これらの相は従来の固体物理学において、特に単体 & Mean Field Theory に基づく理論によってよく説明される。ここでは統一的に議論しよう。各相はそれぞれ非零の order parameter $\langle \hat{\mathcal{O}} \rangle$ に対応する。
+$$\chi_0(\mathbf{q}) = \frac{1}{N} \sum_{\mathbf{k}, n,m} \underbrace{\left| \langle u_{n\mathbf{k}} | u_{m\mathbf{k}+\mathbf{q}} \rangle \right|^2}_{\text{Form Factor}} \times \underbrace{\frac{f(\epsilon_{n\mathbf{k}}) - f(\epsilon_{m\mathbf{k}+\mathbf{q}})}{\epsilon_{m\mathbf{k}+\mathbf{q}} - \epsilon_{n\mathbf{k}}}}_{\text{Lindhard Factor}}$$
 
-| 秩序 (Order)     | 秩序変数演算子 $\hat{O}$ (Schematic)                         | チャネル (Channel)      | スピノル基底 (Basis)      | 頂点 $\Gamma$ | 運動量移行 $Q$          | 破れた対称性 (Broken Sym.) |
-| :-------------- | :-------------------------------------------------- | :---------------- | :--------------- | :---------- | :---------------- | :------------------ |
-| **強磁性 (FM)**     | $\sum c^\dagger \sigma c$                           | Particle-Hole     | $c$              | $\sigma$    | $0$               | $SU(2)$ スピン回転        |
-| **反強磁性/SDW**     | $\sum c^\dagger \sigma c_{k+Q}$                     | Particle-Hole     | $c$              | $\sigma$    | $Q \neq 0$        | $SU(2)$ + 並進 $T$    |
-| **電荷密度波 (CDW)** | $\sum c^\dagger I c_{k+Q}$                          | Particle-Hole     | $c$              | $I$         | $Q \neq 0$        | 並進 $T$              |
-| **超伝導 (SC)**     | $\sum c^\dagger_\uparrow c^\dagger_{\downarrow}$    | Particle-Particle | $(c, c^\dagger)$ | -           | $0$ (Pair)        | $U(1)$ ゲージ           |
-| **対密度波 (PDW)** | $\sum c^\dagger_\uparrow c^\dagger_{\downarrow, Q}$ | Particle-Particle | $(c, c^\dagger)$ | -           | $Q \neq 0$ (Pair) | $U(1)$ + 並進 $T$     |
+$$ \xrightarrow{W\to 0} \frac{1}{k_B T} \sum_{\mathbf{k}} \nu(1-\nu) \left| \langle u_{\mathbf{k}} | u_{\mathbf{k}+\mathbf{q}} \rangle \right|^2 $$
 
-しかし従来の固体物理学の理論は非自明な波動関数を考慮しない。例えば超伝導は $\frac{\mathbf{p}^2}{2m}$ のような自由電子分散のみを考え、band system における異なる orbital mixing が非自明な波動関数を引き起こし、ひいては非自明な quantum geometry の影響をもたらしうることを考慮していない。こうなると、従来の単一バンド BCS の理論は、系の単体運動エネルギー（band width）を抑制した後（flat band limit）にはもはや適用できなくなる。
+幾何学的因子が特定の $\mathbf{q}$ を好む場合、感受率もそれを好み、秩序変数が生じる。これはエネルギーに基づくフェルミ面ネスティングとは全く異なり、「量子幾何ネスティング（Quantum Geometric Nesting）」である。
 
-同様に CDW についても、従来派は主に単体レベルでの Fermi Surface Nesting を探すが、flat band limit に入った後はエネルギーがすべて等しい（少なくとも band width が interaction よりはるかに小さい）状況において、Fermi Surface を論じることはもはや合理的でなくなる。このとき有効な唯一の情報は、平坦バンド上の波動関数の「形」、すなわち quantum geometry なのである。
+(ii) Electron-Phonon Coupling
 
-任意の秩序変数演算子 $\hat{\mathcal{O}}$（頂点行列 $\hat{\Gamma}$ によって定義される）に対して、その完全な静的分極率はエネルギー (Lindhard) と 幾何 (Form Factor) の二つの部分を含む。
+主にJiabin Yuの論文を参照。
 
-$\chi_{\Gamma}(\mathbf{q}) = \frac{1}{N} \sum_{\mathbf{k}} \sum_{n, m} \underbrace{ \left| \langle u_{n\mathbf{k}} | \hat{\Gamma} | u_{m\mathbf{k}+\mathbf{q}} \rangle \right|^2 }_{\text{幾何因子 (Form Factor)} \mathcal{F}_{nm}} \times \underbrace{ \frac{f(\epsilon_{n\mathbf{k}}) - f(\epsilon_{m\mathbf{k}+\mathbf{q}})}{\epsilon_{m\mathbf{k}+\mathbf{q}} - \epsilon_{n\mathbf{k}}} }_{\text{エネルギー因子 (Lindhard)} \mathcal{L}_{nm}}$
+(iii) Fractional Chern Insulator (FCI)
 
-* エネルギー因子 $\mathcal{L}_{nm}$：励起のエネルギーコストを決定する。通常の金属では、これがフェルミ面ネスティング (Fermi Surface Nesting) を与える。
+本質的に、FCIはランダウ準位の模倣である——エネルギー面（フラットバンド）だけでなく、波動関数（量子幾何/トポロジー）面でも：チャーンバンドであるだけでなく、ブリルアンゾーン全体で量子計量とBerry曲率がランダウ準位に近い（トレース条件）。
 
-* 幾何因子 $\mathcal{F}_{nm}$：遷移の選択則を決定する。エネルギー的に許容されても、波動関数が直交していれば遷移は禁止される。
-
-平坦バンド極限 ($W \to 0$) においては、エネルギー因子は定数 $1/k_B T$ に退化し、物理は完全に幾何因子によって支配される。
-
-分極率 (Lindhard Function) の中心となるエネルギー因子項は次のとおりである。
-$L(\mathbf{k}, \mathbf{q}) = \frac{f(\epsilon_{\mathbf{k}}) - f(\epsilon_{\mathbf{k}+\mathbf{q}})}{\epsilon_{\mathbf{k}+\mathbf{q}} - \epsilon_{\mathbf{k}}}$
-
-1. 平坦バンド極限 ($0/0$)：
-   エネルギーバンドが平坦になると ($W \to 0$)、$\epsilon_{\mathbf{k}} \approx \epsilon_{\mathbf{k}+\mathbf{q}} \approx \mu$ となる。分母は 0 に近づき、分子も 0 に近づく。ロピタルの定理あるいはテイラー展開を用いると：
-   $\lim_{\Delta E \to 0} \frac{f(E) - f(E+\Delta E)}{\Delta E} = - \frac{\partial f}{\partial E}$
-
-2. フェルミ分布微分恒等式 (詳細な導出)：
-   $x = \beta(E-\mu)$ とおくと、$f(E) = \frac{1}{e^x + 1}$ となる。
-
-   * 微分：連鎖律を用いて
-     $\frac{\partial f}{\partial E} = \frac{d f}{d x} \frac{\partial x}{\partial E} = \left( - \frac{e^x}{(e^x+1)^2} \right) \cdot \beta$
-
-   * 項の整理：$f(1-f)$ を観察すると
-     $1-f = 1 - \frac{1}{e^x+1} = \frac{e^x}{e^x+1}$
-     $f(1-f) = \frac{1}{e^x+1} \cdot \frac{e^x}{e^x+1} = \frac{e^x}{(e^x+1)^2}$
-
-   * 結論：上記二式を比較すると、ただちに次が得られる
-     $- \frac{\partial f}{\partial E} = \beta f(1-f) = \frac{1}{k_B T} f(1-f)$
-
-3. 最終結果：
-   元の式に代入すると、平坦バンド極限における分極率が得られる。
-   $\chi_0(\mathbf{q}) \approx \frac{1}{k_B T} \sum_{\mathbf{k}} \underbrace{ \nu(1-\nu) }_{\text{占有因子}} \underbrace{ \left| \langle u_{\mathbf{k}} | u_{\mathbf{k}+\mathbf{q}} \rangle \right|^2 }_{\text{幾何的畳み込み}}$
-
-$\chi_{\Gamma}^{flat}(\mathbf{q}) \approx \underbrace{ \frac{1}{k_B T} }_{\text{Energy Part}} \times \underbrace{ \frac{1}{N} \sum_{\mathbf{k}} \text{Tr} \left[ \mathcal{F}_{\Gamma}(\mathbf{k}, \mathbf{q}) \right] }_{\text{Geometric Part}}$
-
-ここで 幾何形状因子 は、平坦バンドへ射影した遷移行列要素の絶対値の二乗として定義される。
-
-$\mathcal{F}_{\Gamma}(\mathbf{k}, \mathbf{q}) = \left| \langle u_{\mathbf{k}} | \hat{\Gamma} | u_{\mathbf{k}+\mathbf{q}} \rangle \right|^2$
-
-* $|u_{\mathbf{k}}\rangle$: 軌道/副格子情報を含む周期的ブロッホ波動関数（スピノル）。
-
-* $\hat{\Gamma}$: 秩序の種類を定義する頂点行列。
-
-(i) Superfluidity Weight/Flatband Superconductivity
-
-これは quantum geometric correlated phase の中では比較的初期の work であり、以下の paper を参照されたい。
-
-> 🔗 *【link: Superfluidity Weight note】*
-
-(ii) Quantum Geometric Magnetism
-
-(iii) Electron-Phonon Coupling
-
-主に Jiabin Yu の paper を参照されたい。
-
-(iv) Fractional Chern Insulator/ Fractional Quantum Anomalous Hall
-
-これは著者が最も早く触れた分野であり、本人の他の note を参照されたい。
-
-> 🔗 *【link: Fractional Chern Insulator note】*
-
-その本質を突き詰めれば、やはり Landau Level を模倣することにある。energy の層面で模倣する（平坦バンド）だけでなく、wavefunction（あるいは同等に、quantum geometry/topology）の層面でも模倣する必要がある。Chern band であるだけでなく、ブリルアンゾーンの至るところで quantum metric/Berry curvature が Landau Level に類似していなければならない。
-
-Here、quantum geometry serves as the key ingredient to measure our deviation from the ideal Landau Level。そしてこれにより、Fractional state に関する多くの議論が発展してきたが、ここでは詳述しない。note や他の文献を参照されたい。
+量子幾何はランダウ準位からの乖離を測る鍵となる要素である。
 
 ### 量子幾何情報エントロピー (Quantum Geometric Information Entropy)
 

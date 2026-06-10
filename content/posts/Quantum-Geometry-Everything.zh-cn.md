@@ -883,91 +883,27 @@ $\mathcal{S}_{\mu\nu}^\eta \equiv \int_0^\infty \frac{\text{Re}[\sigma_{\mu\nu}(
 
 ### 量子几何关联相 (Quantum Geometric Correlated Phase)
 
-至此，我们讨论的范围都在单体问题内，事实上，quantum geometry还参与到了各种关联相中，特别是multiband和flatband体系中，使得interaction与quantum geometry的interplay也成为量子几何这一领域的热点topic。
+至此，我们讨论的范围都在单体问题内，事实上，quantum geometry还参与到了各种关联相中，特别是multiband和flatband体系中。
 
-我们可以先来考虑一下quantum geometry如何进入interacting physics。
+(i) Quantum Geometric Spontaneous Symmetry Breaking
 
-我们先来考虑传统的spontaneous symmetry breaking phase。我们熟知的自发对称破缺的相有铁磁相（Ferromagnetism，FM）、反铁磁相（Antiferromagnetism，AFM）、电荷密度波（Charge Density Wave，CDW），自旋密度波（Spin Density Wave，SDW），超导相（Superconductivity，SC）。事实上反铁磁相也可以看成一种$\mathbf{Q}=(\pi,\pi,\pi)$的自旋密度波。
+在平带极限下($W \to 0$)，能量因子退化为常数$1/k_BT$，物理完全由几何因子主导：
 
-这些相在传统固体物理中都有很好的理论解释，特别是基于单体 & Mean Field Theory的解释。这里我们统一来讨论，每种相都对应一个非零的order parameter $\langle \hat{\mathcal{O}} \rangle$。
+$$\chi_0(\mathbf{q}) = \frac{1}{N} \sum_{\mathbf{k}, n,m} \underbrace{\left| \langle u_{n\mathbf{k}} | u_{m\mathbf{k}+\mathbf{q}} \rangle \right|^2}_{\text{Form Factor}} \times \underbrace{\frac{f(\epsilon_{n\mathbf{k}}) - f(\epsilon_{m\mathbf{k}+\mathbf{q}})}{\epsilon_{m\mathbf{k}+\mathbf{q}} - \epsilon_{n\mathbf{k}}}}_{\text{Lindhard Factor}}$$
 
-| 序 (Order)     | 序参量算符 $\hat{O}$ (Schematic)                         | 通道 (Channel)      | 旋量基 (Basis)      | 顶点 $\Gamma$ | 动量转移 $Q$          | 破缺对称性 (Broken Sym.) |
-| :-------------- | :-------------------------------------------------- | :---------------- | :--------------- | :---------- | :---------------- | :------------------ |
-| **铁磁 (FM)**     | $\sum c^\dagger \sigma c$                           | Particle-Hole     | $c$              | $\sigma$    | $0$               | $SU(2)$ 自旋旋转        |
-| **反铁磁/SDW**     | $\sum c^\dagger \sigma c_{k+Q}$                     | Particle-Hole     | $c$              | $\sigma$    | $Q \neq 0$        | $SU(2)$ + 平移 $T$    |
-| **电荷密度波 (CDW)** | $\sum c^\dagger I c_{k+Q}$                          | Particle-Hole     | $c$              | $I$         | $Q \neq 0$        | 平移 $T$              |
-| **超导 (SC)**     | $\sum c^\dagger_\uparrow c^\dagger_{\downarrow}$    | Particle-Particle | $(c, c^\dagger)$ | -           | $0$ (Pair)        | $U(1)$ 规范           |
-| **配对密度波 (PDW)** | $\sum c^\dagger_\uparrow c^\dagger_{\downarrow, Q}$ | Particle-Particle | $(c, c^\dagger)$ | -           | $Q \neq 0$ (Pair) | $U(1)$ + 平移 $T$     |
+$$ \xrightarrow{W\to 0} \frac{1}{k_B T} \sum_{\mathbf{k}} \nu(1-\nu) \left| \langle u_{\mathbf{k}} | u_{\mathbf{k}+\mathbf{q}} \rangle \right|^2 $$
 
-但是传统固体物理的理论不考虑nontrivial的波函数，例如超导只考虑形如$\frac{\mathbf{p}^2}{2m}$的自由电子色散，没考虑band system中不同的orbital mixing可能导致nontrivial的波函数，进而导致nontrivial的quantum geometry的影响，这么一来，传统单带BCS的理论在我们把系统单体动能（band width）suppress之后（flat band limit）便不再适用。
+如果几何项favor某个$\mathbf{q}$，那么极化率也会favor这个$\mathbf{q}$，从而导致某种order parameter的出现，这与之前纯靠分析energy的Fermi Surface Nesting完全不同——这就是"量子几何嵌套"（Quantum Geometric Nesting）。
 
-同理对于CDW，传统派们主要在找单体level的Fermi Surface Nesting，但是进入flat band limit之后在能量都相同（at least band width远小于interaction）的情况下，谈论Fermi Surface已经不在合理，这个时候唯一有效的信息便是平带上的波函数的"形状"，即quantum geometry了
-
-对于任意序参量算符 $\hat{\mathcal{O}}$（由顶点矩阵 $\hat{\Gamma}$ 定义），其完整的静态极化率包含能量 (Lindhard) 和 几何 (Form Factor) 两部分：
-
-$\chi_{\Gamma}(\mathbf{q}) = \frac{1}{N} \sum_{\mathbf{k}} \sum_{n, m} \underbrace{ \left| \langle u_{n\mathbf{k}} | \hat{\Gamma} | u_{m\mathbf{k}+\mathbf{q}} \rangle \right|^2 }_{\text{几何因子 (Form Factor)} \mathcal{F}_{nm}} \times \underbrace{ \frac{f(\epsilon_{n\mathbf{k}}) - f(\epsilon_{m\mathbf{k}+\mathbf{q}})}{\epsilon_{m\mathbf{k}+\mathbf{q}} - \epsilon_{n\mathbf{k}}} }_{\text{能量因子 (Lindhard)} \mathcal{L}_{nm}}$
-
-* 能量因子 $\mathcal{L}_{nm}$：决定了激发的能量代价。在普通金属中，它提供费米面嵌套 (Fermi Surface Nesting)。
-
-* 几何因子 $\mathcal{F}_{nm}$：决定了跃迁的选择规则。即使能量允许，波函数正交也会禁止跃迁。
-
-在平带极限下 ($W \to 0$)，能量因子退化为常数 $1/k_B T$，物理完全由几何因子主导：
-
-极化率 (Lindhard Function) 的核心能量因子项为：
-$L(\mathbf{k}, \mathbf{q}) = \frac{f(\epsilon_{\mathbf{k}}) - f(\epsilon_{\mathbf{k}+\mathbf{q}})}{\epsilon_{\mathbf{k}+\mathbf{q}} - \epsilon_{\mathbf{k}}}$
-
-1. 平带极限 ($0/0$)：
-   当能带变平 ($W \to 0$)，$\epsilon_{\mathbf{k}} \approx \epsilon_{\mathbf{k}+\mathbf{q}} \approx \mu$。分母趋于 0，分子也趋于 0。利用洛必达法则或泰勒展开：
-   $\lim_{\Delta E \to 0} \frac{f(E) - f(E+\Delta E)}{\Delta E} = - \frac{\partial f}{\partial E}$
-
-2. 费米分布导数恒等式 (详细推导)：
-   令 $x = \beta(E-\mu)$，则 $f(E) = \frac{1}{e^x + 1}$。
-
-   * 求导：利用链式法则
-     $\frac{\partial f}{\partial E} = \frac{d f}{d x} \frac{\partial x}{\partial E} = \left( - \frac{e^x}{(e^x+1)^2} \right) \cdot \beta$
-
-   * 凑项：观察 $f(1-f)$
-     $1-f = 1 - \frac{1}{e^x+1} = \frac{e^x}{e^x+1}$
-     $f(1-f) = \frac{1}{e^x+1} \cdot \frac{e^x}{e^x+1} = \frac{e^x}{(e^x+1)^2}$
-
-   * 结论：对比上述两式，立即得到
-     $- \frac{\partial f}{\partial E} = \beta f(1-f) = \frac{1}{k_B T} f(1-f)$
-
-3. 最终结果：
-   代回原式，得到平带极限下的极化率：
-   $\chi_0(\mathbf{q}) \approx \frac{1}{k_B T} \sum_{\mathbf{k}} \underbrace{ \nu(1-\nu) }_{\text{填充因子}} \underbrace{ \left| \langle u_{\mathbf{k}} | u_{\mathbf{k}+\mathbf{q}} \rangle \right|^2 }_{\text{几何卷积}}$
-
-$\chi_{\Gamma}^{flat}(\mathbf{q}) \approx \underbrace{ \frac{1}{k_B T} }_{\text{Energy Part}} \times \underbrace{ \frac{1}{N} \sum_{\mathbf{k}} \text{Tr} \left[ \mathcal{F}_{\Gamma}(\mathbf{k}, \mathbf{q}) \right] }_{\text{Geometric Part}}$
-
-其中 几何形状因子 定义为投影到平带上的跃迁矩阵元模方：
-
-$\mathcal{F}_{\Gamma}(\mathbf{k}, \mathbf{q}) = \left| \langle u_{\mathbf{k}} | \hat{\Gamma} | u_{\mathbf{k}+\mathbf{q}} \rangle \right|^2$
-
-* $|u_{\mathbf{k}}\rangle$: 包含轨道/子晶格信息的周期性布洛赫波函数（旋量）。
-
-* $\hat{\Gamma}$: 定义序类型的顶点矩阵。
-
-(i) Superfluidity Weight/Flatband Superconductivity
-
-这在quantum geometric correlated phase里算比较早的work，可以参考以下paper：
-
-> 🔗 *【link: Superfluidity Weight note】*
-
-(ii) Quantum Geometric Magnetism
-
-(iii) Electron-Phonon Coupling
+(ii) Electron-Phonon Coupling
 
 主要参考Jiabin Yu的paper
 
-(iv) Fractional Chern Insulator/ Fractional Quantum Anomalous Hall
+(iii) Fractional Chern Insulator (FCI)
 
-这是作者最早接触的领域，可以参考本人的其他note：
+究其本质，还是在模仿Landau Level，不仅要在energy层面模仿（平带），还要在wavefunction（quantum geometry/topology）层面模仿，不但要Chern band，还要布里渊区处处的quantum metric/Berry curvature与Landau Level类似（迹条件）。
 
-> 🔗 *【link: Fractional Chern Insulator note】*
-
-究其本质，还是在模仿Landau Level，不仅要在energy层面模仿（平带），还要在wavefunction（or equivalently, quantum geometry/topology）层面模仿，不但要Chern band，还要布里渊区处处的quantum metric/Berry curvature与Landau Level类似。
-
-Here，quantum geometry serves as the key ingredient to measure our deviation from the ideal Landau Level。并由此发展出了很多关于Fractional state的讨论，这里不再赘述，可以参考note和其他文献。
+Quantum geometry serves as the key ingredient to measure deviation from the ideal Landau Level.
 
 ### 量子几何信息熵 (Quantum Geometric Information Entropy)
 

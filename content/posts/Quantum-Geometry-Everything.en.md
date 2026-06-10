@@ -883,91 +883,27 @@ This means we do not need to measure the spectrum point by point; we only need t
 
 ### Quantum Geometric Correlated Phases
 
-So far, our discussion has been confined to the single-body problem. In fact, quantum geometry also participates in various correlated phases, especially in multiband and flatband systems, making the interplay between interactions and quantum geometry a hot topic in the field of quantum geometry.
+So far we have focused on single-particle physics. In reality, quantum geometry also participates in correlated phases — particularly in multiband and flatband systems.
 
-Let us first consider how quantum geometry enters interacting physics.
+(i) Quantum Geometric Spontaneous Symmetry Breaking
 
-We begin by considering the traditional spontaneous symmetry breaking phases. The spontaneous-symmetry-breaking phases we are familiar with include the Ferromagnetic phase (Ferromagnetism, FM), the Antiferromagnetic phase (Antiferromagnetism, AFM), the Charge Density Wave (CDW), the Spin Density Wave (SDW), and the Superconducting phase (Superconductivity, SC). In fact, the antiferromagnetic phase can also be viewed as a kind of spin density wave with $\mathbf{Q}=(\pi,\pi,\pi)$.
+In the flat band limit ($W \to 0$), the energy factor degenerates to the constant $1/k_BT$, and the physics is entirely controlled by the geometric form factor:
 
-These phases all have good theoretical explanations in traditional solid-state physics, especially explanations based on single-body & Mean Field Theory. Here we discuss them in a unified way: each phase corresponds to a nonzero order parameter $\langle \hat{\mathcal{O}} \rangle$.
+$$\chi_0(\mathbf{q}) = \frac{1}{N} \sum_{\mathbf{k}, n,m} \underbrace{\left| \langle u_{n\mathbf{k}} | u_{m\mathbf{k}+\mathbf{q}} \rangle \right|^2}_{\text{Form Factor}} \times \underbrace{\frac{f(\epsilon_{n\mathbf{k}}) - f(\epsilon_{m\mathbf{k}+\mathbf{q}})}{\epsilon_{m\mathbf{k}+\mathbf{q}} - \epsilon_{n\mathbf{k}}}}_{\text{Lindhard Factor}}$$
 
-| Order            | Order-Parameter Operator $\hat{O}$ (Schematic)          | Channel           | Spinor Basis     | Vertex $\Gamma$ | Momentum Transfer $Q$ | Broken Symmetry         |
-| :-------------- | :-------------------------------------------------- | :---------------- | :--------------- | :---------- | :---------------- | :------------------ |
-| **Ferromagnetic (FM)**     | $\sum c^\dagger \sigma c$                           | Particle-Hole     | $c$              | $\sigma$    | $0$               | $SU(2)$ spin rotation        |
-| **Antiferromagnetic/SDW**     | $\sum c^\dagger \sigma c_{k+Q}$                     | Particle-Hole     | $c$              | $\sigma$    | $Q \neq 0$        | $SU(2)$ + translation $T$    |
-| **Charge Density Wave (CDW)** | $\sum c^\dagger I c_{k+Q}$                          | Particle-Hole     | $c$              | $I$         | $Q \neq 0$        | translation $T$              |
-| **Superconducting (SC)**     | $\sum c^\dagger_\uparrow c^\dagger_{\downarrow}$    | Particle-Particle | $(c, c^\dagger)$ | -           | $0$ (Pair)        | $U(1)$ gauge           |
-| **Pair Density Wave (PDW)** | $\sum c^\dagger_\uparrow c^\dagger_{\downarrow, Q}$ | Particle-Particle | $(c, c^\dagger)$ | -           | $Q \neq 0$ (Pair) | $U(1)$ + translation $T$     |
+$$ \xrightarrow{W\to 0} \frac{1}{k_B T} \sum_{\mathbf{k}} \nu(1-\nu) \left| \langle u_{\mathbf{k}} | u_{\mathbf{k}+\mathbf{q}} \rangle \right|^2 $$
 
-But the theory of traditional solid-state physics does not consider nontrivial wavefunctions. For example, superconductivity is considered only with a free-electron dispersion of the form $\frac{\mathbf{p}^2}{2m}$, without accounting for the fact that, in a band system, different orbital mixings may lead to nontrivial wavefunctions and hence to the influence of nontrivial quantum geometry. As a result, once we suppress the single-body kinetic energy (the band width) of the system (the flat-band limit), the traditional single-band BCS theory no longer applies.
+If the geometric factor favors a particular $\mathbf{q}$, so does the susceptibility, leading to the emergence of an order parameter — entirely different from the conventional, purely energy-based Fermi Surface Nesting. This is "Quantum Geometric Nesting."
 
-Similarly for CDW, traditional theorists mainly search for Fermi Surface Nesting at the single-body level, but once we enter the flat-band limit, where all energies are the same (or at least the band width is much smaller than the interaction), talking about a Fermi Surface is no longer meaningful. In this case, the only effective information is the "shape" of the wavefunction on the flat band, i.e. its quantum geometry.
+(ii) Electron-Phonon Coupling
 
-For an arbitrary order-parameter operator $\hat{\mathcal{O}}$ (defined by a vertex matrix $\hat{\Gamma}$), its full static susceptibility contains both an energy (Lindhard) part and a geometric (Form Factor) part:
+See mainly Jiabin Yu's paper.
 
-$\chi_{\Gamma}(\mathbf{q}) = \frac{1}{N} \sum_{\mathbf{k}} \sum_{n, m} \underbrace{ \left| \langle u_{n\mathbf{k}} | \hat{\Gamma} | u_{m\mathbf{k}+\mathbf{q}} \rangle \right|^2 }_{\text{Form Factor } \mathcal{F}_{nm}} \times \underbrace{ \frac{f(\epsilon_{n\mathbf{k}}) - f(\epsilon_{m\mathbf{k}+\mathbf{q}})}{\epsilon_{m\mathbf{k}+\mathbf{q}} - \epsilon_{n\mathbf{k}}} }_{\text{Energy factor (Lindhard) } \mathcal{L}_{nm}}$
+(iii) Fractional Chern Insulator (FCI)
 
-* Energy factor $\mathcal{L}_{nm}$: determines the energy cost of the excitation. In an ordinary metal, it provides Fermi Surface Nesting.
+At its core, FCI is about emulating Landau Levels — not only in energy (flat band), but also in wavefunction (quantum geometry/topology): not just a Chern band, but one where the quantum metric and Berry curvature throughout the Brillouin zone resemble those of a Landau Level (Trace Condition).
 
-* Form factor $\mathcal{F}_{nm}$: determines the selection rule for the transition. Even when the energy allows it, wavefunction orthogonality can forbid the transition.
-
-In the flat-band limit ($W \to 0$), the energy factor degenerates into a constant $1/k_B T$, and the physics is entirely governed by the form factor:
-
-The core energy-factor term of the susceptibility (Lindhard Function) is:
-$L(\mathbf{k}, \mathbf{q}) = \frac{f(\epsilon_{\mathbf{k}}) - f(\epsilon_{\mathbf{k}+\mathbf{q}})}{\epsilon_{\mathbf{k}+\mathbf{q}} - \epsilon_{\mathbf{k}}}$
-
-1. Flat-band limit ($0/0$):
-   As the band becomes flat ($W \to 0$), $\epsilon_{\mathbf{k}} \approx \epsilon_{\mathbf{k}+\mathbf{q}} \approx \mu$. The denominator tends to 0, and so does the numerator. Using L'Hôpital's rule or a Taylor expansion:
-   $\lim_{\Delta E \to 0} \frac{f(E) - f(E+\Delta E)}{\Delta E} = - \frac{\partial f}{\partial E}$
-
-2. Derivative identity of the Fermi distribution (detailed derivation):
-   Let $x = \beta(E-\mu)$, so that $f(E) = \frac{1}{e^x + 1}$.
-
-   * Differentiation: using the chain rule
-     $\frac{\partial f}{\partial E} = \frac{d f}{d x} \frac{\partial x}{\partial E} = \left( - \frac{e^x}{(e^x+1)^2} \right) \cdot \beta$
-
-   * Rearranging: observe $f(1-f)$
-     $1-f = 1 - \frac{1}{e^x+1} = \frac{e^x}{e^x+1}$
-     $f(1-f) = \frac{1}{e^x+1} \cdot \frac{e^x}{e^x+1} = \frac{e^x}{(e^x+1)^2}$
-
-   * Conclusion: comparing the two expressions above, we immediately obtain
-     $- \frac{\partial f}{\partial E} = \beta f(1-f) = \frac{1}{k_B T} f(1-f)$
-
-3. Final result:
-   Substituting back into the original expression, we obtain the susceptibility in the flat-band limit:
-   $\chi_0(\mathbf{q}) \approx \frac{1}{k_B T} \sum_{\mathbf{k}} \underbrace{ \nu(1-\nu) }_{\text{filling factor}} \underbrace{ \left| \langle u_{\mathbf{k}} | u_{\mathbf{k}+\mathbf{q}} \rangle \right|^2 }_{\text{geometric convolution}}$
-
-$\chi_{\Gamma}^{flat}(\mathbf{q}) \approx \underbrace{ \frac{1}{k_B T} }_{\text{Energy Part}} \times \underbrace{ \frac{1}{N} \sum_{\mathbf{k}} \text{Tr} \left[ \mathcal{F}_{\Gamma}(\mathbf{k}, \mathbf{q}) \right] }_{\text{Geometric Part}}$
-
-where the geometric form factor is defined as the squared modulus of the transition matrix element projected onto the flat band:
-
-$\mathcal{F}_{\Gamma}(\mathbf{k}, \mathbf{q}) = \left| \langle u_{\mathbf{k}} | \hat{\Gamma} | u_{\mathbf{k}+\mathbf{q}} \rangle \right|^2$
-
-* $|u_{\mathbf{k}}\rangle$: the periodic Bloch wavefunction (spinor) containing the orbital/sublattice information.
-
-* $\hat{\Gamma}$: the vertex matrix defining the type of order.
-
-(i) Superfluidity Weight/Flatband Superconductivity
-
-This is one of the earlier works in quantum geometric correlated phases; one can refer to the following paper:
-
-> 🔗 *【link: Superfluidity Weight note】*
-
-(ii) Quantum Geometric Magnetism
-
-(iii) Electron-Phonon Coupling
-
-Refer mainly to the paper of Jiabin Yu.
-
-(iv) Fractional Chern Insulator/ Fractional Quantum Anomalous Hall
-
-This is the field the author first encountered; one can refer to my other notes:
-
-> 🔗 *【link: Fractional Chern Insulator note】*
-
-At its core, this is still about mimicking the Landau Level—not only at the energy level (flat band) but also at the wavefunction level (or equivalently, quantum geometry/topology). One needs not only a Chern band, but also a quantum metric/Berry curvature that is similar to the Landau Level everywhere in the Brillouin zone.
-
-Here, quantum geometry serves as the key ingredient to measure our deviation from the ideal Landau Level. From this, much discussion about Fractional states has developed, which we will not repeat here; one can refer to the notes and other literature.
+Quantum geometry serves as the key ingredient to measure our deviation from the ideal Landau Level.
 
 ### Quantum Geometric Information Entropy
 

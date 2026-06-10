@@ -39,7 +39,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/zh-cn\/posts\/quantum-geometry-everything\/"
-        },"genre": "posts","keywords": "Quantum Geometry, Berry Curvature, Quantum Metric, Nonlinear Response, Condensed Matter","wordcount":  3932 ,
+        },"genre": "posts","keywords": "Quantum Geometry, Berry Curvature, Quantum Metric, Nonlinear Response, Condensed Matter","wordcount":  3619 ,
         "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/zh-cn\/posts\/quantum-geometry-everything\/","datePublished": "2026-06-09T12:00:00+08:00","dateModified": "2026-06-09T12:00:00+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -130,8 +130,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">🥺 Quantum Geometry Everything？一文讲清「量子几何物理大响应」</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/OkongOyangO.Notes/zh-cn/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">收录于 <a href="/OkongOyangO.Notes/zh-cn/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-06-09">2026-06-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 3932 字&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 19 分钟&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-06-09">2026-06-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 3619 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 17 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
                     <span>目录</span>
@@ -779,142 +779,15 @@ $\mathcal{P}_\mu(t) \approx \frac{\hbar}{2 k_B T} E_\nu \mathcal{Q}^s_{\mu\nu}(t
 <p>这种方法将复杂的全频段光谱测量转化为单一的时间点测量或特定的波形响应测量，极大地简化了量子几何的实验探测。</p>
 <p>这意味着，我们不需要逐点测量光谱，只需施加一个经过设计的特定形状脉冲（如&quot;方波&quot;或&quot;三角波&quot;电场），并测量系统随后的电流或极化响应，即可直接&quot;读出&quot;sum rule 对应的generalized geometric weight。</p>
 <h3 id="量子几何关联相-quantum-geometric-correlated-phase">量子几何关联相 (Quantum Geometric Correlated Phase)</h3>
-<p>至此，我们讨论的范围都在单体问题内，事实上，quantum geometry还参与到了各种关联相中，特别是multiband和flatband体系中，使得interaction与quantum geometry的interplay也成为量子几何这一领域的热点topic。</p>
-<p>我们可以先来考虑一下quantum geometry如何进入interacting physics。</p>
-<p>我们先来考虑传统的spontaneous symmetry breaking phase。我们熟知的自发对称破缺的相有铁磁相（Ferromagnetism，FM）、反铁磁相（Antiferromagnetism，AFM）、电荷密度波（Charge Density Wave，CDW），自旋密度波（Spin Density Wave，SDW），超导相（Superconductivity，SC）。事实上反铁磁相也可以看成一种$\mathbf{Q}=(\pi,\pi,\pi)$的自旋密度波。</p>
-<p>这些相在传统固体物理中都有很好的理论解释，特别是基于单体 &amp; Mean Field Theory的解释。这里我们统一来讨论，每种相都对应一个非零的order parameter $\langle \hat{\mathcal{O}} \rangle$。</p>
-<table>
-  <thead>
-      <tr>
-          <th style="text-align: left">序 (Order)</th>
-          <th style="text-align: left">序参量算符 $\hat{O}$ (Schematic)</th>
-          <th style="text-align: left">通道 (Channel)</th>
-          <th style="text-align: left">旋量基 (Basis)</th>
-          <th style="text-align: left">顶点 $\Gamma$</th>
-          <th style="text-align: left">动量转移 $Q$</th>
-          <th style="text-align: left">破缺对称性 (Broken Sym.)</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: left"><strong>铁磁 (FM)</strong></td>
-          <td style="text-align: left">$\sum c^\dagger \sigma c$</td>
-          <td style="text-align: left">Particle-Hole</td>
-          <td style="text-align: left">$c$</td>
-          <td style="text-align: left">$\sigma$</td>
-          <td style="text-align: left">$0$</td>
-          <td style="text-align: left">$SU(2)$ 自旋旋转</td>
-      </tr>
-      <tr>
-          <td style="text-align: left"><strong>反铁磁/SDW</strong></td>
-          <td style="text-align: left">$\sum c^\dagger \sigma c_{k+Q}$</td>
-          <td style="text-align: left">Particle-Hole</td>
-          <td style="text-align: left">$c$</td>
-          <td style="text-align: left">$\sigma$</td>
-          <td style="text-align: left">$Q \neq 0$</td>
-          <td style="text-align: left">$SU(2)$ + 平移 $T$</td>
-      </tr>
-      <tr>
-          <td style="text-align: left"><strong>电荷密度波 (CDW)</strong></td>
-          <td style="text-align: left">$\sum c^\dagger I c_{k+Q}$</td>
-          <td style="text-align: left">Particle-Hole</td>
-          <td style="text-align: left">$c$</td>
-          <td style="text-align: left">$I$</td>
-          <td style="text-align: left">$Q \neq 0$</td>
-          <td style="text-align: left">平移 $T$</td>
-      </tr>
-      <tr>
-          <td style="text-align: left"><strong>超导 (SC)</strong></td>
-          <td style="text-align: left">$\sum c^\dagger_\uparrow c^\dagger_{\downarrow}$</td>
-          <td style="text-align: left">Particle-Particle</td>
-          <td style="text-align: left">$(c, c^\dagger)$</td>
-          <td style="text-align: left">-</td>
-          <td style="text-align: left">$0$ (Pair)</td>
-          <td style="text-align: left">$U(1)$ 规范</td>
-      </tr>
-      <tr>
-          <td style="text-align: left"><strong>配对密度波 (PDW)</strong></td>
-          <td style="text-align: left">$\sum c^\dagger_\uparrow c^\dagger_{\downarrow, Q}$</td>
-          <td style="text-align: left">Particle-Particle</td>
-          <td style="text-align: left">$(c, c^\dagger)$</td>
-          <td style="text-align: left">-</td>
-          <td style="text-align: left">$Q \neq 0$ (Pair)</td>
-          <td style="text-align: left">$U(1)$ + 平移 $T$</td>
-      </tr>
-  </tbody>
-</table>
-<p>但是传统固体物理的理论不考虑nontrivial的波函数，例如超导只考虑形如$\frac{\mathbf{p}^2}{2m}$的自由电子色散，没考虑band system中不同的orbital mixing可能导致nontrivial的波函数，进而导致nontrivial的quantum geometry的影响，这么一来，传统单带BCS的理论在我们把系统单体动能（band width）suppress之后（flat band limit）便不再适用。</p>
-<p>同理对于CDW，传统派们主要在找单体level的Fermi Surface Nesting，但是进入flat band limit之后在能量都相同（at least band width远小于interaction）的情况下，谈论Fermi Surface已经不在合理，这个时候唯一有效的信息便是平带上的波函数的&quot;形状&quot;，即quantum geometry了</p>
-<p>对于任意序参量算符 $\hat{\mathcal{O}}$（由顶点矩阵 $\hat{\Gamma}$ 定义），其完整的静态极化率包含能量 (Lindhard) 和 几何 (Form Factor) 两部分：</p>
-<p>$\chi_{\Gamma}(\mathbf{q}) = \frac{1}{N} \sum_{\mathbf{k}} \sum_{n, m} \underbrace{ \left| \langle u_{n\mathbf{k}} | \hat{\Gamma} | u_{m\mathbf{k}+\mathbf{q}} \rangle \right|^2 }_{\text{几何因子 (Form Factor)} \mathcal{F}_{nm}} \times \underbrace{ \frac{f(\epsilon_{n\mathbf{k}}) - f(\epsilon_{m\mathbf{k}+\mathbf{q}})}{\epsilon_{m\mathbf{k}+\mathbf{q}} - \epsilon_{n\mathbf{k}}} }_{\text{能量因子 (Lindhard)} \mathcal{L}_{nm}}$</p>
-<ul>
-<li>
-<p>能量因子 $\mathcal{L}_{nm}$：决定了激发的能量代价。在普通金属中，它提供费米面嵌套 (Fermi Surface Nesting)。</p>
-</li>
-<li>
-<p>几何因子 $\mathcal{F}_{nm}$：决定了跃迁的选择规则。即使能量允许，波函数正交也会禁止跃迁。</p>
-</li>
-</ul>
-<p>在平带极限下 ($W \to 0$)，能量因子退化为常数 $1/k_B T$，物理完全由几何因子主导：</p>
-<p>极化率 (Lindhard Function) 的核心能量因子项为：
-$L(\mathbf{k}, \mathbf{q}) = \frac{f(\epsilon_{\mathbf{k}}) - f(\epsilon_{\mathbf{k}+\mathbf{q}})}{\epsilon_{\mathbf{k}+\mathbf{q}} - \epsilon_{\mathbf{k}}}$</p>
-<ol>
-<li>
-<p>平带极限 ($0/0$)：
-当能带变平 ($W \to 0$)，$\epsilon_{\mathbf{k}} \approx \epsilon_{\mathbf{k}+\mathbf{q}} \approx \mu$。分母趋于 0，分子也趋于 0。利用洛必达法则或泰勒展开：
-$\lim_{\Delta E \to 0} \frac{f(E) - f(E+\Delta E)}{\Delta E} = - \frac{\partial f}{\partial E}$</p>
-</li>
-<li>
-<p>费米分布导数恒等式 (详细推导)：
-令 $x = \beta(E-\mu)$，则 $f(E) = \frac{1}{e^x + 1}$。</p>
-<ul>
-<li>
-<p>求导：利用链式法则
-$\frac{\partial f}{\partial E} = \frac{d f}{d x} \frac{\partial x}{\partial E} = \left( - \frac{e^x}{(e^x+1)^2} \right) \cdot \beta$</p>
-</li>
-<li>
-<p>凑项：观察 $f(1-f)$
-$1-f = 1 - \frac{1}{e^x+1} = \frac{e^x}{e^x+1}$
-$f(1-f) = \frac{1}{e^x+1} \cdot \frac{e^x}{e^x+1} = \frac{e^x}{(e^x+1)^2}$</p>
-</li>
-<li>
-<p>结论：对比上述两式，立即得到
-$- \frac{\partial f}{\partial E} = \beta f(1-f) = \frac{1}{k_B T} f(1-f)$</p>
-</li>
-</ul>
-</li>
-<li>
-<p>最终结果：
-代回原式，得到平带极限下的极化率：
-$\chi_0(\mathbf{q}) \approx \frac{1}{k_B T} \sum_{\mathbf{k}} \underbrace{ \nu(1-\nu) }_{\text{填充因子}} \underbrace{ \left| \langle u_{\mathbf{k}} | u_{\mathbf{k}+\mathbf{q}} \rangle \right|^2 }_{\text{几何卷积}}$</p>
-</li>
-</ol>
-<p>$\chi_{\Gamma}^{flat}(\mathbf{q}) \approx \underbrace{ \frac{1}{k_B T} }_{\text{Energy Part}} \times \underbrace{ \frac{1}{N} \sum_{\mathbf{k}} \text{Tr} \left[ \mathcal{F}_{\Gamma}(\mathbf{k}, \mathbf{q}) \right] }_{\text{Geometric Part}}$</p>
-<p>其中 几何形状因子 定义为投影到平带上的跃迁矩阵元模方：</p>
-<p>$\mathcal{F}_{\Gamma}(\mathbf{k}, \mathbf{q}) = \left| \langle u_{\mathbf{k}} | \hat{\Gamma} | u_{\mathbf{k}+\mathbf{q}} \rangle \right|^2$</p>
-<ul>
-<li>
-<p>$|u_{\mathbf{k}}\rangle$: 包含轨道/子晶格信息的周期性布洛赫波函数（旋量）。</p>
-</li>
-<li>
-<p>$\hat{\Gamma}$: 定义序类型的顶点矩阵。</p>
-</li>
-</ul>
-<p>(i) Superfluidity Weight/Flatband Superconductivity</p>
-<p>这在quantum geometric correlated phase里算比较早的work，可以参考以下paper：</p>
-<blockquote>
-<p>🔗 <em>【link: Superfluidity Weight note】</em></p>
-</blockquote>
-<p>(ii) Quantum Geometric Magnetism</p>
-<p>(iii) Electron-Phonon Coupling</p>
+<p>至此，我们讨论的范围都在单体问题内，事实上，quantum geometry还参与到了各种关联相中，特别是multiband和flatband体系中。</p>
+<p>(i) Quantum Geometric Spontaneous Symmetry Breaking</p>
+<p>在平带极限下($W \to 0$)，能量因子退化为常数$1/k_BT$，物理完全由几何因子主导：</p>
+$$\chi_0(\mathbf{q}) = \frac{1}{N} \sum_{\mathbf{k}, n,m} \underbrace{\left| \langle u_{n\mathbf{k}} | u_{m\mathbf{k}+\mathbf{q}} \rangle \right|^2}_{\text{Form Factor}} \times \underbrace{\frac{f(\epsilon_{n\mathbf{k}}) - f(\epsilon_{m\mathbf{k}+\mathbf{q}})}{\epsilon_{m\mathbf{k}+\mathbf{q}} - \epsilon_{n\mathbf{k}}}}_{\text{Lindhard Factor}}$$$$ \xrightarrow{W\to 0} \frac{1}{k_B T} \sum_{\mathbf{k}} \nu(1-\nu) \left| \langle u_{\mathbf{k}} | u_{\mathbf{k}+\mathbf{q}} \rangle \right|^2 $$<p>如果几何项favor某个$\mathbf{q}$，那么极化率也会favor这个$\mathbf{q}$，从而导致某种order parameter的出现，这与之前纯靠分析energy的Fermi Surface Nesting完全不同——这就是&quot;量子几何嵌套&quot;（Quantum Geometric Nesting）。</p>
+<p>(ii) Electron-Phonon Coupling</p>
 <p>主要参考Jiabin Yu的paper</p>
-<p>(iv) Fractional Chern Insulator/ Fractional Quantum Anomalous Hall</p>
-<p>这是作者最早接触的领域，可以参考本人的其他note：</p>
-<blockquote>
-<p>🔗 <em>【link: Fractional Chern Insulator note】</em></p>
-</blockquote>
-<p>究其本质，还是在模仿Landau Level，不仅要在energy层面模仿（平带），还要在wavefunction（or equivalently, quantum geometry/topology）层面模仿，不但要Chern band，还要布里渊区处处的quantum metric/Berry curvature与Landau Level类似。</p>
-<p>Here，quantum geometry serves as the key ingredient to measure our deviation from the ideal Landau Level。并由此发展出了很多关于Fractional state的讨论，这里不再赘述，可以参考note和其他文献。</p>
+<p>(iii) Fractional Chern Insulator (FCI)</p>
+<p>究其本质，还是在模仿Landau Level，不仅要在energy层面模仿（平带），还要在wavefunction（quantum geometry/topology）层面模仿，不但要Chern band，还要布里渊区处处的quantum metric/Berry curvature与Landau Level类似（迹条件）。</p>
+<p>Quantum geometry serves as the key ingredient to measure deviation from the ideal Landau Level.</p>
 <h3 id="量子几何信息熵-quantum-geometric-information-entropy">量子几何信息熵 (Quantum Geometric Information Entropy)</h3>
 <p>最后我们再把视野从凝聚态领域放宽到量子信息领域，我们将发现quantum geometry对于人们理解quantum information也有重要帮助，反过来，甚至能帮助我们观测这些量子几何的quantim informaiton quantities。</p>
 <p>(i) Quantum Fisher information</p>
