@@ -8,8 +8,15 @@
     <language>ja</language>
     <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
     <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
-    <lastBuildDate>Tue, 07 Mar 2023 22:30:00 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jun 2026 12:00:00 +0800</lastBuildDate>
     <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/nonlinear-response/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>🥺 Quantum Geometry Everything？「量子幾何物理大応答」を一から解説する</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/quantum-geometry-everything/</link>
+      <pubDate>Tue, 09 Jun 2026 12:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/quantum-geometry-everything/</guid>
+      <description>&lt;p&gt;本稿は&amp;quot;量子幾何&amp;quot;（Quantum Geometry）が「何を意味するか」と「何をもたらすか」を解説する。&lt;/p&gt;&#xA;&lt;p&gt;前半は理論的な導出、後半は実験現象に重点を置く。読者は必要に応じてお読みいただきたい。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>🥸久保公式の非線形応答理論</title>
       <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/nonlinear-kubo-formalism/</link>

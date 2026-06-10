@@ -7,30 +7,29 @@ tags: ["Quantum Geometry", "Berry Curvature", "Quantum Metric", "Nonlinear Respo
 categories: ["Physics Notes"]
 ---
 
-本文约15000字，旨在阐述"量子几何" (Quantum Geometry)「何意味」&「意味何」的问题。前半偏definition，后半偏phenomena，读者可按需阅读。
+本文旨在阐述"量子几何" (Quantum Geometry)「何意味」&「意味何」。
+
+前半偏理论推导，后半偏实验现象，读者可按需阅读。
 
 <!--more-->
 
 ## 引言 (Introduction)
 
-最近量子几何 (Quantum Geometry) 这一概念在凝聚态物理这一领域颇为火热，相关的论文和综述井喷。笔者在暑研期间初次接触，后有幸发表过note、paper、review一二：
+最近量子几何 (Quantum Geometry) 这一概念在凝聚态物理这一领域颇为火热，相关的论文和综述井喷。笔者在暑研期间初次接触，后有幸发表过note、paper、review一二，若有兴趣可移步：
 
-- [Revealing quantum geometry in nonlinear quantum materials](https://iopscience.iop.org/article/10.1088/1361-6633/pde454)
-- [Electrical magnetochiral anisotropy and quantum metric in chiral conductors](https://iopscience.iop.org/article/10.1088/2053-1583/ada0b8/meta)
+> 🔗 *【link: note paper链接】*
 
-但笔者水平有限，看的论文不多，research experience也有限，有很多疏漏，还望各位读者大佬们评论区不吝赐教！最后感谢知乎网红文章作者小王 [@Austeritas](https://www.zhihu.com/people/Junkai-Wang) 的催更！
-
----
+但笔者水平有限，看的论文不多，research experience也有限，有很多疏漏，还望各位读者大佬们评论区不吝赐教！最后感谢知乎网红文章作者小王[https://www.zhihu.com/people/Junkai-Wang]的催更！
 
 ## 量子几何何意味？What is Quantum Geometry?
 
-**Q：量子几何为几何？**
-
-**A：为波函数之几何。**
+Q：量子几何为几何？
+A：为波函数之几何。
 
 更具体地说，Quantum geometry描述的波函数之geometry是2-fold的，其一乃实空间波包之几何，其二乃倒空间态矢之几何。
 
-实空间中，量子几何（Quantum Geometry）= 形变（deformation）+ 自转（self-rotation），反应其物理含义；倒空间中，量子几何（Quantum Geometry）= 长度（length）+ 面积（area），反应其几何含义。
+实空间中，量子几何（Quantum Geometry）= 形变（deformation）+ 自转（self-rotation），反应其物理含义；
+倒空间中，量子几何（Quantum Geometry）= 长度（length）+ 面积（area），反应其几何含义。
 
 同时，quantum geometry也可以理解为transition dipole-dipole moment，还可以有更高阶的generalization，值得一提的是这些构造出来的quantum geometric quantities都是gauge invariant的，也就是说它们是有实际的物理含义甚至是可被观测的物理量。
 
@@ -44,311 +43,1001 @@ categories: ["Physics Notes"]
 
 我们也都熟悉nontrivial Berry curvature可以贡献(量子)反常霍尔效应，因为nontrivial Berry curvature描述了electronic wavepacket本身的self-rotation，这一自转运动也能类似磁场中的cyclotron motion一样产生anomalous Hall current.
 
-> **图①** **(a) Quantum Metric ↔ Deformation**：Bloch球上弦长 $l_1,l_2$（量子度规=长度），对应波包的横向展宽（spreading）。**(b) Berry Curvature ↔ Rotation**：Bloch球上面积元 $S_1,S_2$（Berry曲率=面积），对应波包的自旋/旋转运动。
+![图：磁场 vs Berry curvature](/posts/quantum-geometry-everything/fig01.png)
 
 既然波包的self-rotation自由度可以被Berry curvature描述，我们自然联想波包的其他自由度，例如波包的deformation，是否也可以被某个几何量描述？答案是肯定的，这就是量子度规(Quantum Metric)。
 
-> **图②** $\Omega \sim \langle \mathbf{r} \times \mathbf{v} \rangle$（Berry曲率=自转）；$g \sim \langle r_i r_j \rangle$（量子度规=展宽）。下行：在电场 $\mathbf{E}$ 作用下，Berry曲率导致横向（反常）速度修正，量子度规导致纵向形变修正。
+不难想象，运动中保持不变的刚体和运动中内部可以形变/旋转的波包，后者除了整体的平动还会有内部形变/旋转导致的anomalous motion，这便是量子几何产生各种geoemtric response的物理机理。除了线性响应中常见的Berry curvature induced intrinsic anomalous Hall effect，还有nonlinear effect中的Berry curvature dipole induced nonlinear anomalous Hall effect以及quantum metric dipole induced intrinsic nonlinear anomalous Hall & intrinsic nonreciprocal magnetoresistance。
 
-不难想象，运动中保持不变的刚体和运动中内部可以形变/旋转的波包，后者除了整体的平动还会有内部形变/旋转导致的anomalous motion，这便是量子几何产生各种geometric response的物理机理。除了线性响应中常见的Berry curvature induced intrinsic anomalous Hall effect，还有nonlinear effect中的Berry curvature dipole induced nonlinear anomalous Hall effect以及quantum metric dipole induced intrinsic nonlinear anomalous Hall & intrinsic nonreciprocal magnetoresistance。
+![图：quantum metric vs deformation](/posts/quantum-geometry-everything/fig02.png)
 
-以nonreciprocal magnetoresistance为例，在磁性体系，即时间反演破缺的体系中，quantum metric在动量空间的分布不是对称的，这可以进而导致nonzero的quantum metric dipole structure。这样一来，我们平行/反平行于此dipolar distributed quantum metric方向加电场时，波包的中心动量往平行/反平行方向移动时的quantum metric/形变/deformation是不一样的，这样便导致平行/反平行的电场下，系统的电阻不同，进而导致nonreciprocal magnetoresistance。这种nonreciprocity可以被用于构造新型的diode器件，而其性能由材料的quantum metric这一intrinsic quantum geometric quantity决定。
+以nonreciprocal magnetoresistance为例，在磁性体系，即时间反演破缺的体系中，quantum metric在动量空间的分布不是对称的，这可以进而导致nonzero的quantum metric dipole structure。这样一来，我们平行/反平行于此dipolar distributed quantum metric方向加电场时，波包的中心动量往平行/反平行方向移动时的quantum metric/形变/deformation是不一样的，这样便导致平行/反平行的电场下，系统的电阻不同，进而导致nonreciprocal magnetoresistance。这种nonreciprocity可以被用于构造新型的diode器件，而其性能由材料的quantum metric这一intrinsic quantum geoemtric quantity决定，这是量子几何帮助寻找新型电子器件的可能途径之一。
 
 Mathematically，我们还能把Berry curvature $\Omega^{\mu\nu}$ 和quantum metric $g^{\mu\nu}$打包成一个整体，称之为量子几何张量(Quantum Geometric Tensor) $Q^{\mu\nu}$
 
-$$Q^{\mu\nu} = g^{\mu\nu} - i \Omega^{\mu\nu}$$
+$$
+Q^{\mu\nu} = g^{\mu\nu} - i \Omega^{\mu\nu}
+$$
 
-其中$g^{\mu\nu}$为量子度规(Quantum Metric) or Fubini-Study metric，类似微分几何中的metric，是一个symmetric tensor，$\Omega^{\mu\nu}$为Berry Curvature，是一个antisymmetric tensor，在2D/3D空间中我们有时更习惯标量/矢量形式的Berry curvature $\Omega^z = \Omega^{xy} - \Omega^{yx}$ 或者 $\Omega^a = \epsilon^{abc} \Omega^{bc}$。
+其中$g^{\mu\nu}$为量子度规(Quantum Metric) or Fubini-Study metric，类似微分几何中的metric，是一个symmetric tensor，$\Omega^{\mu\nu}$为Berry Curvature，是一个antisymmetric tensor，在2D/3D空间中我们有时更习惯标量/矢量形式的Berry curvature用$\Omega^z = \Omega^{xy} - \Omega^{yx}$或者$\Omega^a = \epsilon^{abc} \Omega^{bc}$来表示，此时$\Omega^a$的方向直接表示了波包旋转的角动量/磁矩方向。
 
 ### 偶极偶极激发率 (Dipole-Dipole Excitation Rate)
 
 More detailed，我们可以将$Q_{\mu\nu}$的具体形式写出:
 
-$$Q^{\mu\nu}_{n} = \sum_{m \neq n} r^{\mu}_{nm} r^{\nu}_{mn} = \langle \Delta \hat{r}^\mu \Delta \hat{r}^\nu \rangle_n = g^{\mu\nu}_n - i \Omega^{\mu\nu}_n$$
+$$
+Q^{\mu\nu}_{n} = \sum_{m \neq n} r^{\mu}_{nm} r^{\nu}_{mn} = \langle \Delta \hat{r}^\mu \Delta \hat{r}^\nu \rangle_n = g^{\mu\nu}_n - i \Omega^{\mu\nu}_n
+$$
 
-其中$r^a_{nm} \equiv \langle \psi_m | \hat{r}^a | \psi_n \rangle$为position operator $\hat{r}^a$在m-th band和n-th band之间的matrix element，也被经常称为interband Berry connection/interband transition dipole。此处的"interband"意味着$m \neq n$，这是出于gauge invariance的考量。
+其中$r^a_{nm} \equiv \langle \psi_m | \hat{r}^a | \psi_n \rangle$为position operator $\hat{r}^a$在m-th band $|\psi_m\rangle$和n-th band $|\psi_n\rangle$之间的matrix element，也被经常成为interband Berry connection/interband transition dipole。
 
-此处$\langle ... \rangle_n$表示在n-th band的expectation value，而$\Delta \hat{r}^\mu \equiv \hat{r}^\mu - \langle \hat{r}^\mu \rangle_n$表示在n-th band的position operator期望值偏离中心位置的偏离量，这样正好去掉了dipole matrix element中gauge dependent的对角元部分，保留可观测的物理量。
+此处的"interband"意味着此处的matrix element是两个不同band之间的，即$m \neq n$，这是出于gauge invariance的考量，
 
-> **图③** $Q_n^{\mu\nu} = \langle \Delta\hat{r}^\mu \Delta\hat{r}^\nu \rangle_n$：波包（黄色高斯型）位于实空间中，双箭头标注其二阶矩（Spread），整个平行四边形象征量子几何张量作为波包内部结构的几何度量。
+此处$\langle ... \rangle_n$表示在n-th band的expectation value，而$\Delta \hat{r}^\mu \equiv \hat{r}^\mu - \langle \hat{r}^\mu \rangle_n$表示在n-th band的position operator的期望值偏离中心位置的偏离量，这样正好去掉了dipole matrix element中gauge dependent的对角元部分，我们之后会show这里的gauge dependence和人为坐标选取有关，所以这里去掉对角元是为了去掉表达式中不是物理的量，保留可观测的物理量。
 
-从这个定义出发，我们可以将quantum geometry从一个band的性质推广到整个基态波函数的实空间性质：
+其中对称部分为quantum metric $g^{\mu\nu}_n$，反对称部分为Berry Curvature $\Omega^{\mu\nu}_n$。
 
-$$Q^{\mu\nu}_{GS} = \langle \Delta \hat{r}^\mu \Delta \hat{r}^\nu \rangle_{GS} = \operatorname{tr} \left[ \hat{P} \hat{r}^\mu (\mathbb{I} - \hat{P}) \hat{r}^\nu \right]$$
+从这个定义出发，一方面，我们在数学上完善了之前对quantum geometric tensor的理解——quantum metric给出了real space中波函数dipole dipole moment的对称部分（real space spread，这事实上还对应了Wannier function的spread，可以参考我之前的note，此处不再赘述），Berry curvature给出了反对称部分（self-rotation）。我们还能将quantum geometry从一个band的性质推广到整个基态波函数的实空间性质，从而不再需要band structure，甚至可以给任意的量子多体系统构建quantum geometric tensor：
 
-其中$\hat{P}$为Ground State projector operator，$\mathbb{I}$为单位矩阵。这样便可以对任意（基）态定义quantum geometric tensor，作为（基）态的内禀物理量。
+$$
+Q^{\mu\nu}_{GS} = \langle \Delta \hat{r}^\mu \Delta \hat{r}^\nu \rangle_{GS} = \operatorname{tr} \left[ \hat{P} \hat{r}^\mu (\mathbb{I} - \hat{P}) \hat{r}^\nu \right]
+$$
 
-Fermi Golden Rule告诉我们在空间均匀的外电场的作用下（微扰Hamiltonian为$H' = -e \hat{\mathbf{r}} \cdot \mathbf{E}$），从n-th band到m-th band的跃迁速率为：
+其中$\hat{P}$为Ground State projector operator，$\mathbb{I}$为单位矩阵。这样一来，便可以对任意（基）态定义quantum geometric tensor，作为（基）态的内禀物理量，它还能反应基态的导电性等一系列基础物理性质：
 
-$$\mathcal{I}_{m \leftarrow n} (\omega) = \frac{2\pi e^2}{\hbar^2} r^\mu_{mn} r^\nu_{nm} \delta(\omega - \omega_{mn}) E^\mu(\omega) \bar{E}^\nu(\omega)$$
+> 🔗 *【link: Wannier function spread note】*
 
-> **图④** 两带能带图：蓝色抛物线（$m$-band）和红色抛物线（$n$-band）。白色粗箭头（$\mathcal{I}_{m\leftarrow n}$）标注跃迁，旁有闪电符号标注驱动频率 $\omega$。
+> 🔗 *【link: insulator or metal】*
 
-对$\omega$积分，再对所有$m\neq n$求和，n-th band的total transition rate正比于quantum geometric tensor：
+![图：quantum metric vs real space spread](/posts/quantum-geometry-everything/fig03.png)
 
-$$\mathcal{I}_{n}^{tot} = \int d\omega \sum_{m \neq n} \mathcal{I}_{m \leftarrow n} (\omega) = \frac{2\pi e^2}{\hbar^2} Q^{\mu\nu}_{n} E^\mu \bar{E}^\nu$$
+另一方面，我们又可以有新的理解——quantum metric对应了dipole dipole excitation的对称部分，Berry curvature对应了dipole dipole excitation的反对称部分。
 
-将transition rate与不同物理量组合，便得到不同的geometric response：
+这一新的理解对于帮助我们寻找quantum geoemtric response非常有帮助，我们不妨先回忆一些我们在何处会遇到dipole dipole excitation，我们不难联想到量子力学中的Fermi Golden Rule（关于Fermi Golden Rule和Response Theory的联系也可以参考我之前的note，此处也不再赘述）。
 
-- (i) $\mathcal{I}_{m \leftarrow n} \times 1$：Transition Rate
-- (ii) $\mathcal{I}_{m \leftarrow n} \times (E_m - E_n)$：Joule Heat (dissipative linear conductivity)
-- (iii) $\mathcal{I}_{m \leftarrow n} \times (v_m - v_n)$：Velocity Shift (injection current)
-- (iv) $\mathcal{I}_{m \leftarrow n} \times (r_m - r_n)$：Positional Shift (shift current)
+Fermi Golden Rule告诉我们在空间均匀的外电场的作用下（微扰Hamiltonian为$H' = -e \hat{\mathbf{r}} \cdot \mathbf{E}$），从n-th band (eigenstate)到m-th band (eigenstate)的跃迁速率为：
+
+$$
+\mathcal{I}_{m \leftarrow n} (\omega) = \frac{2\pi}{\hbar^2} | \langle \psi_m | -e \hat{\mathbf{r}} \cdot \mathbf{E}(\omega) | \psi_n \rangle |^2 \delta(\omega - \omega_{mn})
+$$
+
+不难发现里面直接包含了我们需要的interband dipole-dipole transition matrix element $\langle \psi_m | -e \hat{\mathbf{r}} \cdot \mathbf{E} | \psi_n \rangle = - e r^\mu_{mn} E^\mu$，从而：
+
+$$
+\mathcal{I}_{m \leftarrow n} (\omega) = \frac{2\pi e^2}{\hbar^2}  r^\mu_{mn} r^\nu_{nm} \delta(\omega - \omega_{mn}) E^\mu(\omega) \bar{E}^\nu(\omega)
+$$
+
+![图：Fermi Golden Rule](/posts/quantum-geometry-everything/fig04.png)
+
+其中$\bar{E}$代表复共轭，我们定义$\mathbf{E}(t) = \mathbf{E}(\omega) e^{i \omega t} + c.c.$。我们不难发现只要将整个式子进行一些操作，便能直接提取其中的quantum geometric quantity。
+
+例如，我们对所有的$m \neq n$的态进行求和，得到n-th band到其他band的total transition rate$\sum_{m \neq n} \mathcal{I}_{m \leftarrow n}(\omega)$，然后对$\omega$进行积分抵消delta function，我们便得到了n-th band的total transition rate正比于n-th band的quantum geometric tensor。
+
+$$
+\mathcal{I}_{n}^{tot} = \int d\omega \sum_{m \neq n} \mathcal{I}_{m \leftarrow n} (\omega) = \frac{2\pi e^2}{\hbar^2} \sum_{m \neq n} r^\mu_{mn} r^\nu_{nm}  E^\mu \bar{E}^\nu \propto Q^{\mu\nu}_{n} E^\mu \bar{E}^\nu
+$$
+
+这告诉我们对于系统对于均匀分布的频谱的总跃迁速率正比于量子几何张量，这也是通过对quantum geometric tensor的transition dipole-dipole matrix element诠释的直接应用：以往我们一般从response function的各种matrix element开始凑出几何量，再claim这些响应是geometric的，现在若我们对geometric quantity的物理诠释有了更深的理解，我们完全可以反其道而行之，直接从物理含义出发构建物理量的几何响应。
+
+此处我们就对纯transition rate进行了求和，我们还能用类似的方法构造更多的transition rate，例如我们把transition rate乘上"m-th band到n-th band的能量差"$\omega_{mn} = E_m - E_n$便可以得到energy dissipation rate，对于电场驱动的系统，这其实就是焦耳热Joule heat，本人之前也有相关note，可以参考。
+
+> 🔗 *【link: Joule heat note】*
+
+而Joule heat进一步对应了linear conductivity中的disspative的部分，这说明dissipative linear conductivity也是quantum geometric的。
+
+再例如如果把transition rate乘上"m-th band到n-th band的速度差"$v_m - v_n = \nabla_k \omega_{mn}$便可以得到velocity shift rate，这与nonlinear optical conductivity中的injection current直接相关；再例如把transition rate乘上"m-th band到n-th band的位移"$R_{mn} \sim \langle r \rangle_m - \langle r \rangle_n$便可以得到positional shift rate，这与nonlinear optical conductivity中的shift current直接相关。而这两者都已被证明是quantum geometric的，前者与quantum metric/Berry curvature相关，而后者与更高阶的quantum connection相关。
+
+总结一下：
+
+(i) $\mathcal{I}_{m \leftarrow n} \times \text{1}$: Transition Rate 
+
+(ii) $\mathcal{I}_{m \leftarrow n} \times (E_m - E_n)$: Joule Heat (dissipative linear conductivity)
+
+(iii) $\mathcal{I}_{m \leftarrow n} \times (v_m - v_n)$: Velocity Shift (injection current)
+
+(iv) $\mathcal{I}_{m \leftarrow n} \times (r_m - r_n)$: Positional Shift (shift current)
+
+我们之后给出更detailed的解释。
 
 ### 倒空间态矢几何 (Momentum Space Eigenstate Geometry)
 
-量子力学告诉我们坐标算符在reciprocal space的表象是对动量$\mathbf{k}$的导数$\hat{\mathbf{r}} = i \nabla_{\mathbf{k}}$。结合两者，quantum geometric tensor描述了波函数在reciprocal space上的度规:
+现在我们了解了quantum metric和Berry curvature分别描述了electronic wavepacket在real space中的deformation和self-rotation，数学上分别对应了interband dipole-dipole transition matrix element $\langle \Delta \hat{r}^\mu \Delta \hat{r}^\nu \rangle_n$的对称与反对称部分，我们接着介绍quantum geometry在reciprocal space（倒空间，动量空间）中的几何含义。
 
-$$Q^{\mu\nu}_{n} = \langle \Delta \hat{r}^\mu \Delta \hat{r}^\nu \rangle_n \sim \langle \psi_n | \nabla_{k_\mu} \nabla_{k_\nu} | \psi_n \rangle$$
+量子力学告诉我们动量算符在real space的表象是对坐标$\mathbf{r}$的导数$\hat{\mathbf{k}} = -i \nabla_{\mathbf{r}}$，对应的坐标算符在reciprocal space的表象便是对动量$\mathbf{k}$的导数$\hat{\mathbf{r}} = i \nabla_{\mathbf{k}}$。我们又已知Quantum geometric quantity的本质是(interband) dipole-dipole 的期望值，结合两者，我们可以get到quantum geometric tensor在描述了波函数在reciprocal space上的度规:
 
-> **图⑤** Bloch球三维示意图：红色曲线 $l_1, l_2$ 标注弧长（量子度规 $g_\mathbf{k}^{ab}$），橙黄色阴影区 $S_1, S_2$ 标注面积元（Berry曲率 $\Omega_\mathbf{k}$）。量子几何张量同时编码了Hilbert空间流形的"长度"与"面积"。
+$$
+Q^{\mu\nu}_{n} = \langle \Delta \hat{r}^\mu \Delta \hat{r}^\nu \rangle_n \sim \langle \psi_n | \nabla_{k_\mu} \nabla_{k_\nu} | \psi_n \rangle
+$$
 
-更严格的保证gauge invariance的表述是：
+![图：curved space metric vs Bloch sphere](/posts/quantum-geometry-everything/fig05.png)
 
-$$Q^{\mu\nu}_{n} = \langle \nabla_{k_\mu} \psi_n | \left[ \mathbb{I} - | \psi_n \rangle \langle \psi_n | \right] | \nabla_{k_\nu} \psi_n \rangle$$
+更严格的，保证gauge invariance的表述是：
 
-quantum metric measure了波函数空间在reciprocal space上的"长度" $dl^2 = g^{\mu\nu} \mathrm{d} k_\mu \mathrm{d} k_\nu$，而Berry curvature反映了波函数空间在reciprocal space上的"面积" $dS = \Omega^{\mu\nu} \mathrm{d} k_\mu \mathrm{d} k_\nu$。
+$$
+Q^{\mu\nu}_{n} =  \langle \nabla_{k_\mu} \psi_n | \left[ \mathbb{I} - | \psi_n \rangle \langle \psi_n | \right] | \nabla_{k_\nu} \psi_n \rangle
+$$
 
-Gauge invariant的line element和面积元为：
+目前我们已经知道了real space的position operator作用在我们的波函数空间相当于在reciprocal space上求导，或者说进行了$\mathbf{k} \rightarrow \mathbf{k} + d\mathbf{k}$的微小平移，然后将state vector的变化或对称/或反对称的相乘——这正对应了我们如何在differential manifold上求"长度"&"面积"的操作。从这一角度来讲，quantum metric measure了波函数空间在reciprocal space上的"长度" $dl^2 = g^{\mu\nu} \mathrm{d} k_\mu \mathrm{d} k_\nu$，而Berry curvature反映了波函数空间在reciprocal space上的"面积" $dS = \Omega^{\mu\nu} \mathrm{d} k_\mu \mathrm{d} k_\nu$。
 
-$$dl^2 = g^{\mu\nu} dk_\mu dk_\nu, \qquad dS = \Omega^{\mu \nu} dk_\mu dk_\nu$$
+![图：Bloch sphere metric and curvature](/posts/quantum-geometry-everything/fig06.png)
 
-这对于我们理解Chern number很有用——对Berry curvature的积分相当于对Bloch sphere面积的积分，which is quantized。这对于理解geometric bound $\operatorname{tr} g \geq 2 |\Omega^{xy}|$ 也很有用：给定周长的图形中，圆所围面积最大，这意味着"长度"对"面积"天然存在upper bound。
+具体而言，我们先来考虑怎么求line element的距离，为了获得line element，我们考虑$\mathbf{k} \rightarrow \mathbf{k} + d\mathbf{k}$对应的state vector的变化，这个过程中，波函数从$|\psi_n(\mathbf{k})\rangle$变成了$|\psi_n(\mathbf{k} + d\mathbf{k})\rangle$，波函数变化对应的矢量在Hilbert Space为$|\psi_n(\mathbf{k} + d\mathbf{k})\rangle - |\psi_n(\mathbf{k})\rangle$，而这个矢量在reciprocal space上对应的矢量就是$|\Delta \psi_n(\mathbf{k})\rangle = |\partial_{k_\mu} \psi_n(\mathbf{k})\rangle dk_\mu$，为了得到长度（的平方），我们将这个矢量与自身做内积，得到
+
+$$
+dl^2 = \langle \Delta \psi_n(\mathbf{k}) | \Delta \psi_n(\mathbf{k}) \rangle = \langle \partial_{k_\mu} \psi_n(\mathbf{k}) | \partial_{k_\nu} \psi_n(\mathbf{k})\rangle dk_\mu dk_\nu
+$$
+
+但是这样定义出来的line element并不是gauge invariant的，因为波函数真正physical的部分与模长无关，这相当于我们还要去掉$|\Delta \psi_n(\mathbf{k})\rangle$在模长方向，也就是去掉$|\psi_n(\mathbf{k})\rangle$在方向的投影，得到$|\Delta \psi_n(\mathbf{k})\rangle \rightarrow |\Delta \psi_n(\mathbf{k})\rangle_{\text{real}} = |\Delta \psi_n(\mathbf{k})\rangle - \langle \psi_n(\mathbf{k}) | \Delta \psi_n(\mathbf{k})\rangle |\psi_n(\mathbf{k})\rangle$，从而得到gauge invariant的line element 
+
+$$
+dl^2 = {}_{\text{real}}\langle \Delta \psi_n(\mathbf{k}) | \Delta \psi_n(\mathbf{k}) \rangle_{\text{real}} = g^{\mu\nu} dk_\mu dk_\nu
+$$
+
+类似的Berry curvature对应的反对称部分可以理解为"叉积"对应的求面积元的面积，从而：
+
+$$
+dS = \Omega^{\mu \nu} dk_\mu dk_\nu
+$$
+
+这对于我们理解Chern number & Chern insulator很有用，对于Berry curvature的积分相当于对Bloch sphere面积的积分，当整个Brillouin zone map的波函数覆盖了整个Bloch sphere，对应的面积积分则对应单位球面（因为波函数均归一化，模长为1）的面积，which is quantized。
+
+这对于我们理解quantum metric和Berry curvature之间的geometric bound也很有用。可以试想一下给定周长的图形中，我们总能找到一个最大化面积的图形（circle！），这意味着纯几何角度，"长度"对"面积"天然存在一个upper bound，这有利于我们理解quantum metric对Berry curvature的upper bound，即我们之后会提到的geometric bound in 2D system: $\operatorname{tr} g  \geq 2 |\Omega^{xy}|$，此处点到为止。
 
 ### 规范不变投影法 (Gauge Invariance and Projector Formalism)
 
-给波函数加一个相位（规范变换）$|\psi\rangle \rightarrow e^{i \theta} |\psi\rangle$后，物理量不能有改变。对于晶格系统，dipole matrix element的对角元$\langle \hat{r}^\mu \rangle_n$与晶格原点取法有关，是gauge dependent的量，去掉后得到的quantum geometric tensor便只剩下gauge-invariant的物理信息。
+我们之前提到了关于gauge invariance的问题，简而言之就是给波函数加一个相位（规范变换）$|\psi\rangle \rightarrow |\psi'\rangle = e^{i \theta} |\psi\rangle$后，波函数的还是原来的态，我们观测到的物理量不能有改变，例如概率$P = |\langle \psi | \psi \rangle|^2$，可观测量$\hat{\mathcal{O}}$的期望值$\langle \psi | \hat{\mathcal{O}} | \psi \rangle$，Response function $\chi_{A;B} \propto \langle \psi | [ \hat{A}, \hat{B} ] | \psi \rangle$等。
 
-> **图⑥** 规范变换=原胞原点平移示意：original unit cell → new unit cell，波包中心随原点选取平移（物理同一态）。说明对角元 $\langle\hat{r}^\mu\rangle_n$ 依赖于人为坐标选取，而量子几何张量是gauge invariant的。
+特别的，对于晶格系统，gauge与空间坐标的原点选取密切相关，这里我们展开讨论一下。
 
-为了更方便地保证formula的gauge invariance，引入projector formalism：
+所谓的gauge dependent对应了一个相位变化，对于晶格系统的Bloch波函数$|\psi_{n\mathbf{k}}\rangle = e^{i \mathbf{k} \cdot \mathbf{r}} |u_{n\mathbf{k}}\rangle$，我们规范变换（加一个相位）的操作$|\psi_{n\mathbf{k}}\rangle \rightarrow |\psi_{n\mathbf{k}}\rangle e^{i \theta_n(\mathbf{k})}$，相当于进行了一个平移$e^{i \mathbf{k} \cdot \mathbf{r}}  \rightarrow e^{i \mathbf{k} \cdot (\mathbf{r} + \mathbf{R}_n(\mathbf{k}))}$，as long as $\mathbf{k} \cdot \mathbf{R}_n(\mathbf{k}) = \theta_n(\mathbf{k})$。dipole matrix element的对角元$\langle \hat{r}^\mu \rangle_n = \langle \psi_n | \hat{r}^\mu | \psi_n \rangle$的物理含义是n-th band Bloch波函数的中心位置，但是在周期边界（或者认为无限大）的晶格体系中，这个中心位置与我们把晶格的原点取在哪里有关，所以这个对角元不是一个可以物理的量，而是与人为坐标选取相关的量，所以把它去掉后得到的quantum geoemtric tensor便只剩下了物理的，gauge-invariant的信息，这进一步让我们确信我们打包的量子几何量是物理的，intrinsic的量。
 
-$$\hat{P}_n = |\psi_n\rangle \langle \psi_n|$$
+![图：gauge dependence vs coordinate choice](/posts/quantum-geometry-everything/fig07.png)
 
-ket与bra的相位在projector中抵消，projector本身规范不变。在此formalism下：
+这里的对角项如果把表达式具体写出来，可以写作:
 
-$$g^{\mu\nu}_n = \frac{1}{2} \operatorname{tr}[\partial_\mu \hat{P}_n \partial_\nu \hat{P}_n]$$
+$$
+\langle \psi_{n\mathbf{k}} | \hat{r}^\mu | \psi_{n\mathbf{k'}} \rangle = \left[ -i \partial_{k_\mu} +  \underbrace{\langle u_n | i \partial_{k_\mu} | u_n \rangle}_{\mathcal{A}^\mu_{n}} \right] \delta(\mathbf{k} - \mathbf{k}')
+$$
 
-$$\Omega^{\mu\nu}_n = i \operatorname{tr}[\hat{P}_n\partial_\mu \hat{P}_n \partial_\nu \hat{P}_n] - (\mu \leftrightarrow \nu)$$
+这里$|u_n\rangle$是Bloch波函数的periodic部分，与Bloch wavefunction的关系为$|\psi_{n\mathbf{k}}\rangle = e^{i \mathbf{k} \cdot \mathbf{r}} | u_{n\mathbf{k}} \rangle$，此后的式子里可能省略$\mathbf{k}$，不再多做说明。但值得一提的是，之前出现的各种definition并未要求系统是一个周期的晶格系统，所以对于最一般的体系，我们也可以定义quantum geometry，例如有interaction/disorder的多体系统，甚至是quasi crystal等一些非周期系统，可以参考我之前的一些note。
 
-$$Q^{\mu\nu}_n = \operatorname{tr}[\hat{P}_n\partial_\mu \hat{P}_n \partial_\nu \hat{P}_n]$$
+> 🔗 *【link: how to distinguish insulator from metal with quantum geometry?】*
 
-对于degenerate band，推广为d-band projector $\hat{P}_n = \sum_{i=1}^{d} |\psi_{n,i}\rangle \langle \psi_{n,i}|$；还可以把projector看成density matrix，构建混态/有限温度体系的quantum geometry。
+这又一次体现了quantum geometry的普适性，其最根本的物理图像&几何意义并不会因为体系不是periodic的而改变。
+
+这个式子中有一个highly singular的delta function的导数，还有一块其实就是n-th band的Berry connection，在modern polarization theory中我们知道这对应着周期晶格系统中的polarization（也就是position operator的期望值）。虽然我们刚刚说了这是与人为坐标选取相关的量，但并不是说它完全没用，在modern polarization theory中，我们会遇到给晶格加电场后整个Brillouin zone的波函数同时平移&贡献polarization的情况，一个周期后各个波函数在动量空间回到了原来的位置，但是整体的polarization变化不一定为0，而是由Berry connection导数的积分构成$\Delta P = \int dk  \frac{\partial \mathcal{A}_n}{\partial k} $，而Berry connection作为周期晶格中的polarization，其定义是up to a unit lattice vector的平移不变量，所以说积分的结果可以是零，也可以是非零的整数倍，这便是Thouless topological pump的思想实验，也是topological insulator的开端。除此之外，Berry curvature也可以写成Berry connection导数的反对称形式$\Omega^{\mu\nu}_n = \partial_{k_\mu} \mathcal{A}^\nu_n - \partial_{k_\nu} \mathcal{A}^\mu_n$，这也变相说明了Berry connection虽然与人为坐标选取相关，但是也有重要的物理含义。
+
+既然我们更关注physical的物理量，我们自然更关心gauge invariant的quantum geometry及其related observables。但之前的定义中，我们经常遇到的是直接对波函数求导的操作$\partial_a |\psi\rangle$，乃至response function中各种matrix element $A_{nm} \equiv \langle \psi_n | \hat{A} | \psi_m \rangle$，都不是gauge invariant的。
+
+但是我们在定义Berry curvature, quantum metric, quantum connection，乃至最终算出的quantum geometric observables时都尽量保证了formula的gauge invariance的（证明留做习题）。这之间必然有一步是将gauge-dependent的量整合成gauge invariant量的过程，而为了更方便地做到这一步，最近一些文章开始引入projector formalism或者类似的方法，从一开始的formula推导level就保证formula的gauge invariance。例如，n-th band的投影算符$\hat{P}_n$的定义为：
+
+$$
+\hat{P}_n = |\psi_n\rangle \langle \psi_n|
+$$
+
+虽然波函数（ket & bra）做gauge transformation会多一个相位，但是两者的相位在整个projector中抵消，从而造就了projector operator本身的规范不变性。此时projector$\hat{P}_n$包含了和波函数$|\psi_n\rangle$一样多的物理信息，但是我们对projector做微分/求导操作后还是gauge invariant的，这就非常有利于我们推导时只保留gauge invariant的terms，不用推一堆gauge dependent的matrix element之后再思考怎么凑出一个gauge invariant的term，更不用说凑成一个纯geoemtric的term了。
+
+这便是Projector formalism的魅力，在此formalism下，quantum metric，Berry curvature，quantum geometric tensor可以写成：
+
+$$
+g^{\mu\nu}_n = \frac{1}{2} \operatorname{tr}[\partial_\mu \hat{P}_n \partial_\nu \hat{P}_n]
+$$
+
+$$
+\Omega^{\mu\nu}_n = i \operatorname{tr}[\hat{P}_n\partial_\mu \hat{P}_n \partial_\nu \hat{P}_n] - (\mu \leftrightarrow \nu)
+$$
+
+$$
+Q^{\mu\nu}_n = \operatorname{tr}[\hat{P}_n\partial_\mu \hat{P}_n \partial_\nu \hat{P}_n]
+$$
+
+感兴趣的读者可以自行证明或者移步：
+
+> 🔗 *【link: Projector formalism paper】*
+
+Projector formalism还有更多好处，例如对于degenerate point/band的quantum geometry，我们没法直接copy single-band的quantum geometry公式，但我们可以直接把Projector推广成d-band projector：
+
+$$
+\hat{P}_n = \sum_{i = 1}^{d} |\psi_{n,i}\rangle \langle \psi_{n,i}|
+$$
+
+此处d为degeneracy。
+
+更进一步我们还可以把这个projector看成纯态的density matrix，甚至将momentum $\mathbf{k}$替换为其他参数，从而构建基于density matrix的纯态乃止混态/有限温度体系的quantum geometry，这在open quantum system，quantum information的formalism中比较常用，更详细的我们会在下一section说明，此处点到为止。
 
 ### 量子几何高阶项 (Higher Order Quantum Geometry)
 
-以quantum connection为例：
+既然quantum geometric tensor定义了波函数在real space的dipole-dipole moment $\langle \Delta r^\mu \Delta r^\nu \rangle_n$ & reciprocal space的二阶momentum derivative定义的几何张量 $\langle \nabla_{k_\mu} \nabla_{k_\nu}\rangle_n$，我们自然可以考虑更多的dipole/momentum derivative的组合，从而得到更高阶的quantum geometric quantities，e.g. quantum connection, torsion tensor, Riemann curvature, etc.
 
-$$Q^{\mu;\nu\rho}_n = \operatorname{tr} \left[ \hat{P}_n\partial_\mu \hat{P}_n \partial_\nu \partial_\rho \hat{P}_n \right]$$
+以quantum connection为例，single-band的quantum connection可以写成：
 
-Berry curvature dipole $\partial_\rho \Omega^{\mu\nu}_n$ 和 quantum metric dipole $\partial_\rho g^{\mu\nu}_n$ 与quantum connection的联系：
+$$
+Q^{\mu;\nu\rho}_n = \operatorname{tr} \left[ \hat{P}_n\partial_\mu \hat{P}_n \partial_\nu \partial_\rho \hat{P}_n \right]
+$$
 
-$$\partial_\rho g^{\mu\nu}_n = \operatorname{Re} \left[ Q^{\mu;\rho\nu}_n - Q^{\nu;\rho\mu}_n \right], \qquad \partial_\rho \Omega^{\mu\nu}_n = -2 \operatorname{Im} \left[ Q^{\mu;\rho\nu}_n - Q^{\nu;\rho\mu}_n \right]$$
+此处我们直接用Projector formalism的形式写出，这也保证了表达式的gauge invariance。
+
+还有一类高阶的几何量来自直接对低阶几何量的求导，例如Berry curvature dipole $\partial_\rho \Omega^{\mu\nu}_n$和quantum metric dipole $\partial_\rho g^{\mu\nu}_n$，它们可能在nonlinear response等高阶的response function中出现。
+
+quantum connection还和Berry curvature/quantum metric dipole有着紧密的联系：
+
+$$
+\partial_\rho g^{\mu\nu}_n = \operatorname{Re} \left[ Q^{\mu;\rho\nu}_n - Q^{\nu;\rho\mu}_n \right]
+$$
+
+$$
+\partial_\rho \Omega^{\mu\nu}_n = -2 \operatorname{Im} \left[ Q^{\mu;\rho\nu}_n - Q^{\nu;\rho\mu}_n \right]
+$$
+
+可见quantum metric/Berry curvature dipole也是对应了quantum connection $Q^{\mu;\rho\nu}$ 中$\mu \leftrightarrow \nu$的对称与反对称部分。
 
 ### 多带の量子几何 (Multi-band Quantum Geometry)
 
-2-band quantum geometric tensor：
+若仔细观察n-th band的quantum geometric tensor，我们发现被求和的每一项$r^{\mu}_{nm} r^{\nu}_{mn}$这个整体也是gauge invariant的，它对应了仅限于n-th band和m-th band之间的2-band dipole-dipole transition matrix element。事实上，在各种response function中，$r^{\mu}_{nm} r^{\nu}_{mn}$经常出现，而其对于各个band的无加权求和形式$\sum_{m \neq n} r^{\mu}_{nm} r^{\nu}_{mn}$并没有那么经常出现。既然2-band dipole-dipole transition matrix element本身也是gauge invariant的，我们也常常退而求其次使用定义在2-band上的quantum geometric tensor
 
-$$Q^{\mu\nu}_{nm} = r^{\mu}_{nm} r^{\nu}_{mn} = g^{\mu\nu}_{nm} - i \Omega^{\mu\nu}_{nm}$$
+$$
+Q^{\mu\nu}_{nm} = r^{\mu}_{nm} r^{\nu}_{mn} = g^{\mu\nu}_{nm} - i \Omega^{\mu\nu}_{nm}
+$$
 
-利用"tangent vector" operator $\hat{e}^\mu_{mn} = i \hat{P}_m (\partial_\mu \hat{P}_n) \hat{P}_n$（gauge invariant），2-band量可以写成：
+此处$m \neq n$，我们发现$r_{mn}^\mu = \langle u_m | i \partial_\mu | u_n \rangle$也经常参与进来，但这一off-diagonal dipole matrix element本身并非gauge invariant的量，因此我们可以构建"tangent vector" operator $\hat{e}^\mu_{mn}$（详细的可以参考Ahn的文章）
 
-$$Q^{\mu\nu}_{nm} = \operatorname{tr}[\hat{P}_n\partial_\mu \hat{P}_m \partial_\nu \hat{P}_n]$$
+$$
+\hat{e}^\mu_{mn} = |u_m \rangle r_{mn} \langle u_n|
+$$
 
-在系统只有2 band时，2-band quantum geometry与1-band quantum geometry包含相同的信息，例如quantized circular injection conductivity只在2-band system中成立。
+虽然$r_{mn}$本身gauge dependent，但是$\hat{e}^\mu_{mn}$这个operator本身是gauge invariant的，而且这个operator本身自带了"tangent vector"的物理含义，即态$|u_n\rangle$从$\mathbf{k} \rightarrow \mathbf{k} + d\mathbf{k}$的偏移量，在$|u_m\rangle$方向上的投影（$d\mathbf{k}$无限小的时候变趋近于tangent方向，that's why we call it "tangent vector"）。
 
----
+这样一来，各种2-band quantum geometric quantities可以写成类似Projector operator中的取trace的形式，例如：
+
+$$
+Q^{\mu\nu}_{nm} = - \operatorname{tr}[\hat{e}^\mu_{mn}\hat{e}^\nu_{nm}]
+$$
+
+相应的还有2-band quantum connection:
+
+$$
+C^{\alpha\beta\gamma}_{nm} = \operatorname{tr} \left[ \hat{e}^\alpha_{mn} \partial_\beta\hat{e}^\gamma_{nm} \right]
+$$
+
+既然"tangent vector" operator本身是gauge invariant的，它也可以用Projector operator的形式表示：
+
+$$
+\hat{e}^\alpha_{mn} = i \hat{P}_m (\partial_\alpha \hat{P}_n) \hat{P}_n
+$$
+
+如此一来，2-band quantum geometric tensor可以写成：
+
+$$
+Q^{\mu\nu}_{nm} = \operatorname{tr}[\hat{P}_n\partial_\mu \hat{P}_m \partial_\nu \hat{P}_n]
+$$
+
+2-band quantum connection也可以写成：
+
+$$
+C^{\alpha\beta\gamma}_{nm} = \operatorname{tr} \left[ \hat{P}_n \partial_{\beta} \hat{P}_m \left( \partial_{\alpha} \partial_{\gamma} \hat{P}_n + \partial_{\alpha} \hat{P}_m \partial_{\gamma} \hat{P}_n \right) \right]
+$$
+
+详细的推导可以参考：
+
+> 🔗 *【link: Projector formalism paper】*
+
+2-band quantum geometry在系统只有2 band（2维Hilbert space）时，由于两个band的本征态在2D空间内是正交的，所以知其一便知其二，此时2-band quantum geometry与1-band quantum geometry包含相同的信息，所以在2-band quantum geometry描述的response中，在系统只有两带时可以退化为single-band quantum geometry描述的response，例如quantized injection conductivity只在2-band system中成立，这便是因为quantized circular injection conductivity事实上是所有2-band quantum geometric tensor的求和，而Chern number quantization只对single-band的Berry curvature成立。具体可以参考原文：
+
+> 🔗 *【link: quantized circular injection conductivity】*
 
 ## 量子几何意味何？Quantum Geometry means What?
 
 我们把矩阵元包装成quantum geometric tensor，进而理解各种物理量有诸多好处。
 
-一是更方便我们用物理的intuition理解各种物理量的物理/几何含义；二是通过与几何/拓扑学的联系，我们可以得到一些有趣的量子体系的恒等式/不等式。最重要的例如量子（反常）霍尔效应的quantized Hall conductivity对应着体系里拓扑非平庸的能带quantized Chern number:
+一是更方便我们用物理的intuition理解各种物理量的物理/几何含义。例如反常霍尔效应与Berry curvature的联系可以用波包的self-rotation贡献的anomalous motion来理解；同时，这些geometric quantity也是研究的材料/体系本身intrinsic的property，这对我们理解/调控我们想要的物理体系非常有帮助，我们不再需要费力的理解如何调控能量/波函数/可观测量矩阵元等更细枝末节且可能含有gauge dependence的量，而只需要关注打包好的且是材料intrinsic的quantum geometric properties。
 
-$$\sigma_{xy} = \frac{e^2}{h} C = \frac{e^2}{h} \int_{BZ} d^dk \,\Omega^z(k)$$
+二是通过与几何/拓扑学的联系，我们可以得到一些有趣的量子体系的恒等式/不等式。最重要的例如量子（反常）霍尔效应的quantized Hall conductivity对应着体系里拓扑非平庸的能带quantized Chern number:
+
+$$
+\sigma_{xy} = \frac{e^2}{h} C = \frac{e^2}{h} \int_{BZ} d^dk \Omega^z(k)
+$$
+
+即使得不到类似quantized Hall conductivity的quantized几何量，我们也可以得到一些有趣的恒等式/不等式，例如之前提到的geometric bound $\operatorname{tr} g  \geq 2 |\Omega^{xy}|$暗示我们任何正比于quantum metric的物理量都被Berry curvature（Chern number）"兜底"，这给出了拓扑非平庸体系的几何响应的lower bound。
 
 ### 量子几何响应率 (Quantum Geometric Response)
 
-**(i) Transition Rate**
+我们先从物理出发，思考量子几何量如何参与到物理系统的response function中。
 
-$$\mathcal{I}_{n}^{tot} = \frac{2\pi e^2}{\hbar^2} Q^{\mu\nu}_{n} E^\mu \bar{E}^\nu$$
+对于电场驱动的系统，我们之前讨论过transition rate的表达式为：
 
-对于线偏振光，对应quantum metric；对于圆偏振光，左旋右旋之差对应Berry curvature。
+$$
+\mathcal{I}_{m \leftarrow n} (\omega) = \frac{2\pi e^2}{\hbar^2}  r^\mu_{mn} r^\nu_{nm}  \delta(\omega - \omega_{mn}) E^\mu \bar{E}^\nu
+$$
 
-**(ii) Joule Heat / Dissipative Linear Conductivity**
+之前提到，transition rate与不同的物理量组合可以产生不同的geometric response，此处给出更detailed的讨论：
 
-$$\mathcal{P}_{Joule}(\omega) = \frac{2\pi e^2}{\hbar^2} \omega \sum_{m \neq n} r^\mu_{nm} r^\nu_{mn} \delta(\omega - \omega_{mn}) E^\mu \bar{E}^\nu$$
+(i) $\mathcal{I}_{m \leftarrow n} \times \text{1}$: Transition Rate
 
-由此得到SWM sum rule：
+上一节基本讲清，为了凑出quantum geometric tensor的表达式$Q^{\mu\nu}_{n} = \sum_{m \neq n} r^{\mu}_{nm} r^{\nu}_{mn}$，我们先积分掉delta function$\delta(\omega - \omega_{mn})$，再对所有可能激发到的band求和，从而total transition rate便正比于$Q^{\mu\nu}$：
 
-$$\int d\omega \frac{\sigma^{\mu\nu}_{\text{dis}}(\omega)}{\omega} = \frac{2\pi e^2}{\hbar^2} Q^{\mu\nu}$$
+$$
+\mathcal{I}_{n}^{tot} = \int d\omega \sum_{m \neq n} \mathcal{I}_{m \leftarrow n} (\omega) = \frac{2\pi e^2}{\hbar^2} Q^{\mu\nu}_{n}  E^\mu \bar{E}^\nu
+$$
 
-还有著名的optical f-sum rule：
+更进一步，对于线偏振光（linear polarization），即$\mathcal{I}_{n}^{tot,\updownarrow}$，它对应了量子几何tensor中的$\mu \leftrightarrow \nu$对称部分，即quantum metric，而对于圆偏振光（circular polarization），我们考虑左旋光和右旋光的差别，即$\mathcal{I}_{n}^{tot,\circlearrowleft} - \mathcal{I}_{n}^{tot,\circlearrowright}$，它对应了量子几何tensor中的$\mu \leftrightarrow \nu$反对称部分，即Berry curvature。读者可以自行选取以下振幅进行验证（注意表达式中的复共轭）
 
-$$\int d\omega \sigma^{\mu\mu}(\omega) = \frac{ne^2}{m} \equiv \mathcal{D}$$
+$$
+\mathbf{E}_{\updownarrow}(\omega) = (1,0,0),\,\mathbf{E}_{\circlearrowleft/\circlearrowright}(\omega) = \frac{1}{\sqrt{2}} (1,\pm i,0)
+$$
 
-进而，极化率 $\chi^{ab}(\omega) = \sigma^{ab}(\omega)/i\omega$，介电常数 $\epsilon = 1 + \chi$，折射率 $n = \sqrt{\epsilon}$ 均受quantum geometry影响。
+详细推导可以参考作者review paper的appendix，或者Ahn的paper：
 
-**越是topological nontrivial的体系，折射率一定更大。** 为何钻石如此闪耀，因为diamond是obstructed atomic insulator，它的nontrivial topology/quantum geometry使它有更高的折射率（$n=2.4$），光线在其内反射更多次从而看起来更加闪耀（相比Rock Salt的$n=1.5$）。
+> 🔗 *【link: Ahn's paper】*
 
-**(iii) Injection Current (Velocity Shift)**
+> 🔗 *【link: My review paper】*
 
-所谓Injection Current，光照导致电子从Band $n$ 跃迁到 Band $m$，如果跃迁后的群速度$v_m$与原群速度$v_n$存在差异，就会产生随时间线性增长的电流。
+再进一步，这个积分式告诉我们，如果我们用frequency均匀分布功率的$I(\omega) \propto |\mathbf{E}(\omega)|^2$来激发系统，那么整个系统的transition rate正比于quantum geometric tensor。
 
-$$\sigma_{\mathrm{inj}}^{ab;c} \propto \int_{S_k=\{k|\omega = \omega_{mn}(k)\}} dS_k^c \, Q^{ab}$$
+而且注意到，我们并没有显式的写出$\mathbf{k}$，说明这个结果对任何系统都有效，对于能带系统我们只需要再加一个$\mathbf{k}$积分$\int_{BZ} d^D\mathbf{k}$即可，之后没有说明我们都略去$\mathbf{k}$积分，以彰显我们结果的普适性。
 
-有趣的是，对于只有两个Band的系统，CPGE（圆偏振光的Injection Current）是Quantized的。
+这种对某个response function对频率（加权）积分从而对应一个系统intrinsic的physical property的方法一般被称为求和律（sum rule），它是系统的某些内禀特性，例如量子几何量，在response中的体现。Sum rule的伟大之处在于，它完全对应系统（基态/平衡态）的内禀特性，与激发态无关。
 
-**(iv) Shift Current (Positional Shift)**
+(ii) $\mathcal{I}_{m \leftarrow n} \times (E_m - E_n)$: Joule Heat
 
-在量子力学中，电子从Band $n$ 跃迁到 Band $m$ 的过程中，波包的"电荷中心"会发生一个实空间的位移——Shift Vector $R_{mn}^a = \mathcal{A}_{mm}^a - \mathcal{A}_{nn}^a - \nabla_{k_a} \arg(r_{mn})$（gauge invariant）。
+焦耳热的本质是在电场作用下能量的耗散，能量从电磁场转移到quantum system中，从而使得quantum system不断有例子从基态n激发到激发态m，之后在由于各种relaxation回到基态，能量耗散为热能（转移到声子等其他自由度上）。
 
-$$\sigma_{\mathrm{shift}}^{ab;c} \propto \int_{\mathbf{k}} C_{bca} \, \delta (\omega - \omega_{mn})$$
+先将transition rate乘上"m-th band到n-th band的能量差"$\omega_{mn} = E_m - E_n$便可以得到从n-th band到m-th band的energy transfer rate，之后在对所有可能激发的band求和，便可以得到total energy transfer rate，在稳态下这与Joule heat一致：
 
-不同于Injection Current依赖于弛豫时间$\tau$，Shift Current是纯粹的量子几何效应，理论上不依赖于弛豫时间，在超快光电响应器件中具有巨大的潜力。
+$$
+\begin{aligned}
+\mathcal{P}_{Joule}(\omega) & = \sum_{m \neq n} \mathcal{I}_{m \leftarrow n} (\omega) \omega_{mn} \\
+& = \frac{2\pi e^2}{\hbar^2} \sum_{m \neq n} r^\mu_{nm} r^\nu_{mn} \omega_{mn} \delta(\omega - \omega_{mn})E^\mu \bar{E}^\nu \\
+& = \frac{2\pi e^2}{\hbar^2} \omega \sum_{m \neq n} r^\mu_{nm} r^\nu_{mn} \delta(\omega - \omega_{mn}) E^\mu \bar{E}^\nu
+\end{aligned}
+$$
 
-**(v) 非线性输运 (Nonlinear Transport)**
+此处$\mathcal{P}$代表（单位体积）功率。最后一步中，我们利用了delta function的性质，将$\omega_{mn}$替换为$\omega$，到此为止我们也可以把$r^\mu_{nm} r^\nu_{mn}$替换为2-band quantum geometric tenso $Q^{\mu\nu}_{nm}$，来claim Joule heat是quantum geometric的，但比起2-band quantum geometry我们更prefer凑出一个single-band quantum geometric quantity.
 
-在Transport regime ($\omega \to 0$)，通过分析电导对$\tau$的幂次（Scaling Law），把不同几何贡献一层层剥离：
+我们来考虑linear conductivity $\sigma^{\mu\nu}(\omega)$的表达式：
 
-$$j^{(2)} = -e \sum_n \int [dk] \left( \underbrace{f_n^{(2)} v_n^{(0)}}_{\text{NLD}\,(\tau^2)} + \underbrace{f_n^{(1)} v_n^{(1)}}_{\text{BCD}\,(\tau^1)} + \underbrace{f_n^{(0)} v_n^{(2)}}_{\text{QMD}\,(\tau^0)} \right)$$
+$$
+j^\mu(\omega) = \sigma^{\mu\nu}(\omega) E^\nu(\omega)
+$$
 
-**NLD（$\tau^2$）:**
-$$\sigma_{ab;c}^{\text{NLD}} = \frac{e^3 \tau^2}{\hbar^3} \sum_n \int [dk] f_n \frac{\partial^3 \varepsilon_n}{\partial k_a \partial k_b \partial k_c}$$
+根据Joule heat公式，我们不难得到：
 
-**BCD（$\tau^1$，Berry Curvature Dipole，Sodemann & Fu）:**
-$$\sigma_{ab;c}^{\text{BCD}} = \frac{e^3 \tau}{\hbar^2} \sum_n \int [dk] f_n \left( \frac{\partial \Omega_{n}^{bc}}{\partial k_a} + \frac{\partial \Omega_{n}^{ac}}{\partial k_b} \right)$$
+$$
+\mathcal{P}_{Joule}(\omega) = \operatorname{Re} \left[ j^\nu(\omega) \bar{E}^\nu(\omega) \right] = \sigma^{\mu\nu}_{\text{dis}} (\omega) E^\mu(\omega) \bar{E}^\nu(\omega)
+$$
 
-**QMD（$\tau^0$，完全内禀，Quantum Metric Dipole）:**
-$$\sigma_{ab;c}^{\text{QMD}} = \frac{e^3}{\hbar} \sum_n \int [dk] f_n \left( 2 \frac{\partial G_{n}^{ab}}{\partial k_c} - \frac{1}{2}\left(\frac{\partial G_{n}^{bc}}{\partial k_a} + \frac{\partial G_{n}^{ac}}{\partial k_b}\right) \right)$$
+此处"dis"可以理解为和电场$E$没有相位差的电流响应，即电流响应与电场同相位。因为相差$\pi/2$的电流响应与电场点积后得到的功率为0，不难证明：
 
-其中 $G_{n}^{ab} = \sum_{m \neq n} \frac{r^a_{nm} r^b_{mn} + r^b_{nm} r^a_{mn}}{\epsilon_{nm}}$ 是band-normalized quantum metric。
+$$
+\sigma^{\mu\nu}_{\text{dis}}(\omega) = \frac{1}{2} \left[ \sigma^{\mu\nu}(\omega) + \bar{\sigma}^{\nu\mu}(\omega) \right]
+$$
 
-**(vi) Other geometric responses**
+即dissipative linear conductivity包括了longitudinal的real part和transverse的imaginary part。
 
-> **表①** 量子几何量与对应可观测响应总表（来自Tobias综述，arXiv:2504.07173）——包含Anomalous Hall、Non-reciprocal conductivity、Optical transition rate、Injection current、Shift current、Spectral weight、Chern number等条目，详见原文。
+对比两个Joule heat公式，我们不难得到：
+
+$$
+\sigma^{\mu\nu}_{\text{dis}}(\omega) = \frac{2\pi e^2}{\hbar^2} \omega \sum_{m \neq n} r^\mu_{nm} r^\nu_{mn} \delta(\omega - \omega_{mn})
+$$
+
+那么接下来我们也可以用linear conductivity的表达式来凑出quantum geometric tensor的表达式，此处多了一个$\omega$因子，额外乘上一个$\frac{1}{\omega}$然后再对所有$\omega$积分便可以得到quantum geometric tensor的表达式：
+
+$$
+\int d\omega \frac{\sigma^{\mu\nu}_{\text{dis}}(\omega)}{\omega} = \frac{2\pi e^2}{\hbar^2} Q^{\mu\nu}
+$$
+
+这是另一种sum rule，它告诉我们dissipative linear conductivity对频率按照$\frac{1}{\omega}$的加权的积分正比于系统的quantum geometric tensor。这里我们还省略了对所有occupied band求和的一步$Q^{\mu\nu} \equiv \sum_{n \in \text{occ}} Q^{\mu\nu}_{n}$，留给读者自行补充。不难看出，这又是sum rule连接"基态property"与"physical response"的又一例证。提一嘴，这个sum rule又叫SWM sum rule，它被提出用于区分导体和绝缘体，更多细节可以参考我之前的note：
+
+> 🔗 *【link: insulator or metal】*
+
+值得一提的是对于linear conductivity还有另一个不加权的optical f-sum rule：
+
+$$
+\int d\omega \sigma^{\mu\mu}(\omega) = \frac{ne^2}{m} \equiv \mathcal{D}
+$$
+
+其中$\mathcal{D}$被称为Drude weight，它与系统的carrier density $n$和electron mass $m$有关，是系统的一个内禀量，且完全由基本物理量决定。这里的electron mass也不完全是bare electron mass，而是effective mass，这取决于我们sum rule中频率积分的上限，即我们考虑的能标范围，趋于无穷，考虑所有core electron state和自由态则是bare electron mass $m_e$，否则只是到能标范围内的有效质量$m^*$，不过这不妨碍这个sum rule的重要性，因为这还是系统的内禀性质。之后我们讨论其他的sum rule和universal bound时还会提及，这里只是提及一下。
+
+对于anisotropic的系统，effective mass可以是一个张量，对应的Drude weight也可以是一个张量，对应的sum rule为：
+
+$$
+\int d\omega \sigma^{\mu\nu}(\omega) = ne^2 \left[\frac{1}{m} \right]^{\mu\nu} \equiv \mathcal{D}^{\mu\nu}
+$$
+
+其中$m$是一个张量，对应的$\mathcal{D}$也是一个张量。
+
+进一步，从电导率我们可以得到更多有用的性质，例如电容率capacitivity，介电常数dielectric constant，折射率refractive index。这些性质都与系统对电场的电极化$P$响应相关，而电极化和电流之间只相差一个对时间的导数$\frac{d}{dt}$（在frequency domain差$i\omega$一个因子）：
+
+$$
+j^a(\omega) = \sigma^{ab} (\omega) E^b (\omega) = \left( \frac{d P^a}{d t} \right)(\omega) = i \omega P^a (\omega)
+$$
+
+极化率$\chi^{ab}$定义为电极化$P^a$与电场$E^b$的比值：
+
+$$
+P^a = \chi^{ab} E^b
+$$
+
+对比之后不难发现极化率与电导率之间只相差一个$i\omega$因子：
+
+$$
+\chi^{ab} (\omega) = \sigma^{ab} (\omega) / i \omega
+$$
+
+结合之前的sum rule，我们猜测出类似的关系
+
+$$
+\int d\omega \chi^{ab} \sim Q^{ab}
+$$
+
+事实上极化率相关的sum rule更复杂一些，具体可以参考Raquel组的文章，但是我们能get到电导率&极化率之间的关系，进而感受到quantum geometry对极化率的影响。更进一步介电张量$\epsilon$与极化率$\chi$之间的关系为：
+
+$$
+\epsilon = 1 + \chi
+$$
+
+折射率与介电张量之间的关系为：
+
+$$
+n = \sqrt{\epsilon}
+$$
+
+进而读者们也不难感受到quantum geometry对介电常数 & 折射率的影响。更粗暴地说：
+
+越是topological nontrivial的体系，折射率一定更大。
+
+为何钻石如此闪耀，因为diamond是obstructed atomic insulator，它的nontrivial topology/quantum geometry使它有更高的折射率，光线在其内反射更多次从而看起来更加闪耀。
+
+这是Raquel经常在talk上用的例子，虽然有些粗暴但也一定程度上反映了量子几何对物理响应的方方面面，无处不在的影响。这个例子我们在之后的geometric bound里还会提到，此处点到为止。
+
+(iii) $\mathcal{I}_{m \leftarrow n} \times (v_m - v_n)$: Velocity Shift
+
+接下来我们考虑Quantum Geometry如何参与到Nonlinear Optical Conductivity中，特别是Injection Current（注入电流）。
+
+所谓Injection Current，其物理图像十分直观：光照导致电子从Band $n$ 跃迁到 Band $m$，如果跃迁后的群速度$v_m$与原群速度$v_n$存在差异，就会产生一个随时间线性增长（或者在稳态下饱和）的电流，即Injection Current。我们将Transition Rate乘上速度差$\Delta v = v_m - v_n = \nabla_k \omega_{mn}$，便得到了Injection Rate。
+
+对于Linearly Polarized Light（线偏振光），这一响应被称为Linear Photogalvanic Effect (LPGE)，而对于Circularly Polarized Light（圆偏振光），这一响应被称为Circular Photogalvanic Effect (CPGE)。
+
+有趣的是，对于只有两个Band的系统，CPGE是Quantized的。这背后的数学原因在于，其响应函数可以直接写成Quantum Geometric Tensor的积分形式。正如您给出的公式片段：
+
+$$
+\sigma_{\mathrm{inj}}^{ab;c} (\bar{\omega} ; \omega, -\omega) \propto \int_{\mathbf{k}} Q^{ab} (\partial_{k_c} \omega_{mn}) \delta(\omega - \omega_{mn})
+$$
+
+这里的$Q^{ab}$通常对应了Quantum Metric的部分（对于Linear Polarization）或者是Berry Curvature的部分（对于Circular Polarization）。更具体的，对于CPGE，响应函数正比于$\int d^dk \Omega \cdot \Delta v$。更一般地，我们可以将积分写在满足共振条件$\omega = \omega_{mn}(k)$的等能面$S_k$上：
+
+$$
+\sigma_{\mathrm{inj}}^{ab;c} (\bar{\omega} ; \omega, -\omega) \propto \int_{S_k=\{k|\omega = \omega_{mn}(k)\}} dS_k^c Q^{ab} 
+$$
+
+这意味着，Injection Current本质上探测了共振面上的Quantum Geometry分布。而在2-band模型中，由于$\Delta v$和$\Omega$都由哈密顿量的参数决定，这一积分在特定条件下是拓扑量子化的，从而给出了2-band system下quantized的CPGE。
+
+(iv) $\mathcal{I}_{m \leftarrow n} \times (r_m - r_n)$: Positional Shift
+
+如果说Injection Current来源于"速度的差异"，那么Shift Current则来源于"位置的突变"。
+
+在经典物理中，电子跃迁是一个瞬间过程，位置不发生改变。但在量子力学中，电子以波函数形式存在，从Band $n$ 跃迁到 Band $m$ 的过程中，波包的"电荷中心"（Center of Charge）会发生一个实空间的位移，这个位移被称为Shift Vector $R_{mn}$。
+
+Shift Current是Bulk Photovoltaic Effect (BPVE) 的主要贡献来源之一，特别是在非中心对称的材料中。其表达式涉及到了更加高阶的几何量：
+
+$$
+\sigma_{\mathrm{shift}}^{ab;c} (\bar{\omega} ; \omega, -\omega) \propto \int_{\mathbf{k}} r_{nm}^a r_{mn}^b R_{mn,a}^c \delta (\omega - \omega_{mn}) + (a,\omega \leftrightarrow b,-\omega)
+$$
+
+这里的核心量Shift Vector $R_{mn}$ 定义为：
+
+$$
+R_{mn}^a = \mathcal{A}_{mm}^a - \mathcal{A}_{nn}^a - \nabla_{k_a} \arg(r_{mn})
+$$
+
+它是Berry Connection的差值减去跃迁偶极矩相位的梯度。虽然Berry Connection本身依赖于Gauge，但Shift Vector作为一个整体是Gauge Invariant的实空间位移量。
+
+这一响应与我们之前提到的Quantum Connection（Christoffel symbols in Hilbert space）密切相关：
+
+$$
+\sigma_{\mathrm{shift}}^{ab;c} (\bar{\omega} ; \omega, -\omega) \propto \int_{\mathbf{k}} C_{bca} \delta (\omega - \omega_{mn})
+$$
+
+其中Quantum Connection $C_{abc}$ 连接了不同的几何量：
+
+$$
+C_{abc} = -i \sum_{\substack{n \in \text{occ} \\ m \in \text{unocc}}} R_{mn}^{a,b} r^{c}_{nm} r^{b}_{mn}
+$$
+
+物理上，Shift Current可以理解为光泵浦导致的电子在实空间的"几何滑移"。不同于Injection Current依赖于载流子的群速度（因此受到弛豫时间$\tau$的限制），Shift Current是一个纯粹的量子几何效应，理论上不依赖于弛豫时间，这使得它在超快光电响应器件中具有巨大的潜力。
+
+(v) 非线性输运 (Nonlinear Transport Conductivity)
+
+聊完高频的光学响应，我们将目光收回到低频甚至直流的输运（Transport）过程。
+
+在 Transport regime ($\omega \to 0$ or $\omega \tau \ll 1$)，物理图像发生了变化：我们不能再简单的套用 Fermi Golden Rule，而必须认真对待杂质散射带来的弛豫时间 $\tau$。有趣的是，这里的 $\tau$ 不仅仅是一个常数，Semiclassical theory 告诉我们，通过分析电导对 $\tau$ 的幂次依赖关系（Scaling Law），我们竟能像剥洋葱一样，把不同的几何贡献一层层剥离出来。
+
+根据半经典理论，电流密度定义为 $j = -e \sum_n \int [dk] f_n v_n$。在电场微扰下，我们将分布函数 $f_n$ 和速度 $v_n$ 按电场阶数展开：
+
+分布函数: $f_n = f_n^{(0)} + f_n^{(1)} + f_n^{(2)} + \dots$，其中 $f_n^{(l)} \propto (e\tau E \cdot \nabla_k)^l f_n^{(0)} \propto \tau^l$。
+
+速度: $v_n = v_n^{(0)} + v_n^{(1)} + v_n^{(2)} + \dots$。其中 $v_n^{(0)}$ 是传统的群速度；$v_n^{(1)}$ 包含 Berry Curvature 带来的反常速度修正，其完整表达式为：$v_n = \frac{1}{\hbar} \frac{\partial \epsilon_n}{\partial \mathbf{k}} - \frac{e}{\hbar} \mathbf{E} \times \mathbf{\Omega}_n$.
+
+这套微扰展开可以将任意 $n$ 阶的输运电导分解为不同的几何贡献。且不同项的relaxation time $\tau$的幂次不同，从而我们可以通过scaling law来剥离出不同quantum geometry项的贡献。
+
+在进入二阶效应之前，让我们先快速回顾下熟悉的一阶线性响应 $j^{(1)}$：
+
+$$
+j^{(1)} = -e \sum_n \int [dk] \left( \underbrace{f_n^{(1)} v_n^{(0)}}_{\text{Drude}} + \underbrace{f_n^{(0)} v_n^{(1)}}_{\text{Anomalous Hall}} \right)
+$$
+
+Drude Conductivity（纵向电流）：对应项 $f_n^{(1)} v_n^{(0)}$。这是电子在电场加速和杂质散射平衡下的经典漂移。利用弛豫时间近似 $f_n^{(1)} \approx e \tau (\mathbf{E} \cdot \mathbf{v}_n) (-\partial_\epsilon f_0)$，我们得到经典的 Drude 电导率公式：
+
+$$
+\sigma_{ab}^{\text{Drude}} = e^2 \tau \sum_n \int [dk] \left(-\frac{\partial f_n^{(0)}}{\partial \epsilon}\right) v_n^a v_n^b
+$$
+
+这完全由能带色散（群速度 $v_n$）和散射时间 $\tau$ 决定，是耗散的输运过程。
+
+Intrinsic Anomalous Hall Effect（横向电流）：对应项 $f_n^{(0)} v_n^{(1)}$。这里 $f_n^{(0)}$ 是平衡态费米分布，而 $v_n^{(1)} = -\frac{e}{\hbar} \mathbf{E} \times \mathbf{\Omega}_n$ 是 Berry Curvature（也就是量子几何的虚部）产生的反常速度。这一项给出了著名的内禀反常霍尔电导：
+
+$$
+\sigma_{xy}^{\text{AHE}} = -\frac{e^2}{\hbar} \sum_n \int [dk] f_n^{(0)} \Omega_n^z
+$$
+
+这表明 Hall current 直接正比于 Berry Curvature 在占据能带中的积分。这是一个仅由能带拓扑几何性质决定的内禀效应，与散射时间 $\tau$ 无关（$\tau^0$），是无耗散的。
+
+同理，对于我们关心的二阶非线性电流 $j^{(2)}$，它可以自然分解为三项，每项对应不同的物理机制：
+
+$$
+j^{(2)} = -e \sum_n \int [dk] \left( \underbrace{f_n^{(2)} v_n^{(0)}}_{\text{NLD}} + \underbrace{f_n^{(1)} v_n^{(1)}}_{\text{BCD}} + \underbrace{f_n^{(0)} v_n^{(2)}}_{\text{QMD}} \right)
+$$
+
+第一项 Nonlinear Drude (NLD)（$\tau^2$），是最"经典"的非线性电导，对应二阶分布函数修正和零阶速度的耦合（$f_n^{(2)} v_n^{(0)}$）。本质上它来源于能带的非抛物性（Non-parabolicity），其电导率公式为：
+
+$$
+\sigma_{ab;c}^{\text{NLD}} = \frac{e^3 \tau^2}{\hbar^3} \sum_n \int [dk] f_n \frac{\partial^3 \varepsilon_n}{\partial k_a \partial k_b \partial k_c}
+$$
+
+第二项为 Berry Curvature Dipole (BCD)（$\tau^1$），由 Sodemann 和 Fu 首先提出。它对应一阶分布函数修正与一阶反常速度的耦合（$f_n^{(1)} v_n^{(1)}$）。物理图像是：如果体系具有时间反演对称性（$T$-symmetry）但破坏空间反演对称性（$P$-broken），虽然总 Chern 数为零，但在费米面附近，Berry Curvature $\Omega(k)$ 的分布可以是不均匀的，形成"偶极矩"（Dipole）。其电导率公式也体现了 Berry Curvature 的偶极属性：
+
+$$
+\sigma_{ab;c}^{\text{BCD}} = \frac{e^3 \tau}{\hbar^2} \sum_n \int [dk] f_n \left( \frac{\partial \Omega_{n}^{bc}}{\partial k_a} + \frac{\partial \Omega_{n}^{ac}}{\partial k_b} \right)
+$$
+
+第三项是 Quantum Metric Dipole (QMD)（$\tau^0$），对应于零阶分布函数（平衡态）和二阶速度的耦合（$f_n^{(0)} v_n^{(2)}$）。当体系打破时间反演对称性（$T$-broken，例如磁性体系）时，会出现这种完全不依赖 $\tau$ 的非线性电流（$\tau^0$ 阶）。这意味着它是一个内禀效应，理论上对杂质散射极不敏感。其来源正是 Quantum Metric 在动量空间的偶极分布：
+
+$$
+\sigma_{ab;c}^{\text{QMD}} = \frac{e^3}{\hbar} \sum_n \int [dk] f_n \left( 2 \frac{\partial G_{n}^{ab}}{\partial k_c} - \frac{1}{2}\left(\frac{\partial G_{n}^{bc}}{\partial k_a} + \frac{\partial G_{n}^{ac}}{\partial k_b}\right) \right)
+$$
+
+这里的 quantum metric $G_{n}^{ab}$ 本质上是带归一化的量子度规（band-normalized quantum metric）：$G_{n}^{ab} = \sum_{m \neq n} \frac{ r^a_{nm} r^b_{mn} + r^b_{nm} r^a_{mn} }{\epsilon_{nm}}$，可以看作 2-band quantum geometry $g_{nm}^{ab}$ 按照能隙倒数 $\epsilon_{nm}^{-1}$ 的加权平均。
+
+文中公式基于 Daniel Kaplan 的 PRL，事实上用密度矩阵、多体费曼图或半经典波函数等方法推导，或者采用不同的规范（length gauge $\hat{H}' = \hat{\mathbf{r}} \cdot \mathbf{E}$、velocity gauge $\hat{H}' = \hat{\mathbf{p}} \cdot \mathbf{A}$）会有细节不同，也有很多论文尝试统一 QMD 系数。如果考虑更高阶的无序修正等"外禀"效应（如 skew scattering, side-jump 等），nonlinear order 的结果将更为复杂。
+
+出现这种复杂性，是因为在高阶项下，不同虚过程中的寿命效应更加微妙，用同一个 $\tau$ 在所有项中并不完全等价，甚至交换 $\tau$ 和响应阶数的顺序也可能给出不同的物理预测。例如对于 $\omega \rightarrow \omega + i/\tau$，在线性响应中唯一的 $\tau$ 可以统一处理，但在非线性阶（比如 $\omega_1 + \omega_2$）时，补偿到底应该是 $\omega_1 + \omega_2 + i/\tau$、$\omega_1 + \omega_2 + 2i/\tau$，还是其他形式，目前并无统一结论。当然也可以放弃弛豫时间近似，直接计算所有无序图，那会导致表达式极其复杂，且参数众多，实际材料计算难度很高。
+
+虽然 QMD 的具体系数各家有异，但至少在 $\tau^0$ 阶上的主要结构是正比于 quantum metric dipole $\partial_c G_{n}^{ab}$。
+
+这套微扰论还可以推广到三阶输运（$j^{(3)}$）乃至更高阶，形式依然是分解为每一阶的分布函数修正与速度修正耦合：
+
+$$
+j^{(3)} = -e \sum_n \int [dk] \left( \underbrace{f_n^{(3)} v_n^{(0)}}_{\text{Drude } (\tau^3)} + \underbrace{f_n^{(2)} v_n^{(1)}}_{\text{BC Quadrupole } (\tau^2)} + \underbrace{f_n^{(1)} v_n^{(2)}}_{\text{Geometric } (\tau^1)} + \underbrace{f_n^{(0)} v_n^{(3)}}_{\text{Intrinsic } (\tau^0)} \right)
+$$
+
+具体来说，每一项都对应不同的几何物理机制：
+
+* $\tau^3$ (3rd order Drude)：来源于能带更高阶的非抛物线性（Jerk current），主要是经典背景信号部分。
+
+* $\tau^2$ (Berry Curvature Quadrupole)：对应 $f_n^{(2)} v_n^{(1)}$。如一阶 AHE 对应 Berry Curvature 的"单极矩"（平均值），二阶 BCD 对应"偶极矩"，三阶响应进一步探测 Berry 曲率的四极矩（Quadrupole）分布。
+
+* $\tau^1$ (Quantum Metric Quadrupole)：对应 $f_n^{(1)} v_n^{(2)}$。这一项代表 Quantum Metric 的几何效应的更高阶推广，涉及度规场的四极矩性质。
+
+* $\tau^0$ (Intrinsic Geometry & Connection Dipole)：对应 $f_n^{(0)} v_n^{(3)}$。这是完全内禀的响应，与散射无关。特别要注意的是，这里的"内禀"不仅是低阶几何量的简单延拓，还包含全新的高阶几何对象，比如 Quantum Connection Dipole。不同行文体系和推导方法，在这项的系数结构上也可能不同。
+
+(vi) Other geometric responses
+
+更多的请参考其他review，这里随便选取一个表：
+
+![图：table from Tobias review](/posts/quantum-geometry-everything/fig08.png)
 
 ### 几何界限求和律 (Geometric Bounds & Sum Rules)
 
-**(i) Geometric Bound**
+我们再从物理回到几何上来，既然我们定义的这些quantum geometry同时也是几何量，我们可以思考几何上的一些有趣的结论，并将其用在对应的geometric response上，看看会有什么有趣的结果。
 
-等周不等式：给定周长$L$的所有闭合曲线中，圆所围成的面积最大（$L^2 \ge 4\pi A$）。在量子几何中类比：
+当然我们最熟悉的还是 Berry Curvature 和 Quantum Hall Effect (QHE)。其物理实质非常简洁：霍尔电导的量子化 $\sigma_{xy} = C \frac{e^2}{h}$ 可以被几何理解为 Berry Curvature 在参数空间中的 "面积积分量子化"。
+
+然而，Quantum Geometry 的内涵远不止于此。我们将从以下五个维度展开讨论：
+
+1. Geometric Bound: 回顾度量（Metric）与曲率（Curvature）之间的基础不等式，从几何直觉&物理直觉上进行双重理解。
+2. Sum Rule: 建立光学响应权重与量子几何量（特别是 Quantum Metric）之间的直接联系。
+3. Universal Bound: 结合上述两者，导出拓扑能隙受限于电子基本参数的普适上界，体现量子几何对任意体系的几何限制是具有普适性的。
+4. Generalized Geometric Bound: 将geometric bound推广到零 Berry 曲率（对称性保护）以及任意参数空间的情形。
+5. Generalized Sum Rule: 进一步讨论高阶频率矩、非线性响应的sum rule，以及利用脉冲进行实验测量sum rule的策略。
+
+(i) Geometric Bound
+
+在深入量子几何之前，让我们先回顾一个经典的几何直觉：等周不等式 (Isoperimetric Inequality)。它告诉我们，在平面上给定周长 $L$ 的所有闭合曲线中，圆所围成的面积 $A$ 最大（$L^2 \ge 4\pi A$）。这揭示了"度量（长度）"对"面积（曲率）"的一个根本性限制。
+
+在量子几何中，Quantum Metric $g$ 定义了希尔伯特空间中的距离，而 Berry Curvature $\Omega$ 对应于相位通量（类似于面积）。既然它们本质上也是几何里的长度和面积，它们之间也存在类似的几何约束：
 
 $$\mathrm{Tr}(g) \ge |\Omega|$$
 
-> **图⑦** 等周不等式→量子几何界限：给定周长的多种形状→最大面积（圆）。**Length ≥ Area**，**Quantum Metric ≥ Berry Curvature**。
+我们在之前的note里有比较详细的推导，这里我们给出一个图像上的理解：
 
-对整个布里渊区积分：
+![图：geometric bound](/posts/quantum-geometry-everything/fig09.png)
 
-$$\int_{BZ} \mathrm{Tr}(g(\mathbf{k})) d^2k \ge 2\pi |C|$$
+关于这个界限的更多物理细节，可以参考作者以前的note：
 
-这意味着拓扑非平庸的能带必然伴随着一个最小的总量子度量。
+> 🔗 *【link: geometric bound / FCI note】*
 
-> **图⑧** 原子绝缘体（Trivial）：Wannier函数高度局域化，相邻间无overlap。陈绝缘体（Topological）：Wannier函数不可避免地在相邻格点间overlap（非零minimum spread $\Omega_I \propto \int\mathrm{Tr}[g]\,dk$）。
+这是geometric bound的几何理解，即"长度"对"面积"的限制。而我们在上一章节知道，出了几何含义，quantum geometry还有自身的物理含义，例如quantum metric描述了波包的二阶矩$\langle \Delta \hat{r}^a \Delta \hat{r}^b \rangle$，相当于给出了波包的size，这意味着，非零的 Berry Curvature（拓扑非平庸性）必然要求量子态在参数空间中具有非零的"大小"，这可能进一步影响电子的response（上一小节内容）和interaction（下一小节内容）。
 
-当不等式变为等式时，对应了Landau Level的ideal quantum geometry（最小不确定波包），称为迹条件 $\mathrm{Tr}(g(\mathbf{k})) = |\Omega(\mathbf{k})|$，是FCI设计的核心判据。
+![图：topological band wavefunction](/posts/quantum-geometry-everything/fig10.png)
 
-Geometric bound的物理本质根植于量子力学的基本不确定性原理$[\hat{x}, \hat{p}] = i\hbar$。
+如果我们对整个布里渊区（BZ）进行积分，这个不等式的物理意义变得更加深刻：
 
-**(ii) Sum Rule**
+$$
+\int_{BZ} \mathrm{Tr}(g(\mathbf{k})) d^2k \ge \int_{BZ} |\Omega(\mathbf{k})| d^2k \ge \left| \int_{BZ} \Omega(\mathbf{k}) d^2k \right| = 2\pi |C|
+$$
 
-1. Optical f-sum rule: $\displaystyle\int d\omega\, \sigma^{\mu\mu}(\omega) = \frac{ne^2}{m} \equiv \mathcal{D}$
+其中 $C$ 是陈数（Chern Number）。
 
-2. Geometric sum rule (SWM): $\displaystyle\int d\omega\, \frac{\sigma^{\mu\nu}_{\text{dis}}(\omega)}{\omega} = \frac{2\pi e^2}{\hbar^2} Q^{\mu\nu}$
+这意味着，拓扑非平庸的能带（$C \ne 0$）必然伴随着一个最小的总量子度量（Total Quantum Metric）。这可以从 Wannier 函数的局域化性质 得到更直观的理解。Marzari 和 Vanderbilt 指出，Wannier 函数的规范不变展宽（Spread）由 Quantum Metric 在布里渊区上的积分决定：
 
-Sum rule之所以能给出系统的intrinsic property，是因为它反映的是系统对外界微扰作出反应的"weight"，完全对应系统基态的内禀特性，与激发态无关。
+$$\Omega_I \propto \int_{BZ} Tr[g(\mathbf{k})] d\mathbf{k}$$
 
-**(iii) Universal Bound**
+这意味着 Quantum Metric 设定了电子在实空间中能被局域化的根本极限：
 
-Y. Onishi 和 L. Fu [Phys. Rev. X 14, 011052 (2024)] 将Geometric Bound和Sum Rule结合，得到了拓扑能隙的普适上界：
+* 对于拓扑平庸的能带（$C=0$），我们可以找到一组规范使得 $g \to 0$，从而构造出高度局域化的 Wannier 函数（atomic limit）。
 
-$$|C| \leq \frac{\pi n e^2}{2m E_g} \implies E_g \leq \frac{\pi n e^2}{2m |C|} \times (\text{const.})$$
+* 然而，对于陈绝缘体（$C \neq 0$），几何界限 $\int Tr(g) \ge 2\pi |C|$ 意味着 Wannier 函数总是有一个非零的最小展宽。（事实上，Chern band没法Wannierize，即没法通过Fourier transform Chern band的Bloch wavefunction得到在所有方向上exponentially decay的wannier function，这也不难理解，我们的Chern band model至少是两带的，不可能写出一个1-band又是Chern band的tight binding model）
 
-这解释了为什么在许多拓扑材料中，能隙的大小最终会受到电子基本参数（$n, m$）的根本限制。
+值得一提的是，当不等式变为等式时，恰好对应了Landau Level的ideal quantum geometry，即最小不确定波包的情形。Landau Level的quantum geometry可以参考我之前的note：
 
-**(iv) Generalized Geometric Bound**
+> 🔗 *【link: LL QG note】*
 
-Herzog-Arbeitman, Bernevig等 [PRL 128, 087002 (2022)] 指出，即使Berry Curvature处处为零，实空间不变量(RSI)依然可以强制Quantum Metric具有非零的下界。对于obstructed atomic insulator，symmetry要求occupied band的Wannier center必须处在bond center，这对应了symmetry enforced bound for quantum metric。
+这从另一方面说明，geometric bound的物理本质根植于量子力学的基本不确定性原理
+$[\hat{x}, \hat{p}] = i\hbar$
 
-Shinada and Nagaosa [arXiv:2507.12836 (2025)] 将QGT推广到任意参数空间$\boldsymbol{\lambda}$：
+这一结论对于分数量子霍尔效应的晶格类比——分数陈绝缘体 (Fractional Chern Insulator, FCI) 的研究至关重要。
 
-> **表②** 外场与共轭算符对应关系（来自Shinada & Nagaosa）：vector potential $A$ ↔ electric current $\hat{J}$；electric field $E$ ↔ polarization $\hat{P}_e$；magnetic field $B$ ↔ spin $\hat{S}$；strain $\partial u$ ↔ stress $\hat{\sigma}$。
+在FCI的设计中，我们的核心策略往往是"模仿朗道能级"：试图在晶格系统中构建一个具有非平庸拓扑且平坦的能带，使其波函数性质尽可能接近连续空间中的最低朗道能级（LLL）。
 
-**(v) Generalized Sum Rule**
+Geometric bound 告诉我们，LLL 实际上代表了量子几何的"完美极限"，即不等式取等号的情形：$\mathrm{Tr}(g(\mathbf{k})) = |\Omega(\mathbf{k})|$，这被称为迹条件 (Trace Condition)。
 
-广义矩 $W_\eta = \int_0^\infty \omega^\eta \text{Re}[\sigma(\omega)] d\omega$：$\eta=-1$ 对应静态介电常数；$\eta=0$ 对应f-sum rule；$\eta=1$ 对应有效质量；$\eta=2$ 对应shot noise。
+因此，这个不等式提供了一个定量的判据，用于刻画一个拓扑能带究竟有多"理想"。偏离等式的程度 $\delta = \mathrm{Tr}(g) - |\Omega|$ 越小，意味着该能带的波函数在相空间中的结构越接近全纯函数（holomorphic），从而越有利于像分数量子霍尔态这类强关联拓扑序的稳定。这也是为什么在魔角石墨烯等系统中，尽管 Berry Curvature 可能并不完全均匀，但只要近似满足这一迹条件，我们依然能观测到稳健的 FCI 态。
 
-Matsyshyn & Sodemann [PRL 123, 246602 (2019)] 发现非线性霍尔效应的Quantum Rectification Sum Rule。
+此外，在非线性响应中，也存在类似的几何界限。例如，非线性霍尔效应或非线性光学响应的某些系数，其大小也会受到 Quantum Metric 或其高阶矩的约束。
 
-移位电流的sum rule由位置算符的三阶累积量（偏度 Skewness）控制：
+(ii) Sum Rule
 
-$$\int_{0}^{\infty} d\omega\, \sigma_{\text{shift}}^{\alpha;(\beta\gamma)}(\omega) \approx \frac{2\pi e^3}{\hbar^2} \frac{1}{V} \langle \hat{X}_{\alpha}\hat{X}_{\beta}\hat{X}_{\gamma}\rangle_{c}$$
+我们之前通过"凑积分"的方法，将conductivity的频率积分凑成了一个与系统内禀性质相关的量，这里复习一下：
 
-阶梯对应关系（Hierarchy）：
-- 线性响应 ($n=1$) ↔ 二阶矩 (Variance) ↔ Quantum Metric
-- 移位电流 ($n=2$) ↔ 三阶矩 (Skewness) ↔ Multistate Geometry
-- 三阶响应 ($n=3$) ↔ 四阶矩 (Kurtosis)
+1. optical f-sum rule：
 
-根据 Verma & Queiroz [PNAS 122, e2405837122 (2025)]，时变几何张量 (tQGT) 是所有几何求和律的生成函数：
+$$
+\int d\omega \sigma^{\mu\mu}(\omega) = \frac{ne^2}{m} \equiv \mathcal{D}
+$$
 
-$$\mathcal{S}_{\mu\nu}^\eta \equiv \int_0^\infty \frac{\text{Re}[\sigma_{\mu\nu}(\omega)]}{\omega^{1-\eta}} d\omega = \frac{\pi e^2}{\hbar} \left[ (-i\partial_t)^\eta \mathcal{Q}_{\mu\nu}(t) \right]_{t=0}$$
+2. geometric sum rule:
 
-这意味着只需施加一个特定形状脉冲（如"方波"或"三角波"电场），并测量系统随后的电流或极化响应，即可直接"读出"sum rule对应的generalized geometric weight，无需测量完整光谱。
+$$
+\int d\omega \frac{\sigma^{\mu\nu}_{\text{dis}}(\omega)}{\omega} = \frac{2\pi e^2}{\hbar^2} Q^{\mu\nu}
+$$
+
+我们要指出，Sum rule之所以能给出系统的intrinsic property，是因为sum rule事实上反映的是系统对于外界微扰作出反应的一种weight。例如我们熟悉的牛顿第二定律$F = ma告诉我们，对于外界的力$F，一个"重"（weight）为$m$的系统所能作出的"反应"，即加速度$a$的大小。
+
+这里也是一样的，我们考虑加一个脉冲电场信号$E(t) = E_0 \delta(t)$，时间如此之快，系统瞬间获得一个加速度$a \propto F/m = e E_0 / m \delta(t)$，对时间$t$积分后得到速度的改变，$v = \int dt a = e E_0 / m$，这个delta function脉冲如此之快，比其他的dissipative force还要快，从而使电子来不及"反应"要减速，所以可以不用考虑任何弛豫效应。从而对应的电流$j = ne v = \frac{ne^2}{m} E_0$，对应的电导便是Drude weight。这正是optical sum rule告诉我们的，系统对一个delta function的脉冲作出的反应，证实delta function频谱的电导的加权叠加，而delta function的频谱正好为常数，便对应了所有电导不加权（按照常数加权）的叠加，结果便是系统对外界脉冲微扰响应的"weight"，即"Drude weight"。
+
+这个sum rule的伟大之处在于，不管你的系统的relaxation time是多少（最终影响电导中的$\frac{1}{\omega + i/\tau}$的因子）最终对频率积分后的结果与这些extrinsic的relaxation无关，完完全全是系统本身的内禀性质（Drude weight）。
+
+同理我们可以把geometric sum rule理解成一种geometric weight，反应了系统在$E(\omega) \sim \frac{1}{\omega}$的频谱微扰下的响应率，经常做Fourier transformation的同学不难猜出，这个频谱对应的是"方波信号"，也就是说系统对一个step function形状的perturbation的响应，反应了系统intrinsic的另一种weight，即geometric weight。更详细的内容可以参考Verma的文章：
+
+> 🔗 *【link: Paper of Verma on instantaneous response】*
+
+(iii) Universal Bound
+
+如果我们把 Geometric Bound 和 Sum Rule 结合起来，就会得到凝聚态物理中一个非常深刻的结论，通常被称为 Universal Bound。
+
+最近，Y. Onishi 和 L. Fu 在 [Phys. Rev. X 14, 011052 (2024)](https://journals.aps.org/prx/abstract/10.1103/PhysRevX.14.011052) 中提出了拓扑能隙（Topological Gap）的一个普适上界。这个界限揭示了能带的拓扑性质、量子几何以及光学响应之间的深层联系。
+
+其推导过程其实就是巧妙的结合前两节geometric bound和sum rule：
+
+1. Spectral Gap Constraint: 对于一个带隙为 $E_g$ 的绝缘体，其光学吸收 $\sigma(\omega)$ 仅在 $\omega \geq E_g$ 时非零。因此，我们可以利用不等式 $\frac{1}{\omega} \leq \frac{1}{E_g}$ 将光学电导率的"负一阶矩"（与介电常数相关）与"零阶矩"（总谱权重）联系起来：
+
+$$
+\int_0^\infty d\omega \frac{\sigma(\omega)}{\omega} \leq \frac{1}{E_g} \int d\omega \sigma(\omega)
+$$
+
+2. f-sum Rule: 根据经典的光学求和律，光学电导率的总权重由载流子密度 $n$ 和电子质量 $m$ 决定（与相互作用无关）：
+   
+$$
+\int d\omega \sigma(\omega) = \frac{\pi n e^2}{2m}
+$$
+
+3. Geometric Bound: 非平庸的拓扑数（陈数 $C$）不仅要求非零的 Berry Curvature，还对此系统提出了最小的"极化率"或量子几何要求。研究表明，陈数的大小被 Quantum Metric 的迹（或相关的光学矩）所约束：
+
+$$
+|C| \leq \int_{BZ} \text{Tr}[g(\mathbf{k})] d\mathbf{k} \sim \int d\omega \frac{\sigma(\omega)}{\omega}
+$$
+
+将上述三点结合，我们得到了一个关于拓扑能隙的普适上界：
+
+$$
+|C| \leq \frac{\pi n e^2}{2m E_g} \implies E_g \leq \frac{\pi n e^2}{2m |C|} \times (\text{const.})
+$$
+
+这个公式告诉我们，对于给定的电子密度和有效质量，拓扑能隙 $E_g$ 不能被无限拉大。如果还要维持非零的拓扑数 $C$，系统必须在低能处保留足够的光学权重（即足够的量子几何涨落）。
+
+事实上，很多拓扑材料来自能带crossing附近的band inversion，这个universal bound告诉我们这个inversion后的gap没法无限拉大，它有一个上限（若能被无限拉大，那可以把其他所有band推到无穷远，从而effectively只有一个band，但这样的1-band Chern band model是不存在的）。这解释了为什么在许多拓扑材料中，尽管我们希望通过增强相互作用来增大能隙（以获得高温拓扑相），但能隙的大小最终会受到电子基本参数（$n, m$）的根本限制。这又是quantum geometry与系统的一些最intrinsic性质紧密关联的另一例证。
+
+(iv) Generalized Geometric Bound
+
+除了上述的 $Tr(g) \ge |\Omega|$ 这一标准形式，我们还可以将 Geometric Bound 推广到其他情形下。
+
+1. 零 Berry 曲率下的几何界限 (Symmetry-Protected Geometric Bound)
+
+标准的 Geometric Bound往往依赖于非零的陈数（Berry Curvature）。然而，在许多时间反演对称（Time-Reversal Symmetric）的系统中，总的 Berry Curvature 为零，但这并不意味着几何效应消失。
+
+Herzog-Arbeitman, Bernevig 等人 [PRL 128, 087002 (2022)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.128.087002) 指出，即使 Berry Curvature 处处为零，实空间不变量 (Real Space Invariants, RSIs) 依然可以强制 Quantum Metric 具有非零的下界。
+
+特别是在受阻原子极限 (Obstructed Atomic Limits) 的平带系统中——即 Wannier 中心虽然局域但偏离了原子位置——对称性要求波函数必须具有一定的非定域性。
+
+我们可以用一个例子来理解，对于obstructed atomic insulator，symmetry要求occupied band的wannier center必须处在bond center，也就是说wannier function必须同时"横跨"bond两边的atomic site，这样，obstructed atomic insulator的wannier function便有了symmetry enforced spread。既然这个spread（wannier波包的大小本身对应了 quantum metric: $\mathrm{tr}g \sim \langle \Delta r^2 \rangle$），那么这也对应了symmetry enforced bound for (trace of) quantum metric. 而这个系统中，虽然是obstructed atomic insulator，还是有atomic limit的，所以Berry curvature处处为零（at least topologically trivial），这便是一个超越$\mathrm{tr} g \ge |\Omega|$的例子。事实上，这个bound可以用另一类topological index, i.e. real space invariant (RSI)来定义，RSI被用于区分fragile topology等特殊的topological phases，其在generalized quantum geometric bound中的应用可以参考 [PRL 128, 087002 (2022)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.128.087002) 的原文。
+
+2. 广义参数空间与可观测量的界限 (Generalized Parameter Space)
+
+更进一步，Quantum Geometry 的概念不必局限于动量空间 $\mathbf{k}$。
+
+Shinada 和 Nagaosa [arXiv:2507.12836 (2025)](https://arxiv.org/abs/2507.12836) 提出了一套普适的框架，将 Quantum Geometric Tensor (QGT) 推广到任意参数空间 $\boldsymbol{\lambda}$。通过考察物理量算符 $\hat{O}$ 对参数变化的响应，我们可以定义广义的度量 $g_{\mu\nu}^{(\lambda)}$ 和曲率 $\Omega_{\mu\nu}^{(\lambda)}$。
+
+![table：Generalized Geometric Bound](/posts/quantum-geometry-everything/fig11.png)
+
+(v) Generalized Sum Rule
+
+最后，我们可以将 Sum Rule 推广到更一般的情形。
+
+1 Generalized Optical Moments
+
+通常的光学求和律关注的是电导率的"零阶矩"（直接积分），但我们也可以定义电导率的广义矩（Generalized Moments）：
+
+$W_\eta = \int_0^\infty \omega^\eta \text{Re}[\sigma(\omega)] d\omega$
+
+不同的 $\eta$ 对应着不同的物理量，并与 Quantum Geometry 的不同方面相联系：
+
+* $\eta = -1$ (Dielectric Function):  对应于静态介电常数 $\epsilon(0)$ 或静态结构因子。这与 Quantum Metric 的低能行为有关，反映了虚跃迁对极化率的贡献 ($\chi \sim \ell_g^2 / \omega_g$)。
+
+* $\eta = 0$ (f-sum rule): 对应于总的光学权重，如前所述，与 Quantum Metric 的总量 ($\int g$) 相关。
+
+* $\eta = 1$ (Energy/Mass): 对应于电子的平均动能或光学质量重整化。
+
+* $\eta = 2$ (Shot Noise): 与电流涨落有关。
+
+具体可以参考Verma的文章：
+
+> 🔗 *【link: Verma's paper on Generalized Sum Rule】*
+
+2 非线性响应求和律 (Nonlinear Sum Rule)
+
+除了传统的线性响应，求和律的概念也可以推广到非线性区域。
+
+Matsyshyn 和 Sodemann [PRL 123, 246602 (2019)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.123.246602) 发现了关于非线性霍尔效应（二阶光电流）的求和律，即 Quantum Rectification Sum Rule。
+
+类似于linear optical conductivity's sum rule由 Quantum Metric（几何）决定，二阶非线性响应的频率积分则受 Berry Curvature Derivative (BCD, $\partial_k \Omega$) 的约束。从物理上看，这种求和律可以通过考虑弛豫时间的频率依赖推广得到：$\tau \to \frac{1}{\omega + i/\tau}$，然后再对频率积分得到反映系统某种weight的nonlinear sum rule。
+
+此外，针对 移位电流 (Shift Current)——即体光伏效应的主要来源，也有相应的求和律存在。根据 [Phys. Rev. Lett. 135, 066901 (2025)](https://journals.aps.org/prl/abstract/10.1103/w761-8nf7)，移位电导率的频率积分并非仅由 Berry Connection 和 Quantum Metric 决定，而是由更广泛的 多态几何 (Multistate Geometry) 以及占据态的 偏度 (Skewness) 所控制。
+
+移位电流电导率 $\sigma_{\text{shift}}^{\alpha;(\beta\gamma)}(\omega)$ 的频率积分近似等于位置算符的 **三阶累积量 (Third Cumulant, Skewness)**：
+
+$$
+\int_{0}^{\infty} d\omega \sigma_{\text{shift}}^{\alpha;(\beta\gamma)}(\omega) \approx \frac{2\pi e^3}{\hbar^2} \frac{1}{V} \langle \hat{X}_{\alpha}\hat{X}_{\beta}\hat{X}_{\gamma}\rangle_{c}
+$$
+
+其中：
+
+* $\langle \hat{X}_{\alpha}\hat{X}_{\beta}\hat{X}_{\gamma}\rangle_{c}$ 表示位置算符 $\hat{X}$ 在基态占据流形上的三阶关联函数（即 **偏度 Skewness**）。
+
+* 这一项度量了电子波函数在实空间分布的 **不对称性 (Asymmetry)** 或非高斯性。
+
+为了理解其物理意义，可以将其与传统的线性光学响应求和律进行类比：
+
+* 线性电导率 (Linear Conductivity, $\sigma^{(1)}$):
+  其求和律（通常关联到 f-sum rule 或 Souza-Wilkens-Martin 公式）反映的是位置算符的 二阶累积量 (Second Cumulant, Variance)：
+  $\int d\omega \text{Re}\,\sigma^{(1)}(\omega) \sim \langle \hat{X}\hat{X} \rangle_c \sim g_{\alpha\beta} \text{ (Quantum Metric)}$
+  这对应于 量子度规 (Quantum Metric)，物理上描述了波函数的 展宽 (Spread/Fuzziness)。
+
+* 移位电流 (Shift Current, $\sigma^{(2)}$):
+  如上式所示，其求和律反映的是位置算符的 三阶累积量 (Third Cumulant, Skewness)：
+  $\int d\omega \sigma^{(2)}(\omega) \sim \langle \hat{X}\hat{X}\hat{X} \rangle_c$
+  这对应于 多态几何 (Multistate Geometry) 中的偏度，物理上描述了波函数分布的 偏斜 (Skewness) 方向和程度。
+
+基于上述规律，可推导出非线性响应阶数与位置算符矩的 阶梯对应关系 (Hierarchy)：
+
+* 线性响应 ($n=1$) $\longleftrightarrow$ 二阶矩 (Variance): 对应 Quantum Metric (波函数展宽)。
+
+* 移位电流 ($n=2$) $\longleftrightarrow$ 三阶矩 (Skewness): 对应 Multistate Geometry (波函数不对称性)。
+
+* 三阶响应 ($n=3$) $\longleftrightarrow$ 四阶矩 (Kurtosis): 预计对应波函数的 峰度 (尖锐度/长尾)。
+
+这一新发现修正了对光伏响应界限的传统认识，对于利用能带间的多态耦合设计高效光伏材料具有关键的指导意义。
+
+这些新的求和律揭示了动力学响应（Dynamical Response）中包含的系统基态的内禀（几何）性质。通常，我们认为光谱包含了所有激发态的复杂信息。然而，求和律告诉我们，当我们对所有频率的响应进行积分时，这些激发态的细节被"平均"掉了，剩下的结果完全由基态波函数的内禀几何结构所决定。
+
+因此，求和律不仅是一个实验工具，更是一个深刻的物理原理：系统的基态几何（Quantum Geometry）预先决定了其在动力学上响应外界微扰的整体能力（Capacity）。无论是线性吸收的总强度，还是非线性整流的净效应，它们都被基态在希尔伯特空间中的几何形态（度量、曲率及其导数）所严格锁定。
+
+3. Experiments to probe sum rule
+
+虽然广义求和律提供了丰富的几何信息，但在实验上测量从零频到无穷大的完整光学谱 $\sigma(\omega)$ 是极具挑战性的。幸运的是，我们可以利用时频对偶性 (Time-Frequency Duality)，通过设计探测脉冲的波形来直接提取这些积分量，而无需测量整个光谱。
+
+这一思想的核心在于：频率域的加权积分 $\int \omega^\eta \sigma(\omega) d\omega$ 实际上对应于系统在时域上对特定波形脉冲 $E(t)$ 的瞬时或累积响应。
+
+根据 Verma & Queiroz 的研究 [PNAS 122, e2405837122 (2025)](https://www.pnas.org/doi/10.1073/pnas.2405837122) 和 [Phys. Rev. Lett. 134, 106403 (2025)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.106403)，时变几何张量 (Time-dependent Quantum Geometric Tensor, tQGT) $\mathcal{Q}_{\mu\nu}(t)$ 是所有几何求和律的生成函数：
+
+$\mathcal{S}_{\mu\nu}^\eta \equiv \int_0^\infty \frac{\text{Re}[\sigma_{\mu\nu}(\omega)]}{\omega^{1-\eta}} d\omega = \frac{\pi e^2}{\hbar} \left[ (-i\partial_t)^\eta \mathcal{Q}_{\mu\nu}(t) \right]_{t=0}$
+
+这意味着我们可以通过测量系统对特定脉冲的时域响应 (Time-Domain Response) 来直接获取几何量：
+
+* 阶跃响应 (Step Response) $\to$ Quantum Metric:
+  施加一个在 $t=0$ 时刻突然关闭的阶跃电场 $E(t) = E_0 \Theta(-t)$。在高温（经典）极限下，随后测得的极化弛豫 $\mathcal{P}(t)$ 直接正比于对称的 tQGT：
+  $\mathcal{P}_\mu(t) \approx \frac{\hbar}{2 k_B T} E_\nu \mathcal{Q}^s_{\mu\nu}(t)$
+  因此，只需测量弛豫初始时刻 ($t \to 0^+$) 的极化强度，即可直接得到 Quantum Metric $g_{\mu\nu} = \mathcal{Q}^s_{\mu\nu}(0)$。
+
+这种方法将复杂的全频段光谱测量转化为单一的时间点测量或特定的波形响应测量，极大地简化了量子几何的实验探测。
+
+这意味着，我们不需要逐点测量光谱，只需施加一个经过设计的特定形状脉冲（如"方波"或"三角波"电场），并测量系统随后的电流或极化响应，即可直接"读出"sum rule 对应的generalized geometric weight。
 
 ### 量子几何关联相 (Quantum Geometric Correlated Phase)
 
-**(i) Quantum Geometric Spontaneous Symmetry Breaking**
+至此，我们讨论的范围都在单体问题内，事实上，quantum geometry还参与到了各种关联相中，特别是multiband和flatband体系中，使得interaction与quantum geometry的interplay也成为量子几何这一领域的热点topic。
 
-在平带极限下($W \to 0$)，能量因子退化为常数$1/k_BT$，物理完全由几何因子主导：
+我们可以先来考虑一下quantum geometry如何进入interacting physics。
 
-$$\chi_0(\mathbf{q}) \approx \frac{1}{k_B T} \sum_{\mathbf{k}} \underbrace{\nu(1-\nu)}_{\text{填充因子}} \underbrace{\left| \langle u_{\mathbf{k}} | u_{\mathbf{k}+\mathbf{q}} \rangle \right|^2}_{\text{几何卷积}}$$
+我们先来考虑传统的spontaneous symmetry breaking phase。我们熟知的自发对称破缺的相有铁磁相（Ferromagnetism，FM）、反铁磁相（Antiferromagnetism，AFM）、电荷密度波（Charge Density Wave，CDW），自旋密度波（Spin Density Wave，SDW），超导相（Superconductivity，SC）。事实上反铁磁相也可以看成一种$\mathbf{Q}=(\pi,\pi,\pi)$的自旋密度波。
 
-如果几何项favor某个$\mathbf{q}$，那么极化率也会favor这个$\mathbf{q}$，从而导致某种order parameter的出现——这就是"量子几何嵌套"（Quantum Geometric Nesting），与之前纯靠分析energy的Fermi Surface Nesting完全不同。
+这些相在传统固体物理中都有很好的理论解释，特别是基于单体 & Mean Field Theory的解释。这里我们统一来讨论，每种相都对应一个非零的order parameter $\langle \hat{\mathcal{O}} \rangle$。
 
-**(ii) Electron-Phonon Coupling**
+| 序 (Order)     | 序参量算符 $\hat{O}$ (Schematic)                         | 通道 (Channel)      | 旋量基 (Basis)      | 顶点 $\Gamma$ | 动量转移 $Q$          | 破缺对称性 (Broken Sym.) |
+| :-------------- | :-------------------------------------------------- | :---------------- | :--------------- | :---------- | :---------------- | :------------------ |
+| **铁磁 (FM)**     | $\sum c^\dagger \sigma c$                           | Particle-Hole     | $c$              | $\sigma$    | $0$               | $SU(2)$ 自旋旋转        |
+| **反铁磁/SDW**     | $\sum c^\dagger \sigma c_{k+Q}$                     | Particle-Hole     | $c$              | $\sigma$    | $Q \neq 0$        | $SU(2)$ + 平移 $T$    |
+| **电荷密度波 (CDW)** | $\sum c^\dagger I c_{k+Q}$                          | Particle-Hole     | $c$              | $I$         | $Q \neq 0$        | 平移 $T$              |
+| **超导 (SC)**     | $\sum c^\dagger_\uparrow c^\dagger_{\downarrow}$    | Particle-Particle | $(c, c^\dagger)$ | -           | $0$ (Pair)        | $U(1)$ 规范           |
+| **配对密度波 (PDW)** | $\sum c^\dagger_\uparrow c^\dagger_{\downarrow, Q}$ | Particle-Particle | $(c, c^\dagger)$ | -           | $Q \neq 0$ (Pair) | $U(1)$ + 平移 $T$     |
 
-主要参考Jiabin Yu的paper。
+但是传统固体物理的理论不考虑nontrivial的波函数，例如超导只考虑形如$\frac{\mathbf{p}^2}{2m}$的自由电子色散，没考虑band system中不同的orbital mixing可能导致nontrivial的波函数，进而导致nontrivial的quantum geometry的影响，这么一来，传统单带BCS的理论在我们把系统单体动能（band width）suppress之后（flat band limit）便不再适用。
 
-**(iii) Fractional Chern Insulator (FCI)**
+同理对于CDW，传统派们主要在找单体level的Fermi Surface Nesting，但是进入flat band limit之后在能量都相同（at least band width远小于interaction）的情况下，谈论Fermi Surface已经不在合理，这个时候唯一有效的信息便是平带上的波函数的"形状"，即quantum geometry了
 
-究其本质，还是在模仿Landau Level，不仅要在energy层面模仿（平带），还要在wavefunction（quantum geometry/topology）层面模仿：不但要Chern band，还要布里渊区处处的quantum metric/Berry curvature与Landau Level类似（迹条件）。
+对于任意序参量算符 $\hat{\mathcal{O}}$（由顶点矩阵 $\hat{\Gamma}$ 定义），其完整的静态极化率包含能量 (Lindhard) 和 几何 (Form Factor) 两部分：
 
-Quantum geometry serves as the key ingredient to measure our deviation from the ideal Landau Level.
+$\chi_{\Gamma}(\mathbf{q}) = \frac{1}{N} \sum_{\mathbf{k}} \sum_{n, m} \underbrace{ \left| \langle u_{n\mathbf{k}} | \hat{\Gamma} | u_{m\mathbf{k}+\mathbf{q}} \rangle \right|^2 }_{\text{几何因子 (Form Factor)} \mathcal{F}_{nm}} \times \underbrace{ \frac{f(\epsilon_{n\mathbf{k}}) - f(\epsilon_{m\mathbf{k}+\mathbf{q}})}{\epsilon_{m\mathbf{k}+\mathbf{q}} - \epsilon_{n\mathbf{k}}} }_{\text{能量因子 (Lindhard)} \mathcal{L}_{nm}}$
 
-### 量子几何信息熵 (Quantum Geometric Information Theory)
+* 能量因子 $\mathcal{L}_{nm}$：决定了激发的能量代价。在普通金属中，它提供费米面嵌套 (Fermi Surface Nesting)。
 
-**(i) Quantum Fisher Information (QFI)**
+* 几何因子 $\mathcal{F}_{nm}$：决定了跃迁的选择规则。即使能量允许，波函数正交也会禁止跃迁。
 
-$$F_Q(\lambda) = 2 \sum_{n,m} \frac{(p_n - p_m)^2}{p_n + p_m} |\langle n | \partial_\lambda \rho | m \rangle|^2$$
+在平带极限下 ($W \to 0$)，能量因子退化为常数 $1/k_B T$，物理完全由几何因子主导：
 
-在纯态极限（$T \to 0$）下，QFI退化为Quantum Metric的4倍：
+极化率 (Lindhard Function) 的核心能量因子项为：
+$L(\mathbf{k}, \mathbf{q}) = \frac{f(\epsilon_{\mathbf{k}}) - f(\epsilon_{\mathbf{k}+\mathbf{q}})}{\epsilon_{\mathbf{k}+\mathbf{q}} - \epsilon_{\mathbf{k}}}$
 
-$$F_Q = 4 g_{\lambda\lambda}$$
+1. 平带极限 ($0/0$)：
+   当能带变平 ($W \to 0$)，$\epsilon_{\mathbf{k}} \approx \epsilon_{\mathbf{k}+\mathbf{q}} \approx \mu$。分母趋于 0，分子也趋于 0。利用洛必达法则或泰勒展开：
+   $\lim_{\Delta E \to 0} \frac{f(E) - f(E+\Delta E)}{\Delta E} = - \frac{\partial f}{\partial E}$
 
-QFI是Quantum Metric在混合态（有限温度）下的自然推广。通过测量虚部动态磁化率可以实验探测：
+2. 费米分布导数恒等式 (详细推导)：
+   令 $x = \beta(E-\mu)$，则 $f(E) = \frac{1}{e^x + 1}$。
 
-$$F_Q(T) = \frac{4}{\pi} \int_0^\infty d\omega \tanh\left(\frac{\hbar\omega}{2k_B T}\right) \chi''_{\hat{h}}(\omega, T)$$
+   * 求导：利用链式法则
+     $\frac{\partial f}{\partial E} = \frac{d f}{d x} \frac{\partial x}{\partial E} = \left( - \frac{e^x}{(e^x+1)^2} \right) \cdot \beta$
 
-**(ii) Entanglement Entropy**
+   * 凑项：观察 $f(1-f)$
+     $1-f = 1 - \frac{1}{e^x+1} = \frac{e^x}{e^x+1}$
+     $f(1-f) = \frac{1}{e^x+1} \cdot \frac{e^x}{e^x+1} = \frac{e^x}{(e^x+1)^2}$
 
-对于自由费米子系统，Renyi纠缠熵$S_A^{(\alpha)}$可以直接表示为关联矩阵的函数：
+   * 结论：对比上述两式，立即得到
+     $- \frac{\partial f}{\partial E} = \beta f(1-f) = \frac{1}{k_B T} f(1-f)$
 
-$$S_A^{(\alpha)} = \frac{1}{1-\alpha} \text{Tr} \ln \det [p \mathbf{1} - C_A]$$
+3. 最终结果：
+   代回原式，得到平带极限下的极化率：
+   $\chi_0(\mathbf{q}) \approx \frac{1}{k_B T} \sum_{\mathbf{k}} \underbrace{ \nu(1-\nu) }_{\text{填充因子}} \underbrace{ \left| \langle u_{\mathbf{k}} | u_{\mathbf{k}+\mathbf{q}} \rangle \right|^2 }_{\text{几何卷积}}$
 
-由于关联矩阵本质上反映了波函数在实空间的重叠与距离，这暗示了Quantum Metric与纠缠熵之间存在直接的几何对应关系。
+$\chi_{\Gamma}^{flat}(\mathbf{q}) \approx \underbrace{ \frac{1}{k_B T} }_{\text{Energy Part}} \times \underbrace{ \frac{1}{N} \sum_{\mathbf{k}} \text{Tr} \left[ \mathcal{F}_{\Gamma}(\mathbf{k}, \mathbf{q}) \right] }_{\text{Geometric Part}}$
 
----
+其中 几何形状因子 定义为投影到平带上的跃迁矩阵元模方：
 
-## 参考文献 (References)
+$\mathcal{F}_{\Gamma}(\mathbf{k}, \mathbf{q}) = \left| \langle u_{\mathbf{k}} | \hat{\Gamma} | u_{\mathbf{k}+\mathbf{q}} \rangle \right|^2$
 
-施工中...
+* $|u_{\mathbf{k}}\rangle$: 包含轨道/子晶格信息的周期性布洛赫波函数（旋量）。
 
----
+* $\hat{\Gamma}$: 定义序类型的顶点矩阵。
 
-## 写在最后
+(i) Superfluidity Weight/Flatband Superconductivity
+
+这在quantum geometric correlated phase里算比较早的work，可以参考以下paper：
+
+> 🔗 *【link: Superfluidity Weight note】*
+
+(ii) Quantum Geometric Magnetism
+
+(iii) Electron-Phonon Coupling
+
+主要参考Jiabin Yu的paper
+
+(iv) Fractional Chern Insulator/ Fractional Quantum Anomalous Hall
+
+这是作者最早接触的领域，可以参考本人的其他note：
+
+> 🔗 *【link: Fractional Chern Insulator note】*
+
+究其本质，还是在模仿Landau Level，不仅要在energy层面模仿（平带），还要在wavefunction（or equivalently, quantum geometry/topology）层面模仿，不但要Chern band，还要布里渊区处处的quantum metric/Berry curvature与Landau Level类似。
+
+Here，quantum geometry serves as the key ingredient to measure our deviation from the ideal Landau Level。并由此发展出了很多关于Fractional state的讨论，这里不再赘述，可以参考note和其他文献。
+
+### 量子几何信息熵 (Quantum Geometric Information Entropy)
+
+最后我们再把视野从凝聚态领域放宽到量子信息领域，我们将发现quantum geometry对于人们理解quantum information也有重要帮助，反过来，甚至能帮助我们观测这些量子几何的quantim informaiton quantities。
+
+(i) Quantum Fisher information
+
+在quantum information中，我们更常讨论density matrix而非纯态，因此我们需要将量子几何的概念推广到密度矩阵。为此，我们也要类似的定义density matrix之间的距离，再对对应距离进行参数展开，便可以得到quantum Fisher information (QFI)。
+
+* 在密度矩阵的本征基矢 $\rho = \sum_n p_n |n\rangle\langle n|$ 下，通过解上述方程，QFI 可以写成非常实用的谱分解形式：
+
+$$
+F_Q(\lambda) = 2 \sum_{n,m} \frac{(p_n - p_m)^2}{p_n + p_m} |\langle n | \partial_\lambda \rho | m \rangle|^2
+$$
+
+回归纯态：与 Quantum Metric 的对应
+这个公式看起来很复杂，但如果我们取纯态极限 ($T \to 0$)，即某个态 $p_0=1$，其余 $p_{n \neq 0}=0$，神奇的事情发生了：
+
+1. 求和中仅当 $n=0, m\neq 0$ (或反之) 时，分母 $p_n+p_m = 1 \neq 0$，项才留存。
+2. 此时系数 $\frac{(1-0)^2}{1+0} = 1$。
+3. 考虑到 $\partial_\lambda \rho = |\partial_\lambda \psi\rangle\langle\psi| + |\psi\rangle\langle\partial_\lambda \psi|$，我们可以导出：
+
+$$
+F_Q = 4 \left( \langle \partial_\lambda \psi | \partial_\lambda \psi \rangle - |\langle \psi | \partial_\lambda \psi \rangle|^2 \right)
+$$
+
+这正是 Quantum Geometric Tensor 实部（Fubini-Study 度规）的 4 倍：
+
+$$
+F_Q = 4 g_{\lambda\lambda}
+$$
+
+这完美地展示了物理概念的统一性：QFI 是 Quantum Metric 在混合态（有限温度）下的自然推广；在零温下，它退化回我们熟悉的波函数空间的几何距离。
+
+这些抽象的几何量可以通过 **线性响应理论** 与实验可测的物理量联系起来。
+
+* **Hauke 关系式 (2016)**
+  对于热平衡态 $\rho \propto e^{-\beta H}$，我们可以利用上述谱分解公式，将 QFI 与系统的虚部动态磁化率 $\chi''(\omega)$ 联系起来。根据最新综述整理的结论，对于由算符 $\hat{h}$ 生成的参数估计，其 QFI 为：
+
+  $$
+  F_Q(T) = \frac{4}{\pi} \int_0^\infty d\omega \tanh\left(\frac{\hbar\omega}{2k_B T}\right) \chi''_{\hat{h}}(\omega, T)
+  $$
+
+  这里 $\chi''_{\hat{h}}(\omega)$ 是算符 $\hat{h}$ 的动态响应谱。
+
+(ii) Entanglement Entropy
+
+Quantum Geometry 不仅关联于可观测的响应函数，还与微观的 **纠缠熵 (Entanglement Entropy)** 存在深刻联系。
+
+* **关联矩阵与 Renyi 熵**
+  对于自由费米子系统，子系统 $A$ 的纠缠性质完全由关联矩阵 $C_{nm} = \langle c_n^\dagger c_m \rangle$ (或重叠矩阵 $O$) 决定。Renyi 纠缠熵 $S_A^{(\alpha)}$ 可以直接表示为关联矩阵的函数：
+
+  $$
+  S_A^{(\alpha)} = \frac{1}{1-\alpha} \text{Tr} \ln \det [p \mathbf{1} - C_A]
+  $$
+
+  由于关联矩阵本质上反映了波函数在实空间的重叠与距离，这暗示了 Quantum Metric 与纠缠熵之间存在直接的几何对应关系。
+
+### 写在最后
 
 感谢各位读到这里，停更近两年，我十分意外的从以色列转移到了美国，并托导师的福得以继续在凝聚态物理方向深造，十分感慨。
 
-留美期间，我的生活 & 学习 & 工作 & 人际关系方面的变化很多，我仍在缓慢适应，同时科研工作也逐渐深入，于是我也没时间写note了。我也看到有读者在等更新，把用来发正经note的平台变成了我情绪宣泄的垃圾场，实在抱歉。
+美国生活 & 学习 & 工作 & 人际关系方面的变化很多，我仍在缓慢适应，同时科研工作也逐渐深入，于是我也没时间写note了。我也看到有读者在等更新，把用来发正经note的平台变成了我情绪宣泄的发电场，实在抱歉。
 
-仅以此文纪念这些年我在quantum geometry方面的理解 & 踩坑 & 成果，谢谢大家至今的支持，有缘再会～
+至此我的PhD生涯也即将过半，说来惭愧，我还是时常对未来感到迷茫。quantum geometry的相关内容也并非我的精心挑选，而是暑研期间的一时兴起，本也无打算深究，现在却成了我理解最深的一个方向。很多时候我也不知道在这个方向上深究究竟有无意义，很多时候因为知道越多，反而知道越少。
+
+说是没时间写note，但有时感觉是因为不再像以前那么纯粹，能发自内心的对一个方向感兴趣，并为之不顾一切的去求索，这是我以前写知乎note的心态，写这一篇时我仿佛又找回了以前写note时那种纯粹的感觉，我希望能持续下去，但我不确定。
+
+我希望以后也能尝试新的方向，但我也逐渐感觉力不从心，我也很羡慕本科生和低年级的研究生们，虽然他们可能科研经历没有我丰富，但他们的眼里还充满了对纯粹的对知识的渴望，而我知道这种纯粹很大程度上是年轻人的特权，我也时常希望能回到几年前那种纯粹的状态，毫无功利心的思考一些感兴趣的问题，但现实常常是为了留在academia，我们无法灵活的变换方向。当然，感兴趣的方向是可以培养的，所谓越了解，越拥护，但内心对纯粹的渴望并没有在减少，我不知道我还有多少时间还能保持纯粹。
+
+大抵正如封面图所示，谨以芳华赠予量子几何，接下来的路还得走一步是一步。
+
+谢谢大家至今的支持，有缘再会～
