@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Quantum Theory on OkongOyangO的物理笔记</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/quantum-theory/</link>
+    <description>Recent content in Quantum Theory on OkongOyangO的物理笔记</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
+    <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
+    <lastBuildDate>Tue, 30 Jun 2026 12:00:00 +0800</lastBuildDate>
+    <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/quantum-theory/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>😵圆二象性（Circular Dichroism）的量子理论</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/circular-dichroism-quantum-theory/</link>
+      <pubDate>Tue, 30 Jun 2026 12:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/circular-dichroism-quantum-theory/</guid>
+      <description>&lt;p&gt;圆二象性（Circular Dichroism, CD）是研究分子手性的常用实验手段。CD测量物质对左右圆偏振光吸收的差值，作为反映物质手性的依据。圆偏振光在空间中的几何形状是螺旋型的电场，很自然地具有手性，可以想象左、右圆偏振光与不同手性的物质的相互作用也有区别。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

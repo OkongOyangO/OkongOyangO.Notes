@@ -4,9 +4,17 @@
         <link>https://OkongOyangO.github.io/OkongOyangO.Notes/</link>
         <description>OkongOyangO&#39;s Notes on Condensed Matter Physics</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
-            <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster><lastBuildDate>Tue, 30 Jun 2026 11:00:00 &#43;0800</lastBuildDate>
+            <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster><lastBuildDate>Tue, 30 Jun 2026 12:00:00 &#43;0800</lastBuildDate>
             <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>😵Quantum Theory of Circular Dichroism</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/circular-dichroism-quantum-theory/</link>
+    <pubDate>Tue, 30 Jun 2026 12:00:00 &#43;0800</pubDate>
+    <author>yzj5306@psu.edu (OkongOyangO)</author>
+    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/circular-dichroism-quantum-theory/</guid>
+    <description><![CDATA[<p>Circular Dichroism (CD) is a common experimental technique for studying molecular chirality. CD measures the difference in absorption of left- and right-circularly polarized light by a sample, serving as a probe of its chirality. Circularly polarized light has a helical electric field geometry in space, which is inherently chiral, so it stands to reason that left- and right-circularly polarized light would interact differently with chiral substances.</p>]]></description>
+</item>
+<item>
     <title>🤩Quantum Geometry: A Hands-on Introduction to the Quantum Geometric Tensor</title>
     <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/quantum-geometry-in-fci/</link>
     <pubDate>Tue, 30 Jun 2026 11:00:00 &#43;0800</pubDate>
@@ -80,14 +88,6 @@
     <author>yzj5306@psu.edu (OkongOyangO)</author>
     <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/joule_heat/</guid>
     <description><![CDATA[<p>This article aims to clarify the consistency between Fermi&rsquo;s Golden Rule and Joule Heat.</p>]]></description>
-</item>
-<item>
-    <title>🥸Nonlinear Response Theory of the Kubo Formula</title>
-    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/nonlinear-kubo-formalism/</link>
-    <pubDate>Tue, 07 Mar 2023 22:30:00 -0500</pubDate>
-    <author>yzj5306@psu.edu (OkongOyangO)</author>
-    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/nonlinear-kubo-formalism/</guid>
-    <description><![CDATA[<p>This article aims to derive the nonlinear response theory of the Kubo Formula.</p>]]></description>
 </item>
 </channel>
 </rss>

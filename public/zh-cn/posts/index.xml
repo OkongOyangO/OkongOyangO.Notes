@@ -4,7 +4,15 @@
         <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/</link>
         <description>所有文章 | OkongOyangO的物理笔记</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
-            <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster><lastBuildDate>Tue, 30 Jun 2026 11:00:00 &#43;0800</lastBuildDate><atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster><lastBuildDate>Tue, 30 Jun 2026 12:00:00 &#43;0800</lastBuildDate><atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>😵圆二象性（Circular Dichroism）的量子理论</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/circular-dichroism-quantum-theory/</link>
+    <pubDate>Tue, 30 Jun 2026 12:00:00 &#43;0800</pubDate>
+    <author>yzj5306@psu.edu (OkongOyangO)</author>
+    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/circular-dichroism-quantum-theory/</guid>
+    <description><![CDATA[<p>圆二象性（Circular Dichroism, CD）是研究分子手性的常用实验手段。CD测量物质对左右圆偏振光吸收的差值，作为反映物质手性的依据。圆偏振光在空间中的几何形状是螺旋型的电场，很自然地具有手性，可以想象左、右圆偏振光与不同手性的物质的相互作用也有区别。</p>]]></description>
+</item>
+<item>
     <title>🤩量子几何（Quantum Geometry）</title>
     <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/quantum-geometry-in-fci/</link>
     <pubDate>Tue, 30 Jun 2026 11:00:00 &#43;0800</pubDate>
@@ -78,14 +86,6 @@
     <author>yzj5306@psu.edu (OkongOyangO)</author>
     <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/joule_heat/</guid>
     <description><![CDATA[<p>本文旨在阐述费米黄金法则和焦耳热的一致性。</p>]]></description>
-</item>
-<item>
-    <title>🥸久保同学不放过我｜Kubo Formula的非线性响应理论</title>
-    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/nonlinear-kubo-formalism/</link>
-    <pubDate>Tue, 07 Mar 2023 22:30:00 -0500</pubDate>
-    <author>yzj5306@psu.edu (OkongOyangO)</author>
-    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/nonlinear-kubo-formalism/</guid>
-    <description><![CDATA[<p>本文旨在推导Kubo Formula的非线性响应理论。</p>]]></description>
 </item>
 </channel>
 </rss>

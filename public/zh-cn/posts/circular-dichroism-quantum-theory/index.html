@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>😵圆二象性（Circular Dichroism）的量子理论 - OkongOyangO的物理笔记</title><meta name="Description" content="O空O扬O的物理笔记"><meta property="og:url" content="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/circular-dichroism-quantum-theory/">
+  <meta property="og:site_name" content="OkongOyangO的物理笔记">
+  <meta property="og:title" content="😵圆二象性（Circular Dichroism）的量子理论">
+  <meta property="og:description" content="圆二象性（Circular Dichroism, CD）是研究分子手性的常用实验手段。CD测量物质对左右圆偏振光吸收的差值，作为反映物质手性的依据。圆偏振光在空间中的几何形状是螺旋型的电场，很自然地具有手性，可以想象左、右圆偏振光与不同手性的物质的相互作用也有区别。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-06-30T12:00:00+08:00">
+    <meta property="article:modified_time" content="2026-06-30T12:00:00+08:00">
+    <meta property="article:tag" content="Circular Dichroism">
+    <meta property="article:tag" content="Chirality">
+    <meta property="article:tag" content="Quantum Theory">
+    <meta property="article:tag" content="Multipole Expansion">
+    <meta property="article:tag" content="Condensed Matter">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="😵圆二象性（Circular Dichroism）的量子理论">
+  <meta name="twitter:description" content="圆二象性（Circular Dichroism, CD）是研究分子手性的常用实验手段。CD测量物质对左右圆偏振光吸收的差值，作为反映物质手性的依据。圆偏振光在空间中的几何形状是螺旋型的电场，很自然地具有手性，可以想象左、右圆偏振光与不同手性的物质的相互作用也有区别。">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/OkongOyangO.Notes/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/OkongOyangO.Notes/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/OkongOyangO.Notes/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/OkongOyangO.Notes/apple-touch-icon.png"><link rel="mask-icon" href="/OkongOyangO.Notes/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/OkongOyangO.Notes/site.webmanifest"><link rel="canonical" href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/circular-dichroism-quantum-theory/" /><link rel="prev" href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/quantum-geometry-in-fci/" /><link rel="stylesheet" href="/OkongOyangO.Notes/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "😵圆二象性（Circular Dichroism）的量子理论",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/zh-cn\/posts\/circular-dichroism-quantum-theory\/"
+        },"genre": "posts","keywords": "Circular Dichroism, Chirality, Quantum Theory, Multipole Expansion, Condensed Matter","wordcount":  282 ,
+        "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/zh-cn\/posts\/circular-dichroism-quantum-theory\/","datePublished": "2026-06-30T12:00:00+08:00","dateModified": "2026-06-30T12:00:00+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "OkongOyangO"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/OkongOyangO.Notes/zh-cn/" title="OkongOyangO的物理笔记">OkongOyangO&#39;s Notes</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item active" href="/OkongOyangO.Notes/zh-cn/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i> 文章 </a><a class="menu-item" href="/OkongOyangO.Notes/zh-cn/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i> 标签 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i> 主题
+                </a><a href="javascript:void(0);" class="menu-item language" title="语言">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i> 语言
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/circular-dichroism-quantum-theory/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/circular-dichroism-quantum-theory/" selected>简体中文</option><option value="/OkongOyangO.Notes/ja/posts/circular-dichroism-quantum-theory/">日本語</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/OkongOyangO.Notes/zh-cn/" title="OkongOyangO的物理笔记">OkongOyangO&#39;s Notes</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/OkongOyangO.Notes/zh-cn/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i>文章</a><a class="menu-item" href="/OkongOyangO.Notes/zh-cn/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i>标签</a><a href="javascript:void(0);" class="menu-item theme-switch" title="主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>主题
+            </a><a href="javascript:void(0);" class="menu-item" title="语言">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>语言
+                    <select class="language-select" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/circular-dichroism-quantum-theory/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/circular-dichroism-quantum-theory/" selected>简体中文</option><option value="/OkongOyangO.Notes/ja/posts/circular-dichroism-quantum-theory/">日本語</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">😵圆二象性（Circular Dichroism）的量子理论</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/OkongOyangO.Notes/zh-cn/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">收录于 <a href="/OkongOyangO.Notes/zh-cn/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-06-30">2026-06-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 282 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#cd的量子理论">CD的量子理论</a></li>
+    <li><a href="#多极展开与cd">多极展开与CD</a></li>
+    <li><a href="#总结">总结</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>圆二象性（Circular Dichroism, CD）是研究分子手性的常用实验手段。CD测量物质对左右圆偏振光吸收的差值，作为反映物质手性的依据。圆偏振光在空间中的几何形状是螺旋型的电场，很自然地具有手性，可以想象左、右圆偏振光与不同手性的物质的相互作用也有区别。</p>
+<p>之前的note解释了光与量子系统的相互作用的多极展开理论，此处只要将电磁波的形式改成左、右旋圆偏振光并求差即可得到样品的CD谱。由于之前note的多极展开理论为微扰展开，故在电子波函数尺度$r$远小于光波长$\lambda$的时候成立。</p>
+<h2 id="cd的量子理论">CD的量子理论</h2>
+<p>一般看到的CD量子理论中，采用的Hamiltonian为</p>
+$$ \hat{H} = \hat{H}_0 - Q \hat{\mathbf{r}} \cdot \mathbf{E} - \hat{\mathbf{m}}\cdot \mathbf{B} $$<p>此处忽略了电磁场的spatial dependence，是多极展开理论的最低阶情形。事实上，应该从磁矢势$\mathbf{A}$出发，并加入与磁偶极同量级的电四极项，但之后会证明，在randomly oriented的系统中，电四极的贡献可以被忽略。</p>
+<p>此处为严格推导，我们从磁矢势（横场规范）引入电磁场，从而给出严格的最低阶近似结果。上述Hamiltonian与从磁矢势（横场规范）引入电磁场的Hamiltonian之间差一个规范变换，具体推导可以参考之前的note。</p>
+<p>横场规范磁矢势引入电磁场的Hamiltonian为：</p>
+$$ \hat{H} = \frac{1}{2m} (\hat{\mathbf{p}} - Q \mathbf{A}(\hat{\mathbf{r}},t) )^2 + Q \phi(\hat{\mathbf{r}},t) + V(\hat{\mathbf{r}}) -\frac{Q}{m} \hat{\mathbf{S}} \cdot \mathbf{B}(\hat{\mathbf{r}},t) $$<p>其中电场：</p>
+$$ \mathbf{E}(\mathbf{r},t) = \frac{E_0}{2}e^{-iqz} e^{i \omega t} \mathbf{e}_E + c.c. = E_0(z) e^{i \omega t} \mathbf{e}_E + c.c. = \mathbf{E}(\mathbf{r}) e^{i \omega t} + c.c. $$<p>对于左旋、右旋圆偏振光：</p>
+$$ \mathbf{e}_E^{\pm} = \frac{1}{\sqrt{2}}(1,\pm i, 0) $$<p>磁场部分：</p>
+$$ \mathbf{B}(\mathbf{r},t) = \frac{E_0}{2\omega} (\mathbf{k} \times \mathbf{e}_E) e^{-iqz} e^{i \omega t} + c.c. = \mathbf{B}(\mathbf{r}) e^{i \omega t} + c.c. $$<p>注意$\mathbf{k} = q \hat{z}$。</p>
+<p>相应地，可以求出$\mathbf{e}_B^{\pm}$：</p>
+$$ \mathbf{e}_B^{\pm} = \frac{1}{\sqrt{2}}(\mp i, 1, 0) $$<p>对于一般的实验条件下的入射光，将所有上述左旋、右旋圆偏振光带入式子中，根据含时微扰论做费米黄金规则并且减去左旋光的结果，即可得到一般的CD谱（差谱）。</p>
+<p>此处不给出一般CD谱的计算，仅在最一般的多极展开框架下给出求CD谱需要计算的项。同样，此处不取旋波近似（Rotating Wave Approximation），而是在下文根据计算需要逐项判断。同时频率求和时，需要同时考虑光场正频和负频部分的贡献。</p>
+<h2 id="多极展开与cd">多极展开与CD</h2>
+<p>对于CD谱，我们分别计算左、右旋光场的吸收谱再相减。由于CD谱$\Delta A(\omega)$的计算公式如下：</p>
+$$ \Delta A(\omega) = A_+(\omega) - A_-(\omega) $$<p>根据费米黄金规则，单光子吸收对应的吸收谱可以写成以下对称形式：</p>
+$$
+A(\omega) = \frac{\pi Q^2}{\hbar^2} \sum_{i,f} P_i |\langle f | \hat{H}_{int} | i \rangle|^2 \delta(\omega_{fi} - \omega)
+$$<p>其中$\hat{H}_{int}$是光与物质相互作用。带入上面的横场规范磁矢势Hamiltonian，我们可以得到光与物质相互作用的最低阶项：</p>
+$$
+\hat{H}_{int} = - \frac{Q}{m} \mathbf{A}(\hat{\mathbf{r}},t) \cdot \hat{\mathbf{p}} - \frac{Q}{2m} \hat{\mathbf{S}} \cdot \mathbf{B}(\hat{\mathbf{r}},t)
+$$<p>上式可改写为：</p>
+$$
+\hat{H}_{int} = \frac{iQE_0}{2m\omega} e^{-iq\hat{z}} (\hat{\mathbf{p}} \cdot \mathbf{e}_E) - \frac{Q E_0}{2m\omega} e^{-iq\hat{z}} (\hat{\mathbf{S}} \cdot \mathbf{e}_B) + h.c.
+$$<p>在$r \ll \lambda$的前提下，可以将$e^{-iq\hat{z}}$展开：</p>
+$$
+e^{-iq\hat{z}} = 1 - iq\hat{z} - \frac{1}{2}(q\hat{z})^2 + \cdots
+$$<p>零阶项（电偶极近似）：</p>
+$$ \hat{H}_{int}^{(0)} = \frac{iQE_0}{2m\omega} (\hat{\mathbf{p}} \cdot \mathbf{e}_E) - \frac{Q E_0}{2m\omega} (\hat{\mathbf{S}} \cdot \mathbf{e}_B) + h.c. $$<p>利用以下对易关系：</p>
+$$ \hat{\mathbf{p}} = \frac{im}{\hbar}[\hat{H}_0, \hat{\mathbf{r}}] $$<p>可得电偶极的等价形式：</p>
+$$ \langle f | \hat{\mathbf{p}} | i \rangle = \frac{im}{\hbar} (E_f - E_i) \langle f | \hat{\mathbf{r}} | i \rangle $$<p>因此零阶项可改写为常见的电偶极形式。</p>
+<p>对于CD谱，电偶极项对于左、右旋光的贡献完全一致，因而在差谱中扣去。第一项有贡献的为电偶极(E1)-磁偶极(M1)交叉项，以及E1-电四极(E2)交叉项。经过严格计算，最终CD谱的表达式在旋波近似下为：</p>
+$$
+\Delta A(\omega) \propto \sum_{i,f} P_i \left[ \langle i | \hat{\mathbf{m}} | f \rangle \cdot \langle f | \hat{\mathbf{r}} | i \rangle \times \mathbf{k} + \frac{i\omega}{c} \langle i | \hat{\mathbf{r}} | f \rangle \cdot \mathbf{Q} \cdot (\hat{\mathbf{k}} \times \langle f | \hat{\mathbf{r}} | i \rangle) \right] \delta(\omega_{fi} - \omega)
+$$<p>在randomly oriented系统中，电四极项平均为0，仅磁偶极项贡献CD信号。这就是为何一般教科书只提E1-M1交叉项作为CD来源。</p>
+<h2 id="总结">总结</h2>
+<p>本note通过光-物质相互作用的多极展开框架，严格推导了圆二象性（CD）的量子理论。CD信号来自左、右旋圆偏振光吸收的差值，其主导贡献为电偶极-磁偶极（E1-M1）交叉项。该理论为理解手性分子的光谱表征提供了微观基础。</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2026-06-30</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 X" data-sharer="x" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/circular-dichroism-quantum-theory/" data-title="😵圆二象性（Circular Dichroism）的量子理论" data-via="OkongOyangO" data-hashtags="Circular Dichroism,Chirality,Quantum Theory,Multipole Expansion,Condensed Matter"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Threads" data-sharer="threads" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/circular-dichroism-quantum-theory/" data-title="😵圆二象性（Circular Dichroism）的量子理论"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/circular-dichroism-quantum-theory/" data-hashtag="Circular Dichroism"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/circular-dichroism-quantum-theory/" data-title="😵圆二象性（Circular Dichroism）的量子理论"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/circular-dichroism-quantum-theory/" data-title="😵圆二象性（Circular Dichroism）的量子理论"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/circular-dichroism-quantum-theory/" data-title="😵圆二象性（Circular Dichroism）的量子理论"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Diaspora" data-sharer="diaspora" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/circular-dichroism-quantum-theory/" data-title="😵圆二象性（Circular Dichroism）的量子理论" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fOkongOyangO.github.io%2fOkongOyangO.Notes%2fzh-cn%2fposts%2fcircular-dichroism-quantum-theory%2f&amp;text=%f0%9f%98%b5%e5%9c%86%e4%ba%8c%e8%b1%a1%e6%80%a7%ef%bc%88Circular%20Dichroism%ef%bc%89%e7%9a%84%e9%87%8f%e5%ad%90%e7%90%86%e8%ae%ba" target="_blank" title="分享到 Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/OkongOyangO.Notes/zh-cn/tags/circular-dichroism/">Circular Dichroism</a>,&nbsp;<a href="/OkongOyangO.Notes/zh-cn/tags/chirality/">Chirality</a>,&nbsp;<a href="/OkongOyangO.Notes/zh-cn/tags/quantum-theory/">Quantum Theory</a>,&nbsp;<a href="/OkongOyangO.Notes/zh-cn/tags/multipole-expansion/">Multipole Expansion</a>,&nbsp;<a href="/OkongOyangO.Notes/zh-cn/tags/condensed-matter/">Condensed Matter</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/OkongOyangO.Notes/zh-cn/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/OkongOyangO.Notes/zh-cn/posts/quantum-geometry-in-fci/" class="prev" rel="prev" title="🤩量子几何（Quantum Geometry）"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>🤩量子几何（Quantum Geometry）</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.154.3">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/OkongOyangO.Notes/zh-cn/" target="_blank">OkongOyangO</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="/OkongOyangO.Notes/lib/lunr/lunr.stemmer.support.min.js"></script><script src="/OkongOyangO.Notes/lib/lunr/lunr.zh.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/copy-tex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/mhchem.min.js"></script><script>window.config={"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/OkongOyangO.Notes/zh-cn/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/OkongOyangO.Notes/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":30,"type":"lunr"}};</script><script src="/OkongOyangO.Notes/js/theme.min.js"></script></body>
+</html>

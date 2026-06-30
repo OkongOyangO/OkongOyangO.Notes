@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Circular Dichroism on OkongOyangO&#39;s Notes</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/tags/circular-dichroism/</link>
+    <description>Recent content in Circular Dichroism on OkongOyangO&#39;s Notes</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
+    <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
+    <lastBuildDate>Tue, 30 Jun 2026 12:00:00 +0800</lastBuildDate>
+    <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/tags/circular-dichroism/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>😵Quantum Theory of Circular Dichroism</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/circular-dichroism-quantum-theory/</link>
+      <pubDate>Tue, 30 Jun 2026 12:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/circular-dichroism-quantum-theory/</guid>
+      <description>&lt;p&gt;Circular Dichroism (CD) is a common experimental technique for studying molecular chirality. CD measures the difference in absorption of left- and right-circularly polarized light by a sample, serving as a probe of its chirality. Circularly polarized light has a helical electric field geometry in space, which is inherently chiral, so it stands to reason that left- and right-circularly polarized light would interact differently with chiral substances.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

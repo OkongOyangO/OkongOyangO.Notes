@@ -8,20 +8,48 @@
     <language>en</language>
     <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
     <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
-    <lastBuildDate>Tue, 30 Jun 2026 11:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2026 12:00:00 +0800</lastBuildDate>
     <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Berry Curvature</title>
-      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/tags/berry-curvature/</link>
-      <pubDate>Tue, 30 Jun 2026 11:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
-      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/tags/berry-curvature/</guid>
+      <title>Chirality</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/tags/chirality/</link>
+      <pubDate>Tue, 30 Jun 2026 12:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/tags/chirality/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Circular Dichroism</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/tags/circular-dichroism/</link>
+      <pubDate>Tue, 30 Jun 2026 12:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/tags/circular-dichroism/</guid>
       <description></description>
     </item>
     <item>
       <title>Condensed Matter</title>
       <link>https://OkongOyangO.github.io/OkongOyangO.Notes/tags/condensed-matter/</link>
-      <pubDate>Tue, 30 Jun 2026 11:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <pubDate>Tue, 30 Jun 2026 12:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
       <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/tags/condensed-matter/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Multipole Expansion</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/tags/multipole-expansion/</link>
+      <pubDate>Tue, 30 Jun 2026 12:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/tags/multipole-expansion/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Quantum Theory</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/tags/quantum-theory/</link>
+      <pubDate>Tue, 30 Jun 2026 12:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/tags/quantum-theory/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Berry Curvature</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/tags/berry-curvature/</link>
+      <pubDate>Tue, 30 Jun 2026 11:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/tags/berry-curvature/</guid>
       <description></description>
     </item>
     <item>
@@ -204,6 +232,62 @@
       <link>https://OkongOyangO.github.io/OkongOyangO.Notes/tags/topology/</link>
       <pubDate>Mon, 17 Oct 2022 22:30:00 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
       <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/tags/topology/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Exceptional Points</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/tags/exceptional-points/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/tags/exceptional-points/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ferromagnetism</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/tags/ferromagnetism/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/tags/ferromagnetism/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lindblad Equation</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/tags/lindblad-equation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/tags/lindblad-equation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Liouvillian</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/tags/liouvillian/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/tags/liouvillian/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Magnetism</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/tags/magnetism/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/tags/magnetism/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Non-Hermitian</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/tags/non-hermitian/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/tags/non-hermitian/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Paramagnetism</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/tags/paramagnetism/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/tags/paramagnetism/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Solid State Physics</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/tags/solid-state-physics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/tags/solid-state-physics/</guid>
       <description></description>
     </item>
   </channel>

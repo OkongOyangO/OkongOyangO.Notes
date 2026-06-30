@@ -4,7 +4,15 @@
         <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/</link>
         <description>All 記事 | OkongOyangOのノート</description>
         <generator>Hugo -- gohugo.io</generator><language>ja</language><managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
-            <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster><lastBuildDate>Tue, 30 Jun 2026 11:00:00 &#43;0800</lastBuildDate><atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster><lastBuildDate>Tue, 30 Jun 2026 12:00:00 &#43;0800</lastBuildDate><atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>😵円二色性（Circular Dichroism）の量子理論</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/circular-dichroism-quantum-theory/</link>
+    <pubDate>Tue, 30 Jun 2026 12:00:00 &#43;0800</pubDate>
+    <author>yzj5306@psu.edu (OkongOyangO)</author>
+    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/circular-dichroism-quantum-theory/</guid>
+    <description><![CDATA[<p>円二色性（Circular Dichroism, CD）は、分子のキラリティーを調べるための一般的な実験手法である。CDでは、物質による左円偏光と右円偏光の吸収の差を測定し、その差を物質のキラリティーを反映する指標として用いる。円偏光は空間中で螺旋状の電場形状を持ち、本質的にキラリティーを有しており、左・右円偏光が異なるキラリティーの物質と相互作用する際に違いが生じると考えられる。</p>]]></description>
+</item>
+<item>
     <title>🤩量子幾何学（Quantum Geometry）：量子幾何テンソル入門</title>
     <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/quantum-geometry-in-fci/</link>
     <pubDate>Tue, 30 Jun 2026 11:00:00 &#43;0800</pubDate>
@@ -78,14 +86,6 @@
     <author>yzj5306@psu.edu (OkongOyangO)</author>
     <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/joule_heat/</guid>
     <description><![CDATA[<p>本文はフェルミの黄金律とジュール熱の整合性を説明することを目的としています。</p>]]></description>
-</item>
-<item>
-    <title>🥸久保公式の非線形応答理論</title>
-    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/nonlinear-kubo-formalism/</link>
-    <pubDate>Tue, 07 Mar 2023 22:30:00 -0500</pubDate>
-    <author>yzj5306@psu.edu (OkongOyangO)</author>
-    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/nonlinear-kubo-formalism/</guid>
-    <description><![CDATA[<p>この記事は、久保公式の非線形応答理論を導出することを目的としています。</p>]]></description>
 </item>
 </channel>
 </rss>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Multipole Expansion on OkongOyangOのノート</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/multipole-expansion/</link>
+    <description>Recent content in Multipole Expansion on OkongOyangOのノート</description>
+    <generator>Hugo</generator>
+    <language>ja</language>
+    <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
+    <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
+    <lastBuildDate>Tue, 30 Jun 2026 12:00:00 +0800</lastBuildDate>
+    <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/multipole-expansion/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>😵円二色性（Circular Dichroism）の量子理論</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/circular-dichroism-quantum-theory/</link>
+      <pubDate>Tue, 30 Jun 2026 12:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/circular-dichroism-quantum-theory/</guid>
+      <description>&lt;p&gt;円二色性（Circular Dichroism, CD）は、分子のキラリティーを調べるための一般的な実験手法である。CDでは、物質による左円偏光と右円偏光の吸収の差を測定し、その差を物質のキラリティーを反映する指標として用いる。円偏光は空間中で螺旋状の電場形状を持ち、本質的にキラリティーを有しており、左・右円偏光が異なるキラリティーの物質と相互作用する際に違いが生じると考えられる。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

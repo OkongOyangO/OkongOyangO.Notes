@@ -2,20 +2,20 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/berry-curvature/</loc><lastmod>2026-06-30T11:00:00&#43;08:00</lastmod><xhtml:link
+            <loc>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/circular-dichroism-quantum-theory/</loc><lastmod>2026-06-30T12:00:00&#43;08:00</lastmod><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/tags/berry-curvature/"
+                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/circular-dichroism-quantum-theory/"
                         /><xhtml:link
                         rel="alternate"
                         hreflang="ja"
-                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/berry-curvature/"
+                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/circular-dichroism-quantum-theory/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/berry-curvature/"
+                    href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/circular-dichroism-quantum-theory/"
                     /></url><url>
-            <loc>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/categories/</loc><lastmod>2026-06-30T11:00:00&#43;08:00</lastmod><xhtml:link
+            <loc>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/categories/</loc><lastmod>2026-06-30T12:00:00&#43;08:00</lastmod><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="https://OkongOyangO.github.io/OkongOyangO.Notes/categories/"
@@ -28,7 +28,33 @@
                     hreflang="zh-cn"
                     href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/categories/"
                     /></url><url>
-            <loc>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/condensed-matter/</loc><lastmod>2026-06-30T11:00:00&#43;08:00</lastmod><xhtml:link
+            <loc>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/chirality/</loc><lastmod>2026-06-30T12:00:00&#43;08:00</lastmod><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/tags/chirality/"
+                        /><xhtml:link
+                        rel="alternate"
+                        hreflang="ja"
+                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/chirality/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/chirality/"
+                    /></url><url>
+            <loc>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/circular-dichroism/</loc><lastmod>2026-06-30T12:00:00&#43;08:00</lastmod><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/tags/circular-dichroism/"
+                        /><xhtml:link
+                        rel="alternate"
+                        hreflang="ja"
+                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/circular-dichroism/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/circular-dichroism/"
+                    /></url><url>
+            <loc>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/condensed-matter/</loc><lastmod>2026-06-30T12:00:00&#43;08:00</lastmod><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="https://OkongOyangO.github.io/OkongOyangO.Notes/tags/condensed-matter/"
@@ -40,6 +66,97 @@
                     rel="alternate"
                     hreflang="zh-cn"
                     href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/condensed-matter/"
+                    /></url><url>
+            <loc>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/multipole-expansion/</loc><lastmod>2026-06-30T12:00:00&#43;08:00</lastmod><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/tags/multipole-expansion/"
+                        /><xhtml:link
+                        rel="alternate"
+                        hreflang="ja"
+                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/multipole-expansion/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/multipole-expansion/"
+                    /></url><url>
+            <loc>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/</loc><lastmod>2026-06-30T12:00:00&#43;08:00</lastmod><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/"
+                        /><xhtml:link
+                        rel="alternate"
+                        hreflang="ja"
+                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/"
+                    /></url><url>
+            <loc>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/categories/physics-notes/</loc><lastmod>2026-06-30T12:00:00&#43;08:00</lastmod><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/categories/physics-notes/"
+                        /><xhtml:link
+                        rel="alternate"
+                        hreflang="ja"
+                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/categories/physics-notes/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/categories/physics-notes/"
+                    /></url><url>
+            <loc>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/</loc><lastmod>2026-06-30T12:00:00&#43;08:00</lastmod><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/"
+                        /><xhtml:link
+                        rel="alternate"
+                        hreflang="ja"
+                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/"
+                    /></url><url>
+            <loc>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/quantum-theory/</loc><lastmod>2026-06-30T12:00:00&#43;08:00</lastmod><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/tags/quantum-theory/"
+                        /><xhtml:link
+                        rel="alternate"
+                        hreflang="ja"
+                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/quantum-theory/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/quantum-theory/"
+                    /></url><url>
+            <loc>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/</loc><lastmod>2026-06-30T12:00:00&#43;08:00</lastmod><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/tags/"
+                        /><xhtml:link
+                        rel="alternate"
+                        hreflang="ja"
+                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/"
+                    /></url><url>
+            <loc>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/berry-curvature/</loc><lastmod>2026-06-30T11:00:00&#43;08:00</lastmod><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/tags/berry-curvature/"
+                        /><xhtml:link
+                        rel="alternate"
+                        hreflang="ja"
+                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/berry-curvature/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/berry-curvature/"
                     /></url><url>
             <loc>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/fractional-chern-insulator/</loc><lastmod>2026-06-30T11:00:00&#43;08:00</lastmod><xhtml:link
                         rel="alternate"
@@ -67,45 +184,6 @@
                     hreflang="zh-cn"
                     href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/fubini-study-metric/"
                     /></url><url>
-            <loc>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/</loc><lastmod>2026-06-30T11:00:00&#43;08:00</lastmod><xhtml:link
-                        rel="alternate"
-                        hreflang="en"
-                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/"
-                        /><xhtml:link
-                        rel="alternate"
-                        hreflang="ja"
-                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="zh-cn"
-                    href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/"
-                    /></url><url>
-            <loc>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/categories/physics-notes/</loc><lastmod>2026-06-30T11:00:00&#43;08:00</lastmod><xhtml:link
-                        rel="alternate"
-                        hreflang="en"
-                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/categories/physics-notes/"
-                        /><xhtml:link
-                        rel="alternate"
-                        hreflang="ja"
-                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/categories/physics-notes/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="zh-cn"
-                    href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/categories/physics-notes/"
-                    /></url><url>
-            <loc>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/</loc><lastmod>2026-06-30T11:00:00&#43;08:00</lastmod><xhtml:link
-                        rel="alternate"
-                        hreflang="en"
-                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/"
-                        /><xhtml:link
-                        rel="alternate"
-                        hreflang="ja"
-                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="zh-cn"
-                    href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/"
-                    /></url><url>
             <loc>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/quantum-geometry/</loc><lastmod>2026-06-30T11:00:00&#43;08:00</lastmod><xhtml:link
                         rel="alternate"
                         hreflang="en"
@@ -118,19 +196,6 @@
                     rel="alternate"
                     hreflang="zh-cn"
                     href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/quantum-geometry/"
-                    /></url><url>
-            <loc>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/</loc><lastmod>2026-06-30T11:00:00&#43;08:00</lastmod><xhtml:link
-                        rel="alternate"
-                        hreflang="en"
-                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/tags/"
-                        /><xhtml:link
-                        rel="alternate"
-                        hreflang="ja"
-                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="zh-cn"
-                    href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/"
                     /></url><url>
             <loc>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/quantum-geometry-in-fci/</loc><lastmod>2026-06-30T11:00:00&#43;08:00</lastmod><xhtml:link
                         rel="alternate"
@@ -586,4 +651,108 @@
                     rel="alternate"
                     hreflang="zh-cn"
                     href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/fqhe_faqhe_fci/"
+                    /></url><url>
+            <loc>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/exceptional-points/</loc><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/tags/exceptional-points/"
+                        /><xhtml:link
+                        rel="alternate"
+                        hreflang="ja"
+                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/exceptional-points/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/exceptional-points/"
+                    /></url><url>
+            <loc>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/ferromagnetism/</loc><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/tags/ferromagnetism/"
+                        /><xhtml:link
+                        rel="alternate"
+                        hreflang="ja"
+                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/ferromagnetism/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/ferromagnetism/"
+                    /></url><url>
+            <loc>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/lindblad-equation/</loc><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/tags/lindblad-equation/"
+                        /><xhtml:link
+                        rel="alternate"
+                        hreflang="ja"
+                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/lindblad-equation/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/lindblad-equation/"
+                    /></url><url>
+            <loc>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/liouvillian/</loc><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/tags/liouvillian/"
+                        /><xhtml:link
+                        rel="alternate"
+                        hreflang="ja"
+                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/liouvillian/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/liouvillian/"
+                    /></url><url>
+            <loc>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/magnetism/</loc><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/tags/magnetism/"
+                        /><xhtml:link
+                        rel="alternate"
+                        hreflang="ja"
+                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/magnetism/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/magnetism/"
+                    /></url><url>
+            <loc>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/non-hermitian/</loc><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/tags/non-hermitian/"
+                        /><xhtml:link
+                        rel="alternate"
+                        hreflang="ja"
+                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/non-hermitian/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/non-hermitian/"
+                    /></url><url>
+            <loc>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/paramagnetism/</loc><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/tags/paramagnetism/"
+                        /><xhtml:link
+                        rel="alternate"
+                        hreflang="ja"
+                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/paramagnetism/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/paramagnetism/"
+                    /></url><url>
+            <loc>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/solid-state-physics/</loc><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/tags/solid-state-physics/"
+                        /><xhtml:link
+                        rel="alternate"
+                        hreflang="ja"
+                        href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/solid-state-physics/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/solid-state-physics/"
                     /></url></urlset>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>😵円二色性（Circular Dichroism）の量子理論 - OkongOyangOのノート</title><meta name="Description" content="O空O揚Oの物理学ノート"><meta property="og:url" content="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/circular-dichroism-quantum-theory/">
+  <meta property="og:site_name" content="OkongOyangOのノート">
+  <meta property="og:title" content="😵円二色性（Circular Dichroism）の量子理論">
+  <meta property="og:description" content="円二色性（Circular Dichroism, CD）は、分子のキラリティーを調べるための一般的な実験手法である。CDでは、物質による左円偏光と右円偏光の吸収の差を測定し、その差を物質のキラリティーを反映する指標として用いる。円偏光は空間中で螺旋状の電場形状を持ち、本質的にキラリティーを有しており、左・右円偏光が異なるキラリティーの物質と相互作用する際に違いが生じると考えられる。">
+  <meta property="og:locale" content="ja">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-06-30T12:00:00+08:00">
+    <meta property="article:modified_time" content="2026-06-30T12:00:00+08:00">
+    <meta property="article:tag" content="Circular Dichroism">
+    <meta property="article:tag" content="Chirality">
+    <meta property="article:tag" content="Quantum Theory">
+    <meta property="article:tag" content="Multipole Expansion">
+    <meta property="article:tag" content="Condensed Matter">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="😵円二色性（Circular Dichroism）の量子理論">
+  <meta name="twitter:description" content="円二色性（Circular Dichroism, CD）は、分子のキラリティーを調べるための一般的な実験手法である。CDでは、物質による左円偏光と右円偏光の吸収の差を測定し、その差を物質のキラリティーを反映する指標として用いる。円偏光は空間中で螺旋状の電場形状を持ち、本質的にキラリティーを有しており、左・右円偏光が異なるキラリティーの物質と相互作用する際に違いが生じると考えられる。">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/OkongOyangO.Notes/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/OkongOyangO.Notes/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/OkongOyangO.Notes/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/OkongOyangO.Notes/apple-touch-icon.png"><link rel="mask-icon" href="/OkongOyangO.Notes/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/OkongOyangO.Notes/site.webmanifest"><link rel="canonical" href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/circular-dichroism-quantum-theory/" /><link rel="prev" href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/quantum-geometry-in-fci/" /><link rel="stylesheet" href="/OkongOyangO.Notes/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "😵円二色性（Circular Dichroism）の量子理論",
+        "inLanguage": "ja",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/ja\/posts\/circular-dichroism-quantum-theory\/"
+        },"genre": "posts","keywords": "Circular Dichroism, Chirality, Quantum Theory, Multipole Expansion, Condensed Matter","wordcount":  282 ,
+        "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/ja\/posts\/circular-dichroism-quantum-theory\/","datePublished": "2026-06-30T12:00:00+08:00","dateModified": "2026-06-30T12:00:00+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "OkongOyangO"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/OkongOyangO.Notes/ja/" title="OkongOyangOのノート">OkongOyangO&#39;s Notes</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item active" href="/OkongOyangO.Notes/ja/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i> 記事 </a><a class="menu-item" href="/OkongOyangO.Notes/ja/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i> タグ </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="検索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="クリア">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="テーマ">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i> テーマ
+                </a><a href="javascript:void(0);" class="menu-item language" title="言語">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i> 言語
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/circular-dichroism-quantum-theory/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/circular-dichroism-quantum-theory/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/circular-dichroism-quantum-theory/" selected>日本語</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/OkongOyangO.Notes/ja/" title="OkongOyangOのノート">OkongOyangO&#39;s Notes</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="検索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="クリア">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        キャンセル
+                    </a>
+                </div><a class="menu-item" href="/OkongOyangO.Notes/ja/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i>記事</a><a class="menu-item" href="/OkongOyangO.Notes/ja/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i>タグ</a><a href="javascript:void(0);" class="menu-item theme-switch" title="テーマ">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>テーマ
+            </a><a href="javascript:void(0);" class="menu-item" title="言語">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>言語
+                    <select class="language-select" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/circular-dichroism-quantum-theory/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/circular-dichroism-quantum-theory/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/circular-dichroism-quantum-theory/" selected>日本語</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目次</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">😵円二色性（Circular Dichroism）の量子理論</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/OkongOyangO.Notes/ja/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">included in <a href="/OkongOyangO.Notes/ja/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-06-30">2026-06-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;282 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目次</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#cdの量子理論">CDの量子理論</a></li>
+    <li><a href="#多極展開とcd">多極展開とCD</a></li>
+    <li><a href="#まとめ">まとめ</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>円二色性（Circular Dichroism, CD）は、分子のキラリティーを調べるための一般的な実験手法である。CDでは、物質による左円偏光と右円偏光の吸収の差を測定し、その差を物質のキラリティーを反映する指標として用いる。円偏光は空間中で螺旋状の電場形状を持ち、本質的にキラリティーを有しており、左・右円偏光が異なるキラリティーの物質と相互作用する際に違いが生じると考えられる。</p>
+<p>以前のノートでは、光と量子系の相互作用の多極展開理論を解説した。ここでは電磁波の形を左・右旋円偏光に変えて差を取るだけで、試料のCDスペクトルが得られる。以前のノートでの多極展開理論は摂動展開に基づいているため、電子の波動関数スケール$r$が光の波長$\lambda$よりも十分小さい場合に成立する。</p>
+<h2 id="cdの量子理論">CDの量子理論</h2>
+<p>一般的に見られるCDの量子理論では、採用されるHamiltonianは以下の通りである：</p>
+$$ \hat{H} = \hat{H}_0 - Q \hat{\mathbf{r}} \cdot \mathbf{E} - \hat{\mathbf{m}}\cdot \mathbf{B} $$<p>ここでは電磁場の空間依存性（spatial dependence）を無視しており、これは多極展開理論の最低次の場合に相当する。実際には、磁気ベクトルポテンシャル$\mathbf{A}$から出発し、磁気双極子と同程度の電四極項を加えるべきである。しかし、後で示すように、ランダム配向（randomly oriented）の系では電四極の寄与は無視できる。</p>
+<p>ここでは厳密な導出を行うため、磁気ベクトルポテンシャル（横場ゲージ）から電磁場を導入し、厳密な最低次近似結果を与える。上記のHamiltonianと磁気ベクトルポテンシャル（横場ゲージ）から導入したHamiltonianの間にはゲージ変換の差がある。詳細な導出は以前のノートを参照されたい。</p>
+<p>横場ゲージの磁気ベクトルポテンシャルによる電磁場導入のHamiltonianは以下の通りである：</p>
+$$ \hat{H} = \frac{1}{2m} (\hat{\mathbf{p}} - Q \mathbf{A}(\hat{\mathbf{r}},t) )^2 + Q \phi(\hat{\mathbf{r}},t) + V(\hat{\mathbf{r}}) -\frac{Q}{m} \hat{\mathbf{S}} \cdot \mathbf{B}(\hat{\mathbf{r}},t) $$<p>ただし電場は：</p>
+$$ \mathbf{E}(\mathbf{r},t) = \frac{E_0}{2}e^{-iqz} e^{i \omega t} \mathbf{e}_E + c.c. = E_0(z) e^{i \omega t} \mathbf{e}_E + c.c. = \mathbf{E}(\mathbf{r}) e^{i \omega t} + c.c. $$<p>左旋・右旋円偏光については：</p>
+$$ \mathbf{e}_E^{\pm} = \frac{1}{\sqrt{2}}(1,\pm i, 0) $$<p>磁場部分：</p>
+$$ \mathbf{B}(\mathbf{r},t) = \frac{E_0}{2\omega} (\mathbf{k} \times \mathbf{e}_E) e^{-iqz} e^{i \omega t} + c.c. = \mathbf{B}(\mathbf{r}) e^{i \omega t} + c.c. $$<p>ここで$\mathbf{k} = q \hat{z}$であることに注意。</p>
+<p>これに対応して、$\mathbf{e}_B^{\pm}$も求められる：</p>
+$$ \mathbf{e}_B^{\pm} = \frac{1}{\sqrt{2}}(\mp i, 1, 0) $$<p>一般的な実験条件下での入射光について、上記の左旋・右旋円偏光をすべて式に代入し、時間依存摂動論に基づくフェルミの黄金律を用いて左旋光の結果を差し引くことで、一般的なCDスペクトル（差スペクトル）が得られる。</p>
+<p>ここでは一般的なCDスペクトルの計算は行わず、最も一般的な多極展開の枠組みにおいてCDスペクトルの計算に必要な項を示すに留める。また、ここでは回転波近似（Rotating Wave Approximation）は採用せず、以下で計算の必要に応じて項ごとに判断する。同時に、周波数総和を取る際には光場の正周波数部分と負周波数部分の両方の寄与を考慮する必要がある。</p>
+<h2 id="多極展開とcd">多極展開とCD</h2>
+<p>CDスペクトルについては、左旋・右旋光場の吸収スペクトルをそれぞれ計算してから差し引く。CDスペクトル$\Delta A(\omega)$の計算式は以下の通りである：</p>
+$$ \Delta A(\omega) = A_+(\omega) - A_-(\omega) $$<p>フェルミの黄金律によれば、単一光子吸収に対応する吸収スペクトルは以下の対称形式で書ける：</p>
+$$
+A(\omega) = \frac{\pi Q^2}{\hbar^2} \sum_{i,f} P_i |\langle f | \hat{H}_{int} | i \rangle|^2 \delta(\omega_{fi} - \omega)
+$$<p>ここで$\hat{H}_{int}$は光と物質の相互作用である。上記の横場ゲージ磁気ベクトルポテンシャルのHamiltonianを代入すると、光と物質の相互作用の最低次項が得られる：</p>
+$$
+\hat{H}_{int} = - \frac{Q}{m} \mathbf{A}(\hat{\mathbf{r}},t) \cdot \hat{\mathbf{p}} - \frac{Q}{2m} \hat{\mathbf{S}} \cdot \mathbf{B}(\hat{\mathbf{r}},t)
+$$<p>上式は次のように書き換えられる：</p>
+$$
+\hat{H}_{int} = \frac{iQE_0}{2m\omega} e^{-iq\hat{z}} (\hat{\mathbf{p}} \cdot \mathbf{e}_E) - \frac{Q E_0}{2m\omega} e^{-iq\hat{z}} (\hat{\mathbf{S}} \cdot \mathbf{e}_B) + h.c.
+$$<p>$r \ll \lambda$の前提のもとで、$e^{-iq\hat{z}}$を展開できる：</p>
+$$
+e^{-iq\hat{z}} = 1 - iq\hat{z} - \frac{1}{2}(q\hat{z})^2 + \cdots
+$$<p>ゼロ次項（電気双極子近似）：</p>
+$$ \hat{H}_{int}^{(0)} = \frac{iQE_0}{2m\omega} (\hat{\mathbf{p}} \cdot \mathbf{e}_E) - \frac{Q E_0}{2m\omega} (\hat{\mathbf{S}} \cdot \mathbf{e}_B) + h.c. $$<p>以下の交換関係を利用する：</p>
+$$ \hat{\mathbf{p}} = \frac{im}{\hbar}[\hat{H}_0, \hat{\mathbf{r}}] $$<p>これにより電気双極子の等価形式が得られる：</p>
+$$ \langle f | \hat{\mathbf{p}} | i \rangle = \frac{im}{\hbar} (E_f - E_i) \langle f | \hat{\mathbf{r}} | i \rangle $$<p>したがって、ゼロ次項は一般的な電気双極子形式に書き換えられる。</p>
+<p>CDスペクトルにおいて、電気双極子項は左旋・右旋光に対して完全に一致するため、差スペクトルでは打ち消される。最初に寄与するのは電気双極子（E1）-磁気双極子（M1）交差項、およびE1-電四極（E2）交差項である。厳密な計算の結果、最終的なCDスペクトルの式は回転波近似のもとで次のようになる：</p>
+$$
+\Delta A(\omega) \propto \sum_{i,f} P_i \left[ \langle i | \hat{\mathbf{m}} | f \rangle \cdot \langle f | \hat{\mathbf{r}} | i \rangle \times \mathbf{k} + \frac{i\omega}{c} \langle i | \hat{\mathbf{r}} | f \rangle \cdot \mathbf{Q} \cdot (\hat{\mathbf{k}} \times \langle f | \hat{\mathbf{r}} | i \rangle) \right] \delta(\omega_{fi} - \omega)
+$$<p>ランダム配向（randomly oriented）の系では、電四極項は平均してゼロとなり、磁気双極子項のみがCD信号に寄与する。これが、一般的な教科書でE1-M1交差項のみをCDの起源として挙げる理由である。</p>
+<h2 id="まとめ">まとめ</h2>
+<p>本ノートでは、光-物質相互作用の多極展開の枠組みを通じて、円二色性（CD）の量子理論を厳密に導出した。CD信号は左旋・右旋円偏光の吸収差に由来し、その主要な寄与は電気双極子-磁気双極子（E1-M1）交差項である。この理論は、キラル分子の分光学特性評価の微視的基礎を提供する。</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2026-06-30</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/circular-dichroism-quantum-theory/" data-title="😵円二色性（Circular Dichroism）の量子理論" data-via="OkongOyangO" data-hashtags="Circular Dichroism,Chirality,Quantum Theory,Multipole Expansion,Condensed Matter"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/circular-dichroism-quantum-theory/" data-title="😵円二色性（Circular Dichroism）の量子理論"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/circular-dichroism-quantum-theory/" data-hashtag="Circular Dichroism"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/circular-dichroism-quantum-theory/" data-title="😵円二色性（Circular Dichroism）の量子理論"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/circular-dichroism-quantum-theory/" data-title="😵円二色性（Circular Dichroism）の量子理論"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/circular-dichroism-quantum-theory/" data-title="😵円二色性（Circular Dichroism）の量子理論"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/circular-dichroism-quantum-theory/" data-title="😵円二色性（Circular Dichroism）の量子理論" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fOkongOyangO.github.io%2fOkongOyangO.Notes%2fja%2fposts%2fcircular-dichroism-quantum-theory%2f&amp;text=%f0%9f%98%b5%e5%86%86%e4%ba%8c%e8%89%b2%e6%80%a7%ef%bc%88Circular%20Dichroism%ef%bc%89%e3%81%ae%e9%87%8f%e5%ad%90%e7%90%86%e8%ab%96" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/OkongOyangO.Notes/ja/tags/circular-dichroism/">Circular Dichroism</a>,&nbsp;<a href="/OkongOyangO.Notes/ja/tags/chirality/">Chirality</a>,&nbsp;<a href="/OkongOyangO.Notes/ja/tags/quantum-theory/">Quantum Theory</a>,&nbsp;<a href="/OkongOyangO.Notes/ja/tags/multipole-expansion/">Multipole Expansion</a>,&nbsp;<a href="/OkongOyangO.Notes/ja/tags/condensed-matter/">Condensed Matter</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">戻る</a></span>&nbsp;|&nbsp;<span><a href="/OkongOyangO.Notes/ja/">ホーム</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/OkongOyangO.Notes/ja/posts/quantum-geometry-in-fci/" class="prev" rel="prev" title="🤩量子幾何学（Quantum Geometry）：量子幾何テンソル入門"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>🤩量子幾何学（Quantum Geometry）：量子幾何テンソル入門</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.154.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/OkongOyangO.Notes/ja/" target="_blank">OkongOyangO</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="トップへ戻る">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="コメントを見る">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/copy-tex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/mhchem.min.js"></script><script>window.config={"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/OkongOyangO.Notes/ja/index.json","maxResultLength":10,"noResultsFound":"結果が見つかりません","snippetLength":30,"type":"lunr"}};</script><script src="/OkongOyangO.Notes/js/theme.min.js"></script></body>
+</html>
