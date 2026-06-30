@@ -1,5 +1,5 @@
 ---
-title: "😮QHE(4)｜量子ホール効果からトポロジカル絶縁体、Chern-Simons理論とトポロジカル分類へ"
+title: "😮量子ホール効果からトポロジカル絶縁体、Chern-Simons理論とトポロジカル分類へ"
 date: 2022-06-10T10:00:00+08:00
 draft: false
 math: true
