@@ -1,5 +1,5 @@
 ---
-title: "Bulk-Boundary Correspondence: Dirac Equation, Wilson Loop, and Entanglement Spectra"
+title: "🤪 Bulk-Boundary Correspondence: Dirac Equation, Wilson Loop, and Entanglement Spectra"
 date: 2026-06-29T18:00:00+08:00
 draft: false
 math: true
