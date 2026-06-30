@@ -8,6 +8,14 @@
     <language>zh-CN</language>
     <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
     <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
+    <lastBuildDate>Fri, 10 Mar 2023 10:00:00 +0800</lastBuildDate>
     <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/variational-method/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>😤平均场近似与变分法｜Hartree, Fock, BCS能1:1:1混用吗？</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/mean-field-variational/</link>
+      <pubDate>Fri, 10 Mar 2023 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/mean-field-variational/</guid>
+      <description>&lt;p&gt;本文旨在介绍平均场近似，同时阐述其变分法本质。Hartree、Fock、BCS这三个平均场近似，看似是互不相容的decouple方法，但利用平均场近似的变分法本质，我们发现它们确实可以1:1:1混着用。&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

@@ -8,6 +8,14 @@
     <language>en</language>
     <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
     <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
+    <lastBuildDate>Mon, 05 Sep 2022 10:00:00 +0800</lastBuildDate>
     <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/tags/anderson-localization/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>🥴Anderson Localization</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/anderson-localization/</link>
+      <pubDate>Mon, 05 Sep 2022 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/anderson-localization/</guid>
+      <description>&lt;p&gt;In his seminal 1958 paper, P. W. Anderson proposed the phenomenon of localization in disordered systems: sufficiently strong disorder causes electron wavefunctions to transition from extended states to exponentially localized states, driving the system from a conductor to an insulator. This discovery launched over half a century of localization research and is intimately connected to the metal-insulator transition (MIT).&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

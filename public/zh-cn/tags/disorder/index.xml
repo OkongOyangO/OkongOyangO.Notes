@@ -8,6 +8,14 @@
     <language>zh-CN</language>
     <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
     <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
+    <lastBuildDate>Mon, 05 Sep 2022 10:00:00 +0800</lastBuildDate>
     <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/disorder/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>🥴安德森局域化（Anderson Localization）</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/anderson-localization/</link>
+      <pubDate>Mon, 05 Sep 2022 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/anderson-localization/</guid>
+      <description>&lt;p&gt;1958年P. W. Anderson在其开创性论文中提出了无序系统中的局域化现象：足够强的无序会使电子波函数从延展态变为指数局域态，导致系统从导体转变为绝缘体。这一发现开启了长达半个多世纪的局域化研究，并与金属-绝缘体相变（MIT）紧密相连。&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

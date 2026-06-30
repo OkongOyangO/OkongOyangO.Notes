@@ -1,6 +1,6 @@
 ---
 title: "😅同龄人都沉迷高数量子古埃及，而我却只想地球毁灭怎么办？"
-date: 2026-06-30T21:00:00+08:00
+date: 2022-09-07T10:00:00+08:00
 draft: false
 math: true
 tags: ["Planetary Physics", "Centrifugal Force", "Gravitational Binding", "Roche Limit", "Popular Science"]

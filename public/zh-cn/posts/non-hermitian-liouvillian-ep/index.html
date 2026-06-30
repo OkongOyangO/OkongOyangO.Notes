@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>😈非厄米哈密顿量与Liouvillian超算符的能谱特征及例外点简介 - OkongOyangO的物理笔记</title><meta name="Description" content="O空O扬O的物理笔记"><meta property="og:url" content="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/non-hermitian-liouvillian-ep/">
+  <meta property="og:site_name" content="OkongOyangO的物理笔记">
+  <meta property="og:title" content="😈非厄米哈密顿量与Liouvillian超算符的能谱特征及例外点简介">
+  <meta property="og:description" content="本note主要介绍非厄米（Non-Hermitian）量子物理中两个核心概念：Lindblad主方程形式体系下的Liouvillian超算符，以及非厄米矩阵中特有的例外点（Exceptional Points, EP）的能谱特征。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-07-20T10:00:00+08:00">
+    <meta property="article:modified_time" content="2022-07-20T10:00:00+08:00">
+    <meta property="article:tag" content="Non-Hermitian">
+    <meta property="article:tag" content="Exceptional Points">
+    <meta property="article:tag" content="Liouvillian">
+    <meta property="article:tag" content="Lindblad Equation">
+    <meta property="article:tag" content="Condensed Matter">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="😈非厄米哈密顿量与Liouvillian超算符的能谱特征及例外点简介">
+  <meta name="twitter:description" content="本note主要介绍非厄米（Non-Hermitian）量子物理中两个核心概念：Lindblad主方程形式体系下的Liouvillian超算符，以及非厄米矩阵中特有的例外点（Exceptional Points, EP）的能谱特征。">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/OkongOyangO.Notes/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/OkongOyangO.Notes/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/OkongOyangO.Notes/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/OkongOyangO.Notes/apple-touch-icon.png"><link rel="mask-icon" href="/OkongOyangO.Notes/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/OkongOyangO.Notes/site.webmanifest"><link rel="canonical" href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/non-hermitian-liouvillian-ep/" /><link rel="prev" href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/kt-transition/" /><link rel="next" href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/circular-dichroism-quantum-theory/" /><link rel="stylesheet" href="/OkongOyangO.Notes/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "😈非厄米哈密顿量与Liouvillian超算符的能谱特征及例外点简介",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/zh-cn\/posts\/non-hermitian-liouvillian-ep\/"
+        },"genre": "posts","keywords": "Non-Hermitian, Exceptional Points, Liouvillian, Lindblad Equation, Condensed Matter","wordcount":  149 ,
+        "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/zh-cn\/posts\/non-hermitian-liouvillian-ep\/","datePublished": "2022-07-20T10:00:00+08:00","dateModified": "2022-07-20T10:00:00+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "OkongOyangO"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/OkongOyangO.Notes/zh-cn/" title="OkongOyangO的物理笔记">OkongOyangO&#39;s Notes</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item active" href="/OkongOyangO.Notes/zh-cn/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i> 文章 </a><a class="menu-item" href="/OkongOyangO.Notes/zh-cn/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i> 标签 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i> 主题
+                </a><a href="javascript:void(0);" class="menu-item language" title="语言">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i> 语言
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/non-hermitian-liouvillian-ep/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/non-hermitian-liouvillian-ep/" selected>简体中文</option><option value="/OkongOyangO.Notes/ja/posts/non-hermitian-liouvillian-ep/">日本語</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/OkongOyangO.Notes/zh-cn/" title="OkongOyangO的物理笔记">OkongOyangO&#39;s Notes</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/OkongOyangO.Notes/zh-cn/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i>文章</a><a class="menu-item" href="/OkongOyangO.Notes/zh-cn/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i>标签</a><a href="javascript:void(0);" class="menu-item theme-switch" title="主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>主题
+            </a><a href="javascript:void(0);" class="menu-item" title="语言">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>语言
+                    <select class="language-select" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/non-hermitian-liouvillian-ep/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/non-hermitian-liouvillian-ep/" selected>简体中文</option><option value="/OkongOyangO.Notes/ja/posts/non-hermitian-liouvillian-ep/">日本語</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">😈非厄米哈密顿量与Liouvillian超算符的能谱特征及例外点简介</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/OkongOyangO.Notes/zh-cn/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">收录于 <a href="/OkongOyangO.Notes/zh-cn/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-07-20">2022-07-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 149 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#lindblad-master-equation-formalism--liouvillian-superoperator">Lindblad Master Equation Formalism &amp; Liouvillian Superoperator</a>
+      <ul>
+        <li><a href="#lindblad-master-equation">Lindblad Master Equation</a></li>
+        <li><a href="#有效非厄米哈密顿量与量子轨迹诠释">有效非厄米哈密顿量与量子轨迹诠释</a></li>
+        <li><a href="#liouvillian超算符的能谱">Liouvillian超算符的能谱</a></li>
+      </ul>
+    </li>
+    <li><a href="#例外点exceptional-points">例外点（Exceptional Points）</a>
+      <ul>
+        <li><a href="#什么是例外点">什么是例外点？</a></li>
+        <li><a href="#ep附近的暂态动力学跨lep的阻尼振子类比">EP附近的暂态动力学：跨LEP的阻尼振子类比</a></li>
+        <li><a href="#ep附近的手性态转移">EP附近的手性态转移</a></li>
+      </ul>
+    </li>
+    <li><a href="#总结">总结</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>本note主要介绍非厄米（Non-Hermitian）量子物理中两个核心概念：Lindblad主方程形式体系下的Liouvillian超算符，以及非厄米矩阵中特有的例外点（Exceptional Points, EP）的能谱特征。</p>
+<h2 id="lindblad-master-equation-formalism--liouvillian-superoperator">Lindblad Master Equation Formalism &amp; Liouvillian Superoperator</h2>
+<h3 id="lindblad-master-equation">Lindblad Master Equation</h3>
+<p>开放量子系统的密度矩阵演化可以由Lindblad主方程（Lindblad Master Equation, LME）描述：</p>
+$$
+    \frac{\partial \hat{\rho}(t)}{\partial t}=\mathcal{L} \hat{\rho}(t)=-i[\hat{H}, \hat{\rho}(t)]+\sum_{\mu} \mathcal{D}\left[\hat{\Gamma}_{\mu}\right] \hat{\rho}(t)
+$$$$
+    \mathcal{D}\left[\hat{\Gamma}_{\mu}\right] \hat{\rho}(t)=\hat{\Gamma}_{\mu} \hat{\rho}(t) \hat{\Gamma}_{\mu}^{\dagger}-\frac{\hat{\Gamma}_{\mu}^{\dagger} \hat{\Gamma}_{\mu}}{2} \hat{\rho}(t)-\hat{\rho}(t) \frac{\hat{\Gamma}_{\mu}^{\dagger} \hat{\Gamma}_{\mu}}{2}
+$$<p>其中$\frac{1}{2}\{L_{k}^{\dagger} L_{k}, \rho\}$描述连续的anti-unitary部分，而$L_{k} \rho L_{k}^{\dagger}$描述导致不连续演化的quantum jump部分。这两项的结合保证了密度矩阵演化的trace-preserving性质。</p>
+<p>LME的推导可以参考H. P. Breuer的《The Theory of Open Quantum Systems》或知乎上相关的介绍文章。</p>
+<h3 id="有效非厄米哈密顿量与量子轨迹诠释">有效非厄米哈密顿量与量子轨迹诠释</h3>
+<p>短时演化可以由有效非厄米哈密顿量$H_{eff}$描述：</p>
+$$
+    \hat{H}_{\mathrm{eff}}=\hat{H}-i \hat{\Gamma}_{\mu}^{\dagger} \hat{\Gamma}_{\mu} / 2, \quad \frac{\partial \hat{\rho}(t)}{\partial t}=\mathcal{L}^{\prime} \hat{\rho}(t)=-i\left(\hat{H}_{\mathrm{eff}} \hat{\rho}(t)-\hat{\rho}(t) \hat{H}_{\mathrm{eff}}^{\dagger}\right)
+$$<p>$H_{eff}$的非厄米性来源于系统与环境的耦合——耗散项$-i \hat{\Gamma}_{\mu}^{\dagger} \hat{\Gamma}_{\mu} / 2$使得本征值带上虚部，虚部代表态的衰减速率。</p>
+<h3 id="liouvillian超算符的能谱">Liouvillian超算符的能谱</h3>
+<p>Liouvillian $\mathcal{L}$是一个超算符（superoperator），作用在密度矩阵空间上。通过向量化（vectorization）操作，可以将$N \times N$的密度矩阵映射为$N^2$维向量，$\mathcal{L}$则成为$N^2 \times N^2$矩阵。</p>
+<p>Liouvillian的能谱$\{\lambda_i\}$一般是复数。其中至少存在一个稳态（steady state），对应$\lambda = 0$的本征态。多个稳态对应耗散相变（dissipative phase transition），这与EP的出现和对称性破缺密切相关。</p>
+<p>Liouvillian gap定义为：</p>
+$$ \Delta = -\min(\operatorname{Re}(\lambda_i)) $$<p>描述了最慢衰减模式的弛豫时间。当$\Delta \to 0$时，系统出现临界慢化。</p>
+<h2 id="例外点exceptional-points">例外点（Exceptional Points）</h2>
+<h3 id="什么是例外点">什么是例外点？</h3>
+<p>厄米矩阵的本征值总是实数，且本征矢构成完备正交基。而非厄米矩阵的一个关键特征是：在某些参数值处，不仅本征值简并，本征矢也发生简并。这种点称为<strong>例外点（Exceptional Point, EP）</strong>。</p>
+<p>在EP处，矩阵不再是可对角化的，而是约化为Jordan标准型。这与厄米系统中的简并点（Diabolic Point）有本质区别。</p>
+<p>考虑一个简单的$2 \times 2$非厄米矩阵：</p>
+$$
+H = \begin{pmatrix}
+\epsilon & t \\
+t & -\epsilon + i\gamma
+\end{pmatrix}
+$$<p>调节参数使本征值相等，即可找到EP。在EP附近，本征值以平方根形式劈裂：</p>
+$$ \Delta E \propto \sqrt{\lambda - \lambda_{EP}} $$<p>这与厄米系统中线性的能级排斥（$\Delta E \propto |\lambda - \lambda_0|$）形成鲜明对比。</p>
+<h3 id="ep附近的暂态动力学跨lep的阻尼振子类比">EP附近的暂态动力学：跨LEP的阻尼振子类比</h3>
+<p>跨Liouvillian Exceptional Point（LEP）的暂态动力学类似于经典阻尼振子从过阻尼到临界阻尼再到欠阻尼的转变。</p>
+<p>调节系统参数从LEP一侧到另一侧：</p>
+<ul>
+<li>LEP一侧：系统趋于稳态的过程呈现振荡衰减（&ldquo;欠阻尼&rdquo;）</li>
+<li>LEP处：临界阻尼</li>
+<li>LEP另一侧：无振荡的指数衰减（&ldquo;过阻尼&rdquo;）</li>
+</ul>
+<p>这可以通过Liouvillian本征值虚部的行为来理解——EP处本征值从纯实数变为复数。</p>
+<h3 id="ep附近的手性态转移">EP附近的手性态转移</h3>
+<p>让系统参数绕EP绝热演化一圈，系统末态取决于绕行方向（顺时针/逆时针），而非保持在初始本征态。这一现象称为<strong>手性态转移（Chiral State Transfer）<strong>或</strong>非对称模式转换（Asymmetric Mode Transfer）</strong>。</p>
+<p>这与厄米系统中的绝热定理形成鲜明对比：在厄米系统中，如果演化足够缓慢，系统始终保持在瞬时本征态上（除了Berry phase因子）。而在非厄米系统中，绕EP一圈后，系统必然跳到另一个本征态上。</p>
+<p>手性态转移是非厄米拓扑中一个活跃的研究方向，在波导耦合、光学微腔等实验平台中均有观测。</p>
+<h2 id="总结">总结</h2>
+<p>非厄米量子物理通过Lindblad主方程描述了开放量子系统的动力学，有效非厄米哈密顿量自然引入了复本征值。例外点（EP）是非厄米系统独有的谱奇点，其附近的物理——从阻尼振子暂态过程到手性态转移——在经典和量子系统中均有丰富的实验实现。</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-07-20</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 X" data-sharer="x" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/non-hermitian-liouvillian-ep/" data-title="😈非厄米哈密顿量与Liouvillian超算符的能谱特征及例外点简介" data-via="OkongOyangO" data-hashtags="Non-Hermitian,Exceptional Points,Liouvillian,Lindblad Equation,Condensed Matter"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Threads" data-sharer="threads" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/non-hermitian-liouvillian-ep/" data-title="😈非厄米哈密顿量与Liouvillian超算符的能谱特征及例外点简介"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/non-hermitian-liouvillian-ep/" data-hashtag="Non-Hermitian"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/non-hermitian-liouvillian-ep/" data-title="😈非厄米哈密顿量与Liouvillian超算符的能谱特征及例外点简介"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/non-hermitian-liouvillian-ep/" data-title="😈非厄米哈密顿量与Liouvillian超算符的能谱特征及例外点简介"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/non-hermitian-liouvillian-ep/" data-title="😈非厄米哈密顿量与Liouvillian超算符的能谱特征及例外点简介"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Diaspora" data-sharer="diaspora" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/non-hermitian-liouvillian-ep/" data-title="😈非厄米哈密顿量与Liouvillian超算符的能谱特征及例外点简介" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fOkongOyangO.github.io%2fOkongOyangO.Notes%2fzh-cn%2fposts%2fnon-hermitian-liouvillian-ep%2f&amp;text=%f0%9f%98%88%e9%9d%9e%e5%8e%84%e7%b1%b3%e5%93%88%e5%af%86%e9%a1%bf%e9%87%8f%e4%b8%8eLiouvillian%e8%b6%85%e7%ae%97%e7%ac%a6%e7%9a%84%e8%83%bd%e8%b0%b1%e7%89%b9%e5%be%81%e5%8f%8a%e4%be%8b%e5%a4%96%e7%82%b9%e7%ae%80%e4%bb%8b" target="_blank" title="分享到 Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/OkongOyangO.Notes/zh-cn/tags/non-hermitian/">Non-Hermitian</a>,&nbsp;<a href="/OkongOyangO.Notes/zh-cn/tags/exceptional-points/">Exceptional Points</a>,&nbsp;<a href="/OkongOyangO.Notes/zh-cn/tags/liouvillian/">Liouvillian</a>,&nbsp;<a href="/OkongOyangO.Notes/zh-cn/tags/lindblad-equation/">Lindblad Equation</a>,&nbsp;<a href="/OkongOyangO.Notes/zh-cn/tags/condensed-matter/">Condensed Matter</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/OkongOyangO.Notes/zh-cn/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/OkongOyangO.Notes/zh-cn/posts/kt-transition/" class="prev" rel="prev" title="😬KT相变note｜二维XY模型、拓扑涡旋与准长程序"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>😬KT相变note｜二维XY模型、拓扑涡旋与准长程序</a>
+            <a href="/OkongOyangO.Notes/zh-cn/posts/circular-dichroism-quantum-theory/" class="next" rel="next" title="😵圆二象性（Circular Dichroism）的量子理论">😵圆二象性（Circular Dichroism）的量子理论<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.154.3">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/OkongOyangO.Notes/zh-cn/" target="_blank">OkongOyangO</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="/OkongOyangO.Notes/lib/lunr/lunr.stemmer.support.min.js"></script><script src="/OkongOyangO.Notes/lib/lunr/lunr.zh.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/copy-tex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/mhchem.min.js"></script><script>window.config={"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/OkongOyangO.Notes/zh-cn/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/OkongOyangO.Notes/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":30,"type":"lunr"}};</script><script src="/OkongOyangO.Notes/js/theme.min.js"></script></body>
+</html>

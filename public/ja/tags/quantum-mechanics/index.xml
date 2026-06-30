@@ -24,5 +24,12 @@
       <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/fermi_golden_rule/</guid>
       <description>&lt;p&gt;本文は厳密な量子遷移率を計算し、フェルミの黄金律がその「長時間平均」の結果であることを指摘することを目的としています。厳密な量子遷移率は、フェルミの黄金律と比較して、無視できない振幅を持つ二倍周波数振動項（double-frequency oscillation term）をさらに含んでいます。両者の関係は、交流回路における「瞬時電力」と「平均電力」の関係に似ています。&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>😆七夕の夜、量子ベッドで量子ミミズになる方法</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/electrons-twisted-potential/</link>
+      <pubDate>Tue, 05 Jul 2022 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/electrons-twisted-potential/</guid>
+      <description>&lt;p&gt;本稿では「リア充爆発」の歴史的必然性を分析し、量子力学の観点から七夕の佳節における独身貴族（特に物理屋さん）の正しい休日の過ごし方を解説する。&lt;/p&gt;&#xA;&lt;p&gt;【釈】リア充——二次元用語、現実生活が充実している人。ここでは特にCPを指す。【釈釈】CP——Charge-conjugation Parity symmetry。1964年、CP対称性の破れ（CP violation）が中性K中間子の崩壊において実験的に初めて確認され、ノーベル物理学賞が授与された。これは「CP破れ、リア充爆発」が世界的に認知されたノーベル賞級の物理法則であることを反映している。&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

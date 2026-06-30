@@ -1,6 +1,6 @@
 ---
 title: "😆七夕の夜、量子ベッドで量子ミミズになる方法"
-date: 2026-06-30T20:00:00+08:00
+date: 2022-07-05T10:00:00+08:00
 draft: false
 math: true
 tags: ["Twisted Potential", "Quantum Mechanics", "Curvilinear Coordinate", "Popular Science"]

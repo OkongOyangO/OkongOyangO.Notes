@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>😬KT Transition: 2D XY Model, Topological Vortices, and Quasi-Long-Range Order - OkongOyangO&#39;s Notes</title><meta name="Description" content="OkongOyangO&#39;s Notes on Condensed Matter Physics"><meta property="og:url" content="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/kt-transition/">
+  <meta property="og:site_name" content="OkongOyangO&#39;s Notes">
+  <meta property="og:title" content="😬KT Transition: 2D XY Model, Topological Vortices, and Quasi-Long-Range Order">
+  <meta property="og:description" content="The KT transition (Kosterlitz-Thouless Transition) is a unique topological phase transition in two-dimensional systems. Unlike conventional phase transitions, it is not driven by spontaneous symmetry breaking, but by the binding-unbinding of topological defects—vortices. Starting from the 2D XY model, this article explains the basic principles of the KT transition.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-07-08T11:00:00+08:00">
+    <meta property="article:modified_time" content="2022-07-08T11:00:00+08:00">
+    <meta property="article:tag" content="KT Transition">
+    <meta property="article:tag" content="XY Model">
+    <meta property="article:tag" content="Topological Defect">
+    <meta property="article:tag" content="Vortex">
+    <meta property="article:tag" content="Condensed Matter">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="😬KT Transition: 2D XY Model, Topological Vortices, and Quasi-Long-Range Order">
+  <meta name="twitter:description" content="The KT transition (Kosterlitz-Thouless Transition) is a unique topological phase transition in two-dimensional systems. Unlike conventional phase transitions, it is not driven by spontaneous symmetry breaking, but by the binding-unbinding of topological defects—vortices. Starting from the 2D XY model, this article explains the basic principles of the KT transition.">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/OkongOyangO.Notes/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/OkongOyangO.Notes/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/OkongOyangO.Notes/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/OkongOyangO.Notes/apple-touch-icon.png"><link rel="mask-icon" href="/OkongOyangO.Notes/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/OkongOyangO.Notes/site.webmanifest"><link rel="canonical" href="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/kt-transition/" /><link rel="prev" href="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/electrons-twisted-potential/" /><link rel="next" href="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/non-hermitian-liouvillian-ep/" /><link rel="stylesheet" href="/OkongOyangO.Notes/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "😬KT Transition: 2D XY Model, Topological Vortices, and Quasi-Long-Range Order",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/posts\/kt-transition\/"
+        },"genre": "posts","keywords": "KT Transition, XY Model, Topological Defect, Vortex, Condensed Matter","wordcount":  598 ,
+        "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/posts\/kt-transition\/","datePublished": "2022-07-08T11:00:00+08:00","dateModified": "2022-07-08T11:00:00+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "OkongOyangO"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/OkongOyangO.Notes/" title="OkongOyangO&#39;s Notes">OkongOyangO&#39;s Notes</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item active" href="/OkongOyangO.Notes/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i> Posts </a><a class="menu-item" href="/OkongOyangO.Notes/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i> Theme
+                </a><a href="javascript:void(0);" class="menu-item language" title="Language">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i> Language
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/kt-transition/" selected>English</option><option value="/OkongOyangO.Notes/zh-cn/posts/kt-transition/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/kt-transition/">日本語</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/OkongOyangO.Notes/" title="OkongOyangO&#39;s Notes">OkongOyangO&#39;s Notes</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/OkongOyangO.Notes/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i>Posts</a><a class="menu-item" href="/OkongOyangO.Notes/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i>Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>Theme
+            </a><a href="javascript:void(0);" class="menu-item" title="Language">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>Language
+                    <select class="language-select" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/kt-transition/" selected>English</option><option value="/OkongOyangO.Notes/zh-cn/posts/kt-transition/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/kt-transition/">日本語</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">😬KT Transition: 2D XY Model, Topological Vortices, and Quasi-Long-Range Order</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/OkongOyangO.Notes/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">included in <a href="/OkongOyangO.Notes/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-07-08">2022-07-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;598 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#principles-of-the-kt-transition">Principles of the KT Transition</a>
+      <ul>
+        <li><a href="#the-2d-xy-model">The 2D XY Model</a></li>
+      </ul>
+    </li>
+    <li><a href="#vortex-excitations-and-their-condensation">Vortex Excitations and Their Condensation</a>
+      <ul>
+        <li><a href="#topological-defects-and-vortices">Topological Defects and Vortices</a></li>
+        <li><a href="#free-energy-of-a-vortex">Free Energy of a Vortex</a></li>
+        <li><a href="#vortex-vortex-interactions">Vortex-Vortex Interactions</a></li>
+      </ul>
+    </li>
+    <li><a href="#experimental-verification-of-the-kt-transition-2d-superconducting-thin-films">Experimental Verification of the KT Transition: 2D Superconducting Thin Films</a></li>
+    <li><a href="#summary">Summary</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>The KT transition (Kosterlitz-Thouless Transition) is a unique topological phase transition in two-dimensional systems. Unlike conventional phase transitions, it is not driven by spontaneous symmetry breaking, but by the binding-unbinding of topological defects—vortices. Starting from the 2D XY model, this article explains the basic principles of the KT transition.</p>
+<h2 id="principles-of-the-kt-transition">Principles of the KT Transition</h2>
+<h3 id="the-2d-xy-model">The 2D XY Model</h3>
+<p>In the 2D XY model, each lattice site is assigned a two-dimensional spin $S_i=(\cos \theta_i,\sin \theta_i)$. The action on a square lattice is:</p>
+$$S[\theta]=-J\sum_{\braket{ij}}S_i \cdot S_j=-J\sum_{\braket{ij}}\cos(\theta_i-\theta_j)$$<p>Below we compute the correlation functions at high and low temperatures, respectively.</p>
+<p><strong>High temperature</strong> ($J\ll 1$): Expand the partition function in $J$:</p>
+$$
+Z=\int_0^{2\pi}\left(\prod_i \frac{\mathrm{d}\theta_i}{2\pi}\right)e^{-S[\theta]}=\int_0^{2\pi}\left(\prod_i \frac{\mathrm{d}\theta_i}{2\pi}\right)\prod_{\braket{ij}}\left[1+J\cos(\theta_i-\theta_j)+O(J^2)\right]
+$$<p>The correlation function $\braket{S_0\cdot S_x}=\braket{\cos(\theta_0-\theta_x)}\sim e^{-f(J)|x|}$, i.e., short-range order.</p>
+<p><strong>Low temperature</strong> ($J\gg 1$): $\theta$ varies slowly, so we can take the continuum approximation:</p>
+$$S[\theta]\rightarrow \frac{J}{2}\int \mathrm{d}^2 x\left[\nabla\theta(x)\right]^2$$<p>The correlation function becomes $\braket{S_0\cdot S_x}\sim x^{-g(J)}$, i.e., quasi-long-range order (algebraic order).</p>
+<p>Thus the 2D XY model exhibits a finite-temperature phase transition from short-range to quasi-long-range order. This transition cannot be described by conventional Landau theory—it is driven by the condensation of topological vortices.</p>
+<h2 id="vortex-excitations-and-their-condensation">Vortex Excitations and Their Condensation</h2>
+<h3 id="topological-defects-and-vortices">Topological Defects and Vortices</h3>
+<p>Consider a continuous field $\vec{u}(r)=\nabla \theta(r)$. Due to the $U(1)$ structure of $\theta$ ($\theta \equiv \theta + 2n\pi$), the loop integral gives:</p>
+$$\oint \vec{u}\cdot \vec{\mathrm{d}l}=2n\pi \quad n\in \mathbb{Z}$$<p>This result is discrete and invariant under continuous deformations of the path. For a trivial state (constant $\theta$), the loop integral is zero. Once a topological defect is introduced, $\nabla\theta$ becomes ill-defined at the defect site:</p>
+$$\nabla \times \vec{u}(\vec{r})=2n\pi \delta^2(\vec{r}-\vec{r_0})\hat{e}_z$$<p>A vortex carries a topological charge $n$, and its velocity field is:</p>
+$$\vec{v}(\vec{r};\vec{r}_0,n)= \frac{n}{|\vec{r}-\vec{r}_0|}\left(\hat{e}_z\times \frac{\vec{r}-\vec{r}_0}{|\vec{r}-\vec{r}_0|}\right)$$<h3 id="free-energy-of-a-vortex">Free Energy of a Vortex</h3>
+<p>Consider a vortex located at the origin with charge $n=1$:</p>
+$$S_{\text{vor}}=S_{\text{core}}+\frac{J}{2}\int_0^{2\pi}\mathrm{d}\psi \int_a^L \rho\mathrm{d}\rho \,\vec{u}^2(\rho,\psi)=S_{\text{core}}+\pi J \ln\left(\frac{L}{a}\right)$$<p>Partition function:</p>
+$$Z_{\text{vor}}/Z_0\approx \left(\frac{L}{a}\right)^2 e^{-S_{\text{core}}-\pi J\ln(L/a)}=\exp(-S_{\text{core}}+(2-\pi J)\ln(L/a))$$<p>Free energy of a vortex:</p>
+$$F_{\text{vor}}\sim S_{\text{core}}+(\pi J-2)\ln(L/a)$$<p>When $\pi J > 2$, the coefficient of $\ln L$ is positive, the free energy of a single vortex diverges—vortices are confined. When $\pi J < 2$, the vortex free energy is negative—vortices can appear spontaneously. The critical point is at $\pi J = 2$, i.e., $J_c = 2/\pi$.</p>
+<h3 id="vortex-vortex-interactions">Vortex-Vortex Interactions</h3>
+<p>The interaction energy between two vortices with charges $n_1, n_2$ is:</p>
+$$V_{int} = -2\pi J n_1 n_2 \ln\left(\frac{|\vec{r}_1-\vec{r}_2|}{a}\right)$$<p>Oppositely charged vortices attract (logarithmic potential), while like-charged vortices repel. At low temperatures, positive and negative vortices form bound pairs and the system maintains quasi-long-range order; at high temperatures, vortex pairs unbind into a vortex plasma and the system becomes disordered.</p>
+<h2 id="experimental-verification-of-the-kt-transition-2d-superconducting-thin-films">Experimental Verification of the KT Transition: 2D Superconducting Thin Films</h2>
+<p>Experiments using homogeneous thin films of $\mathrm{Hg}-\mathrm{Xe}$ alloy with high sheet resistance have validated the KT transition.</p>
+<p>The binding-unbinding of vortex-antivortex pairs in 2D superconductors directly corresponds to the KT transition theory in the XY model. Experiments probe the vortex-antivortex interaction indirectly through $I-V$ characteristic measurements. Detailed analysis of $V(I)$ near $T_c$ shows reasonable agreement with the spatial renormalization group theory of vortex interactions.</p>
+<p>On a $\log-\log$ plot, the slope $a(T)$ measures the prefactor of the logarithmic interaction. The vortex unbinding temperature $T_c$ is determined by extrapolating $a(T_{c0})=1$ and taking $a(T_c)=3$. The effective dielectric constant $\epsilon_c = n_s^0 / n_s^R = 1.2 \pm 0.1$ is consistent with theoretical predictions.</p>
+<h2 id="summary">Summary</h2>
+<p>The KT transition is a purely topological phase transition that does not involve spontaneous symmetry breaking. Its essence is the binding-unbinding of vortex-antivortex pairs in two-dimensional systems. The low-temperature phase exhibits quasi-long-range order (algebraic order), while the high-temperature phase is disordered. KT theory applies not only to 2D XY magnetic systems, but also to a wide range of systems including 2D superconducting thin films and 2D liquid crystals.</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-07-08</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/kt-transition/" data-title="😬KT Transition: 2D XY Model, Topological Vortices, and Quasi-Long-Range Order" data-via="OkongOyangO" data-hashtags="KT Transition,XY Model,Topological Defect,Vortex,Condensed Matter"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/kt-transition/" data-title="😬KT Transition: 2D XY Model, Topological Vortices, and Quasi-Long-Range Order"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/kt-transition/" data-hashtag="KT Transition"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/kt-transition/" data-title="😬KT Transition: 2D XY Model, Topological Vortices, and Quasi-Long-Range Order"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/kt-transition/" data-title="😬KT Transition: 2D XY Model, Topological Vortices, and Quasi-Long-Range Order"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/kt-transition/" data-title="😬KT Transition: 2D XY Model, Topological Vortices, and Quasi-Long-Range Order"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/kt-transition/" data-title="😬KT Transition: 2D XY Model, Topological Vortices, and Quasi-Long-Range Order" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fOkongOyangO.github.io%2fOkongOyangO.Notes%2fposts%2fkt-transition%2f&amp;text=%f0%9f%98%acKT%20Transition%3a%202D%20XY%20Model%2c%20Topological%20Vortices%2c%20and%20Quasi-Long-Range%20Order" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/OkongOyangO.Notes/tags/kt-transition/">KT Transition</a>,&nbsp;<a href="/OkongOyangO.Notes/tags/xy-model/">XY Model</a>,&nbsp;<a href="/OkongOyangO.Notes/tags/topological-defect/">Topological Defect</a>,&nbsp;<a href="/OkongOyangO.Notes/tags/vortex/">Vortex</a>,&nbsp;<a href="/OkongOyangO.Notes/tags/condensed-matter/">Condensed Matter</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/OkongOyangO.Notes/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/OkongOyangO.Notes/posts/electrons-twisted-potential/" class="prev" rel="prev" title="😆How to Wiggle Like a Quantum Worm in a Twisted Potential on Chinese Valentine&#39;s Day?"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>😆How to Wiggle Like a Quantum Worm in a Twisted Potential on Chinese Valentine's Day?</a>
+            <a href="/OkongOyangO.Notes/posts/non-hermitian-liouvillian-ep/" class="next" rel="next" title="😈Non-Hermitian Hamiltonians, Liouvillian Superoperator Spectra, and Exceptional Points">😈Non-Hermitian Hamiltonians, Liouvillian Superoperator Spectra, and Exceptional Points<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.154.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/OkongOyangO.Notes/" target="_blank">OkongOyangO</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/copy-tex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/mhchem.min.js"></script><script>window.config={"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/OkongOyangO.Notes/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/OkongOyangO.Notes/js/theme.min.js"></script></body>
+</html>

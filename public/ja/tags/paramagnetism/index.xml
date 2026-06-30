@@ -8,6 +8,14 @@
     <language>ja</language>
     <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
     <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
+    <lastBuildDate>Sat, 25 Sep 2021 10:00:00 +0800</lastBuildDate>
     <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/paramagnetism/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>😊固体磁性</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/magnetism-in-solids/</link>
+      <pubDate>Sat, 25 Sep 2021 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/magnetism-in-solids/</guid>
+      <description>&lt;p&gt;固体磁性は固体物理の重要な一分野であり、結晶などの固体に外部磁場$B$をかけたときの内部の磁化強度$\mathcal{M} = \frac{\Sigma \mathbb{m}}{V}$や、磁化率$\chi = \frac{\mu_0 \mathcal{M}}{B}$などの性質を主に扱う。&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

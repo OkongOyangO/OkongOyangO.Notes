@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>😈Non-Hermitian Hamiltonians, Liouvillian Superoperator Spectra, and Exceptional Points - OkongOyangO&#39;s Notes</title><meta name="Description" content="OkongOyangO&#39;s Notes on Condensed Matter Physics"><meta property="og:url" content="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/non-hermitian-liouvillian-ep/">
+  <meta property="og:site_name" content="OkongOyangO&#39;s Notes">
+  <meta property="og:title" content="😈Non-Hermitian Hamiltonians, Liouvillian Superoperator Spectra, and Exceptional Points">
+  <meta property="og:description" content="This note introduces two core concepts in non-Hermitian quantum physics: the Liouvillian superoperator within the Lindblad master equation formalism, and the spectral features of exceptional points (EP) unique to non-Hermitian matrices.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-07-20T10:00:00+08:00">
+    <meta property="article:modified_time" content="2022-07-20T10:00:00+08:00">
+    <meta property="article:tag" content="Non-Hermitian">
+    <meta property="article:tag" content="Exceptional Points">
+    <meta property="article:tag" content="Liouvillian">
+    <meta property="article:tag" content="Lindblad Equation">
+    <meta property="article:tag" content="Condensed Matter">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="😈Non-Hermitian Hamiltonians, Liouvillian Superoperator Spectra, and Exceptional Points">
+  <meta name="twitter:description" content="This note introduces two core concepts in non-Hermitian quantum physics: the Liouvillian superoperator within the Lindblad master equation formalism, and the spectral features of exceptional points (EP) unique to non-Hermitian matrices.">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/OkongOyangO.Notes/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/OkongOyangO.Notes/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/OkongOyangO.Notes/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/OkongOyangO.Notes/apple-touch-icon.png"><link rel="mask-icon" href="/OkongOyangO.Notes/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/OkongOyangO.Notes/site.webmanifest"><link rel="canonical" href="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/non-hermitian-liouvillian-ep/" /><link rel="prev" href="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/kt-transition/" /><link rel="next" href="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/circular-dichroism-quantum-theory/" /><link rel="stylesheet" href="/OkongOyangO.Notes/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "😈Non-Hermitian Hamiltonians, Liouvillian Superoperator Spectra, and Exceptional Points",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/posts\/non-hermitian-liouvillian-ep\/"
+        },"genre": "posts","keywords": "Non-Hermitian, Exceptional Points, Liouvillian, Lindblad Equation, Condensed Matter","wordcount":  748 ,
+        "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/posts\/non-hermitian-liouvillian-ep\/","datePublished": "2022-07-20T10:00:00+08:00","dateModified": "2022-07-20T10:00:00+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "OkongOyangO"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/OkongOyangO.Notes/" title="OkongOyangO&#39;s Notes">OkongOyangO&#39;s Notes</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item active" href="/OkongOyangO.Notes/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i> Posts </a><a class="menu-item" href="/OkongOyangO.Notes/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i> Theme
+                </a><a href="javascript:void(0);" class="menu-item language" title="Language">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i> Language
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/non-hermitian-liouvillian-ep/" selected>English</option><option value="/OkongOyangO.Notes/zh-cn/posts/non-hermitian-liouvillian-ep/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/non-hermitian-liouvillian-ep/">日本語</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/OkongOyangO.Notes/" title="OkongOyangO&#39;s Notes">OkongOyangO&#39;s Notes</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/OkongOyangO.Notes/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i>Posts</a><a class="menu-item" href="/OkongOyangO.Notes/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i>Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>Theme
+            </a><a href="javascript:void(0);" class="menu-item" title="Language">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>Language
+                    <select class="language-select" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/non-hermitian-liouvillian-ep/" selected>English</option><option value="/OkongOyangO.Notes/zh-cn/posts/non-hermitian-liouvillian-ep/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/non-hermitian-liouvillian-ep/">日本語</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">😈Non-Hermitian Hamiltonians, Liouvillian Superoperator Spectra, and Exceptional Points</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/OkongOyangO.Notes/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">included in <a href="/OkongOyangO.Notes/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-07-20">2022-07-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;748 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#lindblad-master-equation-formalism--liouvillian-superoperator">Lindblad Master Equation Formalism &amp; Liouvillian Superoperator</a>
+      <ul>
+        <li><a href="#lindblad-master-equation">Lindblad Master Equation</a></li>
+        <li><a href="#effective-non-hermitian-hamiltonian--quantum-trajectory-interpretation">Effective Non-Hermitian Hamiltonian &amp; Quantum Trajectory Interpretation</a></li>
+        <li><a href="#liouvillian-superoperator-spectrum">Liouvillian Superoperator Spectrum</a></li>
+      </ul>
+    </li>
+    <li><a href="#exceptional-points">Exceptional Points</a>
+      <ul>
+        <li><a href="#what-are-exceptional-points">What Are Exceptional Points?</a></li>
+        <li><a href="#transient-dynamics-near-an-ep-the-damped-oscillator-analogy-across-a-lep">Transient Dynamics Near an EP: The Damped Oscillator Analogy Across a LEP</a></li>
+        <li><a href="#chiral-state-transfer-near-an-ep">Chiral State Transfer Near an EP</a></li>
+      </ul>
+    </li>
+    <li><a href="#summary">Summary</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>This note introduces two core concepts in non-Hermitian quantum physics: the Liouvillian superoperator within the Lindblad master equation formalism, and the spectral features of exceptional points (EP) unique to non-Hermitian matrices.</p>
+<h2 id="lindblad-master-equation-formalism--liouvillian-superoperator">Lindblad Master Equation Formalism &amp; Liouvillian Superoperator</h2>
+<h3 id="lindblad-master-equation">Lindblad Master Equation</h3>
+<p>The density matrix evolution of an open quantum system can be described by the Lindblad Master Equation (LME):</p>
+$$
+    \frac{\partial \hat{\rho}(t)}{\partial t}=\mathcal{L} \hat{\rho}(t)=-i[\hat{H}, \hat{\rho}(t)]+\sum_{\mu} \mathcal{D}\left[\hat{\Gamma}_{\mu}\right] \hat{\rho}(t)
+$$$$
+    \mathcal{D}\left[\hat{\Gamma}_{\mu}\right] \hat{\rho}(t)=\hat{\Gamma}_{\mu} \hat{\rho}(t) \hat{\Gamma}_{\mu}^{\dagger}-\frac{\hat{\Gamma}_{\mu}^{\dagger} \hat{\Gamma}_{\mu}}{2} \hat{\rho}(t)-\hat{\rho}(t) \frac{\hat{\Gamma}_{\mu}^{\dagger} \hat{\Gamma}_{\mu}}{2}
+$$<p>where $\frac{1}{2}\{L_{k}^{\dagger} L_{k}, \rho\}$ describes the continuous anti-unitary part, while $L_{k} \rho L_{k}^{\dagger}$ accounts for the quantum jump terms that drive discontinuous evolution. Together, these two pieces ensure the trace-preserving property of the density matrix evolution.</p>
+<p>The derivation of the LME can be found in H. P. Breuer&rsquo;s <em>The Theory of Open Quantum Systems</em> or in relevant introductory articles on Zhihu.</p>
+<h3 id="effective-non-hermitian-hamiltonian--quantum-trajectory-interpretation">Effective Non-Hermitian Hamiltonian &amp; Quantum Trajectory Interpretation</h3>
+<p>Short-time evolution can be captured by an effective non-Hermitian Hamiltonian $H_{eff}$:</p>
+$$
+    \hat{H}_{\mathrm{eff}}=\hat{H}-i \hat{\Gamma}_{\mu}^{\dagger} \hat{\Gamma}_{\mu} / 2, \quad \frac{\partial \hat{\rho}(t)}{\partial t}=\mathcal{L}^{\prime} \hat{\rho}(t)=-i\left(\hat{H}_{\mathrm{eff}} \hat{\rho}(t)-\hat{\rho}(t) \hat{H}_{\mathrm{eff}}^{\dagger}\right)
+$$<p>The non-Hermiticity of $H_{eff}$ originates from the system-environment coupling &ndash; the dissipation term $-i \hat{\Gamma}_{\mu}^{\dagger} \hat{\Gamma}_{\mu} / 2$ endows the eigenvalues with imaginary parts, which represent the decay rates of the corresponding states.</p>
+<h3 id="liouvillian-superoperator-spectrum">Liouvillian Superoperator Spectrum</h3>
+<p>The Liouvillian $\mathcal{L}$ is a superoperator that acts on the space of density matrices. Via vectorization, an $N \times N$ density matrix can be mapped to an $N^2$-dimensional vector, turning $\mathcal{L}$ into an $N^2 \times N^2$ matrix.</p>
+<p>The Liouvillian spectrum $\{\lambda_i\}$ is generally complex. At least one steady state exists, corresponding to the eigenstate with $\lambda = 0$. Multiple steady states signal a dissipative phase transition, which is closely tied to the emergence of EPs and symmetry breaking.</p>
+<p>The Liouvillian gap is defined as:</p>
+$$ \Delta = -\min(\operatorname{Re}(\lambda_i)) $$<p>and characterizes the relaxation time of the slowest decaying mode. When $\Delta \to 0$, the system exhibits critical slowing down.</p>
+<h2 id="exceptional-points">Exceptional Points</h2>
+<h3 id="what-are-exceptional-points">What Are Exceptional Points?</h3>
+<p>Hermitian matrices always have real eigenvalues and their eigenvectors form a complete orthonormal basis. A key feature of non-Hermitian matrices, however, is that at certain parameter values, not only the eigenvalues but also the eigenvectors become degenerate. Such points are called <strong>exceptional points (EPs)</strong>.</p>
+<p>At an EP, the matrix is no longer diagonalizable and instead reduces to a Jordan block. This is fundamentally different from the diabolic points found in Hermitian systems.</p>
+<p>Consider a simple $2 \times 2$ non-Hermitian matrix:</p>
+$$
+H = \begin{pmatrix}
+\epsilon & t \\
+t & -\epsilon + i\gamma
+\end{pmatrix}
+$$<p>By tuning the parameters so that the eigenvalues coincide, one arrives at an EP. Near the EP, the eigenvalues split in a square-root fashion:</p>
+$$ \Delta E \propto \sqrt{\lambda - \lambda_{EP}} $$<p>This stands in sharp contrast to the linear level repulsion ($\Delta E \propto |\lambda - \lambda_0|$) seen in Hermitian systems.</p>
+<h3 id="transient-dynamics-near-an-ep-the-damped-oscillator-analogy-across-a-lep">Transient Dynamics Near an EP: The Damped Oscillator Analogy Across a LEP</h3>
+<p>Transient dynamics across a Liouvillian Exceptional Point (LEP) resembles the classical damped oscillator crossing from overdamped to critically damped to underdamped.</p>
+<p>Tuning the system parameter from one side of the LEP to the other:</p>
+<ul>
+<li>On one side of the LEP: the system approaches steady state with oscillatory decay (&ldquo;underdamped&rdquo;)</li>
+<li>At the LEP: critical damping</li>
+<li>On the other side of the LEP: oscillation-free exponential decay (&ldquo;overdamped&rdquo;)</li>
+</ul>
+<p>This behavior can be understood from the imaginary parts of the Liouvillian eigenvalues &ndash; at the EP, the eigenvalues transition from purely real to complex.</p>
+<h3 id="chiral-state-transfer-near-an-ep">Chiral State Transfer Near an EP</h3>
+<p>When system parameters are varied adiabatically along a closed loop encircling an EP, the final state depends on the winding direction (clockwise vs. counterclockwise), rather than staying in the initial eigenstate. This phenomenon is called <strong>chiral state transfer</strong> or <strong>asymmetric mode transfer</strong>.</p>
+<p>This starkly contrasts with the adiabatic theorem in Hermitian systems: in Hermitian systems, as long as the evolution is slow enough, the system remains in its instantaneous eigenstate (up to a Berry phase factor). In non-Hermitian systems, however, encircling an EP forces the system to jump to a different eigenstate.</p>
+<p>Chiral state transfer is an active research direction in non-Hermitian topology, and has been observed in experimental platforms such as coupled waveguides and optical microcavities.</p>
+<h2 id="summary">Summary</h2>
+<p>Non-Hermitian quantum physics describes open quantum system dynamics through the Lindblad master equation, where the effective non-Hermitian Hamiltonian naturally introduces complex eigenvalues. Exceptional points (EPs) are spectral singularities unique to non-Hermitian systems, and the physics around them &ndash; from damped oscillator transients to chiral state transfer &ndash; has been richly realized in experiments across both classical and quantum systems.</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-07-20</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/non-hermitian-liouvillian-ep/" data-title="😈Non-Hermitian Hamiltonians, Liouvillian Superoperator Spectra, and Exceptional Points" data-via="OkongOyangO" data-hashtags="Non-Hermitian,Exceptional Points,Liouvillian,Lindblad Equation,Condensed Matter"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/non-hermitian-liouvillian-ep/" data-title="😈Non-Hermitian Hamiltonians, Liouvillian Superoperator Spectra, and Exceptional Points"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/non-hermitian-liouvillian-ep/" data-hashtag="Non-Hermitian"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/non-hermitian-liouvillian-ep/" data-title="😈Non-Hermitian Hamiltonians, Liouvillian Superoperator Spectra, and Exceptional Points"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/non-hermitian-liouvillian-ep/" data-title="😈Non-Hermitian Hamiltonians, Liouvillian Superoperator Spectra, and Exceptional Points"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/non-hermitian-liouvillian-ep/" data-title="😈Non-Hermitian Hamiltonians, Liouvillian Superoperator Spectra, and Exceptional Points"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/non-hermitian-liouvillian-ep/" data-title="😈Non-Hermitian Hamiltonians, Liouvillian Superoperator Spectra, and Exceptional Points" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fOkongOyangO.github.io%2fOkongOyangO.Notes%2fposts%2fnon-hermitian-liouvillian-ep%2f&amp;text=%f0%9f%98%88Non-Hermitian%20Hamiltonians%2c%20Liouvillian%20Superoperator%20Spectra%2c%20and%20Exceptional%20Points" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/OkongOyangO.Notes/tags/non-hermitian/">Non-Hermitian</a>,&nbsp;<a href="/OkongOyangO.Notes/tags/exceptional-points/">Exceptional Points</a>,&nbsp;<a href="/OkongOyangO.Notes/tags/liouvillian/">Liouvillian</a>,&nbsp;<a href="/OkongOyangO.Notes/tags/lindblad-equation/">Lindblad Equation</a>,&nbsp;<a href="/OkongOyangO.Notes/tags/condensed-matter/">Condensed Matter</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/OkongOyangO.Notes/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/OkongOyangO.Notes/posts/kt-transition/" class="prev" rel="prev" title="😬KT Transition: 2D XY Model, Topological Vortices, and Quasi-Long-Range Order"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>😬KT Transition: 2D XY Model, Topological Vortices, and Quasi-Long-Range Order</a>
+            <a href="/OkongOyangO.Notes/posts/circular-dichroism-quantum-theory/" class="next" rel="next" title="😵Quantum Theory of Circular Dichroism">😵Quantum Theory of Circular Dichroism<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.154.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/OkongOyangO.Notes/" target="_blank">OkongOyangO</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/copy-tex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/mhchem.min.js"></script><script>window.config={"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/OkongOyangO.Notes/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/OkongOyangO.Notes/js/theme.min.js"></script></body>
+</html>

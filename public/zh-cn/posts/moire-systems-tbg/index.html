@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>🫠转角石墨烯平带与Moire Physics｜魔角条件的连续模型推导 - OkongOyangO的物理笔记</title><meta name="Description" content="O空O扬O的物理笔记"><meta property="og:url" content="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/moire-systems-tbg/">
+  <meta property="og:site_name" content="OkongOyangO的物理笔记">
+  <meta property="og:title" content="🫠转角石墨烯平带与Moire Physics｜魔角条件的连续模型推导">
+  <meta property="og:description" content="2018年曹原大神一篇Nature给我们送来了转角石墨烯（Twisted Bilayer Graphene, TBG）。本文回顾转角石墨烯的BM连续模型构建，分析平带形成的物理机理，并理论推导魔角条件$\theta \approx 1.1^\circ$。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-01-01T10:00:00+08:00">
+    <meta property="article:modified_time" content="2024-01-01T10:00:00+08:00">
+    <meta property="article:tag" content="Twisted Bilayer Graphene">
+    <meta property="article:tag" content="Moire Physics">
+    <meta property="article:tag" content="Magic Angle">
+    <meta property="article:tag" content="BM Continuum Model">
+    <meta property="article:tag" content="Flat Band">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="🫠转角石墨烯平带与Moire Physics｜魔角条件的连续模型推导">
+  <meta name="twitter:description" content="2018年曹原大神一篇Nature给我们送来了转角石墨烯（Twisted Bilayer Graphene, TBG）。本文回顾转角石墨烯的BM连续模型构建，分析平带形成的物理机理，并理论推导魔角条件$\theta \approx 1.1^\circ$。">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/OkongOyangO.Notes/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/OkongOyangO.Notes/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/OkongOyangO.Notes/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/OkongOyangO.Notes/apple-touch-icon.png"><link rel="mask-icon" href="/OkongOyangO.Notes/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/OkongOyangO.Notes/site.webmanifest"><link rel="canonical" href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/moire-systems-tbg/" /><link rel="prev" href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/distinguish_conductors_insulators_ground_state/" /><link rel="next" href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/chiral-graviton-in-fqhe/" /><link rel="stylesheet" href="/OkongOyangO.Notes/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "🫠转角石墨烯平带与Moire Physics｜魔角条件的连续模型推导",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/zh-cn\/posts\/moire-systems-tbg\/"
+        },"genre": "posts","keywords": "Twisted Bilayer Graphene, Moire Physics, Magic Angle, BM Continuum Model, Flat Band","wordcount":  164 ,
+        "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/zh-cn\/posts\/moire-systems-tbg\/","datePublished": "2024-01-01T10:00:00+08:00","dateModified": "2024-01-01T10:00:00+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "OkongOyangO"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/OkongOyangO.Notes/zh-cn/" title="OkongOyangO的物理笔记">OkongOyangO&#39;s Notes</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item active" href="/OkongOyangO.Notes/zh-cn/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i> 文章 </a><a class="menu-item" href="/OkongOyangO.Notes/zh-cn/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i> 标签 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i> 主题
+                </a><a href="javascript:void(0);" class="menu-item language" title="语言">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i> 语言
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/moire-systems-tbg/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/moire-systems-tbg/" selected>简体中文</option><option value="/OkongOyangO.Notes/ja/posts/moire-systems-tbg/">日本語</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/OkongOyangO.Notes/zh-cn/" title="OkongOyangO的物理笔记">OkongOyangO&#39;s Notes</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/OkongOyangO.Notes/zh-cn/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i>文章</a><a class="menu-item" href="/OkongOyangO.Notes/zh-cn/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i>标签</a><a href="javascript:void(0);" class="menu-item theme-switch" title="主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>主题
+            </a><a href="javascript:void(0);" class="menu-item" title="语言">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>语言
+                    <select class="language-select" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/moire-systems-tbg/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/moire-systems-tbg/" selected>简体中文</option><option value="/OkongOyangO.Notes/ja/posts/moire-systems-tbg/">日本語</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">🫠转角石墨烯平带与Moire Physics｜魔角条件的连续模型推导</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/OkongOyangO.Notes/zh-cn/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">收录于 <a href="/OkongOyangO.Notes/zh-cn/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-01-01">2024-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 164 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#为什么是转角学twistronics">为什么是转角学（Twistronics）？</a>
+      <ul>
+        <li><a href="#平带的意义">平带的意义</a></li>
+      </ul>
+    </li>
+    <li><a href="#bm连续模型">BM连续模型</a>
+      <ul>
+        <li><a href="#单层石墨烯的dirac锥">单层石墨烯的Dirac锥</a></li>
+        <li><a href="#转角引入的moire超晶格">转角引入的moire超晶格</a></li>
+        <li><a href="#bm模型的矩阵结构">BM模型的矩阵结构</a></li>
+        <li><a href="#tripod模型与魔角">Tripod模型与魔角</a></li>
+        <li><a href="#重正化费米速度">重正化费米速度</a></li>
+        <li><a href="#拓扑性质">拓扑性质</a></li>
+      </ul>
+    </li>
+    <li><a href="#连续模型的对称性">连续模型的对称性</a></li>
+    <li><a href="#总结">总结</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>2018年曹原大神一篇Nature给我们送来了转角石墨烯（Twisted Bilayer Graphene, TBG）。本文回顾转角石墨烯的BM连续模型构建，分析平带形成的物理机理，并理论推导魔角条件$\theta \approx 1.1^\circ$。</p>
+<h2 id="为什么是转角学twistronics">为什么是转角学（Twistronics）？</h2>
+<p>转角体系的可调控性及其衍生出的平带强关联物理使其成为近年来凝聚态物理的热点。Rafi Bistritzer 和 Allan H. MacDonald 2011年发表的&quot;Moiré bands in twisted double-layer graphene&quot;（BM连续模型）对魔角的出现做出了准确的理论预言。</p>
+<p><a href="https://www.pnas.org/doi/10.1073/pnas.1108174108" target="_blank" rel="noopener noreffer ">https://www.pnas.org/doi/10.1073/pnas.1108174108</a></p>
+<p>理论方面，Bernevig等人对BM连续模型从准确性、对称性、单体多体性质等方面做了详尽的解析和计算分析，发表了长达200页的&quot;TBG六部曲&quot;。实验上，转角TMD等体系也被一一实现。</p>
+<h3 id="平带的意义">平带的意义</h3>
+<p>能带带宽$W$反映电子的单体动能。平带意味着：</p>
+$$ U \gg W $$<p>其中$U \sim e^2/a_M$为电子相互作用能量量级，$a_M$为moire晶格常数。在平带体系中，电子动能几乎为零，相互作用主导——强关联物理由此涌现。</p>
+<h2 id="bm连续模型">BM连续模型</h2>
+<h3 id="单层石墨烯的dirac锥">单层石墨烯的Dirac锥</h3>
+<p>单层石墨烯的低能有效模型为：</p>
+$$ H_{SLG}(\mathbf{k}) = \hbar v_F \mathbf{k} \cdot \boldsymbol{\sigma} $$<p>在K点附近形成线性色散的Dirac锥。双层石墨烯由两层堆叠，通过层间耦合相互作用。</p>
+<h3 id="转角引入的moire超晶格">转角引入的moire超晶格</h3>
+<p>将顶层石墨烯旋转小角度$\theta$后，两层石墨烯的BZ也发生相对旋转：</p>
+$$ \mathbf{K}_t = R(\theta/2) \mathbf{K}, \quad \mathbf{K}_b = R(-\theta/2) \mathbf{K} $$<p>moire超晶格的倒格矢为：</p>
+$$ \mathbf{G}_i^M = \mathbf{G}_i^{(t)} - \mathbf{G}_i^{(b)} $$<p>moire晶格常数：</p>
+$$ a_M = \frac{a}{2\sin(\theta/2)} \approx \frac{a}{\theta} $$<p>$\theta = 1.1^\circ$时，$a_M \approx 13$ nm，比石墨烯原胞大约50倍。</p>
+<h3 id="bm模型的矩阵结构">BM模型的矩阵结构</h3>
+<p>BM连续模型在动量空间中是一个无穷维矩阵，基底为两层的Dirac锥在moire倒格矢$\mathbf{G}_i^M$处的复制品。对于低能物理，保留最低的几个moire倒格矢即可获得收敛的结果。</p>
+<p>单层Hamiltonian的矩阵元：</p>
+$$ [H_{SLG}]_{\mathbf{G},\mathbf{G}'} = \hbar v_F (\mathbf{k} + \mathbf{G}) \cdot \boldsymbol{\sigma} \delta_{\mathbf{G},\mathbf{G}'} $$<p>层间耦合项（tunneling）：</p>
+$$ T_{\mathbf{G}} = \begin{pmatrix} w_0 & w_1 e^{-i\psi} \\ w_1 e^{i\psi} & w_0 \end{pmatrix} $$<p>其中$w_0$为AA堆叠的层间耦合，$w_1$为AB堆叠的层间耦合。</p>
+<h3 id="tripod模型与魔角">Tripod模型与魔角</h3>
+<p>最简单保持收敛性的截断是Tripod模型——保留K_M Dirac锥加上三个最近的moire倒格矢。这给出一个$8\times 8$的有效Hamiltonian。</p>
+<p>在chiral极限（$w_0 = 0$）下，BM模型具有粒子-空穴对称性，平带在魔角处精确出现。魔角条件为：</p>
+$$ \alpha = \frac{w_1}{\hbar v_F k_\theta} = \alpha_c \approx 0.586 $$<p>其中$k_\theta = 2K\sin(\theta/2)$。由此可得：</p>
+$$ \theta \approx \frac{3w_1}{\hbar v_F K} \approx 1.05^\circ $$<h3 id="重正化费米速度">重正化费米速度</h3>
+<p>BM模型的核心预言是：随着转角的减小，Dirac锥的费米速度被层间耦合重正化：</p>
+$$ v_F^* = v_F \frac{1 - 3\alpha^2}{1 + 3\alpha^2} $$<p>当$\alpha = 1/\sqrt{3}$时，$v_F^* = 0$——这标志着魔角的出现。重正化费米速度为0意味着Dirac色散变成平带。</p>
+<h3 id="拓扑性质">拓扑性质</h3>
+<p>TBG魔角平带具有非平庸的拓扑性质。每个valley中两个平带总Chern数为0，但每个平带可被约化为$C = \pm 1$。平带与最低Landau能级之间存在形式上的对应关系——&ldquo;vortexability&quot;判据统一了描述理想FCI平带的几何条件。</p>
+<h2 id="连续模型的对称性">连续模型的对称性</h2>
+<p>BM模型具有丰富的对称性：</p>
+<ul>
+<li>$C_{3z}$：三重旋转对称性</li>
+<li>$C_{2z}\mathcal{T}$：自旋less时间反演</li>
+<li>粒子-空穴对称性（chiral极限下）</li>
+<li>$U(1)$谷守恒（小角度下）</li>
+</ul>
+<p>在chiral极限外（$w_0 \neq 0$），粒子-空穴对称性被破坏，但平带依然稳定存在，说明拓扑保护机制在起作用。</p>
+<h2 id="总结">总结</h2>
+<p>转角石墨烯的BM连续模型成功预言了魔角平带的出现，其物理本质是层间耦合对Dirac费米速度的重正化。moire超晶格将微米尺度的复杂体系约化为有效的低能模型，为理解转角体系中的强关联现象（超导、关联绝缘态等）奠定了基础。</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2024-01-01</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 X" data-sharer="x" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/moire-systems-tbg/" data-title="🫠转角石墨烯平带与Moire Physics｜魔角条件的连续模型推导" data-via="OkongOyangO" data-hashtags="Twisted Bilayer Graphene,Moire Physics,Magic Angle,BM Continuum Model,Flat Band"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Threads" data-sharer="threads" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/moire-systems-tbg/" data-title="🫠转角石墨烯平带与Moire Physics｜魔角条件的连续模型推导"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/moire-systems-tbg/" data-hashtag="Twisted Bilayer Graphene"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/moire-systems-tbg/" data-title="🫠转角石墨烯平带与Moire Physics｜魔角条件的连续模型推导"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/moire-systems-tbg/" data-title="🫠转角石墨烯平带与Moire Physics｜魔角条件的连续模型推导"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/moire-systems-tbg/" data-title="🫠转角石墨烯平带与Moire Physics｜魔角条件的连续模型推导"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Diaspora" data-sharer="diaspora" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/moire-systems-tbg/" data-title="🫠转角石墨烯平带与Moire Physics｜魔角条件的连续模型推导" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fOkongOyangO.github.io%2fOkongOyangO.Notes%2fzh-cn%2fposts%2fmoire-systems-tbg%2f&amp;text=%f0%9f%ab%a0%e8%bd%ac%e8%a7%92%e7%9f%b3%e5%a2%a8%e7%83%af%e5%b9%b3%e5%b8%a6%e4%b8%8eMoire%20Physics%ef%bd%9c%e9%ad%94%e8%a7%92%e6%9d%a1%e4%bb%b6%e7%9a%84%e8%bf%9e%e7%bb%ad%e6%a8%a1%e5%9e%8b%e6%8e%a8%e5%af%bc" target="_blank" title="分享到 Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/OkongOyangO.Notes/zh-cn/tags/twisted-bilayer-graphene/">Twisted Bilayer Graphene</a>,&nbsp;<a href="/OkongOyangO.Notes/zh-cn/tags/moire-physics/">Moire Physics</a>,&nbsp;<a href="/OkongOyangO.Notes/zh-cn/tags/magic-angle/">Magic Angle</a>,&nbsp;<a href="/OkongOyangO.Notes/zh-cn/tags/bm-continuum-model/">BM Continuum Model</a>,&nbsp;<a href="/OkongOyangO.Notes/zh-cn/tags/flat-band/">Flat Band</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/OkongOyangO.Notes/zh-cn/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/OkongOyangO.Notes/zh-cn/posts/distinguish_conductors_insulators_ground_state/" class="prev" rel="prev" title="🤔只看基态如何区分导体和绝缘体？"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>🤔只看基态如何区分导体和绝缘体？</a>
+            <a href="/OkongOyangO.Notes/zh-cn/posts/chiral-graviton-in-fqhe/" class="next" rel="next" title="🤯南大发现引力子？手征引力子与分数量子霍尔态内禀量子几何">🤯南大发现引力子？手征引力子与分数量子霍尔态内禀量子几何<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.154.3">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/OkongOyangO.Notes/zh-cn/" target="_blank">OkongOyangO</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="/OkongOyangO.Notes/lib/lunr/lunr.stemmer.support.min.js"></script><script src="/OkongOyangO.Notes/lib/lunr/lunr.zh.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/copy-tex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/mhchem.min.js"></script><script>window.config={"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/OkongOyangO.Notes/zh-cn/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/OkongOyangO.Notes/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":30,"type":"lunr"}};</script><script src="/OkongOyangO.Notes/js/theme.min.js"></script></body>
+</html>

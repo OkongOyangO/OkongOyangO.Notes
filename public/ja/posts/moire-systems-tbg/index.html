@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>🫠ツイスト二層グラフェンのフラットバンドとモアレ物理：魔法角の導出 - OkongOyangOのノート</title><meta name="Description" content="O空O揚Oの物理学ノート"><meta property="og:url" content="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/moire-systems-tbg/">
+  <meta property="og:site_name" content="OkongOyangOのノート">
+  <meta property="og:title" content="🫠ツイスト二層グラフェンのフラットバンドとモアレ物理：魔法角の導出">
+  <meta property="og:description" content="2018年、Cao Yuan神がNatureに一本の論文を送り込んで、ツイスト二層グラフェン（Twisted Bilayer Graphene, TBG）が世界に火をつけた。本稿ではTBGのBM連続モデルの構築を振り返り、フラットバンド形成の物理的メカニズムを分析し、魔角条件$\theta \approx 1.1^\circ$を理論的に導出する。">
+  <meta property="og:locale" content="ja">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-01-01T10:00:00+08:00">
+    <meta property="article:modified_time" content="2024-01-01T10:00:00+08:00">
+    <meta property="article:tag" content="Twisted Bilayer Graphene">
+    <meta property="article:tag" content="Moire Physics">
+    <meta property="article:tag" content="Magic Angle">
+    <meta property="article:tag" content="BM Continuum Model">
+    <meta property="article:tag" content="Flat Band">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="🫠ツイスト二層グラフェンのフラットバンドとモアレ物理：魔法角の導出">
+  <meta name="twitter:description" content="2018年、Cao Yuan神がNatureに一本の論文を送り込んで、ツイスト二層グラフェン（Twisted Bilayer Graphene, TBG）が世界に火をつけた。本稿ではTBGのBM連続モデルの構築を振り返り、フラットバンド形成の物理的メカニズムを分析し、魔角条件$\theta \approx 1.1^\circ$を理論的に導出する。">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/OkongOyangO.Notes/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/OkongOyangO.Notes/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/OkongOyangO.Notes/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/OkongOyangO.Notes/apple-touch-icon.png"><link rel="mask-icon" href="/OkongOyangO.Notes/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/OkongOyangO.Notes/site.webmanifest"><link rel="canonical" href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/moire-systems-tbg/" /><link rel="prev" href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/distinguish_conductors_insulators_ground_state/" /><link rel="next" href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/chiral-graviton-in-fqhe/" /><link rel="stylesheet" href="/OkongOyangO.Notes/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "🫠ツイスト二層グラフェンのフラットバンドとモアレ物理：魔法角の導出",
+        "inLanguage": "ja",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/ja\/posts\/moire-systems-tbg\/"
+        },"genre": "posts","keywords": "Twisted Bilayer Graphene, Moire Physics, Magic Angle, BM Continuum Model, Flat Band","wordcount":  162 ,
+        "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/ja\/posts\/moire-systems-tbg\/","datePublished": "2024-01-01T10:00:00+08:00","dateModified": "2024-01-01T10:00:00+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "OkongOyangO"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/OkongOyangO.Notes/ja/" title="OkongOyangOのノート">OkongOyangO&#39;s Notes</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item active" href="/OkongOyangO.Notes/ja/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i> 記事 </a><a class="menu-item" href="/OkongOyangO.Notes/ja/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i> タグ </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="検索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="クリア">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="テーマ">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i> テーマ
+                </a><a href="javascript:void(0);" class="menu-item language" title="言語">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i> 言語
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/moire-systems-tbg/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/moire-systems-tbg/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/moire-systems-tbg/" selected>日本語</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/OkongOyangO.Notes/ja/" title="OkongOyangOのノート">OkongOyangO&#39;s Notes</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="検索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="クリア">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        キャンセル
+                    </a>
+                </div><a class="menu-item" href="/OkongOyangO.Notes/ja/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i>記事</a><a class="menu-item" href="/OkongOyangO.Notes/ja/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i>タグ</a><a href="javascript:void(0);" class="menu-item theme-switch" title="テーマ">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>テーマ
+            </a><a href="javascript:void(0);" class="menu-item" title="言語">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>言語
+                    <select class="language-select" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/moire-systems-tbg/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/moire-systems-tbg/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/moire-systems-tbg/" selected>日本語</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目次</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">🫠ツイスト二層グラフェンのフラットバンドとモアレ物理：魔法角の導出</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/OkongOyangO.Notes/ja/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">included in <a href="/OkongOyangO.Notes/ja/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-01-01">2024-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;162 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目次</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#なぜツイストロニクスtwistronicsなのか">なぜツイストロニクス（Twistronics）なのか？</a>
+      <ul>
+        <li><a href="#フラットバンドの意義">フラットバンドの意義</a></li>
+      </ul>
+    </li>
+    <li><a href="#bm連続モデル">BM連続モデル</a>
+      <ul>
+        <li><a href="#単層グラフェンのdirac錐">単層グラフェンのDirac錐</a></li>
+        <li><a href="#ツイストが導入するモアレ超格子">ツイストが導入するモアレ超格子</a></li>
+        <li><a href="#bmモデルの行列構造">BMモデルの行列構造</a></li>
+        <li><a href="#tripodモデルと魔角">Tripodモデルと魔角</a></li>
+        <li><a href="#繰り込まれたフェルミ速度">繰り込まれたフェルミ速度</a></li>
+        <li><a href="#トポロジカル性質">トポロジカル性質</a></li>
+      </ul>
+    </li>
+    <li><a href="#連続モデルの対称性">連続モデルの対称性</a></li>
+    <li><a href="#まとめ">まとめ</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>2018年、Cao Yuan神がNatureに一本の論文を送り込んで、ツイスト二層グラフェン（Twisted Bilayer Graphene, TBG）が世界に火をつけた。本稿ではTBGのBM連続モデルの構築を振り返り、フラットバンド形成の物理的メカニズムを分析し、魔角条件$\theta \approx 1.1^\circ$を理論的に導出する。</p>
+<h2 id="なぜツイストロニクスtwistronicsなのか">なぜツイストロニクス（Twistronics）なのか？</h2>
+<p>ツイスト系の可调控性とそこから派生するフラットバンド強相関物理は、近年の凝縮系物理におけるホットトピックである。Rafi BistritzerとAllan H. MacDonaldが2011年に発表した&quot;Moiré bands in twisted double-layer graphene&quot;（BM連続モデル）は、魔角の出現を正確に理論予測した。</p>
+<p><a href="https://www.pnas.org/doi/10.1073/pnas.1108174108" target="_blank" rel="noopener noreffer ">https://www.pnas.org/doi/10.1073/pnas.1108174108</a></p>
+<p>理論面では、BernevigらがBM連続モデルの正確性、対称性、一体系・多体性質などを详尽に解析・計算し、200ページに及ぶ「TBG六部作」を発表した。実験的にも、ツイストTMDなどの系が次々と実現されている。</p>
+<h3 id="フラットバンドの意義">フラットバンドの意義</h3>
+<p>バンド幅$W$は電子の一体的運動エネルギーを反映する。フラットバンドとは：</p>
+$$ U \gg W $$<p>ここで$U \sim e^2/a_M$は電子間相互作用のエネルギースケール、$a_M$はモアレ格子定数である。フラットバンド系では電子の運動エネルギーがほぼゼロとなり、相互作用が支配的になる——強相関物理がここに現れる。</p>
+<h2 id="bm連続モデル">BM連続モデル</h2>
+<h3 id="単層グラフェンのdirac錐">単層グラフェンのDirac錐</h3>
+<p>単層グラフェンの低エネルギー有効モデルは：</p>
+$$ H_{SLG}(\mathbf{k}) = \hbar v_F \mathbf{k} \cdot \boldsymbol{\sigma} $$<p>K点付近で線形分散のDirac錐を形成する。二層グラフェンは二層が積層され、層間結合を介して相互作用する。</p>
+<h3 id="ツイストが導入するモアレ超格子">ツイストが導入するモアレ超格子</h3>
+<p>上層グラフェンを微小角度$\theta$だけ回転させると、二層のBZも相対的に回転する：</p>
+$$ \mathbf{K}_t = R(\theta/2) \mathbf{K}, \quad \mathbf{K}_b = R(-\theta/2) \mathbf{K} $$<p>モアレ超格子の逆格子ベクトルは：</p>
+$$ \mathbf{G}_i^M = \mathbf{G}_i^{(t)} - \mathbf{G}_i^{(b)} $$<p>モアレ格子定数：</p>
+$$ a_M = \frac{a}{2\sin(\theta/2)} \approx \frac{a}{\theta} $$<p>$\theta = 1.1^\circ$のとき、$a_M \approx 13$ nmとなり、グラフェン単位胞の約50倍である。</p>
+<h3 id="bmモデルの行列構造">BMモデルの行列構造</h3>
+<p>BM連続モデルは運動量空間において無限次元行列であり、基底は二層のDirac錐をモアレ逆格子ベクトル$\mathbf{G}_i^M$だけずらしたレプリカである。低エネルギー物理に対しては、最低次のモアレ逆格子ベクトルのみを残せば収束した結果が得られる。</p>
+<p>単層Hamiltonianの行列要素：</p>
+$$ [H_{SLG}]_{\mathbf{G},\mathbf{G}'} = \hbar v_F (\mathbf{k} + \mathbf{G}) \cdot \boldsymbol{\sigma} \delta_{\mathbf{G},\mathbf{G}'} $$<p>層間結合項（トンネリング）：</p>
+$$ T_{\mathbf{G}} = \begin{pmatrix} w_0 & w_1 e^{-i\psi} \\ w_1 e^{i\psi} & w_0 \end{pmatrix} $$<p>ここで$w_0$はAA積層の層間結合、$w_1$はAB積層の層間結合である。</p>
+<h3 id="tripodモデルと魔角">Tripodモデルと魔角</h3>
+<p>収束性を保つ最も簡単な切断はTripodモデル——K_M Dirac錐とそれに最も近い三つのモアレ逆格子ベクトルを残す。これにより$8\times 8$の有効Hamiltonianが得られる。</p>
+<p>カイラル極限（$w_0 = 0$）では、BMモデルは粒子-正孔対称性を持ち、フラットバンドが魔角において厳密に現れる。魔角条件は：</p>
+$$ \alpha = \frac{w_1}{\hbar v_F k_\theta} = \alpha_c \approx 0.586 $$<p>ただし$k_\theta = 2K\sin(\theta/2)$である。これより：</p>
+$$ \theta \approx \frac{3w_1}{\hbar v_F K} \approx 1.05^\circ $$<h3 id="繰り込まれたフェルミ速度">繰り込まれたフェルミ速度</h3>
+<p>BMモデルの核心的予言は：回転角の減少に伴い、Dirac錐のフェルミ速度が層間結合によって繰り込まれる：</p>
+$$ v_F^* = v_F \frac{1 - 3\alpha^2}{1 + 3\alpha^2} $$<p>$\alpha = 1/\sqrt{3}$のとき、$v_F^* = 0$——これが魔角の出現を表す。繰り込まれたフェルミ速度がゼロになることは、Dirac分散がフラットバンドに変わることを意味する。</p>
+<h3 id="トポロジカル性質">トポロジカル性質</h3>
+<p>TBG魔角フラットバンドは非自明なトポロジカル性質を持つ。各valley内の二つのフラットバンドの総Chern数は0であるが、各フラットバンドは$C = \pm 1$に還元できる。フラットバンドと最低Landau準位の間には形式的対応関係が存在し——&ldquo;vortexability&quot;基準は理想的なFCIフラットバンドを記述する幾何学的条件を統一的に与える。</p>
+<h2 id="連続モデルの対称性">連続モデルの対称性</h2>
+<p>BMモデルは豊かな対称性を持つ：</p>
+<ul>
+<li>$C_{3z}$：三重回転対称性</li>
+<li>$C_{2z}\mathcal{T}$：スピンレス時間反転</li>
+<li>粒子-正孔対称性（カイラル極限下）</li>
+<li>$U(1)$谷保存（小角度下）</li>
+</ul>
+<p>カイラル極限外（$w_0 \neq 0$）では粒子-正孔対称性は破れるが、フラットバンドは安定に存在し続ける——トポロジカルな保護機構が働いていることを示している。</p>
+<h2 id="まとめ">まとめ</h2>
+<p>ツイストグラフェンのBM連続モデルは魔角フラットバンドの出現を成功裏に予言した。その物理的本質は、層間結合によるDiracフェルミ速度の繰り込みである。モアレ超格子はミクロンスケールの複雑な系を有効的な低エネルギーモデルに還元し、ツイスト系における強相関現象（超伝導、相関絶縁体状態など）の理解の基盤を提供している。</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2024-01-01</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/moire-systems-tbg/" data-title="🫠ツイスト二層グラフェンのフラットバンドとモアレ物理：魔法角の導出" data-via="OkongOyangO" data-hashtags="Twisted Bilayer Graphene,Moire Physics,Magic Angle,BM Continuum Model,Flat Band"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/moire-systems-tbg/" data-title="🫠ツイスト二層グラフェンのフラットバンドとモアレ物理：魔法角の導出"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/moire-systems-tbg/" data-hashtag="Twisted Bilayer Graphene"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/moire-systems-tbg/" data-title="🫠ツイスト二層グラフェンのフラットバンドとモアレ物理：魔法角の導出"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/moire-systems-tbg/" data-title="🫠ツイスト二層グラフェンのフラットバンドとモアレ物理：魔法角の導出"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/moire-systems-tbg/" data-title="🫠ツイスト二層グラフェンのフラットバンドとモアレ物理：魔法角の導出"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/moire-systems-tbg/" data-title="🫠ツイスト二層グラフェンのフラットバンドとモアレ物理：魔法角の導出" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fOkongOyangO.github.io%2fOkongOyangO.Notes%2fja%2fposts%2fmoire-systems-tbg%2f&amp;text=%f0%9f%ab%a0%e3%83%84%e3%82%a4%e3%82%b9%e3%83%88%e4%ba%8c%e5%b1%a4%e3%82%b0%e3%83%a9%e3%83%95%e3%82%a7%e3%83%b3%e3%81%ae%e3%83%95%e3%83%a9%e3%83%83%e3%83%88%e3%83%90%e3%83%b3%e3%83%89%e3%81%a8%e3%83%a2%e3%82%a2%e3%83%ac%e7%89%a9%e7%90%86%ef%bc%9a%e9%ad%94%e6%b3%95%e8%a7%92%e3%81%ae%e5%b0%8e%e5%87%ba" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/OkongOyangO.Notes/ja/tags/twisted-bilayer-graphene/">Twisted Bilayer Graphene</a>,&nbsp;<a href="/OkongOyangO.Notes/ja/tags/moire-physics/">Moire Physics</a>,&nbsp;<a href="/OkongOyangO.Notes/ja/tags/magic-angle/">Magic Angle</a>,&nbsp;<a href="/OkongOyangO.Notes/ja/tags/bm-continuum-model/">BM Continuum Model</a>,&nbsp;<a href="/OkongOyangO.Notes/ja/tags/flat-band/">Flat Band</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">戻る</a></span>&nbsp;|&nbsp;<span><a href="/OkongOyangO.Notes/ja/">ホーム</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/OkongOyangO.Notes/ja/posts/distinguish_conductors_insulators_ground_state/" class="prev" rel="prev" title="🤔基底状態だけで導体と絶縁体をどう区別するか？"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>🤔基底状態だけで導体と絶縁体をどう区別するか？</a>
+            <a href="/OkongOyangO.Notes/ja/posts/chiral-graviton-in-fqhe/" class="next" rel="next" title="🤯分数量子ホール液体におけるカイラル重力子（Chiral Graviton）">🤯分数量子ホール液体におけるカイラル重力子（Chiral Graviton）<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.154.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/OkongOyangO.Notes/ja/" target="_blank">OkongOyangO</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="トップへ戻る">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="コメントを見る">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/copy-tex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/mhchem.min.js"></script><script>window.config={"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/OkongOyangO.Notes/ja/index.json","maxResultLength":10,"noResultsFound":"結果が見つかりません","snippetLength":30,"type":"lunr"}};</script><script src="/OkongOyangO.Notes/js/theme.min.js"></script></body>
+</html>

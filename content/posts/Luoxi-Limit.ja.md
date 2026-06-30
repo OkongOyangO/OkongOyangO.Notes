@@ -1,6 +1,6 @@
 ---
 title: "😅みんな高度な量子エジプト学に夢中なのに、僕は地球を破壊したいだけ"
-date: 2026-06-30T21:00:00+08:00
+date: 2022-09-07T10:00:00+08:00
 draft: false
 math: true
 tags: ["Planetary Physics", "Centrifugal Force", "Gravitational Binding", "Roche Limit", "Popular Science"]

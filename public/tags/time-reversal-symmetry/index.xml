@@ -8,6 +8,14 @@
     <language>en</language>
     <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
     <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
+    <lastBuildDate>Wed, 17 Nov 2021 10:00:00 +0800</lastBuildDate>
     <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/tags/time-reversal-symmetry/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>😌Does This Hamiltonian Have TRS? A Practical Guide to Time-Reversal Symmetry</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/time-reversal-symmetry/</link>
+      <pubDate>Wed, 17 Nov 2021 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/time-reversal-symmetry/</guid>
+      <description>&lt;p&gt;Time-reversal symmetry is so common in TI studies that the following situation happens all the time: page one, the conclusion feels trivial; page two, you have no idea where that conclusion came from. This article systematically sorts out how time-reversal symmetry (TRS) manifests in quantum mechanics and band theory.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

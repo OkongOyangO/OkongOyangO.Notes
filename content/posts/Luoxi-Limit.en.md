@@ -1,6 +1,6 @@
 ---
 title: "😅Everyone's Doing Advanced Quantum Egyptology While I Just Want Earth to Blow Up?"
-date: 2026-06-30T21:00:00+08:00
+date: 2022-09-07T10:00:00+08:00
 draft: false
 math: true
 tags: ["Planetary Physics", "Centrifugal Force", "Gravitational Binding", "Roche Limit", "Popular Science"]

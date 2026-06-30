@@ -8,15 +8,8 @@
     <language>en</language>
     <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
     <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
-    <lastBuildDate>Tue, 30 Jun 2026 11:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jun 2026 12:00:00 +0800</lastBuildDate>
     <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/tags/quantum-geometry/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>🤩Quantum Geometry: A Hands-on Introduction to the Quantum Geometric Tensor</title>
-      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/quantum-geometry-in-fci/</link>
-      <pubDate>Tue, 30 Jun 2026 11:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
-      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/quantum-geometry-in-fci/</guid>
-      <description>&lt;p&gt;This note aims to quickly get readers up to speed with the definition and computation of Quantum Geometry. Topology is an essential property of quantum systems, capturing invariants under adiabatic changes of parameters, while Geometry focuses on the fine details—finding a proper physical quantity that characterizes the &amp;ldquo;distance&amp;rdquo; between quantum states is the central problem of Quantum Geometry.&lt;/p&gt;</description>
-    </item>
     <item>
       <title>🥺Quantum Geometry Everything? A Complete Guide to the Quantum-Geometric Physical Responses</title>
       <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/quantum-geometry-everything/</link>
@@ -37,6 +30,13 @@
       <pubDate>Sat, 13 May 2023 10:00:00 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
       <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/maximally_localized_wannier_function_and_quantum_geometry/</guid>
       <description>&lt;p&gt;This note briefly describes the gauge selection problem of Maximally Localized Wannier Functions and discusses how Quantum Geometry limits their localization.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>🤩Quantum Geometry: A Hands-on Introduction to the Quantum Geometric Tensor</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/quantum-geometry-in-fci/</link>
+      <pubDate>Sat, 05 Nov 2022 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/quantum-geometry-in-fci/</guid>
+      <description>&lt;p&gt;This note aims to quickly get readers up to speed with the definition and computation of Quantum Geometry. Topology is an essential property of quantum systems, capturing invariants under adiabatic changes of parameters, while Geometry focuses on the fine details—finding a proper physical quantity that characterizes the &amp;ldquo;distance&amp;rdquo; between quantum states is the central problem of Quantum Geometry.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

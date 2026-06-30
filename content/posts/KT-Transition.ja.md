@@ -1,6 +1,6 @@
 ---
 title: "😬KT転移：二次元XY模型、トポロジカル渦と準長距離秩序"
-date: 2026-06-30T15:00:00+08:00
+date: 2022-07-08T11:00:00+08:00
 draft: false
 math: true
 tags: ["KT Transition", "XY Model", "Topological Defect", "Vortex", "Condensed Matter"]

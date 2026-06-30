@@ -8,29 +8,8 @@
     <language>zh-CN</language>
     <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
     <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
-    <lastBuildDate>Tue, 30 Jun 2026 12:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jun 2026 18:00:00 +0800</lastBuildDate>
     <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/condensed-matter/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>😵圆二象性（Circular Dichroism）的量子理论</title>
-      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/circular-dichroism-quantum-theory/</link>
-      <pubDate>Tue, 30 Jun 2026 12:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
-      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/circular-dichroism-quantum-theory/</guid>
-      <description>&lt;p&gt;圆二象性（Circular Dichroism, CD）是研究分子手性的常用实验手段。CD测量物质对左右圆偏振光吸收的差值，作为反映物质手性的依据。圆偏振光在空间中的几何形状是螺旋型的电场，很自然地具有手性，可以想象左、右圆偏振光与不同手性的物质的相互作用也有区别。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>🤩量子几何（Quantum Geometry）</title>
-      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/quantum-geometry-in-fci/</link>
-      <pubDate>Tue, 30 Jun 2026 11:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
-      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/quantum-geometry-in-fci/</guid>
-      <description>&lt;p&gt;本note旨在带读者快速上手Quantum Geometry的定义及其计算。Topology是量子系统的重要性质，反映了模型绝热变化过程中的不变量，而Geometry关注系统的细节——找到合适的刻画量子态之间&amp;quot;距离&amp;quot;的物理量便是Quantum Geometry的中心问题。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>😮QHE(4)｜从量子霍尔到拓扑绝缘体到Chern-Simons理论与拓扑分类</title>
-      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/iqhe-ti-chern-simons/</link>
-      <pubDate>Tue, 30 Jun 2026 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
-      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/iqhe-ti-chern-simons/</guid>
-      <description>&lt;p&gt;距离接触凝聚态理论中的拓扑已经过去一年，零零碎碎读了不少文献，下面想做一个梳理，试图为今后可能要接触这一领域的读者，理清一些学习过程中的主线。&lt;/p&gt;&#xA;&lt;p&gt;整数量子霍尔效应为凝聚态开启了一个新的领域，然而这只是拓扑在凝聚态中的冰山一角，我们将看到，IQHE事实上是**二维的、有能隙的、无相互作用的、费米的、无时间反演对称性（TRS，Time-Reversal Symmetry）、无粒子-空穴对称性（PHS，或Charge Conjugate Symmetry）、无手性对称性（Chiral Symmetry）**的系统的拓扑效应。&lt;/p&gt;</description>
-    </item>
     <item>
       <title>🤪体边对应：Dirac 方程、Wilson Loop 与纠缠谱</title>
       <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/bulk-boundary-correspondence/</link>
@@ -65,6 +44,69 @@
       <pubDate>Sat, 11 Mar 2023 22:30:00 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
       <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/mean_field_approximation/</guid>
       <description>&lt;p&gt;本文旨在介绍平均场近似，同时阐述其变分法本质。&lt;/p&gt;&#xA;&lt;p&gt;Hartree, Fock, BCS这一个一个一个平均场近似，看似是一个一个一个互不相容的decouple方法，但利用平均场近似的变分法本质，我们发现他们事实上确实可以1:1:1混着用。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>😤平均场近似与变分法｜Hartree, Fock, BCS能1:1:1混用吗？</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/mean-field-variational/</link>
+      <pubDate>Fri, 10 Mar 2023 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/mean-field-variational/</guid>
+      <description>&lt;p&gt;本文旨在介绍平均场近似，同时阐述其变分法本质。Hartree、Fock、BCS这三个平均场近似，看似是互不相容的decouple方法，但利用平均场近似的变分法本质，我们发现它们确实可以1:1:1混着用。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>🤩量子几何（Quantum Geometry）</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/quantum-geometry-in-fci/</link>
+      <pubDate>Sat, 05 Nov 2022 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/quantum-geometry-in-fci/</guid>
+      <description>&lt;p&gt;本note旨在带读者快速上手Quantum Geometry的定义及其计算。Topology是量子系统的重要性质，反映了模型绝热变化过程中的不变量，而Geometry关注系统的细节——找到合适的刻画量子态之间&amp;quot;距离&amp;quot;的物理量便是Quantum Geometry的中心问题。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>🥴安德森局域化（Anderson Localization）</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/anderson-localization/</link>
+      <pubDate>Mon, 05 Sep 2022 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/anderson-localization/</guid>
+      <description>&lt;p&gt;1958年P. W. Anderson在其开创性论文中提出了无序系统中的局域化现象：足够强的无序会使电子波函数从延展态变为指数局域态，导致系统从导体转变为绝缘体。这一发现开启了长达半个多世纪的局域化研究，并与金属-绝缘体相变（MIT）紧密相连。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>😵圆二象性（Circular Dichroism）的量子理论</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/circular-dichroism-quantum-theory/</link>
+      <pubDate>Wed, 31 Aug 2022 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/circular-dichroism-quantum-theory/</guid>
+      <description>&lt;p&gt;圆二象性（Circular Dichroism, CD）是研究分子手性的常用实验手段。CD测量物质对左右圆偏振光吸收的差值，作为反映物质手性的依据。圆偏振光在空间中的几何形状是螺旋型的电场，很自然地具有手性，可以想象左、右圆偏振光与不同手性的物质的相互作用也有区别。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>😈非厄米哈密顿量与Liouvillian超算符的能谱特征及例外点简介</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/non-hermitian-liouvillian-ep/</link>
+      <pubDate>Wed, 20 Jul 2022 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/non-hermitian-liouvillian-ep/</guid>
+      <description>&lt;p&gt;本note主要介绍非厄米（Non-Hermitian）量子物理中两个核心概念：Lindblad主方程形式体系下的Liouvillian超算符，以及非厄米矩阵中特有的例外点（Exceptional Points, EP）的能谱特征。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>😬KT相变note｜二维XY模型、拓扑涡旋与准长程序</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/kt-transition/</link>
+      <pubDate>Fri, 08 Jul 2022 11:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/kt-transition/</guid>
+      <description>&lt;p&gt;KT相变（Kosterlitz-Thouless Transition）是二维系统中一种独特的拓扑相变。与传统相变不同，它不依赖于自发对称破缺，而是由拓扑缺陷——涡旋（vortex）的束缚-解束缚过程驱动。本文从二维XY模型出发，阐述KT相变的基本原理。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>😮QHE(4)｜从量子霍尔到拓扑绝缘体到Chern-Simons理论与拓扑分类</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/iqhe-ti-chern-simons/</link>
+      <pubDate>Fri, 10 Jun 2022 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/iqhe-ti-chern-simons/</guid>
+      <description>&lt;p&gt;距离接触凝聚态理论中的拓扑已经过去一年，零零碎碎读了不少文献，下面想做一个梳理，试图为今后可能要接触这一领域的读者，理清一些学习过程中的主线。&lt;/p&gt;&#xA;&lt;p&gt;整数量子霍尔效应为凝聚态开启了一个新的领域，然而这只是拓扑在凝聚态中的冰山一角，我们将看到，IQHE事实上是**二维的、有能隙的、无相互作用的、费米的、无时间反演对称性（TRS，Time-Reversal Symmetry）、无粒子-空穴对称性（PHS，或Charge Conjugate Symmetry）、无手性对称性（Chiral Symmetry）**的系统的拓扑效应。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>😌一个哈密顿量，究竟有没有TRS的？</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/time-reversal-symmetry/</link>
+      <pubDate>Wed, 17 Nov 2021 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/time-reversal-symmetry/</guid>
+      <description>&lt;p&gt;时间反演对称性在TI学习里太common了以至于经常出现下述情况：第一页觉得结论很trivial，第二页就不知道结论从哪来的。本文系统地梳理了时间反演对称性（TRS）在量子力学和能带论中的具体表现形式。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>😊固体磁性</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/magnetism-in-solids/</link>
+      <pubDate>Sat, 25 Sep 2021 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/magnetism-in-solids/</guid>
+      <description>&lt;p&gt;固体磁性是固体物理中一个重要的部分，主要研究晶体等固体在外磁场$B$作用下，内部的磁化强度$\mathcal{M} = \frac{\Sigma \mathbb{m}}{V}$，以及磁化率$\chi = \frac{\mu_0 \mathcal{M}}{B}$等性质。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

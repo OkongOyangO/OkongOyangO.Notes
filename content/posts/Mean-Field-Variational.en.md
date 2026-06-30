@@ -1,6 +1,6 @@
 ---
 title: "😤Mean Field Approximation & Variational Method: Can Hartree, Fock, and BCS Be Mixed 1:1:1?"
-date: 2026-06-30T17:00:00+08:00
+date: 2023-03-10T10:00:00+08:00
 draft: false
 math: true
 tags: ["Mean Field Theory", "Hartree-Fock", "BCS", "Variational Method", "Condensed Matter"]

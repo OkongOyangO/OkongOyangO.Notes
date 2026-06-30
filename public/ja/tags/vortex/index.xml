@@ -8,6 +8,14 @@
     <language>ja</language>
     <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
     <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
+    <lastBuildDate>Fri, 08 Jul 2022 11:00:00 +0800</lastBuildDate>
     <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/vortex/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>😬KT転移：二次元XY模型、トポロジカル渦と準長距離秩序</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/kt-transition/</link>
+      <pubDate>Fri, 08 Jul 2022 11:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/kt-transition/</guid>
+      <description>&lt;p&gt;KT転移（Kosterlitz-Thouless Transition）は二次元系における特異なトポロジカル相転移である。通常の相転移と異なり、自発的対称性の破れに依存せず、トポロジカル欠陥——渦（vortex）の束縛-非束縛過程によって駆動される。本稿では二次元XY模型から出発し、KT転移の基本原理を解説する。&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

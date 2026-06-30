@@ -8,6 +8,14 @@
     <language>ja</language>
     <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
     <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
+    <lastBuildDate>Wed, 07 Sep 2022 10:00:00 +0800</lastBuildDate>
     <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/gravitational-binding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>😅みんな高度な量子エジプト学に夢中なのに、僕は地球を破壊したいだけ</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/luoxi-limit/</link>
+      <pubDate>Wed, 07 Sep 2022 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/luoxi-limit/</guid>
+      <description>&lt;p&gt;回転座標系では、遠心力は物体を回転軸から遠ざける方向に働く。では、一般物理の範囲内で、地球がどれだけ速く回転すれば破壊されるのかを計算するtoy modelを構築できるだろうか？本稿では物理競技の知識で計算可能な簡易モデル——Luoxi極限を構築する。&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

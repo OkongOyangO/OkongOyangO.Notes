@@ -8,6 +8,14 @@
     <language>zh-CN</language>
     <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
     <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
+    <lastBuildDate>Mon, 01 Jan 2024 10:00:00 +0800</lastBuildDate>
     <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/bm-continuum-model/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>🫠转角石墨烯平带与Moire Physics｜魔角条件的连续模型推导</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/moire-systems-tbg/</link>
+      <pubDate>Mon, 01 Jan 2024 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/moire-systems-tbg/</guid>
+      <description>&lt;p&gt;2018年曹原大神一篇Nature给我们送来了转角石墨烯（Twisted Bilayer Graphene, TBG）。本文回顾转角石墨烯的BM连续模型构建，分析平带形成的物理机理，并理论推导魔角条件$\theta \approx 1.1^\circ$。&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

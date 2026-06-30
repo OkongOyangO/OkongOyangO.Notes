@@ -8,12 +8,12 @@
     <language>ja</language>
     <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
     <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
-    <lastBuildDate>Tue, 30 Jun 2026 10:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jun 2022 10:00:00 +0800</lastBuildDate>
     <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/iqhe/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>😮QHE(4)｜量子ホール効果からトポロジカル絶縁体、Chern-Simons理論とトポロジカル分類へ</title>
       <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/iqhe-ti-chern-simons/</link>
-      <pubDate>Tue, 30 Jun 2026 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <pubDate>Fri, 10 Jun 2022 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
       <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/iqhe-ti-chern-simons/</guid>
       <description>&lt;p&gt;凝縮系理論におけるトポロジーに触れてからすでに一年が経ち、断片的に多くの文献を読んできた。以下ではそれらを整理し、今後この分野に取り組むかもしれない読者のために、学習過程における主な流れを明確にしたいと思う。&lt;/p&gt;&#xA;&lt;p&gt;整数量子ホール効果は凝縮系に新たな分野を切り開いた。しかし、これは凝縮系におけるトポロジーの氷山の一角に過ぎない。IQHEは実際には&lt;strong&gt;二次元、ギャップ有り、相互作用無し、フェルミオン系、時間反転対称性（TRS）無し、粒子-正孔対称性（PHS、あるいは電荷共役対称性）無し、カイラル対称性無し&lt;/strong&gt;の系におけるトポロジカル効果であることがわかるだろう。&lt;/p&gt;</description>
     </item>

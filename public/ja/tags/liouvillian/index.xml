@@ -8,6 +8,14 @@
     <language>ja</language>
     <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
     <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
+    <lastBuildDate>Wed, 20 Jul 2022 10:00:00 +0800</lastBuildDate>
     <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/liouvillian/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>😈非エルミート・ハミルトニアン、Liouvillian超演算子スペクトルと例外点入門</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/non-hermitian-liouvillian-ep/</link>
+      <pubDate>Wed, 20 Jul 2022 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/non-hermitian-liouvillian-ep/</guid>
+      <description>&lt;p&gt;本ノートでは、非エルミート（Non-Hermitian）量子物理における2つの中核的概念——Lindblad主方程式形式系におけるLiouvillian超演算子、および非エルミート行列に特有の例外点（Exceptional Points, EP）のスペクトル的特徴——について紹介する。&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

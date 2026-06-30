@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>🥴安德森局域化（Anderson Localization） - OkongOyangO的物理笔记</title><meta name="Description" content="O空O扬O的物理笔记"><meta property="og:url" content="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/anderson-localization/">
+  <meta property="og:site_name" content="OkongOyangO的物理笔记">
+  <meta property="og:title" content="🥴安德森局域化（Anderson Localization）">
+  <meta property="og:description" content="1958年P. W. Anderson在其开创性论文中提出了无序系统中的局域化现象：足够强的无序会使电子波函数从延展态变为指数局域态，导致系统从导体转变为绝缘体。这一发现开启了长达半个多世纪的局域化研究，并与金属-绝缘体相变（MIT）紧密相连。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-09-05T10:00:00+08:00">
+    <meta property="article:modified_time" content="2022-09-05T10:00:00+08:00">
+    <meta property="article:tag" content="Anderson Localization">
+    <meta property="article:tag" content="Disorder">
+    <meta property="article:tag" content="Metal-Insulator Transition">
+    <meta property="article:tag" content="Condensed Matter">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="🥴安德森局域化（Anderson Localization）">
+  <meta name="twitter:description" content="1958年P. W. Anderson在其开创性论文中提出了无序系统中的局域化现象：足够强的无序会使电子波函数从延展态变为指数局域态，导致系统从导体转变为绝缘体。这一发现开启了长达半个多世纪的局域化研究，并与金属-绝缘体相变（MIT）紧密相连。">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/OkongOyangO.Notes/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/OkongOyangO.Notes/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/OkongOyangO.Notes/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/OkongOyangO.Notes/apple-touch-icon.png"><link rel="mask-icon" href="/OkongOyangO.Notes/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/OkongOyangO.Notes/site.webmanifest"><link rel="canonical" href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/anderson-localization/" /><link rel="prev" href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/circular-dichroism-quantum-theory/" /><link rel="next" href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/luoxi-limit/" /><link rel="stylesheet" href="/OkongOyangO.Notes/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "🥴安德森局域化（Anderson Localization）",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/zh-cn\/posts\/anderson-localization\/"
+        },"genre": "posts","keywords": "Anderson Localization, Disorder, Metal-Insulator Transition, Condensed Matter","wordcount":  131 ,
+        "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/zh-cn\/posts\/anderson-localization\/","datePublished": "2022-09-05T10:00:00+08:00","dateModified": "2022-09-05T10:00:00+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "OkongOyangO"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/OkongOyangO.Notes/zh-cn/" title="OkongOyangO的物理笔记">OkongOyangO&#39;s Notes</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item active" href="/OkongOyangO.Notes/zh-cn/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i> 文章 </a><a class="menu-item" href="/OkongOyangO.Notes/zh-cn/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i> 标签 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i> 主题
+                </a><a href="javascript:void(0);" class="menu-item language" title="语言">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i> 语言
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/anderson-localization/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/anderson-localization/" selected>简体中文</option><option value="/OkongOyangO.Notes/ja/posts/anderson-localization/">日本語</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/OkongOyangO.Notes/zh-cn/" title="OkongOyangO的物理笔记">OkongOyangO&#39;s Notes</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/OkongOyangO.Notes/zh-cn/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i>文章</a><a class="menu-item" href="/OkongOyangO.Notes/zh-cn/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i>标签</a><a href="javascript:void(0);" class="menu-item theme-switch" title="主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>主题
+            </a><a href="javascript:void(0);" class="menu-item" title="语言">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>语言
+                    <select class="language-select" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/anderson-localization/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/anderson-localization/" selected>简体中文</option><option value="/OkongOyangO.Notes/ja/posts/anderson-localization/">日本語</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">🥴安德森局域化（Anderson Localization）</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/OkongOyangO.Notes/zh-cn/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">收录于 <a href="/OkongOyangO.Notes/zh-cn/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-09-05">2022-09-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 131 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#anderson局域化的基本物理图像">Anderson局域化的基本物理图像</a></li>
+    <li><a href="#anderson紧束缚模型">Anderson紧束缚模型</a></li>
+    <li><a href="#标度理论scaling-theory">标度理论（Scaling Theory）</a></li>
+    <li><a href="#弱局域化weak-localization">弱局域化（Weak Localization）</a></li>
+    <li><a href="#维度与局域化">维度与局域化</a>
+      <ul>
+        <li><a href="#完全局域化">：完全局域化</a></li>
+        <li><a href="#标度理论的预言">：标度理论的预言</a></li>
+        <li><a href="#anderson相变">：Anderson相变</a></li>
+      </ul>
+    </li>
+    <li><a href="#anderson局域化与多体局域化mbl">Anderson局域化与多体局域化（MBL）</a></li>
+    <li><a href="#实验观测">实验观测</a></li>
+    <li><a href="#总结">总结</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>1958年P. W. Anderson在其开创性论文中提出了无序系统中的局域化现象：足够强的无序会使电子波函数从延展态变为指数局域态，导致系统从导体转变为绝缘体。这一发现开启了长达半个多世纪的局域化研究，并与金属-绝缘体相变（MIT）紧密相连。</p>
+<h2 id="anderson局域化的基本物理图像">Anderson局域化的基本物理图像</h2>
+<p>在完美的周期晶格中，Bloch定理保证了电子波函数为延展的平面波。无序的引入破坏了平移对称性，电子受到杂质势的多次散射。Anderson提出的关键问题是：<strong>波函数在多次散射后是否仍保持延展？</strong></p>
+<p>答案是：<strong>取决于无序强度和维度</strong>。</p>
+<ul>
+<li><strong>强无序</strong>：无论维度$d$为多少，波函数都会局域化——指数衰减。</li>
+<li><strong>弱无序</strong>：在$d=1,2$中，任意弱的无序都导致局域化；$d=3$中需要无序超过临界值才发生局域化。</li>
+</ul>
+<p>波函数的局域化形式为：</p>
+$$ |\psi(\mathbf{r})| \sim e^{-|\mathbf{r}-\mathbf{r}_0|/\xi} $$<p>其中$\xi$为局域化长度。在相变临界点处，$\xi$发散：</p>
+$$ \xi \sim |E - E_c|^{-\nu} $$<h2 id="anderson紧束缚模型">Anderson紧束缚模型</h2>
+<p>Anderson考虑了一个紧束缚模型，在位能取随机分布：</p>
+$$ H = -t \sum_{\langle ij\rangle} c_i^\dagger c_j + \sum_i \epsilon_i c_i^\dagger c_i $$<p>其中$\epsilon_i$为随机在位能，通常取均匀分布$\epsilon_i \in [-W/2, W/2]$。无量纲参数$W/t$表征无序强度。</p>
+<p>对于三维系统，当$W/t$超过临界值$(W/t)_c$时，费米能级处的所有态都变为局域态——发生Anderson相变。</p>
+<h2 id="标度理论scaling-theory">标度理论（Scaling Theory）</h2>
+<p>&ldquo;Gang of Four&rdquo;（Abrahams, Anderson, Licciardello, Ramakrishnan, 1979）提出的标度理论是描述Anderson局域化的里程碑。核心思想是用无量纲电导$g$作为标度变量：</p>
+$$ g = \frac{G}{e^2/h} $$<p>标度函数$\beta(g) = d\ln g / d\ln L$的行为：</p>
+<ul>
+<li><strong>$d=1$</strong>：$\beta(g) < 0$对所有$g$成立 → 所有态局域化，无真正金属态</li>
+<li><strong>$d=2$</strong>：$\beta(g) \leq 0$ → 无真正金属-绝缘体相变（但有争议），弱无序下为弱局域化</li>
+<li><strong>$d=3$</strong>：$\beta(g)$存在不稳定的不动点$g_c$ → $g > g_c$流向金属态，$g < g_c$流向绝缘态</li>
+</ul>
+<h2 id="弱局域化weak-localization">弱局域化（Weak Localization）</h2>
+<p>在弱无序金属态中（$g \gg g_c$），量子干涉效应导致电导的对数修正（$d=2$）：</p>
+$$ \Delta \sigma = -\frac{e^2}{2\pi^2\hbar} \ln\left(\frac{\tau_\phi}{\tau}\right) $$<p>其中$\tau_\phi$为退相干时间，$\tau$为弹性散射时间。</p>
+<p>弱局域化的物理本质是：电子在扩散路径上与其时间反演路径的量子干涉增强了返回原点的概率，从而降低了电导。外加磁场可破坏时间反演对称性，消除弱局域化——这是<strong>反弱局域化</strong>（weak anti-localization）的来源，也是自旋-轨道耦合系统的特征。</p>
+<h2 id="维度与局域化">维度与局域化</h2>
+<h3 id="完全局域化">$d=1$：完全局域化</h3>
+<p>一维系统中任意弱无序都导致局域化。局域化长度$\xi$与平均自由程$l$有简单关系：$\xi \sim l$。</p>
+<h3 id="标度理论的预言">$d=2$：标度理论的预言</h3>
+<p>二维是边际维度（marginal dimension）。弱局域化导致电阻率对数温度依赖性。是否存在真正的金属-绝缘体相变仍有一些微妙之处（与自旋-轨道耦合、电子-电子相互作用等有关）。</p>
+<h3 id="anderson相变">$d=3$：Anderson相变</h3>
+<p>三维系统存在真正的Anderson相变。迁移率边（mobility edge）$E_c$将延展态（$E > E_c$）与局域态（$E < E_c$）分开。当费米能级穿越$E_c$时，系统发生金属-绝缘体相变。</p>
+<h2 id="anderson局域化与多体局域化mbl">Anderson局域化与多体局域化（MBL）</h2>
+<p>Anderson局域化是无相互作用系统中的单粒子效应。当加入电子-电子相互作用后，局域化能否存活？答案是：在某些条件下可以——这称为<strong>多体局域化</strong>（Many-Body Localization, MBL）。</p>
+<p>MBL的关键特征：</p>
+<ul>
+<li>系统不热化——破坏本征态热化假说（ETH）</li>
+<li>纠缠熵从面积律变为对数增长（$S \sim \ln t$）</li>
+<li>存在 emergent integrability 和 l-bits 描述</li>
+</ul>
+<p>MBL是当前凝聚态和量子信息交叉领域的研究热点。</p>
+<h2 id="实验观测">实验观测</h2>
+<p>Anderson局域化的实验证据包括：</p>
+<ul>
+<li>掺杂半导体中的金属-绝缘体相变</li>
+<li>低温下二维电子气的弱局域化（磁阻中的负磁阻）</li>
+<li>冷原子气体中的Anderson局域化（2008年首次直接观测）</li>
+<li>光子晶体、声学超材料中的经典波局域化</li>
+</ul>
+<h2 id="总结">总结</h2>
+<p>Anderson局域化是量子波在无序介质中的基本现象，揭示了量子干涉效应对输运性质的决定性影响。标度理论提供了统一的维度依赖描述，弱局域化和多体局域化则进一步拓展了这一基本物理图像的内涵。</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-09-05</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 X" data-sharer="x" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/anderson-localization/" data-title="🥴安德森局域化（Anderson Localization）" data-via="OkongOyangO" data-hashtags="Anderson Localization,Disorder,Metal-Insulator Transition,Condensed Matter"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Threads" data-sharer="threads" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/anderson-localization/" data-title="🥴安德森局域化（Anderson Localization）"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/anderson-localization/" data-hashtag="Anderson Localization"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/anderson-localization/" data-title="🥴安德森局域化（Anderson Localization）"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/anderson-localization/" data-title="🥴安德森局域化（Anderson Localization）"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/anderson-localization/" data-title="🥴安德森局域化（Anderson Localization）"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Diaspora" data-sharer="diaspora" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/anderson-localization/" data-title="🥴安德森局域化（Anderson Localization）" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fOkongOyangO.github.io%2fOkongOyangO.Notes%2fzh-cn%2fposts%2fanderson-localization%2f&amp;text=%f0%9f%a5%b4%e5%ae%89%e5%be%b7%e6%a3%ae%e5%b1%80%e5%9f%9f%e5%8c%96%ef%bc%88Anderson%20Localization%ef%bc%89" target="_blank" title="分享到 Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/OkongOyangO.Notes/zh-cn/tags/anderson-localization/">Anderson Localization</a>,&nbsp;<a href="/OkongOyangO.Notes/zh-cn/tags/disorder/">Disorder</a>,&nbsp;<a href="/OkongOyangO.Notes/zh-cn/tags/metal-insulator-transition/">Metal-Insulator Transition</a>,&nbsp;<a href="/OkongOyangO.Notes/zh-cn/tags/condensed-matter/">Condensed Matter</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/OkongOyangO.Notes/zh-cn/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/OkongOyangO.Notes/zh-cn/posts/circular-dichroism-quantum-theory/" class="prev" rel="prev" title="😵圆二象性（Circular Dichroism）的量子理论"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>😵圆二象性（Circular Dichroism）的量子理论</a>
+            <a href="/OkongOyangO.Notes/zh-cn/posts/luoxi-limit/" class="next" rel="next" title="😅同龄人都沉迷高数量子古埃及，而我却只想地球毁灭怎么办？">😅同龄人都沉迷高数量子古埃及，而我却只想地球毁灭怎么办？<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.154.3">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/OkongOyangO.Notes/zh-cn/" target="_blank">OkongOyangO</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="/OkongOyangO.Notes/lib/lunr/lunr.stemmer.support.min.js"></script><script src="/OkongOyangO.Notes/lib/lunr/lunr.zh.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/copy-tex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/mhchem.min.js"></script><script>window.config={"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/OkongOyangO.Notes/zh-cn/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/OkongOyangO.Notes/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":30,"type":"lunr"}};</script><script src="/OkongOyangO.Notes/js/theme.min.js"></script></body>
+</html>

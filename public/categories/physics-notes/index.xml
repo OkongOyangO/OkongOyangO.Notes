@@ -8,29 +8,8 @@
     <language>en</language>
     <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
     <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
-    <lastBuildDate>Tue, 30 Jun 2026 12:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jun 2026 18:00:00 +0800</lastBuildDate>
     <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/categories/physics-notes/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>😵Quantum Theory of Circular Dichroism</title>
-      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/circular-dichroism-quantum-theory/</link>
-      <pubDate>Tue, 30 Jun 2026 12:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
-      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/circular-dichroism-quantum-theory/</guid>
-      <description>&lt;p&gt;Circular Dichroism (CD) is a common experimental technique for studying molecular chirality. CD measures the difference in absorption of left- and right-circularly polarized light by a sample, serving as a probe of its chirality. Circularly polarized light has a helical electric field geometry in space, which is inherently chiral, so it stands to reason that left- and right-circularly polarized light would interact differently with chiral substances.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>🤩Quantum Geometry: A Hands-on Introduction to the Quantum Geometric Tensor</title>
-      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/quantum-geometry-in-fci/</link>
-      <pubDate>Tue, 30 Jun 2026 11:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
-      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/quantum-geometry-in-fci/</guid>
-      <description>&lt;p&gt;This note aims to quickly get readers up to speed with the definition and computation of Quantum Geometry. Topology is an essential property of quantum systems, capturing invariants under adiabatic changes of parameters, while Geometry focuses on the fine details—finding a proper physical quantity that characterizes the &amp;ldquo;distance&amp;rdquo; between quantum states is the central problem of Quantum Geometry.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>😮QHE(4)｜From Quantum Hall to Topological Insulator to Chern-Simons Theory and Topological Classification</title>
-      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/iqhe-ti-chern-simons/</link>
-      <pubDate>Tue, 30 Jun 2026 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
-      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/iqhe-ti-chern-simons/</guid>
-      <description>&lt;p&gt;It has been a year since I first encountered topology in condensed matter theory. I have read quite a bit of literature here and there, and I would like to organize my thoughts below, hoping to clarify some of the main threads in the learning process for readers who may be entering this field in the future.&lt;/p&gt;&#xA;&lt;p&gt;The integer quantum Hall effect opened up a new frontier for condensed matter physics. However, this is only the tip of the iceberg when it comes to topology in condensed matter. As we will see, IQHE is in fact a topological effect of a system that is &lt;strong&gt;two-dimensional, gapped, non-interacting, fermionic, without time-reversal symmetry (TRS), without particle-hole symmetry (PHS, or charge conjugate symmetry), and without chiral symmetry&lt;/strong&gt;.&lt;/p&gt;</description>
-    </item>
     <item>
       <title>🤪Bulk-Boundary Correspondence: Dirac Equation, Wilson Loop, and Entanglement Spectra</title>
       <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/bulk-boundary-correspondence/</link>
@@ -51,6 +30,13 @@
       <pubDate>Fri, 05 Apr 2024 12:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
       <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/chiral-graviton-in-fqhe/</guid>
       <description>&lt;p&gt;This article aims to briefly introduce the theoretical and experimental detection methods related to &amp;ldquo;chiral graviton&amp;rdquo; excitations in fractional quantum Hall liquids, providing material for the recent heated discussions in related fields. My ability is limited, so I welcome any corrections from experts.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>🫠Twisted Bilayer Graphene Flat Bands &amp; Moiré Physics: Deriving the Magic Angle</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/moire-systems-tbg/</link>
+      <pubDate>Mon, 01 Jan 2024 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/moire-systems-tbg/</guid>
+      <description>&lt;p&gt;In 2018, Cao Yuan dropped a Nature paper on us gifting the world Twisted Bilayer Graphene (TBG). This article reviews the BM continuum model for TBG, analyzes the physics of flat band formation, and theoretically derives the magic angle condition $\theta \approx 1.1^\circ$.&lt;/p&gt;</description>
     </item>
     <item>
       <title>🤔How to Distinguish Conductors and Insulators by Ground State Only? </title>
@@ -74,6 +60,13 @@
       <description>&lt;p&gt;This article aims to introduce the mean field approximation while elucidating its variational nature.&lt;/p&gt;&#xA;&lt;p&gt;Hartree, Fock, and BCS—these individual mean field approximations appear to be mutually incompatible decoupling methods. However, by leveraging the variational nature of the mean field approximation, we discover that they can indeed be mixed 1:1:1.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>😤Mean Field Approximation &amp; Variational Method: Can Hartree, Fock, and BCS Be Mixed 1:1:1?</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/mean-field-variational/</link>
+      <pubDate>Fri, 10 Mar 2023 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/mean-field-variational/</guid>
+      <description>&lt;p&gt;This article aims to introduce the mean-field approximation while explaining its variational essence. Hartree, Fock, and BCS—these three mean-field approximations may seem like mutually incompatible decoupling schemes, but by recognizing the variational nature of the mean-field approximation, we find that they can indeed be mixed 1:1:1.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>🔥Fermi Golden Rule? Just Joule Heat!</title>
       <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/joule_heat/</link>
       <pubDate>Tue, 07 Mar 2023 22:30:00 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
@@ -95,11 +88,81 @@
       <description>&lt;p&gt;This article aims to calculate the strict quantum transition rate and points out that the Fermi Golden Rule is the result of its &amp;ldquo;long-time average&amp;rdquo;. The strict quantum transition rate contains an additional double-frequency oscillation term with non-negligible amplitude compared to the Fermi Golden Rule. The relationship between the two is similar to &amp;ldquo;instantaneous power&amp;rdquo; and &amp;ldquo;average power&amp;rdquo; in AC circuits.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>🤩Quantum Geometry: A Hands-on Introduction to the Quantum Geometric Tensor</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/quantum-geometry-in-fci/</link>
+      <pubDate>Sat, 05 Nov 2022 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/quantum-geometry-in-fci/</guid>
+      <description>&lt;p&gt;This note aims to quickly get readers up to speed with the definition and computation of Quantum Geometry. Topology is an essential property of quantum systems, capturing invariants under adiabatic changes of parameters, while Geometry focuses on the fine details—finding a proper physical quantity that characterizes the &amp;ldquo;distance&amp;rdquo; between quantum states is the central problem of Quantum Geometry.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>🧐Fractional Quantum Hall Effect (FQHE), Fractional Anomalous Quantum Hall Effect (FAQHE) and Fractional Chern Insulator (FCI)</title>
       <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/fqhe_faqhe_fci/</link>
       <pubDate>Mon, 17 Oct 2022 22:30:00 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
       <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/fqhe_faqhe_fci/</guid>
       <description>&lt;p&gt;This note is approximately 10,000 words long and aims to help readers get started with Fractional Quantum Hall Effect (FQHE), Fractional Anomalous Quantum Hall Effect (FAQHE), and Fractional Chern Insulators (FCI). This article represents only my personal perspective and may contain errors; I welcome corrections from readers. Below is the main text.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>😅Everyone&#39;s Doing Advanced Quantum Egyptology While I Just Want Earth to Blow Up?</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/luoxi-limit/</link>
+      <pubDate>Wed, 07 Sep 2022 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/luoxi-limit/</guid>
+      <description>&lt;p&gt;In a rotating reference frame, centrifugal force pushes objects away from the rotation axis. So can we build a toy model within basic physics to calculate how fast Earth needs to spin to destroy itself? This article constructs a simple model computable with physics competition knowledge—the Luoxi Limit.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>🥴Anderson Localization</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/anderson-localization/</link>
+      <pubDate>Mon, 05 Sep 2022 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/anderson-localization/</guid>
+      <description>&lt;p&gt;In his seminal 1958 paper, P. W. Anderson proposed the phenomenon of localization in disordered systems: sufficiently strong disorder causes electron wavefunctions to transition from extended states to exponentially localized states, driving the system from a conductor to an insulator. This discovery launched over half a century of localization research and is intimately connected to the metal-insulator transition (MIT).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>😵Quantum Theory of Circular Dichroism</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/circular-dichroism-quantum-theory/</link>
+      <pubDate>Wed, 31 Aug 2022 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/circular-dichroism-quantum-theory/</guid>
+      <description>&lt;p&gt;Circular Dichroism (CD) is a common experimental technique for studying molecular chirality. CD measures the difference in absorption of left- and right-circularly polarized light by a sample, serving as a probe of its chirality. Circularly polarized light has a helical electric field geometry in space, which is inherently chiral, so it stands to reason that left- and right-circularly polarized light would interact differently with chiral substances.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>😈Non-Hermitian Hamiltonians, Liouvillian Superoperator Spectra, and Exceptional Points</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/non-hermitian-liouvillian-ep/</link>
+      <pubDate>Wed, 20 Jul 2022 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/non-hermitian-liouvillian-ep/</guid>
+      <description>&lt;p&gt;This note introduces two core concepts in non-Hermitian quantum physics: the Liouvillian superoperator within the Lindblad master equation formalism, and the spectral features of exceptional points (EP) unique to non-Hermitian matrices.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>😬KT Transition: 2D XY Model, Topological Vortices, and Quasi-Long-Range Order</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/kt-transition/</link>
+      <pubDate>Fri, 08 Jul 2022 11:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/kt-transition/</guid>
+      <description>&lt;p&gt;The KT transition (Kosterlitz-Thouless Transition) is a unique topological phase transition in two-dimensional systems. Unlike conventional phase transitions, it is not driven by spontaneous symmetry breaking, but by the binding-unbinding of topological defects—vortices. Starting from the 2D XY model, this article explains the basic principles of the KT transition.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>😆How to Wiggle Like a Quantum Worm in a Twisted Potential on Chinese Valentine&#39;s Day?</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/electrons-twisted-potential/</link>
+      <pubDate>Tue, 05 Jul 2022 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/electrons-twisted-potential/</guid>
+      <description>&lt;p&gt;This article analyzes the historical inevitability of &amp;ldquo;in-your-face couples explode,&amp;rdquo; and from a quantum mechanics perspective, lays out the correct holiday posture for lonely singles (especially physics folks) on Chinese Valentine&amp;rsquo;s Day.&lt;/p&gt;&#xA;&lt;p&gt;[Note] &amp;ldquo;In-your-face couples&amp;rdquo;—a term from otaku culture referring to people with fulfilling real lives, here specifically meaning CPs. [Note on the note] CP, Charge-conjugation Parity symmetry. In 1964, CP violation was first experimentally confirmed in neutral kaon decays, earning a Nobel Prize in Physics. This reflects that &amp;ldquo;CP violation, in-your-face couples explode&amp;rdquo; is a world-recognized Nobel-level law of physics.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>😮QHE(4)｜From Quantum Hall to Topological Insulator to Chern-Simons Theory and Topological Classification</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/iqhe-ti-chern-simons/</link>
+      <pubDate>Fri, 10 Jun 2022 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/iqhe-ti-chern-simons/</guid>
+      <description>&lt;p&gt;It has been a year since I first encountered topology in condensed matter theory. I have read quite a bit of literature here and there, and I would like to organize my thoughts below, hoping to clarify some of the main threads in the learning process for readers who may be entering this field in the future.&lt;/p&gt;&#xA;&lt;p&gt;The integer quantum Hall effect opened up a new frontier for condensed matter physics. However, this is only the tip of the iceberg when it comes to topology in condensed matter. As we will see, IQHE is in fact a topological effect of a system that is &lt;strong&gt;two-dimensional, gapped, non-interacting, fermionic, without time-reversal symmetry (TRS), without particle-hole symmetry (PHS, or charge conjugate symmetry), and without chiral symmetry&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>😌Does This Hamiltonian Have TRS? A Practical Guide to Time-Reversal Symmetry</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/time-reversal-symmetry/</link>
+      <pubDate>Wed, 17 Nov 2021 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/time-reversal-symmetry/</guid>
+      <description>&lt;p&gt;Time-reversal symmetry is so common in TI studies that the following situation happens all the time: page one, the conclusion feels trivial; page two, you have no idea where that conclusion came from. This article systematically sorts out how time-reversal symmetry (TRS) manifests in quantum mechanics and band theory.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>😊Magnetism in Solids</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/magnetism-in-solids/</link>
+      <pubDate>Sat, 25 Sep 2021 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/magnetism-in-solids/</guid>
+      <description>&lt;p&gt;The magnetism of solids is an important chapter in solid state physics. It studies how a solid (e.g., a crystal) responds to an external magnetic field $B$ through its internal magnetization $\mathcal{M} = \frac{\Sigma \mathbb{m}}{V}$ and magnetic susceptibility $\chi = \frac{\mu_0 \mathcal{M}}{B}$.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

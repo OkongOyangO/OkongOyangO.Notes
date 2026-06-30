@@ -8,6 +8,14 @@
     <language>zh-CN</language>
     <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
     <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
+    <lastBuildDate>Wed, 07 Sep 2022 10:00:00 +0800</lastBuildDate>
     <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/planetary-physics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>😅同龄人都沉迷高数量子古埃及，而我却只想地球毁灭怎么办？</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/luoxi-limit/</link>
+      <pubDate>Wed, 07 Sep 2022 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/luoxi-limit/</guid>
+      <description>&lt;p&gt;旋转坐标系中，离心力有使物体远离旋转轴的趋势。那么能否仅在普物范围内构建一个toy model来算一算地球转多快可以毁灭呢？本文构建了一个可以用物理竞赛知识计算的简易模型——Luoxi极限。&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

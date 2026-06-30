@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>😬KT転移：二次元XY模型、トポロジカル渦と準長距離秩序 - OkongOyangOのノート</title><meta name="Description" content="O空O揚Oの物理学ノート"><meta property="og:url" content="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/kt-transition/">
+  <meta property="og:site_name" content="OkongOyangOのノート">
+  <meta property="og:title" content="😬KT転移：二次元XY模型、トポロジカル渦と準長距離秩序">
+  <meta property="og:description" content="KT転移（Kosterlitz-Thouless Transition）は二次元系における特異なトポロジカル相転移である。通常の相転移と異なり、自発的対称性の破れに依存せず、トポロジカル欠陥——渦（vortex）の束縛-非束縛過程によって駆動される。本稿では二次元XY模型から出発し、KT転移の基本原理を解説する。">
+  <meta property="og:locale" content="ja">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-07-08T11:00:00+08:00">
+    <meta property="article:modified_time" content="2022-07-08T11:00:00+08:00">
+    <meta property="article:tag" content="KT Transition">
+    <meta property="article:tag" content="XY Model">
+    <meta property="article:tag" content="Topological Defect">
+    <meta property="article:tag" content="Vortex">
+    <meta property="article:tag" content="Condensed Matter">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="😬KT転移：二次元XY模型、トポロジカル渦と準長距離秩序">
+  <meta name="twitter:description" content="KT転移（Kosterlitz-Thouless Transition）は二次元系における特異なトポロジカル相転移である。通常の相転移と異なり、自発的対称性の破れに依存せず、トポロジカル欠陥——渦（vortex）の束縛-非束縛過程によって駆動される。本稿では二次元XY模型から出発し、KT転移の基本原理を解説する。">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/OkongOyangO.Notes/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/OkongOyangO.Notes/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/OkongOyangO.Notes/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/OkongOyangO.Notes/apple-touch-icon.png"><link rel="mask-icon" href="/OkongOyangO.Notes/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/OkongOyangO.Notes/site.webmanifest"><link rel="canonical" href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/kt-transition/" /><link rel="prev" href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/electrons-twisted-potential/" /><link rel="next" href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/non-hermitian-liouvillian-ep/" /><link rel="stylesheet" href="/OkongOyangO.Notes/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "😬KT転移：二次元XY模型、トポロジカル渦と準長距離秩序",
+        "inLanguage": "ja",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/ja\/posts\/kt-transition\/"
+        },"genre": "posts","keywords": "KT Transition, XY Model, Topological Defect, Vortex, Condensed Matter","wordcount":  102 ,
+        "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/ja\/posts\/kt-transition\/","datePublished": "2022-07-08T11:00:00+08:00","dateModified": "2022-07-08T11:00:00+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "OkongOyangO"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/OkongOyangO.Notes/ja/" title="OkongOyangOのノート">OkongOyangO&#39;s Notes</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item active" href="/OkongOyangO.Notes/ja/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i> 記事 </a><a class="menu-item" href="/OkongOyangO.Notes/ja/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i> タグ </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="検索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="クリア">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="テーマ">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i> テーマ
+                </a><a href="javascript:void(0);" class="menu-item language" title="言語">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i> 言語
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/kt-transition/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/kt-transition/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/kt-transition/" selected>日本語</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/OkongOyangO.Notes/ja/" title="OkongOyangOのノート">OkongOyangO&#39;s Notes</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="検索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="クリア">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        キャンセル
+                    </a>
+                </div><a class="menu-item" href="/OkongOyangO.Notes/ja/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i>記事</a><a class="menu-item" href="/OkongOyangO.Notes/ja/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i>タグ</a><a href="javascript:void(0);" class="menu-item theme-switch" title="テーマ">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>テーマ
+            </a><a href="javascript:void(0);" class="menu-item" title="言語">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>言語
+                    <select class="language-select" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/kt-transition/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/kt-transition/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/kt-transition/" selected>日本語</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目次</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">😬KT転移：二次元XY模型、トポロジカル渦と準長距離秩序</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/OkongOyangO.Notes/ja/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">included in <a href="/OkongOyangO.Notes/ja/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-07-08">2022-07-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;102 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目次</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#kt転移の原理">KT転移の原理</a>
+      <ul>
+        <li><a href="#二次元xy模型">二次元XY模型</a></li>
+      </ul>
+    </li>
+    <li><a href="#vortex励起とその凝縮">Vortex励起とその凝縮</a>
+      <ul>
+        <li><a href="#トポロジカル欠陥とvortex">トポロジカル欠陥とvortex</a></li>
+        <li><a href="#vortexの自由エネルギー">Vortexの自由エネルギー</a></li>
+        <li><a href="#vortex間の相互作用">Vortex間の相互作用</a></li>
+      </ul>
+    </li>
+    <li><a href="#kt転移の実験的検証二次元超伝導薄膜">KT転移の実験的検証：二次元超伝導薄膜</a></li>
+    <li><a href="#まとめ">まとめ</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>KT転移（Kosterlitz-Thouless Transition）は二次元系における特異なトポロジカル相転移である。通常の相転移と異なり、自発的対称性の破れに依存せず、トポロジカル欠陥——渦（vortex）の束縛-非束縛過程によって駆動される。本稿では二次元XY模型から出発し、KT転移の基本原理を解説する。</p>
+<h2 id="kt転移の原理">KT転移の原理</h2>
+<h3 id="二次元xy模型">二次元XY模型</h3>
+<p>二次元XY模型では、各格子上に二次元スピン$S_i=(\cos \theta_i,\sin \theta_i)$が割り当てられる。正方格子上の作用は：</p>
+$$S[\theta]=-J\sum_{\braket{ij}}S_i \cdot S_j=-J\sum_{\braket{ij}}\cos(\theta_i-\theta_j)$$<p>以下、高温と低温それぞれの相関関数を計算する。</p>
+<p><strong>高温</strong>（$J\ll 1$）：分配関数を$J$について展開する：</p>
+$$
+Z=\int_0^{2\pi}\left(\prod_i \frac{\mathrm{d}\theta_i}{2\pi}\right)e^{-S[\theta]}=\int_0^{2\pi}\left(\prod_i \frac{\mathrm{d}\theta_i}{2\pi}\right)\prod_{\braket{ij}}\left[1+J\cos(\theta_i-\theta_j)+O(J^2)\right]
+$$<p>相関関数$\braket{S_0\cdot S_x}=\braket{\cos(\theta_0-\theta_x)}\sim e^{-f(J)|x|}$、すなわち短距離秩序。</p>
+<p><strong>低温</strong>（$J\gg 1$）：$\theta$の変化は緩やかであり、連続近似が取れる：</p>
+$$S[\theta]\rightarrow \frac{J}{2}\int \mathrm{d}^2 x\left[\nabla\theta(x)\right]^2$$<p>相関関数を計算すると$\braket{S_0\cdot S_x}\sim x^{-g(J)}$、すなわち準長距離秩序（algebraic order）を得る。</p>
+<p>したがって二次元XY模型は有限温度において短距離秩序から準長距離秩序への相転移を示す。この相転移は従来のLandau理論では記述できない——トポロジカル欠陥であるvortexの凝縮によって駆動される。</p>
+<h2 id="vortex励起とその凝縮">Vortex励起とその凝縮</h2>
+<h3 id="トポロジカル欠陥とvortex">トポロジカル欠陥とvortex</h3>
+<p>連続場$\vec{u}(r)=\nabla \theta(r)$を考える。$\theta$の$U(1)$構造（$\theta \equiv \theta + 2n\pi$）により、周回積分：</p>
+$$\oint \vec{u}\cdot \vec{\mathrm{d}l}=2n\pi \quad n\in \mathbb{Z}$$<p>この結果は離散的であり、経路を連続的に変化させても不変である。自明な状態（$\theta$が定数）では周回積分は0である。トポロジカル欠陥を導入すると、$\nabla\theta$は欠陥において定義されなくなる：</p>
+$$\nabla \times \vec{u}(\vec{r})=2n\pi \delta^2(\vec{r}-\vec{r_0})\hat{e}_z$$<p>vortexはトポロジカル荷$n$を担い、その速度場は：</p>
+$$\vec{v}(\vec{r};\vec{r}_0,n)= \frac{n}{|\vec{r}-\vec{r}_0|}\left(\hat{e}_z\times \frac{\vec{r}-\vec{r}_0}{|\vec{r}-\vec{r}_0|}\right)$$<h3 id="vortexの自由エネルギー">Vortexの自由エネルギー</h3>
+<p>原点に位置し、荷$n=1$のvortexを考える：</p>
+$$S_{\text{vor}}=S_{\text{core}}+\frac{J}{2}\int_0^{2\pi}\mathrm{d}\psi \int_a^L \rho\mathrm{d}\rho \,\vec{u}^2(\rho,\psi)=S_{\text{core}}+\pi J \ln\left(\frac{L}{a}\right)$$<p>分配関数：</p>
+$$Z_{\text{vor}}/Z_0\approx \left(\frac{L}{a}\right)^2 e^{-S_{\text{core}}-\pi J\ln(L/a)}=\exp(-S_{\text{core}}+(2-\pi J)\ln(L/a))$$<p>vortexの自由エネルギー：</p>
+$$F_{\text{vor}}\sim S_{\text{core}}+(\pi J-2)\ln(L/a)$$<p>$\pi J > 2$のとき、$\ln L$の係数は正であり、単一vortexの自由エネルギーは無限大へ発散する——vortexは閉じ込められる。$\pi J < 2$のとき、vortex自由エネルギーは負となる——vortexが自発的に生成し得る。臨界点は$\pi J = 2$、すなわち$J_c = 2/\pi$に現れる。</p>
+<h3 id="vortex間の相互作用">Vortex間の相互作用</h3>
+<p>それぞれ荷$n_1, n_2$を持つ二つのvortex間の相互作用エネルギーは：</p>
+$$V_{int} = -2\pi J n_1 n_2 \ln\left(\frac{|\vec{r}_1-\vec{r}_2|}{a}\right)$$<p>異符号のvortexは互いに引き合い（対数ポテンシャル）、同符号のvortexは互いに反発する。低温では正負vortexが束縛対を形成し、系は準長距離秩序を維持する。高温ではvortex対が非束縛となりvortexプラズマを形成し、系は無秩序となる。</p>
+<h2 id="kt転移の実験的検証二次元超伝導薄膜">KT転移の実験的検証：二次元超伝導薄膜</h2>
+<p>実験では$\mathrm{Hg}-\mathrm{Xe}$合金の高薄層抵抗均質薄膜を用いてKT転移が検証された。</p>
+<p>二次元超伝導におけるvortex-反vortex対の束縛-非束縛は、XY模型のKT転移理論に直接対応する。実験では$I-V$特性の測定を通じて渦-反渦相互作用を間接的に反映する。$T_c$近傍における$V(I)$の詳細な解析は、渦相互作用の空間繰り込み群理論予測と合理的な一致を示した。</p>
+<p>$\log-\log$プロット上の傾き$a(T)$は対数相互作用の前因子の尺度である。$a(T_{c0})=1$の外挿と$a(T_c)=3$の設定により、vortex非束縛温度$T_c$が決定される。実効誘電率$\epsilon_c = n_s^0 / n_s^R = 1.2 \pm 0.1$は理論予測と一致する。</p>
+<h2 id="まとめ">まとめ</h2>
+<p>KT転移は純粋にトポロジカルな相転移であり、対称性の自発的破れを伴わない。その本質は二次元系におけるvortex-反vortex対の束縛-非束縛過程である。低温では準長距離秩序（algebraic order）、高温では無秩序相となる。KT理論は二次元XY磁性体のみならず、二次元超伝導薄膜、二次元液晶など広範な系に適用される。</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-07-08</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/kt-transition/" data-title="😬KT転移：二次元XY模型、トポロジカル渦と準長距離秩序" data-via="OkongOyangO" data-hashtags="KT Transition,XY Model,Topological Defect,Vortex,Condensed Matter"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/kt-transition/" data-title="😬KT転移：二次元XY模型、トポロジカル渦と準長距離秩序"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/kt-transition/" data-hashtag="KT Transition"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/kt-transition/" data-title="😬KT転移：二次元XY模型、トポロジカル渦と準長距離秩序"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/kt-transition/" data-title="😬KT転移：二次元XY模型、トポロジカル渦と準長距離秩序"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/kt-transition/" data-title="😬KT転移：二次元XY模型、トポロジカル渦と準長距離秩序"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/kt-transition/" data-title="😬KT転移：二次元XY模型、トポロジカル渦と準長距離秩序" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fOkongOyangO.github.io%2fOkongOyangO.Notes%2fja%2fposts%2fkt-transition%2f&amp;text=%f0%9f%98%acKT%e8%bb%a2%e7%a7%bb%ef%bc%9a%e4%ba%8c%e6%ac%a1%e5%85%83XY%e6%a8%a1%e5%9e%8b%e3%80%81%e3%83%88%e3%83%9d%e3%83%ad%e3%82%b8%e3%82%ab%e3%83%ab%e6%b8%a6%e3%81%a8%e6%ba%96%e9%95%b7%e8%b7%9d%e9%9b%a2%e7%a7%a9%e5%ba%8f" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/OkongOyangO.Notes/ja/tags/kt-transition/">KT Transition</a>,&nbsp;<a href="/OkongOyangO.Notes/ja/tags/xy-model/">XY Model</a>,&nbsp;<a href="/OkongOyangO.Notes/ja/tags/topological-defect/">Topological Defect</a>,&nbsp;<a href="/OkongOyangO.Notes/ja/tags/vortex/">Vortex</a>,&nbsp;<a href="/OkongOyangO.Notes/ja/tags/condensed-matter/">Condensed Matter</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">戻る</a></span>&nbsp;|&nbsp;<span><a href="/OkongOyangO.Notes/ja/">ホーム</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/OkongOyangO.Notes/ja/posts/electrons-twisted-potential/" class="prev" rel="prev" title="😆七夕の夜、量子ベッドで量子ミミズになる方法"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>😆七夕の夜、量子ベッドで量子ミミズになる方法</a>
+            <a href="/OkongOyangO.Notes/ja/posts/non-hermitian-liouvillian-ep/" class="next" rel="next" title="😈非エルミート・ハミルトニアン、Liouvillian超演算子スペクトルと例外点入門">😈非エルミート・ハミルトニアン、Liouvillian超演算子スペクトルと例外点入門<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.154.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/OkongOyangO.Notes/ja/" target="_blank">OkongOyangO</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="トップへ戻る">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="コメントを見る">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/copy-tex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/mhchem.min.js"></script><script>window.config={"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/OkongOyangO.Notes/ja/index.json","maxResultLength":10,"noResultsFound":"結果が見つかりません","snippetLength":30,"type":"lunr"}};</script><script src="/OkongOyangO.Notes/js/theme.min.js"></script></body>
+</html>

@@ -8,15 +8,8 @@
     <language>zh-CN</language>
     <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
     <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
-    <lastBuildDate>Tue, 30 Jun 2026 11:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jun 2026 12:00:00 +0800</lastBuildDate>
     <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/quantum-geometry/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>🤩量子几何（Quantum Geometry）</title>
-      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/quantum-geometry-in-fci/</link>
-      <pubDate>Tue, 30 Jun 2026 11:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
-      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/quantum-geometry-in-fci/</guid>
-      <description>&lt;p&gt;本note旨在带读者快速上手Quantum Geometry的定义及其计算。Topology是量子系统的重要性质，反映了模型绝热变化过程中的不变量，而Geometry关注系统的细节——找到合适的刻画量子态之间&amp;quot;距离&amp;quot;的物理量便是Quantum Geometry的中心问题。&lt;/p&gt;</description>
-    </item>
     <item>
       <title>🥺Quantum Geometry Everything？一文讲清「量子几何物理大响应」</title>
       <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/quantum-geometry-everything/</link>
@@ -37,6 +30,13 @@
       <pubDate>Sat, 13 May 2023 10:00:00 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
       <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/maximally_localized_wannier_function_and_quantum_geometry/</guid>
       <description>&lt;p&gt;本note简述最大局域化Wannier函数（Maximally Localized Wannier Function）的规范选取问题，并讨论量子几何（Quantum Geometry）如何限制其局域程度。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>🤩量子几何（Quantum Geometry）</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/quantum-geometry-in-fci/</link>
+      <pubDate>Sat, 05 Nov 2022 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/quantum-geometry-in-fci/</guid>
+      <description>&lt;p&gt;本note旨在带读者快速上手Quantum Geometry的定义及其计算。Topology是量子系统的重要性质，反映了模型绝热变化过程中的不变量，而Geometry关注系统的细节——找到合适的刻画量子态之间&amp;quot;距离&amp;quot;的物理量便是Quantum Geometry的中心问题。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

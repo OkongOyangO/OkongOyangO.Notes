@@ -1,6 +1,6 @@
 ---
 title: "😈非エルミート・ハミルトニアン、Liouvillian超演算子スペクトルと例外点入門"
-date: 2026-06-30T13:00:00+08:00
+date: 2022-07-20T10:00:00+08:00
 draft: false
 math: true
 tags: ["Non-Hermitian", "Exceptional Points", "Liouvillian", "Lindblad Equation", "Condensed Matter"]

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>🥴Anderson Localization - OkongOyangO&#39;s Notes</title><meta name="Description" content="OkongOyangO&#39;s Notes on Condensed Matter Physics"><meta property="og:url" content="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/anderson-localization/">
+  <meta property="og:site_name" content="OkongOyangO&#39;s Notes">
+  <meta property="og:title" content="🥴Anderson Localization">
+  <meta property="og:description" content="In his seminal 1958 paper, P. W. Anderson proposed the phenomenon of localization in disordered systems: sufficiently strong disorder causes electron wavefunctions to transition from extended states to exponentially localized states, driving the system from a conductor to an insulator. This discovery launched over half a century of localization research and is intimately connected to the metal-insulator transition (MIT).">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-09-05T10:00:00+08:00">
+    <meta property="article:modified_time" content="2022-09-05T10:00:00+08:00">
+    <meta property="article:tag" content="Anderson Localization">
+    <meta property="article:tag" content="Disorder">
+    <meta property="article:tag" content="Metal-Insulator Transition">
+    <meta property="article:tag" content="Condensed Matter">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="🥴Anderson Localization">
+  <meta name="twitter:description" content="In his seminal 1958 paper, P. W. Anderson proposed the phenomenon of localization in disordered systems: sufficiently strong disorder causes electron wavefunctions to transition from extended states to exponentially localized states, driving the system from a conductor to an insulator. This discovery launched over half a century of localization research and is intimately connected to the metal-insulator transition (MIT).">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/OkongOyangO.Notes/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/OkongOyangO.Notes/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/OkongOyangO.Notes/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/OkongOyangO.Notes/apple-touch-icon.png"><link rel="mask-icon" href="/OkongOyangO.Notes/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/OkongOyangO.Notes/site.webmanifest"><link rel="canonical" href="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/anderson-localization/" /><link rel="prev" href="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/circular-dichroism-quantum-theory/" /><link rel="next" href="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/luoxi-limit/" /><link rel="stylesheet" href="/OkongOyangO.Notes/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "🥴Anderson Localization",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/posts\/anderson-localization\/"
+        },"genre": "posts","keywords": "Anderson Localization, Disorder, Metal-Insulator Transition, Condensed Matter","wordcount":  743 ,
+        "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/posts\/anderson-localization\/","datePublished": "2022-09-05T10:00:00+08:00","dateModified": "2022-09-05T10:00:00+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "OkongOyangO"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/OkongOyangO.Notes/" title="OkongOyangO&#39;s Notes">OkongOyangO&#39;s Notes</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item active" href="/OkongOyangO.Notes/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i> Posts </a><a class="menu-item" href="/OkongOyangO.Notes/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i> Theme
+                </a><a href="javascript:void(0);" class="menu-item language" title="Language">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i> Language
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/anderson-localization/" selected>English</option><option value="/OkongOyangO.Notes/zh-cn/posts/anderson-localization/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/anderson-localization/">日本語</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/OkongOyangO.Notes/" title="OkongOyangO&#39;s Notes">OkongOyangO&#39;s Notes</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/OkongOyangO.Notes/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i>Posts</a><a class="menu-item" href="/OkongOyangO.Notes/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i>Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>Theme
+            </a><a href="javascript:void(0);" class="menu-item" title="Language">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>Language
+                    <select class="language-select" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/anderson-localization/" selected>English</option><option value="/OkongOyangO.Notes/zh-cn/posts/anderson-localization/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/anderson-localization/">日本語</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">🥴Anderson Localization</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/OkongOyangO.Notes/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">included in <a href="/OkongOyangO.Notes/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-09-05">2022-09-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;743 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#basic-physical-picture-of-anderson-localization">Basic Physical Picture of Anderson Localization</a></li>
+    <li><a href="#anderson-tight-binding-model">Anderson Tight-Binding Model</a></li>
+    <li><a href="#scaling-theory">Scaling Theory</a></li>
+    <li><a href="#weak-localization">Weak Localization</a></li>
+    <li><a href="#dimensionality-and-localization">Dimensionality and Localization</a>
+      <ul>
+        <li><a href="#-complete-localization">: Complete Localization</a></li>
+        <li><a href="#-predictions-of-scaling-theory">: Predictions of Scaling Theory</a></li>
+        <li><a href="#-the-anderson-transition">: The Anderson Transition</a></li>
+      </ul>
+    </li>
+    <li><a href="#anderson-localization-and-many-body-localization-mbl">Anderson Localization and Many-Body Localization (MBL)</a></li>
+    <li><a href="#experimental-observations">Experimental Observations</a></li>
+    <li><a href="#summary">Summary</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>In his seminal 1958 paper, P. W. Anderson proposed the phenomenon of localization in disordered systems: sufficiently strong disorder causes electron wavefunctions to transition from extended states to exponentially localized states, driving the system from a conductor to an insulator. This discovery launched over half a century of localization research and is intimately connected to the metal-insulator transition (MIT).</p>
+<h2 id="basic-physical-picture-of-anderson-localization">Basic Physical Picture of Anderson Localization</h2>
+<p>In a perfect periodic lattice, Bloch&rsquo;s theorem guarantees that electron wavefunctions are extended plane waves. The introduction of disorder breaks translational symmetry, subjecting electrons to multiple scattering by impurity potentials. The key question Anderson asked was: <strong>do wavefunctions remain extended after multiple scattering?</strong></p>
+<p>The answer: <strong>it depends on the disorder strength and dimensionality</strong>.</p>
+<ul>
+<li><strong>Strong disorder</strong>: regardless of dimension $d$, wavefunctions localize—exponential decay.</li>
+<li><strong>Weak disorder</strong>: in $d=1,2$, any infinitesimal disorder leads to localization; in $d=3$, disorder must exceed a critical value for localization to occur.</li>
+</ul>
+<p>The localized form of the wavefunction is:</p>
+$$ |\psi(\mathbf{r})| \sim e^{-|\mathbf{r}-\mathbf{r}_0|/\xi} $$<p>where $\xi$ is the localization length. At the critical point of the transition, $\xi$ diverges:</p>
+$$ \xi \sim |E - E_c|^{-\nu} $$<h2 id="anderson-tight-binding-model">Anderson Tight-Binding Model</h2>
+<p>Anderson considered a tight-binding model with random on-site energies:</p>
+$$ H = -t \sum_{\langle ij\rangle} c_i^\dagger c_j + \sum_i \epsilon_i c_i^\dagger c_i $$<p>where $\epsilon_i$ are random on-site energies, typically taken from a uniform distribution $\epsilon_i \in [-W/2, W/2]$. The dimensionless parameter $W/t$ characterizes the disorder strength.</p>
+<p>For three-dimensional systems, when $W/t$ exceeds a critical value $(W/t)_c$, all states at the Fermi level become localized—this is the Anderson transition.</p>
+<h2 id="scaling-theory">Scaling Theory</h2>
+<p>The scaling theory proposed by the &ldquo;Gang of Four&rdquo; (Abrahams, Anderson, Licciardello, Ramakrishnan, 1979) is a landmark in describing Anderson localization. The core idea is to use the dimensionless conductance $g$ as the scaling variable:</p>
+$$ g = \frac{G}{e^2/h} $$<p>The behavior of the scaling function $\beta(g) = d\ln g / d\ln L$:</p>
+<ul>
+<li><strong>$d=1$</strong>: $\beta(g) < 0$ for all $g$ → all states localized, no true metallic state</li>
+<li><strong>$d=2$</strong>: $\beta(g) \leq 0$ → no true metal-insulator transition (though debated), weak localization in the weak-disorder regime</li>
+<li><strong>$d=3$</strong>: $\beta(g)$ has an unstable fixed point $g_c$ → $g > g_c$ flows to a metallic state, $g < g_c$ flows to an insulating state</li>
+</ul>
+<h2 id="weak-localization">Weak Localization</h2>
+<p>In the weakly disordered metallic regime ($g \gg g_c$), quantum interference effects lead to logarithmic corrections to the conductance (in $d=2$):</p>
+$$ \Delta \sigma = -\frac{e^2}{2\pi^2\hbar} \ln\left(\frac{\tau_\phi}{\tau}\right) $$<p>where $\tau_\phi$ is the dephasing time and $\tau$ is the elastic scattering time.</p>
+<p>The physical origin of weak localization is that quantum interference between an electron traversing a diffusive path and its time-reversed counterpart enhances the probability of returning to the origin, thereby reducing conductance. Applying an external magnetic field breaks time-reversal symmetry and suppresses weak localization—this is the origin of <strong>weak anti-localization</strong>, a hallmark of spin-orbit coupled systems.</p>
+<h2 id="dimensionality-and-localization">Dimensionality and Localization</h2>
+<h3 id="-complete-localization">$d=1$: Complete Localization</h3>
+<p>Any infinitesimal disorder in one-dimensional systems leads to localization. The localization length $\xi$ is simply related to the mean free path $l$: $\xi \sim l$.</p>
+<h3 id="-predictions-of-scaling-theory">$d=2$: Predictions of Scaling Theory</h3>
+<p>Two dimensions is the marginal dimension. Weak localization gives rise to a logarithmic temperature dependence of the resistivity. Whether a true metal-insulator transition exists remains subtle (depending on spin-orbit coupling, electron-electron interactions, etc.).</p>
+<h3 id="-the-anderson-transition">$d=3$: The Anderson Transition</h3>
+<p>Three-dimensional systems exhibit a genuine Anderson transition. A mobility edge $E_c$ separates extended states ($E > E_c$) from localized states ($E < E_c$). When the Fermi level crosses $E_c$, the system undergoes a metal-insulator transition.</p>
+<h2 id="anderson-localization-and-many-body-localization-mbl">Anderson Localization and Many-Body Localization (MBL)</h2>
+<p>Anderson localization is a single-particle effect in non-interacting systems. When electron-electron interactions are included, can localization survive? The answer is: yes, under certain conditions—this is called <strong>Many-Body Localization (MBL)</strong>.</p>
+<p>Key features of MBL:</p>
+<ul>
+<li>The system does not thermalize—it violates the eigenstate thermalization hypothesis (ETH)</li>
+<li>Entanglement entropy grows logarithmically rather than following an area law ($S \sim \ln t$)</li>
+<li>Emergent integrability and an l-bit description</li>
+</ul>
+<p>MBL is a hot topic at the intersection of condensed matter and quantum information.</p>
+<h2 id="experimental-observations">Experimental Observations</h2>
+<p>Experimental evidence for Anderson localization includes:</p>
+<ul>
+<li>Metal-insulator transitions in doped semiconductors</li>
+<li>Weak localization in 2D electron gases at low temperatures (negative magnetoresistance)</li>
+<li>Anderson localization in cold atomic gases (first directly observed in 2008)</li>
+<li>Classical wave localization in photonic crystals and acoustic metamaterials</li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p>Anderson localization is a fundamental phenomenon of quantum waves in disordered media, revealing the decisive role of quantum interference effects on transport properties. Scaling theory provides a unified dimensionality-dependent description, while weak localization and many-body localization further expand the scope of this basic physical picture.</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-09-05</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/anderson-localization/" data-title="🥴Anderson Localization" data-via="OkongOyangO" data-hashtags="Anderson Localization,Disorder,Metal-Insulator Transition,Condensed Matter"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/anderson-localization/" data-title="🥴Anderson Localization"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/anderson-localization/" data-hashtag="Anderson Localization"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/anderson-localization/" data-title="🥴Anderson Localization"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/anderson-localization/" data-title="🥴Anderson Localization"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/anderson-localization/" data-title="🥴Anderson Localization"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/anderson-localization/" data-title="🥴Anderson Localization" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fOkongOyangO.github.io%2fOkongOyangO.Notes%2fposts%2fanderson-localization%2f&amp;text=%f0%9f%a5%b4Anderson%20Localization" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/OkongOyangO.Notes/tags/anderson-localization/">Anderson Localization</a>,&nbsp;<a href="/OkongOyangO.Notes/tags/disorder/">Disorder</a>,&nbsp;<a href="/OkongOyangO.Notes/tags/metal-insulator-transition/">Metal-Insulator Transition</a>,&nbsp;<a href="/OkongOyangO.Notes/tags/condensed-matter/">Condensed Matter</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/OkongOyangO.Notes/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/OkongOyangO.Notes/posts/circular-dichroism-quantum-theory/" class="prev" rel="prev" title="😵Quantum Theory of Circular Dichroism"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>😵Quantum Theory of Circular Dichroism</a>
+            <a href="/OkongOyangO.Notes/posts/luoxi-limit/" class="next" rel="next" title="😅Everyone&#39;s Doing Advanced Quantum Egyptology While I Just Want Earth to Blow Up?">😅Everyone's Doing Advanced Quantum Egyptology While I Just Want Earth to Blow Up?<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.154.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/OkongOyangO.Notes/" target="_blank">OkongOyangO</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/copy-tex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/mhchem.min.js"></script><script>window.config={"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/OkongOyangO.Notes/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/OkongOyangO.Notes/js/theme.min.js"></script></body>
+</html>

@@ -1,6 +1,6 @@
 ---
 title: "😵圆二象性（Circular Dichroism）的量子理论"
-date: 2026-06-30T12:00:00+08:00
+date: 2022-08-31T10:00:00+08:00
 draft: false
 math: true
 tags: ["Circular Dichroism", "Chirality", "Quantum Theory", "Multipole Expansion", "Condensed Matter"]

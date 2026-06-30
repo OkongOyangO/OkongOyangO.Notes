@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>😅みんな高度な量子エジプト学に夢中なのに、僕は地球を破壊したいだけ - OkongOyangOのノート</title><meta name="Description" content="O空O揚Oの物理学ノート"><meta property="og:url" content="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/luoxi-limit/">
+  <meta property="og:site_name" content="OkongOyangOのノート">
+  <meta property="og:title" content="😅みんな高度な量子エジプト学に夢中なのに、僕は地球を破壊したいだけ">
+  <meta property="og:description" content="回転座標系では、遠心力は物体を回転軸から遠ざける方向に働く。では、一般物理の範囲内で、地球がどれだけ速く回転すれば破壊されるのかを計算するtoy modelを構築できるだろうか？本稿では物理競技の知識で計算可能な簡易モデル——Luoxi極限を構築する。">
+  <meta property="og:locale" content="ja">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-09-07T10:00:00+08:00">
+    <meta property="article:modified_time" content="2022-09-07T10:00:00+08:00">
+    <meta property="article:tag" content="Planetary Physics">
+    <meta property="article:tag" content="Centrifugal Force">
+    <meta property="article:tag" content="Gravitational Binding">
+    <meta property="article:tag" content="Roche Limit">
+    <meta property="article:tag" content="Popular Science">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="😅みんな高度な量子エジプト学に夢中なのに、僕は地球を破壊したいだけ">
+  <meta name="twitter:description" content="回転座標系では、遠心力は物体を回転軸から遠ざける方向に働く。では、一般物理の範囲内で、地球がどれだけ速く回転すれば破壊されるのかを計算するtoy modelを構築できるだろうか？本稿では物理競技の知識で計算可能な簡易モデル——Luoxi極限を構築する。">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/OkongOyangO.Notes/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/OkongOyangO.Notes/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/OkongOyangO.Notes/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/OkongOyangO.Notes/apple-touch-icon.png"><link rel="mask-icon" href="/OkongOyangO.Notes/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/OkongOyangO.Notes/site.webmanifest"><link rel="canonical" href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/luoxi-limit/" /><link rel="prev" href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/anderson-localization/" /><link rel="next" href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/fqhe_faqhe_fci/" /><link rel="stylesheet" href="/OkongOyangO.Notes/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "😅みんな高度な量子エジプト学に夢中なのに、僕は地球を破壊したいだけ",
+        "inLanguage": "ja",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/ja\/posts\/luoxi-limit\/"
+        },"genre": "posts","keywords": "Planetary Physics, Centrifugal Force, Gravitational Binding, Roche Limit, Popular Science","wordcount":  127 ,
+        "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/ja\/posts\/luoxi-limit\/","datePublished": "2022-09-07T10:00:00+08:00","dateModified": "2022-09-07T10:00:00+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "OkongOyangO"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/OkongOyangO.Notes/ja/" title="OkongOyangOのノート">OkongOyangO&#39;s Notes</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item active" href="/OkongOyangO.Notes/ja/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i> 記事 </a><a class="menu-item" href="/OkongOyangO.Notes/ja/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i> タグ </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="検索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="クリア">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="テーマ">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i> テーマ
+                </a><a href="javascript:void(0);" class="menu-item language" title="言語">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i> 言語
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/luoxi-limit/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/luoxi-limit/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/luoxi-limit/" selected>日本語</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/OkongOyangO.Notes/ja/" title="OkongOyangOのノート">OkongOyangO&#39;s Notes</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="検索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="クリア">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        キャンセル
+                    </a>
+                </div><a class="menu-item" href="/OkongOyangO.Notes/ja/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i>記事</a><a class="menu-item" href="/OkongOyangO.Notes/ja/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i>タグ</a><a href="javascript:void(0);" class="menu-item theme-switch" title="テーマ">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>テーマ
+            </a><a href="javascript:void(0);" class="menu-item" title="言語">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>言語
+                    <select class="language-select" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/luoxi-limit/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/luoxi-limit/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/luoxi-limit/" selected>日本語</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目次</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">😅みんな高度な量子エジプト学に夢中なのに、僕は地球を破壊したいだけ</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/OkongOyangO.Notes/ja/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">included in <a href="/OkongOyangO.Notes/ja/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-09-07">2022-09-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;127 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目次</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#モデル記述">モデル記述</a></li>
+    <li><a href="#遠心ポテンシャルエネルギーの計算">遠心ポテンシャルエネルギーの計算</a></li>
+    <li><a href="#重力自己エネルギーの計算">重力自己エネルギーの計算</a></li>
+    <li><a href="#luoxi極限">Luoxi極限</a></li>
+    <li><a href="#地球破壊の時間">地球破壊の時間</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>回転座標系では、遠心力は物体を回転軸から遠ざける方向に働く。では、一般物理の範囲内で、地球がどれだけ速く回転すれば破壊されるのかを計算するtoy modelを構築できるだろうか？本稿では物理競技の知識で計算可能な簡易モデル——Luoxi極限を構築する。</p>
+<h2 id="モデル記述">モデル記述</h2>
+<p>真空環境中の自転する星体を考える。星体の形状は、元の半径$R$の一様球体から<strong>一様な短軸回転楕円体</strong>に変形すると仮定する。短軸方向が自転軸方向である。星体は密度一定、全体積一定の一様な流体とする。</p>
+<p><img
+        class="lazyload"
+        src="/OkongOyangO.Notes/svg/loading.min.svg"
+        data-src="https://pic4.zhimg.com/80/v2-351e3e048a5d82e96e21957e1073c45b.png"
+        data-srcset="https://pic4.zhimg.com/80/v2-351e3e048a5d82e96e21957e1073c45b.png, https://pic4.zhimg.com/80/v2-351e3e048a5d82e96e21957e1073c45b.png 1.5x, https://pic4.zhimg.com/80/v2-351e3e048a5d82e96e21957e1073c45b.png 2x"
+        data-sizes="auto"
+        alt="https://pic4.zhimg.com/80/v2-351e3e048a5d82e96e21957e1073c45b.png"
+        title="Image" /></p>
+<p>一般に星体は星間塵の衝突・結合により安定な重力束縛体を形成する。この過程全体で角運動量が保存されるため、最終的に形成される星体は必然的にある自転角速度を持つ。重力と自転の相互作用により、星体は自転軸方向に扁平になる——地球にも赤道半径が大きく極半径が小さいという特徴がある。</p>
+<h2 id="遠心ポテンシャルエネルギーの計算">遠心ポテンシャルエネルギーの計算</h2>
+<p>星体の自転角速度を$\omega$、離心率を$e$、密度を$\rho$とする。</p>
+<p>dV微小要素の遠心ポテンシャルエネルギーは$-\frac{1}{2}\rho \cdot dV\omega^{2}(x^{2} + y^{2})$である。</p>
+<p>楕円体の積分公式を利用する：</p>
+$$\int_{\Omega} x^{2} \mathrm{dV} = \frac{4\pi}{15}a^{3}bc$$<p>積分範囲は一般楕円体$\{(x,y,z):\frac{x^{2}}{a^{2}} + \frac{y^{2}}{b^{2}} + \frac{z^{2}}{c^{2}} \leq 1\}$である。</p>
+<p>遠心ポテンシャルエネルギーが得られる：</p>
+$$W_{s} = -\frac{4\pi}{15}\rho\omega^{2}a^{4}b$$<p>体積一定の制約：</p>
+$$\frac{4\pi}{3}R^{3} = \frac{4\pi}{3}a^{2}b = \frac{4\pi}{3}a^{3}\sqrt{1 - e^{2}}$$$$\Rightarrow \quad a = R(1 - e^{2})^{-1/6}$$<p>したがって：</p>
+$$W_{s} = -\frac{4\pi}{15}\rho\omega^{2}R^{5}(1 - e^{2})^{-1/3}$$<h2 id="重力自己エネルギーの計算">重力自己エネルギーの計算</h2>
+<p>一様回転楕円体の重力自己エネルギー：</p>
+$$W_{g} = -\frac{3}{5}\frac{GM^{2}}{R}f(e)$$<p>ここで$f(e)$は楕円体形状因子（離心率$e$の関数）、$f(0)=1$が球体に対応する。</p>
+<p>$e \ll 1$のとき（地球の離心率は約0.0034）：</p>
+$$f(e) \approx 1 - \frac{2}{15}e^{2} + \mathcal{O}(e^{4})$$<h2 id="luoxi極限">Luoxi極限</h2>
+<p>系の全力学的エネルギー：</p>
+$$E_{total} = W_{s} + W_{g} + \frac{1}{2}I\omega^{2}$$<p>ここで$\frac{1}{2}I\omega^{2}$は回転運動エネルギー、$I = \frac{2}{5}MR^{2}$は慣性モーメント（球近似）。</p>
+<p>星体が安定である条件は、$E_{total}$を$e$の関数と見たとき$e=0$で極小を持つこと：</p>
+$$\left. \frac{\partial^{2} E_{total}}{\partial e^{2}} \right|_{e=0} \geq 0$$<p>計算により臨界自転角速度が得られる：</p>
+$$\omega_{c} \approx \sqrt{\frac{4\pi}{5}G\rho}$$<p>星体表面の脱出条件に関連付けると、表面の物質に働く遠心力が重力と等しくなるとき：</p>
+$$\omega^{2}R \approx \frac{GM}{R^{2}} = \frac{4\pi}{3}G\rho R$$$$\Rightarrow \quad \omega_{c} \approx \sqrt{\frac{4\pi}{3}G\rho}$$<p>両者を比較すると——オーダーが一致している！これは星体が外層物質の遠心力が重力を上回るときに実際に分解することを示している。</p>
+<h2 id="地球破壊の時間">地球破壊の時間</h2>
+<p>地球のパラメータを代入：$\rho \approx 5.5 \times 10^{3}$ kg/m³，$G = 6.67 \times 10^{-11}$。</p>
+$$\omega_{c} \approx \sqrt{\frac{4\pi}{3} \times 6.67 \times 10^{-11} \times 5.5 \times 10^{3}} \approx 1.24 \times 10^{-3} \text{ rad/s}$$<p>臨界周期：</p>
+$$T_{c} = \frac{2\pi}{\omega_{c}} \approx 1.4 \text{ hours}$$<p>地球の現在の自転周期は24時間。つまり——地球の自転が約<strong>17倍</strong>速くなれば（約1.4時間で一周）、地表の物質は振り飛ばされる。</p>
+<blockquote>
+<p>結論：短期的には地球が自転過多で破壊することはない。みなさん安心して飛び級入学試験に臨んでほしい。</p>
+</blockquote></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-09-07</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/luoxi-limit/" data-title="😅みんな高度な量子エジプト学に夢中なのに、僕は地球を破壊したいだけ" data-via="OkongOyangO" data-hashtags="Planetary Physics,Centrifugal Force,Gravitational Binding,Roche Limit,Popular Science"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/luoxi-limit/" data-title="😅みんな高度な量子エジプト学に夢中なのに、僕は地球を破壊したいだけ"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/luoxi-limit/" data-hashtag="Planetary Physics"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/luoxi-limit/" data-title="😅みんな高度な量子エジプト学に夢中なのに、僕は地球を破壊したいだけ"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/luoxi-limit/" data-title="😅みんな高度な量子エジプト学に夢中なのに、僕は地球を破壊したいだけ"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/luoxi-limit/" data-title="😅みんな高度な量子エジプト学に夢中なのに、僕は地球を破壊したいだけ"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/luoxi-limit/" data-title="😅みんな高度な量子エジプト学に夢中なのに、僕は地球を破壊したいだけ" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fOkongOyangO.github.io%2fOkongOyangO.Notes%2fja%2fposts%2fluoxi-limit%2f&amp;text=%f0%9f%98%85%e3%81%bf%e3%82%93%e3%81%aa%e9%ab%98%e5%ba%a6%e3%81%aa%e9%87%8f%e5%ad%90%e3%82%a8%e3%82%b8%e3%83%97%e3%83%88%e5%ad%a6%e3%81%ab%e5%a4%a2%e4%b8%ad%e3%81%aa%e3%81%ae%e3%81%ab%e3%80%81%e5%83%95%e3%81%af%e5%9c%b0%e7%90%83%e3%82%92%e7%a0%b4%e5%a3%8a%e3%81%97%e3%81%9f%e3%81%84%e3%81%a0%e3%81%91" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/OkongOyangO.Notes/ja/tags/planetary-physics/">Planetary Physics</a>,&nbsp;<a href="/OkongOyangO.Notes/ja/tags/centrifugal-force/">Centrifugal Force</a>,&nbsp;<a href="/OkongOyangO.Notes/ja/tags/gravitational-binding/">Gravitational Binding</a>,&nbsp;<a href="/OkongOyangO.Notes/ja/tags/roche-limit/">Roche Limit</a>,&nbsp;<a href="/OkongOyangO.Notes/ja/tags/popular-science/">Popular Science</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">戻る</a></span>&nbsp;|&nbsp;<span><a href="/OkongOyangO.Notes/ja/">ホーム</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/OkongOyangO.Notes/ja/posts/anderson-localization/" class="prev" rel="prev" title="🥴アンダーソン局在"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>🥴アンダーソン局在</a>
+            <a href="/OkongOyangO.Notes/ja/posts/fqhe_faqhe_fci/" class="next" rel="next" title="🧐分数量子ホール効果 (FQHE)、分数異常量子ホール効果 (FAQHE)、そして分数チャーン絶縁体 (FCI)">🧐分数量子ホール効果 (FQHE)、分数異常量子ホール効果 (FAQHE)、そして分数チャーン絶縁体 (FCI)<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.154.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/OkongOyangO.Notes/ja/" target="_blank">OkongOyangO</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="トップへ戻る">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="コメントを見る">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/copy-tex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/mhchem.min.js"></script><script>window.config={"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/OkongOyangO.Notes/ja/index.json","maxResultLength":10,"noResultsFound":"結果が見つかりません","snippetLength":30,"type":"lunr"}};</script><script src="/OkongOyangO.Notes/js/theme.min.js"></script></body>
+</html>

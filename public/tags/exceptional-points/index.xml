@@ -8,6 +8,14 @@
     <language>en</language>
     <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
     <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
+    <lastBuildDate>Wed, 20 Jul 2022 10:00:00 +0800</lastBuildDate>
     <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/tags/exceptional-points/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>😈Non-Hermitian Hamiltonians, Liouvillian Superoperator Spectra, and Exceptional Points</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/non-hermitian-liouvillian-ep/</link>
+      <pubDate>Wed, 20 Jul 2022 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/non-hermitian-liouvillian-ep/</guid>
+      <description>&lt;p&gt;This note introduces two core concepts in non-Hermitian quantum physics: the Liouvillian superoperator within the Lindblad master equation formalism, and the spectral features of exceptional points (EP) unique to non-Hermitian matrices.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

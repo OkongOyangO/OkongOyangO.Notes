@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>😌Does This Hamiltonian Have TRS? A Practical Guide to Time-Reversal Symmetry - OkongOyangO&#39;s Notes</title><meta name="Description" content="OkongOyangO&#39;s Notes on Condensed Matter Physics"><meta property="og:url" content="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/time-reversal-symmetry/">
+  <meta property="og:site_name" content="OkongOyangO&#39;s Notes">
+  <meta property="og:title" content="😌Does This Hamiltonian Have TRS? A Practical Guide to Time-Reversal Symmetry">
+  <meta property="og:description" content="Time-reversal symmetry is so common in TI studies that the following situation happens all the time: page one, the conclusion feels trivial; page two, you have no idea where that conclusion came from. This article systematically sorts out how time-reversal symmetry (TRS) manifests in quantum mechanics and band theory.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2021-11-17T10:00:00+08:00">
+    <meta property="article:modified_time" content="2021-11-17T10:00:00+08:00">
+    <meta property="article:tag" content="Time-Reversal Symmetry">
+    <meta property="article:tag" content="Topological Insulator">
+    <meta property="article:tag" content="Kramers Degeneracy">
+    <meta property="article:tag" content="Condensed Matter">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="😌Does This Hamiltonian Have TRS? A Practical Guide to Time-Reversal Symmetry">
+  <meta name="twitter:description" content="Time-reversal symmetry is so common in TI studies that the following situation happens all the time: page one, the conclusion feels trivial; page two, you have no idea where that conclusion came from. This article systematically sorts out how time-reversal symmetry (TRS) manifests in quantum mechanics and band theory.">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/OkongOyangO.Notes/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/OkongOyangO.Notes/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/OkongOyangO.Notes/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/OkongOyangO.Notes/apple-touch-icon.png"><link rel="mask-icon" href="/OkongOyangO.Notes/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/OkongOyangO.Notes/site.webmanifest"><link rel="canonical" href="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/time-reversal-symmetry/" /><link rel="prev" href="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/magnetism-in-solids/" /><link rel="next" href="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/iqhe-ti-chern-simons/" /><link rel="stylesheet" href="/OkongOyangO.Notes/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "😌Does This Hamiltonian Have TRS? A Practical Guide to Time-Reversal Symmetry",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/posts\/time-reversal-symmetry\/"
+        },"genre": "posts","keywords": "Time-Reversal Symmetry, Topological Insulator, Kramers Degeneracy, Condensed Matter","wordcount":  578 ,
+        "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/posts\/time-reversal-symmetry\/","datePublished": "2021-11-17T10:00:00+08:00","dateModified": "2021-11-17T10:00:00+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "OkongOyangO"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/OkongOyangO.Notes/" title="OkongOyangO&#39;s Notes">OkongOyangO&#39;s Notes</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item active" href="/OkongOyangO.Notes/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i> Posts </a><a class="menu-item" href="/OkongOyangO.Notes/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i> Theme
+                </a><a href="javascript:void(0);" class="menu-item language" title="Language">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i> Language
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/time-reversal-symmetry/" selected>English</option><option value="/OkongOyangO.Notes/zh-cn/posts/time-reversal-symmetry/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/time-reversal-symmetry/">日本語</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/OkongOyangO.Notes/" title="OkongOyangO&#39;s Notes">OkongOyangO&#39;s Notes</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/OkongOyangO.Notes/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i>Posts</a><a class="menu-item" href="/OkongOyangO.Notes/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i>Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>Theme
+            </a><a href="javascript:void(0);" class="menu-item" title="Language">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>Language
+                    <select class="language-select" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/time-reversal-symmetry/" selected>English</option><option value="/OkongOyangO.Notes/zh-cn/posts/time-reversal-symmetry/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/time-reversal-symmetry/">日本語</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">😌Does This Hamiltonian Have TRS? A Practical Guide to Time-Reversal Symmetry</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/OkongOyangO.Notes/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">included in <a href="/OkongOyangO.Notes/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2021-11-17">2021-11-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;578 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#trs-for-spinless-particles">TRS for Spinless Particles</a></li>
+    <li><a href="#trs-for-spinful-particles">TRS for Spinful Particles</a></li>
+    <li><a href="#trs-in-solid-state-band-theory">TRS in Solid-State Band Theory</a>
+      <ul>
+        <li><a href="#time-reversal-invariant-momenta-trim">Time-Reversal Invariant Momenta (TRIM)</a></li>
+        <li><a href="#constraints-on-berry-curvature-in-the-brillouin-zone">Constraints on Berry Curvature in the Brillouin Zone</a></li>
+      </ul>
+    </li>
+    <li><a href="#how-to-construct-a-trs-hamiltonian">How to Construct a TRS Hamiltonian</a></li>
+    <li><a href="#trs-in-spin-orbit-coupled-systems">TRS in Spin-Orbit Coupled Systems</a></li>
+    <li><a href="#summary">Summary</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Time-reversal symmetry is so common in TI studies that the following situation happens all the time: page one, the conclusion feels trivial; page two, you have no idea where that conclusion came from. This article systematically sorts out how time-reversal symmetry (TRS) manifests in quantum mechanics and band theory.</p>
+<h2 id="trs-for-spinless-particles">TRS for Spinless Particles</h2>
+<p>The time-reversal operation $\Theta$ acts as complex conjugation in spinless systems:</p>
+$$ \Theta = K $$<p>where $K$ is the complex conjugation operator. For a spinless Hamiltonian, TRS requires:</p>
+$$ \Theta H \Theta^{-1} = H \quad \Leftrightarrow \quad H^* = H $$<p>That is, all Hamiltonian matrix elements must be real. For a Bloch Hamiltonian, this means:</p>
+$$ H(-\mathbf{k}) = H^*(\mathbf{k}) $$<h2 id="trs-for-spinful-particles">TRS for Spinful Particles</h2>
+<p>For spin-$1/2$ particles, the time-reversal operator is:</p>
+$$ \Theta = -i \sigma_y K $$<p>where $\sigma_y$ is a Pauli matrix. A key property:</p>
+$$ \Theta^2 = -1 $$<p>This property leads to the famous <strong>Kramers degeneracy</strong>: under TRS, every eigenstate is at least two-fold degenerate.</p>
+<p>Proof: If $|\psi\rangle$ is an eigenstate of $H$, then $\Theta|\psi\rangle$ is also an eigenstate of $H$ and is orthogonal to $|\psi\rangle$:</p>
+$$ \langle \psi | \Theta \psi \rangle = \langle \Theta^2 \psi | \Theta \psi \rangle^* = -\langle \psi | \Theta \psi \rangle^* = 0 $$<h2 id="trs-in-solid-state-band-theory">TRS in Solid-State Band Theory</h2>
+<p>In Bloch band theory, TRS requires:</p>
+$$ \Theta H(\mathbf{k}) \Theta^{-1} = H(-\mathbf{k}) $$<p>This gives mirror symmetry of the bands about $k=0$: $E_n(\mathbf{k}) = E_n(-\mathbf{k})$.</p>
+<h3 id="time-reversal-invariant-momenta-trim">Time-Reversal Invariant Momenta (TRIM)</h3>
+<p>Points in the BZ satisfying $-\mathbf{k} = \mathbf{k} + \mathbf{G}$ are called TRIM (Time-Reversal Invariant Momentum). There are 4 TRIM in a 2D square lattice and 8 in 3D. At these points:</p>
+$$ H(\Gamma_i) = \Theta H(\Gamma_i) \Theta^{-1} $$<p>which ensures Kramers degeneracy holds.</p>
+<h3 id="constraints-on-berry-curvature-in-the-brillouin-zone">Constraints on Berry Curvature in the Brillouin Zone</h3>
+<p>TRS imposes a constraint on the Berry curvature:</p>
+$$ F(-\mathbf{k}) = -F(\mathbf{k}) $$<p>This means the Berry curvature vanishes at TRIM (since $F(\Gamma_i) = -F(\Gamma_i)$). Consequently, a TRS-preserving system must have zero Chern number—TRS systems cannot be Chern insulators.</p>
+<h2 id="how-to-construct-a-trs-hamiltonian">How to Construct a TRS Hamiltonian</h2>
+<p>To determine whether a Hamiltonian has TRS, follow these steps:</p>
+<ol>
+<li>
+<p><strong>Write down the time-reversal operator</strong>: determine $\Theta$ based on whether the system includes spin.</p>
+</li>
+<li>
+<p><strong>Apply the TRS condition to the Bloch Hamiltonian</strong>:</p>
+</li>
+</ol>
+$$ \Theta H(\mathbf{k}) \Theta^{-1} = H(-\mathbf{k}) $$<ol start="3">
+<li><strong>Expand in terms of Pauli matrices</strong>. For a two-band system:</li>
+</ol>
+$$ H(\mathbf{k}) = d_0(\mathbf{k}) \sigma_0 + \mathbf{d}(\mathbf{k}) \cdot \boldsymbol{\sigma} $$<p>TRS constrains the symmetry of $d_i(\mathbf{k})$. For a spinless system ($\Theta = K$):</p>
+$$ \sigma_x \sigma_0 \sigma_x = \sigma_0 = \sigma_0^* $$<p>
+</p>
+$$ \sigma_x \sigma_x \sigma_x = \sigma_x = \sigma_x^* $$<p>
+</p>
+$$ \sigma_x \sigma_y \sigma_x = -\sigma_y = \sigma_y^* $$<p>
+</p>
+$$ \sigma_x \sigma_z \sigma_x = -\sigma_z $$<p>Thus $d_y(\mathbf{k})$ must be zero, while $d_x, d_z$ must be even functions.</p>
+<ol start="4">
+<li><strong>Consider other symmetries</strong>. For example, combined $C_{2z}\mathcal{T}$ symmetry also plays an important role in non-reciprocal transport.</li>
+</ol>
+<h2 id="trs-in-spin-orbit-coupled-systems">TRS in Spin-Orbit Coupled Systems</h2>
+<p>In systems with spin-orbit coupling, TRS manifests as spin degeneracy of bands. Both Dresselhaus and Rashba spin-orbit coupling preserve TRS (they arise from structural inversion asymmetry and do not break TRS).</p>
+<p>When TRS and inversion symmetry (IS) coexist, every band at every k-point is two-fold degenerate (spin degeneracy). This is because the combined $\mathcal{P}\Theta$ symmetry ($\mathcal{P}\Theta^2 = -1$) guarantees local Kramers degeneracy.</p>
+<h2 id="summary">Summary</h2>
+<p>TRS is one of the three fundamental symmetries in topological classification (alongside PHS and CS). Recognizing whether a system has TRS, and understanding the band constraints it imposes (Kramers degeneracy, odd Berry curvature, degeneracy at TRIM), is foundational for studying topological insulators and other SPT phases.</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2021-11-17</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/time-reversal-symmetry/" data-title="😌Does This Hamiltonian Have TRS? A Practical Guide to Time-Reversal Symmetry" data-via="OkongOyangO" data-hashtags="Time-Reversal Symmetry,Topological Insulator,Kramers Degeneracy,Condensed Matter"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/time-reversal-symmetry/" data-title="😌Does This Hamiltonian Have TRS? A Practical Guide to Time-Reversal Symmetry"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/time-reversal-symmetry/" data-hashtag="Time-Reversal Symmetry"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/time-reversal-symmetry/" data-title="😌Does This Hamiltonian Have TRS? A Practical Guide to Time-Reversal Symmetry"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/time-reversal-symmetry/" data-title="😌Does This Hamiltonian Have TRS? A Practical Guide to Time-Reversal Symmetry"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/time-reversal-symmetry/" data-title="😌Does This Hamiltonian Have TRS? A Practical Guide to Time-Reversal Symmetry"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/time-reversal-symmetry/" data-title="😌Does This Hamiltonian Have TRS? A Practical Guide to Time-Reversal Symmetry" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fOkongOyangO.github.io%2fOkongOyangO.Notes%2fposts%2ftime-reversal-symmetry%2f&amp;text=%f0%9f%98%8cDoes%20This%20Hamiltonian%20Have%20TRS%3f%20A%20Practical%20Guide%20to%20Time-Reversal%20Symmetry" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/OkongOyangO.Notes/tags/time-reversal-symmetry/">Time-Reversal Symmetry</a>,&nbsp;<a href="/OkongOyangO.Notes/tags/topological-insulator/">Topological Insulator</a>,&nbsp;<a href="/OkongOyangO.Notes/tags/kramers-degeneracy/">Kramers Degeneracy</a>,&nbsp;<a href="/OkongOyangO.Notes/tags/condensed-matter/">Condensed Matter</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/OkongOyangO.Notes/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/OkongOyangO.Notes/posts/magnetism-in-solids/" class="prev" rel="prev" title="😊Magnetism in Solids"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>😊Magnetism in Solids</a>
+            <a href="/OkongOyangO.Notes/posts/iqhe-ti-chern-simons/" class="next" rel="next" title="😮QHE(4)｜From Quantum Hall to Topological Insulator to Chern-Simons Theory and Topological Classification">😮QHE(4)｜From Quantum Hall to Topological Insulator to Chern-Simons Theory and Topological Classification<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.154.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/OkongOyangO.Notes/" target="_blank">OkongOyangO</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/copy-tex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/mhchem.min.js"></script><script>window.config={"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/OkongOyangO.Notes/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/OkongOyangO.Notes/js/theme.min.js"></script></body>
+</html>

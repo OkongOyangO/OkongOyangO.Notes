@@ -8,6 +8,14 @@
     <language>zh-CN</language>
     <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
     <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
+    <lastBuildDate>Wed, 17 Nov 2021 10:00:00 +0800</lastBuildDate>
     <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/time-reversal-symmetry/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>😌一个哈密顿量，究竟有没有TRS的？</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/time-reversal-symmetry/</link>
+      <pubDate>Wed, 17 Nov 2021 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/time-reversal-symmetry/</guid>
+      <description>&lt;p&gt;时间反演对称性在TI学习里太common了以至于经常出现下述情况：第一页觉得结论很trivial，第二页就不知道结论从哪来的。本文系统地梳理了时间反演对称性（TRS）在量子力学和能带论中的具体表现形式。&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

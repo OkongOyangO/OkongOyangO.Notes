@@ -4,34 +4,9 @@
         <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/</link>
         <description>O空O揚Oの物理学ノート</description>
         <generator>Hugo -- gohugo.io</generator><language>ja</language><managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
-            <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster><lastBuildDate>Tue, 30 Jun 2026 12:00:00 &#43;0800</lastBuildDate>
+            <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster><lastBuildDate>Mon, 29 Jun 2026 18:00:00 &#43;0800</lastBuildDate>
             <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title>😵円二色性（Circular Dichroism）の量子理論</title>
-    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/circular-dichroism-quantum-theory/</link>
-    <pubDate>Tue, 30 Jun 2026 12:00:00 &#43;0800</pubDate>
-    <author>yzj5306@psu.edu (OkongOyangO)</author>
-    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/circular-dichroism-quantum-theory/</guid>
-    <description><![CDATA[<p>円二色性（Circular Dichroism, CD）は、分子のキラリティーを調べるための一般的な実験手法である。CDでは、物質による左円偏光と右円偏光の吸収の差を測定し、その差を物質のキラリティーを反映する指標として用いる。円偏光は空間中で螺旋状の電場形状を持ち、本質的にキラリティーを有しており、左・右円偏光が異なるキラリティーの物質と相互作用する際に違いが生じると考えられる。</p>]]></description>
-</item>
-<item>
-    <title>🤩量子幾何学（Quantum Geometry）：量子幾何テンソル入門</title>
-    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/quantum-geometry-in-fci/</link>
-    <pubDate>Tue, 30 Jun 2026 11:00:00 &#43;0800</pubDate>
-    <author>yzj5306@psu.edu (OkongOyangO)</author>
-    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/quantum-geometry-in-fci/</guid>
-    <description><![CDATA[<p>本ノートでは、Quantum Geometryの定義とその計算法を読者に迅速に習得させることを目的とする。Topologyは量子系の重要な性質であり、系の断熱変化における不変量を反映する。一方Geometryは系の詳細に着目する——量子状態間の「距離」を適切に記述する物理量を見つけることが、Quantum Geometryの中心問題である。</p>]]></description>
-</item>
-<item>
-    <title>😮QHE(4)｜量子ホール効果からトポロジカル絶縁体、Chern-Simons理論とトポロジカル分類へ</title>
-    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/iqhe-ti-chern-simons/</link>
-    <pubDate>Tue, 30 Jun 2026 10:00:00 &#43;0800</pubDate>
-    <author>yzj5306@psu.edu (OkongOyangO)</author>
-    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/iqhe-ti-chern-simons/</guid>
-    <description><![CDATA[<p>凝縮系理論におけるトポロジーに触れてからすでに一年が経ち、断片的に多くの文献を読んできた。以下ではそれらを整理し、今後この分野に取り組むかもしれない読者のために、学習過程における主な流れを明確にしたいと思う。</p>
-<p>整数量子ホール効果は凝縮系に新たな分野を切り開いた。しかし、これは凝縮系におけるトポロジーの氷山の一角に過ぎない。IQHEは実際には<strong>二次元、ギャップ有り、相互作用無し、フェルミオン系、時間反転対称性（TRS）無し、粒子-正孔対称性（PHS、あるいは電荷共役対称性）無し、カイラル対称性無し</strong>の系におけるトポロジカル効果であることがわかるだろう。</p>]]></description>
-</item>
-<item>
     <title>🤪バルク・バウンダリー対応：Dirac方程式、Wilson Loop、エンタングルメント・スペクトル</title>
     <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/bulk-boundary-correspondence/</link>
     <pubDate>Mon, 29 Jun 2026 18:00:00 &#43;0800</pubDate>
@@ -55,6 +30,14 @@
     <author>yzj5306@psu.edu (OkongOyangO)</author>
     <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/chiral-graviton-in-fqhe/</guid>
     <description><![CDATA[<p>この記事は、分数量子ホール液体における「カイラル重力子（Chiral Graviton）」励起に関する理論と実験的検出方法を簡単に紹介し、最近の関連分野での熱い議論に「野次馬」的な素材を提供することを目的としています。筆者の能力には限りがありますので、専門家の皆様からのご指摘を歓迎します。</p>]]></description>
+</item>
+<item>
+    <title>🫠ツイスト二層グラフェンのフラットバンドとモアレ物理：魔法角の導出</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/moire-systems-tbg/</link>
+    <pubDate>Mon, 01 Jan 2024 10:00:00 &#43;0800</pubDate>
+    <author>yzj5306@psu.edu (OkongOyangO)</author>
+    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/moire-systems-tbg/</guid>
+    <description><![CDATA[<p>2018年、Cao Yuan神がNatureに一本の論文を送り込んで、ツイスト二層グラフェン（Twisted Bilayer Graphene, TBG）が世界に火をつけた。本稿ではTBGのBM連続モデルの構築を振り返り、フラットバンド形成の物理的メカニズムを分析し、魔角条件$\theta \approx 1.1^\circ$を理論的に導出する。</p>]]></description>
 </item>
 <item>
     <title>🤔基底状態だけで導体と絶縁体をどう区別するか？</title>
@@ -82,12 +65,28 @@
 <p>Hartree, Fock, BCSといった個々の平均場近似は、一見すると互いに相容れないdecouple（分離）手法のように見えますが、平均場近似の変分法的本質を利用することで、これらは実際に1:1:1で混ぜて使用できることがわかります。</p>]]></description>
 </item>
 <item>
+    <title>😤平均場近似と変分法｜Hartree、Fock、BCSは1:1:1で混合できるか？</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/mean-field-variational/</link>
+    <pubDate>Fri, 10 Mar 2023 10:00:00 &#43;0800</pubDate>
+    <author>yzj5306@psu.edu (OkongOyangO)</author>
+    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/mean-field-variational/</guid>
+    <description><![CDATA[<p>本稿は平均場近似を紹介するとともに、その変分法的本質を解説する。Hartree、Fock、BCSという三つの平均場近似は一見互いに相容れないdecouple法に見えるが、平均場近似の変分法的本質を利用すれば、これらを実際に1:1:1で混ぜて使うことができる。</p>]]></description>
+</item>
+<item>
     <title>🔥フェルミの黄金律？ただのジュール熱さ！</title>
     <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/joule_heat/</link>
     <pubDate>Tue, 07 Mar 2023 22:30:00 -0500</pubDate>
     <author>yzj5306@psu.edu (OkongOyangO)</author>
     <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/joule_heat/</guid>
     <description><![CDATA[<p>本文はフェルミの黄金律とジュール熱の整合性を説明することを目的としています。</p>]]></description>
+</item>
+<item>
+    <title>🥸久保公式の非線形応答理論</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/nonlinear-kubo-formalism/</link>
+    <pubDate>Tue, 07 Mar 2023 22:30:00 -0500</pubDate>
+    <author>yzj5306@psu.edu (OkongOyangO)</author>
+    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/nonlinear-kubo-formalism/</guid>
+    <description><![CDATA[<p>この記事は、久保公式の非線形応答理論を導出することを目的としています。</p>]]></description>
 </item>
 </channel>
 </rss>

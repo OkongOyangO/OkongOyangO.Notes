@@ -1,6 +1,6 @@
 ---
 title: "🤩量子幾何学（Quantum Geometry）：量子幾何テンソル入門"
-date: 2026-06-30T11:00:00+08:00
+date: 2022-11-05T10:00:00+08:00
 draft: false
 math: true
 tags: ["Quantum Geometry", "Fubini-Study Metric", "Berry Curvature", "Fractional Chern Insulator", "Condensed Matter"]

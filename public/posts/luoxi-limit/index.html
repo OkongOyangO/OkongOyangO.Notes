@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>😅Everyone&#39;s Doing Advanced Quantum Egyptology While I Just Want Earth to Blow Up? - OkongOyangO&#39;s Notes</title><meta name="Description" content="OkongOyangO&#39;s Notes on Condensed Matter Physics"><meta property="og:url" content="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/luoxi-limit/">
+  <meta property="og:site_name" content="OkongOyangO&#39;s Notes">
+  <meta property="og:title" content="😅Everyone&#39;s Doing Advanced Quantum Egyptology While I Just Want Earth to Blow Up?">
+  <meta property="og:description" content="In a rotating reference frame, centrifugal force pushes objects away from the rotation axis. So can we build a toy model within basic physics to calculate how fast Earth needs to spin to destroy itself? This article constructs a simple model computable with physics competition knowledge—the Luoxi Limit.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-09-07T10:00:00+08:00">
+    <meta property="article:modified_time" content="2022-09-07T10:00:00+08:00">
+    <meta property="article:tag" content="Planetary Physics">
+    <meta property="article:tag" content="Centrifugal Force">
+    <meta property="article:tag" content="Gravitational Binding">
+    <meta property="article:tag" content="Roche Limit">
+    <meta property="article:tag" content="Popular Science">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="😅Everyone&#39;s Doing Advanced Quantum Egyptology While I Just Want Earth to Blow Up?">
+  <meta name="twitter:description" content="In a rotating reference frame, centrifugal force pushes objects away from the rotation axis. So can we build a toy model within basic physics to calculate how fast Earth needs to spin to destroy itself? This article constructs a simple model computable with physics competition knowledge—the Luoxi Limit.">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/OkongOyangO.Notes/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/OkongOyangO.Notes/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/OkongOyangO.Notes/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/OkongOyangO.Notes/apple-touch-icon.png"><link rel="mask-icon" href="/OkongOyangO.Notes/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/OkongOyangO.Notes/site.webmanifest"><link rel="canonical" href="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/luoxi-limit/" /><link rel="prev" href="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/anderson-localization/" /><link rel="next" href="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/fqhe_faqhe_fci/" /><link rel="stylesheet" href="/OkongOyangO.Notes/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "😅Everyone's Doing Advanced Quantum Egyptology While I Just Want Earth to Blow Up?",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/posts\/luoxi-limit\/"
+        },"genre": "posts","keywords": "Planetary Physics, Centrifugal Force, Gravitational Binding, Roche Limit, Popular Science","wordcount":  493 ,
+        "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/posts\/luoxi-limit\/","datePublished": "2022-09-07T10:00:00+08:00","dateModified": "2022-09-07T10:00:00+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "OkongOyangO"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/OkongOyangO.Notes/" title="OkongOyangO&#39;s Notes">OkongOyangO&#39;s Notes</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item active" href="/OkongOyangO.Notes/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i> Posts </a><a class="menu-item" href="/OkongOyangO.Notes/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i> Theme
+                </a><a href="javascript:void(0);" class="menu-item language" title="Language">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i> Language
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/luoxi-limit/" selected>English</option><option value="/OkongOyangO.Notes/zh-cn/posts/luoxi-limit/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/luoxi-limit/">日本語</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/OkongOyangO.Notes/" title="OkongOyangO&#39;s Notes">OkongOyangO&#39;s Notes</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/OkongOyangO.Notes/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i>Posts</a><a class="menu-item" href="/OkongOyangO.Notes/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i>Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>Theme
+            </a><a href="javascript:void(0);" class="menu-item" title="Language">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>Language
+                    <select class="language-select" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/luoxi-limit/" selected>English</option><option value="/OkongOyangO.Notes/zh-cn/posts/luoxi-limit/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/luoxi-limit/">日本語</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">😅Everyone's Doing Advanced Quantum Egyptology While I Just Want Earth to Blow Up?</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/OkongOyangO.Notes/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">included in <a href="/OkongOyangO.Notes/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-09-07">2022-09-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;493 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#model-description">Model Description</a></li>
+    <li><a href="#computing-the-centrifugal-potential-energy">Computing the Centrifugal Potential Energy</a></li>
+    <li><a href="#computing-the-gravitational-self-energy">Computing the Gravitational Self-Energy</a></li>
+    <li><a href="#the-luoxi-limit">The Luoxi Limit</a></li>
+    <li><a href="#earths-demolition-time">Earth&rsquo;s Demolition Time</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>In a rotating reference frame, centrifugal force pushes objects away from the rotation axis. So can we build a toy model within basic physics to calculate how fast Earth needs to spin to destroy itself? This article constructs a simple model computable with physics competition knowledge—the Luoxi Limit.</p>
+<h2 id="model-description">Model Description</h2>
+<p>Consider a rotating celestial body in vacuum. Assume its shape deforms from a uniform sphere of radius $R$ into a <strong>uniform oblate spheroid</strong> with its short axis aligned with the rotation axis. The body is a homogeneous fluid with constant density and constant total volume.</p>
+<p><img
+        class="lazyload"
+        src="/OkongOyangO.Notes/svg/loading.min.svg"
+        data-src="https://pic4.zhimg.com/80/v2-351e3e048a5d82e96e21957e1073c45b.png"
+        data-srcset="https://pic4.zhimg.com/80/v2-351e3e048a5d82e96e21957e1073c45b.png, https://pic4.zhimg.com/80/v2-351e3e048a5d82e96e21957e1073c45b.png 1.5x, https://pic4.zhimg.com/80/v2-351e3e048a5d82e96e21957e1073c45b.png 2x"
+        data-sizes="auto"
+        alt="https://pic4.zhimg.com/80/v2-351e3e048a5d82e96e21957e1073c45b.png"
+        title="Image" /></p>
+<p>Typically, celestial bodies form from interstellar dust colliding and coalescing into gravitationally bound structures. Due to conservation of angular momentum throughout the process, the final body inevitably has some spin angular velocity. The interplay of gravity and rotation causes the body to flatten along the rotation axis—Earth itself has a larger equatorial radius and smaller polar radius.</p>
+<h2 id="computing-the-centrifugal-potential-energy">Computing the Centrifugal Potential Energy</h2>
+<p>Let the angular velocity be $\omega$, eccentricity $e$, and density $\rho$.</p>
+<p>The centrifugal potential energy of a volume element dV is $-\frac{1}{2}\rho \cdot dV\omega^{2}(x^{2} + y^{2})$.</p>
+<p>Using the ellipsoidal volume integral formula:</p>
+$$\int_{\Omega} x^{2} \mathrm{dV} = \frac{4\pi}{15}a^{3}bc$$<p>where the integration domain is a general ellipsoid $\{(x,y,z):\frac{x^{2}}{a^{2}} + \frac{y^{2}}{b^{2}} + \frac{z^{2}}{c^{2}} \leq 1\}$.</p>
+<p>The centrifugal potential energy is then:</p>
+$$W_{s} = -\frac{4\pi}{15}\rho\omega^{2}a^{4}b$$<p>The constant volume constraint:</p>
+$$\frac{4\pi}{3}R^{3} = \frac{4\pi}{3}a^{2}b = \frac{4\pi}{3}a^{3}\sqrt{1 - e^{2}}$$$$\Rightarrow \quad a = R(1 - e^{2})^{-1/6}$$<p>Thus:</p>
+$$W_{s} = -\frac{4\pi}{15}\rho\omega^{2}R^{5}(1 - e^{2})^{-1/3}$$<h2 id="computing-the-gravitational-self-energy">Computing the Gravitational Self-Energy</h2>
+<p>The gravitational self-energy of a uniform rotating ellipsoid is:</p>
+$$W_{g} = -\frac{3}{5}\frac{GM^{2}}{R}f(e)$$<p>where $f(e)$ is the ellipsoidal shape factor (a function of eccentricity $e$), and $f(0)=1$ corresponds to a sphere.</p>
+<p>For $e \ll 1$ (Earth&rsquo;s eccentricity is about 0.0034):</p>
+$$f(e) \approx 1 - \frac{2}{15}e^{2} + \mathcal{O}(e^{4})$$<h2 id="the-luoxi-limit">The Luoxi Limit</h2>
+<p>The total mechanical energy of the system is:</p>
+$$E_{total} = W_{s} + W_{g} + \frac{1}{2}I\omega^{2}$$<p>where $\frac{1}{2}I\omega^{2}$ is the rotational kinetic energy and $I = \frac{2}{5}MR^{2}$ is the moment of inertia (sphere approximation).</p>
+<p>The stability condition for the body is that $E_{total}$ as a function of $e$ has a minimum at $e=0$:</p>
+$$\left. \frac{\partial^{2} E_{total}}{\partial e^{2}} \right|_{e=0} \geq 0$$<p>This yields the critical angular velocity:</p>
+$$\omega_{c} \approx \sqrt{\frac{4\pi}{5}G\rho}$$<p>Considering the escape condition from the stellar surface, when centrifugal force equals gravitational force on surface material:</p>
+$$\omega^{2}R \approx \frac{GM}{R^{2}} = \frac{4\pi}{3}G\rho R$$$$\Rightarrow \quad \omega_{c} \approx \sqrt{\frac{4\pi}{3}G\rho}$$<p>Comparing the two—they&rsquo;re of the same order! This confirms that a body indeed breaks apart when the centrifugal force on its outer layers exceeds gravity.</p>
+<h2 id="earths-demolition-time">Earth&rsquo;s Demolition Time</h2>
+<p>Plugging in Earth&rsquo;s parameters: $\rho \approx 5.5 \times 10^{3}$ kg/m³, $G = 6.67 \times 10^{-11}$.</p>
+$$\omega_{c} \approx \sqrt{\frac{4\pi}{3} \times 6.67 \times 10^{-11} \times 5.5 \times 10^{3}} \approx 1.24 \times 10^{-3} \text{ rad/s}$$<p>Critical period:</p>
+$$T_{c} = \frac{2\pi}{\omega_{c}} \approx 1.4 \text{ hours}$$<p>Earth&rsquo;s current rotation period is 24 hours. So—if Earth spins about <strong>17 times</strong> faster (one revolution every ~1.4 hours), surface material would be flung off.</p>
+<blockquote>
+<p>Conclusion: Earth won&rsquo;t destroy itself from spinning too fast any time soon. Students can rest easy and focus on their qualifying exams.</p>
+</blockquote></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-09-07</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/luoxi-limit/" data-title="😅Everyone&#39;s Doing Advanced Quantum Egyptology While I Just Want Earth to Blow Up?" data-via="OkongOyangO" data-hashtags="Planetary Physics,Centrifugal Force,Gravitational Binding,Roche Limit,Popular Science"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/luoxi-limit/" data-title="😅Everyone&#39;s Doing Advanced Quantum Egyptology While I Just Want Earth to Blow Up?"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/luoxi-limit/" data-hashtag="Planetary Physics"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/luoxi-limit/" data-title="😅Everyone&#39;s Doing Advanced Quantum Egyptology While I Just Want Earth to Blow Up?"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/luoxi-limit/" data-title="😅Everyone&#39;s Doing Advanced Quantum Egyptology While I Just Want Earth to Blow Up?"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/luoxi-limit/" data-title="😅Everyone&#39;s Doing Advanced Quantum Egyptology While I Just Want Earth to Blow Up?"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/luoxi-limit/" data-title="😅Everyone&#39;s Doing Advanced Quantum Egyptology While I Just Want Earth to Blow Up?" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fOkongOyangO.github.io%2fOkongOyangO.Notes%2fposts%2fluoxi-limit%2f&amp;text=%f0%9f%98%85Everyone%27s%20Doing%20Advanced%20Quantum%20Egyptology%20While%20I%20Just%20Want%20Earth%20to%20Blow%20Up%3f" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/OkongOyangO.Notes/tags/planetary-physics/">Planetary Physics</a>,&nbsp;<a href="/OkongOyangO.Notes/tags/centrifugal-force/">Centrifugal Force</a>,&nbsp;<a href="/OkongOyangO.Notes/tags/gravitational-binding/">Gravitational Binding</a>,&nbsp;<a href="/OkongOyangO.Notes/tags/roche-limit/">Roche Limit</a>,&nbsp;<a href="/OkongOyangO.Notes/tags/popular-science/">Popular Science</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/OkongOyangO.Notes/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/OkongOyangO.Notes/posts/anderson-localization/" class="prev" rel="prev" title="🥴Anderson Localization"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>🥴Anderson Localization</a>
+            <a href="/OkongOyangO.Notes/posts/fqhe_faqhe_fci/" class="next" rel="next" title="🧐Fractional Quantum Hall Effect (FQHE), Fractional Anomalous Quantum Hall Effect (FAQHE) and Fractional Chern Insulator (FCI)">🧐Fractional Quantum Hall Effect (FQHE), Fractional Anomalous Quantum Hall Effect (FAQHE) and Fractional Chern Insulator (FCI)<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.154.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/OkongOyangO.Notes/" target="_blank">OkongOyangO</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/copy-tex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/mhchem.min.js"></script><script>window.config={"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/OkongOyangO.Notes/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/OkongOyangO.Notes/js/theme.min.js"></script></body>
+</html>

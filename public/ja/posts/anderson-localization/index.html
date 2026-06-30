@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>🥴アンダーソン局在 - OkongOyangOのノート</title><meta name="Description" content="O空O揚Oの物理学ノート"><meta property="og:url" content="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/anderson-localization/">
+  <meta property="og:site_name" content="OkongOyangOのノート">
+  <meta property="og:title" content="🥴アンダーソン局在">
+  <meta property="og:description" content="1958年、P. W. Andersonは先駆的論文において無秩序系における局在現象を提唱した：十分に強い無秩序は電子の波動関数を広がった状態から指数関数的に局在した状態へと変え、系を導体から絶縁体へと転移させる。この発見は半世紀以上にわたる局在研究の幕を開け、金属-絶縁体転移（MIT）と深く結びついている。">
+  <meta property="og:locale" content="ja">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-09-05T10:00:00+08:00">
+    <meta property="article:modified_time" content="2022-09-05T10:00:00+08:00">
+    <meta property="article:tag" content="Anderson Localization">
+    <meta property="article:tag" content="Disorder">
+    <meta property="article:tag" content="Metal-Insulator Transition">
+    <meta property="article:tag" content="Condensed Matter">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="🥴アンダーソン局在">
+  <meta name="twitter:description" content="1958年、P. W. Andersonは先駆的論文において無秩序系における局在現象を提唱した：十分に強い無秩序は電子の波動関数を広がった状態から指数関数的に局在した状態へと変え、系を導体から絶縁体へと転移させる。この発見は半世紀以上にわたる局在研究の幕を開け、金属-絶縁体転移（MIT）と深く結びついている。">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/OkongOyangO.Notes/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/OkongOyangO.Notes/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/OkongOyangO.Notes/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/OkongOyangO.Notes/apple-touch-icon.png"><link rel="mask-icon" href="/OkongOyangO.Notes/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/OkongOyangO.Notes/site.webmanifest"><link rel="canonical" href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/anderson-localization/" /><link rel="prev" href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/circular-dichroism-quantum-theory/" /><link rel="next" href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/luoxi-limit/" /><link rel="stylesheet" href="/OkongOyangO.Notes/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "🥴アンダーソン局在",
+        "inLanguage": "ja",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/ja\/posts\/anderson-localization\/"
+        },"genre": "posts","keywords": "Anderson Localization, Disorder, Metal-Insulator Transition, Condensed Matter","wordcount":  128 ,
+        "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/ja\/posts\/anderson-localization\/","datePublished": "2022-09-05T10:00:00+08:00","dateModified": "2022-09-05T10:00:00+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "OkongOyangO"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/OkongOyangO.Notes/ja/" title="OkongOyangOのノート">OkongOyangO&#39;s Notes</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item active" href="/OkongOyangO.Notes/ja/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i> 記事 </a><a class="menu-item" href="/OkongOyangO.Notes/ja/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i> タグ </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="検索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="クリア">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="テーマ">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i> テーマ
+                </a><a href="javascript:void(0);" class="menu-item language" title="言語">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i> 言語
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/anderson-localization/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/anderson-localization/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/anderson-localization/" selected>日本語</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/OkongOyangO.Notes/ja/" title="OkongOyangOのノート">OkongOyangO&#39;s Notes</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="検索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="クリア">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        キャンセル
+                    </a>
+                </div><a class="menu-item" href="/OkongOyangO.Notes/ja/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i>記事</a><a class="menu-item" href="/OkongOyangO.Notes/ja/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i>タグ</a><a href="javascript:void(0);" class="menu-item theme-switch" title="テーマ">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>テーマ
+            </a><a href="javascript:void(0);" class="menu-item" title="言語">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>言語
+                    <select class="language-select" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/anderson-localization/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/anderson-localization/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/anderson-localization/" selected>日本語</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目次</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">🥴アンダーソン局在</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/OkongOyangO.Notes/ja/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">included in <a href="/OkongOyangO.Notes/ja/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-09-05">2022-09-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;128 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目次</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#anderson局在の基本的物理像">Anderson局在の基本的物理像</a></li>
+    <li><a href="#anderson強束縛模型">Anderson強束縛模型</a></li>
+    <li><a href="#スケーリング理論scaling-theory">スケーリング理論（Scaling Theory）</a></li>
+    <li><a href="#弱局在weak-localization">弱局在（Weak Localization）</a></li>
+    <li><a href="#次元と局在">次元と局在</a>
+      <ul>
+        <li><a href="#完全局在">：完全局在</a></li>
+        <li><a href="#スケーリング理論の予言">：スケーリング理論の予言</a></li>
+        <li><a href="#anderson転移">：Anderson転移</a></li>
+      </ul>
+    </li>
+    <li><a href="#anderson局在と多体局在mbl">Anderson局在と多体局在（MBL）</a></li>
+    <li><a href="#実験的観測">実験的観測</a></li>
+    <li><a href="#まとめ">まとめ</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>1958年、P. W. Andersonは先駆的論文において無秩序系における局在現象を提唱した：十分に強い無秩序は電子の波動関数を広がった状態から指数関数的に局在した状態へと変え、系を導体から絶縁体へと転移させる。この発見は半世紀以上にわたる局在研究の幕を開け、金属-絶縁体転移（MIT）と深く結びついている。</p>
+<h2 id="anderson局在の基本的物理像">Anderson局在の基本的物理像</h2>
+<p>完全な周期格子においては、Blochの定理により電子の波動関数は広がった平面波であることが保証される。無秩序の導入は並進対称性を破壊し、電子は不純物ポテンシャルによる多重散乱を受ける。Andersonが提起した核心的な問いは：<strong>波動関数は多重散乱後も広がったまま維持されるのか？</strong></p>
+<p>答えは：<strong>無秩序の強さと次元に依存する</strong>。</p>
+<ul>
+<li><strong>強無秩序</strong>：次元$d$によらず、波動関数は局在化する——指数関数的に減衰する。</li>
+<li><strong>弱無秩序</strong>：$d=1,2$では、任意に弱い無秩序であっても局在化が生じる。$d=3$では無秩序が臨界値を超えた場合にのみ局在化が起こる。</li>
+</ul>
+<p>波動関数の局在化の形式は：</p>
+$$ |\psi(\mathbf{r})| \sim e^{-|\mathbf{r}-\mathbf{r}_0|/\xi} $$<p>ここで$\xi$は局在長である。相転移の臨界点において、$\xi$は発散する：</p>
+$$ \xi \sim |E - E_c|^{-\nu} $$<h2 id="anderson強束縛模型">Anderson強束縛模型</h2>
+<p>Andersonは強束縛模型を考え、サイトポテンシャルにランダム分布を導入した：</p>
+$$ H = -t \sum_{\langle ij\rangle} c_i^\dagger c_j + \sum_i \epsilon_i c_i^\dagger c_i $$<p>ここで$\epsilon_i$はランダムなサイトポテンシャルであり、通常は一様分布$\epsilon_i \in [-W/2, W/2]$を取る。無次元パラメータ$W/t$は無秩序の強さを表す。</p>
+<p>三次元系では、$W/t$が臨界値$(W/t)_c$を超えると、フェルミ準位におけるすべての状態が局在状態となる——Anderson転移が生じる。</p>
+<h2 id="スケーリング理論scaling-theory">スケーリング理論（Scaling Theory）</h2>
+<p>&ldquo;Gang of Four&rdquo;（Abrahams, Anderson, Licciardello, Ramakrishnan, 1979）によって提唱されたスケーリング理論は、Anderson局在を記述する画期的成果である。核心的なアイデアは無次元コンダクタンス$g$をスケーリング変数として用いることにある：</p>
+$$ g = \frac{G}{e^2/h} $$<p>スケーリング関数$\beta(g) = d\ln g / d\ln L$の振る舞い：</p>
+<ul>
+<li><strong>$d=1$</strong>：すべての$g$に対して$\beta(g) < 0$ → すべての状態が局在化、真の金属状態は存在しない</li>
+<li><strong>$d=2$</strong>：$\beta(g) \leq 0$ → 真の金属-絶縁体転移は存在しない（ただし議論あり）、弱無秩序下では弱局在</li>
+<li><strong>$d=3$</strong>：$\beta(g)$に不安定な固定点$g_c$が存在 → $g > g_c$では金属状態へ流れ、$g < g_c$では絶縁状態へ流れる</li>
+</ul>
+<h2 id="弱局在weak-localization">弱局在（Weak Localization）</h2>
+<p>弱無秩序金属状態（$g \gg g_c$）では、量子干渉効果によりコンダクタンスに対数補正が生じる（$d=2$）：</p>
+$$ \Delta \sigma = -\frac{e^2}{2\pi^2\hbar} \ln\left(\frac{\tau_\phi}{\tau}\right) $$<p>ここで$\tau_\phi$は位相緩和時間、$\tau$は弾性散乱時間である。</p>
+<p>弱局在の物理的本質は：電子の拡散経路とその時間反転経路との間の量子干渉が原点に戻る確率を増大させ、それによってコンダクタンスを低下させることにある。外部磁場を印加すると時間反転対称性が破壊され、弱局在は消失する——これが<strong>反弱局在</strong>（weak anti-localization）の起源であり、スピン-軌道結合系の特徴でもある。</p>
+<h2 id="次元と局在">次元と局在</h2>
+<h3 id="完全局在">$d=1$：完全局在</h3>
+<p>一次元系では任意に弱い無秩序でも局在が生じる。局在長$\xi$と平均自由行程$l$の間には簡単な関係がある：$\xi \sim l$。</p>
+<h3 id="スケーリング理論の予言">$d=2$：スケーリング理論の予言</h3>
+<p>二次元は境界次元（marginal dimension）である。弱局在は抵抗率の対数的温度依存性をもたらす。真の金属-絶縁体転移が存在するかどうかについては、いくつかの微妙な問題が残る（スピン-軌道結合、電子-電子相互作用などに関連して）。</p>
+<h3 id="anderson転移">$d=3$：Anderson転移</h3>
+<p>三次元系には真のAnderson転移が存在する。移動度端（mobility edge）$E_c$が広がった状態（$E > E_c$）と局在状態（$E < E_c$）を分ける。フェルミ準位が$E_c$を横切るとき、系は金属-絶縁体転移を起こす。</p>
+<h2 id="anderson局在と多体局在mbl">Anderson局在と多体局在（MBL）</h2>
+<p>Anderson局在は相互作用のない系における一粒子効果である。電子-電子相互作用を加えたとき、局在は生き残るのか？ 答えは：特定の条件下で可能である——これは<strong>多体局在</strong>（Many-Body Localization, MBL）と呼ばれる。</p>
+<p>MBLの主要な特徴：</p>
+<ul>
+<li>系は熱化しない——固有状態熱化仮説（ETH）を破る</li>
+<li>エンタングルメントエントロピーが面積則から対数増大へ変化する（$S \sim \ln t$）</li>
+<li>創発的可積分性（emergent integrability）とl-bits記述が存在する</li>
+</ul>
+<p>MBLは現在、物性物理学と量子情報の交差領域における研究のホットトピックである。</p>
+<h2 id="実験的観測">実験的観測</h2>
+<p>Anderson局在の実験的証拠には以下が含まれる：</p>
+<ul>
+<li>ドープ半導体における金属-絶縁体転移</li>
+<li>低温における二次元電子ガスの弱局在（磁気抵抗における負の磁気抵抗）</li>
+<li>冷却原子気体におけるAnderson局在（2008年に初めて直接観測）</li>
+<li>フォトニック結晶、音響メタマテリアルにおける古典波の局在</li>
+</ul>
+<h2 id="まとめ">まとめ</h2>
+<p>Anderson局在は量子波が無秩序媒質中で示す基本的な現象であり、量子干渉効果が輸送特性に決定的な影響を与えることを明らかにしている。スケーリング理論は統一的な次元依存記述を提供し、弱局在および多体局在はこの基本的な物理像の射程をさらに拡張している。</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-09-05</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/anderson-localization/" data-title="🥴アンダーソン局在" data-via="OkongOyangO" data-hashtags="Anderson Localization,Disorder,Metal-Insulator Transition,Condensed Matter"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/anderson-localization/" data-title="🥴アンダーソン局在"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/anderson-localization/" data-hashtag="Anderson Localization"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/anderson-localization/" data-title="🥴アンダーソン局在"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/anderson-localization/" data-title="🥴アンダーソン局在"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/anderson-localization/" data-title="🥴アンダーソン局在"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/anderson-localization/" data-title="🥴アンダーソン局在" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fOkongOyangO.github.io%2fOkongOyangO.Notes%2fja%2fposts%2fanderson-localization%2f&amp;text=%f0%9f%a5%b4%e3%82%a2%e3%83%b3%e3%83%80%e3%83%bc%e3%82%bd%e3%83%b3%e5%b1%80%e5%9c%a8" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/OkongOyangO.Notes/ja/tags/anderson-localization/">Anderson Localization</a>,&nbsp;<a href="/OkongOyangO.Notes/ja/tags/disorder/">Disorder</a>,&nbsp;<a href="/OkongOyangO.Notes/ja/tags/metal-insulator-transition/">Metal-Insulator Transition</a>,&nbsp;<a href="/OkongOyangO.Notes/ja/tags/condensed-matter/">Condensed Matter</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">戻る</a></span>&nbsp;|&nbsp;<span><a href="/OkongOyangO.Notes/ja/">ホーム</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/OkongOyangO.Notes/ja/posts/circular-dichroism-quantum-theory/" class="prev" rel="prev" title="😵円二色性（Circular Dichroism）の量子理論"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>😵円二色性（Circular Dichroism）の量子理論</a>
+            <a href="/OkongOyangO.Notes/ja/posts/luoxi-limit/" class="next" rel="next" title="😅みんな高度な量子エジプト学に夢中なのに、僕は地球を破壊したいだけ">😅みんな高度な量子エジプト学に夢中なのに、僕は地球を破壊したいだけ<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.154.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/OkongOyangO.Notes/ja/" target="_blank">OkongOyangO</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="トップへ戻る">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="コメントを見る">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/copy-tex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/mhchem.min.js"></script><script>window.config={"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/OkongOyangO.Notes/ja/index.json","maxResultLength":10,"noResultsFound":"結果が見つかりません","snippetLength":30,"type":"lunr"}};</script><script src="/OkongOyangO.Notes/js/theme.min.js"></script></body>
+</html>

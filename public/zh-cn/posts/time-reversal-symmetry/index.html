@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>😌一个哈密顿量，究竟有没有TRS的？ - OkongOyangO的物理笔记</title><meta name="Description" content="O空O扬O的物理笔记"><meta property="og:url" content="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/time-reversal-symmetry/">
+  <meta property="og:site_name" content="OkongOyangO的物理笔记">
+  <meta property="og:title" content="😌一个哈密顿量，究竟有没有TRS的？">
+  <meta property="og:description" content="时间反演对称性在TI学习里太common了以至于经常出现下述情况：第一页觉得结论很trivial，第二页就不知道结论从哪来的。本文系统地梳理了时间反演对称性（TRS）在量子力学和能带论中的具体表现形式。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2021-11-17T10:00:00+08:00">
+    <meta property="article:modified_time" content="2021-11-17T10:00:00+08:00">
+    <meta property="article:tag" content="Time-Reversal Symmetry">
+    <meta property="article:tag" content="Topological Insulator">
+    <meta property="article:tag" content="Kramers Degeneracy">
+    <meta property="article:tag" content="Condensed Matter">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="😌一个哈密顿量，究竟有没有TRS的？">
+  <meta name="twitter:description" content="时间反演对称性在TI学习里太common了以至于经常出现下述情况：第一页觉得结论很trivial，第二页就不知道结论从哪来的。本文系统地梳理了时间反演对称性（TRS）在量子力学和能带论中的具体表现形式。">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/OkongOyangO.Notes/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/OkongOyangO.Notes/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/OkongOyangO.Notes/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/OkongOyangO.Notes/apple-touch-icon.png"><link rel="mask-icon" href="/OkongOyangO.Notes/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/OkongOyangO.Notes/site.webmanifest"><link rel="canonical" href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/time-reversal-symmetry/" /><link rel="prev" href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/magnetism-in-solids/" /><link rel="next" href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/iqhe-ti-chern-simons/" /><link rel="stylesheet" href="/OkongOyangO.Notes/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "😌一个哈密顿量，究竟有没有TRS的？",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/zh-cn\/posts\/time-reversal-symmetry\/"
+        },"genre": "posts","keywords": "Time-Reversal Symmetry, Topological Insulator, Kramers Degeneracy, Condensed Matter","wordcount":  171 ,
+        "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/zh-cn\/posts\/time-reversal-symmetry\/","datePublished": "2021-11-17T10:00:00+08:00","dateModified": "2021-11-17T10:00:00+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "OkongOyangO"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/OkongOyangO.Notes/zh-cn/" title="OkongOyangO的物理笔记">OkongOyangO&#39;s Notes</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item active" href="/OkongOyangO.Notes/zh-cn/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i> 文章 </a><a class="menu-item" href="/OkongOyangO.Notes/zh-cn/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i> 标签 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i> 主题
+                </a><a href="javascript:void(0);" class="menu-item language" title="语言">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i> 语言
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/time-reversal-symmetry/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/time-reversal-symmetry/" selected>简体中文</option><option value="/OkongOyangO.Notes/ja/posts/time-reversal-symmetry/">日本語</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/OkongOyangO.Notes/zh-cn/" title="OkongOyangO的物理笔记">OkongOyangO&#39;s Notes</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/OkongOyangO.Notes/zh-cn/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i>文章</a><a class="menu-item" href="/OkongOyangO.Notes/zh-cn/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i>标签</a><a href="javascript:void(0);" class="menu-item theme-switch" title="主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>主题
+            </a><a href="javascript:void(0);" class="menu-item" title="语言">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>语言
+                    <select class="language-select" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/time-reversal-symmetry/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/time-reversal-symmetry/" selected>简体中文</option><option value="/OkongOyangO.Notes/ja/posts/time-reversal-symmetry/">日本語</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">😌一个哈密顿量，究竟有没有TRS的？</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/OkongOyangO.Notes/zh-cn/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">收录于 <a href="/OkongOyangO.Notes/zh-cn/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2021-11-17">2021-11-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 171 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#无自旋粒子的trs">无自旋粒子的TRS</a></li>
+    <li><a href="#有自旋粒子的trs">有自旋粒子的TRS</a></li>
+    <li><a href="#固体能带中的trs">固体能带中的TRS</a>
+      <ul>
+        <li><a href="#时间反演不变动量trim">时间反演不变动量（TRIM）</a></li>
+        <li><a href="#布里渊区中的berry曲率约束">布里渊区中的Berry曲率约束</a></li>
+      </ul>
+    </li>
+    <li><a href="#trs哈密顿量的构建方法">TRS哈密顿量的构建方法</a></li>
+    <li><a href="#自旋-轨道耦合中的trs">自旋-轨道耦合中的TRS</a></li>
+    <li><a href="#总结">总结</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>时间反演对称性在TI学习里太common了以至于经常出现下述情况：第一页觉得结论很trivial，第二页就不知道结论从哪来的。本文系统地梳理了时间反演对称性（TRS）在量子力学和能带论中的具体表现形式。</p>
+<h2 id="无自旋粒子的trs">无自旋粒子的TRS</h2>
+<p>时间反演操作$\Theta$在无自旋（spinless）系统中的作用即为复共轭：</p>
+$$ \Theta = K $$<p>其中$K$为复共轭算符。对于无自旋粒子的哈密顿量，TRS要求：</p>
+$$ \Theta H \Theta^{-1} = H \quad \Leftrightarrow \quad H^* = H $$<p>即哈密顿量矩阵元全为实数。对于Bloch Hamiltonian，这意味着：</p>
+$$ H(-\mathbf{k}) = H^*(\mathbf{k}) $$<h2 id="有自旋粒子的trs">有自旋粒子的TRS</h2>
+<p>对于自旋$1/2$粒子，时间反演算符为：</p>
+$$ \Theta = -i \sigma_y K $$<p>其中$\sigma_y$为Pauli矩阵。关键性质：</p>
+$$ \Theta^2 = -1 $$<p>这一性质导致了著名的<strong>Kramers简并</strong>：在TRS下，每个本征态至少二重简并。</p>
+<p>证明：若$|\psi\rangle$为$H$的本征态，则$\Theta|\psi\rangle$也是$H$的本征态且与$|\psi\rangle$正交：</p>
+$$ \langle \psi | \Theta \psi \rangle = \langle \Theta^2 \psi | \Theta \psi \rangle^* = -\langle \psi | \Theta \psi \rangle^* = 0 $$<h2 id="固体能带中的trs">固体能带中的TRS</h2>
+<p>在Bloch能带论中，TRS要求：</p>
+$$ \Theta H(\mathbf{k}) \Theta^{-1} = H(-\mathbf{k}) $$<p>这给出了能带关于$k=0$的镜像对称性：$E_n(\mathbf{k}) = E_n(-\mathbf{k})$。</p>
+<h3 id="时间反演不变动量trim">时间反演不变动量（TRIM）</h3>
+<p>在BZ中，满足$-\mathbf{k} = \mathbf{k} + \mathbf{G}$的动量点称为TRIM（Time-Reversal Invariant Momentum）。在2D正方晶格中有4个TRIM，3D中有8个。这些点上：</p>
+$$ H(\Gamma_i) = \Theta H(\Gamma_i) \Theta^{-1} $$<p>确保Kramers简并成立。</p>
+<h3 id="布里渊区中的berry曲率约束">布里渊区中的Berry曲率约束</h3>
+<p>TRS对Berry曲率施加了约束：</p>
+$$ F(-\mathbf{k}) = -F(\mathbf{k}) $$<p>这意味着在TRIM处Berry曲率为0（因为$F(\Gamma_i) = -F(\Gamma_i)$）。因此TRS系统的Chern number必然为0——TRS系统不能是Chern绝缘体。</p>
+<h2 id="trs哈密顿量的构建方法">TRS哈密顿量的构建方法</h2>
+<p>判断一个哈密顿量是否具有TRS，可以按以下步骤：</p>
+<ol>
+<li>
+<p><strong>写出时间反演算符的形式</strong>：根据系统是否含自旋确定$\Theta$</p>
+</li>
+<li>
+<p><strong>对Bloch Hamiltonian施加TRS条件</strong>：</p>
+</li>
+</ol>
+$$ \Theta H(\mathbf{k}) \Theta^{-1} = H(-\mathbf{k}) $$<ol start="3">
+<li><strong>展开为Pauli矩阵形式</strong>。以二能带系统为例：</li>
+</ol>
+$$ H(\mathbf{k}) = d_0(\mathbf{k}) \sigma_0 + \mathbf{d}(\mathbf{k}) \cdot \boldsymbol{\sigma} $$<p>TRS要求约束$d_i(\mathbf{k})$的对称性。对于spinless系统（$\Theta = K$）：</p>
+$$ \sigma_x \sigma_0 \sigma_x = \sigma_0 = \sigma_0^* $$<p>
+</p>
+$$ \sigma_x \sigma_x \sigma_x = \sigma_x = \sigma_x^* $$<p>
+</p>
+$$ \sigma_x \sigma_y \sigma_x = -\sigma_y = \sigma_y^* $$<p>
+</p>
+$$ \sigma_x \sigma_z \sigma_x = -\sigma_z $$<p>从而$d_y(\mathbf{k})$必须为0，$d_x, d_z$为偶函数。</p>
+<ol start="4">
+<li><strong>结合其它对称性</strong>。例如联合$C_{2z}\mathcal{T}$对称性在非互易输运中也有重要应用。</li>
+</ol>
+<h2 id="自旋-轨道耦合中的trs">自旋-轨道耦合中的TRS</h2>
+<p>在有自旋-轨道耦合的系统中，TRS表现为能带的自旋简并。Dresselhaus和Rashba自旋-轨道耦合都是TRS的（它们由结构反演不对称性产生，不破坏TRS）。</p>
+<p>TRS和反演对称性（IS）共存时，每个k点每个能带都是二重简并的（自旋简并）。这是因为$\mathcal{P}\Theta$组合对称性（$\mathcal{P}\Theta^2 = -1$）保证local Kramers degeneracy。</p>
+<h2 id="总结">总结</h2>
+<p>TRS是拓扑分类的三种基本对称性之一（与PHS、CS并列）。识别一个系统是否具有TRS，以及TRS带来的能带约束（Kramers简并、Berry曲率为奇函数、TRIM处的简并），是学习拓扑绝缘体和其他SPT相的基础。</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2021-11-17</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 X" data-sharer="x" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/time-reversal-symmetry/" data-title="😌一个哈密顿量，究竟有没有TRS的？" data-via="OkongOyangO" data-hashtags="Time-Reversal Symmetry,Topological Insulator,Kramers Degeneracy,Condensed Matter"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Threads" data-sharer="threads" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/time-reversal-symmetry/" data-title="😌一个哈密顿量，究竟有没有TRS的？"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/time-reversal-symmetry/" data-hashtag="Time-Reversal Symmetry"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/time-reversal-symmetry/" data-title="😌一个哈密顿量，究竟有没有TRS的？"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/time-reversal-symmetry/" data-title="😌一个哈密顿量，究竟有没有TRS的？"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/time-reversal-symmetry/" data-title="😌一个哈密顿量，究竟有没有TRS的？"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Diaspora" data-sharer="diaspora" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/time-reversal-symmetry/" data-title="😌一个哈密顿量，究竟有没有TRS的？" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fOkongOyangO.github.io%2fOkongOyangO.Notes%2fzh-cn%2fposts%2ftime-reversal-symmetry%2f&amp;text=%f0%9f%98%8c%e4%b8%80%e4%b8%aa%e5%93%88%e5%af%86%e9%a1%bf%e9%87%8f%ef%bc%8c%e7%a9%b6%e7%ab%9f%e6%9c%89%e6%b2%a1%e6%9c%89TRS%e7%9a%84%ef%bc%9f" target="_blank" title="分享到 Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/OkongOyangO.Notes/zh-cn/tags/time-reversal-symmetry/">Time-Reversal Symmetry</a>,&nbsp;<a href="/OkongOyangO.Notes/zh-cn/tags/topological-insulator/">Topological Insulator</a>,&nbsp;<a href="/OkongOyangO.Notes/zh-cn/tags/kramers-degeneracy/">Kramers Degeneracy</a>,&nbsp;<a href="/OkongOyangO.Notes/zh-cn/tags/condensed-matter/">Condensed Matter</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/OkongOyangO.Notes/zh-cn/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/OkongOyangO.Notes/zh-cn/posts/magnetism-in-solids/" class="prev" rel="prev" title="😊固体磁性"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>😊固体磁性</a>
+            <a href="/OkongOyangO.Notes/zh-cn/posts/iqhe-ti-chern-simons/" class="next" rel="next" title="😮QHE(4)｜从量子霍尔到拓扑绝缘体到Chern-Simons理论与拓扑分类">😮QHE(4)｜从量子霍尔到拓扑绝缘体到Chern-Simons理论与拓扑分类<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.154.3">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/OkongOyangO.Notes/zh-cn/" target="_blank">OkongOyangO</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="/OkongOyangO.Notes/lib/lunr/lunr.stemmer.support.min.js"></script><script src="/OkongOyangO.Notes/lib/lunr/lunr.zh.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/copy-tex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/mhchem.min.js"></script><script>window.config={"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/OkongOyangO.Notes/zh-cn/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/OkongOyangO.Notes/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":30,"type":"lunr"}};</script><script src="/OkongOyangO.Notes/js/theme.min.js"></script></body>
+</html>

@@ -8,6 +8,14 @@
     <language>ja</language>
     <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
     <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
+    <lastBuildDate>Fri, 10 Mar 2023 10:00:00 +0800</lastBuildDate>
     <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/hartree-fock/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>😤平均場近似と変分法｜Hartree、Fock、BCSは1:1:1で混合できるか？</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/mean-field-variational/</link>
+      <pubDate>Fri, 10 Mar 2023 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/mean-field-variational/</guid>
+      <description>&lt;p&gt;本稿は平均場近似を紹介するとともに、その変分法的本質を解説する。Hartree、Fock、BCSという三つの平均場近似は一見互いに相容れないdecouple法に見えるが、平均場近似の変分法的本質を利用すれば、これらを実際に1:1:1で混ぜて使うことができる。&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

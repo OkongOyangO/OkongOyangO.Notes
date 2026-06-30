@@ -1,6 +1,6 @@
 ---
 title: "😬KT相变note｜二维XY模型、拓扑涡旋与准长程序"
-date: 2026-06-30T15:00:00+08:00
+date: 2022-07-08T11:00:00+08:00
 draft: false
 math: true
 tags: ["KT Transition", "XY Model", "Topological Defect", "Vortex", "Condensed Matter"]

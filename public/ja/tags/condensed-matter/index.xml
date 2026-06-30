@@ -8,29 +8,8 @@
     <language>ja</language>
     <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
     <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
-    <lastBuildDate>Tue, 30 Jun 2026 12:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jun 2026 18:00:00 +0800</lastBuildDate>
     <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/condensed-matter/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>😵円二色性（Circular Dichroism）の量子理論</title>
-      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/circular-dichroism-quantum-theory/</link>
-      <pubDate>Tue, 30 Jun 2026 12:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
-      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/circular-dichroism-quantum-theory/</guid>
-      <description>&lt;p&gt;円二色性（Circular Dichroism, CD）は、分子のキラリティーを調べるための一般的な実験手法である。CDでは、物質による左円偏光と右円偏光の吸収の差を測定し、その差を物質のキラリティーを反映する指標として用いる。円偏光は空間中で螺旋状の電場形状を持ち、本質的にキラリティーを有しており、左・右円偏光が異なるキラリティーの物質と相互作用する際に違いが生じると考えられる。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>🤩量子幾何学（Quantum Geometry）：量子幾何テンソル入門</title>
-      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/quantum-geometry-in-fci/</link>
-      <pubDate>Tue, 30 Jun 2026 11:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
-      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/quantum-geometry-in-fci/</guid>
-      <description>&lt;p&gt;本ノートでは、Quantum Geometryの定義とその計算法を読者に迅速に習得させることを目的とする。Topologyは量子系の重要な性質であり、系の断熱変化における不変量を反映する。一方Geometryは系の詳細に着目する——量子状態間の「距離」を適切に記述する物理量を見つけることが、Quantum Geometryの中心問題である。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>😮QHE(4)｜量子ホール効果からトポロジカル絶縁体、Chern-Simons理論とトポロジカル分類へ</title>
-      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/iqhe-ti-chern-simons/</link>
-      <pubDate>Tue, 30 Jun 2026 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
-      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/iqhe-ti-chern-simons/</guid>
-      <description>&lt;p&gt;凝縮系理論におけるトポロジーに触れてからすでに一年が経ち、断片的に多くの文献を読んできた。以下ではそれらを整理し、今後この分野に取り組むかもしれない読者のために、学習過程における主な流れを明確にしたいと思う。&lt;/p&gt;&#xA;&lt;p&gt;整数量子ホール効果は凝縮系に新たな分野を切り開いた。しかし、これは凝縮系におけるトポロジーの氷山の一角に過ぎない。IQHEは実際には&lt;strong&gt;二次元、ギャップ有り、相互作用無し、フェルミオン系、時間反転対称性（TRS）無し、粒子-正孔対称性（PHS、あるいは電荷共役対称性）無し、カイラル対称性無し&lt;/strong&gt;の系におけるトポロジカル効果であることがわかるだろう。&lt;/p&gt;</description>
-    </item>
     <item>
       <title>🤪バルク・バウンダリー対応：Dirac方程式、Wilson Loop、エンタングルメント・スペクトル</title>
       <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/bulk-boundary-correspondence/</link>
@@ -65,6 +44,69 @@
       <pubDate>Sat, 11 Mar 2023 22:30:00 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
       <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/mean_field_approximation/</guid>
       <description>&lt;p&gt;本文は平均場近似を紹介すると同時に、その変分法的本質を説明することを目的としています。&lt;/p&gt;&#xA;&lt;p&gt;Hartree, Fock, BCSといった個々の平均場近似は、一見すると互いに相容れないdecouple（分離）手法のように見えますが、平均場近似の変分法的本質を利用することで、これらは実際に1:1:1で混ぜて使用できることがわかります。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>😤平均場近似と変分法｜Hartree、Fock、BCSは1:1:1で混合できるか？</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/mean-field-variational/</link>
+      <pubDate>Fri, 10 Mar 2023 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/mean-field-variational/</guid>
+      <description>&lt;p&gt;本稿は平均場近似を紹介するとともに、その変分法的本質を解説する。Hartree、Fock、BCSという三つの平均場近似は一見互いに相容れないdecouple法に見えるが、平均場近似の変分法的本質を利用すれば、これらを実際に1:1:1で混ぜて使うことができる。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>🤩量子幾何学（Quantum Geometry）：量子幾何テンソル入門</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/quantum-geometry-in-fci/</link>
+      <pubDate>Sat, 05 Nov 2022 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/quantum-geometry-in-fci/</guid>
+      <description>&lt;p&gt;本ノートでは、Quantum Geometryの定義とその計算法を読者に迅速に習得させることを目的とする。Topologyは量子系の重要な性質であり、系の断熱変化における不変量を反映する。一方Geometryは系の詳細に着目する——量子状態間の「距離」を適切に記述する物理量を見つけることが、Quantum Geometryの中心問題である。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>🥴アンダーソン局在</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/anderson-localization/</link>
+      <pubDate>Mon, 05 Sep 2022 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/anderson-localization/</guid>
+      <description>&lt;p&gt;1958年、P. W. Andersonは先駆的論文において無秩序系における局在現象を提唱した：十分に強い無秩序は電子の波動関数を広がった状態から指数関数的に局在した状態へと変え、系を導体から絶縁体へと転移させる。この発見は半世紀以上にわたる局在研究の幕を開け、金属-絶縁体転移（MIT）と深く結びついている。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>😵円二色性（Circular Dichroism）の量子理論</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/circular-dichroism-quantum-theory/</link>
+      <pubDate>Wed, 31 Aug 2022 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/circular-dichroism-quantum-theory/</guid>
+      <description>&lt;p&gt;円二色性（Circular Dichroism, CD）は、分子のキラリティーを調べるための一般的な実験手法である。CDでは、物質による左円偏光と右円偏光の吸収の差を測定し、その差を物質のキラリティーを反映する指標として用いる。円偏光は空間中で螺旋状の電場形状を持ち、本質的にキラリティーを有しており、左・右円偏光が異なるキラリティーの物質と相互作用する際に違いが生じると考えられる。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>😈非エルミート・ハミルトニアン、Liouvillian超演算子スペクトルと例外点入門</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/non-hermitian-liouvillian-ep/</link>
+      <pubDate>Wed, 20 Jul 2022 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/non-hermitian-liouvillian-ep/</guid>
+      <description>&lt;p&gt;本ノートでは、非エルミート（Non-Hermitian）量子物理における2つの中核的概念——Lindblad主方程式形式系におけるLiouvillian超演算子、および非エルミート行列に特有の例外点（Exceptional Points, EP）のスペクトル的特徴——について紹介する。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>😬KT転移：二次元XY模型、トポロジカル渦と準長距離秩序</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/kt-transition/</link>
+      <pubDate>Fri, 08 Jul 2022 11:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/kt-transition/</guid>
+      <description>&lt;p&gt;KT転移（Kosterlitz-Thouless Transition）は二次元系における特異なトポロジカル相転移である。通常の相転移と異なり、自発的対称性の破れに依存せず、トポロジカル欠陥——渦（vortex）の束縛-非束縛過程によって駆動される。本稿では二次元XY模型から出発し、KT転移の基本原理を解説する。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>😮QHE(4)｜量子ホール効果からトポロジカル絶縁体、Chern-Simons理論とトポロジカル分類へ</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/iqhe-ti-chern-simons/</link>
+      <pubDate>Fri, 10 Jun 2022 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/iqhe-ti-chern-simons/</guid>
+      <description>&lt;p&gt;凝縮系理論におけるトポロジーに触れてからすでに一年が経ち、断片的に多くの文献を読んできた。以下ではそれらを整理し、今後この分野に取り組むかもしれない読者のために、学習過程における主な流れを明確にしたいと思う。&lt;/p&gt;&#xA;&lt;p&gt;整数量子ホール効果は凝縮系に新たな分野を切り開いた。しかし、これは凝縮系におけるトポロジーの氷山の一角に過ぎない。IQHEは実際には&lt;strong&gt;二次元、ギャップ有り、相互作用無し、フェルミオン系、時間反転対称性（TRS）無し、粒子-正孔対称性（PHS、あるいは電荷共役対称性）無し、カイラル対称性無し&lt;/strong&gt;の系におけるトポロジカル効果であることがわかるだろう。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>😌ハミルトニアンにTRSはあるのか？時間反転対称性の実践ガイド</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/time-reversal-symmetry/</link>
+      <pubDate>Wed, 17 Nov 2021 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/time-reversal-symmetry/</guid>
+      <description>&lt;p&gt;時間反転対称性（TRS）はトポロジカル絶縁体の学習においてあまりにも一般的であるため、次のような状況が頻繁に生じる：最初のページでは結論が自明に思えても、次のページではその結論がどこから来たのか分からなくなる。本稿は時間反転対称性の量子力学およびバンド理論における具体的な現れ方を体系的に整理する。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>😊固体磁性</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/magnetism-in-solids/</link>
+      <pubDate>Sat, 25 Sep 2021 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/magnetism-in-solids/</guid>
+      <description>&lt;p&gt;固体磁性は固体物理の重要な一分野であり、結晶などの固体に外部磁場$B$をかけたときの内部の磁化強度$\mathcal{M} = \frac{\Sigma \mathbb{m}}{V}$や、磁化率$\chi = \frac{\mu_0 \mathcal{M}}{B}$などの性質を主に扱う。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

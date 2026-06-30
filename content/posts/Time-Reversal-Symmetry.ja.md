@@ -1,6 +1,6 @@
 ---
 title: "😌ハミルトニアンにTRSはあるのか？時間反転対称性の実践ガイド"
-date: 2026-06-30T16:00:00+08:00
+date: 2021-11-17T10:00:00+08:00
 draft: false
 math: true
 tags: ["Time-Reversal Symmetry", "Topological Insulator", "Kramers Degeneracy", "Condensed Matter"]

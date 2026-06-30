@@ -1,6 +1,6 @@
 ---
 title: "🥴アンダーソン局在"
-date: 2026-06-30T18:00:00+08:00
+date: 2022-09-05T10:00:00+08:00
 draft: false
 math: true
 tags: ["Anderson Localization", "Disorder", "Metal-Insulator Transition", "Condensed Matter"]

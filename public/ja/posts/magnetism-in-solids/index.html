@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>😊固体磁性 - OkongOyangOのノート</title><meta name="Description" content="O空O揚Oの物理学ノート"><meta property="og:url" content="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/magnetism-in-solids/">
+  <meta property="og:site_name" content="OkongOyangOのノート">
+  <meta property="og:title" content="😊固体磁性">
+  <meta property="og:description" content="固体磁性は固体物理の重要な一分野であり、結晶などの固体に外部磁場$B$をかけたときの内部の磁化強度$\mathcal{M} = \frac{\Sigma \mathbb{m}}{V}$や、磁化率$\chi = \frac{\mu_0 \mathcal{M}}{B}$などの性質を主に扱う。">
+  <meta property="og:locale" content="ja">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2021-09-25T10:00:00+08:00">
+    <meta property="article:modified_time" content="2021-09-25T10:00:00+08:00">
+    <meta property="article:tag" content="Magnetism">
+    <meta property="article:tag" content="Solid State Physics">
+    <meta property="article:tag" content="Paramagnetism">
+    <meta property="article:tag" content="Ferromagnetism">
+    <meta property="article:tag" content="Condensed Matter">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="😊固体磁性">
+  <meta name="twitter:description" content="固体磁性は固体物理の重要な一分野であり、結晶などの固体に外部磁場$B$をかけたときの内部の磁化強度$\mathcal{M} = \frac{\Sigma \mathbb{m}}{V}$や、磁化率$\chi = \frac{\mu_0 \mathcal{M}}{B}$などの性質を主に扱う。">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/OkongOyangO.Notes/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/OkongOyangO.Notes/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/OkongOyangO.Notes/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/OkongOyangO.Notes/apple-touch-icon.png"><link rel="mask-icon" href="/OkongOyangO.Notes/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/OkongOyangO.Notes/site.webmanifest"><link rel="canonical" href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/magnetism-in-solids/" /><link rel="next" href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/time-reversal-symmetry/" /><link rel="stylesheet" href="/OkongOyangO.Notes/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "😊固体磁性",
+        "inLanguage": "ja",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/ja\/posts\/magnetism-in-solids\/"
+        },"genre": "posts","keywords": "Magnetism, Solid State Physics, Paramagnetism, Ferromagnetism, Condensed Matter","wordcount":  256 ,
+        "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/ja\/posts\/magnetism-in-solids\/","datePublished": "2021-09-25T10:00:00+08:00","dateModified": "2021-09-25T10:00:00+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "OkongOyangO"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/OkongOyangO.Notes/ja/" title="OkongOyangOのノート">OkongOyangO&#39;s Notes</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item active" href="/OkongOyangO.Notes/ja/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i> 記事 </a><a class="menu-item" href="/OkongOyangO.Notes/ja/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i> タグ </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="検索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="クリア">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="テーマ">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i> テーマ
+                </a><a href="javascript:void(0);" class="menu-item language" title="言語">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i> 言語
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/magnetism-in-solids/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/magnetism-in-solids/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/magnetism-in-solids/" selected>日本語</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/OkongOyangO.Notes/ja/" title="OkongOyangOのノート">OkongOyangO&#39;s Notes</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="検索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="クリア">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        キャンセル
+                    </a>
+                </div><a class="menu-item" href="/OkongOyangO.Notes/ja/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i>記事</a><a class="menu-item" href="/OkongOyangO.Notes/ja/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i>タグ</a><a href="javascript:void(0);" class="menu-item theme-switch" title="テーマ">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>テーマ
+            </a><a href="javascript:void(0);" class="menu-item" title="言語">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>言語
+                    <select class="language-select" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/magnetism-in-solids/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/magnetism-in-solids/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/magnetism-in-solids/" selected>日本語</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目次</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">😊固体磁性</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/OkongOyangO.Notes/ja/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">included in <a href="/OkongOyangO.Notes/ja/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2021-09-25">2021-09-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;256 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目次</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#磁性の分類">磁性の分類</a>
+      <ul>
+        <li><a href="#単原子イオン磁気モーメント効果が小さい">単原子（イオン）磁気モーメント効果（が小さい）</a></li>
+        <li><a href="#多原子イオン効果が大きく特異">多原子（イオン）効果（が大きく特異）</a></li>
+      </ul>
+    </li>
+    <li><a href="#固体磁性の歴史と量子力学的基础">固体磁性の歴史と量子力学的基础</a>
+      <ul>
+        <li><a href="#原子磁気モーメントの起源">原子磁気モーメントの起源</a></li>
+        <li><a href="#hundの規則">Hundの規則</a></li>
+      </ul>
+    </li>
+    <li><a href="#常磁性とbrillouin関数">常磁性とBrillouin関数</a></li>
+    <li><a href="#強磁性とweiss分子場理論">強磁性とWeiss分子場理論</a></li>
+    <li><a href="#反強磁性とスピン波">反強磁性とスピン波</a></li>
+    <li><a href="#まとめ">まとめ</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>固体磁性は固体物理の重要な一分野であり、結晶などの固体に外部磁場$B$をかけたときの内部の磁化強度$\mathcal{M} = \frac{\Sigma \mathbb{m}}{V}$や、磁化率$\chi = \frac{\mu_0 \mathcal{M}}{B}$などの性質を主に扱う。</p>
+<h2 id="磁性の分類">磁性の分類</h2>
+<h3 id="単原子イオン磁気モーメント効果が小さい">単原子（イオン）磁気モーメント効果（$\chi$が小さい）</h3>
+<p>単一の原子（イオン）磁気モーメントのみを考え、モーメント間の相互作用を無視すると、その磁気的性質は常磁性と反磁性に分けられる。磁場がないときの基底状態は、磁気モーメントがランダムに配列した状態である。</p>
+<ul>
+<li>
+<p><strong>常磁性</strong> $\chi > 0$。電子スピンや軌道角運動量などが外部磁場のもとで$B$方向に揃おうとする傾向により、常磁性が生じる。</p>
+</li>
+<li>
+<p><strong>反磁性</strong> $\chi < 0$。誘起された磁気モーメントは$B$と逆向きになろうとする傾向があり、反磁性を生じる。</p>
+</li>
+</ul>
+<h3 id="多原子イオン効果が大きく特異">多原子（イオン）効果（$\chi$が大きく特異）</h3>
+<p>強磁性などより顕著な磁気的性質を考えるには、磁気モーメント間の相互作用が必要となる。このとき基底状態は磁気モーメントが秩序配列した状態であり、単純なものでは同じ向きに揃った配列、複雑なものではスピンカイラリティなどが見られる。</p>
+<ul>
+<li>
+<p><strong>強磁性</strong>。磁気モーメント間の相互作用により、モーメントは平行に配列しようとする。常磁性-強磁性相転移が存在し、キュリー-ワイスの法則で記述される：
+$T < T_c$ では自発磁化が生じ、$B = 0$ で $M \neq 0$ の強磁性状態となる；
+$T > T_c$ では $\chi = \frac{C}{T - T_c}$ の常磁性状態となる。</p>
+</li>
+<li>
+<p><strong>反強磁性</strong>。磁気モーメント間の相互作用により、モーメントは反平行に配列しようとする。常磁性-反強磁性相転移が存在し、ネールの法則で記述される：
+$T < T_c$ では自発的な反平行配列が生じる；
+$T > T_c$ では $\chi = \frac{C}{T + T_N}$ の常磁性状態となる。</p>
+</li>
+<li>
+<p><strong>フェリ磁性</strong>。反平行だが磁気モーメントが完全には打ち消し合わない磁気秩序。</p>
+</li>
+</ul>
+<h2 id="固体磁性の歴史と量子力学的基础">固体磁性の歴史と量子力学的基础</h2>
+<p>固体磁性の研究は量子力学が誕生する以前にまで遡る。Langevinは永久双極子の仮定を通じて常磁性の説明を与えたが、永久双極子という仮定そのものが古典力学と矛盾していた。さらに、古典的な熱平衡状態では系全体が磁性を示すことは許されない。</p>
+<p>これらの矛盾は量子力学が登場してようやく解決された。量子力学によって、永久磁気モーメントモデルは粒子の内在的スピンや定常状態の軌道角運動量などに依存して存在可能となり、基底状態（平衡状態）のエネルギー解析によって誘起磁気モーメントの効果もうまく説明できるようになった。</p>
+<h3 id="原子磁気モーメントの起源">原子磁気モーメントの起源</h3>
+<p>原子磁気モーメントは主に三つの要因から生じる：</p>
+<ol>
+<li>
+<p><strong>電子スピン磁気モーメント</strong>。電子の内在的スピン$s = 1/2$が磁気モーメント$\boldsymbol{\mu}_s = -g_s \mu_B \mathbf{s}$を生み出す。ここで$g_s \approx 2$、$\mu_B = e\hbar/2m_e$はボーア磁子である。</p>
+</li>
+<li>
+<p><strong>電子軌道磁気モーメント</strong>。電子の原子核周りの軌道角運動量$\mathbf{l}$が磁気モーメント$\boldsymbol{\mu}_l = -\mu_B \mathbf{l}$を生み出す。</p>
+</li>
+<li>
+<p><strong>核スピン磁気モーメント</strong>。核スピンも磁気モーメントを生み出すが、核磁子$\mu_N \ll \mu_B$であり、通常は無視できる。</p>
+</li>
+</ol>
+<h3 id="hundの規則">Hundの規則</h3>
+<p>多電子原子において、基底状態の電子配置はHundの規則によって決まる：</p>
+<ol>
+<li><strong>第1Hund規則</strong>：全スピン$S$を最大にする（スピンは可能な限り平行になる）。</li>
+<li><strong>第2Hund規則</strong>：第1規則を満たした上で、全軌道角運動量$L$を最大にする。</li>
+<li><strong>第3Hund規則</strong>：スピン-軌道結合を考慮すると、殻が半填充未満のとき$J = |L-S|$、半填充を超えるとき$J = L+S$となる。</li>
+</ol>
+<h2 id="常磁性とbrillouin関数">常磁性とBrillouin関数</h2>
+<p>全角運動量$J$を持つ原子が外部磁場$B$中にあるとき、そのHamiltonianは：</p>
+$$ \hat{H} = - \boldsymbol{\mu} \cdot \mathbf{B} = g_J \mu_B \mathbf{J} \cdot \mathbf{B} $$<p>ここで$g_J$はLandé g因子である：</p>
+$$ g_J = 1 + \frac{J(J+1) + S(S+1) - L(L+1)}{2J(J+1)} $$<p>分配関数は：</p>
+$$ Z = \sum_{m_J=-J}^{J} e^{g_J \mu_B m_J B / k_B T} = \frac{\sinh\left[(2J+1)x/2\right]}{\sinh(x/2)} $$<p>ただし$x = g_J \mu_B B / k_B T$である。これより磁化強度は：</p>
+$$ M = n g_J \mu_B J B_J(x) $$<p>ここで$B_J(x)$はBrillouin関数：</p>
+$$ B_J(x) = \frac{2J+1}{2J}\coth\left(\frac{2J+1}{2J}x\right) - \frac{1}{2J}\coth\left(\frac{x}{2J}\right) $$<p>高温・弱磁場極限（$x \ll 1$）では、$B_J(x) \approx \frac{J+1}{3J}x$と展開でき、キュリーの法則が得られる：</p>
+$$ \chi = \frac{n \mu_0 (g_J \mu_B)^2 J(J+1)}{3k_B T} = \frac{C}{T} $$<h2 id="強磁性とweiss分子場理論">強磁性とWeiss分子場理論</h2>
+<p>Weissは強磁性体中に「分子場」（molecular field）が存在し、それが磁化強度に比例すると提唱した：</p>
+$$ \mathbf{B}_{eff} = \mathbf{B}_{ext} + \lambda \mu_0 \mathbf{M} $$<p>ここで$\lambda$は分子場定数である。$B_{eff}$をBrillouin関数に代入すると、自己無撞着方程式は：</p>
+$$ M = n g_J \mu_B J B_J\left(\frac{g_J \mu_B J (B_{ext} + \lambda \mu_0 M)}{k_B T}\right) $$<p>$B_{ext} = 0$のとき、$T < T_c$では非ゼロ解が存在し、すなわち自発磁化が生じる。キュリー温度は次式で与えられる：</p>
+$$ T_c = \frac{n \lambda \mu_0 (g_J \mu_B)^2 J(J+1)}{3k_B} $$<p>$T > T_c$では、$\chi$はキュリー-ワイスの法則に従う：</p>
+$$ \chi = \frac{C}{T - T_c} $$<h2 id="反強磁性とスピン波">反強磁性とスピン波</h2>
+<p>反強磁性体の秩序変数はstaggered magnetization $\mathbf{M}_s = \mathbf{M}_A - \mathbf{M}_B$であり、ここで$A$と$B$は二つの副格子である。$T = 0$では$\mathbf{M}_s$は最大値を取り、温度が上昇すると熱揺らぎがスピン波（マグノン）を励起し、$\mathbf{M}_s$は減少する。</p>
+<p>スピン波の分散関係は長波長極限で：</p>
+$$ \omega_k \propto k^2 \quad \text{（強磁性体）} $$<p>
+</p>
+$$ \omega_k \propto k \quad \text{（反強磁性体）} $$<p>低温における磁化強度と温度の関係はBlochの$T^{3/2}$則：</p>
+$$ M(T) = M(0) \left[1 - \alpha \left(\frac{T}{T_c}\right)^{3/2}\right] $$<h2 id="まとめ">まとめ</h2>
+<p>固体磁性は、単イオン効果（常磁性、反磁性）から集団効果（強磁性、反強磁性）に至るまで、その理論は古典的なLangevinモデルからWeissの分子場理論、さらに量子力学に基づくスピン波理論へと発展してきた。現代の磁性研究では、トポロジカルスピン構造（スキルミオンなど）、フラストレート磁性、量子スピン液体などがフロンティアとなっている。</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2021-09-25</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/magnetism-in-solids/" data-title="😊固体磁性" data-via="OkongOyangO" data-hashtags="Magnetism,Solid State Physics,Paramagnetism,Ferromagnetism,Condensed Matter"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/magnetism-in-solids/" data-title="😊固体磁性"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/magnetism-in-solids/" data-hashtag="Magnetism"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/magnetism-in-solids/" data-title="😊固体磁性"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/magnetism-in-solids/" data-title="😊固体磁性"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/magnetism-in-solids/" data-title="😊固体磁性"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/magnetism-in-solids/" data-title="😊固体磁性" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fOkongOyangO.github.io%2fOkongOyangO.Notes%2fja%2fposts%2fmagnetism-in-solids%2f&amp;text=%f0%9f%98%8a%e5%9b%ba%e4%bd%93%e7%a3%81%e6%80%a7" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/OkongOyangO.Notes/ja/tags/magnetism/">Magnetism</a>,&nbsp;<a href="/OkongOyangO.Notes/ja/tags/solid-state-physics/">Solid State Physics</a>,&nbsp;<a href="/OkongOyangO.Notes/ja/tags/paramagnetism/">Paramagnetism</a>,&nbsp;<a href="/OkongOyangO.Notes/ja/tags/ferromagnetism/">Ferromagnetism</a>,&nbsp;<a href="/OkongOyangO.Notes/ja/tags/condensed-matter/">Condensed Matter</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">戻る</a></span>&nbsp;|&nbsp;<span><a href="/OkongOyangO.Notes/ja/">ホーム</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+            <a href="/OkongOyangO.Notes/ja/posts/time-reversal-symmetry/" class="next" rel="next" title="😌ハミルトニアンにTRSはあるのか？時間反転対称性の実践ガイド">😌ハミルトニアンにTRSはあるのか？時間反転対称性の実践ガイド<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.154.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/OkongOyangO.Notes/ja/" target="_blank">OkongOyangO</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="トップへ戻る">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="コメントを見る">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/copy-tex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/mhchem.min.js"></script><script>window.config={"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/OkongOyangO.Notes/ja/index.json","maxResultLength":10,"noResultsFound":"結果が見つかりません","snippetLength":30,"type":"lunr"}};</script><script src="/OkongOyangO.Notes/js/theme.min.js"></script></body>
+</html>

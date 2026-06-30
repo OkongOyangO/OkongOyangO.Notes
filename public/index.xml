@@ -4,34 +4,9 @@
         <link>https://OkongOyangO.github.io/OkongOyangO.Notes/</link>
         <description>OkongOyangO&#39;s Notes on Condensed Matter Physics</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
-            <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster><lastBuildDate>Tue, 30 Jun 2026 12:00:00 &#43;0800</lastBuildDate>
+            <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster><lastBuildDate>Mon, 29 Jun 2026 18:00:00 &#43;0800</lastBuildDate>
             <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title>😵Quantum Theory of Circular Dichroism</title>
-    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/circular-dichroism-quantum-theory/</link>
-    <pubDate>Tue, 30 Jun 2026 12:00:00 &#43;0800</pubDate>
-    <author>yzj5306@psu.edu (OkongOyangO)</author>
-    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/circular-dichroism-quantum-theory/</guid>
-    <description><![CDATA[<p>Circular Dichroism (CD) is a common experimental technique for studying molecular chirality. CD measures the difference in absorption of left- and right-circularly polarized light by a sample, serving as a probe of its chirality. Circularly polarized light has a helical electric field geometry in space, which is inherently chiral, so it stands to reason that left- and right-circularly polarized light would interact differently with chiral substances.</p>]]></description>
-</item>
-<item>
-    <title>🤩Quantum Geometry: A Hands-on Introduction to the Quantum Geometric Tensor</title>
-    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/quantum-geometry-in-fci/</link>
-    <pubDate>Tue, 30 Jun 2026 11:00:00 &#43;0800</pubDate>
-    <author>yzj5306@psu.edu (OkongOyangO)</author>
-    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/quantum-geometry-in-fci/</guid>
-    <description><![CDATA[<p>This note aims to quickly get readers up to speed with the definition and computation of Quantum Geometry. Topology is an essential property of quantum systems, capturing invariants under adiabatic changes of parameters, while Geometry focuses on the fine details—finding a proper physical quantity that characterizes the &ldquo;distance&rdquo; between quantum states is the central problem of Quantum Geometry.</p>]]></description>
-</item>
-<item>
-    <title>😮QHE(4)｜From Quantum Hall to Topological Insulator to Chern-Simons Theory and Topological Classification</title>
-    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/iqhe-ti-chern-simons/</link>
-    <pubDate>Tue, 30 Jun 2026 10:00:00 &#43;0800</pubDate>
-    <author>yzj5306@psu.edu (OkongOyangO)</author>
-    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/iqhe-ti-chern-simons/</guid>
-    <description><![CDATA[<p>It has been a year since I first encountered topology in condensed matter theory. I have read quite a bit of literature here and there, and I would like to organize my thoughts below, hoping to clarify some of the main threads in the learning process for readers who may be entering this field in the future.</p>
-<p>The integer quantum Hall effect opened up a new frontier for condensed matter physics. However, this is only the tip of the iceberg when it comes to topology in condensed matter. As we will see, IQHE is in fact a topological effect of a system that is <strong>two-dimensional, gapped, non-interacting, fermionic, without time-reversal symmetry (TRS), without particle-hole symmetry (PHS, or charge conjugate symmetry), and without chiral symmetry</strong>.</p>]]></description>
-</item>
-<item>
     <title>🤪Bulk-Boundary Correspondence: Dirac Equation, Wilson Loop, and Entanglement Spectra</title>
     <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/bulk-boundary-correspondence/</link>
     <pubDate>Mon, 29 Jun 2026 18:00:00 &#43;0800</pubDate>
@@ -55,6 +30,14 @@
     <author>yzj5306@psu.edu (OkongOyangO)</author>
     <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/chiral-graviton-in-fqhe/</guid>
     <description><![CDATA[<p>This article aims to briefly introduce the theoretical and experimental detection methods related to &ldquo;chiral graviton&rdquo; excitations in fractional quantum Hall liquids, providing material for the recent heated discussions in related fields. My ability is limited, so I welcome any corrections from experts.</p>]]></description>
+</item>
+<item>
+    <title>🫠Twisted Bilayer Graphene Flat Bands &amp; Moiré Physics: Deriving the Magic Angle</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/moire-systems-tbg/</link>
+    <pubDate>Mon, 01 Jan 2024 10:00:00 &#43;0800</pubDate>
+    <author>yzj5306@psu.edu (OkongOyangO)</author>
+    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/moire-systems-tbg/</guid>
+    <description><![CDATA[<p>In 2018, Cao Yuan dropped a Nature paper on us gifting the world Twisted Bilayer Graphene (TBG). This article reviews the BM continuum model for TBG, analyzes the physics of flat band formation, and theoretically derives the magic angle condition $\theta \approx 1.1^\circ$.</p>]]></description>
 </item>
 <item>
     <title>🤔How to Distinguish Conductors and Insulators by Ground State Only? </title>
@@ -82,12 +65,28 @@
 <p>Hartree, Fock, and BCS—these individual mean field approximations appear to be mutually incompatible decoupling methods. However, by leveraging the variational nature of the mean field approximation, we discover that they can indeed be mixed 1:1:1.</p>]]></description>
 </item>
 <item>
+    <title>😤Mean Field Approximation &amp; Variational Method: Can Hartree, Fock, and BCS Be Mixed 1:1:1?</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/mean-field-variational/</link>
+    <pubDate>Fri, 10 Mar 2023 10:00:00 &#43;0800</pubDate>
+    <author>yzj5306@psu.edu (OkongOyangO)</author>
+    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/mean-field-variational/</guid>
+    <description><![CDATA[<p>This article aims to introduce the mean-field approximation while explaining its variational essence. Hartree, Fock, and BCS—these three mean-field approximations may seem like mutually incompatible decoupling schemes, but by recognizing the variational nature of the mean-field approximation, we find that they can indeed be mixed 1:1:1.</p>]]></description>
+</item>
+<item>
     <title>🔥Fermi Golden Rule? Just Joule Heat!</title>
     <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/joule_heat/</link>
     <pubDate>Tue, 07 Mar 2023 22:30:00 -0500</pubDate>
     <author>yzj5306@psu.edu (OkongOyangO)</author>
     <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/joule_heat/</guid>
     <description><![CDATA[<p>This article aims to clarify the consistency between Fermi&rsquo;s Golden Rule and Joule Heat.</p>]]></description>
+</item>
+<item>
+    <title>🥸Nonlinear Response Theory of the Kubo Formula</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/nonlinear-kubo-formalism/</link>
+    <pubDate>Tue, 07 Mar 2023 22:30:00 -0500</pubDate>
+    <author>yzj5306@psu.edu (OkongOyangO)</author>
+    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/nonlinear-kubo-formalism/</guid>
+    <description><![CDATA[<p>This article aims to derive the nonlinear response theory of the Kubo Formula.</p>]]></description>
 </item>
 </channel>
 </rss>

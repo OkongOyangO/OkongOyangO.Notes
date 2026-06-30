@@ -8,21 +8,21 @@
     <language>zh-CN</language>
     <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
     <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
-    <lastBuildDate>Tue, 30 Jun 2026 10:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 13 May 2023 10:00:00 -0500</lastBuildDate>
     <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/berry-phase/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>😮QHE(4)｜从量子霍尔到拓扑绝缘体到Chern-Simons理论与拓扑分类</title>
-      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/iqhe-ti-chern-simons/</link>
-      <pubDate>Tue, 30 Jun 2026 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
-      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/iqhe-ti-chern-simons/</guid>
-      <description>&lt;p&gt;距离接触凝聚态理论中的拓扑已经过去一年，零零碎碎读了不少文献，下面想做一个梳理，试图为今后可能要接触这一领域的读者，理清一些学习过程中的主线。&lt;/p&gt;&#xA;&lt;p&gt;整数量子霍尔效应为凝聚态开启了一个新的领域，然而这只是拓扑在凝聚态中的冰山一角，我们将看到，IQHE事实上是**二维的、有能隙的、无相互作用的、费米的、无时间反演对称性（TRS，Time-Reversal Symmetry）、无粒子-空穴对称性（PHS，或Charge Conjugate Symmetry）、无手性对称性（Chiral Symmetry）**的系统的拓扑效应。&lt;/p&gt;</description>
-    </item>
     <item>
       <title>🫨最局域万尼尔函数与量子几何</title>
       <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/maximally_localized_wannier_function_and_quantum_geometry/</link>
       <pubDate>Sat, 13 May 2023 10:00:00 -0500</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
       <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/maximally_localized_wannier_function_and_quantum_geometry/</guid>
       <description>&lt;p&gt;本note简述最大局域化Wannier函数（Maximally Localized Wannier Function）的规范选取问题，并讨论量子几何（Quantum Geometry）如何限制其局域程度。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>😮QHE(4)｜从量子霍尔到拓扑绝缘体到Chern-Simons理论与拓扑分类</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/iqhe-ti-chern-simons/</link>
+      <pubDate>Fri, 10 Jun 2022 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/iqhe-ti-chern-simons/</guid>
+      <description>&lt;p&gt;距离接触凝聚态理论中的拓扑已经过去一年，零零碎碎读了不少文献，下面想做一个梳理，试图为今后可能要接触这一领域的读者，理清一些学习过程中的主线。&lt;/p&gt;&#xA;&lt;p&gt;整数量子霍尔效应为凝聚态开启了一个新的领域，然而这只是拓扑在凝聚态中的冰山一角，我们将看到，IQHE事实上是**二维的、有能隙的、无相互作用的、费米的、无时间反演对称性（TRS，Time-Reversal Symmetry）、无粒子-空穴对称性（PHS，或Charge Conjugate Symmetry）、无手性对称性（Chiral Symmetry）**的系统的拓扑效应。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

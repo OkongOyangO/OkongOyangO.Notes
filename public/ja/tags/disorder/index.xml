@@ -8,6 +8,14 @@
     <language>ja</language>
     <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
     <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
+    <lastBuildDate>Mon, 05 Sep 2022 10:00:00 +0800</lastBuildDate>
     <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/disorder/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>🥴アンダーソン局在</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/anderson-localization/</link>
+      <pubDate>Mon, 05 Sep 2022 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/anderson-localization/</guid>
+      <description>&lt;p&gt;1958年、P. W. Andersonは先駆的論文において無秩序系における局在現象を提唱した：十分に強い無秩序は電子の波動関数を広がった状態から指数関数的に局在した状態へと変え、系を導体から絶縁体へと転移させる。この発見は半世紀以上にわたる局在研究の幕を開け、金属-絶縁体転移（MIT）と深く結びついている。&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

@@ -1,6 +1,6 @@
 ---
 title: "😤平均场近似与变分法｜Hartree, Fock, BCS能1:1:1混用吗？"
-date: 2026-06-30T17:00:00+08:00
+date: 2023-03-10T10:00:00+08:00
 draft: false
 math: true
 tags: ["Mean Field Theory", "Hartree-Fock", "BCS", "Variational Method", "Condensed Matter"]
