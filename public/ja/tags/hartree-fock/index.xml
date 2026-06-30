@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hartree-Fock on OkongOyangOのノート</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/hartree-fock/</link>
+    <description>Recent content in Hartree-Fock on OkongOyangOのノート</description>
+    <generator>Hugo</generator>
+    <language>ja</language>
+    <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
+    <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
+    <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/hartree-fock/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
