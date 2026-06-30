@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Entanglement Spectrum on OkongOyangO&#39;s Notes</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/tags/entanglement-spectrum/</link>
+    <description>Recent content in Entanglement Spectrum on OkongOyangO&#39;s Notes</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
+    <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
+    <lastBuildDate>Mon, 29 Jun 2026 18:00:00 +0800</lastBuildDate>
+    <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/tags/entanglement-spectrum/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bulk-Boundary Correspondence: Dirac Equation, Wilson Loop, and Entanglement Spectra</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/bulk-boundary-correspondence/</link>
+      <pubDate>Mon, 29 Jun 2026 18:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/bulk-boundary-correspondence/</guid>
+      <description>&lt;p&gt;This note aims to discuss the Bulk-Boundary Correspondence (BBC) in topological band theory, including its dispersion relations and numerical verification of its real-space localization behavior, as well as rigorous proofs using formalisms such as the Dirac equation, Wilson Loop, and Entanglement Spectrum.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

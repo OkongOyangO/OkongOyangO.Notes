@@ -8,8 +8,15 @@
     <language>ja</language>
     <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
     <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
-    <lastBuildDate>Tue, 09 Jun 2026 12:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jun 2026 18:00:00 +0800</lastBuildDate>
     <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/condensed-matter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>バルク・バウンダリー対応：Dirac方程式、Wilson Loop、エンタングルメント・スペクトル</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/bulk-boundary-correspondence/</link>
+      <pubDate>Mon, 29 Jun 2026 18:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/bulk-boundary-correspondence/</guid>
+      <description>&lt;p&gt;本ノートでは、トポロジカルバンド理論におけるバルク・バウンダリー対応（Bulk-Boundary Correspondence, BBC）について議論する。具体的には、その分散関係と実空間における局在挙動の数値検証、ならびにDirac方程式、Wilson Loop、Entanglement Spectrumなどの形式体系を用いた厳密な証明を扱う。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>🥺 Quantum Geometry Everything？「量子幾何物理大応答」を一から解説する</title>
       <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/quantum-geometry-everything/</link>

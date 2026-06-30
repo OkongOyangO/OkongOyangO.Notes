@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dirac Equation on OkongOyangO的物理笔记</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/dirac-equation/</link>
+    <description>Recent content in Dirac Equation on OkongOyangO的物理笔记</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
+    <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
+    <lastBuildDate>Mon, 29 Jun 2026 18:00:00 +0800</lastBuildDate>
+    <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/tags/dirac-equation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>体边对应：Dirac 方程、Wilson Loop 与纠缠谱</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/bulk-boundary-correspondence/</link>
+      <pubDate>Mon, 29 Jun 2026 18:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/bulk-boundary-correspondence/</guid>
+      <description>&lt;p&gt;本note旨在讨论拓扑能带论中的体边对应（Bulk-Boundary Correspondence, BBC），包括其色散关系及其在实空间中的局域行为的数值验证，以及用 Dirac 方程、Wilson Loop、Entanglement Spectrum 等形式体系的严格证明。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

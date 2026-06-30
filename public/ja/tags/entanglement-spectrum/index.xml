@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Entanglement Spectrum on OkongOyangOのノート</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/entanglement-spectrum/</link>
+    <description>Recent content in Entanglement Spectrum on OkongOyangOのノート</description>
+    <generator>Hugo</generator>
+    <language>ja</language>
+    <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
+    <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
+    <lastBuildDate>Mon, 29 Jun 2026 18:00:00 +0800</lastBuildDate>
+    <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/tags/entanglement-spectrum/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>バルク・バウンダリー対応：Dirac方程式、Wilson Loop、エンタングルメント・スペクトル</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/bulk-boundary-correspondence/</link>
+      <pubDate>Mon, 29 Jun 2026 18:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/bulk-boundary-correspondence/</guid>
+      <description>&lt;p&gt;本ノートでは、トポロジカルバンド理論におけるバルク・バウンダリー対応（Bulk-Boundary Correspondence, BBC）について議論する。具体的には、その分散関係と実空間における局在挙動の数値検証、ならびにDirac方程式、Wilson Loop、Entanglement Spectrumなどの形式体系を用いた厳密な証明を扱う。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>バルク・バウンダリー対応：Dirac方程式、Wilson Loop、エンタングルメント・スペクトル - OkongOyangOのノート</title><meta name="Description" content="O空O揚Oの物理学ノート"><meta property="og:url" content="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/bulk-boundary-correspondence/">
+  <meta property="og:site_name" content="OkongOyangOのノート">
+  <meta property="og:title" content="バルク・バウンダリー対応：Dirac方程式、Wilson Loop、エンタングルメント・スペクトル">
+  <meta property="og:description" content="本ノートでは、トポロジカルバンド理論におけるバルク・バウンダリー対応（Bulk-Boundary Correspondence, BBC）について議論する。具体的には、その分散関係と実空間における局在挙動の数値検証、ならびにDirac方程式、Wilson Loop、Entanglement Spectrumなどの形式体系を用いた厳密な証明を扱う。">
+  <meta property="og:locale" content="ja">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-06-29T18:00:00+08:00">
+    <meta property="article:modified_time" content="2026-06-29T18:00:00+08:00">
+    <meta property="article:tag" content="Topological Insulator">
+    <meta property="article:tag" content="Bulk-Boundary Correspondence">
+    <meta property="article:tag" content="Wilson Loop">
+    <meta property="article:tag" content="Entanglement Spectrum">
+    <meta property="article:tag" content="Dirac Equation">
+    <meta property="article:tag" content="Condensed Matter">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="バルク・バウンダリー対応：Dirac方程式、Wilson Loop、エンタングルメント・スペクトル">
+  <meta name="twitter:description" content="本ノートでは、トポロジカルバンド理論におけるバルク・バウンダリー対応（Bulk-Boundary Correspondence, BBC）について議論する。具体的には、その分散関係と実空間における局在挙動の数値検証、ならびにDirac方程式、Wilson Loop、Entanglement Spectrumなどの形式体系を用いた厳密な証明を扱う。">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/OkongOyangO.Notes/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/OkongOyangO.Notes/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/OkongOyangO.Notes/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/OkongOyangO.Notes/apple-touch-icon.png"><link rel="mask-icon" href="/OkongOyangO.Notes/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/OkongOyangO.Notes/site.webmanifest"><link rel="canonical" href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/bulk-boundary-correspondence/" /><link rel="prev" href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/quantum-geometry-everything/" /><link rel="stylesheet" href="/OkongOyangO.Notes/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "バルク・バウンダリー対応：Dirac方程式、Wilson Loop、エンタングルメント・スペクトル",
+        "inLanguage": "ja",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/ja\/posts\/bulk-boundary-correspondence\/"
+        },"genre": "posts","keywords": "Topological Insulator, Bulk-Boundary Correspondence, Wilson Loop, Entanglement Spectrum, Dirac Equation, Condensed Matter","wordcount":  84 ,
+        "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/ja\/posts\/bulk-boundary-correspondence\/","datePublished": "2026-06-29T18:00:00+08:00","dateModified": "2026-06-29T18:00:00+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "OkongOyangO"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/OkongOyangO.Notes/ja/" title="OkongOyangOのノート">OkongOyangO&#39;s Notes</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item active" href="/OkongOyangO.Notes/ja/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i> 記事 </a><a class="menu-item" href="/OkongOyangO.Notes/ja/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i> タグ </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="検索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="クリア">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="テーマ">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i> テーマ
+                </a><a href="javascript:void(0);" class="menu-item language" title="言語">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i> 言語
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/bulk-boundary-correspondence/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/bulk-boundary-correspondence/" selected>日本語</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/OkongOyangO.Notes/ja/" title="OkongOyangOのノート">OkongOyangO&#39;s Notes</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="検索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="クリア">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        キャンセル
+                    </a>
+                </div><a class="menu-item" href="/OkongOyangO.Notes/ja/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i>記事</a><a class="menu-item" href="/OkongOyangO.Notes/ja/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i>タグ</a><a href="javascript:void(0);" class="menu-item theme-switch" title="テーマ">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>テーマ
+            </a><a href="javascript:void(0);" class="menu-item" title="言語">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>言語
+                    <select class="language-select" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/bulk-boundary-correspondence/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/bulk-boundary-correspondence/" selected>日本語</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目次</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">バルク・バウンダリー対応：Dirac方程式、Wilson Loop、エンタングルメント・スペクトル</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/OkongOyangO.Notes/ja/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">included in <a href="/OkongOyangO.Notes/ja/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-06-29">2026-06-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;84 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目次</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#bulk-edge-correspondence-bec">Bulk-Edge Correspondence (BEC)</a></li>
+    <li><a href="#numerical-verification">Numerical Verification</a></li>
+    <li><a href="#why-strict-derivation">Why Strict Derivation？</a></li>
+    <li><a href="#dirac-equation">Dirac Equation</a>
+      <ul>
+        <li><a href="#exact-solution">Exact Solution</a></li>
+      </ul>
+    </li>
+    <li><a href="#wilson-loop">Wilson Loop</a>
+      <ul>
+        <li><a href="#wilson-loop-and-bulk-wannierization">Wilson Loop and Bulk: Wannierization</a></li>
+        <li><a href="#wilson-loop-and-charge-pump">Wilson Loop and charge pump</a></li>
+        <li><a href="#why-wannierization">Why Wannierization?</a></li>
+        <li><a href="#wilson-loop-and-edge-spectrum-equivalence">Wilson Loop and Edge: Spectrum Equivalence</a></li>
+      </ul>
+    </li>
+    <li><a href="#entanglement-spectrum">Entanglement Spectrum</a></li>
+    <li><a href="#beyond-traditional-bec">Beyond Traditional BEC</a>
+      <ul>
+        <li><a href="#topological-crystalline-insulators">Topological Crystalline Insulators</a></li>
+        <li><a href="#higher-order-topological-insulators">Higher Order Topological Insulators</a></li>
+        <li><a href="#fragile-topology">Fragile Topology</a></li>
+      </ul>
+    </li>
+    <li><a href="#reference">Reference</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>本ノートでは、トポロジカルバンド理論におけるバルク・バウンダリー対応（Bulk-Boundary Correspondence, BBC）について議論する。具体的には、その分散関係と実空間における局在挙動の数値検証、ならびにDirac方程式、Wilson Loop、Entanglement Spectrumなどの形式体系を用いた厳密な証明を扱う。</p>
+<h2 id="bulk-edge-correspondence-bec">Bulk-Edge Correspondence (BEC)</h2>
+<p>トポロジカルバンド理論を学び始めた頃、私たちはしばしば重要だが微妙な結論を教えられる。その中でもトポロジカル状態の「バルク・エッジ対応」（Bulk-Edge Correspondence, BEC, or Bulk-Boundary Correspondence, BBC）は非常に重要な例である：トポロジカル絶縁体／チャーン絶縁体は絶縁的な（Gapped）バルク状態を持ちながら、導電性の（Gapless）エッジ状態を持ち、これらのエッジ状態は非常にロバストで不純物によってギャップが開かず、その個数（時にはmodula 2、時には整数）はバルクのトポロジカル不変量によって決定される、としばしば教えられる。関連内容については、私の以前の駄文を参照されたい：</p>
+<h2 id="numerical-verification">Numerical Verification</h2>
+<p>この結論は非常に広く知られているため、常に口にするものの、その厳密な導出を知らないことが多い。私たちはよく一歩下がって、タイトバインディングモデルと厳密対角化を用いてその正しさを検証する。ここでkwantパッケージを紹介する記事を推薦する：例えば、ギャップのあるバルク状態の性質は、境界のない周期境界条件（Periodic Boundary Condition, PBC）のタイトバインディングモデルを厳密対角化して得られるバンド構造によって検証される。</p>
+<p><img
+        class="lazyload"
+        src="/OkongOyangO.Notes/svg/loading.min.svg"
+        data-src="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig01_typical_2d_band.png"
+        data-srcset="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig01_typical_2d_band.png, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig01_typical_2d_band.png 1.5x, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig01_typical_2d_band.png 2x"
+        data-sizes="auto"
+        alt="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig01_typical_2d_band.png"
+        title="typical 2D band structure" width="529" height="529" /></p>
+<p><em>typical 2D band structure</em></p>
+<p>ギャップのないエッジ状態は、人為的にある方向に開境界条件（Open Boundary Condition, OBC）をとり、その方向に垂直な良い量子数（垂直方向の運動量$k_{\perp}$）に対応する次元縮約（dimensional reduction）されたバンド構造によって検証される。</p>
+<p><img
+        class="lazyload"
+        src="/OkongOyangO.Notes/svg/loading.min.svg"
+        data-src="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig02_edge_state_spectrum_OBC.png"
+        data-srcset="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig02_edge_state_spectrum_OBC.png, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig02_edge_state_spectrum_OBC.png 1.5x, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig02_edge_state_spectrum_OBC.png 2x"
+        data-sizes="auto"
+        alt="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig02_edge_state_spectrum_OBC.png"
+        title="edge state spectrum with OBC" width="627" height="512" /></p>
+<p><em>edge state spectrum with OBC</em></p>
+<p>そのロバスト性は、開境界条件をとった方向にdisorderを加え、エッジ状態の分散関係のgaplessnessを観察することで検証できる。エッジ状態の実空間での運動方向は、エッジ状態の群速度$v = \frac{\partial \epsilon(k)}{\hbar \partial k}$を観察することで決定できる。特筆すべきは、$C=1$のエッジには一方向のみに運動するエッジ状態（Chiral Edge State）が1つだけ存在するが、数値シミュレーションでは必然的に2つの境界を取らざるを得ない（半開境界・半無限系は数値対角化できない）。その場合、群速度が逆方向の2つのエッジ状態が現れ、それぞれ2つの境界に対応する運動を示す。これらは対称性による関連は一切ない。なぜなら2D Chern Insulatorは10 fold classificationのA類に属し、そもそも対称性を持たないからである。一方、トポロジカル絶縁体の境界には1対（またはtime reversalによって関連づけられる奇数対）の境界状態が存在し、数値計算である方向に2つの境界を取ると、群速度が逆方向の2対のエッジ状態が現れる。time reversalによって関連づけられる境界状態の分散関係は$k=0$に関して対称である。</p>
+<p><img
+        class="lazyload"
+        src="/OkongOyangO.Notes/svg/loading.min.svg"
+        data-src="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig03_edge_state.png"
+        data-srcset="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig03_edge_state.png, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig03_edge_state.png 1.5x, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig03_edge_state.png 2x"
+        data-sizes="auto"
+        alt="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig03_edge_state.png"
+        title="Edge state" width="576" height="486" /></p>
+<p><em>Edge state</em></p>
+<h2 id="why-strict-derivation">Why Strict Derivation？</h2>
+<p>これらの数値結果はあくまで検証であって、厳密な導出ではない。バルク・バウンダリー対応はトポロジカルバンド理論の最も重要な結論の一つであり、もちろん記憶しやすいが、この結論の理論的導出をより厳密に検討することは、バルク・バウンダリー対応の理解を深める上で有益である。同時に、バルク・バウンダリー対応を厳密に証明する過程で用いられる道具、例えばDirac EquationやWilson Loopなどの形式体系は、HOTIのバルク・バウンダリー対応やエッジ状態など、さらに発展したトポロジカル性質を計算する際にも非常に有用であり、その物理的起源を理解することは極めて重要である。</p>
+<h2 id="dirac-equation">Dirac Equation</h2>
+<p>トポロジカル相転移（topological phase transition）はギャップクロージングを伴って同時に発生する。この過程は、質量がパラメータとともに変化するDirac Fermionによって記述できる。まずBHZ modelを考えよう：</p>
+$$
+H(k_x,k_y;u) = \sin k_x \sigma_x + \sin k_y \sigma_y + (u+\cos k_x + \cos k_y) \sigma_z
+$$<p>ここで$u$は緩変パラメータであり、$u<-2$のとき系はtrivial insulator、$-2<u<0$のときチャーン数$C=-1$のChern insulatorとなる。この過程でトポロジカル相転移が発生するが、その理由は$(k_x,k_y)=(0,0)$でギャップクロージングが起こるためである。</p>
+<p><img
+        class="lazyload"
+        src="/OkongOyangO.Notes/svg/loading.min.svg"
+        data-src="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig04_topo_transition_dirac_mass.png"
+        data-srcset="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig04_topo_transition_dirac_mass.png, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig04_topo_transition_dirac_mass.png 1.5x, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig04_topo_transition_dirac_mass.png 2x"
+        data-sizes="auto"
+        alt="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig04_topo_transition_dirac_mass.png"
+        title="Topological phase transition with inverted Dirac fermion mass" width="961" height="363" /></p>
+<p><em>Topological phase transition with inverted Dirac fermion mass</em></p>
+<p>$u\approx-2, (k_x,k_y)\approx(0,0)$とすると、トポロジカル転移点近傍のBloch Hamiltonianは(2+1)D Dirac Fermionと一致する：</p>
+$$
+H(k_x,k_y;m) \approx k_x \sigma_x + k_y \sigma_y + m \sigma_z \quad m \equiv u + \cos k_x + \cos k_y \approx u+2
+$$<p>例えば、trivial insulatorからtopological/chern insulatorへの転移は、質量の変化によるバンド反転（band inversion）の過程として表現できる。トポロジカル絶縁体の境界付近でも同様のバンド反転が起こっていると見なすことができる。すなわち、Dirac fermionのような低エネルギー励起がバンド反転を起こしているのである。$x=0$にある境界を考え、$x<0$を系の内部、$x>0$を外部（真空、trivial insulatorと見なせる）とする。$x$を系を制御する緩変パラメータと見なすと、$m(x)$は境界付近で質量の符号反転を起こす：</p>
+$$
+m(x)>0: x<0 \quad m(x)<0: x>0
+$$<p>変化が十分に緩やかであれば、各$x$の近傍に十分大きなバルクが存在し、$\partial_x m(x)$の効果を考慮しなくても安定したBloch Hamiltonian $H(k_x,k_y;m)$を形成できる。すなわち、系の$x$に伴う変化は「断熱的」である。低エネルギー物理（ギャップクロージング）のみに関心があるため、上記の議論は他の任意のモデルでも成立することに気づくのは難しくない。以下では境界状態の実空間での分布を求める。ハミルトニアンを実空間に変換し$k_x \rightarrow -i \partial_x$とする。$y$方向には依然として並進対称性があると仮定する。すなわち$k_y$は依然として良い量子数である。これにより得られる部分フーリエ変換されたハミルトニアンは：</p>
+$$
+H(x,k_y) = -i \sigma_x \partial_x + k_y \sigma_y + m(x) \sigma_z
+$$<p>これは次元縮約操作後のハミルトニアンの低エネルギー振る舞いに他ならない。その固有状態と固有エネルギーを解くことで、境界状態とそのスペクトルが得られる。$H(x,k_y = 0) = -i \sigma_x \partial_x + m(x) \sigma_z$は比較的容易に解け、その固有方程式は：</p>
+$$
+-i \sigma_x \partial_x \Psi_{k_y=0} (x) = - m(x) \sigma_z \Psi_{k_y=0} (x)
+$$<p>ここで$\Psi_{k_y=0} (x)$は2成分関数であり、$\sigma_i$は$2\times 2$行列である。</p>
+$$
+\Rightarrow \partial_x \Psi_{k_y=0} (x) = - m(x) \sigma_y \Psi_{k_y=0} (x)
+$$<p>したがって$\Psi_{k_y=0} (x)$は$\sigma_y$の固有状態でなければならず、次のように書ける：</p>
+$$
+\Psi_{k_y=0}^{\sigma_y = \pm 1} (x) = \psi_{k_y=0}^{\sigma_y = \pm 1} (x) \left(\begin{array}{c}1 \\ \pm i\end{array}\right)
+$$<p>ここで$\psi_{k_y=0} (x)$は通常の関数であり、次を満たす：</p>
+$$
+\partial_x \psi_{k_y=0}^{\sigma_y = \pm 1} (x) = \mp m(x) \psi_{k_y=0}^{\sigma_y = \pm 1} (x)
+$$$$
+\Rightarrow \psi_{k_y=0}^{\sigma_y = \pm 1} (x) \propto e^{ \mp \int^x m(x) dx }
+$$<p>$m(x)>0$: $x<0$、$m(x)<0$: $x>0$であるため、$\sigma = -1$のみが規格化可能である。よって解は：</p>
+$$
+\Psi_{k_y=0} (x) = e^{ - \int^x m(x) dx} \left(\begin{array}{c}1 \\ -i\end{array}\right)
+$$<p>固有値は$E(k_y = 0) = 0$である。$k_y \neq 0$のとき、$\Psi_{k_y=0} (x) = e^{ - \int^x m(x) dx} \left(\begin{array}{c}1 \\ i\end{array}\right)$も解であり、このときのエネルギーは：</p>
+$$
+E(k_y) = k_y
+$$<p>これが低エネルギーのエッジ状態の分散関係を与える。これは我々の説明したgaplessなエッジ状態と一致し、群速度は+y方向であり、確かに境界に沿って伝播するエッジ状態である。これは先述のバルク・バウンダリー対応に関するステートメントと合致する。</p>
+<p><img
+        class="lazyload"
+        src="/OkongOyangO.Notes/svg/loading.min.svg"
+        data-src="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig05_realspace_localization_boundary_spectrum.png"
+        data-srcset="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig05_realspace_localization_boundary_spectrum.png, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig05_realspace_localization_boundary_spectrum.png 1.5x, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig05_realspace_localization_boundary_spectrum.png 2x"
+        data-sizes="auto"
+        alt="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig05_realspace_localization_boundary_spectrum.png"
+        title="Real space localization and boundary spectrum" width="901" height="378" /></p>
+<p><em>Real space localization and boundary spectrum</em></p>
+<p>さらに波関数の実空間分布を観察すると、$\Psi_{k_y=0} (x) \propto e^{ - \int^x m(x) dx}$は$x=0$付近に局在した波束であることがわかる。最も簡単な検証方法は$m(x) = -\alpha x$を代入することであり、$x=0$に局在したガウス波束が得られる。一方、$y$方向の分布は広がった平面波である。あるいは$m(x) = \left\{\begin{array}{l}m_1>0,&\,x<0 \\ -m_2<0,&\,x>0\end{array} \right.$と取っても、結果は局在した波束となる。</p>
+<p><img
+        class="lazyload"
+        src="/OkongOyangO.Notes/svg/loading.min.svg"
+        data-src="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig06_localized_edge_state.png"
+        data-srcset="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig06_localized_edge_state.png, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig06_localized_edge_state.png 1.5x, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig06_localized_edge_state.png 2x"
+        data-sizes="auto"
+        alt="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig06_localized_edge_state.png"
+        title="Localized Edge State" width="641" height="391" /></p>
+<p><em>Localized Edge State</em></p>
+<p>これは他のトポロジカル絶縁体に対しても成立する。なぜなら境界では常にトポロジカル相転移が発生するため、質量が反転したmassive Dirac fermionによる低エネルギー記述は常に普遍的だからである。これはバルク・バウンダリー対応の数値的検証よりも厳密である。より詳細な内容はQingrui Wang先生のオンライン講義で解説されているので、ここでは割愛する。</p>
+<h3 id="exact-solution">Exact Solution</h3>
+<p>@人生玄学がトポロジカルエッジ状態の厳密解に関する論文を提供しているので参考にされたい：</p>
+<p>Edge states and the bulk-boundary correspondence in Dirac Hamiltonians</p>
+<h2 id="wilson-loop">Wilson Loop</h2>
+<p>一方で、Wilson Loopはトポロジカル系のバルク状態の性質を反映する。他方で、Wilson Loop Spectrumはエッジ状態の分散関係とトポロジカルに同値である。以上より、Wilson Loopはトポロジカル系のバルク状態の性質にもエッジ状態の性質にも関連するため、トポロジカル物態のバルク・バウンダリー対応を証明するための最適な道具であることは間違いない。Wilson Loopについては、知乎（Zhihu）にも多くの優れた記事や回答がある。以下にいくつかのリンクを挙げる。ここでは、トポロジカルバンド理論におけるWilson Loop形式体系を導入し、バルク状態の性質およびエッジ状態の性質との関連について議論する。</p>
+<h3 id="wilson-loop-and-bulk-wannierization">Wilson Loop and Bulk: Wannierization</h3>
+<p>Wilson Loopがトポロジカル系のバルク状態の性質を反映するのは、Wilson Loop Spectrumが本質的に、ある方向のWannier Centerの（垂直方向の運動量に対する）変化関係を計算するものであるからである。電子が占有するWannier stateの実空間での移動は、系の分極や輸送などの性質を反映しており、これらは凝縮系物理学者がトポロジカル物態を研究する際に特に注目する性質である。例えば、1次元のトポロジカルSSH Chainは量子化された分極（quantized polarization）を持ち、2次元のChern insulatorは量子化されたホール伝導度（quantized Hall Conductance）を持つ。これらはトポロジカル系のバルクのトポロジカル不変量と関連しており、例えばチャーン数CのChern Bandは$\sigma_{xy} = C \frac{e^2}{h}$の伝導度に寄与する。$y$方向の電場は$k_y$の変化に対応し、$x$方向のWannier Centerがちょうど1格子分移動した場合、これは$x$方向に1電子が輸送されたことに相当する。このようにしてWilson Loop Spectrumから系のトポロジカル不変量などのバルク状態の性質を読み取ることができる。</p>
+<h3 id="wilson-loop-and-charge-pump">Wilson Loop and charge pump</h3>
+<p><img
+        class="lazyload"
+        src="/OkongOyangO.Notes/svg/loading.min.svg"
+        data-src="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig07_wilson_loop_charge_pump.png"
+        data-srcset="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig07_wilson_loop_charge_pump.png, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig07_wilson_loop_charge_pump.png 1.5x, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig07_wilson_loop_charge_pump.png 2x"
+        data-sizes="auto"
+        alt="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig07_wilson_loop_charge_pump.png"
+        title="Wilson Loop and charge pump" width="966" height="411" /></p>
+<p><em>Wilson Loop and charge pump</em></p>
+<p>Wilson Loop形式体系は当初、Xi Daiらがトポロジカル不変量を計算するより便利な数値手法を模索していたことに端を発する。Bloch波動関数の数値解法は難しくないが、Bloch波動関数を直接用いてBerry ConnectionやBerry Curvatureを計算しようとすると、数値的にゲージを指定する必要がある。しかしトポロジカル不変量はゲージ不変な量であるにもかかわらず、計算過程で人為的にゲージを指定するのは煩雑であり、数値計算で得られる波動関数の位相は一般に混沌としており、連続的なゲージを得るのは困難である。そこでXi Daiらは、電子波動関数の実空間におけるポンプ過程から着想を得て、Berry ConnectionやBerry Curvatureの積分によって得られるトポロジカル不変量と等価な表現を導出した。これがWilson Loop形式体系の起源である。</p>
+<p><a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.84.075119" target="_blank" rel="noopener noreffer ">https://journals.aps.org/prb/abstract/10.1103/PhysRevB.84.075119</a></p>
+<p>この論文は当初、反転対称性のないtime-reversal invariant topological insulatorの$\mathbb{Z}_2$ indexを計算するために用いられたが、その「電子波動関数の実空間でのポンプ過程を記述する」というモチベーションはChern Insulatorやその他のトポロジカル絶縁体にも適用でき、Wilson Loop形式体系は同時にModern Polarization Theoryのさらなる発展の結果でもある。タイトバインディングモデルのハミルトニアンを考える：</p>
+$$
+H=\sum_{\alpha \beta} \sum_{i j} h_{i j}^{\alpha \beta}|\alpha i\rangle\langle\beta j|+ h.c.
+$$<p>その固有状態はBloch波動関数である：</p>
+$$
+\left|\Psi_{n \mathbf{k}}\right\rangle=\sum_\alpha g_{n \alpha}(\mathbf{k})|\alpha \mathbf{k}\rangle
+$$<p>ここで$|\alpha \mathbf{k}\rangle$は原子軌道のBloch和である：</p>
+$$
+|\alpha \mathbf{k}\rangle=\frac{1}{\sqrt{N_{cell}}} \sum_i|\alpha i\rangle e^{i \mathbf{k} \cdot \mathbf{R}_i}
+$$<p>$|n, \mathbf{k}\rangle$をBloch波動関数の周期部分として定義する：</p>
+$$
+|n, \mathbf{k}\rangle=e^{-i \mathbf{k} \cdot \mathbf{r}}\left|\Psi_{n \mathbf{k}}\right\rangle
+$$<p>これは通常、$k$パラメータで制御される波動関数と見なされ、Berry ConnectionやBerry Curvatureを求めるために用いられる：</p>
+$$
+[\mathbf{A}(\mathbf{k})]_{mn} = i \langle m, \mathbf{k} | \nabla_{\mathbf{k}} | n, \mathbf{k} \rangle \quad [A_i(\mathbf{k})]_{mn} = i \langle m, \mathbf{k} | \partial_{k_i} | n, \mathbf{k} \rangle \quad [F_{ij}(\mathbf{k})]_{mn} = [\partial_{k_i}A_j(\mathbf{k})]_{mn} - [\partial_{k_j}A_i(\mathbf{k})]_{mn}
+$$<p>ここでBerry ConnectionとBerry Curvatureをより一般的なマルチバンド形式で記述している。$i$、$j$の添え字は成分を、$m$、$n$はバンドインデックスを表す。ある方向の（最大局在）Wannier Functionを計算するために、以下の結論を利用する：ある方向の1D Maximally Localized Wannier Function（MLWF）は、その方向の座標演算子$\hat{x_i}$を対応するバンド部分空間に射影した射影演算子$P\hat{x_i}P$の固有状態であり、その固有値がWannier Centerとなる。このようにして、Wilson Loop形式体系のモチベーションであるWannier Center Evolutionの計算は、考察対象の方向の射影座標演算子$P\hat{x_i}P$の固有値問題に帰着される。この結論が成り立つ理由については、Maximally Localized Wannier Functionに関する私のノートを参照されたい。ただしここではOBCとPBCの2種類の境界条件を考慮する必要がある。開境界条件の下では、座標演算子$\hat{x}$を容易に定義できる：</p>
+$$
+\hat{x} =\sum_{i \alpha} (R_i + r_{\alpha})|\alpha i\rangle\langle\alpha i|
+$$<p>境界が無限遠にあるとき：</p>
+$$
+\hat{x}=\sum_{i \alpha} R_i|\alpha i\rangle\langle\alpha i|=i \frac{\partial}{\partial k_x}
+$$<p>ここで$R_i$は原点から原胞$i$までの距離、$r_\alpha$は原胞中心からsublattice/orbital $\alpha$までの距離である。議論の便宜上、以降特に断りがない限り$r_\alpha = 0$とする。一方、バルク状態の性質は一般にPBCの下で求解されるが、PBCの下での座標演算子$\hat{x}$はうまく定義できない。この場合、以下の演算子を用いて座標を定義する：</p>
+$$
+\hat{X}=\sum_{i \alpha} e^{-i \delta k_x \cdot \mathbf{R}_i}|\alpha i\rangle\langle\alpha i|
+$$<p>この演算子の固有値は$N_x$個の$U(1)$ phase $e^{-i \delta k_x \cdot \mathbf{R}_i$であり、その座標$\mathbf{R}_i$は固有値の位相にエンコードされる。$\delta k_x \equiv \frac{2 \pi}{N_x a_x}$であるため、第1番目と第$N_x+1$番目の原胞の位相（座標）は（$\bmod 2\pi$の意味で）同一となる。このとき「座標演算子」の固有値の位相のみが座標の物理的意味を持つが、$\hat{x}$がill definedであるため、ここでは$\hat{X}$を「座標演算子」と呼ぶことにする。言い換えれば、座標は今や多価関数となっている。なぜなら周期境界条件の下では、$R_i$と$R_i+N_x a_x$は同じ座標だからである。一般性を失わずに2次元系を考え、$x$方向にのみフーリエ変換を行って$x$方向に局在した部分Wannier functionを得ると仮定する。このとき$y$方向の$k_y$は依然として良い量子数であり、同一の$k_y$の下での部分空間内のWannier局在化およびMLWFの求解問題を考えることができる。$k_y$を固定し、射影するバンド部分空間を考える。すなわち、注目するいくつかのバンドを選び、その対応する電子波動関数の実空間での$x$方向の振る舞いを考察する。各$k_y$についてこれを行うことで、$x$方向に局在したWannier functionの$k_y$に伴う発展（evolution）が求まる。系の$y$方向に電場を加えて$k_y$が変化すると、上記で求めた発展の振る舞いから、$y$方向電場印加後の電子の$x$方向の運動がわかる。これはまさにTopological/Chern Insulatorsが関心を持つ振る舞いである。各$k_y$のブロック対角化の操作は、バンド構造求解時にBloch Theoremを用いるのと完全に同じである（厳密には$k_x$方向が対角化する行列の指標となっており、もはや「良い量子数」ではない点がエッジ状態スペクトルの求解に類似している）。以降、この「$x$方向に局在したWannier functionの$k_y$に伴う発展」を「Wilson Loop Spectrum」と呼ぶ。$k_y$を固定したときの射影演算子は：</p>
+$$
+\hat{P}_{k_y}=\sum_{n \in o, k_x}\left|\Psi_{n \mathbf{k}}\right\rangle\left\langle\Psi_{n \mathbf{k}}\right|
+$$<p>$n$はバンドインデックス、$o$は射影したいバンド集合であり、ここでは$M$個のバンドに射影すると仮定する。射影後の座標演算子は：</p>
+$$
+\begin{aligned}
+\hat{X}_P\left(k_y\right)&=\hat{P}_{k_y} \hat{X} \hat{P}_{k_y} \\
+&=\sum_{n m \in o} \sum_{k_x k_x^{\prime}, i \alpha} e^{-i \delta k_x \cdot \mathbf{R}_i}\left|\Psi_{n k_x, k_y}\right\rangle\left\langle\Psi_{n k_x, k_y}\right| \\
+&\times|\alpha i\rangle\left\langle\alpha i \mid \Psi_{m k_x^{\prime}, k_y}\right\rangle\left\langle\Psi_{m k_x^{\prime}, k_y}\right| \\
+&=\sum_{n m \in o} \sum_{k_x k_x^{\prime}, i} \frac{1}{N_{cell}} e^{i\left(k_x+\delta k_x-k_x^{\prime}\right) \cdot \mathbf{R}_i}\left|\Psi_{n k_x, k_y}\right\rangle\left\langle\Psi_{m k_x^{\prime}, k_y}\right| \\
+&\times\left[\sum_\alpha g_{n \alpha}^*\left(k_x\right) g_{m \alpha}\left(k_x^{\prime}\right)\right] \\
+&=\sum_{k_x k_x^{\prime}} \delta\left(k_x+\delta k_x-k_x^{\prime}\right) \sum_{n m \in o}\left|\Psi_{n k_x, k_y}\right\rangle\left\langle\Psi_{m k_x^{\prime}, k_y}\right| \\
+&\times\left[\sum_\alpha g_{n \alpha}^*\left(k_x\right) g_{m \alpha}\left(k_x^{\prime}\right)\right]
+\end{aligned}
+$$<p>$\delta\left(k_x+\delta k_x-k_x^{\prime}\right)$関数の存在により、射影座標演算子$\hat{X}_P\left(k_y\right)$は$\left|\Psi_{n k_x, k_y}\right\rangle$基底の下で以下のようなブロック形式を持つ：</p>
+$$
+\hat{X}_P\left(k_y\right)=\left(\begin{array}{cccccc}
+0 & F_{0,1} & 0 & 0 & 0 & 0 \\
+0 & 0 & F_{1,2} & 0 & 0 & 0 \\
+0 & 0 & 0 & F_{2,3} & 0 & 0 \\
+0 & 0 & 0 & 0 & \cdots & 0 \\
+0 & 0 & 0 & 0 & 0 & F_{N_x-2, N_x-1} \\
+F_{N_x-1,0} & 0 & 0 & 0 & 0 & 0
+\end{array}\right)
+$$<p>ただし：</p>
+$$
+F_{i, i+1}^{n m}\left(k_y\right)=\sum_\alpha g_{n \alpha}^*\left(k_{x, i}, k_y\right) g_{m \alpha}\left(k_{x, i+1}, k_y\right)
+$$<p>ここで$F_{i, i+1}$は依然として$M\times M$行列であり、$k_y$に依存することに注意する。以下の等式を利用する：</p>
+$$
+\begin{aligned}
+\left\langle n, k \mid m, k^{\prime}\right\rangle&=\left\langle\Psi_{n k}\left|e^{i k \cdot r} e^{-i k^{\prime} \cdot r}\right| \Psi_{m, k^{\prime}}\right\rangle \\
+&=\sum_{\alpha, \beta} \frac{1}{N_{cell}} g_{n \alpha}^*(k) g_{m \beta}\left(k^{\prime}\right) \\
+&* \sum_{j_1, j_2}\left\langle\alpha j_1\left|e^{i\left(k-k^{\prime}\right) \cdot r}\right| \beta j_2\right\rangle e^{i\left(k^{\prime} \cdot R_{j_2}-k \cdot R_{j_1}\right)} \\
+&=\sum_{\alpha, \beta} \frac{1}{N_{cell}} g_{n \alpha}^*(k) g_{m \beta}\left(k^{\prime}\right) \\
+&* \sum_{j_1, j_2}\langle\alpha \mid \beta\rangle \delta_{j_1 j_2} e^{i\left(k-k^{\prime}\right) \cdot R_{j_2}} e^{i\left(k^{\prime} \cdot R_{j_2}-k \cdot R_{j_1}\right)} \\
+&=\sum_{\alpha, \beta} g_{n \alpha}^*(k) g_{m \beta}\left(k^{\prime}\right) \delta_{\alpha \beta} \\
+&=\sum_\alpha g_{n \alpha}^*(k) g_{m \alpha}\left(k^{\prime}\right)
+\end{aligned}
+$$<p>Bloch波動関数の周期部分を用いて、上記の射影位置演算子を次のように書き換えることができる：</p>
+$$
+F_{i, i+1}^{m n}\left(k_y\right)=\left\langle m, k_{x, i}, k_y \mid n, k_{x, i+1}, k_y\right\rangle
+$$<p>では、このscrewed diagonal行列の固有値問題はどのように解くのだろうか？そのscrewed diagonalブロック行列の構造は、transfer matrix的な解法を示唆している。固有状態（Maximally Localized Wannier State）がこの基底の下で$|W^i\rangle =(|W^i_0\rangle,\,|W^i_1\rangle,\,\dots,\,|W^i_{N_x-1}\rangle)^T$と表されるとする。各$|W^i_j\rangle$は$n$成分を持ち、$i$は何番目の固有状態かを示すラベルである。すると固有方程式は：</p>
+$$
+\hat{X}_P\left(k_y\right) | W^i \rangle = e^{-i \delta k_x \cdot \mathbf{R}_i} | W^i \rangle
+$$<p>これを展開して書くと：</p>
+$$
+\begin{aligned}
+\left(\begin{array}{cccccc}
+0 & F_{0,1} & 0 & 0 & 0 & 0 \\
+0 & 0 & F_{1,2} & 0 & 0 & 0 \\
+0 & 0 & 0 & F_{2,3} & 0 & 0 \\
+0 & 0 & 0 & 0 & \cdots & 0 \\
+0 & 0 & 0 & 0 & 0 & F_{N_x-2, N_x-1} \\
+F_{N_x-1,0} & 0 & 0 & 0 & 0 & 0
+\end{array}\right)
+& \left(\begin{array}{c}
+|W^i_0\rangle \\
+|W^i_1\rangle \\
+|W^i_2\rangle \\
+\vdots \\
+|W^i_{N_x-2}\rangle \\
+|W^i_{N_x-1}\rangle
+\end{array}\right) \\
+= e^{-i \delta k_x \cdot \mathbf{R}_i}
+& \left(\begin{array}{c}
+|W^i_0\rangle \\
+|W^i_1\rangle \\
+|W^i_2\rangle \\
+\vdots \\
+|W^i_{N_x-2}\rangle \\
+|W^i_{N_x-1}\rangle
+\end{array}\right)
+\end{aligned}
+$$<p>するとtransfer matrix的な漸化式が得られる：</p>
+$$
+F_{j,j+1} |W^i_{j+1}\rangle = e^{-i \delta k_x \cdot \mathbf{R}_i} |W^i_{j}\rangle
+$$<p>この漸化式も周期的であり、すべての漸化式を掛け合わせると（便宜上、格子定数$a_x = 1$とする）：</p>
+$$
+F_{0,1} \dots F_{N_x-2,N_x-1} F_{N_x-1,0} |W^i_{0}\rangle = e^{-i N_x \delta k_x \cdot \mathbf{R}_i}|W^i_{0}\rangle = e^{-i 2\pi \mathbf{R}_i} |W^i_{0}\rangle
+$$<p>「Wilson Loop」を定義する：</p>
+$$
+W_{k_x \rightarrow k_x + 2\pi} \left(k_y\right)=F_{k_x,k_x+\delta k_x} F_{k_x+\delta k_x, k_x+2\delta k_x} \cdots F_{k_x+(N_x-2)\delta k_x, k_x}
+$$<p>すると射影座標演算子の固有値問題（Wannier Centerの求解）は、「Wilson Loop」$W_{k_x\rightarrow k_x + 2\pi} \left(k_y\right)$ の固有値問題に帰着される：</p>
+$$
+\mathbf{R}_i = \frac{i}{2\pi} \ln [W_{k_x \rightarrow k_x + 2\pi}]
+$$<p>Wilson Loopは$M\times M$行列であり、$M$個の固有値と固有状態を持つことができる。これらはそれぞれ$M$個の占有バンドの実空間におけるWannier Function（原子軌道に類似するが、混成の可能性あり）に対応する。一方、$\hat{X}_P$は$(N_x M) \times (N_x M)$行列であり、$N_x$倍多くの固有値（Wannier Center）を持つ。これは$n=0,1,2,\dots,N_x-1$個の格子定数の移動に対応する。なぜそうなるのか？このときWilson Loopの固有値の位相は$2\pi$変化し、$\hat{X}_P$の固有値の位相変化は$2\pi/N_x$に対応する。したがって、1つのWilson Loopの固有値は$N_x$個の$\hat{X}_P$固有値に対応し、すなわち$\mathbf{R}_i + n,\,n=0,1,2,\dots,N_x-1$もWannier Centerの解となる。$\delta k=\frac{2 \pi}{N_x a_x} \ll 2 \pi$、すなわち無限長の系（ただしPBC）の場合：</p>
+$$
+\begin{aligned}
+F_{i, i+1}^{m n} & =\left\langle m, k_{x, i}, k_y \mid n, k_{x, i+1}, k_y\right\rangle \\
+& =\delta_{m n}+\left\langle m, k_{x, i}, k_y\left|\left(\left|n, k_{x, i+1}, k_y\right\rangle-\left|n, k_{x, i}, k_y\right\rangle\right)\right.\right. \\
+& =\delta_{m n}-i A_{i, i+1}^{m n} \delta k \\
+& \approx e^{-i A_{i, i+1}^{m n} \delta k}
+\end{aligned}
+$$<p>ここで$A_{i, i+1}^{m n}$はBerry Connectionの離散形式である：</p>
+$$
+A_{i, i+1}^{m n} =i \frac{\left\langle m, k_{x, i}, k_y\left|\left(\left|n, k_{x, i+1}, k_y\right\rangle-\left|n, k_{x, i}, k_y\right\rangle\right)\right.\right.}{\delta k}
+$$<p>すると「Wilson Loop」は形式的に経路順序付き積分（Path Ordered Integral）の形式でも書ける：</p>
+$$
+\begin{aligned}
+W_{k_x \rightarrow k_x + 2\pi}\left(k_y\right) & =\left[\prod_{i=0}^{N_x-1} F_{i, i+1}\right]=\left[\prod_{i=0}^{N_x-1} e^{-i A_{i, i+1} \delta k}\right] \\
+& =P e^{\int_{C_{k_y}}-i A(k) d k}
+\end{aligned}
+$$<p>ここでの経路積分は$C_{k_y}:(k_x,k_y) \rightarrow (k_x + 2\pi,k_y)$である。この演算子がWilson Loopと呼ばれる所以でもある。数値計算上、Wilson Loopの対角化にはゲージの問題もないため、トポロジカル不変量を計算する非常に優れたツールである。</p>
+<p><img
+        class="lazyload"
+        src="/OkongOyangO.Notes/svg/loading.min.svg"
+        data-src="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig08_path_integral_contour_wilson_loop.png"
+        data-srcset="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig08_path_integral_contour_wilson_loop.png, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig08_path_integral_contour_wilson_loop.png 1.5x, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig08_path_integral_contour_wilson_loop.png 2x"
+        data-sizes="auto"
+        alt="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig08_path_integral_contour_wilson_loop.png"
+        title="Path Integral Contour of Wilson Loop" width="564" height="564" /></p>
+<p><em>Path Integral Contour of Wilson Loop</em></p>
+<p>次に、Wilson Loopの物理的意味と、Chern Insulatorの$\mathbb{Z}$ indexおよび$\mathbb{Z}_2$ indexの決定におけるその役割について説明する。</p>
+<h3 id="why-wannierization">Why Wannierization?</h3>
+<p>ゲージ依存のWannier基底のようなものを使うのはなぜか、「全く物理的ではない」「なぜ電子が局在していてしかも固有状態でないWannier stateにいなければならないのか」と疑問に思う人もいるかもしれない。この疑問はバンドが部分的にしか占有されていない場合（partially filled band）には妥当であるが、完全に占有されたバンド（fully occupied band）については深く考える価値がある。fully occupied bandに対応する多体波動関数は、そのバンド上のすべてのBloch波動関数のSlater Determinantによって決定される：</p>
+$$
+\Psi_{\text{many body}}(x_1,x_2,\dots x_N) = \frac{1}{\sqrt{N!}} \left| \begin{array}{c}
+\psi_{k_1}(x_1) & \cdots & \psi_{k_N}(x_1) \\
+\vdots & \ddots & \vdots \\
+\psi_{k_1}(x_N) & \cdots & \psi_{k_N}(x_N)
+\end{array}\right|
+$$<p>ここで$\{\psi_{k_i}\}_{i=1}^N$はBloch波動関数であり、これらにユニタリ変換$\mathcal{U}$を施して基底を取り直すと、実空間に局在したWannier state $\{w_{R_i}\}_{i=1}^N$に変換できる。Wannier Stateの全占有状態はSlater Determinantとして書ける：</p>
+$$
+\Psi_{\text{many body}}'(x_1,x_2,\dots x_N) = \frac{1}{\sqrt{N!}} \left| \begin{array}{c}
+w_{R_1}(x_1) & \cdots & w_{R_N}(x_1) \\
+\vdots & \ddots & \vdots \\
+w_{R_1}(x_N) & \cdots & w_{R_N}(x_N)
+\end{array}\right|
+$$<p>2つの多体状態は完全に同一である：</p>
+$$
+\Psi_{\text{many body}}' = \Psi_{\text{many body}}
+$$<p>なぜなら、その行列式部分はユニタリ変換を1つ挟んだだけの差だからである：</p>
+$$
+\begin{aligned}
+& \det \left[ \left( \begin{array}{c}
+\psi_{k_1}(x_1) & \cdots & \psi_{k_N}(x_1) \\
+\vdots & \ddots & \vdots \\
+\psi_{k_1}(x_N) & \cdots & \psi_{k_N}(x_N)
+\end{array}\right) \right] \\
+= & \det \left[ \mathcal{U} \left( \begin{array}{c}
+\psi_{k_1}(x_1) & \cdots & \psi_{k_N}(x_1) \\
+\vdots & \ddots & \vdots \\
+\psi_{k_1}(x_N) & \cdots & \psi_{k_N}(x_N)
+\end{array}\right) \mathcal{U}^\dagger \right] \\
+= & \det \left[ \left( \begin{array}{c}
+w_{R_1}(x_1) & \cdots & w_{R_N}(x_1) \\
+\vdots & \ddots & \vdots \\
+w_{R_1}(x_N) & \cdots & w_{R_N}(x_N)
+\end{array}\right) \right]
+\end{aligned}
+$$<p><img
+        class="lazyload"
+        src="/OkongOyangO.Notes/svg/loading.min.svg"
+        data-src="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig09_bloch_wannier_equivalence.png"
+        data-srcset="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig09_bloch_wannier_equivalence.png, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig09_bloch_wannier_equivalence.png 1.5x, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig09_bloch_wannier_equivalence.png 2x"
+        data-sizes="auto"
+        alt="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig09_bloch_wannier_equivalence.png"
+        title="Equivalence of Bloch and Wannier Picture in Fully Occupied Bands" width="966" height="421" /></p>
+<p><em>Equivalence of Bloch and Wannier Picture in Fully Occupied Bands</em></p>
+<p>このように、議論をfully occupied bands、すなわち絶縁体の範囲に限定すれば、実空間に局在したWannier描像を用いて物理過程を分析しても問題ない。これは絶縁体の分極（polarization）やチャージポンプ（charge pump）を分析する際に非常に有用である。逆に、金属（partially filled bands）系では、分極などの性質を分析することはできない。実際、電気分極は絶縁体にのみ現れる現象であり、金属に電場を加えるとバンド内に非占有状態があるために導電する。これは導体と絶縁体の違いを別の側面から説明している。導体と絶縁体の違いにさらなる興味があれば、私の以前のノートを参照されたい。ともかく、電子が実空間に局在したWannier stateを占有するという描像を持つことで、系のトポロジカル性質をより良く分析できる。自然単位系$e=\hbar=1$を採用する。Chern Insulatorにおいて、$y$方向の電場$E_y$を加えると、もともと$k_{y0}$にあった状態は時間$t$後に$k_{y0} + E_y t$の状態になる。実空間での電子（Wannier Center）の$x$方向の運動を考察すると、1周期後に実空間の電子は全体として1格子定数だけ移動し、これは$x$方向に1単位電荷が輸送されたことに相当する。このCharge Pump過程はWilson Loop Spectrumから直接読み取ることができる：</p>
+<p><img
+        class="lazyload"
+        src="/OkongOyangO.Notes/svg/loading.min.svg"
+        data-src="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig10_wilson_spectrum_C1_chern.png"
+        data-srcset="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig10_wilson_spectrum_C1_chern.png, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig10_wilson_spectrum_C1_chern.png 1.5x, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig10_wilson_spectrum_C1_chern.png 2x"
+        data-sizes="auto"
+        alt="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig10_wilson_spectrum_C1_chern.png"
+        title="Wilson Loop Spectrum of C=1 Chern Insulator and its Real Space Picture" width="1043" height="515" /></p>
+<p><em>Wilson Loop Spectrum of C=1 Chern Insulator and its Real Space Picture</em></p>
+<p>所要時間は$2\pi/E_y$であり、$y$方向の電場$E_y$によって誘起される$x$方向の電流は：</p>
+$$
+I_x = j_x = \frac{\Delta Q}{\Delta t} = \frac{1}{2\pi/E_y} = \frac{1}{2\pi} E_y
+$$<p>電流と電流密度が同じになるのは、格子定数を1としているためである。したがってホール伝導度は量子化され$\sigma_{xy}=\frac{1}{2\pi}=\frac{e^2}{h}$となり、任意のチャーン数に一般化すると$\sigma_{xy} = \frac{C}{2\pi}$となる。Wilson Loop形式体系の物理的意味の直観的なわかりやすさがここに見て取れる。</p>
+<p><img
+        class="lazyload"
+        src="/OkongOyangO.Notes/svg/loading.min.svg"
+        data-src="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig11_charge_pump_chern.png"
+        data-srcset="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig11_charge_pump_chern.png, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig11_charge_pump_chern.png 1.5x, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig11_charge_pump_chern.png 2x"
+        data-sizes="auto"
+        alt="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig11_charge_pump_chern.png"
+        title="Charge Pump of Chern Insulator" width="858" height="378" /></p>
+<p><em>Charge Pump of Chern Insulator</em></p>
+<p>同様に、$\mathbb{Z}_2$-topological insulatorでは、一対のtime-reversal counterpart Wannier Stateの移動、すなわち「time-reversal charge pump」を考察する。1周期後にtime-reversal counterpart Wannier Stateが互いに逆方向に1格子定数分移動していれば、系はnontrivialな「time-reversal charge pump」を起こしており、系はtopological insulatorである。そうでなければtrivial insulatorである。系に正味のcharge pumpは存在しない。これはtime reversal symmetryによって保証されている。</p>
+<p><img
+        class="lazyload"
+        src="/OkongOyangO.Notes/svg/loading.min.svg"
+        data-src="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig12_wilson_spectrum_TI.png"
+        data-srcset="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig12_wilson_spectrum_TI.png, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig12_wilson_spectrum_TI.png 1.5x, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig12_wilson_spectrum_TI.png 2x"
+        data-sizes="auto"
+        alt="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig12_wilson_spectrum_TI.png"
+        title="Wilson Loop Spectrum of TI and Real Space Picture" width="1010" height="515" /></p>
+<p><em>Wilson Loop Spectrum of TI and Real Space Picture</em></p>
+<p><img
+        class="lazyload"
+        src="/OkongOyangO.Notes/svg/loading.min.svg"
+        data-src="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig13_charge_pump_TI.png"
+        data-srcset="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig13_charge_pump_TI.png, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig13_charge_pump_TI.png 1.5x, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig13_charge_pump_TI.png 2x"
+        data-sizes="auto"
+        alt="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig13_charge_pump_TI.png"
+        title="Charge Pump of Topological Insulator" width="858" height="378" /></p>
+<p><em>Charge Pump of Topological Insulator</em></p>
+<p>trivial insulatorのWilson Loop Spectrumを以下の図に示す。net charge pumpもnontrivialなtime-reversal charge pumpも存在しない：</p>
+<p><img
+        class="lazyload"
+        src="/OkongOyangO.Notes/svg/loading.min.svg"
+        data-src="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig14_trivial_wilson_spectrum.png"
+        data-srcset="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig14_trivial_wilson_spectrum.png, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig14_trivial_wilson_spectrum.png 1.5x, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig14_trivial_wilson_spectrum.png 2x"
+        data-sizes="auto"
+        alt="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig14_trivial_wilson_spectrum.png"
+        title="Trivial Wilson Loop Spectra" width="1106" height="547" /></p>
+<p><em>Trivial Wilson Loop Spectra</em></p>
+<p><img
+        class="lazyload"
+        src="/OkongOyangO.Notes/svg/loading.min.svg"
+        data-src="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig15_charge_not_pumped_trivial.png"
+        data-srcset="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig15_charge_not_pumped_trivial.png, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig15_charge_not_pumped_trivial.png 1.5x, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig15_charge_not_pumped_trivial.png 2x"
+        data-sizes="auto"
+        alt="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig15_charge_not_pumped_trivial.png"
+        title="Charge not Pumped in trivial insulator (C=0 Chern Insulator)" width="858" height="378" /></p>
+<p><em>Charge not Pumped in trivial insulator (C=0 Chern Insulator)</em></p>
+<h3 id="wilson-loop-and-edge-spectrum-equivalence">Wilson Loop and Edge: Spectrum Equivalence</h3>
+<p>他方で、Wilson Loop Spectrumはエッジ状態の分散関係とトポロジカルに同値である。Fidkowski, L., Jackson, T. S., &amp; Klich, I.らは、適切なinterpolation（補間）により、Wilson Loop SpectrumとEdge State Spectrumが連続的に変化して互いに移り変わることができることを証明した。これにより、Wilson Loop Spectrumを通じてエッジ状態の分散関係の形状や群速度などの性質を推定することができる（トポロジカル同値の範囲で）。</p>
+<p><a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.107.036601" target="_blank" rel="noopener noreffer ">https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.107.036601</a></p>
+<p>具体的には、最も単純なフラットバンド射影後のハミルトニアンを考える。トポロジカル同値（ギャップが閉じない）である限り、議論は普遍的だからである。フラットバンドハミルトニアンは：</p>
+$$
+\mathscr{H}_{\text{flat}}(\vec{k})=1-2 P(\vec{k})
+$$<p>ここで$P(\vec{k})$は$M$個の占有バンド（価電子帯）への射影演算子であり、このとき系のトポロジカル性質は波動関数の情報に格納されている：</p>
+$$
+P(\vec{k})=\sum_n^M \int_{-\pi}^\pi \frac{\mathrm{d} k_x}{2 \pi}\left|\psi_{k, n}\right\rangle\left\langle\psi_{k, n}\right|,
+$$<p>境界を考える：</p>
+$$
+\mathscr{H}_{\mathrm{bdr}}(\vec{k})=P(\vec{k}) V_0(\hat{x}) P(\vec{k})+1-P(\vec{k}) \quad V_0(x)= \begin{cases}1 ,\,x<0 \\-1 ,\,x>0\end{cases}
+$$<p>するとバルクのハミルトニアンは：</p>
+$$
+\mathscr{H}_{\mathrm{bdr}}(\vec{k}) \rightarrow \mathscr{H}_{\mathrm{flat}}(\vec{k}) \text { for } x \rightarrow+\infty
+$$<p>真空のハミルトニアンは：</p>
+$$
+\mathscr{H}_{\mathrm{bdr}}(\vec{k}) \rightarrow 1 \text { for } x \rightarrow-\infty
+$$<p>以下のような境界ポテンシャルの変化を考える：</p>
+$$
+V_t(x)=\left\{\begin{array}{ll}
+-\frac{x}{t} & \text { for }|x|<t /(1-t) \\
+-\frac{\operatorname{sgn}(x)}{1-t} & \text { for }|x| \geq t /(1-t)
+\end{array}, \quad 0 \leq t \leq 1 .\right.
+$$<p>$t=0$のとき、系のスペクトルは$\mathscr{H}_{\mathrm{bdr}}(\vec{k})$のスペクトルであり、$t=1$のときは$P\hat{x}P$のスペクトルとなる。そして$P\hat{x}P$のスペクトルこそがWilson Loop Spectrum（＋整数格子定数の並進）である。これにより両者のトポロジカル同値性が証明される。</p>
+<p><img
+        class="lazyload"
+        src="/OkongOyangO.Notes/svg/loading.min.svg"
+        data-src="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig16_wilson_edge_equivalence.png"
+        data-srcset="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig16_wilson_edge_equivalence.png, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig16_wilson_edge_equivalence.png 1.5x, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig16_wilson_edge_equivalence.png 2x"
+        data-sizes="auto"
+        alt="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig16_wilson_edge_equivalence.png"
+        title="Equivalence between Wilson Loop Spectrum &amp; Edge Spectrum" width="1010" height="467" /></p>
+<p><em>Equivalence between Wilson Loop Spectrum &amp; Edge Spectrum</em></p>
+<p>より詳細な解説は、スペインで毎年開催されるTopological Matter School（TMS）のオンライン講義を参照されたい：</p>
+<p><a href="https://www.youtube.com/watch?v=t3k5DLKreyg&amp;t=2029s" target="_blank" rel="noopener noreffer ">https://www.youtube.com/watch?v=t3k5DLKreyg&t=2029s</a></p>
+<p>あるいはTMS2017の講義ノート（出版済み）も参考になる：</p>
+<p><a href="https://link.springer.com/content/pdf/10.1007/978-3-319-76388-0.pdf" target="_blank" rel="noopener noreffer ">https://link.springer.com/content/pdf/10.1007/978-3-319-76388-0.pdf</a></p>
+<h2 id="entanglement-spectrum">Entanglement Spectrum</h2>
+<p>Entanglement SpectrumやEntanglement Entropyといった量子情報関連のトピックがトポロジカル凝縮系物理にも関与できるのか？その「諸悪の根源」は、2008年にHaldaneがEntanglement Spectrumを用いてFQHEのトポロジカル秩序を同定した論文である。</p>
+<p><a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.101.010504" target="_blank" rel="noopener noreffer ">https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.101.010504</a></p>
+<p>Lukasz Fidkowskiはこれをバンドトポロジーに拡張した：</p>
+<p><a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.104.130502" target="_blank" rel="noopener noreffer ">https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.104.130502</a></p>
+<p>中核となる論点は、トポロジカル非自明な状態にはトポロジーによって保護された縮退（degeneracy）が存在するというものである。</p>
+<p><img
+        class="lazyload"
+        src="/OkongOyangO.Notes/svg/loading.min.svg"
+        data-src="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig17_entanglement_degeneracy.png"
+        data-srcset="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig17_entanglement_degeneracy.png, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig17_entanglement_degeneracy.png 1.5x, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig17_entanglement_degeneracy.png 2x"
+        data-sizes="auto"
+        alt="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig17_entanglement_degeneracy.png"
+        title="Degeneracy in Entanglement Spectra = topologically non-trivial phase" width="749" height="443" /></p>
+<p><em>Degeneracy in Entanglement Spectra = topologically non-trivial phase</em></p>
+<p>Ashvinらはさらに、Entanglement SpectrumとEdge state Spectrumの間にも、Wilson Loop SpectrumとEdge State Spectrumの間と同様のトポロジカル同値性があることを発見した。証明方法も同様に、entanglement Spectrumからedge state Spectrumへのinterpolation（「連続変形」）を提案するものである：</p>
+<p><a href="https://arxiv.org/abs/0909.3119" target="_blank" rel="noopener noreffer ">https://arxiv.org/abs/0909.3119</a></p>
+<p>Xiaoliang Qiらも関連する論文を発表している：</p>
+<p>General Relationship between the Entanglement Spectrum and the Edge State Spectrum of Topological Quantum States</p>
+<p><img
+        class="lazyload"
+        src="/OkongOyangO.Notes/svg/loading.min.svg"
+        data-src="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig18_surface_entanglement_equivalence.png"
+        data-srcset="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig18_surface_entanglement_equivalence.png, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig18_surface_entanglement_equivalence.png 1.5x, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig18_surface_entanglement_equivalence.png 2x"
+        data-sizes="auto"
+        alt="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig18_surface_entanglement_equivalence.png"
+        title="Topological Equivalence between Surface Spectrum &amp; Entanglement Spectrum" width="828" height="760" /></p>
+<p><em>Topological Equivalence between Surface Spectrum &amp; Entanglement Spectrum</em></p>
+<p>上の図が示すように、Surface SpectrumとEntanglement Spectrumはトポロジカルに同値であり、これはトポロジカルエッジ状態を検出する別のツールを提供するものである。</p>
+<h2 id="beyond-traditional-bec">Beyond Traditional BEC</h2>
+<p>以上で述べたバルク・バウンダリー対応は、トポロジカルバンド理論がトポロジカル絶縁体／チャーン絶縁体／トポロジカル超伝導体によって独占されていた2010年代以前において最も重要な結論の一つであるが、これは最も単純なバージョンに過ぎない。特筆すべきは、「バルク・バウンダリー対応」にはその後の発展があり、2010年代以降に相次いで発見された、結晶対称性によって保護されるトポロジカル結晶絶縁体（Topological Crystalline Insulator, TCI）、およびその中でも特に興味深い高次トポロジカル絶縁体（Higher-Order Topological Insulator, HOTI）や脆トポロジー（Fragile Topology）などの概念と密接に関連していることである。</p>
+<p><img
+        class="lazyload"
+        src="/OkongOyangO.Notes/svg/loading.min.svg"
+        data-src="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig19_family_topo_insulators.png"
+        data-srcset="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig19_family_topo_insulators.png, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig19_family_topo_insulators.png 1.5x, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig19_family_topo_insulators.png 2x"
+        data-sizes="auto"
+        alt="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig19_family_topo_insulators.png"
+        title="Family of Topological Band Insulators" width="1075" height="421" /></p>
+<p><em>Family of Topological Band Insulators</em></p>
+<p>これらの系では、さらに不思議なバルク・バウンダリー対応の現象が見られる。</p>
+<h3 id="topological-crystalline-insulators">Topological Crystalline Insulators</h3>
+<p>TCIはもともとLiang FuのPRLに端を発する：</p>
+<p>Topological Crystalline Insulators</p>
+<p>その後、様々な結晶格子対称性によって保護されるTopological Band Insulatorsへと発展し、さらにAshvin, Bernevig, Cano, Jennifer, Barry BradlynらはSymmetry IndicatorやTopological Quantum Chemistryを発展させ、系統的なab initio計算を可能にした：</p>
+<p><a href="https://www.nature.com/articles/s41467-017-00133-2" target="_blank" rel="noopener noreffer ">https://www.nature.com/articles/s41467-017-00133-2</a></p>
+<p><a href="https://www.annualreviews.org/content/journals/10.1146/annurev-conmatphys-041720-124134" target="_blank" rel="noopener noreffer ">https://www.annualreviews.org/content/journals/10.1146/annurev-conmatphys-041720-124134</a></p>
+<p>TCIの場合、対応する結晶対称性が保たれている境界にのみトポロジーに保護されたエッジ状態が存在する。例えばMirror Chern Insulatorでは、鏡面對称性が破れた境界にはトポロジーに保護されたエッジ状態は存在しない。以下の図はWeizmannのTopological quantum matterシリーズ講義のTopological Crystalline Insulatorのセクションからの引用であり、強くお勧めする (。・ω・。)。</p>
+<p><a href="https://www.youtube.com/watch?v=ErwkO5H4M4E&amp;t=454s" target="_blank" rel="noopener noreffer ">https://www.youtube.com/watch?v=ErwkO5H4M4E&t=454s</a></p>
+<p><img
+        class="lazyload"
+        src="/OkongOyangO.Notes/svg/loading.min.svg"
+        data-src="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig20_mirror_chern_insulator.png"
+        data-srcset="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig20_mirror_chern_insulator.png, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig20_mirror_chern_insulator.png 1.5x, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig20_mirror_chern_insulator.png 2x"
+        data-sizes="auto"
+        alt="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig20_mirror_chern_insulator.png"
+        title="Mirror Chern Insulator (From Weizmann TQM lecture video)" width="551" height="527" /></p>
+<p><em>Mirror Chern Insulator (From Weizmann TQM lecture video)</em></p>
+<p>TCIの同定にはWilson Loopなどのツールが用いられる。Xi Dai &amp; Bernevigの論文を参照されたい：</p>
+<p>Wilson-loop characterization of inversion-symmetric topological insulators</p>
+<h3 id="higher-order-topological-insulators">Higher Order Topological Insulators</h3>
+<p>HOTIの場合、系の次元を$d$とする。通常のバルク・バウンダリー対応が$d-1$次元の境界にトポロジーに保護されたエッジ状態を持つこととは異なり、HOTIは$d-2$次元、$d-3$次元、……の境界にトポロジーに保護されたエッジ状態を持つことができる。本質的には、$d-2$次元のトポロジーに保護されたエッジ状態は、$d-1$次元の境界がトポロジカル絶縁体であると見なすことができる。2次元系ではトポロジカル角状態（topological corner state）、3次元系ではトポロジカルヒンジ状態（topological hinge state）を持つことができ、以下同様である。高次トポロジカル絶縁体の分類にはWilson LoopおよびEntanglement Spectrumの一般化であるnested Wilson Loopとnested Entanglement Spectrumが用いられる。HOTIのより詳細な紹介については、Taylor Hughesの論文を参照されたい：</p>
+<p><a href="https://www.science.org/doi/full/10.1126/science.aah6442" target="_blank" rel="noopener noreffer ">https://www.science.org/doi/full/10.1126/science.aah6442</a></p>
+<p><a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.96.245115" target="_blank" rel="noopener noreffer ">https://journals.aps.org/prb/abstract/10.1103/PhysRevB.96.245115</a></p>
+<p>Titusの論文も参考になる：</p>
+<p><a href="https://www.science.org/doi/full/10.1126/sciadv.aat0346" target="_blank" rel="noopener noreffer ">https://www.science.org/doi/full/10.1126/sciadv.aat0346</a></p>
+<p><img
+        class="lazyload"
+        src="/OkongOyangO.Notes/svg/loading.min.svg"
+        data-src="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig21_hinge_state_hoti.png"
+        data-srcset="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig21_hinge_state_hoti.png, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig21_hinge_state_hoti.png 1.5x, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig21_hinge_state_hoti.png 2x"
+        data-sizes="auto"
+        alt="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig21_hinge_state_hoti.png"
+        title="Hinge state of HOTI" width="1075" height="350" /></p>
+<p><em>Hinge state of HOTI</em></p>
+<h3 id="fragile-topology">Fragile Topology</h3>
+<p>Fragile Topologyに関しては、従来のバルク・バウンダリー対応はもはや成り立たない。なぜなら脆トポロジーは、自明なバンドを加えることでtrivializeできる存在だからである。これは従来のバルク・バウンダリー対応とトポロジー分類が一対一対応ではないことを示しており、Zhida Songらはこの点について、いわゆるtwisted boundary condition（TBC）とreal space invariant（RSI）を用いた一般化を行った。このときの「バルク・バウンダリー対応」は、twisted boundary conditionのパラメータが一周する過程で必ずギャップクロージングが発生するというものに一般化される。これによりFragile Topologyは一般化された「バルク・バウンダリー対応」を用いて判定できる。詳細は以下の回答を参照されたい。TBCとRSIについてはZhida Songの論文を参照されたい：</p>
+<p><a href="https://www.science.org/doi/full/10.1126/science.aaz7650" target="_blank" rel="noopener noreffer ">https://www.science.org/doi/full/10.1126/science.aaz7650</a></p>
+<p><img
+        class="lazyload"
+        src="/OkongOyangO.Notes/svg/loading.min.svg"
+        data-src="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig22_spectral_flow_fragile_TBC.png"
+        data-srcset="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig22_spectral_flow_fragile_TBC.png, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig22_spectral_flow_fragile_TBC.png 1.5x, /OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig22_spectral_flow_fragile_TBC.png 2x"
+        data-sizes="auto"
+        alt="/OkongOyangO.Notes/posts/bulk-boundary-correspondence/fig22_spectral_flow_fragile_TBC.png"
+        title="Spectral flow of fragile topology under TBC" width="789" height="540" /></p>
+<p><em>Spectral flow of fragile topology under TBC</em></p>
+<h2 id="reference">Reference</h2>
+<ol>
+<li>
+<p>Chang, C. Z., Liu, C. X., &amp; MacDonald, A. H. (2023). Colloquium: Quantum anomalous hall effect. <em>Reviews of Modern Physics</em>, 95(1), 011002.</p>
+</li>
+<li>
+<p>Hasan, M. Z., &amp; Kane, C. L. (2010). Colloquium: topological insulators. <em>Reviews of Modern Physics</em>, 82(4), 3045.</p>
+</li>
+<li>
+<p>Shen, S. Q. (2012). <em>Topological insulators</em> (Vol. 174). Berlin: Springer.</p>
+</li>
+<li>
+<p>Yu, R., Qi, X. L., Bernevig, A., Fang, Z., &amp; Dai, X. (2011). Equivalent expression of $\mathbb{Z}_2$ topological invariant for band insulators using the non-Abelian Berry connection. <em>Physical Review B</em>, 84(7), 075119.</p>
+</li>
+<li>
+<p>Bercioux, D., Cayssol, J., Vergniory, M. G., &amp; Calvo, M. R. (Eds.). (2018). <em>Topological matter: lectures from the topological matter school 2017</em> (Vol. 190). Springer.</p>
+</li>
+<li>
+<p>Marzari, N., Mostofi, A. A., Yates, J. R., Souza, I., &amp; Vanderbilt, D. (2012). Maximally localized Wannier functions: Theory and applications. <em>Reviews of Modern Physics</em>, 84(4), 1419.</p>
+</li>
+<li>
+<p>Marzari, N., &amp; Vanderbilt, D. (1997). Maximally localized generalized Wannier functions for composite energy bands. <em>Physical Review B</em>, 56(20), 12847.</p>
+</li>
+<li>
+<p>Resta, R. (2002). Why are insulators insulating and metals conducting?. <em>Journal of Physics: Condensed Matter</em>, 14(20), R625.</p>
+</li>
+<li>
+<p>Resta, R. (2022). Geometry and topology in electronic structure theory. Università degli Studi di Trieste.</p>
+</li>
+<li>
+<p>Fidkowski, L., Jackson, T. S., &amp; Klich, I. (2011). Model characterization of gapless edge modes of topological insulators using intermediate Brillouin-zone functions. <em>Physical Review Letters</em>, 107(3), 036601.</p>
+</li>
+<li>
+<p>Li, H., &amp; Haldane, F. D. M. (2008). Entanglement spectrum as a generalization of entanglement entropy: Identification of topological order in non-abelian fractional quantum hall effect states. <em>Physical Review Letters</em>, 101(1), 010504.</p>
+</li>
+<li>
+<p>Fidkowski, L. (2010). Entanglement spectrum of topological insulators and superconductors. <em>Physical Review Letters</em>, 104(13), 130502.</p>
+</li>
+<li>
+<p>Turner, A. M., Zhang, Y., &amp; Vishwanath, A. (2009). Band topology of insulators via the entanglement spectrum. arXiv:0909.3119.</p>
+</li>
+<li>
+<p>Qi, X. L., Katsura, H., &amp; Ludwig, A. W. (2012). General relationship between the entanglement spectrum and the edge state spectrum of topological quantum states. <em>Physical Review Letters</em>, 108(19), 196402.</p>
+</li>
+<li>
+<p>Fu, L. (2011). Topological crystalline insulators. <em>Physical Review Letters</em>, 106(10), 106802.</p>
+</li>
+<li>
+<p>Po, H. C., Vishwanath, A., &amp; Watanabe, H. (2017). Symmetry-based indicators of band topology in the 230 space groups. <em>Nature Communications</em>, 8(1), 50.</p>
+</li>
+<li>
+<p>Cano, J., &amp; Bradlyn, B. (2021). Band representations and topological quantum chemistry. <em>Annual Review of Condensed Matter Physics</em>, 12, 225-246.</p>
+</li>
+<li>
+<p>Alexandradinata, A., Dai, X., &amp; Bernevig, B. A. (2014). Wilson-loop characterization of inversion-symmetric topological insulators. <em>Physical Review B</em>, 89(15), 155114.</p>
+</li>
+<li>
+<p>Benalcazar, W. A., Bernevig, B. A., &amp; Hughes, T. L. (2017). Quantized electric multipole insulators. <em>Science</em>, 357(6346), 61-66.</p>
+</li>
+<li>
+<p>Benalcazar, W. A., Bernevig, B. A., &amp; Hughes, T. L. (2017). Electric multipole moments, topological multipole moment pumping, and chiral hinge states in crystalline insulators. <em>Physical Review B</em>, 96(24), 245115.</p>
+</li>
+<li>
+<p>Schindler, F., Cook, A. M., Vergniory, M. G., Wang, Z., Parkin, S. S., Bernevig, B. A., &amp; Neupert, T. (2018). Higher-order topological insulators. <em>Science Advances</em>, 4(6), eaat0346.</p>
+</li>
+<li>
+<p>Song, Z. D., Elcoro, L., &amp; Bernevig, B. A. (2020). Twisted bulk-boundary correspondence of fragile topology. <em>Science</em>, 367(6479), 794-797.</p>
+</li>
+<li>
+<p>Mong, R. S., &amp; Shivamoggi, V. (2011). Edge states and the bulk-boundary correspondence in Dirac Hamiltonians. <em>Physical Review B</em>, 83(12), 125109.</p>
+</li>
+</ol></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2026-06-29</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/bulk-boundary-correspondence/" data-title="バルク・バウンダリー対応：Dirac方程式、Wilson Loop、エンタングルメント・スペクトル" data-via="OkongOyangO" data-hashtags="Topological Insulator,Bulk-Boundary Correspondence,Wilson Loop,Entanglement Spectrum,Dirac Equation,Condensed Matter"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/bulk-boundary-correspondence/" data-title="バルク・バウンダリー対応：Dirac方程式、Wilson Loop、エンタングルメント・スペクトル"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/bulk-boundary-correspondence/" data-hashtag="Topological Insulator"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/bulk-boundary-correspondence/" data-title="バルク・バウンダリー対応：Dirac方程式、Wilson Loop、エンタングルメント・スペクトル"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/bulk-boundary-correspondence/" data-title="バルク・バウンダリー対応：Dirac方程式、Wilson Loop、エンタングルメント・スペクトル"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/bulk-boundary-correspondence/" data-title="バルク・バウンダリー対応：Dirac方程式、Wilson Loop、エンタングルメント・スペクトル"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/bulk-boundary-correspondence/" data-title="バルク・バウンダリー対応：Dirac方程式、Wilson Loop、エンタングルメント・スペクトル" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fOkongOyangO.github.io%2fOkongOyangO.Notes%2fja%2fposts%2fbulk-boundary-correspondence%2f&amp;text=%e3%83%90%e3%83%ab%e3%82%af%e3%83%bb%e3%83%90%e3%82%a6%e3%83%b3%e3%83%80%e3%83%aa%e3%83%bc%e5%af%be%e5%bf%9c%ef%bc%9aDirac%e6%96%b9%e7%a8%8b%e5%bc%8f%e3%80%81Wilson%20Loop%e3%80%81%e3%82%a8%e3%83%b3%e3%82%bf%e3%83%b3%e3%82%b0%e3%83%ab%e3%83%a1%e3%83%b3%e3%83%88%e3%83%bb%e3%82%b9%e3%83%9a%e3%82%af%e3%83%88%e3%83%ab" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/OkongOyangO.Notes/ja/tags/topological-insulator/">Topological Insulator</a>,&nbsp;<a href="/OkongOyangO.Notes/ja/tags/bulk-boundary-correspondence/">Bulk-Boundary Correspondence</a>,&nbsp;<a href="/OkongOyangO.Notes/ja/tags/wilson-loop/">Wilson Loop</a>,&nbsp;<a href="/OkongOyangO.Notes/ja/tags/entanglement-spectrum/">Entanglement Spectrum</a>,&nbsp;<a href="/OkongOyangO.Notes/ja/tags/dirac-equation/">Dirac Equation</a>,&nbsp;<a href="/OkongOyangO.Notes/ja/tags/condensed-matter/">Condensed Matter</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">戻る</a></span>&nbsp;|&nbsp;<span><a href="/OkongOyangO.Notes/ja/">ホーム</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/OkongOyangO.Notes/ja/posts/quantum-geometry-everything/" class="prev" rel="prev" title="🥺 Quantum Geometry Everything？「量子幾何物理大応答」を一から解説する"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>🥺 Quantum Geometry Everything？「量子幾何物理大応答」を一から解説する</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.154.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/OkongOyangO.Notes/ja/" target="_blank">OkongOyangO</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="トップへ戻る">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="コメントを見る">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/copy-tex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/mhchem.min.js"></script><script>window.config={"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/OkongOyangO.Notes/ja/index.json","maxResultLength":10,"noResultsFound":"結果が見つかりません","snippetLength":30,"type":"lunr"}};</script><script src="/OkongOyangO.Notes/js/theme.min.js"></script></body>
+</html>
