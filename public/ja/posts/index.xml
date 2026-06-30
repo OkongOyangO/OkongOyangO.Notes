@@ -4,7 +4,24 @@
         <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/</link>
         <description>All 記事 | OkongOyangOのノート</description>
         <generator>Hugo -- gohugo.io</generator><language>ja</language><managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
-            <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster><lastBuildDate>Mon, 29 Jun 2026 18:00:00 &#43;0800</lastBuildDate><atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster><lastBuildDate>Tue, 30 Jun 2026 11:00:00 &#43;0800</lastBuildDate><atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>🤩量子幾何学（Quantum Geometry）：量子幾何テンソル入門</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/quantum-geometry-in-fci/</link>
+    <pubDate>Tue, 30 Jun 2026 11:00:00 &#43;0800</pubDate>
+    <author>yzj5306@psu.edu (OkongOyangO)</author>
+    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/quantum-geometry-in-fci/</guid>
+    <description><![CDATA[<p>本ノートでは、Quantum Geometryの定義とその計算法を読者に迅速に習得させることを目的とする。Topologyは量子系の重要な性質であり、系の断熱変化における不変量を反映する。一方Geometryは系の詳細に着目する——量子状態間の「距離」を適切に記述する物理量を見つけることが、Quantum Geometryの中心問題である。</p>]]></description>
+</item>
+<item>
+    <title>😮QHE(4)｜量子ホール効果からトポロジカル絶縁体、Chern-Simons理論とトポロジカル分類へ</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/iqhe-ti-chern-simons/</link>
+    <pubDate>Tue, 30 Jun 2026 10:00:00 &#43;0800</pubDate>
+    <author>yzj5306@psu.edu (OkongOyangO)</author>
+    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/iqhe-ti-chern-simons/</guid>
+    <description><![CDATA[<p>凝縮系理論におけるトポロジーに触れてからすでに一年が経ち、断片的に多くの文献を読んできた。以下ではそれらを整理し、今後この分野に取り組むかもしれない読者のために、学習過程における主な流れを明確にしたいと思う。</p>
+<p>整数量子ホール効果は凝縮系に新たな分野を切り開いた。しかし、これは凝縮系におけるトポロジーの氷山の一角に過ぎない。IQHEは実際には<strong>二次元、ギャップ有り、相互作用無し、フェルミオン系、時間反転対称性（TRS）無し、粒子-正孔対称性（PHS、あるいは電荷共役対称性）無し、カイラル対称性無し</strong>の系におけるトポロジカル効果であることがわかるだろう。</p>]]></description>
+</item>
+<item>
     <title>🤪バルク・バウンダリー対応：Dirac方程式、Wilson Loop、エンタングルメント・スペクトル</title>
     <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/bulk-boundary-correspondence/</link>
     <pubDate>Mon, 29 Jun 2026 18:00:00 &#43;0800</pubDate>
@@ -69,22 +86,6 @@
     <author>yzj5306@psu.edu (OkongOyangO)</author>
     <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/nonlinear-kubo-formalism/</guid>
     <description><![CDATA[<p>この記事は、久保公式の非線形応答理論を導出することを目的としています。</p>]]></description>
-</item>
-<item>
-    <title>😯フェルミの黄金律（Fermi Golden Rule）は何を見落としているのか？</title>
-    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/fermi_golden_rule/</link>
-    <pubDate>Mon, 06 Mar 2023 22:30:00 -0500</pubDate>
-    <author>yzj5306@psu.edu (OkongOyangO)</author>
-    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/fermi_golden_rule/</guid>
-    <description><![CDATA[<p>本文は厳密な量子遷移率を計算し、フェルミの黄金律がその「長時間平均」の結果であることを指摘することを目的としています。厳密な量子遷移率は、フェルミの黄金律と比較して、無視できない振幅を持つ二倍周波数振動項（double-frequency oscillation term）をさらに含んでいます。両者の関係は、交流回路における「瞬時電力」と「平均電力」の関係に似ています。</p>]]></description>
-</item>
-<item>
-    <title>🧐分数量子ホール効果 (FQHE)、分数異常量子ホール効果 (FAQHE)、そして分数チャーン絶縁体 (FCI)</title>
-    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/fqhe_faqhe_fci/</link>
-    <pubDate>Mon, 17 Oct 2022 22:30:00 -0500</pubDate>
-    <author>yzj5306@psu.edu (OkongOyangO)</author>
-    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/fqhe_faqhe_fci/</guid>
-    <description><![CDATA[<p>本ノートは約10,000文字あり、読者が分数量子ホール効果、分数異常量子ホール効果、および分数チャーン絶縁体に関する内容に入門することを目的としています。本文は私見に過ぎず、多くの不備があるかと思いますので、読者の皆様からのご指摘を歓迎いたします。以下、本文です。</p>]]></description>
 </item>
 </channel>
 </rss>

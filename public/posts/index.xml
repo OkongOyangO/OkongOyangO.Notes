@@ -4,7 +4,24 @@
         <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/</link>
         <description>All Posts | OkongOyangO&#39;s Notes</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
-            <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster><lastBuildDate>Mon, 29 Jun 2026 18:00:00 &#43;0800</lastBuildDate><atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster><lastBuildDate>Tue, 30 Jun 2026 11:00:00 &#43;0800</lastBuildDate><atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>🤩Quantum Geometry: A Hands-on Introduction to the Quantum Geometric Tensor</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/quantum-geometry-in-fci/</link>
+    <pubDate>Tue, 30 Jun 2026 11:00:00 &#43;0800</pubDate>
+    <author>yzj5306@psu.edu (OkongOyangO)</author>
+    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/quantum-geometry-in-fci/</guid>
+    <description><![CDATA[<p>This note aims to quickly get readers up to speed with the definition and computation of Quantum Geometry. Topology is an essential property of quantum systems, capturing invariants under adiabatic changes of parameters, while Geometry focuses on the fine details—finding a proper physical quantity that characterizes the &ldquo;distance&rdquo; between quantum states is the central problem of Quantum Geometry.</p>]]></description>
+</item>
+<item>
+    <title>😮QHE(4)｜From Quantum Hall to Topological Insulator to Chern-Simons Theory and Topological Classification</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/iqhe-ti-chern-simons/</link>
+    <pubDate>Tue, 30 Jun 2026 10:00:00 &#43;0800</pubDate>
+    <author>yzj5306@psu.edu (OkongOyangO)</author>
+    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/iqhe-ti-chern-simons/</guid>
+    <description><![CDATA[<p>It has been a year since I first encountered topology in condensed matter theory. I have read quite a bit of literature here and there, and I would like to organize my thoughts below, hoping to clarify some of the main threads in the learning process for readers who may be entering this field in the future.</p>
+<p>The integer quantum Hall effect opened up a new frontier for condensed matter physics. However, this is only the tip of the iceberg when it comes to topology in condensed matter. As we will see, IQHE is in fact a topological effect of a system that is <strong>two-dimensional, gapped, non-interacting, fermionic, without time-reversal symmetry (TRS), without particle-hole symmetry (PHS, or charge conjugate symmetry), and without chiral symmetry</strong>.</p>]]></description>
+</item>
+<item>
     <title>🤪Bulk-Boundary Correspondence: Dirac Equation, Wilson Loop, and Entanglement Spectra</title>
     <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/bulk-boundary-correspondence/</link>
     <pubDate>Mon, 29 Jun 2026 18:00:00 &#43;0800</pubDate>
@@ -69,22 +86,6 @@
     <author>yzj5306@psu.edu (OkongOyangO)</author>
     <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/nonlinear-kubo-formalism/</guid>
     <description><![CDATA[<p>This article aims to derive the nonlinear response theory of the Kubo Formula.</p>]]></description>
-</item>
-<item>
-    <title>😯What did Fermi Golden Rule Miss?</title>
-    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/fermi_golden_rule/</link>
-    <pubDate>Mon, 06 Mar 2023 22:30:00 -0500</pubDate>
-    <author>yzj5306@psu.edu (OkongOyangO)</author>
-    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/fermi_golden_rule/</guid>
-    <description><![CDATA[<p>This article aims to calculate the strict quantum transition rate and points out that the Fermi Golden Rule is the result of its &ldquo;long-time average&rdquo;. The strict quantum transition rate contains an additional double-frequency oscillation term with non-negligible amplitude compared to the Fermi Golden Rule. The relationship between the two is similar to &ldquo;instantaneous power&rdquo; and &ldquo;average power&rdquo; in AC circuits.</p>]]></description>
-</item>
-<item>
-    <title>🧐Fractional Quantum Hall Effect (FQHE), Fractional Anomalous Quantum Hall Effect (FAQHE) and Fractional Chern Insulator (FCI)</title>
-    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/fqhe_faqhe_fci/</link>
-    <pubDate>Mon, 17 Oct 2022 22:30:00 -0500</pubDate>
-    <author>yzj5306@psu.edu (OkongOyangO)</author>
-    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/fqhe_faqhe_fci/</guid>
-    <description><![CDATA[<p>This note is approximately 10,000 words long and aims to help readers get started with Fractional Quantum Hall Effect (FQHE), Fractional Anomalous Quantum Hall Effect (FAQHE), and Fractional Chern Insulators (FCI). This article represents only my personal perspective and may contain errors; I welcome corrections from readers. Below is the main text.</p>]]></description>
 </item>
 </channel>
 </rss>

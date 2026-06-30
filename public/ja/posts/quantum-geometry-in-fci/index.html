@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>🤩量子幾何学（Quantum Geometry）：量子幾何テンソル入門 - OkongOyangOのノート</title><meta name="Description" content="O空O揚Oの物理学ノート"><meta property="og:url" content="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/quantum-geometry-in-fci/">
+  <meta property="og:site_name" content="OkongOyangOのノート">
+  <meta property="og:title" content="🤩量子幾何学（Quantum Geometry）：量子幾何テンソル入門">
+  <meta property="og:description" content="本ノートでは、Quantum Geometryの定義とその計算法を読者に迅速に習得させることを目的とする。Topologyは量子系の重要な性質であり、系の断熱変化における不変量を反映する。一方Geometryは系の詳細に着目する——量子状態間の「距離」を適切に記述する物理量を見つけることが、Quantum Geometryの中心問題である。">
+  <meta property="og:locale" content="ja">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-06-30T11:00:00+08:00">
+    <meta property="article:modified_time" content="2026-06-30T11:00:00+08:00">
+    <meta property="article:tag" content="Quantum Geometry">
+    <meta property="article:tag" content="Fubini-Study Metric">
+    <meta property="article:tag" content="Berry Curvature">
+    <meta property="article:tag" content="Fractional Chern Insulator">
+    <meta property="article:tag" content="Condensed Matter">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="🤩量子幾何学（Quantum Geometry）：量子幾何テンソル入門">
+  <meta name="twitter:description" content="本ノートでは、Quantum Geometryの定義とその計算法を読者に迅速に習得させることを目的とする。Topologyは量子系の重要な性質であり、系の断熱変化における不変量を反映する。一方Geometryは系の詳細に着目する——量子状態間の「距離」を適切に記述する物理量を見つけることが、Quantum Geometryの中心問題である。">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/OkongOyangO.Notes/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/OkongOyangO.Notes/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/OkongOyangO.Notes/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/OkongOyangO.Notes/apple-touch-icon.png"><link rel="mask-icon" href="/OkongOyangO.Notes/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/OkongOyangO.Notes/site.webmanifest"><link rel="canonical" href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/quantum-geometry-in-fci/" /><link rel="prev" href="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/iqhe-ti-chern-simons/" /><link rel="stylesheet" href="/OkongOyangO.Notes/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "🤩量子幾何学（Quantum Geometry）：量子幾何テンソル入門",
+        "inLanguage": "ja",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/ja\/posts\/quantum-geometry-in-fci\/"
+        },"genre": "posts","keywords": "Quantum Geometry, Fubini-Study Metric, Berry Curvature, Fractional Chern Insulator, Condensed Matter","wordcount":  752 ,
+        "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/ja\/posts\/quantum-geometry-in-fci\/","datePublished": "2026-06-30T11:00:00+08:00","dateModified": "2026-06-30T11:00:00+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "OkongOyangO"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/OkongOyangO.Notes/ja/" title="OkongOyangOのノート">OkongOyangO&#39;s Notes</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item active" href="/OkongOyangO.Notes/ja/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i> 記事 </a><a class="menu-item" href="/OkongOyangO.Notes/ja/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i> タグ </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="検索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="クリア">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="テーマ">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i> テーマ
+                </a><a href="javascript:void(0);" class="menu-item language" title="言語">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i> 言語
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/quantum-geometry-in-fci/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/quantum-geometry-in-fci/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/quantum-geometry-in-fci/" selected>日本語</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/OkongOyangO.Notes/ja/" title="OkongOyangOのノート">OkongOyangO&#39;s Notes</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="検索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="クリア">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        キャンセル
+                    </a>
+                </div><a class="menu-item" href="/OkongOyangO.Notes/ja/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i>記事</a><a class="menu-item" href="/OkongOyangO.Notes/ja/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i>タグ</a><a href="javascript:void(0);" class="menu-item theme-switch" title="テーマ">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>テーマ
+            </a><a href="javascript:void(0);" class="menu-item" title="言語">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>言語
+                    <select class="language-select" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/quantum-geometry-in-fci/">English</option><option value="/OkongOyangO.Notes/zh-cn/posts/quantum-geometry-in-fci/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/quantum-geometry-in-fci/" selected>日本語</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目次</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">🤩量子幾何学（Quantum Geometry）：量子幾何テンソル入門</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/OkongOyangO.Notes/ja/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">included in <a href="/OkongOyangO.Notes/ja/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-06-30">2026-06-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;752 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目次</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#hilbert-space-is-not-physical">Hilbert Space is not Physical</a></li>
+    <li><a href="#introduction-and-definition">Introduction and Definition</a></li>
+    <li><a href="#alternative-expression">Alternative Expression</a></li>
+    <li><a href="#eg-spin-12-systems">E.g. Spin-1/2 Systems</a></li>
+    <li><a href="#reference">Reference</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>本ノートでは、Quantum Geometryの定義とその計算法を読者に迅速に習得させることを目的とする。Topologyは量子系の重要な性質であり、系の断熱変化における不変量を反映する。一方Geometryは系の詳細に着目する——量子状態間の「距離」を適切に記述する物理量を見つけることが、Quantum Geometryの中心問題である。</p>
+<p>以下では、状態ベクトルが実際に存在する物理空間——射影ヒルベルト空間（Projected Hilbert Space）——を見出し、その上に計量を定義し、単純な模型のQuantum Geometric Tensorを計算することで、読者をQuantum Geometryという魅力的な分野へと導く。</p>
+<h2 id="hilbert-space-is-not-physical">Hilbert Space is not Physical</h2>
+<p>量子状態はヒルベルト空間$\mathcal{H}$内のベクトルとみなすことができ、その成分はすべて複素数である。$n$次元ヒルベルト空間を例にとると、量子状態は$\mathbb{C}^n$に属する状態ベクトルであり、次のように書ける：</p>
+$$ |\psi\rangle = (\psi_1, \cdots, \psi_n)^T $$$$ \psi_i \in \mathbb{C},\,i = 1, \cdots, n $$<p>しかしこれは真の物理空間ではない。状態ベクトルに複素数を乗じても同じ状態であることが知られている。したがって、真の量子状態空間はヒルベルト空間から<strong>非零複素数で割った</strong>空間である。</p>
+<p>具体的には、まず状態ベクトルの成分を実数にし、状態が0でないことを要請する。これは次と等価である：</p>
+$$ \mathcal{H} \simeq \mathbb{C}^n - \{\mathbf{0}\} \simeq \mathbb{R}^{2n}-\{\mathbf{0}\} $$<p>ここで非零複素数$\mathbb{C}-\{\mathbf{0}\}$で割る。非零複素数はノルム$\R^+$と位相$U(1)$に分解できる：</p>
+$$ \mathbb{C}-\{\mathbf{0}\} \simeq \R^+ \times U(1) $$<p>これを二段階に分ける。第一段階としてノルムを揃える、すなわち正実数で割る。これにより原点を除いた$2n$次元空間は$2n-1$次元球面になる：</p>
+$$ (\mathbb{R}^{2n}-\{\mathbf{0}\})/\R^+ \simeq S^{2n-1} $$<p>さらに位相で割ると、複素射影空間が得られる：</p>
+$$ S^{2n-1}/U(1) \simeq \mathbb{C}P^{n-1} $$<p>量子状態が実際に存在する空間を射影ヒルベルト空間（Projected Hilbert Space）$\mathcal{P}\mathcal{H} \simeq \mathbb{C}P^{n-1}$と呼ぶ。</p>
+<h2 id="introduction-and-definition">Introduction and Definition</h2>
+<p>ヒルベルト空間内の状態ベクトルに対して、その距離を次のように定義できる：</p>
+$$
+\mathrm{d} s^2=\| \psi(\lambda+\mathrm{d} \lambda)-\left.\psi(\lambda)\right|^2=\langle\delta \psi \mid \delta \psi\rangle \\
+=\left\langle\partial_\mu \psi \mid \partial_\nu \psi\right\rangle \mathrm{d} \lambda^\mu \mathrm{d} \lambda^\nu \\
+=\left(\gamma_{\mu \nu}+i \sigma_{\mu \nu}\right) \mathrm{d} \lambda^\mu \mathrm{d} \lambda^\nu
+$$<p><strong>内積のエルミート性</strong>から、次が成り立つ：</p>
+$$
+\gamma_{\mu \nu}+i \sigma_{\mu \nu}=\gamma_{\nu \mu}-i \sigma_{\nu \mu} \quad \gamma_{\mu \nu}=\gamma_{\nu \mu} \quad \sigma_{\mu \nu}=-\sigma_{\nu \mu}
+$$<p>しかしヒルベルト空間は真の量子状態空間ではない。なぜなら、状態にゲージ変換（位相の変更）を施しても状態自体は不変だからである。このときパラメータ空間上で定義される「距離」および計量は不変であるべきである（パラメータ空間の各点に対応する状態は変わらず、位相が変わるだけである。ここでは規格化された状態のみを考える）。しかし、先に定義した「計量」には問題があることがすぐにわかる。</p>
+<p>具体的には、パラメータ空間から状態空間への写像に任意のゲージ変換を施すと：</p>
+$$
+\left|\psi^{\prime}(\lambda)\right\rangle=\exp ^{i \alpha(\lambda)}|\psi(\lambda)\rangle
+$$<p>対応する計量テンソルは次のように変化する：</p>
+$$ \left\langle\partial_\mu \psi^{\prime} \mid \partial_\nu \psi^{\prime}\right\rangle=\gamma_{\mu \nu}^{\prime}+i \sigma_{\mu \nu}^{\prime} $$$$
+\gamma_{\mu \nu}^{\prime}=\gamma_{\mu \nu}-\beta_\mu \partial_\nu \alpha-\beta_\nu \partial_\mu \alpha+\partial_\mu \alpha \partial_\nu \alpha
+$$$$
+\sigma_{\mu \nu}^{\prime}=\sigma_{\mu \nu}
+$$<p>ここで$\beta$はBerry Connectionであり、次のように定義される：</p>
+$$ \beta_\mu \equiv i \langle \psi (\lambda) | \partial_\mu \psi (\lambda) \rangle \in \R $$<p>このように、我々が素朴に定義した計量は物理的なものではない。物理的な計量はゲージ不変でなければならない。</p>
+<p>そこで以下の式を考えてみよう：</p>
+$$
+g_{\mu \nu}(\lambda):=\gamma_{\mu \nu}(\lambda)-\beta_\mu(\lambda) \beta_\nu(\lambda)
+$$<p>計量（実部、すなわちFubini-Study Metric）を上記の式に変更すると、新たに定義された計量がゲージ不変量になることは容易に証明できる。</p>
+<p>このときQuantum Geometric Tensorは次のように定義される：</p>
+$$
+Q_{\mu \nu}(\lambda):=\left\langle\partial_\mu \psi(\lambda) \mid \partial_\nu \psi(\lambda)\right\rangle-\left\langle\partial_\mu \psi(\lambda) \mid \psi(\lambda)\right\rangle\left\langle\psi(\lambda) \mid \partial_\nu \psi(\lambda)\right\rangle
+$$<p>実部は量子状態間の距離を記述し、<strong>Fubini-Study metric</strong>（FS metric）と呼ばれる対称テンソルである：</p>
+$$
+g_{\mu \nu}=\operatorname{Re} Q_{\mu \nu}
+$$<p>一方、虚部は<strong>Berry Curvature</strong>の部分（真のBerry Curvatureとは係数2の差がある）であり、反対称テンソルである：</p>
+$$ \sigma_{\mu \nu}=\operatorname{Im} Q_{\mu \nu} $$<p>二つの状態間の距離は次のようにも解釈できる。状態の振幅がすべて規格化されていると仮定すると、状態ベクトルは球面上に分布する点となる。球面上の点の距離は次のように表せる：</p>
+$$
+D^2\left(\mathbf{k}, \mathbf{k}^{\prime}\right) \equiv D^2\left[\mu(\mathbf{k}), \mu\left(\mathbf{k}^{\prime}\right)\right] =2-2\left|\mu^{\dagger}(\mathbf{k}-\mathbf{q}) \mu(\mathbf{k})\right|
+$$<p>内積をとることは二つの状態ベクトルのなす角の余弦$\cos \theta$をとることに相当し、$|...|$をとることで不定な位相の影響を除去し、振幅の影響のみを残す。$2 - 2 \cos \theta = 4 \sin^2\frac{\theta}{2}$より、$D = 2 \sin \frac{\theta}{2}$となり、これは球面上の二点間の直線距離である。二点が非常に近い場合、これは同時に球面上の二点間の「測地線」距離でもある。このことから、この$D(k,k')$の定義が確かに「距離」の意味を持つことがわかる。</p>
+<p>上記の$D(k,k')$の定義を非常に近い二点$k$, $k'$に対して展開すると、得られる計量の式が先の定義と一致することも証明できる。もちろんこれは微小量近似の下でのみ成り立つ。</p>
+<h2 id="alternative-expression">Alternative Expression</h2>
+<p>実際の数値計算では、コンピュータの対角化で得られる固有状態ベクトルの位相には固定された関係がない。このとき$|\partial_\mu \phi \rangle$の計算に問題が生じる可能性がある。そこで、以下の等価な式を導入し、計算における状態ベクトルの偏微分をハミルトニアンの偏微分に変換する。$H(k)$の定義は一般に連続関数であるため、解析計算も数値的な差分も可能となり、FS metric、Berry Curvature、そしてQuantum Geometric Tensor全体といった物理量の数値シミュレーション結果の正確性を保証できる。</p>
+<p>以下の等式を利用する。ここで状態ベクトルはすべて$H$の固有状態である：</p>
+$$
+\left\langle\phi_n \mid \partial_\mu \phi_0\right\rangle=\frac{\left\langle\phi_n\left|\partial_\mu H\right| \phi_0\right\rangle}{E_0-E_n} \quad \text { if } n \neq 0
+$$$$
+\left\langle\phi_0\left|\partial_\mu H\right| \phi_0\right\rangle=\partial_\mu E_0
+$$<p>したがって：</p>
+$$
+Q_{\mu \nu}=\left\langle\partial_\mu \phi_0\left|\left(\mathbf{1}-\left|\phi_0\right\rangle\left\langle\phi_0\right|\right)\right| \partial_\nu \phi_0\right\rangle
+$$$$
+=\sum_{n \neq 0}\left\langle\partial_\mu \phi_0 \mid \phi_n\right\rangle\left\langle\phi_n \mid \partial_\nu \phi_0\right\rangle
+$$$$
+=\sum_{n \neq 0} \frac{\left\langle\phi_0\left|\partial_\mu H\right| \phi_n\right\rangle\left\langle\phi_n\left|\partial_\nu H\right| \phi_0\right\rangle}{\left(E_0-E_n\right)^2}
+$$<p>ここでBerry Curvatureの式は：</p>
+$$
+F_{\mu \nu}=\partial_{[\mu} \beta_{\nu]}=i\left\langle\partial_{[\mu} \phi_0 \mid \partial_{\nu]} \phi_0\right\rangle=i\left(Q_{\mu \nu}-Q_{\nu \mu}\right)=-2 \operatorname{Im} Q_{\mu \nu}=-2 \sigma_{\mu \nu}
+$$<p>これはBerry CurvatureとQuantum Geometric Tensorの虚部の間に依然として係数2の差があることを示している：</p>
+$$
+Q_{\mu \nu}=g_{\mu \nu}-\frac{i}{2} F_{\mu \nu}
+$$<p>上記の定義はすべて非縮退の場合に成立する。$n$重縮退の場合、上記のすべてのスカラー量は$n$次元行列になり、FS metric、Berry Curvature、そしてQuantum Geometric Tensor全体といった物理量も非可換（non-Abelian）量となる。</p>
+$$
+{\left[Q_{\mu \nu}\right]_{i j}=\sum_{n \neq 0, k(n)} \frac{\left\langle\phi_{0 i}\left|\partial_\mu H\right| \phi_{n k}\right\rangle\left\langle\phi_{n k}\left|\partial_\nu H\right| \phi_{0 j}\right\rangle}{\left(E_0-E_n\right)^2}}
+$$<p><img
+        class="lazyload"
+        src="/OkongOyangO.Notes/svg/loading.min.svg"
+        data-src="https://pic4.zhimg.com/80/v2-d327ed01b77d2a2414e5ff2cd596f371.png"
+        data-srcset="https://pic4.zhimg.com/80/v2-d327ed01b77d2a2414e5ff2cd596f371.png, https://pic4.zhimg.com/80/v2-d327ed01b77d2a2414e5ff2cd596f371.png 1.5x, https://pic4.zhimg.com/80/v2-d327ed01b77d2a2414e5ff2cd596f371.png 2x"
+        data-sizes="auto"
+        alt="https://pic4.zhimg.com/80/v2-d327ed01b77d2a2414e5ff2cd596f371.png"
+        title="Image" /></p>
+<h2 id="eg-spin-12-systems">E.g. Spin-1/2 Systems</h2>
+<p>最も単純な二準位系のQuantum Geometric Tensorを実際に計算してみよう。ここで選ぶ系は磁場中のSpin-1/2系であり、パラメータは磁場の方位角$\theta \in [0,\pi]$, $\phi \in [0,2\pi]$である。ハミルトニアンは：</p>
+$$
+H=\mu \vec{\sigma} \cdot \vec{B} = \mu |B| \left(\begin{array}{cc}
+\cos \theta & \sin\theta e^{-i\phi} \\
+\sin\theta e^{i\phi} & - \cos \theta
+\end{array}\right) = \mu |B| \vec{\sigma} \cdot \hat{B}
+$$<p>二準位系の固有値、固有状態は容易に得られる：</p>
+$$ E_{\pm} = \pm \mu |B| $$$$
+|+\rangle =\left(
+e^{-i \phi / 2} \cos \frac{\theta}{2}, e^{i \phi / 2} \sin \frac{\theta}{2}
+\right)^T
+$$$$
+|-\rangle=\left(-e^{-i \phi / 2} \sin \frac{\theta}{2}, e^{i \phi / 2} \cos \frac{\theta}{2}\right)^T
+$$<p>先に述べた公式を用いる：</p>
+$$
+Q_{\mu \nu} =\sum_{n \neq 0} \frac{\left\langle\phi_0\left|\partial_\mu H\right| \phi_n\right\rangle\left\langle\phi_n\left|\partial_\nu H\right| \phi_0\right\rangle}{\left(E_0-E_n\right)^2}
+$$<p>これより二準位系に対して：</p>
+$$
+Q^{(\pm)}_{\mu \nu} =\frac{\left\langle \pm \left|\partial_\mu H\right| \mp \right\rangle\left\langle\mp\left|\partial_\nu H\right| \pm\right\rangle}{\left(E_\pm-E_\mp\right)^2}
+$$<p>分母分子で$\mu |B|$を消去すると：</p>
+$$ Q^{(\pm)}_{\mu \nu} = \frac{1}{4} \left\langle \pm \left|\partial_\mu (\vec{\sigma} \cdot \hat{B})\right| \mp \right\rangle\left\langle\mp\left|\partial_\nu(\vec{\sigma} \cdot \hat{B})\right| \pm\right\rangle $$<p>ここで$\mu,\,\nu = \theta,\,\phi$である。</p>
+<p>さらに：</p>
+$$ \partial_\theta (\vec{\sigma} \cdot \hat{B}) = \left(\begin{array}{cc}
+-\sin \theta & \cos \theta e^{-i\phi} \\
+\cos \theta e^{i\phi} &  \sin \theta
+\end{array}\right) $$$$ \partial_\phi (\vec{\sigma} \cdot \hat{B}) = \left(\begin{array}{cc}
+0 & -i \sin \theta e^{-i\phi} \\
+i \sin \theta e^{i\phi} &  0
+\end{array}\right) $$<p>これらを直接代入してひたすら計算すると、次を得る：</p>
+$$
+g^{(\pm)}_{\mu \nu} = \frac{1}{4} \left(\begin{array}{cc}
+1 & 0 \\
+0 & \sin ^2 \theta
+\end{array}\right)
+$$$$
+F^{(\pm)}_{\mu \nu}=\pm \frac{1}{2}\left(\begin{array}{cc}
+0 & - \sin \theta \\
+ \sin \theta & 0
+\end{array}\right)
+$$<p><strong>計算の際、左ブラベクトルは複素共役をとることを忘れずに！</strong></p>
+<p>ここで得られた計量は半径$1/2$の球面上の自然計量に他ならない。これは状態間の距離がBloch球上の「測地線」弧長に相当することを示している。</p>
+<h2 id="reference">Reference</h2>
+<p>[1] Cheng, R. (2010). Quantum geometric tensor (Fubini-Study metric) in simple quantum system: A pedagogical introduction. arXiv:1012.1337.</p>
+<p>[2] Abouelkomsan, A., Yang, K., &amp; Bergholtz, E. J. (2022). Quantum Metric Induced Phases in Moiré Materials. arXiv:2202.10467.</p>
+<p>[3] Parker, D., Ledwith, P., Khalaf, E., Soejima, T., Hauschild, J., Xie, Y., &hellip; &amp; Vishwanath, A. (2021). Field-tuned and zero-field fractional Chern insulators in magic angle graphene. arXiv:2112.13837.</p>
+<p>[4] Ozawa, T., &amp; Mera, B. (2021). Relations between topology and the quantum metric for Chern insulators. <em>Physical Review B</em>, 104(4), 045103.</p>
+<p>[5] Parameswaran, S. A., Roy, R., &amp; Sondhi, S. L. (2012). Fractional Chern insulators and the $W_\infty$ algebra. <em>Physical Review B</em>, 85(24), 241308.</p>
+<p>[6] Roy, R. (2014). Band geometry of fractional topological insulators. <em>Physical Review B</em>, 90(16), 165139.</p>
+<p>[7] Wang, J., Cano, J., Millis, A. J., Liu, Z., &amp; Yang, B. (2021). Exact Landau level description of geometry and interaction in a flatband. <em>Physical Review Letters</em>, 127(24), 246403.</p>
+<p>[8] Simon, S. H., &amp; Rudner, M. S. (2020). Contrasting lattice geometry dependent versus independent quantities. <em>Physical Review B</em>, 102(16), 165148.</p>
+<p>[9] Wang, J., Klevtsov, S., &amp; Liu, Z. (2022). Origin of Model Fractional Chern Insulators in All Topological Ideal Flatbands. arXiv:2210.13487.</p>
+<p>[10] Ledwith, P. J., Vishwanath, A., &amp; Parker, D. E. (2022). Vortexability: A Unifying Criterion for Ideal Fractional Chern Insulators. arXiv:2209.15023.</p>
+<p>[11] Daniel Arovas, &lsquo;Lecture Notes on Quantum Hall Effect&rsquo;, <a href="http://courses.physics.ucsd.edu/2019/Spring/physics230/LECTURES/QHE.pdf" target="_blank" rel="noopener noreffer ">http://courses.physics.ucsd.edu/2019/Spring/physics230/LECTURES/QHE.pdf</a></p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2026-06-30</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/quantum-geometry-in-fci/" data-title="🤩量子幾何学（Quantum Geometry）：量子幾何テンソル入門" data-via="OkongOyangO" data-hashtags="Quantum Geometry,Fubini-Study Metric,Berry Curvature,Fractional Chern Insulator,Condensed Matter"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/quantum-geometry-in-fci/" data-title="🤩量子幾何学（Quantum Geometry）：量子幾何テンソル入門"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/quantum-geometry-in-fci/" data-hashtag="Quantum Geometry"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/quantum-geometry-in-fci/" data-title="🤩量子幾何学（Quantum Geometry）：量子幾何テンソル入門"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/quantum-geometry-in-fci/" data-title="🤩量子幾何学（Quantum Geometry）：量子幾何テンソル入門"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/quantum-geometry-in-fci/" data-title="🤩量子幾何学（Quantum Geometry）：量子幾何テンソル入門"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/ja/posts/quantum-geometry-in-fci/" data-title="🤩量子幾何学（Quantum Geometry）：量子幾何テンソル入門" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fOkongOyangO.github.io%2fOkongOyangO.Notes%2fja%2fposts%2fquantum-geometry-in-fci%2f&amp;text=%f0%9f%a4%a9%e9%87%8f%e5%ad%90%e5%b9%be%e4%bd%95%e5%ad%a6%ef%bc%88Quantum%20Geometry%ef%bc%89%ef%bc%9a%e9%87%8f%e5%ad%90%e5%b9%be%e4%bd%95%e3%83%86%e3%83%b3%e3%82%bd%e3%83%ab%e5%85%a5%e9%96%80" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/OkongOyangO.Notes/ja/tags/quantum-geometry/">Quantum Geometry</a>,&nbsp;<a href="/OkongOyangO.Notes/ja/tags/fubini-study-metric/">Fubini-Study Metric</a>,&nbsp;<a href="/OkongOyangO.Notes/ja/tags/berry-curvature/">Berry Curvature</a>,&nbsp;<a href="/OkongOyangO.Notes/ja/tags/fractional-chern-insulator/">Fractional Chern Insulator</a>,&nbsp;<a href="/OkongOyangO.Notes/ja/tags/condensed-matter/">Condensed Matter</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">戻る</a></span>&nbsp;|&nbsp;<span><a href="/OkongOyangO.Notes/ja/">ホーム</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/OkongOyangO.Notes/ja/posts/iqhe-ti-chern-simons/" class="prev" rel="prev" title="😮QHE(4)｜量子ホール効果からトポロジカル絶縁体、Chern-Simons理論とトポロジカル分類へ"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>😮QHE(4)｜量子ホール効果からトポロジカル絶縁体、Chern-Simons理論とトポロジカル分類へ</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.154.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/OkongOyangO.Notes/ja/" target="_blank">OkongOyangO</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="トップへ戻る">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="コメントを見る">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/copy-tex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/mhchem.min.js"></script><script>window.config={"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/OkongOyangO.Notes/ja/index.json","maxResultLength":10,"noResultsFound":"結果が見つかりません","snippetLength":30,"type":"lunr"}};</script><script src="/OkongOyangO.Notes/js/theme.min.js"></script></body>
+</html>

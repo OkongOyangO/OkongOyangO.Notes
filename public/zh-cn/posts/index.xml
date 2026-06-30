@@ -4,7 +4,24 @@
         <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/</link>
         <description>所有文章 | OkongOyangO的物理笔记</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
-            <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster><lastBuildDate>Mon, 29 Jun 2026 18:00:00 &#43;0800</lastBuildDate><atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster><lastBuildDate>Tue, 30 Jun 2026 11:00:00 &#43;0800</lastBuildDate><atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>🤩量子几何（Quantum Geometry）</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/quantum-geometry-in-fci/</link>
+    <pubDate>Tue, 30 Jun 2026 11:00:00 &#43;0800</pubDate>
+    <author>yzj5306@psu.edu (OkongOyangO)</author>
+    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/quantum-geometry-in-fci/</guid>
+    <description><![CDATA[<p>本note旨在带读者快速上手Quantum Geometry的定义及其计算。Topology是量子系统的重要性质，反映了模型绝热变化过程中的不变量，而Geometry关注系统的细节——找到合适的刻画量子态之间&quot;距离&quot;的物理量便是Quantum Geometry的中心问题。</p>]]></description>
+</item>
+<item>
+    <title>😮QHE(4)｜从量子霍尔到拓扑绝缘体到Chern-Simons理论与拓扑分类</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/iqhe-ti-chern-simons/</link>
+    <pubDate>Tue, 30 Jun 2026 10:00:00 &#43;0800</pubDate>
+    <author>yzj5306@psu.edu (OkongOyangO)</author>
+    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/iqhe-ti-chern-simons/</guid>
+    <description><![CDATA[<p>距离接触凝聚态理论中的拓扑已经过去一年，零零碎碎读了不少文献，下面想做一个梳理，试图为今后可能要接触这一领域的读者，理清一些学习过程中的主线。</p>
+<p>整数量子霍尔效应为凝聚态开启了一个新的领域，然而这只是拓扑在凝聚态中的冰山一角，我们将看到，IQHE事实上是**二维的、有能隙的、无相互作用的、费米的、无时间反演对称性（TRS，Time-Reversal Symmetry）、无粒子-空穴对称性（PHS，或Charge Conjugate Symmetry）、无手性对称性（Chiral Symmetry）**的系统的拓扑效应。</p>]]></description>
+</item>
+<item>
     <title>🤪体边对应：Dirac 方程、Wilson Loop 与纠缠谱</title>
     <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/bulk-boundary-correspondence/</link>
     <pubDate>Mon, 29 Jun 2026 18:00:00 &#43;0800</pubDate>
@@ -69,22 +86,6 @@
     <author>yzj5306@psu.edu (OkongOyangO)</author>
     <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/nonlinear-kubo-formalism/</guid>
     <description><![CDATA[<p>本文旨在推导Kubo Formula的非线性响应理论。</p>]]></description>
-</item>
-<item>
-    <title>😯费米黄金法则（Fermi Golden Rule）漏了什么？</title>
-    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/fermi_golden_rule/</link>
-    <pubDate>Mon, 06 Mar 2023 22:30:00 -0500</pubDate>
-    <author>yzj5306@psu.edu (OkongOyangO)</author>
-    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/fermi_golden_rule/</guid>
-    <description><![CDATA[<p>本文旨在计算严格的量子跃迁速率，并指出费米黄金法则是其的&quot;长时间平均&quot;的结果。严格的量子跃迁速率相比费米黄金法则还多一项振幅不可忽略的二倍频振荡项，前后者关系类似交流电路中的&quot;瞬时功率&quot;与&quot;平均功率&quot;。</p>]]></description>
-</item>
-<item>
-    <title>🧐分数量子霍尔效应(FQHE)、分数反常量子霍尔效应(FAQHE)与分数陈绝缘体(FCI)</title>
-    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/fqhe_faqhe_fci/</link>
-    <pubDate>Mon, 17 Oct 2022 22:30:00 -0500</pubDate>
-    <author>yzj5306@psu.edu (OkongOyangO)</author>
-    <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/zh-cn/posts/fqhe_faqhe_fci/</guid>
-    <description><![CDATA[<p>本note全文约10000字，旨在帮助读者入门分数量子霍尔效应、分数反常量子霍尔效应以及分数陈绝缘体的相关内容。本文仅为一己之见，有很多疏漏，还望读者不吝赐教。下面是正文～</p>]]></description>
 </item>
 </channel>
 </rss>

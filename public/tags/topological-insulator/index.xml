@@ -8,8 +8,15 @@
     <language>en</language>
     <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
     <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
-    <lastBuildDate>Mon, 29 Jun 2026 18:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2026 10:00:00 +0800</lastBuildDate>
     <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/tags/topological-insulator/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>😮QHE(4)｜From Quantum Hall to Topological Insulator to Chern-Simons Theory and Topological Classification</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/iqhe-ti-chern-simons/</link>
+      <pubDate>Tue, 30 Jun 2026 10:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/iqhe-ti-chern-simons/</guid>
+      <description>&lt;p&gt;It has been a year since I first encountered topology in condensed matter theory. I have read quite a bit of literature here and there, and I would like to organize my thoughts below, hoping to clarify some of the main threads in the learning process for readers who may be entering this field in the future.&lt;/p&gt;&#xA;&lt;p&gt;The integer quantum Hall effect opened up a new frontier for condensed matter physics. However, this is only the tip of the iceberg when it comes to topology in condensed matter. As we will see, IQHE is in fact a topological effect of a system that is &lt;strong&gt;two-dimensional, gapped, non-interacting, fermionic, without time-reversal symmetry (TRS), without particle-hole symmetry (PHS, or charge conjugate symmetry), and without chiral symmetry&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>🤪Bulk-Boundary Correspondence: Dirac Equation, Wilson Loop, and Entanglement Spectra</title>
       <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/bulk-boundary-correspondence/</link>

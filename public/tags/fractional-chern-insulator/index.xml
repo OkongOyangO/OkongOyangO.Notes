@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fractional Chern Insulator on OkongOyangO&#39;s Notes</title>
+    <link>https://OkongOyangO.github.io/OkongOyangO.Notes/tags/fractional-chern-insulator/</link>
+    <description>Recent content in Fractional Chern Insulator on OkongOyangO&#39;s Notes</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>yzj5306@psu.edu (OkongOyangO)</managingEditor>
+    <webMaster>yzj5306@psu.edu (OkongOyangO)</webMaster>
+    <lastBuildDate>Tue, 30 Jun 2026 11:00:00 +0800</lastBuildDate>
+    <atom:link href="https://OkongOyangO.github.io/OkongOyangO.Notes/tags/fractional-chern-insulator/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>🤩Quantum Geometry: A Hands-on Introduction to the Quantum Geometric Tensor</title>
+      <link>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/quantum-geometry-in-fci/</link>
+      <pubDate>Tue, 30 Jun 2026 11:00:00 +0800</pubDate><author>yzj5306@psu.edu (OkongOyangO)</author>
+      <guid>https://OkongOyangO.github.io/OkongOyangO.Notes/posts/quantum-geometry-in-fci/</guid>
+      <description>&lt;p&gt;This note aims to quickly get readers up to speed with the definition and computation of Quantum Geometry. Topology is an essential property of quantum systems, capturing invariants under adiabatic changes of parameters, while Geometry focuses on the fine details—finding a proper physical quantity that characterizes the &amp;ldquo;distance&amp;rdquo; between quantum states is the central problem of Quantum Geometry.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>🤩Quantum Geometry: A Hands-on Introduction to the Quantum Geometric Tensor - OkongOyangO&#39;s Notes</title><meta name="Description" content="OkongOyangO&#39;s Notes on Condensed Matter Physics"><meta property="og:url" content="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/quantum-geometry-in-fci/">
+  <meta property="og:site_name" content="OkongOyangO&#39;s Notes">
+  <meta property="og:title" content="🤩Quantum Geometry: A Hands-on Introduction to the Quantum Geometric Tensor">
+  <meta property="og:description" content="This note aims to quickly get readers up to speed with the definition and computation of Quantum Geometry. Topology is an essential property of quantum systems, capturing invariants under adiabatic changes of parameters, while Geometry focuses on the fine details—finding a proper physical quantity that characterizes the “distance” between quantum states is the central problem of Quantum Geometry.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-06-30T11:00:00+08:00">
+    <meta property="article:modified_time" content="2026-06-30T11:00:00+08:00">
+    <meta property="article:tag" content="Quantum Geometry">
+    <meta property="article:tag" content="Fubini-Study Metric">
+    <meta property="article:tag" content="Berry Curvature">
+    <meta property="article:tag" content="Fractional Chern Insulator">
+    <meta property="article:tag" content="Condensed Matter">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="🤩Quantum Geometry: A Hands-on Introduction to the Quantum Geometric Tensor">
+  <meta name="twitter:description" content="This note aims to quickly get readers up to speed with the definition and computation of Quantum Geometry. Topology is an essential property of quantum systems, capturing invariants under adiabatic changes of parameters, while Geometry focuses on the fine details—finding a proper physical quantity that characterizes the “distance” between quantum states is the central problem of Quantum Geometry.">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/OkongOyangO.Notes/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/OkongOyangO.Notes/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/OkongOyangO.Notes/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/OkongOyangO.Notes/apple-touch-icon.png"><link rel="mask-icon" href="/OkongOyangO.Notes/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/OkongOyangO.Notes/site.webmanifest"><link rel="canonical" href="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/quantum-geometry-in-fci/" /><link rel="prev" href="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/iqhe-ti-chern-simons/" /><link rel="stylesheet" href="/OkongOyangO.Notes/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "🤩Quantum Geometry: A Hands-on Introduction to the Quantum Geometric Tensor",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/posts\/quantum-geometry-in-fci\/"
+        },"genre": "posts","keywords": "Quantum Geometry, Fubini-Study Metric, Berry Curvature, Fractional Chern Insulator, Condensed Matter","wordcount":  1634 ,
+        "url": "https:\/\/OkongOyangO.github.io\/OkongOyangO.Notes\/posts\/quantum-geometry-in-fci\/","datePublished": "2026-06-30T11:00:00+08:00","dateModified": "2026-06-30T11:00:00+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "OkongOyangO"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/OkongOyangO.Notes/" title="OkongOyangO&#39;s Notes">OkongOyangO&#39;s Notes</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item active" href="/OkongOyangO.Notes/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i> Posts </a><a class="menu-item" href="/OkongOyangO.Notes/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i> Tags </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i> Theme
+                </a><a href="javascript:void(0);" class="menu-item language" title="Language">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i> Language
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/quantum-geometry-in-fci/" selected>English</option><option value="/OkongOyangO.Notes/zh-cn/posts/quantum-geometry-in-fci/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/quantum-geometry-in-fci/">日本語</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/OkongOyangO.Notes/" title="OkongOyangO&#39;s Notes">OkongOyangO&#39;s Notes</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search/搜索/検索..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/OkongOyangO.Notes/posts/" title="Posts"><i class='fas fa-archive fa-fw'></i>Posts</a><a class="menu-item" href="/OkongOyangO.Notes/tags/" title="Tags"><i class='fas fa-tags fa-fw'></i>Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>Theme
+            </a><a href="javascript:void(0);" class="menu-item" title="Language">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>Language
+                    <select class="language-select" onchange="location = this.value;"><option value="/OkongOyangO.Notes/posts/quantum-geometry-in-fci/" selected>English</option><option value="/OkongOyangO.Notes/zh-cn/posts/quantum-geometry-in-fci/">简体中文</option><option value="/OkongOyangO.Notes/ja/posts/quantum-geometry-in-fci/">日本語</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">🤩Quantum Geometry: A Hands-on Introduction to the Quantum Geometric Tensor</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/OkongOyangO.Notes/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>OkongOyangO</a></span>&nbsp;<span class="post-category">included in <a href="/OkongOyangO.Notes/categories/physics-notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Physics Notes</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2026-06-30">2026-06-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1634 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;8 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#hilbert-space-is-not-physical">Hilbert Space is not Physical</a></li>
+    <li><a href="#introduction-and-definition">Introduction and Definition</a></li>
+    <li><a href="#alternative-expression">Alternative Expression</a></li>
+    <li><a href="#eg-spin-12-systems">E.g. Spin-1/2 Systems</a></li>
+    <li><a href="#reference">Reference</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>This note aims to quickly get readers up to speed with the definition and computation of Quantum Geometry. Topology is an essential property of quantum systems, capturing invariants under adiabatic changes of parameters, while Geometry focuses on the fine details—finding a proper physical quantity that characterizes the &ldquo;distance&rdquo; between quantum states is the central problem of Quantum Geometry.</p>
+<p>Below, we guide readers through a first exploration of the fascinating field of Quantum Geometry by identifying the true physical space where state vectors live—the Projected Hilbert Space—defining a metric on it, and computing the Quantum Geometric Tensor for a simple model.</p>
+<h2 id="hilbert-space-is-not-physical">Hilbert Space is not Physical</h2>
+<p>Quantum states can be viewed as vectors in Hilbert space $\mathcal{H}$, with complex components. Taking an $n$-dimensional Hilbert space as an example, a quantum state is a state vector in $\mathbb{C}^n$, which can be written as:</p>
+$$ |\psi\rangle = (\psi_1, \cdots, \psi_n)^T $$$$ \psi_i \in \mathbb{C},\,i = 1, \cdots, n $$<p>But this is not the true physical space. We know that multiplying a state vector by a nonzero complex number yields the same physical state, so the real quantum state space should be the Hilbert space <strong>modded out</strong> by a nonzero complex number.</p>
+<p>Concretely, we first turn the components of the state vector into real numbers, and require the state not to be zero, which gives:</p>
+$$ \mathcal{H} \simeq \mathbb{C}^n - \{\mathbf{0}\} \simeq \mathbb{R}^{2n}-\{\mathbf{0}\} $$<p>Now we mod out by a nonzero complex number $\mathbb{C}-\{\mathbf{0}\}$. Since a nonzero complex number consists of a magnitude $\R^+$ and a phase $U(1)$:</p>
+$$ \mathbb{C}-\{\mathbf{0}\} \simeq \R^+ \times U(1) $$<p>This can be done in two steps. First, fix the magnitude—i.e., mod out by a positive real number. One can imagine this collapses the $2n$-dimensional space without the origin into a $(2n-1)$-dimensional sphere:</p>
+$$ (\mathbb{R}^{2n}-\{\mathbf{0}\})/\R^+ \simeq S^{2n-1} $$<p>Then mod out by a phase, which yields a complex projective space:</p>
+$$ S^{2n-1}/U(1) \simeq \mathbb{C}P^{n-1} $$<p>We call the true space where quantum states live the <strong>Projected Hilbert Space</strong> $\mathcal{P}\mathcal{H} \simeq \mathbb{C}P^{n-1}$.</p>
+<h2 id="introduction-and-definition">Introduction and Definition</h2>
+<p>For state vectors in Hilbert space, we can define a distance as:</p>
+$$
+\mathrm{d} s^2=\| \psi(\lambda+\mathrm{d} \lambda)-\left.\psi(\lambda)\right|^2=\langle\delta \psi \mid \delta \psi\rangle \\
+=\left\langle\partial_\mu \psi \mid \partial_\nu \psi\right\rangle \mathrm{d} \lambda^\mu \mathrm{d} \lambda^\nu \\
+=\left(\gamma_{\mu \nu}+i \sigma_{\mu \nu}\right) \mathrm{d} \lambda^\mu \mathrm{d} \lambda^\nu
+$$<p>Due to the <strong>Hermitian property of the inner product</strong>, we have:</p>
+$$
+\gamma_{\mu \nu}+i \sigma_{\mu \nu}=\gamma_{\nu \mu}-i \sigma_{\nu \mu} \quad \gamma_{\mu \nu}=\gamma_{\nu \mu} \quad \sigma_{\mu \nu}=-\sigma_{\nu \mu}
+$$<p>However, Hilbert space is not the true quantum state space, because we can perform a gauge transformation (change the phase) while leaving the physical state unchanged. In this case, the &ldquo;distance&rdquo; and metric defined in parameter space should remain the same, since the state at each point in parameter space is unchanged—only a phase has been changed (we consider only normalized states here). But we will immediately find a problem with the &ldquo;metric&rdquo; defined earlier.</p>
+<p>Specifically, consider an arbitrary gauge transformation on the mapping from parameter space to state space:</p>
+$$
+\left|\psi^{\prime}(\lambda)\right\rangle=\exp ^{i \alpha(\lambda)}|\psi(\lambda)\rangle
+$$<p>The corresponding metric tensor becomes:</p>
+$$ \left\langle\partial_\mu \psi^{\prime} \mid \partial_\nu \psi^{\prime}\right\rangle=\gamma_{\mu \nu}^{\prime}+i \sigma_{\mu \nu}^{\prime} $$$$
+\gamma_{\mu \nu}^{\prime}=\gamma_{\mu \nu}-\beta_\mu \partial_\nu \alpha-\beta_\nu \partial_\mu \alpha+\partial_\mu \alpha \partial_\nu \alpha
+$$$$
+\sigma_{\mu \nu}^{\prime}=\sigma_{\mu \nu}
+$$<p>Here $\beta$ is the Berry Connection, defined as</p>
+$$ \beta_\mu \equiv i \langle \psi (\lambda) | \partial_\mu \psi (\lambda) \rangle \in \R $$<p>Thus, the naively defined metric is not physical; the physical metric should be gauge-invariant.</p>
+<p>Let us consider the following expression:</p>
+$$
+g_{\mu \nu}(\lambda):=\gamma_{\mu \nu}(\lambda)-\beta_\mu(\lambda) \beta_\nu(\lambda)
+$$<p>It is straightforward to show that after replacing the metric (the real part, i.e., the Fubini-Study Metric) with the above expression, the newly defined metric becomes gauge-invariant.</p>
+<p>The Quantum Geometric Tensor is then defined as:</p>
+$$
+Q_{\mu \nu}(\lambda):=\left\langle\partial_\mu \psi(\lambda) \mid \partial_\nu \psi(\lambda)\right\rangle-\left\langle\partial_\mu \psi(\lambda) \mid \psi(\lambda)\right\rangle\left\langle\psi(\lambda) \mid \partial_\nu \psi(\lambda)\right\rangle
+$$<p>Its real part characterizes the distance between quantum states and is called the <strong>Fubini-Study metric</strong> (FS metric), a symmetric tensor:</p>
+$$
+g_{\mu \nu}=\operatorname{Re} Q_{\mu \nu}
+$$<p>Its imaginary part is the <strong>Berry Curvature</strong> part (off by a factor of 2 from the true Berry Curvature), an antisymmetric tensor:</p>
+$$ \sigma_{\mu \nu}=\operatorname{Im} Q_{\mu \nu} $$<p>We can also view the distance between two states as follows: suppose the state amplitudes are already normalized, so that the state vectors all lie as points on a sphere. The distance between two points on the sphere can be expressed as:</p>
+$$
+D^2\left(\mathbf{k}, \mathbf{k}^{\prime}\right) \equiv D^2\left[\mu(\mathbf{k}), \mu\left(\mathbf{k}^{\prime}\right)\right] =2-2\left|\mu^{\dagger}(\mathbf{k}-\mathbf{q}) \mu(\mathbf{k})\right|
+$$<p>Taking the inner product is equivalent to taking the cosine of the angle $\cos \theta$ between two state vectors, and taking $|...|$ removes the effect of the uncertain phase, leaving only the amplitude contribution. Then $2 - 2 \cos \theta = 4 \sin^2\frac{\theta}{2}$, so $D = 2 \sin \frac{\theta}{2}$, which is the straight-line distance between two points on the sphere. When the two points are very close, this is also the &ldquo;geodesic&rdquo; distance between them. From this we can see that the definition of $D(k,k')$ indeed carries the meaning of &ldquo;distance.&rdquo;</p>
+<p>It can be shown that expanding the above $D(k,k')$ definition for two very close points $k$, $k'$ yields a metric expression identical to our definition above. This holds, of course, only in the small-distance approximation.</p>
+<h2 id="alternative-expression">Alternative Expression</h2>
+<p>In actual numerical calculations, the phases of the eigenstate vectors obtained from diagonalization are not consistently related. In this case, computing $|\partial_\mu \phi \rangle$ can be problematic. Therefore, we introduce the following equivalent expression, which converts partial derivatives of the state vector into partial derivatives of the Hamiltonian. Since the definition of $H(k)$ is generally a continuous function, we can compute it either analytically or via numerical finite differences, ensuring the accuracy of numerical simulations of the FS metric, Berry Curvature, and the entire Quantum Geometric Tensor.</p>
+<p>We make use of the following identities, where the state vectors are eigenstates of $H$:</p>
+$$
+\left\langle\phi_n \mid \partial_\mu \phi_0\right\rangle=\frac{\left\langle\phi_n\left|\partial_\mu H\right| \phi_0\right\rangle}{E_0-E_n} \quad \text { if } n \neq 0
+$$$$
+\left\langle\phi_0\left|\partial_\mu H\right| \phi_0\right\rangle=\partial_\mu E_0
+$$<p>Thus:</p>
+$$
+Q_{\mu \nu}=\left\langle\partial_\mu \phi_0\left|\left(\mathbf{1}-\left|\phi_0\right\rangle\left\langle\phi_0\right|\right)\right| \partial_\nu \phi_0\right\rangle
+$$$$
+=\sum_{n \neq 0}\left\langle\partial_\mu \phi_0 \mid \phi_n\right\rangle\left\langle\phi_n \mid \partial_\nu \phi_0\right\rangle
+$$$$
+=\sum_{n \neq 0} \frac{\left\langle\phi_0\left|\partial_\mu H\right| \phi_n\right\rangle\left\langle\phi_n\left|\partial_\nu H\right| \phi_0\right\rangle}{\left(E_0-E_n\right)^2}
+$$<p>The expression for the Berry Curvature is:</p>
+$$
+F_{\mu \nu}=\partial_{[\mu} \beta_{\nu]}=i\left\langle\partial_{[\mu} \phi_0 \mid \partial_{\nu]} \phi_0\right\rangle=i\left(Q_{\mu \nu}-Q_{\nu \mu}\right)=-2 \operatorname{Im} Q_{\mu \nu}=-2 \sigma_{\mu \nu}
+$$<p>This shows that the Berry Curvature and the imaginary part of the Quantum Geometric Tensor still differ by a factor of 2:</p>
+$$
+Q_{\mu \nu}=g_{\mu \nu}-\frac{i}{2} F_{\mu \nu}
+$$<p>The above definitions all hold in the non-degenerate case. For $n$-fold degeneracy, all of the above scalars become $n$-dimensional matrices, and the FS metric, Berry Curvature, and the entire Quantum Geometric Tensor become non-Abelian quantities:</p>
+$$
+{\left[Q_{\mu \nu}\right]_{i j}=\sum_{n \neq 0, k(n)} \frac{\left\langle\phi_{0 i}\left|\partial_\mu H\right| \phi_{n k}\right\rangle\left\langle\phi_{n k}\left|\partial_\nu H\right| \phi_{0 j}\right\rangle}{\left(E_0-E_n\right)^2}}
+$$<p><img
+        class="lazyload"
+        src="/OkongOyangO.Notes/svg/loading.min.svg"
+        data-src="https://pic4.zhimg.com/80/v2-d327ed01b77d2a2414e5ff2cd596f371.png"
+        data-srcset="https://pic4.zhimg.com/80/v2-d327ed01b77d2a2414e5ff2cd596f371.png, https://pic4.zhimg.com/80/v2-d327ed01b77d2a2414e5ff2cd596f371.png 1.5x, https://pic4.zhimg.com/80/v2-d327ed01b77d2a2414e5ff2cd596f371.png 2x"
+        data-sizes="auto"
+        alt="https://pic4.zhimg.com/80/v2-d327ed01b77d2a2414e5ff2cd596f371.png"
+        title="Image" /></p>
+<h2 id="eg-spin-12-systems">E.g. Spin-1/2 Systems</h2>
+<p>Let us work out the Quantum Geometric Tensor for the simplest two-level system. Here we choose a Spin-1/2 system in a magnetic field, with parameters being the azimuthal angles of the magnetic field $\theta \in [0,\pi]$, $\phi \in [0,2\pi]$. The Hamiltonian is:</p>
+$$
+H=\mu \vec{\sigma} \cdot \vec{B} = \mu |B| \left(\begin{array}{cc}
+\cos \theta & \sin\theta e^{-i\phi} \\
+\sin\theta e^{i\phi} & - \cos \theta
+\end{array}\right) = \mu |B| \vec{\sigma} \cdot \hat{B}
+$$<p>The eigenvalues and eigenstates of a two-level system are straightforward:</p>
+$$ E_{\pm} = \pm \mu |B| $$$$
+|+\rangle =\left(
+e^{-i \phi / 2} \cos \frac{\theta}{2}, e^{i \phi / 2} \sin \frac{\theta}{2}
+\right)^T
+$$$$
+|-\rangle=\left(-e^{-i \phi / 2} \sin \frac{\theta}{2}, e^{i \phi / 2} \cos \frac{\theta}{2}\right)^T
+$$<p>Using the formula mentioned above:</p>
+$$
+Q_{\mu \nu} =\sum_{n \neq 0} \frac{\left\langle\phi_0\left|\partial_\mu H\right| \phi_n\right\rangle\left\langle\phi_n\left|\partial_\nu H\right| \phi_0\right\rangle}{\left(E_0-E_n\right)^2}
+$$<p>For a two-level system, this reduces to:</p>
+$$
+Q^{(\pm)}_{\mu \nu} =\frac{\left\langle \pm \left|\partial_\mu H\right| \mp \right\rangle\left\langle\mp\left|\partial_\nu H\right| \pm\right\rangle}{\left(E_\pm-E_\mp\right)^2}
+$$<p>Canceling $\mu |B|$ in the numerator and denominator gives:</p>
+$$ Q^{(\pm)}_{\mu \nu} = \frac{1}{4} \left\langle \pm \left|\partial_\mu (\vec{\sigma} \cdot \hat{B})\right| \mp \right\rangle\left\langle\mp\left|\partial_\nu(\vec{\sigma} \cdot \hat{B})\right| \pm\right\rangle $$<p>where $\mu,\,\nu = \theta,\,\phi$.</p>
+<p>Further:</p>
+$$ \partial_\theta (\vec{\sigma} \cdot \hat{B}) = \left(\begin{array}{cc}
+-\sin \theta & \cos \theta e^{-i\phi} \\
+\cos \theta e^{i\phi} &  \sin \theta
+\end{array}\right) $$$$ \partial_\phi (\vec{\sigma} \cdot \hat{B}) = \left(\begin{array}{cc}
+0 & -i \sin \theta e^{-i\phi} \\
+i \sin \theta e^{i\phi} &  0
+\end{array}\right) $$<p>Plugging in and doing a bunch of algebra, we obtain:</p>
+$$
+g^{(\pm)}_{\mu \nu} = \frac{1}{4} \left(\begin{array}{cc}
+1 & 0 \\
+0 & \sin ^2 \theta
+\end{array}\right)
+$$$$
+F^{(\pm)}_{\mu \nu}=\pm \frac{1}{2}\left(\begin{array}{cc}
+0 & - \sin \theta \\
+ \sin \theta & 0
+\end{array}\right)
+$$<p><strong>Note: remember to take the complex conjugate of the bras during the computation!</strong></p>
+<p>Unsurprisingly, the metric here is exactly the natural metric on a sphere of radius $1/2$. This shows that the distance between states is simply the &ldquo;geodesic&rdquo; arc length on the Bloch sphere.</p>
+<h2 id="reference">Reference</h2>
+<p>[1] Cheng, R. (2010). Quantum geometric tensor (Fubini-Study metric) in simple quantum system: A pedagogical introduction. arXiv:1012.1337.</p>
+<p>[2] Abouelkomsan, A., Yang, K., &amp; Bergholtz, E. J. (2022). Quantum Metric Induced Phases in Moiré Materials. arXiv:2202.10467.</p>
+<p>[3] Parker, D., Ledwith, P., Khalaf, E., Soejima, T., Hauschild, J., Xie, Y., &hellip; &amp; Vishwanath, A. (2021). Field-tuned and zero-field fractional Chern insulators in magic angle graphene. arXiv:2112.13837.</p>
+<p>[4] Ozawa, T., &amp; Mera, B. (2021). Relations between topology and the quantum metric for Chern insulators. <em>Physical Review B</em>, 104(4), 045103.</p>
+<p>[5] Parameswaran, S. A., Roy, R., &amp; Sondhi, S. L. (2012). Fractional Chern insulators and the $W_\infty$ algebra. <em>Physical Review B</em>, 85(24), 241308.</p>
+<p>[6] Roy, R. (2014). Band geometry of fractional topological insulators. <em>Physical Review B</em>, 90(16), 165139.</p>
+<p>[7] Wang, J., Cano, J., Millis, A. J., Liu, Z., &amp; Yang, B. (2021). Exact Landau level description of geometry and interaction in a flatband. <em>Physical Review Letters</em>, 127(24), 246403.</p>
+<p>[8] Simon, S. H., &amp; Rudner, M. S. (2020). Contrasting lattice geometry dependent versus independent quantities. <em>Physical Review B</em>, 102(16), 165148.</p>
+<p>[9] Wang, J., Klevtsov, S., &amp; Liu, Z. (2022). Origin of Model Fractional Chern Insulators in All Topological Ideal Flatbands. arXiv:2210.13487.</p>
+<p>[10] Ledwith, P. J., Vishwanath, A., &amp; Parker, D. E. (2022). Vortexability: A Unifying Criterion for Ideal Fractional Chern Insulators. arXiv:2209.15023.</p>
+<p>[11] Daniel Arovas, &lsquo;Lecture Notes on Quantum Hall Effect&rsquo;, <a href="http://courses.physics.ucsd.edu/2019/Spring/physics230/LECTURES/QHE.pdf" target="_blank" rel="noopener noreffer ">http://courses.physics.ucsd.edu/2019/Spring/physics230/LECTURES/QHE.pdf</a></p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2026-06-30</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/quantum-geometry-in-fci/" data-title="🤩Quantum Geometry: A Hands-on Introduction to the Quantum Geometric Tensor" data-via="OkongOyangO" data-hashtags="Quantum Geometry,Fubini-Study Metric,Berry Curvature,Fractional Chern Insulator,Condensed Matter"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/quantum-geometry-in-fci/" data-title="🤩Quantum Geometry: A Hands-on Introduction to the Quantum Geometric Tensor"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/quantum-geometry-in-fci/" data-hashtag="Quantum Geometry"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/quantum-geometry-in-fci/" data-title="🤩Quantum Geometry: A Hands-on Introduction to the Quantum Geometric Tensor"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/quantum-geometry-in-fci/" data-title="🤩Quantum Geometry: A Hands-on Introduction to the Quantum Geometric Tensor"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/quantum-geometry-in-fci/" data-title="🤩Quantum Geometry: A Hands-on Introduction to the Quantum Geometric Tensor"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://OkongOyangO.github.io/OkongOyangO.Notes/posts/quantum-geometry-in-fci/" data-title="🤩Quantum Geometry: A Hands-on Introduction to the Quantum Geometric Tensor" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fOkongOyangO.github.io%2fOkongOyangO.Notes%2fposts%2fquantum-geometry-in-fci%2f&amp;text=%f0%9f%a4%a9Quantum%20Geometry%3a%20A%20Hands-on%20Introduction%20to%20the%20Quantum%20Geometric%20Tensor" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/OkongOyangO.Notes/tags/quantum-geometry/">Quantum Geometry</a>,&nbsp;<a href="/OkongOyangO.Notes/tags/fubini-study-metric/">Fubini-Study Metric</a>,&nbsp;<a href="/OkongOyangO.Notes/tags/berry-curvature/">Berry Curvature</a>,&nbsp;<a href="/OkongOyangO.Notes/tags/fractional-chern-insulator/">Fractional Chern Insulator</a>,&nbsp;<a href="/OkongOyangO.Notes/tags/condensed-matter/">Condensed Matter</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/OkongOyangO.Notes/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/OkongOyangO.Notes/posts/iqhe-ti-chern-simons/" class="prev" rel="prev" title="😮QHE(4)｜From Quantum Hall to Topological Insulator to Chern-Simons Theory and Topological Classification"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>😮QHE(4)｜From Quantum Hall to Topological Insulator to Chern-Simons Theory and Topological Classification</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.154.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/OkongOyangO.Notes/" target="_blank">OkongOyangO</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/copy-tex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/mhchem.min.js"></script><script>window.config={"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/OkongOyangO.Notes/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/OkongOyangO.Notes/js/theme.min.js"></script></body>
+</html>
