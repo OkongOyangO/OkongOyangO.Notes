@@ -1,5 +1,5 @@
 ---
-title: "🥺 Quantum Geometry Everything? A Complete Guide to the Quantum-Geometric Physical Responses"
+title: "🥺Quantum Geometry Everything? A Complete Guide to the Quantum-Geometric Physical Responses"
 date: 2026-06-09T12:00:00+08:00
 draft: false
 math: true
