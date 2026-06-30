@@ -1,5 +1,5 @@
 ---
-title: "🤪 バルク・バウンダリー対応：Dirac方程式、Wilson Loop、エンタングルメント・スペクトル"
+title: "🤪バルク・バウンダリー対応：Dirac方程式、Wilson Loop、エンタングルメント・スペクトル"
 date: 2026-06-29T18:00:00+08:00
 draft: false
 math: true

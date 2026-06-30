@@ -3,6 +3,7 @@
 ## Critical Rules
 
 - **Always change all language versions simultaneously.** This site has 3 languages: English (`.en.md`), Simplified Chinese (`.zh-cn.md`), and Japanese (`.ja.md`). Any change to content, templates, config, or i18n must be applied to ALL three language versions. Never change only one language.
+- **Emoji in titles have no trailing space.** When a title starts with an emoji (e.g. `🤪`), the emoji directly touches the following text without a space: `🤪Bulk-Boundary...` not `🤪 Bulk-Boundary...`. This matches all existing posts (`😯What...`, `🧐Fractional...`, `🤯Chiral...`, `🤔How...`, `🥸Nonlinear...`, `🫨Maximally...`, `🔥Fermi...`, `🤫Mean...`).
 
 ## Project Structure
 

@@ -1,5 +1,5 @@
 ---
-title: "🤪 体边对应：Dirac 方程、Wilson Loop 与纠缠谱"
+title: "🤪体边对应：Dirac 方程、Wilson Loop 与纠缠谱"
 date: 2026-06-29T18:00:00+08:00
 draft: false
 math: true
